@@ -1,0 +1,120 @@
+\documentclass[11pt]{scrartcl}
+\usepackage{evan}
+\usepackage{booktabs}
+\addtolength{\textheight}{1em}
+
+\begin{document}
+\title{Digression on type safety}
+\subtitle{18.02 Recitation (MW9)}
+\author{Evan Chen (\mailto{evan@evanchen.cc})}
+\date{4 September 2024}
+%\date{21 September 2022}
+\maketitle
+
+In mathematics, statements are usually either true or false.
+Examples of false statements\footnote{Indiana Pi bill and 1984, respectively.} include
+\[ \pi = \frac{16}{5} \qquad \text{or}\qquad 2+2=5. \]
+However, it's possible to write statements that are not merely false,
+but not even ``grammatically correct'', such as the nonsense equations
+\[ \pi = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix},
+  \qquad \left\lvert \mathbf i + 3 \mathbf j \right\rvert = \cos(\mathbf k), \qquad
+\det \begin{pmatrix} 5 \\ 11 \end{pmatrix} \neq \sqrt{2}.  \]
+To call these equations false is misleading.
+If your friend asked you whether $2+2=5$, you would say ``no''.
+But if your friend asked whether $\pi$ equals the $2 \times 2$ identity matrix,
+the answer is a different kind of ``no''; really, it's ``your question makes no sense''.
+
+These three examples are \alert{type errors}.
+This term comes from programming: most programming languages have different data types
+like integer, boolean, string, array, etc.,
+and will usually\footnote{JavaScript is a notable exception.
+  In JavaScript, you may know that \texttt{[]} and \texttt{\{\}}
+  are an empty array and an empty object, respectively.
+  Then \texttt{[]+[]} is the empty string,
+  \texttt{[]+\{\}} is the string \texttt{`[object Object]'},
+  \texttt{\{\}+[]} is \texttt{0},
+  and \texttt{\{\}+\{\}} is \texttt{NaN} (not a number).}
+prevent you from doing anything idiotic like adding a string to an array.
+
+Objects in mathematics work in a really similar way.
+In the first weeks of 18.02, you will meet real numbers, vectors, and matrices;
+these are all different types of objects, and certain operations are
+\alert{defined} (aka ``allowed'') or \alert{undefined} (aka ``not allowed'')
+depending on the underlying types.
+Table~\ref{tab:operations} lists some common examples.
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{lclll}
+    \toprule
+    Operation & Notation & Input 1 & Input 2 & Output \\ \midrule
+    Add/subtract & $a+b$ & Scalar & Scalar & Scalar \\
+    Add/subtract & $\vec v + \vec w$ & Length $d$ vector & Length $d$ vector & Length $d$ vector \\
+    Add/subtract & $M+N$ & $m \times n$ matrix & $m \times n$ matrix & $m \times n$ matrix \\
+    Multiplication & $c \vec v$ & Scalar & Length $d$ vector & Length $d$ vector \\
+    Multiplication & $ab$ & Scalar & Scalar & Scalar \\
+    Multiplication & $MN$ & $m \times n$ matrix & $n \times p$ matrix & $m \times p$ matrix \\
+    Dot product & $\vec v \cdot \vec w$ & Length $d$ vector & Length $d$ vector & Scalar \\
+    Cross product & $\vec v \times \vec w$ & Length $3$ vector & Length $3$ vector & Length $3$ vector \\
+    Length/mag. & $\left\lvert \vec v \right\rvert$ & Any vector && Scalar \\
+    Determinant & $\det A$ & Any square matrix && Scalar \\ \bottomrule
+  \end{tabular}
+  \caption{Common linalg operations.
+    For 18.02, ``scalar'' and ``real number'' are synonyms.}
+  \label{tab:operations}
+\end{table}
+
+A common question at this point is how you are supposed to figure out
+whether a certain operation is allowed or not.
+For example, many students want to try and multiply two vectors together component-wise;
+why is
+\[ \begin{pmatrix} 2 \\ 3 \end{pmatrix} \begin{pmatrix} 4 \\ 5 \end{pmatrix}
+  \overset{?}{=} \begin{pmatrix} 8 \\ 15 \end{pmatrix} \]
+not a legal sentence? It seems like it would make sense.
+
+The answer is that you \emph{don't} have to figure out --- you are \emph{told}.
+Table~\ref{tab:operations} isn't something that you derive.
+Instead, it's the set of \emph{definitions} which you have been given.
+Or more sarcastically, it's all just a social construct.\footnote{Of course,
+  it's not quite as arbitrary as it sounds.
+  The long explanation goes something like this.
+  Definitions aren't judged by ``correctness'', because that doesn't even make sense;
+  you are allowed to make up whatever definitions you want.
+  Instead, definitions are judged by whether they are \emph{useful}.
+  Which is obviously subjective, but it's less subjective than you might guess.}
+
+\section*{Why you should care}
+What this means is that, every time you encounter a new kind of
+mathematical object or operation (e.g.\ partial derivative),
+one of the first things that you might want to do is figure out
+what kind of types it is permitted to interact with.
+This helps give you a sanity check on your understanding of the new concept.
+
+Practically, what's really useful is that if you have a good handle on types,
+then it gives you way to do \alert{type checking} on your work.
+This is the analog of dimensional analysis from 8.01/8.02, where
+you know you messed up if some equation has
+$\text{kg} \cdot \text{m} \cdot \text{s}^{-2}$ on the left but
+$\text{kg} \cdot \text{m} \cdot \text{s}^{-1}$ on the right.
+
+For example, if you are checking your work and you see something like
+\[ \left\lvert \vec v \times \vec p \right\rvert = 9 \vec p \]
+then you can immediately tell that there's a mistake,
+because the two sides are incompatible --- the left-hand side is a real number,
+but the right-hand side is a vector.
+
+\section*{References}
+\begin{itemize}
+  \ii \emph{The Type System of Mathematics}, Qiaochu Yuan,
+  \url{https://qchu.wordpress.com/2013/05/28/the-type-system-of-mathematics/}.
+  \ii \emph{Basic Category Theory}, Tom Leinster, Chapter 3.
+  \url{https://arxiv.org/abs/1612.09375}
+\end{itemize}
+
+\section*{Hyperlink}
+You can find a copy of this file at
+\url{https://web.evanchen.cc/1802.html}.
+I'll also upload the slides for today there.
+
+
+\end{document}
