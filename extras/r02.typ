@@ -9,11 +9,15 @@
 
 This handout (and all my other personal notes) are posted at #url("https://web.evanchen.cc/1802.html").
 
-= Office hours
+= Housekeeping
 
-Office hours is every Monday at 10am.
-(If you want additional office hours with me,
-you can send me an email to schedule a separate appointment.)
+- Office hours is every Monday at 10am.
+  - Today's office hours is in 2-361 temporarily, because MIT registrar still hasn't given me a room.
+  - I'll update my website once I know what room I'm stuck in.
+- If you want additional office hours with me,
+  you can send me an email to schedule a separate appointment.
+- Apparently I'm supposed to take attendance.
+  - There's now an attendance form on my website, fill out please and thanks.
 
 = Errata from last Wednesday
 
