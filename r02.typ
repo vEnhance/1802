@@ -93,7 +93,7 @@ However, in contrast, many of the results in your Thursday/Friday lectures are n
   Or if you want to just jump into the deep end of the pool,
   I also wrote this up in chapters 9 and 12 of my advanced textbook
   _An Infinitely Large Napkin_ (#url("https://evanchen.cc/napkin.html")).
-  You'll get to learn about something called the _exterior power_
+  You'll get to learn about something called the _wedge product_
   that will let you _derive_ the formula for the determinant and see where it comes from
   (in contrast to 18.02, where you are just given the mysterious formula
   and have to memorize it).
@@ -106,3 +106,5 @@ However, in contrast, many of the results in your Thursday/Friday lectures are n
   and also that the signed volume of the parallelpiped formed by $bf(a)$, $bf(b)$,
   and $1/(|bf(c)|^2) bf(c)$ is $1$.
   However, this calculation is even more disgusting than the one in @det2.
+
+  (By the way, the cross product is secretly a worse form of the wedge product. Just saying.)
