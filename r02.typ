@@ -7,7 +7,8 @@
   date: datetime.today(),
 )
 
-This handout (and all my other personal notes) are posted at #url("https://web.evanchen.cc/1802.html").
+This handout (and any other DLC's I write) are posted at
+#url("https://web.evanchen.cc/1802.html").
 
 = Housekeeping
 
