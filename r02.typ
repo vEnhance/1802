@@ -74,7 +74,7 @@ However, in contrast, many of the results in your Thursday/Friday lectures are n
   It seems like a minor miracle: one would have to verify
   #eqn[
     $
-      (a_1 a_2 + b_1 c_2) (c_1 b_2 + d_1 d_2) - (a_1 b_2 + b_1 d_2)(a_2 c_1 + c_2 d_1)
+      (a_1 a_2 + b_1 c_2) (c_1 b_2 + d_1 d_2) - (a_1 b_2 + b_1 d_2)(a_2 c_1 + c_2 d_1) \
       = (a_1 d_1 - b_1 c_1)(a_2 d_2 - b_2 c_2)
     $
     <det2>
