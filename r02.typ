@@ -7,6 +7,13 @@
   date: datetime.today(),
 )
 
+#quote[
+  You all have a little bit of "I want to save the world" in you,
+  that's why you're here, in college.
+  I want you to know that it's okay if you only save one person,
+  and it's okay if that person is you.
+]
+
 This handout (and any other DLC's I write) are posted at
 #url("https://web.evanchen.cc/1802.html").
 
