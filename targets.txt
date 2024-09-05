@@ -1,4 +1,4 @@
 tsafe-1802/tsafe-1802.pdf
 welcome-slides/welcome-slides.pdf
-extras/r02.pdf
-extras/dotpf.pdf
+r02.pdf
+dotpf.pdf
