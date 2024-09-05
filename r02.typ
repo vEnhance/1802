@@ -13,12 +13,11 @@ This handout (and any other DLC's I write) are posted at
 = Housekeeping
 
 - Office hours is every Monday at 10am.
-  - Today's office hours is in 2-361 temporarily, because MIT registrar still hasn't given me a room.
+  - Today's office hours is in 2-361 temporarily, only for this week.
   - I'll update my website once I know what room I'm stuck in.
 - If you want additional office hours with me,
-  you can send me an email to schedule a separate appointment.
-- Apparently I'm supposed to take attendance.
-  - There's now an attendance form on my website, fill out please and thanks.
+  you can email me to schedule a separate appointment.
+- Apparently I'm supposed to take attendance. Please fill out the attendance form on my site.
 
 = Errata from last Wednesday
 
@@ -35,12 +34,13 @@ Moreover, you will take a lot of theorems in this class as *black boxes*.
 
 However, I want to at least distinguish between two things:
 
-- *"Trivial theorems"*: an A+ student in 18.02 could reasonably justify this theorem to a friend
+- *"Trivial theorems"*: an A-level student in 18.02 could reasonably justify this theorem to a friend
   using material from earlier in the course.
 - *"Nontrivial theorems"*: an explanation of why the theorem holds
   requires at least one new idea, concept, or some substantial calculation.
 
-You're not expected to know how to prove the trivial theorems either; you are on P/NR, after all.
+You're not expected to know how to prove the trivial theorems either;
+you are on P/NR, after all, enjoy it.
 But I think it's helpful context if I at least tell you
 which results are _supposed_ to be easy and which are _supposed_ to be hard.
 (Though for exams, you just memorize all of them anyway.)
@@ -111,3 +111,10 @@ However, in contrast, many of the results in your Thursday/Friday lectures are n
   only proves that it's correct.
 
   (In truth, the cross product is secretly a worse form of the wedge product. Just saying.)
+
+= Pro tip
+
+To check whether four points $A$, $B$, $C$, $D$ in $RR^3$ lie in the same plane,
+you can instead check whether the parallelpiped formed by
+three vectors $arrow(D A)$, $arrow(D B)$, $arrow(D C)$
+has volume zero or not.
