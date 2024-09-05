@@ -36,7 +36,7 @@ Moreover, you will take a lot of theorems in this class as *black boxes*.
 However, I want to at least distinguish between two things:
 
 - *"Trivial theorems"*: an A+ student in 18.02 could reasonably justify this theorem to a friend
-  why this theorem is true using material from earlier in the course.
+  using material from earlier in the course.
 - *"Nontrivial theorems"*: an explanation of why the theorem holds
   requires at least one new idea, concept, or some substantial calculation.
 
@@ -64,7 +64,7 @@ However, in contrast, many of the results in your Thursday/Friday lectures are n
   and it took the entire walk for me to figure out how to prove it.
 
   I typed up the proof in #url("https://web.evanchen.cc/1802.html") if you want to see it.
-  Poonen proves this using the law of cosines, but it's tricky, and it uses the law of cosines.
+  Poonen proves this using the law of cosines, but it's tricky.
   I think my proof is easier to come up with but longer and less clever.
 
 - Pretty much everything with determinants is black magic.
