@@ -100,12 +100,14 @@ However, in contrast, many of the results in your Thursday/Friday lectures are n
   and have to memorize it).
 
 - The geometric picture of the cross product is nontrivial,
-  but you can prove it by brute-force calculation.
+  but you can verify it by brute-force calculation.
   Specifically, given $bf(a)$ and $bf(b)$ in $RR^3$,
   you have a long formula for $bf(c) = bf(a) times bf(b)$.
   You can manually calculate the dot products $bf(c) dot bf(a) = bf(c) dot bf(b) = 0$
   and also that the signed volume of the parallelpiped formed by $bf(a)$, $bf(b)$,
   and $1/(|bf(c)|^2) bf(c)$ is $1$.
-  However, this calculation is even more disgusting than the one in @det2.
+  However, this calculation is even more disgusting than the one in @det2,
+  and it's unsatisfying because it doesn't show you where the formula comes from,
+  only proves that it's correct.
 
-  (By the way, the cross product is secretly a worse form of the wedge product. Just saying.)
+  (In truth, the cross product is secretly a worse form of the wedge product. Just saying.)
