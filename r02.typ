@@ -4,7 +4,7 @@
   title: [Notes for 18.02 Recitation 2],
   subtitle: [18.02 Recitation MW9],
   author: "Evan Chen",
-  date: datetime.today(),
+  date: [9 September 2024],
 )
 
 #quote[
