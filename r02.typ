@@ -226,7 +226,7 @@ $P : (1 , 2 , 4) ; Q : (0 , 1 , 3) ; R : (2 , 4 , 7)$.
 
 == Another problem I made up in the shower
 
-Suppose $A$, $B$, $C$, $D$ are points in $RR^3$
+Suppose $A$, $B$, $C$, $D$ are points in $RR^3$.
 What is the geometric interpretation of the following expression?
 $ (arrow(D A) times arrow(D B)) dot arrow(D C) $
 (First make sure you know what type of object it is.
