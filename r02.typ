@@ -1,7 +1,7 @@
 #import "@local/evan:1.0.0":*
 
 #show: evan.with(
-  title: [Digressions for 18.02 Recitation 2],
+  title: [Notes for 18.02 Recitation 2],
   subtitle: [18.02 Recitation MW9],
   author: "Evan Chen",
   date: datetime.today(),
@@ -33,7 +33,65 @@ Last week in R1 I said that it probably didn't actually matter which way you lab
 I think it's easier to remember that you put your index finger along the $+x$-direction,
 middle finger along the $+y$-direction, and thumb along the $+z$ direction.
 
-= Trivial vs non-trivial results
+= The TL;DR cookbook
+
+Up until now you were given a bunch of _definitions_ of the dot product,
+cross product, and determinant.
+Another way you can think about them is by _what they're used for_,
+which may or may not be more useful for actually doing homework and exam questions.
+
+- Dot product (type signature: takes two vectors as input and outputs a scalar)
+  - Answers the question "*are two vectors perpendicular?*".
+    (Check whether the dot product is zero.)
+  - More generally, gives you the *angle between two vectors*
+    - But this requires the extra step of dividing by the lengths of the vectors.
+  - Also gives you the *scalar projection*
+    - But this requires the extra step of dividing the length of one vector.
+- $3 times 3$ determinant (type signature: takes $3 times 3$ matrix as input and outputs a scalar)
+  - Gives you the *volume of a paralellpiped*.
+    (take the determinant $arrow(D A)$, $arrow(D B)$, $arrow(D C)$).
+  - In particular, you can check *coplanar* by seeing if the volume is zero.
+- Cross product of $arrow(A B)$ and $arrow(A C)$
+  (type signature: takes two $RR^3$ vectors and outputs an $RR^3$ vector)
+  - The magnitude gives you the (signed) *area* of the triangle $A B C$.
+  - The direction gives you a vector *perpendicular to both*.
+
+= Analogy for normal vectors and planes in $RR^3$ by changing to $RR^2$
+
+If you are confused about normal vectors in the plane, it might help to first do the $RR^2$ case,
+which is easier to draw and for which you might have better intuition from eighth or ninth
+grade algebra.
+
+Here's a question: what's the set of vectors in $RR^2$ perpendicular to $vec(1,2)$?
+It's a line of slope $-1/2$ through the origin, namely
+$ 0 = vec(x,y) dot vec(1, 2) <=> 0 = x + 2 y. $
+
+#figure(
+  image("figures/r02-x-plus-2y.png", width: 12cm),
+  caption: [Plots of $x+2y=0$ and $x+2y=pi$.],
+)
+
+Okay, in that case what does the line
+$ x + 2 y = pi $
+look like? Well, it's a parallel line, the slope is still the same.
+
+Equivalently, you could also imagine it as the set of points $vec(x,y)$ such that
+$ vec(x,y) - vec(pi,0) " is perpendicular to " (1,2) $
+or do the same thing for any point on the line, like
+$ vec(x,y) - vec(0, pi slash 2) " is perpendicular to " (1,2) $
+or even
+$ vec(x,y) - vec(0.218 pi, 0.564 pi) " is perpendicular to " (1,2) $
+But that's silly. Most of the time you don't care about base points.
+All you care if you want the line have the specific slope $-1/2$,
+and for that the LHS just needs to be $x + 2y$ (or even $100 x + 200 y$).
+The RHS can be whatever you want.
+
+In $RR^3$, the exact same thing is true for $a x + b y + c z = d$ expressions.
+The only difference is that the word "slope" is banned; planes don't have the concept of slope.
+Nevertheless, even if we can't talk about slope, we can still talk about parallel planes,
+and now the whole discussion carries over wholesale.
+
+= Digression: Trivial vs non-trivial results
 
 18.02 is not a proof-based class, so I will not talk about formal proofs during recitation.
 (If you want proofs, come to office hours).
@@ -63,7 +121,6 @@ However, in contrast, many of the results in your Thursday/Friday lectures are n
 
 - The theorem saying the algebraic definition $x_1 x_2 + y_1 y_2 + z_1 z_2$ of the dot product
   coincides with the geometric definition $|bf(a)| |bf(b)| cos theta$ is nontrivial.
-
   In fact, when I was walking home after your first recitation last week,
   I was thinking to myself about what I needed to say for today,
   and I realized I didn't actually know how to prove this either!
@@ -119,9 +176,59 @@ However, in contrast, many of the results in your Thursday/Friday lectures are n
 
   (In truth, the cross product is secretly a worse form of the wedge product. Just saying.)
 
-= Pro tip
+= Recitation worksheet for today
 
-To check whether four points $A$, $B$, $C$, $D$ in $RR^3$ lie in the same plane,
-you can instead check whether the parallelpiped formed by
-three vectors $arrow(D A)$, $arrow(D B)$, $arrow(D C)$
-has volume zero or not.
+I go too annoyed by the ugly angle brackets so I just retyped the whole thing
+lol.#footnote[Just kidding, I actually asked ChatGPT to make it into LaTeX,
+  and then converted it to Typst with `pandoc`, hahaha.]
+
+Today we will discuss equations of planes as applications of the dot
+product and cross product.
+
+== Problem 1
+
+Consider the vectors $upright(bold(a)) = angle.l 2 , 3 , 6 angle.r$ and
+$upright(bold(b)) = angle.l 1 , 2 , 2 angle.r$.
+
+- What is the scalar component of $upright(bold(a))$ in the direction of
+  $upright(bold(b))$?
+
+- What is the vector component of $upright(bold(a))$ in the direction of
+  $upright(bold(b))$?
+
+== Problem 2 (from Poonen notes 3.7-3.10) Introduction to planes
+
+- What does the set of vectors perpendicular to
+  $angle.l 1 , 2 , 3 angle.r$ look like?
+
+- What is the equation of the plane with normal vector
+  $angle.l 1 , 2 , 3 angle.r$ passing through the point $P$ with
+  coordinates $(4 , 5 , 6)$?
+
+- Are the vector $angle.l - 5 , 1 , 1 angle.r$ and the plane
+  $x + 2 y + 3 z = 6$ parallel? Perpendicular? Both? Neither?
+
+- What is the distance from the point $Q$ with coordinates $(2 , 3 , 5)$
+  to the plane in the second part of this question? (Take the vector
+  $arrow(P Q)$ and project onto the normal direction to the plane.)
+
+== Problem 3
+
+Consider the three points
+$P : (1 , 2 , 4) ; Q : (0 , 1 , 3) ; R : (2 , 4 , 7)$.
+
+- Calculate the cross-product $arrow(P Q) times arrow(P R)$.
+
+- What is the equation of the plane containing the points $P , Q , R$?
+  (See the second part of the last question)
+
+- What is the area of the triangle $P Q R$?
+
+== Another problem I made up in the shower
+
+Suppose $A$, $B$, $C$, $D$ are points in $RR^3$
+What is the geometric interpretation of the following expression?
+$ (arrow(D A) times arrow(D B)) dot arrow(D C) $
+(First make sure you know what type of object it is.
+For the answer, open the following Wikipedia page:
+#url("https://w.wiki/9bmU").)
