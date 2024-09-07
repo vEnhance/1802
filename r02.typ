@@ -233,6 +233,7 @@ $P : (1 , 2 , 4) ; Q : (0 , 1 , 3) ; R : (2 , 4 , 7)$.
     #url("https://w.wiki/9bmU").
   ]?
   $ (arrow(D A) times arrow(D B)) dot arrow(D C) $
-- Suppose $P = (u,v,w)$ is a point in $RR^3$ and $cal(H)$ is the plane $a x + b y + c z = d$.
+- Suppose $P = (p_1, ..., p_n)$ is a point in $RR^n$
+  while $cal(H)$ is the hyperplane $a_1 x_1 + ... + a_n x_n = c$.
   Prove that the distance from $P$ to $cal(H)$ is given by the following formula:
-  $ (|a u + b v + c w - d|) / sqrt(a^2+b^2+c^2). $
+  $ (|(a_1 p_1 + ... + a_n p_n) - c|) / sqrt(a_1^2+...+a_n^2). $
