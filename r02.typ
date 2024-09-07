@@ -94,8 +94,8 @@ and now the whole discussion carries over wholesale.
 = Digression: Trivial vs non-trivial results
 
 18.02 is not a proof-based class, so I will not talk about formal proofs during recitation.
-(If you want proofs, come to office hours).
-Moreover, you will take a lot of theorems in this class as *black boxes*.
+(If you want proofs, come to office hours.)
+So you will take a lot of theorems in this class as *black boxes*.
 
 However, I want to at least distinguish between two things:
 
@@ -124,8 +124,8 @@ However, in contrast, many of the results in your Thursday/Friday lectures are n
   In fact, when I was walking home after your first recitation last week,
   I was thinking to myself about what I needed to say for today,
   and I realized I didn't actually know how to prove this either!
-  I was walking from Charles/MGH to my home, which is a 15-minute walk,
-  and it took the entire walk for me to figure out how to prove it.
+  I was walking from Charles/MGH, which is a 15-minute walk,
+  and it took the whole time to figure out how to prove it.
 
   I typed up the proof in #url("https://web.evanchen.cc/1802.html") if you want to see it.
   Poonen proves this using the law of cosines, but it's tricky.
@@ -151,7 +151,7 @@ However, in contrast, many of the results in your Thursday/Friday lectures are n
   I actually have really strong opinions on how linear algebra should be taught;
   I strongly prefer certain abstract "intrinsic" definitions that
   don't rely on coordinates and formulas like the 18.02 definitions do,
-  because such definitions explain why all these miracles keep happening.
+  because the abstract definitions explain why all these miracles keep happening.
   Unfortunately, this is too abstract to do in just a few weeks of 18.02.
 
   But if you are curious and want to open Pandora's box, take 18.700 or 18.701!
@@ -178,9 +178,9 @@ However, in contrast, many of the results in your Thursday/Friday lectures are n
 
 = Recitation worksheet for today
 
-I go too annoyed by the ugly angle brackets so I just retyped the whole thing
-lol.#footnote[Just kidding, I actually asked ChatGPT to make it into LaTeX,
-  and then converted it to Typst with `pandoc`, hahaha.]
+I go too annoyed by the ugly angle brackets in the Canvas file
+so I just retyped the whole thing lol.#footnote[Just kidding, I actually
+  asked ChatGPT to convert to LaTeX, then converted it to Typst with `pandoc`, hahaha.]
 
 Today we will discuss equations of planes as applications of the dot
 product and cross product.
@@ -196,7 +196,7 @@ $upright(bold(b)) = angle.l 1 , 2 , 2 angle.r$.
 - What is the vector component of $upright(bold(a))$ in the direction of
   $upright(bold(b))$?
 
-== Problem 2 (from Poonen notes 3.7-3.10) Introduction to planes
+== Problem 2 (from Poonen notes 3.7-3.10): Introduction to planes
 
 - What does the set of vectors perpendicular to
   $angle.l 1 , 2 , 3 angle.r$ look like?
@@ -220,7 +220,7 @@ $P : (1 , 2 , 4) ; Q : (0 , 1 , 3) ; R : (2 , 4 , 7)$.
 - Calculate the cross-product $arrow(P Q) times arrow(P R)$.
 
 - What is the equation of the plane containing the points $P , Q , R$?
-  (See the second part of the last question)
+  (See the second part of the last question.)
 
 - What is the area of the triangle $P Q R$?
 
