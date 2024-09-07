@@ -43,10 +43,10 @@ which may or may not be more useful for actually doing homework and exam questio
 - Dot product (type signature: takes two vectors as input and outputs a scalar)
   - Answers the question "*are two vectors perpendicular?*".
     (Check whether the dot product is zero.)
-  - More generally, gives you the *angle between two vectors*
-    - But this requires the extra step of dividing by the lengths of the vectors.
-  - Also gives you the *scalar projection*
-    - But this requires the extra step of dividing the length of one vector.
+  - More generally, gives you the *angle between two vectors*.
+    - Requires the extra step of dividing by the lengths of the vectors and take inverse cosine.
+  - Also gives you the *scalar projection*.
+    - Requires the extra step of dividing by the length of the vector you're projecting onto.
 - $3 times 3$ determinant (type signature: takes $3 times 3$ matrix as input and outputs a scalar)
   - Gives you the *volume of a paralellpiped*.
     (take the determinant $arrow(D A)$, $arrow(D B)$, $arrow(D C)$).
@@ -117,7 +117,8 @@ for example, the fact that $vec(a,b)$ has length $sqrt(a^2+b^2)$
 is a direct consequence of the Pythagorean theorem.
 I'm sorry for anyone that was bored.
 
-However, in contrast, many of the results in your Thursday/Friday lectures are nontrivial.
+However, in contrast, many of the results in your
+Thursday/Friday lectures are _really_ nontrivial.
 
 - The theorem saying the algebraic definition $x_1 x_2 + y_1 y_2 + z_1 z_2$ of the dot product
   coincides with the geometric definition $|bf(a)| |bf(b)| cos theta$ is nontrivial.
