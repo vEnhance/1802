@@ -167,14 +167,14 @@ However, in contrast, many of the results in your Thursday/Friday lectures are n
   but you can verify it by brute-force calculation.
   Specifically, given $bf(a)$ and $bf(b)$ in $RR^3$,
   you have a long formula for $bf(c) = bf(a) times bf(b)$.
-  You can manually calculate the dot products $bf(c) dot bf(a) = bf(c) dot bf(b) = 0$
+  You can manually verify that $bf(c) dot bf(a) = bf(c) dot bf(b) = 0$
   and also that the signed volume of the parallelpiped formed by $bf(a)$, $bf(b)$,
   and $1/(|bf(c)|^2) bf(c)$ is $1$.
   However, this calculation is even more disgusting than the one in @det2,
-  and it's unsatisfying because it doesn't show you where the formula comes from,
-  only proves that it's correct.
+  and unsatisfying because it doesn't show you where the formula comes from
+  (only proves it's correct).
 
-  (In truth, the cross product is secretly a worse form of the wedge product. Just saying.)
+  (In truth, the cross product is secretly a worse form of the wedge product. Just saying. `;)`)
 
 = Recitation worksheet for today
 
@@ -224,11 +224,15 @@ $P : (1 , 2 , 4) ; Q : (0 , 1 , 3) ; R : (2 , 4 , 7)$.
 
 - What is the area of the triangle $P Q R$?
 
-== Another problem I made up in the shower
+== Another problem I made up in the shower if the first three are too easy
 
-Suppose $A$, $B$, $C$, $D$ are points in $RR^3$.
-What is the geometric interpretation of the following expression?
-$ (arrow(D A) times arrow(D B)) dot arrow(D C) $
-(First make sure you know what type of object it is.
-For the answer, open the following Wikipedia page:
-#url("https://w.wiki/9bmU").)
+- Suppose $A$, $B$, $C$, $D$ are points in $RR^3$.
+  What is the geometric interpretation of the following expression#footnote[
+    First make sure you know what type of object it is.
+    For the final answer to the whole question, open the following Wikipedia page:
+    #url("https://w.wiki/9bmU").
+  ]?
+  $ (arrow(D A) times arrow(D B)) dot arrow(D C) $
+- Suppose $P = (u,v,w)$ is a point in $RR^3$ and $cal(H)$ is the plane $a x + b y + c z = d$.
+  Prove that the distance from $P$ to $cal(H)$ is given by the following formula:
+  $ (|a u + b v + c w - d|) / sqrt(a^2+b^2+c^2). $
