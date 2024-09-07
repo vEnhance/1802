@@ -30,8 +30,8 @@ This handout (and any other DLC's I write) are posted at
 
 Last week in R1 I said that it probably didn't actually matter which way you labeled your axes.
 *This is wrong!* You need to pick a labeling consistent with the *right-hand rule*.
-I think it's easier to remember that you put your index finger along the $+x$-direction,
-middle finger along the $+y$-direction, and thumb along the $+z$ direction.
+I think it's easier to remember that you put your (right) index finger along the $+x$-direction,
+middle finger along the $+y$-direction, and thumb along the $+z$-direction.
 
 = The TL;DR cookbook
 
@@ -48,7 +48,7 @@ which may or may not be more useful for actually doing homework and exam questio
   - Also gives you the *scalar projection*.
     - Requires the extra step of dividing by the length of the vector you're projecting onto.
 - $3 times 3$ determinant (type signature: takes $3 times 3$ matrix as input and outputs a scalar)
-  - Gives you the *volume of a paralellpiped*.
+  - Gives you the *volume of a parallelepiped*.
     (take the determinant $arrow(D A)$, $arrow(D B)$, $arrow(D C)$).
   - In particular, you can check *coplanar* by seeing if the volume is zero.
 - Cross product of $arrow(A B)$ and $arrow(A C)$
@@ -86,8 +86,9 @@ All you care if you want the line have the specific slope $-1/2$,
 and for that the LHS just needs to be $x + 2y$ (or even $100 x + 200 y$).
 The RHS can be whatever you want.
 
-In $RR^3$, the exact same thing is true for $a x + b y + c z = d$ expressions.
-The only difference is that the word "slope" is banned; planes don't have the concept of slope.
+In $RR^3$, the exact same thing is true for the expression $a x + b y + c z = d$.
+The only difference is that the word "slope" is banned (or at least needs a new type;
+it won't be a single number).
 Nevertheless, even if we can't talk about slope, we can still talk about parallel planes,
 and now the whole discussion carries over wholesale.
 
@@ -126,7 +127,7 @@ Thursday/Friday lectures are _really_ nontrivial.
   I was thinking to myself about what I needed to say for today,
   and I realized I didn't actually know how to prove this either!
   I was walking from Charles/MGH, which is a 15-minute walk,
-  and it took the whole time to figure out how to prove it.
+  and it took the whole time to figure out a proof.
 
   I typed up the proof in #url("https://web.evanchen.cc/1802.html") if you want to see it.
   Poonen proves this using the law of cosines, but it's tricky.
