@@ -3,3 +3,4 @@ welcome-slides/welcome-slides.pdf
 r02.pdf
 r03.pdf
 dotpf.pdf
+answerkeys/r03s.pdf
