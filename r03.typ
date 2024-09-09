@@ -116,6 +116,6 @@ you should be able to explain why the matrix multiplication rule is defined as i
 / 2c: Find the $3 times 3$ matrix corresponding to the linear transformation
   $f$: $vec(x, y, z) arrow.r.bar vec(3 x - 2 z, x + y + z, 4 y + z)$.
 / 2d: Consider the linear transformation $f : bb(R)^2 arrow.r bb(R)^2$ where
-  $f (v)$ is the vector projection of $v$ in the direction
-  $w = vec(1, 2)$. What is the $2 times 2$ matrix $A$ associated with
+  $f (bf(v))$ is the vector projection of $bf(v)$ in the direction
+  $bf(w) = vec(1, 2)$. What is the $2 times 2$ matrix $A$ associated with
   this linear transformation?
