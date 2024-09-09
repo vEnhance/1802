@@ -71,7 +71,7 @@ For now, here's a few small hints.
 
 - A _linear transform_ $T : RR^n -> RR^m$ is _any_ map obeying $T(c bf(v)) = c T(bf(v))$
   and $T(v + w) = T(v) + T(w)$.
-  It's a chonky boy: there's a value of $T(v) in RR^m$ for every $v in RR^n$.
+  It's a chonky boy: for every $v in RR^n$, there's a value of $T(v) in RR^m$.
 - A _matrix_ is a way of _encoding_ the transformation $T$ using as few numbers as possible.
 - Pop quiz: if $T : RR^2 -> RR^2$ is a linear transform and
   it's given that
@@ -91,7 +91,7 @@ So the really, really important principle to understand is:
 There's a philosophical axe I'm grinding.
 You might have the idea that a linear transformation "is" a matrix.
 I don't like this point of view.
-I would say the matrix is a way to succinctly encode the transformation.
+I would say the matrix is a way to succinctly _encode_ or _identify_ the transformation.
 (Think how that every human has a name that identifies them,
 and you can find out things about people given their name.)
 
