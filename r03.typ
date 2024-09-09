@@ -101,31 +101,21 @@ you should be able to explain why the matrix multiplication rule is defined as i
 
 = Recitation problems
 
-== Q1: Consider the $2 times 2$ matrices $A = mat(2, 1; 1, 2)$ and $B = mat(- 3, 1; 2, 0)$.
-
-- Calculate $A B$ and $B A$.
-
-- Calculate the matrix $A^(- 1)$.
-
-- Check directly that $A A^(- 1) = A^(- 1) A = I$.
-
-- Consider the linear system of equations: $2 x + y = 7$ and $x + 2 y = 11$.
+/ 1: Consider the $2 times 2$ matrices $A = mat(2, 1; 1, 2)$ and $B = mat(- 3, 1; 2, 0)$.
+/ 1a: Calculate $A B$ and $B A$.
+/ 1b: Calculate the matrix $A^(- 1)$.
+/ 1c: Check directly that $A A^(- 1) = A^(- 1) A = I$.
+/ 1d: Consider the linear system of equations: $2 x + y = 7$ and $x + 2 y = 11$.
   Write this system of equations as a single matrix equation and solve it
   using $A^(- 1)$ from the previous question.
   Check that your solution satisfies the original equations.
-
-== Q2
-
-- Viewed as a linear transformation, how does the matrix
+/ 2a: Viewed as a linear transformation, how does the matrix
   $mat(2, 3; 0, 1)$ transform the unit square with vertices
   $(0 , 0)$, $(0 , 1)$, $(1 , 0)$, $(1 , 1)$?
-
-- What is the $2 times 2$ matrix $A$ associated with reflection across the line $y = - x$?
-
-- Find the $3 times 3$ matrix corresponding to the linear transformation
+/ 2b: What is the $2 times 2$ matrix $A$ associated with reflection across the line $y = - x$?
+/ 2c: Find the $3 times 3$ matrix corresponding to the linear transformation
   $f$: $vec(x, y, z) arrow.r.bar vec(3 x - 2 z, x + y + z, 4 y + z)$.
-
-- Consider the linear transformation $f : bb(R)^2 arrow.r bb(R)^2$ where
+/ 2d: Consider the linear transformation $f : bb(R)^2 arrow.r bb(R)^2$ where
   $f (v)$ is the vector projection of $v$ in the direction
   $w = vec(1, 2)$. What is the $2 times 2$ matrix $A$ associated with
   this linear transformation?
