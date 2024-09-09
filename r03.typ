@@ -46,6 +46,12 @@ I'll try to also yap less today and give you time to actually talk to people mor
 - Remember that every vector has both a *direction* and a *magnitude*,
   which both have geometric meaning (or insignificance); see table below.
 
+- Remember: *the $RR^2$ concept of slope is overriden by the concept of normal vector for $RR^3$*.
+  This is an important lesson from last time that I didn't call enough attention to,
+  so I want to re-emphasize it.
+  Anything you used to rely on slopes for, you should try to reframe in terms of normal vector.
+  (I'll say this yet again when $nabla f(x,y)$ is introduced.)
+
 #align(center)[
   #table(
     columns: 3,
