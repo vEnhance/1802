@@ -69,7 +69,7 @@ For now, here's a few small hints.
 - A _matrix_ is a way of _encoding_ the transformation $T$ using as few numbers as possible.
 - Pop quiz: if $T : RR^2 -> RR^2$ is a linear transform and
   it's given that
-  $ T( vec(3,4) ) = vec(pi, sqrt(2)) " and " T( vec(100, 100) ) = vec(sqrt(7), sqrt(5)) $
+  $ T( vec(3,4) ) = vec(pi, 9) " and " T( vec(100, 100) ) = vec(0, 12) $
   what are the vectors for $T( vec(103,104) )$ and $T( vec(203, 204) )$?
 - More generally, if you know the values of $T( vec(1,0) )$ and $T( vec(0,1) )$,
   that gives you enough information to figure out all other values of $T$.
