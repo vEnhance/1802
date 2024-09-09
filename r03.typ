@@ -24,13 +24,13 @@ This handout (and any other DLC's I write) are posted at
 = You can now check recitation answers on phone/laptop/etc.
 
 After the disaster that was the end of R02,
-I'm going to start trying to
+I asked ChatGPT to prepare an answer key for R03 and uploaded it to
 #url("https://web.evanchen.cc/1802.html").
 So, now you can check your answer on your phone or whatever
 even if I'm not running around trying to help other people.
 
 I'll try to also yap less today and give you time to actually talk to people more 1:1.
-Though Wednesday recitation is nicer than Monday, half as much stuff to cover.
+(Though Wednesday recitation is nicer than Monday, half as much stuff to cover.)
 
 = Follow-ups from R02
 
