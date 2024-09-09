@@ -53,7 +53,7 @@ which may or may not be more useful for actually doing homework and exam questio
   - In particular, you can check *coplanar* by seeing if the volume is zero.
 - Cross product of $arrow(A B)$ and $arrow(A C)$
   (type signature: takes two $RR^3$ vectors and outputs an $RR^3$ vector)
-  - The magnitude gives you the (signed) *area* of the triangle $A B C$.
+  - The magnitude gives you _twice_ the (signed) *area* of the triangle $A B C$.
   - The direction gives you a vector *perpendicular to both*.
 
 = Analogy for normal vectors and planes in $RR^3$ by changing to $RR^2$
