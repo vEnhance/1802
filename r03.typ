@@ -18,16 +18,15 @@ This handout (and any other DLC's I write) are posted at
 
 = Housekeeping
 
-- Office hours is *2-136 now* at Monday 10am or by appointment.
-  - I'm also going to try and request to have the same room Wednesday 10am.
-- *You can now check recitation answers on #url("https://web.evanchen.cc/1802.html").*
+- *Office hours both Monday and Wednesday 10am*; rooms posted on Evan's site.
+- *You can now check recitation answers on Evan's site.*
   After the disaster that was the end of R02,
   I have pre-uploaded a quick answer key to R03 this time.#footnote[This time I just used ChatGPT.
     For future recitations, I might just type answers only,
     continue using ChatGPT more, or something else; undecided.
     Anyway, ChatGPT can make mistakes, so if you think something's wrong, flag me.]
   So, now you can check your answer on your phone/tablet/laptop/etc.
-  But still feel free to check answers with me.
+  But still feel free to check answers with me the old fashioned-way too.
   (Figured it's better to give people more options.)
 
 I'll try to also yap less today and give you time to actually talk to people more 1:1
