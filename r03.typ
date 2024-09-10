@@ -22,12 +22,14 @@ This handout (and any other DLC's I write) are posted at
   - I'm also going to try and request to have the same room Wednesday 10am.
 - *You can now check recitation answers on #url("https://web.evanchen.cc/1802.html").*
   After the disaster that was the end of R02,
-  I asked ChatGPT to make an answer key for R03 and uploaded it.
+  I have pre-uploaded answers to R03 this time.#footnote[This time I just used ChatGPT.
+    For future recitations, I might just type answers only,
+    continue using ChatGPT more, or something else;
+    undecided. Anyway, ChatGPT can make mistakes, so if you think something's wrong, flag me.]
   So, now you can check your answer on your phone/tablet/laptop/etc.
-
   But still feel free to check answers with me.
   (Figured it's better to give people more options.)
-  Also, ChatGPT makes mistakes sometimes, so if you think something's wrong, flag me too.
+  And flag me if something looks off.
 
 I'll try to also yap less today and give you time to actually talk to people more 1:1.
 (Though Wednesday recitation is nicer than Monday, half as much stuff to cover.)
@@ -72,7 +74,7 @@ For now, here's a few small hints.
 - A _linear transform_ $T : RR^n -> RR^m$ is _any_ map obeying $T(c bf(v)) = c T(bf(v))$
   and $T(v + w) = T(v) + T(w)$.
   It's a chonky boy: for every $v in RR^n$, there's a value of $T(v) in RR^m$.
-- A _matrix_ is a way of _encoding_ the transformation $T$ using as few numbers as possible.
+- A _matrix_ is a way of _encoding_ the _values_ of $T$ using as few numbers as possible.
 - Pop quiz: if $T : RR^2 -> RR^2$ is a linear transform and
   it's given that
   $ T( vec(3,4) ) = vec(pi, 9) " and " T( vec(100, 100) ) = vec(0, 12) $
@@ -83,9 +85,9 @@ For now, here's a few small hints.
 So the really, really important principle to understand is:
 
 #proposition[
-  A matrix *encodes* a linear transformation $T$
-  by *writing the values* of $T(bf(e)_1)$, ..., $T(bf(e)_n)$ as *columns*.
-  This compresses the transformation into a small array of numbers.
+  A matrix *encodes all values* of a linear transformation $T$
+  by *writing the values* of $T(bf(e)_1)$, ..., $T(bf(e)_n)$ as a list of *column vectors*.
+  This compresses the values of $T$ into a small array of numbers.
 ]
 
 There's a philosophical axe I'm grinding.
