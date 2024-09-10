@@ -69,38 +69,44 @@ as I move around, since that seemed more useful.
 
 Matrices are super confusing because they're actually the "wrong" way to think about things.
 Again, take 18.700 or 18.701 or
-#link("https://web.evanchen.cc/napkin.html")[read my book], or come to office hours.
-For now, here's a few small hints.
+#link("https://web.evanchen.cc/napkin.html")[read my Napkin book], or come to office hours.
+For now, a summary:
 
 - A _linear transform_ $T : RR^n -> RR^m$ is _any_ map obeying $T(c bf(v)) = c T(bf(v))$
   and $T(v + w) = T(v) + T(w)$.
-  It's a chonky boy: for every $v in RR^n$, there's a value of $T(v) in RR^m$.
-- A _matrix_ is a way of _encoding_ the _values_ of $T$ using as few numbers as possible.
+  It's a chonky boy: for every $v in RR^n$, there's an output value $T(v) in RR^m$.
+- A _matrix_ is a way of _encoding_ the _outputs_ of $T$ using as few numbers as possible.
 - Pop quiz: if $T : RR^2 -> RR^2$ is a linear transform and
   it's given that
   $ T( vec(3,4) ) = vec(pi, 9) " and " T( vec(100, 100) ) = vec(0, 12) $
   what are the vectors for $T( vec(103,104) )$ and $T( vec(203, 204) )$?
-- More generally, if you know the values of $T( vec(1,0) )$ and $T( vec(0,1) )$,
-  that gives you enough information to figure out all other values of $T$.
+- More generally, if you know the outputs $T( vec(1,0) )$ and $T( vec(0,1) )$, then
+  that gives you enough information to figure out all other outputs of $T$, because
+  #eqn[
+    $ T( vec(a,b) ) = a T( vec(1,0) ) + b T( vec(0,1) ). $
+    <t-apply>
+  ]
 
 So the really, really important principle to understand is:
 
 #proposition[
-  A matrix *encodes all values* of a linear transformation $T$
-  by *writing the values* of $T(bf(e)_1)$, ..., $T(bf(e)_n)$ as a list of *column vectors*.
-  This compresses the values of $T$ into a small array of numbers.
+  A matrix *encodes all outputs* of a linear transformation $T$
+  by *writing the outputs* of $T(bf(e)_1)$, ..., $T(bf(e)_n)$ as a list of *column vectors*.
 ]
 
 There's a philosophical axe I'm grinding.
 You might have the idea that a linear transformation "is" a matrix.
-I don't like this point of view.
+I don't like it.
 I would say the matrix is a way to succinctly _encode_ or _identify_ the transformation.
-(Think how that every human has a name that identifies them,
-and you can find out things about people given their name.)
+(Think how that every human has a name that identifies them.)
 
-And one more thing: *matrix multiplication actually corresponds to function composition*.
-(Challenge question: after reading the previous sentence,
-you should be able to explain why the matrix multiplication rule is defined as it is.)
+If you followed the above discussion, you can even justify the following two sentences.
+(This requires a deep understanding, beyond what you need for the exam.)
+
+- Multiplication of matrix by vector is defined so that
+  $M bf(v) = T(bf(v))$. (This is @t-apply.)
+- Multiplication of two matrices is defined to make the correspondence
+  $M_1 M_2 <-> T_1 compose T_2$ true.
 
 = Recitation problems
 
