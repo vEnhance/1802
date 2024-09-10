@@ -22,17 +22,17 @@ This handout (and any other DLC's I write) are posted at
   - I'm also going to try and request to have the same room Wednesday 10am.
 - *You can now check recitation answers on #url("https://web.evanchen.cc/1802.html").*
   After the disaster that was the end of R02,
-  I have pre-uploaded answers to R03 this time.#footnote[This time I just used ChatGPT.
+  I have pre-uploaded a quick answer key to R03 this time.#footnote[This time I just used ChatGPT.
     For future recitations, I might just type answers only,
-    continue using ChatGPT more, or something else;
-    undecided. Anyway, ChatGPT can make mistakes, so if you think something's wrong, flag me.]
+    continue using ChatGPT more, or something else; undecided.
+    Anyway, ChatGPT can make mistakes, so if you think something's wrong, flag me.]
   So, now you can check your answer on your phone/tablet/laptop/etc.
   But still feel free to check answers with me.
   (Figured it's better to give people more options.)
-  And flag me if something looks off.
 
-I'll try to also yap less today and give you time to actually talk to people more 1:1.
-(Though Wednesday recitation is nicer than Monday, half as much stuff to cover.)
+I'll try to also yap less today and give you time to actually talk to people more 1:1
+as I move around, since that seemed more useful.
+(Though Wed recitation is nicer than Mon, half as much stuff to cover.)
 
 = Follow-ups from R02
 
@@ -48,12 +48,6 @@ I'll try to also yap less today and give you time to actually talk to people mor
 - Remember that every vector has both a *direction* and a *magnitude*,
   which both have geometric meaning (or insignificance); see table below.
 
-- Remember: *the $RR^2$ concept of slope is overriden by the concept of normal vector for $RR^3$*.
-  This is an important lesson from last time that I didn't call enough attention to,
-  so I want to re-emphasize it.
-  Anything you used to rely on slopes for, you should try to reframe in terms of normal vector.
-  (I'll say this yet again when $nabla f(x,y)$ is introduced.)
-
 #align(center)[
   #table(
     columns: 3,
@@ -63,6 +57,14 @@ I'll try to also yap less today and give you time to actually talk to people mor
     [Cross product $bf(a) times bf(b)$], [Perpendicular to both $bf(a)$ and $bf(b)$], [Area of parallelogram]
   )
 ]
+
+- Remember: *the $RR^2$ concept of slope is overriden by the concept of normal vector for $RR^3$*.
+  This is an important lesson from last time that I didn't call enough attention to,
+  so I want to re-emphasize it.
+  Anything you used to rely on slopes for, you should try to retrain yourself
+  to think of in terms of normal vector.
+  (I'll say this yet again when $nabla f(x,y)$ is introduced.)
+
 
 = Some abstraction on linear maps
 
