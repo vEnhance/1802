@@ -166,30 +166,39 @@ A = \begin{pmatrix}
 \newpage
 
 \subsection{(d) Projection onto the Vector \( \mathbf{w} = \begin{pmatrix} 1 \\ 2 \end{pmatrix} \)}
-
-The projection of a vector \( \mathbf{v} \in \mathbb{R}^2 \) onto the vector \( \mathbf{w} = \begin{pmatrix} 1 \\ 2 \end{pmatrix} \) is given by the formula:
-\[
-\text{proj}_{\mathbf{w}}(\mathbf{v}) = \frac{\mathbf{v} \cdot \mathbf{w}}{\mathbf{w} \cdot \mathbf{w}} \mathbf{w}.
-\]
-First, calculate \( \mathbf{w} \cdot \mathbf{w} \):
-\[
-\mathbf{w} \cdot \mathbf{w} = 1^2 + 2^2 = 5.
-\]
-The projection matrix formula\footnote{Evan says:
-    Probably not a formula you got during class, I think.
-    You should probably use the same approach as the previous parts
-    where you compute the projections of $\mathbf{e}_1$ and $\mathbf{e}_2$.}
-for projecting onto \( \mathbf{w} \) is:
-\[
-A = \frac{1}{\mathbf{w} \cdot \mathbf{w}} \mathbf{w} \mathbf{w}^T = \frac{1}{5} \begin{pmatrix} 1 \\ 2 \end{pmatrix} \begin{pmatrix} 1 & 2 \end{pmatrix}.
-\]
-Carrying out the matrix multiplication:
-\[
-A = \frac{1}{5} \begin{pmatrix} 1 & 2 \\ 2 & 4 \end{pmatrix} = \begin{pmatrix} \frac{1}{5} & \frac{2}{5} \\ \frac{2}{5} & \frac{4}{5} \end{pmatrix}.
-\]
-Thus, the matrix for the projection onto \( \mathbf{w} = \begin{pmatrix} 1 \\ 2 \end{pmatrix} \) is:
+The answer is
 \[
 A = \begin{pmatrix} \frac{1}{5} & \frac{2}{5} \\ \frac{2}{5} & \frac{4}{5} \end{pmatrix}.
 \]
+This follows by showing $\mathbf{e}_1$ and $\mathbf{e}_2$ project to
+$\begin{pmatrix} 1/5 \\ 2/5 \end{pmatrix}$
+and $\begin{pmatrix} 2/5 \\ 4/5 \end{pmatrix}$
+respectively.\footnote{ChatGPT provided a solution
+    by citing a formula that I don't think was covered in the class,
+    that's basically a cheat code in my opinion.
+    But here it is if you want to see it.
+    The projection of a vector \( \mathbf{v} \in \mathbb{R}^2 \) onto the vector
+    \( \mathbf{w} = \begin{pmatrix} 1 \\ 2 \end{pmatrix} \) is given by the formula:
+    \[
+    \frac{\mathbf{v} \cdot \mathbf{w}}{\mathbf{w} \cdot \mathbf{w}} \mathbf{w}.
+    \]
+    First, calculate \( \mathbf{w} \cdot \mathbf{w} \):
+    \[
+    \mathbf{w} \cdot \mathbf{w} = 1^2 + 2^2 = 5.
+    \]
+    The projection matrix formula
+    for projecting onto \( \mathbf{w} \) is:
+    \[
+    A = \frac{1}{\mathbf{w} \cdot \mathbf{w}} \mathbf{w} \mathbf{w}^T = \frac{1}{5} \begin{pmatrix} 1 \\ 2 \end{pmatrix} \begin{pmatrix} 1 & 2 \end{pmatrix}.
+    \]
+    Carrying out the matrix multiplication:
+    \[
+    A = \frac{1}{5} \begin{pmatrix} 1 & 2 \\ 2 & 4 \end{pmatrix} = \begin{pmatrix} \frac{1}{5} & \frac{2}{5} \\ \frac{2}{5} & \frac{4}{5} \end{pmatrix}.
+    \]
+    Thus, the matrix for the projection onto \( \mathbf{w} = \begin{pmatrix} 1 \\ 2 \end{pmatrix} \) is:
+    \[
+    A = \begin{pmatrix} \frac{1}{5} & \frac{2}{5} \\ \frac{2}{5} & \frac{4}{5} \end{pmatrix}.
+    \]
+}
 
 \end{document}
