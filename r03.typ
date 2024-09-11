@@ -181,7 +181,7 @@ And indeed, you can now verify that if you calculate $mat(1,2;3,4) vec(50,70)$
 as you were told to do in high school,
 you get the same answer (and do the same calculations)
 as we did for @pop2.
-(In recitation, I actually circled where $1 dot 50$ and $3 dot 70$ showed up
+(In recitation, I actually circled where $1 dot 50$ and $2 dot 70$ showed up
 in the solution to @pop2 on the board.)
 
 #remark[The identity matrix deserves its name][
