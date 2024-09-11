@@ -57,7 +57,7 @@ as I move around, since that seemed more useful.
   )
 ]
 
-- Remember: *the $RR^2$ concept of slope is overriden by the concept of normal vector for $RR^3$*.
+- Remember: *the $RR^2$ concept of slope is overridden by the concept of normal vector for $RR^3$*.
   This is an important lesson from last time that I didn't call enough attention to,
   so I want to re-emphasize it.
   Anything you used to rely on slopes for, you should try to retrain yourself
@@ -242,7 +242,7 @@ $
   mat(5,6;7,8) mat(1,2;3,4) = mat(23, 34; 31, 46).
 $
 
-This is shows why the 18.700/18.701 definitions are better than the 18.02 ones.
+This shows why the 18.700/18.701 definitions are better than the 18.02 ones.
 In 18.02, the recipe for matrix multiplication is a _definition_:
 "here is this contrived rule about taking products of columns and rows, trust me bro".
 But in 18.700/18.701, the matrix multiplication recipe is a _theorem_;
