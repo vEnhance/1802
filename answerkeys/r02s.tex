@@ -1,0 +1,275 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[colorlinks]{hyperref}
+
+\begin{document}
+\title{Quick answer key to R02}
+\author{ChatGPT 4o}
+\date{11 September 2024}
+\maketitle
+
+Use the table of contents below to skip to a specific part
+without seeing spoilers to the other parts.
+
+I just used ChatGPT to write this one quickly.
+ChatGPT can make mistakes, so if you spot anything that's wrong, flag me to ask.
+
+\tableofcontents
+
+\newpage
+
+\section{Solution to Problem 1}
+
+Given the vectors $\mathbf{a} = \langle 2, 3, 6 \rangle$ and $\mathbf{b} = \langle 1, 2, 2 \rangle$:
+
+\subsection{Scalar Component of $\mathbf{a}$ in the Direction of $\mathbf{b}$}
+
+The scalar component of $\mathbf{a}$ in the direction of $\mathbf{b}$ is given by the formula:
+
+\[
+\text{Scalar component} = \frac{\mathbf{a} \cdot \mathbf{b}}{\|\mathbf{b}\|}
+\]
+
+First, we compute the dot product $\mathbf{a} \cdot \mathbf{b}$:
+
+\[
+\mathbf{a} \cdot \mathbf{b} = 2(1) + 3(2) + 6(2) = 2 + 6 + 12 = 20
+\]
+
+Next, we compute the magnitude of $\mathbf{b}$:
+
+\[
+\|\mathbf{b}\| = \sqrt{1^2 + 2^2 + 2^2} = \sqrt{1 + 4 + 4} = \sqrt{9} = 3
+\]
+
+Thus, the scalar component of $\mathbf{a}$ in the direction of $\mathbf{b}$ is:
+
+\[
+\frac{20}{3}
+\]
+
+\newpage
+
+\subsection{Vector Component of $\mathbf{a}$ in the Direction of $\mathbf{b}$}
+
+The vector component of $\mathbf{a}$ in the direction of $\mathbf{b}$ is given by the formula:
+
+\[
+\text{Vector component} = \left( \frac{\mathbf{a} \cdot \mathbf{b}}{\|\mathbf{b}\|^2} \right) \mathbf{b}
+\]
+
+We already have $\mathbf{a} \cdot \mathbf{b} = 20$ and $\|\mathbf{b}\|^2 = 9$. So the projection scalar is:
+
+\[
+\frac{20}{9}
+\]
+
+Now, the vector component is:
+
+\[
+\frac{20}{9} \mathbf{b} = \frac{20}{9} \langle 1, 2, 2 \rangle = \left\langle \frac{20}{9}, \frac{40}{9}, \frac{40}{9} \right\rangle
+\]
+
+Thus, the vector component of $\mathbf{a}$ in the direction of $\mathbf{b}$ is:
+
+\[
+\left\langle \frac{20}{9}, \frac{40}{9}, \frac{40}{9} \right\rangle
+\]
+\newpage
+
+\section{Problem 2}
+\subsection{Part (a): Set of Vectors Perpendicular to $\langle 1, 2, 3 \rangle$}
+
+The set of vectors perpendicular to $\mathbf{v} = \langle 1, 2, 3 \rangle$ are all vectors $\mathbf{w} = \langle x, y, z \rangle$ that satisfy the dot product equation:
+
+\[
+\mathbf{v} \cdot \mathbf{w} = 0
+\]
+
+This gives the equation:
+
+\[
+1x + 2y + 3z = 0
+\]
+
+Thus, the set of vectors perpendicular to $\langle 1, 2, 3 \rangle$ forms a plane in $\mathbb{R}^3$ described by the equation:
+
+\[
+x + 2y + 3z = 0
+\]
+
+\newpage
+\subsection{Part (b): Equation of the Plane with Normal Vector $\langle 1, 2, 3 \rangle$ Passing Through Point $P(4, 5, 6)$}
+
+The general equation of a plane with a normal vector $\mathbf{n} = \langle A, B, C \rangle$ and passing through a point $P(x_0, y_0, z_0)$ is:
+
+\[
+A(x - x_0) + B(y - y_0) + C(z - z_0) = 0
+\]
+
+Substituting the normal vector $\mathbf{n} = \langle 1, 2, 3 \rangle$ and the point $P(4, 5, 6)$, we get:
+
+\[
+1(x - 4) + 2(y - 5) + 3(z - 6) = 0
+\]
+
+Simplifying:
+
+\[
+x - 4 + 2y - 10 + 3z - 18 = 0
+\]
+
+\[
+x + 2y + 3z = 32
+\]
+
+Thus, the equation of the plane is:
+
+\[
+x + 2y + 3z = 32
+\]
+
+\newpage
+\subsection{Part (c): Are the Vector $\langle -5, 1, 1 \rangle$ and the Plane $x + 2y + 3z = 6$ Parallel, Perpendicular, Both, or Neither?}
+
+The normal vector to the plane $x + 2y + 3z = 6$ is $\mathbf{n} = \langle 1, 2, 3 \rangle$. To check if the vector $\mathbf{v} = \langle -5, 1, 1 \rangle$ is parallel or perpendicular to the plane, we consider the dot product:
+
+\[
+\mathbf{n} \cdot \mathbf{v} = 1(-5) + 2(1) + 3(1) = -5 + 2 + 3 = 0
+\]
+
+Since the dot product is zero, the vector $\mathbf{v}$ is perpendicular to the normal vector, meaning it is \textbf{parallel}\footnote{See, ChatGPT made a mistake here, it said perpendicular at first.} to the plane.
+
+\newpage
+\subsection{Part (d): Distance from Point $Q(2, 3, 5)$ to the Plane $x + 2y + 3z = 32$}
+
+The distance from a point $Q(x_1, y_1, z_1)$ to a plane $Ax + By + Cz + D = 0$ is given by the formula:
+
+\[
+\text{Distance} = \frac{|A x_1 + B y_1 + C z_1 + D|}{\sqrt{A^2 + B^2 + C^2}}
+\]
+
+For the plane $x + 2y + 3z = 32$, we rewrite it as $x + 2y + 3z - 32 = 0$, so $A = 1$, $B = 2$, $C = 3$, and $D = -32$. The point $Q$ has coordinates $(2, 3, 5)$. Substituting into the formula:
+
+\[
+\text{Distance} = \frac{|1(2) + 2(3) + 3(5) - 32|}{\sqrt{1^2 + 2^2 + 3^2}} = \frac{|2 + 6 + 15 - 32|}{\sqrt{1 + 4 + 9}} = \frac{|23 - 32|}{\sqrt{14}} = \frac{9}{\sqrt{14}}
+\]
+
+Thus, the distance from the point $Q(2, 3, 5)$ to the plane is:
+
+\[
+\frac{9}{\sqrt{14}} \approx 2.41
+\]
+\newpage
+
+\section{Problem 3}
+Consider the points $P(1, 2, 4)$, $Q(0, 1, 3)$, and $R(2, 4, 7)$.
+
+\subsection{Part (a): Calculate the Cross Product $\overrightarrow{PQ} \times \overrightarrow{PR}$}
+
+First, we find the vectors $\overrightarrow{PQ}$ and $\overrightarrow{PR}$:
+
+\[
+\overrightarrow{PQ} = \langle 0 - 1, 1 - 2, 3 - 4 \rangle = \langle -1, -1, -1 \rangle
+\]
+\[
+\overrightarrow{PR} = \langle 2 - 1, 4 - 2, 7 - 4 \rangle = \langle 1, 2, 3 \rangle
+\]
+
+Now, we compute the cross product $\overrightarrow{PQ} \times \overrightarrow{PR}$ using the determinant formula:
+
+\[
+\overrightarrow{PQ} \times \overrightarrow{PR} = \begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+-1 & -1 & -1 \\
+1 & 2 & 3
+\end{vmatrix}
+\]
+
+Expanding the determinant:
+
+\[
+\overrightarrow{PQ} \times \overrightarrow{PR} = \mathbf{i} \begin{vmatrix} -1 & -1 \\ 2 & 3 \end{vmatrix} - \mathbf{j} \begin{vmatrix} -1 & -1 \\ 1 & 3 \end{vmatrix} + \mathbf{k} \begin{vmatrix} -1 & -1 \\ 1 & 2 \end{vmatrix}
+\]
+
+\[
+= \mathbf{i}((-1)(3) - (-1)(2)) - \mathbf{j}((-1)(3) - (-1)(1)) + \mathbf{k}((-1)(2) - (-1)(1))
+\]
+
+\[
+= \mathbf{i}(-3 + 2) - \mathbf{j}(-3 + 1) + \mathbf{k}(-2 + 1)
+\]
+
+\[
+= \mathbf{i}(-1) - \mathbf{j}(-2) + \mathbf{k}(-1)
+\]
+
+\[
+= \langle -1, 2, -1 \rangle
+\]
+
+Thus, the cross product is:
+
+\[
+\overrightarrow{PQ} \times \overrightarrow{PR} = \langle -1, 2, -1 \rangle
+\]
+
+\newpage
+
+\subsection{Part (b): Equation of the Plane Containing Points $P, Q, R$}
+
+The normal vector to the plane is given by $\overrightarrow{PQ} \times \overrightarrow{PR} = \langle -1, 2, -1 \rangle$. The equation of a plane passing through point $P(1, 2, 4)$ with normal vector $\langle A, B, C \rangle$ is:
+
+\[
+A(x - x_0) + B(y - y_0) + C(z - z_0) = 0
+\]
+
+Substituting $A = -1$, $B = 2$, $C = -1$, and $P(1, 2, 4)$, we get:
+
+\[
+-1(x - 1) + 2(y - 2) - 1(z - 4) = 0
+\]
+
+Simplifying:
+
+\[
+-(x - 1) + 2(y - 2) - (z - 4) = 0
+\]
+
+\[
+-x + 1 + 2y - 4 - z + 4 = 0
+\]
+
+\[
+-x + 2y - z + 1 = 0
+\]
+
+Thus, the equation of the plane is:
+
+\[
+x - 2y + z = 1
+\]
+
+\newpage
+
+\subsection{Part (c): Area of the Triangle $PQR$}
+
+The area of triangle $PQR$ is given by the formula:
+
+\[
+\text{Area} = \frac{1}{2} \|\overrightarrow{PQ} \times \overrightarrow{PR}\|
+\]
+
+We already know that $\overrightarrow{PQ} \times \overrightarrow{PR} = \langle -1, 2, -1 \rangle$. Now, we compute the magnitude:
+
+\[
+\|\overrightarrow{PQ} \times \overrightarrow{PR}\| = \sqrt{(-1)^2 + 2^2 + (-1)^2} = \sqrt{1 + 4 + 1} = \sqrt{6}
+\]
+
+Thus, the area of the triangle is:
+
+\[
+\text{Area} = \frac{1}{2} \sqrt{6}
+\]
+
+\end{document}
