@@ -157,15 +157,15 @@ Now more generally, here's the example with the made-up numbers
 #problem[
   If $T : RR^2 -> RR^2$ is a linear transform and it's given that
   $ T( vec(1,0) ) = vec(1, 3) " and " T( vec(0,1) ) = vec(2, 4) $
-  what is $T( vec(5, 7) )$?
+  what is $T( vec(50, 70) )$?
 ] <pop2>
 #soln[
-  $ T( vec(5, 7) ) = 5 vec(1,3) + 7 vec(2,4) = vec(19, 43). #qedhere $
+  $ T( vec(50, 70) ) = 50 vec(1,3) + 70 vec(2,4) = vec(190, 430). #qedhere $
 ]
 
 More generally, the second question shows that if you know
 $T( vec(1,0) )$ and $T( vec(0,1) )$
-you ought to be able to _calculate_ the output of $T$ at any other vector like $vec(5,7)$.
+you ought to be able to _calculate_ the output of $T$ at any other vector like $vec(50,70)$.
 More generally, if $T : RR^n -> RR^m$,
 then telling you the output of $T(bf(e)_1)$, ..., $T(bf(e)_n)$
 is the smallest amount of information I can give you that lets you reconstruct the other values.
@@ -176,10 +176,13 @@ $ T( vec(1,0) ) = vec(1, 3) " and " T( vec(0,1) ) = vec(2, 4)
   <==> T " encoded as " mat(1,2;3,4) $
 
 The matrix multiplication rule is then rigged to correspond to evaluation:
-$ T( vec(5,7) ) = vec(19, 43) <==> mat(1,2;3,4) vec(5,7) = vec(19, 43). $
-And indeed, you can now verify that if you calculate $mat(1,2;3,4) vec(5,7)$,
+$ T( vec(50,70) ) = vec(19, 43) <==> mat(1,2;3,4) vec(50,70) = vec(19, 43). $
+And indeed, you can now verify that if you calculate $mat(1,2;3,4) vec(50,70)$
+as you were told to do in high school,
 you get the same answer (and do the same calculations)
 as we did for @pop2.
+(In recitation, I actually circled where $1 dot 50$ and $3 dot 70$ showed up
+in the solution to @pop2 on the board.)
 
 #remark[The identity matrix deserves its name][
   This also gives a "better" reason why the identity matrix is the one
