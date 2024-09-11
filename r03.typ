@@ -168,10 +168,10 @@ $T( vec(1,0) )$ and $T( vec(0,1) )$
 you ought to be able to _calculate_ the output of $T$ at any other vector like $vec(50,70)$.
 More generally, if $T : RR^n -> RR^m$,
 then telling you the output of $T(bf(e)_1)$, ..., $T(bf(e)_n)$
-is the smallest amount of information I can give you that lets you reconstruct the other values.
+is the smallest amount of information I can give you that lets you reconstruct any other output.
 
 Now, I told you a linear transformation $T$ can be _encoded_ as a matrix.
-The way you do this is to write the outputs of $T$ at the basis vectors and make an array:
+This is really easy: glue the outputs of $T$ at the basis vectors and format it as an array:
 $ T( vec(1,0) ) = vec(1, 3) " and " T( vec(0,1) ) = vec(2, 4)
   <==> T " encoded as " mat(1,2;3,4) $
 
