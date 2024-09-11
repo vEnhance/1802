@@ -208,7 +208,7 @@ Any time we have functions in math, we can _compose_ them.#footnote[
   So for example, if $f(x) = x^2$ and $g(x) = x+5$, then
   $(f compose g)(x) = f(g(x)) = (x+5)^2$.
   We mostly use that circle symbol if we want to refer to $f compose g$ itself without the $x$,
-  since you can't just write or something.
+  since it would look really bad if you wrote "$f(g$" or something.
 ]
 So let's play the same game with a pair of functions $S$ and $T$,
 and think about their composition $S compose T$.
