@@ -95,18 +95,18 @@ So the really, really important principle to understand is:
 ]
 
 There's a philosophical axe I'm grinding.
-You might have the idea that a linear transformation "is" a matrix.
-I don't like it.
-I would say the matrix is a way to succinctly _encode_ or _identify_ the transformation.
+In 18.02, a linear transform is defined as "act by a matrix".
+I've never liked this definition for ten years.
+I would rather define it as in the first bullet above;
+then say the matrix is a way to succinctly _encode_ or _identify_ the transformation.
 (Think how that every human has a name that identifies them.)
 
-If you followed the above discussion, you can even justify the following two sentences.
-(This requires a deep understanding, beyond what you need for the exam.)
+If that made sense, you can explain the following two sentences
+(corr to last page of Maulik's L3 notes):
 
 - Multiplication of matrix by vector is defined so that
   $M bf(v) = T(bf(v))$. (This is @t-apply.)
-- Multiplication of two matrices is defined to make the correspondence
-  $M_1 M_2 <-> T_1 compose T_2$ true.
+- Multiplication of two matrices defined so that $A B$ corresponds to _function composition_.
 
 = Recitation problems
 
