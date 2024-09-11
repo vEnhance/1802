@@ -65,7 +65,7 @@ as I move around, since that seemed more useful.
   (I'll say this yet again when $nabla f(x,y)$ is introduced.)
 
 
-= Some abstraction on linear maps
+= Some abstraction on linear maps <lintransf>
 
 Matrices are super confusing because they're actually the "wrong" way to think about things.
 Again, take 18.700 or 18.701 or
@@ -128,3 +128,164 @@ If that made sense, you can explain the following two sentences
   $f (bf(v))$ is the vector projection of $bf(v)$ in the direction
   $bf(w) = vec(1, 2)$. What is the $2 times 2$ matrix $A$ associated with
   this linear transformation?
+
+= Post-recitation notes
+
+If you #strike[overslept] couldn't make it to recitation,
+here's an elaboration of @lintransf as I presented it today.
+
+== One matrix
+
+Here's the answer to the pop quiz in @lintransf (I'll restate the question first):
+#problem[
+  If $T : RR^2 -> RR^2$ is a linear transform and it's given that
+  $ T( vec(3,4) ) = vec(pi, 9) " and " T( vec(100, 100) ) = vec(0, 12) $
+  what are the vectors for $T( vec(103,104) )$ and $T( vec(203, 204) )$?
+] <pop1>
+#soln[
+  $
+  T( vec(103,104) ) = vec(pi, 9) + vec(0, 12) = vec(pi, 21) \
+  T( vec(203,204) ) = vec(pi, 9) + 2 vec(0, 12) = vec(pi, 33). #qedhere
+  $
+  /* (If you're using the 18.02 definition of linear transform,
+  then the above equations hold because matrix multiplication is distributive over addition.
+  Whereas in 18.700/18.70, the equations hold _by definition_.) */
+]
+
+Now more generally, here's the example with the made-up numbers
+(I forget which random numbers the audience gave me for the actual recitation, sorry).
+#problem[
+  If $T : RR^2 -> RR^2$ is a linear transform and it's given that
+  $ T( vec(1,0) ) = vec(1, 3) " and " T( vec(0,1) ) = vec(2, 4) $
+  what is $T( vec(5, 7) )$?
+] <pop2>
+#soln[
+  $ T( vec(5, 7) ) = 5 vec(1,3) + 7 vec(2,4) = vec(19, 43). #qedhere $
+]
+
+More generally, the second question shows that if you know
+$T( vec(1,0) )$ and $T( vec(0,1) )$
+you ought to be able to _calculate_ the output of $T$ at any other vector like $vec(5,7)$.
+More generally, if $T : RR^n -> RR^m$,
+then telling you the output of $T(bf(e)_1)$, ..., $T(bf(e)_n)$
+is the smallest amount of information I can give you that lets you reconstruct the other values.
+
+Now, I told you a linear transformation $T$ can be _encoded_ as a matrix.
+The way you do this is to write the outputs of $T$ at the basis vectors and make an array:
+$ T( vec(1,0) ) = vec(1, 3) " and " T( vec(0,1) ) = vec(2, 4)
+  <==> T " encoded as " mat(1,2;3,4) $
+
+The matrix multiplication rule is then rigged to correspond to evaluation:
+$ T( vec(5,7) ) = vec(19, 43) <==> mat(1,2;3,4) vec(5,7) = vec(19, 43). $
+And indeed, you can now verify that if you calculate $mat(1,2;3,4) vec(5,7)$,
+you get the same answer (and do the same calculations)
+as we did for @pop2.
+
+#remark[The identity matrix deserves its name][
+  This also gives a "better" reason why the identity matrix is the one
+  with $1$'s on the diagonal than the "well try multiplying by it".
+
+  Let $I : RR^3 -> RR^3$ denote the 3d identity function.
+  To encode it, we look at its values at $bf(e)_1$, $bf(e)_2$, $bf(e)_3$:
+  $
+    I(bf(e)_1) = bf(e)_1 = vec(1,0,0),
+    #h(1em)
+    I(bf(e)_2) = bf(e)_2 = vec(0,1,0),
+    #h(1em)
+    I(bf(e)_3) = bf(e)_3 = vec(0,0,1).
+  $
+  We encode it as a matrix by writing the columns side by side, getting what you expect:
+  $ I " encoded as " mat(1,0,0;0,1,0;0,0,1). $
+]
+
+== Two matrices
+
+Any time we have functions in math, we can _compose_ them.#footnote[
+  The $compose$ symbol means the function where you apply $T$ first then $S$ first.
+  So for example, if $f(x) = x^2$ and $g(x) = x+5$, then
+  $(f compose g)(x) = f(g(x)) = (x+5)^2$.
+  We mostly use that circle symbol if we want to refer to $f compose g$ itself without the $x$,
+  since you can't just write or something.
+]
+So let's play the same game with a pair of functions $S$ and $T$,
+and think about their composition $S compose T$.
+
+#problem[
+  Let $T : RR^2 -> RR^2$ be a linear transform such that
+  $ T( vec(1,0) ) = vec(1, 3) " and " T( vec(0,1) ) = vec(2, 4). $
+  Then let $S : RR^2 -> RR^2$ be the linear transform such that
+  $ S( vec(1,0) ) = vec(5, 7) " and " S( vec(0,1) ) = vec(6, 8). $
+  Evaluate $S(T(vec(1, 0)))$ and $S(T(vec(0, 1)))$.
+] <pop3>
+#soln[
+  $
+  S(T(vec(1, 0))) = S(vec(1, 3)) = 1 vec(5,7) + 3 vec(6, 8) = vec(23, 31) \
+  S(T(vec(0, 1))) = S(vec(2, 4)) = 2 vec(5,7) + 4 vec(6, 8) = vec(34, 46). #qedhere
+  $
+]
+
+Now, $S compose T$ is _itself_ a function, so it makes sense to encode $S compose T$ as a matrix
+too, using the answer to @pop3:
+$
+  S(T(vec(1, 0))) = vec(23, 31) " and "
+  S(T(vec(0, 1))) = vec(34, 46)
+  <==>
+  S compose T " encoded as " mat(23, 34; 31, 46).
+$
+
+The matrix multiplication rule is then rigged to give the same answer
+through the same calculation again:
+$
+  mat(5,6;7,8) mat(1,2;3,4) = mat(23, 34; 31, 46).
+$
+
+This is shows why the 18.700/18.701 definitions are better than the 18.02 ones.
+In 18.02, the recipe for matrix multiplication is a _definition_:
+"here is this contrived rule about taking products of columns and rows, trust me bro".
+But in 18.700/18.701, the matrix multiplication recipe is a _theorem_;
+it's what happens if you generalize @pop3 to eight variables
+(or $n^2+n^2 = 2n^2$ variables for $n times n$ matrices).
+
+As an aside, this should explain why matrix multiplication is associative but not commutative:
+- Because #link("https://w.wiki/BAHh")[function composition is associative],
+  so is matrix multiplication.
+- Because function composition is _not_ commutative in general,
+  matrix multiplication isn't either.
+
+== Remark on recitation question 2
+
+I want to point out that 2b/2c/2d are all doing the same thing:
+they take the general shape
+
+#quote[
+  Here is a particular linear transformation described in words;
+  please encode it as a matrix.
+]
+
+And you do all three problems by calculating the value of the transformation
+at $bf(e)_i$, and then encoding it by just gluing them together.
+Conceptually, you can fit those into the following table.
+It's important to realize *all the work of the problem is the "values at basis"*;
+and that *only uses up to R02 material*.
+The only new step introduced in R03 is "to encode as matrix, glue your answers together".
+
+#align(center)[
+
+  #table(
+    columns: 4,
+    table.header([*Q*], [*Transf.*], [*Values at basis*], [*Encoded matrix*]),
+    [2b],
+      [$T = $ "Reflect around $y=-x$"],
+      [$ T(bf(e)_1) = vec(0,-1) \ T(bf(e)_2) = vec(-1,0) $],
+      [$mat(0,-1;-1,0)$],
+    [2c],
+      [$T = $ "ugly 3d equation above"],
+      [$ T(bf(e)_1) = vec(3,1,0) \ T(bf(e)_2) = vec(0,1,4) \ T(bf(e)_3) = vec(-2,1,1) $],
+      [$mat(3,0,-2;1,1,1;0,4,1)$],
+    [2d],
+      [$T = $ "vector projection as in R02"],
+      [$ T(bf(e)_1) = vec(1/5,2/5) \ T(bf(e)_2) = vec(2/5,4/5) $],
+      [$mat(1/5,2/5;2/5,4/5)$],
+  )
+
+]
