@@ -97,12 +97,12 @@ So the really, really important principle to understand is:
 There's a philosophical axe I'm grinding.
 In 18.02, a linear transform is defined as "act by a matrix".
 I've never liked this definition for ten years.
-I would rather define it as in the first bullet above;
+I would rather define it as in the first bullet above (as in 18.701);
 then say the matrix is a way to succinctly _encode_ or _identify_ the transformation.
 (Think how that every human has a name that identifies them.)
 
 If that made sense, you can explain the following two sentences
-(corr to last page of Maulik's L3 notes):
+(the last page of Maulik's L3 notes):
 
 - Multiplication of matrix by vector is defined so that
   $M bf(v) = T(bf(v))$. (This is @t-apply.)
