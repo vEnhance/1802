@@ -176,7 +176,7 @@ $ T( vec(1,0) ) = vec(1, 3) " and " T( vec(0,1) ) = vec(2, 4)
   <==> T " encoded as " mat(1,2;3,4) $
 
 The matrix multiplication rule is then rigged to correspond to evaluation:
-$ T( vec(50,70) ) = vec(19, 43) <==> mat(1,2;3,4) vec(50,70) = vec(19, 43). $
+$ T( vec(50,70) ) = vec(190, 430) <==> mat(1,2;3,4) vec(50,70) = vec(190, 430). $
 And indeed, you can now verify that if you calculate $mat(1,2;3,4) vec(50,70)$
 as you were told to do in high school,
 you get the same answer (and do the same calculations)
