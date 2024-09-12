@@ -76,7 +76,7 @@ Q3 has both ("basis" = "lin. indp." + "spanning"), and Q4-Q6 are each missing so
 - Q3 is a good quiz question because $vec(3,4)$ and $vec(100,100)$ are a *basis*.
 - Q4 is impossible because $vec(3,4)$ is *NOT spanning* (though it is lin. indp.);
 - Q5 is redundant because the vectors $vec(3,4)$, $vec(100,100)$, $vec(103,104)$
-  are *NOT lin. indp.* (though spanning),
+  are *NOT lin. indp.* (though spanning);
 - Q6 is the worst one as the two vectors $vec(3,4)$ and $vec(300, 400)$
   are *NEITHER lin. indp. NOR spanning*.
 
