@@ -89,8 +89,8 @@ More examples of correct hunches:
 
 - In $RR^n$, at least $n+1$ vectors are never linearly independent.
 - In $RR^n$, at most $n-1$ vectors are never spanning.
-- Also, if you have exactly $n$ vectors, and they're linearly independent, then they're a basis.
-- Also, if you have exactly $n$ vectors, and they're spanning, then they're a basis.
+- Also, if you have exactly $n$ vectors in $RR^n$, and they're linearly independent, then they're a basis.
+- Also, if you have exactly $n$ vectors in $RR^n$, and they're spanning, then they're a basis.
   - Most usefully, they're spanning if and only if the $n times n$ matrix
     whose columns are the vectors has *nonzero determinant*.
     (Reason: for $n=3$, not being spanning in $RR^3$ means the parallelepiped
