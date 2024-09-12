@@ -85,10 +85,10 @@ Q3 has both ("basis" = "lin. indp." + "spanning"), and Q4-Q6 are each missing so
 For dimension, you can often trust your hunches, and they'll be right.
 For example, you might have the feeling that any good quiz question for $T : RR^2 -> RR^2$
 needs to end up having $2$ given equations. You'd be right.
-More examples of correct hunches (you can remember the last two as _buy two get one free_):
+More examples of correct hunches (this is the _buy two get one free_ in Poonen 4.7):
 
 - In $RR^n$, at least $n+1$ vectors are never linearly independent.
-- In $RR^n$, at most $n-1$ vectors are never spanning.
+- In $RR^n$, at most $n-1$ vectors are never spanning. (So a basis is always $n$ vectors exactly.)
 - Also, if you have exactly $n$ vectors in $RR^n$, and they're linearly independent, then they're a basis.
 - Also, if you have exactly $n$ vectors in $RR^n$, and they're spanning, then they're a basis.
   - Most usefully, they're spanning if and only if the $n times n$ matrix
