@@ -219,7 +219,7 @@ $P : (1 , 2 , 4) ; Q : (0 , 1 , 3) ; R : (2 , 4 , 7)$.
 
 - What is the area of the triangle $P Q R$?
 
-== Another problem I made up in the shower if the first three are too easy
+= Another problem I made up in the shower if those are too easy
 
 - Suppose $A$, $B$, $C$, $D$ are points in $RR^3$.
   What is the geometric interpretation of the following expression#footnote[
