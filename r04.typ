@@ -105,6 +105,6 @@ might look like unrelated small numbers,
 but surprisingly it turns out that $ 109 bf(v)_1 - 37 bf(v)_2 - 29 bf(v)_3 =0. $
 Without "slope", you cannot notice these dependences by sight for $n >= 3$, so use the determinant.
 
-= Recitation questions
+= Recitation questions from Prof Maulik
 
 To be added...

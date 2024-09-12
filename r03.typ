@@ -108,7 +108,7 @@ If that made sense, you can explain the following two sentences
   $M bf(v) = T(bf(v))$. (This is @t-apply.)
 - Multiplication of two matrices defined so that $A B$ corresponds to _function composition_.
 
-= Recitation problems
+= Recitation problems from Prof Maulik
 
 / 1: Consider the $2 times 2$ matrices $A = mat(2, 1; 1, 2)$ and $B = mat(- 3, 1; 2, 0)$.
 / 1a: Calculate $A B$ and $B A$.

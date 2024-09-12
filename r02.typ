@@ -178,14 +178,7 @@ Thursday/Friday lectures are _really_ nontrivial.
 
   (In truth, the cross product is secretly a worse form of the wedge product. Just saying. `;)`)
 
-= Recitation worksheet for today
-
-I go too annoyed by the ugly angle brackets in the Canvas file
-so I just retyped the whole thing lol.#footnote[Just kidding, I actually
-  asked ChatGPT to convert to LaTeX, then converted it to Typst with `pandoc`, hahaha.]
-
-Today we will discuss equations of planes as applications of the dot
-product and cross product.
+= Recitation questions from Prof Maulik
 
 == Problem 1
 
