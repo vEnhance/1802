@@ -2,6 +2,7 @@ tsafe-1802/tsafe-1802.pdf
 welcome-slides/welcome-slides.pdf
 r02.pdf
 r03.pdf
+r04.pdf
 dotpf.pdf
 answerkeys/r02s.pdf
 answerkeys/r03s.pdf
