@@ -85,7 +85,7 @@ Q3 has both ("basis" = "lin. indp." + "spanning"), and Q4-Q6 are each missing so
 For dimension, you can often trust your hunches, and they'll be right.
 For example, you might have the feeling that any good quiz question for $T : RR^2 -> RR^2$
 needs to end up having $2$ given equations. You'd be right.
-More examples of correct hunches:
+More examples of correct hunches (you can remember the last two as _buy two get one free_):
 
 - In $RR^n$, at least $n+1$ vectors are never linearly independent.
 - In $RR^n$, at most $n-1$ vectors are never spanning.
