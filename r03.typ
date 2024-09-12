@@ -73,8 +73,8 @@ Again, take 18.700 or 18.701 or
 For now, a summary:
 
 - A _linear transform_ $T : RR^n -> RR^m$ is _any_ map obeying $T(c bf(v)) = c T(bf(v))$
-  and $T(v + w) = T(v) + T(w)$.
-  It's a chonky boy: for every $v in RR^n$, there's an output value $T(v) in RR^m$.
+  and $T(bf(v) + bf(w)) = T(bf(v)) + T(bf(w))$.
+  It's a chonky boy: for every $v in RR^n$, there's an output value $T(bf(v)) in RR^m$.
 - A _matrix_ is a way of _encoding_ the _outputs_ of $T$ using as few numbers as possible.
 - Pop quiz: if $T : RR^2 -> RR^2$ is a linear transform and
   it's given that
