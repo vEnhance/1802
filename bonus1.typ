@@ -163,7 +163,7 @@ Let $bf(n)$ be any nonzero normal vector to $cal(P)$.
 Then $f(bf(n)) = bf(0)$, so $bf(n)$ is an eigenvector with eigenvalue $0$.
 Since the determinant is the product of the eigenvalues, the determinant must be $0$ too.
 
-=== Third approach using base change
+=== Third approach using coordinate change
 
 This approach requires you to know the fact that the determinant doesn't change
 if you rewrite the matrices in a new basis.
@@ -180,7 +180,7 @@ which has determinant $0$.
 
 #remark[
   In fact, if you also know that the trace doesn't change
-  when you rewrite $M$ in a different a basis,
+  when you rewrite $M$ in a different basis,
   this approach shows the trace $M$ is always exactly $1+1+0 = 2$ as well,
   no matter which plane $cal(P)$ is picked.
 ]
@@ -214,26 +214,32 @@ Similarly, $bf(b) times bf(v)$ has magnitude $2$.
 *Answer*: 0
 
 There are several approaches possible.
+The first two show how to the four entries of the matrix $M$.
+The latter sidestep this entirely and show that the matrix is actually always trace $0$.
 
 === First approach: brute force
 
 Like in the pop quiz in my R04 notes, we will try to work out $M vec(1,0)$ and $M vec(0,1)$.
 We're looking for constants $c_1$ and $c_2$ such that
 $c_1 vec(4,7) + c_2 vec(5,9) = vec(1,0)$.
-Solving the system of equations $4c_1 + 5c_2 = 1$ and $7c_1 + 9c_2 = 0$
-using your favorite method gives coefficients $c_1 = 9$ and $c_2 = -7$, i.e.
 
-$ 9 vec(4,7) - 7 vec(5,9) = vec(1,0). $
+- Solving the system of equations $4c_1 + 5c_2 = 1$ and $7c_1 + 9c_2 = 0$
+  using your favorite method gives coefficients $c_1 = 9$ and $c_2 = -7$, i.e.
 
-This lets us get
+  $ 9 vec(4,7) - 7 vec(5,9) = vec(1,0). $
 
-$ M( vec(1,0) ) = 9 M( vec(4,7) ) - 7 M( vec(5,9) ) = 9 vec(5,9) - 7 vec(4,7) = vec(17, 32). $
+  This lets us get
 
-Solving the analogous system of equations the other way (calculation not shown in full):
+  $ M( vec(1,0) ) = 9 M( vec(4,7) ) - 7 M( vec(5,9) ) = 9 vec(5,9) - 7 vec(4,7) = vec(17, 32). $
 
-$ M( vec(0,1) ) = -5 M( vec(4,7) ) + 4 M( vec(5,9) ) = -5 vec(5,9) + 4 vec(4,7) = vec(-9, -17). $
+- By solving the analogous system we can find the identity
+  $ -5 vec(4,7) + 4 vec(5,9) = vec(0,1), $
+  and hence:
 
-So $M = mat(17,-9;32,-17)$. The trace is thus $17 + (-17) = 0$.
+  $ M( vec(0,1) ) = -5 M( vec(4,7) ) + 4 M( vec(5,9) ) = -5 vec(5,9) + 4 vec(4,7) = vec(-9, -17). $
+
+Gluing these together $ M = mat(17,-9;32,-17). $
+The trace is thus $17 + (-17) = 0$.
 
 === Second approach: inverse matrices
 
@@ -242,7 +248,8 @@ $ M mat(4,5;7,9) = mat(5,4;9,7). $
 Hence one could also recover $M$ by multiplying by the inverse matrix:
 $ M = mat(5,4;9,7) mat(4,5;7,9)^(-1)
   = mat(5,4;9,7) 1/(4 dot 9-7 dot 5) mat(9,-5;-7,4) = mat(17,-9;32,-17). $
-Again, the trace is $17 + (-17) = 0$.
+(Of course, we get the same entries for $M$ as the last approach.)
+Again the trace is $17 + (-17) = 0$.
 
 === Third approach: Finding eigenvalues
 
@@ -255,18 +262,23 @@ $
 
 So $bf(b)_1 plus.minus bf(b)_2$ are eigenvectors with eigenvalues $plus.minus 1$.
 Since $M$ is a $2 times 2$ matrix there are at most two eigenvalues: we found them all!
+
+The trace of $M$ is the sum of the eigenvalues.
 Call in the answer $1 + (-1) = 0$.
 
-=== Fourth approach: Changing coordinates (black magic)
+=== Fourth approach: Change coordinates
 
 This approach requires you to know the fact that the determinant doesn't change
 if you rewrite the matrices in a new basis.
 
 Since $bf(b)_1 = vec(4,7)$ and $bf(b)_2 = vec(5,9)$ are a basis of $RR^2$,
 we can change coordinates to use the $bf(b)_i$.
-In that case, $M(bf(b)_1) = bf(b)_2$ and $M(bf(b)_2) = bf(b)_1$.
-If we wrote $M$ as a matrix _in this new basis_ (rather than the usual basis), we would get
-the matrix $mat(0,1;1,0)$ which has trace $0+0=0$.
+In that case,
+$ M(bf(b)_1) = bf(b)_2 " and " M(bf(b)_2) = bf(b)_1. $
+
+If we wrote $M$ as a matrix _in this new basis_ (rather than the usual basis), we would get the matrix
+$ M = mat(0,1;1,0) $
+which has trace $0+0=0$.
 
 #pagebreak()
 
@@ -292,8 +304,12 @@ This gives us three roots corresponding to the different values of $k$.
 )
 
 This looks like an equilateral triangle centered around the origin,
-where each spoke coming from the origin has magnitude $s := root(6, 61)$.
+where each spoke coming from the origin has magnitude $s$, where
+$ s = root(6, 61). $
 
-The equilateral triangle consists of three little triangles each of whose area
-is going to be $s^2/2 sin(120 degree)$, giving a final answer of
+If we cut up the equilateral triangle by the three arrows above,
+we get three small isosceles triangles with a $120 degree$ angle at the apex.
+The area of each triangle is going to be $s^2/2 sin(120 degree)$.
+
+So this gives a final answer of
 $ 3 dot root(3,61)/2 dot sin(120 degree) = (3 sqrt(3))/4 root(3, 61). $
