@@ -22,7 +22,7 @@ Are you a person that plays every video game on hard mode? Yeah? I have a treat 
 
 Anyway, more seriously, my hope you can use these problems to help prepare for Midterm 1,
 even if you don't manage to solve them yourself.
-I'd say: think about each for 15-30 minutes, then read the solution (following pages)
+My suggestion is: think about each for 15-30 minutes, then read the solution (following pages)
 or come to office hours and I'll walk you through them.
 I hope this helps you digest the course content since
 I tried my best to craft problems that require deeper understanding
@@ -34,12 +34,12 @@ these are harder than what will actually appear on the midterm.
 The problems are sorted by the order the topics appeared in class (not by difficulty).
 
 / Problem 1.:
-  In $RR^3$, compute the projection of the vector $vec(1,2,3)$ onto the plane $4x+5y+6z=0$.
+  In $RR^3$, compute the projection of the vector $vec(4,5,6)$ onto the plane $x+y+2z=0$.
 
 / Problem 2.:
   Suppose $A$, $B$, $C$, $D$ are points in $RR^3$.
   Give a geometric interpretation for this expression:
-  $ (arrow(D A) times arrow(D B)) dot arrow(D C). $
+  $ arrow(D A) dot (arrow(D B) times arrow(D C)). $
 
 / Problem 3.:
   Fix a plane $cal(P)$ in $RR^3$ which passes through the origin.
@@ -51,7 +51,7 @@ The problems are sorted by the order the topics appeared in class (not by diffic
 / Problem 4.:
   Let $bf(a)$ and $bf(b)$ be two perpendicular unit vectors in $RR^3$.
   A third vector $bf(v)$ in $RR^3$ lies in the span of $bf(a)$ and $bf(b)$.
-  Given that $bf(v) dot bf(a) = 7$ and $bf(v) dot bf(b) = 8$,
+  Given that $bf(v) dot bf(a) = 2$ and $bf(v) dot bf(b) = 3$,
   compute the magnitudes of the cross products $bf(v) times bf(a)$ and $bf(v) times bf(b)$.
 
 / Problem 5.:
@@ -65,6 +65,208 @@ The problems are sorted by the order the topics appeared in class (not by diffic
 
 #pagebreak()
 
+_This page is intentionally blank. Solutions on next page._
+
+#pagebreak()
+
 = Solutions
 
-TO BE ADDED
+== Solution to problem 1
+
+*Answer*: $vec(1/2, 3/2, -1)$.
+
+In recitation R02 you had to calculate the distance from a vector to a plane.
+This problem only requires one step on top of that:
+you need to then translate by the normal vector.
+See the cartoon below.
+
+#figure(
+  image("figures/bonus1p1.png", width: 70%),
+  caption: [Projection onto a plane.],
+)
+
+To execute the calculation, let $bf(v) = vec(4,5,6)$ and $bf(n) = vec(1,1,2)$.
+The scalar projection is
+$ op("comp")_(bf(n)) (bf(v)) = (bf(v) dot bf(n)) / (|bf(n)|) = (21) / sqrt(6). $
+The vector projection, which I'll write as $op("proj")_(bf(n)) (bf(v))$
+(I think there's no name in the class notes) is
+$ op("proj")_(bf(n)) (bf(v)) = (op("comp")_(bf(n)) (bf(v))) (bf(n))/(|bf(n)|)
+  = 21/sqrt(6) vec(1,1,2)/sqrt(6)
+  = vec(7/2,7/2,7). $
+Then the desired projection is
+$ bf(v) - op("proj")_(bf(n)) (bf(v)) = vec(1/2, 3/2, -1). $
+
+#pagebreak()
+
+== Solution to problem 2
+
+*Answer*: The signed volume of the parallelpiped formed by $D A$, $D B$, $D C$.
+Equivalently, six times the signed volume of tetrahedron $A B C D$.
+
+=== First approach using coordinates
+
+Let $D = (0,0,0)$, $A = (x_A, y_A, b_A)$, $B = (x_B, y_B, z_B)$, $C = (x_C, y_C, z_C)$.
+Then expanding the cross product gives
+
+$ (x_A bf(e)_1 + y_A bf(e)_2 + z_A bf(e_3)) dot
+  det(mat(bf(e)_1, bf(e)_2, bf(e)_3; x_B, y_B, z_B; x_C, y_C, z_C)). $
+
+If you think about what evaluating the determinant using the formula in class
+together with the dot product would give, you should find it's actually just
+$ det(mat(x_A, y_A, z_A; x_B, y_B, z_B; x_C, y_C, z_C)) $
+which is the volume of the parallelpiped.
+
+=== Second approach using geometric picture
+
+The cross product $arrow(D B) times arrow(D C)$ is a vector whose area is
+equal to the parallelogram.
+The dot product of that cross product against $arrow(D A)$ is equal to
+the _height_ of $A$ to plane $B C D$
+times this area, and the volume is the height times the area.
+
+See #url("https://en.wikipedia.org/wiki/Triple_product") for more on this
+(the diagram on Wikipedia is good, reproduced here: in the figure, $bf(a)$ denotes
+our $arrow(D A)$, etc.).
+
+#figure(
+  image("figures/parallelepiped.png", width: 50%),
+  caption: [Triple product image taken from Wikipedia.],
+)
+
+#pagebreak()
+
+== Solution to problem 3
+
+*Answer*: 0, no matter which plane $cal(P)$ is picked.
+
+=== First approach using basis vectors
+
+Let $bf(e)_1$, $bf(e)_2$, $bf(e)_3$ be the three basis vectors. Then:
+
+- The matrix $M$ is formed by gluing $f(bf(e)_1)$, $f(bf(e)_2)$, $f(bf(e)_3)$ together.
+- I claim the vectors $f(bf(e)_1)$, $f(bf(e)_2)$, $f(bf(e)_3)$ are linearly dependent.
+  After all, they are all contained in the two-dimensional plane $cal(P)$ by definition,
+  and so three vectors in a plane can't be linearly independent.
+- So the determinant is equal to zero (this theorem is one of the criteria we use
+  to check whether vectors are linearly independent or not).
+
+=== Second approach using eigenvectors
+
+Let $bf(n)$ be any nonzero normal vector to $cal(P)$.
+Then $f(bf(n)) = bf(0)$, so $bf(n)$ is an eigenvector with eigenvalue $0$.
+Since the determinant is the product of the eigenvalues, the determinant must be $0$ too.
+
+#remark[
+  In fact, the trace of $M$ must be $2$ as well.
+  However, I think proving this requires more theory about eigenvectors than covered in 18.02.
+]
+
+#pagebreak()
+
+== Solution to problem 4
+
+*Answer*: $|bf(a) times bf(v)| = 3$ and $|bf(b) times bf(v)| = 2$.
+
+Since $bf(v)$ is contained in the span of $bf(a)$ and $bf(b)$,
+we can just pay attention to the plane spanned by these two perpendicular unit vectors.
+So the geometric picture is that $bf(v)$ can be drawn in a rectangle with $bf(a)$ and $bf(b)$
+as a basis, as shown.
+Because $bf(v) dot bf(a) = 2$ and $bf(v) dot bf(b) = 3$, this rectangle is $2$ by $3$.
+
+#figure(
+  image("figures/bonus1p4.png", width: 30%),
+  caption: [Plotting $bf(v)$ in the span of $bf(a)$ and $bf(b)$.],
+)
+
+Now the magnitude of the cross product $bf(a) times bf(v)$ is supposed to be equal to
+the area of the parallelogram formed by $bf(a)$ and $bf(v)$, which is $3$
+(because this parallelogram has base $|bf(a)|=1$ and height $|bf(v) dot bf(b)|=3$).
+Similarly, $bf(b) times bf(v)$ has magnitude $2$.
+
+#pagebreak()
+
+== Solution to problem 5
+
+*Answer*: 0
+
+There are several approaches possible.
+
+=== First approach: brute force
+
+Like in the pop quiz in my R04 notes, we will try to work out $M vec(1,0)$ and $M vec(0,1)$.
+We're looking for constants $c_1$ and $c_2$ such that
+$c_1 vec(4,7) + c_2 vec(5,9) = vec(1,0)$.
+Solving the system of equations $4c_1 + 5c_2 = 1$ and $7c_1 + 9c_2 = 0$
+using your favorite method gives coefficients $c_1 = 9$ and $c_2 = -7$, i.e.
+
+$ 9 vec(4,7) - 7 vec(5,9) = vec(1,0). $
+
+This lets us get
+
+$ M( vec(1,0) ) = 9 M( vec(4,7) ) - 7 M( vec(5,9) ) = 9 vec(5,9) - 7 vec(4,7) = vec(17, 32). $
+
+Solving the analogous system of equations the other way (calculation not shown in full):
+
+$ M( vec(0,1) ) = -5 M( vec(4,7) ) + 4 M( vec(5,9) ) = -5 vec(5,9) + 4 vec(4,7) = vec(-9, -17). $
+
+So $M = mat(17,-9;32,-17)$. The trace is thus $17 + (-17) = 0$.
+
+=== Second approach: inverse matrices
+
+We can collate the two given equations into saying that
+$ M mat(4,5;7,9) = mat(5,4;9,7). $
+Hence one could also recover $M$ by multiplying by the inverse matrix:
+$ M = mat(5,4;9,7) mat(4,5;7,9)^(-1)
+  = mat(5,4;9,7) 1/(4 dot 9-7 dot 5) mat(9,-5;-7,4) = mat(17,-9;32,-17). $
+Again, the trace is $17 + (-17) = 0$.
+
+=== Third approach: Finding eigenvalues
+
+Let $bf(b)_1 = vec(4,7)$ and $bf(b)_2 = vec(5,9)$.
+Adding and subtracting the given equations gives
+$
+  M(bf(b)_1 + bf(b)_2) &= bf(b)_1 + bf(b)_2 \
+  M(bf(b)_1 - bf(b)_2) &= -(bf(b)_1 - bf(b)_2).
+$
+
+So $bf(b)_1 plus.minus bf(b)_2$ are eigenvectors with eigenvalues $plus.minus 1$.
+Since $M$ is a $2 times 2$ matrix there are at most two eigenvalues: we found them all!
+Call in the answer $1 + (-1) = 0$.
+
+=== Fourth approach: Changing coordinates (black magic)
+
+Since $bf(b)_1 = vec(4,7)$ and $bf(b)_2 = vec(5,9)$ are a basis of $RR^2$,
+we can change coordinates to use the $bf(b)_i$.
+In that case, $M(bf(b)_1) = bf(b)_2$ and $M(bf(b)_2) = bf(b)_1$.
+If we wrote $M$ as a matrix _in this new basis_ (rather than the usual basis), we would get
+the matrix $mat(0,1;1,0)$ which has trace $0+0=0$.
+
+#pagebreak()
+
+== Solution to problem 6
+
+*Answer*: $(3 sqrt(3))/4 root(3, 61)$.
+
+We start by converting the complex number $5 + 6 i$ into polar form.
+The modulus $r$ of $5 + 6 i$ is:
+$ r = lr(|5 + 6 i|) = sqrt(5^2 + 6^2) = sqrt(25 + 36) = sqrt(61). $
+
+The argument $theta$ is some random angle we won't use the exact value of:
+$theta = arg (5 + 6 i) = tan^(- 1) (6 / 5)$.
+
+Now to find the cube roots of $z^3 = 5 + 6 i$, we use the polar form:
+$ z = root(6, 61) (cos (frac(theta + 2 k pi, 3)) + i sin (frac(theta + 2 k pi, 3))) $
+for $k = 0 , 1 , 2$.
+This gives us three roots corresponding to the different values of $k$.
+
+#figure(
+  image("figures/bonus1p6.png", width: 60%),
+  caption: [Three solutions to $z^3 = 5+6i$],
+)
+
+This looks like an equilateral triangle centered around the origin,
+where each spoke coming from the origin has magnitude $s := root(6, 61)$.
+
+The equilateral triangle consists of three little triangles each of whose area
+is going to be $s^2/2 sin(120 degree)$, giving a final answer of
+$ 3 dot root(3,61)/2 dot sin(120 degree) = (3 sqrt(3))/4 root(3, 61). $
