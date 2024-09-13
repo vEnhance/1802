@@ -1,7 +1,7 @@
 #import "@local/evan:1.0.0":*
 
 #show: evan.with(
-  title: [Some challenge problems in linalg],
+  title: [Some bonus material for Midterm 1],
   subtitle: [18.02 Recitation MW9],
   author: "Evan Chen",
   date: [Fall 2024],
@@ -22,15 +22,15 @@ Are you a person that plays every video game on hard mode? Yeah? I have a treat 
 
 Anyway, more seriously, my hope you can use these problems to help prepare for Midterm 1,
 even if you don't manage to solve them yourself.
-My suggestion is: think about each for 15-30 minutes, then read the solution (following pages)
-or come to office hours and I'll walk you through them.
-I hope this helps you digest the course content since
-I tried my best to craft problems that require deeper understanding
-and piecing together multiple ideas, rather than just knowing one or two isolated recipes.
+My suggestion is: think about each for 15-30 minutes, then read the solution (pages 3-end
+of the online PDF) or come to office hours and I'll explain them.
+I hope this helps you digest the material; I tried to craft problems
+that teach deep understanding and piece together multiple ideas,
+rather than just using one or two isolated recipes.
 
 Solving with friends is encouraged; you'll have more fun thinking together.
 Still, don't worry even if you solve 0 of the 6 problems;
-these are harder than what will actually appear on the midterm.
+these are way harder than what will actually appear on the midterm.
 The problems are sorted by the order the topics appeared in class (not by difficulty).
 
 / Problem 1.:
@@ -157,7 +157,7 @@ Then $f(bf(n)) = bf(0)$, so $bf(n)$ is an eigenvector with eigenvalue $0$.
 Since the determinant is the product of the eigenvalues, the determinant must be $0$ too.
 
 #remark[
-  In fact, the trace of $M$ must be $2$ as well.
+  In fact, the trace of $M$ is always exactly $1+1+0 = 2$ as well.
   However, I think proving this requires more theory about eigenvectors than covered in 18.02.
 ]
 
