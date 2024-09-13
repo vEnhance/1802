@@ -6,4 +6,4 @@ r04.pdf
 dotpf.pdf
 answerkeys/r02s.pdf
 answerkeys/r03s.pdf
-bonus-linalg.pdf
+bonus1.pdf
