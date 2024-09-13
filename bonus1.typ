@@ -38,8 +38,8 @@ The problems are sorted by the order the topics appeared in class (not by diffic
 
 / Problem 2.:
   Suppose $A$, $B$, $C$, $D$ are points in $RR^3$.
-  Give a geometric interpretation for this expression:
-  $ arrow(D A) dot (arrow(D B) times arrow(D C)). $
+  Give a geometric interpretation for this equation:
+  $ arrow(D A) dot (arrow(D B) times arrow(D C)) = 0. $
 
 / Problem 3.:
   Fix a plane $cal(P)$ in $RR^3$ which passes through the origin.
@@ -100,8 +100,17 @@ $ bf(v) - op("proj")_(bf(n)) (bf(v)) = vec(1/2, 3/2, -1). $
 
 == Solution to problem 2
 
-*Answer*: The signed volume of the parallelpiped formed by $D A$, $D B$, $D C$.
-Equivalently, six times the signed volume of tetrahedron $A B C D$.
+*Answer*: The equation holds if and only if points $A$, $B$, $C$, $D$ lie on a single plane.
+
+In fact, I will prove that the following more general result:
+
+#theorem[
+  The expression $arrow(D A) dot (arrow(D B) times arrow(D C))$
+  equals the volume of the parallelepiped formed by $arrow(D A)$, $arrow(D B)$, $arrow(D C)$.
+]
+In particular, as I mentioned in recitation and on Piazza,
+the four points lie in the same plane if and only if that parallelepiped volume equals zero.
+Here are two approaches for proving it.
 
 === First approach using coordinates
 
@@ -111,22 +120,20 @@ Then expanding the cross product gives
 $ (x_A bf(e)_1 + y_A bf(e)_2 + z_A bf(e_3)) dot
   det(mat(bf(e)_1, bf(e)_2, bf(e)_3; x_B, y_B, z_B; x_C, y_C, z_C)). $
 
-If you think about what evaluating the determinant using the formula in class
+If you think about what evaluating the determinant using the formula
 together with the dot product would give, you should find it's actually just
 $ det(mat(x_A, y_A, z_A; x_B, y_B, z_B; x_C, y_C, z_C)) $
-which is the volume of the parallelpiped.
+which is the volume of the parallelepiped.
 
 === Second approach using geometric picture
 
 The cross product $arrow(D B) times arrow(D C)$ is a vector whose area is
-equal to the parallelogram.
+equal to the parallelogram formed by $arrow(D B)$ and $arrow(D C)$.
 The dot product of that cross product against $arrow(D A)$ is equal to
-the _height_ of $A$ to plane $B C D$
-times this area, and the volume is the height times the area.
-
-See #url("https://en.wikipedia.org/wiki/Triple_product") for more on this
-(the diagram on Wikipedia is good, reproduced here: in the figure, $bf(a)$ denotes
-our $arrow(D A)$, etc.).
+the _height_ of $A$ to plane $B C D$ times this area,
+and the volume is the height times the area.
+See the following picture from #url("https://en.wikipedia.org/wiki/Triple_product")
+(in the Wikipedia figure, $bf(a)$ denotes our $arrow(D A)$, etc.).
 
 #figure(
   image("figures/parallelepiped.png", width: 50%),
@@ -156,9 +163,26 @@ Let $bf(n)$ be any nonzero normal vector to $cal(P)$.
 Then $f(bf(n)) = bf(0)$, so $bf(n)$ is an eigenvector with eigenvalue $0$.
 Since the determinant is the product of the eigenvalues, the determinant must be $0$ too.
 
+=== Third approach using base change
+
+This approach requires you to know the fact that the determinant doesn't change
+if you rewrite the matrices in a new basis.
+
+Let $bf(n)$ be any nonzero normal vector to $cal(P)$.
+Pick two more unit vectors $bf(b)_1$ and $bf(b)_2$ perpendicular to $bf(n)$ that span $cal(P)$.
+Then $bf(b)_1$, $bf(b)_2$ and $bf(n)$ are linearly independent and spanning, i.e. a basis of $RR^3$.
+So we can change coordinates to use these instead.
+
+If we wrote $M$ as a matrix _in this new basis_ (rather than the usual basis), we would get
+the matrix
+$ M = mat(1,0,0;0,1,0;0,0,0) $
+which has determinant $0$.
+
 #remark[
-  In fact, the trace of $M$ is always exactly $1+1+0 = 2$ as well.
-  However, I think proving this requires more theory about eigenvectors than covered in 18.02.
+  In fact, if you also know that the trace doesn't change
+  when you rewrite $M$ in a different a basis,
+  this approach shows the trace $M$ is always exactly $1+1+0 = 2$ as well,
+  no matter which plane $cal(P)$ is picked.
 ]
 
 #pagebreak()
@@ -234,6 +258,9 @@ Since $M$ is a $2 times 2$ matrix there are at most two eigenvalues: we found th
 Call in the answer $1 + (-1) = 0$.
 
 === Fourth approach: Changing coordinates (black magic)
+
+This approach requires you to know the fact that the determinant doesn't change
+if you rewrite the matrices in a new basis.
 
 Since $bf(b)_1 = vec(4,7)$ and $bf(b)_2 = vec(5,9)$ are a basis of $RR^2$,
 we can change coordinates to use the $bf(b)_i$.
