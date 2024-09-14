@@ -107,4 +107,16 @@ Without "slope", you cannot notice these dependences by sight for $n >= 3$, so u
 
 = Recitation questions from Prof Maulik
 
-To be added...
+Today will discuss matrices and linear transformations
+
+/ 1: Consider the vectors $vec(1, - 1, 1) , vec(2, 1, 1) , vec(1, 5, - 1)$.
+/ 1a: Are the vectors linearly independent?
+/ 1b: What is the span of these vectors?
+/ 1c: Does this set of vectors form a basis?
+/ 2: Consider the vectors $bf(a) = vec(-2,1)$ and $bf(b) = vec(1,1)$.
+/ 2a:  Verify that these vectors form a basis of $RR^2$?
+/ 2b: What are the coordinates of $3bf(e)_1-2bf(e)_2$ in this basis?
+/ 3: How many solutions do the following systems of equations have?
+/ 3a: $x + 2 y = 0 ; 2 x + 4 y = 0 .$
+/ 3b: $mat(3, - 1, 0; 1, 2, - 3; - 4, 0, 1) vec(x, y, z) = vec(1, 2, - 1)$
+/ 4: Do the vectors $angle.l 1 , 0 , - 1 angle.r , angle.l 2 , 0 , 0 angle.r , angle.l 0 , 1 , 1 angle.r$ form a basis?
