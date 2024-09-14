@@ -56,6 +56,6 @@ In summary, by using the black parallelogram, we were able to split $bf(u) dot b
 into two easy cases we already know how to do.
 
 The same idea will work in $RR^3$ if you use $bf(v) = x bf(e)_1 + y bf(e)_2 + z bf(e)_3$
-instead, and replace the parallelogram with a parallelpiped,
+instead, and replace the parallelogram with a parallelepiped,
 in which case one now has $3$ easy cases.
 And so on in $n$ dimensions.

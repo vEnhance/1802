@@ -170,7 +170,7 @@ Thursday/Friday lectures are _really_ nontrivial.
   Specifically, given $bf(a)$ and $bf(b)$ in $RR^3$,
   you have a long formula for $bf(c) = bf(a) times bf(b)$.
   You can manually verify that $bf(c) dot bf(a) = bf(c) dot bf(b) = 0$
-  and also that the signed volume of the parallelpiped formed by $bf(a)$, $bf(b)$,
+  and also that the signed volume of the parallelepiped formed by $bf(a)$, $bf(b)$,
   and $1/(|bf(c)|^2) bf(c)$ is $1$.
   However, this calculation is even more disgusting than the one in @det2,
   and unsatisfying because it doesn't show you where the formula comes from
