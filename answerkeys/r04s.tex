@@ -1,0 +1,288 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[colorlinks]{hyperref}
+
+\begin{document}
+\title{Quick answer key to R04}
+\author{ChatGPT 4o}
+\date{16 September 2024}
+\maketitle
+
+Use the table of contents below to skip to a specific part
+without seeing spoilers to the other parts.
+
+I just used ChatGPT to write this one quickly.
+ChatGPT can make mistakes, so if you spot anything that's wrong, flag me to ask.
+
+\tableofcontents
+
+
+\newpage
+
+\section{Solution to problem 1}
+
+Consider the vectors:
+\[
+\mathbf{v}_1 = \begin{pmatrix} 1 \\ -1 \\ 1 \end{pmatrix}, \quad \mathbf{v}_2 = \begin{pmatrix} 2 \\ 1 \\ 1 \end{pmatrix}, \quad \mathbf{v}_3 = \begin{pmatrix} 1 \\ 5 \\ -1 \end{pmatrix}
+\]
+
+\subsection{Part 1: Are the vectors linearly independent?}
+
+To determine whether the vectors are linearly independent, we compute the determinant of the matrix formed by the vectors. The vectors are linearly independent if and only if the determinant of the following matrix is non-zero:
+
+\[
+\text{det} \begin{pmatrix}
+1 & 2 & 1 \\
+-1 & 1 & 5 \\
+1 & 1 & -1
+\end{pmatrix}
+\]
+
+We calculate the determinant:
+
+\[
+\text{det} \begin{pmatrix}
+1 & 2 & 1 \\
+-1 & 1 & 5 \\
+1 & 1 & -1
+\end{pmatrix}
+= 1 \cdot \begin{vmatrix} 1 & 5 \\ 1 & -1 \end{vmatrix} - 2 \cdot \begin{vmatrix} -1 & 5 \\ 1 & -1 \end{vmatrix} + 1 \cdot \begin{vmatrix} -1 & 1 \\ 1 & 1 \end{vmatrix}
+\]
+
+\[
+= 1 \cdot \left( (1)(-1) - (5)(1) \right) - 2 \cdot \left( (-1)(-1) - (5)(1) \right) + 1 \cdot \left( (-1)(1) - (1)(1) \right)
+\]
+
+\[
+= 1 \cdot (-1 - 5) - 2 \cdot (1 - 5) + 1 \cdot (-1 - 1)
+\]
+
+\[
+= 1 \cdot (-6) - 2 \cdot (-4) + 1 \cdot (-2)
+\]
+
+\[
+= -6 + 8 - 2 = 0
+\]
+
+Since the determinant is zero, the vectors are **linearly dependent**.
+
+\newpage
+\subsection{Part 2: What is the span of these vectors?}
+
+The span of the vectors is the set of all linear combinations of the form:
+\[
+\text{span}(\mathbf{v}_1, \mathbf{v}_2, \mathbf{v}_3) = \left\{ c_1 \mathbf{v}_1 + c_2 \mathbf{v}_2 + c_3 \mathbf{v}_3 \mid c_1, c_2, c_3 \in \mathbb{R} \right\}
+\]
+
+Since the vectors are linearly dependent, their span is a **plane** in \( \mathbb{R}^3 \). Specifically, it is a two-dimensional subspace of \( \mathbb{R}^3 \).
+
+\newpage
+\subsection{Part 3: Does this set of vectors form a basis?}
+
+A set of vectors forms a basis for \( \mathbb{R}^3 \) if and only if the vectors are linearly independent and span \( \mathbb{R}^3 \).
+
+Since the vectors are linearly dependent, they do not form a basis for \( \mathbb{R}^3 \).
+
+
+
+
+\newpage
+
+\section{Solution to problem 2}
+
+Consider the vectors:
+\[
+\mathbf{a} = \begin{pmatrix} -2 \\ 1 \end{pmatrix}, \quad \mathbf{b} = \begin{pmatrix} 1 \\ 1 \end{pmatrix}
+\]
+
+\subsection{Part 1: Verify that these vectors form a basis of \( \mathbb{R}^2 \)}
+
+To check if the vectors form a basis of \( \mathbb{R}^2 \), we need to verify that they are linearly independent and span \( \mathbb{R}^2 \).
+
+We compute the determinant of the matrix formed by the vectors \( \mathbf{a} \) and \( \mathbf{b} \). The vectors form a basis if and only if the determinant is non-zero:
+\[
+\text{det} \begin{pmatrix}
+-2 & 1 \\
+1 & 1
+\end{pmatrix}
+= (-2)(1) - (1)(1) = -2 - 1 = -3
+\]
+
+Since the determinant is non-zero, the vectors \( \mathbf{a} \) and \( \mathbf{b} \) are linearly independent and span \( \mathbb{R}^2 \). Thus, they form a basis of \( \mathbb{R}^2 \).
+
+\newpage
+
+\subsection{Part 2: Coordinates of \( 3 \mathbf{e}_1 - 2 \mathbf{e}_2 \) in this basis}
+
+We are asked to find the coordinates of the vector \( \mathbf{v} = 3 \mathbf{e}_1 - 2 \mathbf{e}_2 \) in the basis formed by \( \mathbf{a} \) and \( \mathbf{b} \). That is, we want to find scalars \( x \) and \( y \) such that:
+\[
+\mathbf{v} = x \mathbf{a} + y \mathbf{b}
+\]
+This means:
+\[
+\begin{pmatrix} 3 \\ -2 \end{pmatrix} = x \begin{pmatrix} -2 \\ 1 \end{pmatrix} + y \begin{pmatrix} 1 \\ 1 \end{pmatrix}
+\]
+This results in the system of equations:
+\[
+-2x + y = 3
+\]
+\[
+x + y = -2
+\]
+
+Solving this system:
+1. From the second equation, \( y = -2 - x \).
+2. Substitute \( y = -2 - x \) into the first equation:
+\[
+-2x + (-2 - x) = 3
+\]
+\[
+-2x - 2 - x = 3
+\]
+\[
+-3x - 2 = 3
+\]
+\[
+-3x = 5 \quad \Rightarrow \quad x = -\frac{5}{3}
+\]
+3. Substitute \( x = -\frac{5}{3} \) into \( y = -2 - x \):
+\[
+y = -2 - \left( -\frac{5}{3} \right) = -2 + \frac{5}{3} = \frac{-6 + 5}{3} = -\frac{1}{3}
+\]
+
+Thus, the coordinates of \( 3 \mathbf{e}_1 - 2 \mathbf{e}_2 \) in the basis formed by \( \mathbf{a} \) and \( \mathbf{b} \) are:
+\[
+\left( x, y \right) = \left( -\frac{5}{3}, -\frac{1}{3} \right)
+\]
+
+
+
+
+\newpage
+
+\section{Solution to problem 3}
+
+\subsection{Part 1: System of equations}
+
+We are given the system of equations:
+\[
+x + 2y = 0
+\]
+\[
+2x + 4y = 0
+\]
+
+To determine how many solutions this system has, we observe that the second equation is simply a multiple of the first. Dividing the second equation by 2 gives:
+\[
+x + 2y = 0
+\]
+This shows that both equations represent the same line.
+
+Thus, the system is dependent and has **infinitely many solutions**. The solutions are of the form:
+\[
+x = -2y, \quad y \in \mathbb{R}
+\]
+
+\newpage
+
+\subsection{Part 2: System of equations with three variables}
+
+We are given the matrix equation:
+\[
+\begin{pmatrix}
+3 & -1 & 0 \\
+1 & 2 & -3 \\
+-4 & 0 & 1
+\end{pmatrix}
+\begin{pmatrix} x \\ y \\ z \end{pmatrix}
+=
+\begin{pmatrix} 1 \\ 2 \\ -1 \end{pmatrix}
+\]
+
+This represents the system of equations:
+\[
+3x - y = 1
+\]
+\[
+x + 2y - 3z = 2
+\]
+\[
+-4x + z = -1
+\]
+
+To determine how many solutions this system has, we compute the determinant of the coefficient matrix:
+\[
+\text{det} \begin{pmatrix}
+3 & -1 & 0 \\
+1 & 2 & -3 \\
+-4 & 0 & 1
+\end{pmatrix}
+\]
+
+Using cofactor expansion along the first row:
+\[
+= 3 \begin{vmatrix} 2 & -3 \\ 0 & 1 \end{vmatrix} - (-1) \begin{vmatrix} 1 & -3 \\ -4 & 1 \end{vmatrix}
+\]
+
+\[
+= 3(2 \cdot 1 - 0 \cdot (-3)) - (-1)\left(1 \cdot 1 - (-3)(-4)\right)
+\]
+\[
+= 3(2) - (-1)(1 - 12)
+\]
+\[
+= 6 - (-1)(-11) = 6 - 11 = -5
+\]
+
+Since the determinant is non-zero, the system has a **unique solution**.
+
+
+
+
+\newpage
+
+\section{Solution to problem 4}
+
+We are given the vectors:
+\[
+\mathbf{v}_1 = \langle 1, 0, -1 \rangle, \quad \mathbf{v}_2 = \langle 2, 0, 0 \rangle, \quad \mathbf{v}_3 = \langle 0, 1, 1 \rangle
+\]
+
+To determine if these vectors form a basis for \( \mathbb{R}^3 \), we check if they are linearly independent. The vectors form a basis if and only if they are linearly independent, which occurs if the determinant of the matrix formed by placing the vectors as columns is non-zero.
+
+We form the matrix with the given vectors as columns:
+\[
+A = \begin{pmatrix}
+1 & 2 & 0 \\
+0 & 0 & 1 \\
+-1 & 0 & 1
+\end{pmatrix}
+\]
+
+Now, we compute the determinant of this matrix:
+\[
+\text{det}(A) = \begin{vmatrix}
+1 & 2 & 0 \\
+0 & 0 & 1 \\
+-1 & 0 & 1
+\end{vmatrix}
+\]
+
+Using cofactor expansion along the first row:
+\[
+\text{det}(A) = 1 \cdot \begin{vmatrix} 0 & 1 \\ 0 & 1 \end{vmatrix} - 2 \cdot \begin{vmatrix} 0 & 1 \\ -1 & 1 \end{vmatrix} + 0 \cdot \begin{vmatrix} 0 & 0 \\ -1 & 0 \end{vmatrix}
+\]
+\[
+= 1 \cdot (0 \cdot 1 - 1 \cdot 0) - 2 \cdot (0 \cdot 1 - (-1) \cdot 1)
+\]
+\[
+= 1 \cdot 0 - 2 \cdot 1 = -2
+\]
+
+Since the determinant is non-zero (\( \text{det}(A) = -2 \)), the vectors are linearly independent.
+
+Therefore, the vectors \( \mathbf{v}_1 = \langle 1, 0, -1 \rangle \), \( \mathbf{v}_2 = \langle 2, 0, 0 \rangle \), and \( \mathbf{v}_3 = \langle 0, 1, 1 \rangle \) form a **basis for \( \mathbb{R}^3 \)**.
+
+
+\end{document}
