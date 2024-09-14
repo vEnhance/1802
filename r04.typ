@@ -111,10 +111,12 @@ might look like unrelated small numbers,
 but surprisingly it turns out that $ 109 bf(v)_1 - 37 bf(v)_2 - 29 bf(v)_3 =0. $
 Without "slope", you cannot notice these dependences by sight for $n >= 3$, so use the determinant.
 
-
 = Recitation questions from Prof Maulik
 
-Today will discuss matrices and linear transformations
+Today will discuss matrices and linear transformations.#footnote[
+  Evan says: I actually think this is the easiest recitation set we've had so far,
+  you can do everything by just being good at parroting directions.
+  No conceptual understanding is needed to answer these questions.]
 
 / 1.: Consider the vectors $vec(1, - 1, 1) , vec(2, 1, 1) , vec(1, 5, - 1)$.
   Are the vectors linearly independent?
