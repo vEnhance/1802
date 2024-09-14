@@ -99,24 +99,31 @@ More examples of correct hunches (this is the _buy two get one free_ in Poonen 4
 The last bullet matters: the determinant is doing a _lot_ of work for you.
 When $n = 2$ the determinant is unnecessary, because you can just use "slope":
 it's obvious that $vec(1,2)$ and $vec(100,200)$ have a dependence.
-But for $n >= 3$ *you can't eyeball it*:
+But for $n >= 3$ *you can't eyeball it*#footnote[Though
+  if you have a set of _exactly two_ vectors,
+  they're dependent if and only if they're multiples, even in $RR^n$.
+  Which you _can_ eyeball;
+  so if you're trying to tell whether a span of two vectors in $RR^3$ is a line or plane,
+  that's easy.
+  (Even more stupidly, a single vector is linearly dependent only when it's the zero vector.)]:
 e.g., $bf(v)_1 = vec(1,3,4)$, $bf(v)_2 = vec(10,1,11)$ and $bf(v)_3 = vec(-9,10,1)$
 might look like unrelated small numbers,
 but surprisingly it turns out that $ 109 bf(v)_1 - 37 bf(v)_2 - 29 bf(v)_3 =0. $
 Without "slope", you cannot notice these dependences by sight for $n >= 3$, so use the determinant.
 
+
 = Recitation questions from Prof Maulik
 
 Today will discuss matrices and linear transformations
 
-/ 1: Consider the vectors $vec(1, - 1, 1) , vec(2, 1, 1) , vec(1, 5, - 1)$.
-/ 1a: Are the vectors linearly independent?
-/ 1b: What is the span of these vectors?
-/ 1c: Does this set of vectors form a basis?
-/ 2: Consider the vectors $bf(a) = vec(-2,1)$ and $bf(b) = vec(1,1)$.
-/ 2a:  Verify that these vectors form a basis of $RR^2$?
-/ 2b: What are the coordinates of $3bf(e)_1-2bf(e)_2$ in this basis?
-/ 3: How many solutions do the following systems of equations have?
-/ 3a: $x + 2 y = 0 ; 2 x + 4 y = 0 .$
-/ 3b: $mat(3, - 1, 0; 1, 2, - 3; - 4, 0, 1) vec(x, y, z) = vec(1, 2, - 1)$
-/ 4: Do the vectors $angle.l 1 , 0 , - 1 angle.r , angle.l 2 , 0 , 0 angle.r , angle.l 0 , 1 , 1 angle.r$ form a basis?
+/ 1.: Consider the vectors $vec(1, - 1, 1) , vec(2, 1, 1) , vec(1, 5, - 1)$.
+  Are the vectors linearly independent?
+  What is the span of these vectors?
+  Does this set of vectors form a basis?
+/ 2.: Consider the vectors $bf(a) = vec(-2,1)$ and $bf(b) = vec(1,1)$.
+   Verify that these vectors form a basis of $RR^2$.
+  What are the coordinates of $3bf(e)_1-2bf(e)_2$ in this basis?
+/ 3.: How many solutions do the following systems of equations have?
+/ 3a.: $x + 2 y = 0 ; 2 x + 4 y = 0 .$
+/ 3b.: $mat(3, - 1, 0; 1, 2, - 3; - 4, 0, 1) vec(x, y, z) = vec(1, 2, - 1)$
+/ 4.: Do the vectors $angle.l 1 , 0 , - 1 angle.r , angle.l 2 , 0 , 0 angle.r , angle.l 0 , 1 , 1 angle.r$ form a basis?
