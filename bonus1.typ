@@ -1,10 +1,10 @@
 #import "@local/evan:1.0.0":*
 
 #show: evan.with(
-  title: [Some bonus material for Midterm 1],
+  title: [Some review problems for Midterm 1],
   subtitle: [18.02 Recitation MW9],
   author: "Evan Chen",
-  date: [Fall 2024],
+  date: [16 September 2024],
 )
 
 #quote(attribution: [Cynthia in Pokémon Diamond and Pearl])[
@@ -20,8 +20,8 @@ This handout (and any other DLC's I write) are posted at
 
 Are you a person that plays every video game on hard mode? Yeah? I have a treat for you.
 
-Anyway, more seriously, my hope you can use these problems to help prepare for Midterm 1,
-even if you don't manage to solve them yourself.
+More seriously, my hope is these problems help you review for Midterm 1
+(in less than two weeks!), even if you don't manage to solve them yourself.
 My suggestion is: think about each for 15-30 minutes, then read the solution (pages 3-end
 of the online PDF) or come to office hours and I'll explain them.
 I hope this helps you digest the material; I tried to craft problems
@@ -75,10 +75,12 @@ _This page is intentionally blank. Solutions on next page._
 
 *Answer*: $vec(1/2, 3/2, -1)$.
 
+=== First approach using vector projection
+
 In recitation R02 you had to calculate the distance from a vector to a plane.
 This problem only requires one step on top of that:
 you need to then translate by the normal vector.
-See the cartoon below.
+See the cartoon below, where $bf(a)$ denotes the answer.
 
 #figure(
   image("figures/bonus1p1.png", width: 70%),
@@ -88,13 +90,26 @@ See the cartoon below.
 To execute the calculation, let $bf(v) = vec(4,5,6)$ and $bf(n) = vec(1,1,2)$.
 The scalar projection is
 $ op("comp")_(bf(n)) (bf(v)) = (bf(v) dot bf(n)) / (|bf(n)|) = (21) / sqrt(6). $
-The vector projection, which I'll write as $op("proj")_(bf(n)) (bf(v))$
-(I think there's no name in the class notes) is
-$ op("proj")_(bf(n)) (bf(v)) = (op("comp")_(bf(n)) (bf(v))) (bf(n))/(|bf(n)|)
+The vector projection is then
+$ bf(a) = (op("comp")_(bf(n)) (bf(v))) (bf(n))/(|bf(n)|)
   = 21/sqrt(6) vec(1,1,2)/sqrt(6)
   = vec(7/2,7/2,7). $
 Then the desired projection is
 $ bf(v) - op("proj")_(bf(n)) (bf(v)) = vec(1/2, 3/2, -1). $
+
+=== Second approach using vector projection
+
+A lot of you don't find vector projection natural (I certainly don't).
+So it might be easier to imagine shifting $bf(v)$ by _some_ multiple of $bf(n) = vec(1,1,2)$
+and then work out which multiple it is.
+
+Specifically, we're looking for a real number $t in RR$ such that the vector
+$ bf(a) = bf(v) - t bf(n) = vec(4-t, 5-t, 6-2t) $
+lies on the plane $x+y+2z = 0$.
+But we can actually solve for $t$ just by plugging this $bf(a)$ into the equation of the plane:
+$ (4-t) + (5-t) + 2(6-2t) = 0 ==> 21 - 6t = 0 ==> t = 7/2. $
+Hence the answer
+$ bf(a) = vec(4-7/2, 5-7/2, 6-2(7/2)) = vec(1/2, 3/2, -1). $
 
 #pagebreak()
 
