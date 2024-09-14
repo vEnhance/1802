@@ -103,7 +103,13 @@ A lot of you don't find vector projection natural (I certainly don't).
 So it might be easier to imagine shifting $bf(v)$ by _some_ multiple of $bf(n) = vec(1,1,2)$
 and then work out which multiple it is.
 
-Specifically, we're looking for a real number $t in RR$ such that the vector
+Specifically, we're looking for#footnote[In comparison to the first solution,
+  the value of $t$ is exactly
+  $ t = (op("comp")_(bf(n)) (bf(v))) /(|bf(n)|). $
+  But the idea behind the second solution is that you don't _need to know_
+  what the geometric formula of $t$ is.
+  You can just solve for $t$ indirectly by asserting that $bf(a)$ lies on $x+y+2z=0$.]
+a real number $t in RR$ such that the vector
 $ bf(a) = bf(v) - t bf(n) = vec(4-t, 5-t, 6-2t) $
 lies on the plane $x+y+2z = 0$.
 But we can actually solve for $t$ just by plugging this $bf(a)$ into the equation of the plane:
