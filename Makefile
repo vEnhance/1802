@@ -10,5 +10,5 @@ figures/%.pdf: figures/%.asy
 figures/%.png: figures/%.pdf
 	magick -density 300 $< $@
 
-%.pdf: %.typ
+%.pdf: %.typ $(PNG_OUTPUTS)
 	typst compile $<
