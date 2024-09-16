@@ -12,6 +12,10 @@
 This handout (and any other DLC's I write) are posted at
 #url("https://web.evanchen.cc/1802.html").
 
+Also, I'm going to start updating the online PDF's with *post-recitation notes*
+based on what we talk about during the recitation.
+So check the PDF later. (They're up already for R03 and R04.)
+
 = How to find eigen-things of an $n times n$ matrix $A$
 
 This is covered in full detail in Poonen section 6.
