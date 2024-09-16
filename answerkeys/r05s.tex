@@ -1,0 +1,233 @@
+\documentclass[addpoints, 12pt,answers]{exam}
+\usepackage{fullpage, tikz, multicol, amsmath, amssymb}
+\usepackage{graphpap, color}
+\usepackage{vmargin}
+
+
+\begin{document}
+\begin{center}
+{\bf 18.02, Fall 2024, Recitation 5}
+\end{center}
+
+\vspace{5 mm}
+
+\begin{questions}
+
+
+\question Compute the eigenvalues and eigenvectors of the following matrices:
+\begin{itemize}
+\item $A = \begin{pmatrix} 1 & 2\\2 & 1\end{pmatrix}$
+\item $B =  \begin{pmatrix} 1 & 2\\-1 & -2\end{pmatrix}$
+\end{itemize}
+\begin{solution}
+\subsubsection*{For matrix $A$}
+We first get the characteristic polynomial of $A$.
+Since this is a $2 \times 2$ matrix (Poonen Theorem 6.8), it's easiest to just note that
+$\operatorname{Tr} A = 1+1 = 2$ and $\det A = 1 \cdot 1 - 2 \cdot 2 = -3$ to get
+\[ \lambda^2 - 2 \lambda - 3. \]
+Of course, if you like you can also do the long way to get the same result:
+\begin{align*}
+  \det(A - \lambda I) &= \det\begin{pmatrix} 1 - \lambda & 2 \\ 2 & 1 - \lambda \end{pmatrix} = (1 - \lambda)(1 - \lambda) - 2 \cdot 2 \\
+  &= (1 - \lambda)^2 - 4 = 1 - 2\lambda + \lambda^2 - 4 = \lambda^2 - 2\lambda - 3.
+\end{align*}
+Anyway, the two roots are $\lambda_1 = 3$ and $\lambda_2 = -1$.
+
+For each eigenvalue, we solve the system $(A - \lambda I)\mathbf{v} = 0$ where $\mathbf{v} = \begin{pmatrix} v \\ w \end{pmatrix}$.
+\begin{itemize}
+\item Eigenvalue $\lambda_1 = 3$:
+We solve:
+\[ (A - 3I) \mathbf{v} = \begin{pmatrix} 1 - 3 & 2 \\ 2 & 1 - 3 \end{pmatrix} \begin{pmatrix} v \\ w \end{pmatrix} = \begin{pmatrix} -2 & 2 \\ 2 & -2 \end{pmatrix} \begin{pmatrix} v \\ w \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix} \]
+This gives the system:
+\[ -2v + 2w = 0, \quad 2v - 2w = 0 \]
+Both equations reduce to:
+\[ v = w \]
+Thus, the eigenvectors corresponding to $\lambda_1 = 3$ are all the multiples of:
+\[ \mathbf{v}_1 = \begin{pmatrix} 1 \\ 1 \end{pmatrix}. \]
+
+\item {Eigenvalue $\lambda_2 = -1$:}
+We solve:
+\[ (A + I) \mathbf{v} = \begin{pmatrix} 1 + 1 & 2 \\ 2 & 1 + 1 \end{pmatrix} \begin{pmatrix} v \\ w \end{pmatrix} = \begin{pmatrix} 2 & 2 \\ 2 & 2 \end{pmatrix} \begin{pmatrix} v \\ w \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix} \]
+This gives the system:
+\[ 2v + 2w = 0, \quad 2v + 2w = 0 \]
+Both equations reduce to:
+\[ v = -w \]
+Thus, the eigenvectors corresponding to $\lambda_1 = 3$ are all the multiples of:
+\[ \mathbf{v}_2 = \begin{pmatrix} 1 \\ -1 \end{pmatrix}. \]
+\end{itemize}
+
+\subsubsection*{For matrix $B$}
+Now we do the same for $B$.
+Since $\operatorname{Tr} B = 1 + (-1) = -1$ and $\det B = 1 \cdot (-2) - 2 \cdot (-1) = 0$
+the characteristic polynomial is given by
+\[ \lambda^2 - \lambda = 0. \]
+The two eigenvectors are therefore
+\[ \lambda_1 = 0, \quad \lambda_2 = -1. \]
+
+For each eigenvalue, we solve $(B - \lambda I)\mathbf{v} = 0$.
+\begin{itemize}
+\item {Eigenvalue $\lambda_1 = 0$:}
+We solve:
+\[ B \mathbf{v} = \begin{pmatrix} 1 & 2 \\ -1 & -2 \end{pmatrix} \begin{pmatrix} v \\ w \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix}. \]
+This gives the system:
+\[ v + 2w = 0, \quad -v - 2w = 0. \]
+Both equations reduce to:
+\[ v = -2w. \]
+Thus, the eigenvectors corresponding to $\lambda_1 = 0$ are all the multiples of:
+\[ \mathbf{v}_1 = \begin{pmatrix} -2 \\ 1 \end{pmatrix}. \]
+
+\item {Eigenvalue $\lambda_2 = -1$:}
+We solve:
+\[ (B + I) \mathbf{v} = \begin{pmatrix} 1 + 1 & 2 \\ -1 & -2 + 1 \end{pmatrix} \begin{pmatrix} v \\ w \end{pmatrix} = \begin{pmatrix} 2 & 2 \\ -1 & -1 \end{pmatrix} \begin{pmatrix} v \\ w \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix}. \]
+This gives the system:
+\[ 2v + 2w = 0, \quad -v - w = 0. \]
+Both equations reduce to:
+\[ v = -w. \]
+Thus, the eigenvectors corresponding to $\lambda_2 = -1$ are all the scalar multiples of
+\[ \mathbf{v}_2 = \begin{pmatrix} 1 \\ -1 \end{pmatrix}. \]
+\end{itemize}
+\end{solution}
+
+\question Consider the matrix  $C = \begin{pmatrix} -1 & 0 & 1\\-3 &4& 1\\0  &0& 2\end{pmatrix}$.
+\begin{itemize}
+\item What are the eigenvalues of $C$?
+\item What are the corresponding eigenvectors (up to scalar multiple)?
+\end{itemize}
+\begin{solution}
+  This is a $3 \times 3$ matrix, so we have to actually calculate the characteristic polynomial.
+  The characteristic polynomial is given by:
+  \[ \det(C - \lambda I) = 0 \]
+  where $I$ is the identity matrix and $\lambda$ is the eigenvalue. We compute $C - \lambda I$:
+  \[
+  C - \lambda I = \begin{pmatrix} -1 & 0 & 1 \\ -3 & 4 & 1 \\ 0 & 0 & 2 \end{pmatrix} - \lambda \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix} = \begin{pmatrix} -1 - \lambda & 0 & 1 \\ -3 & 4 - \lambda & 1 \\ 0 & 0 & 2 - \lambda \end{pmatrix}.
+  \]
+
+  Now, we compute the determinant:
+  \[
+  \det(C - \lambda I) = \det \begin{pmatrix} -1 - \lambda & 0 & 1 \\ -3 & 4 - \lambda & 1 \\ 0 & 0 & 2 - \lambda \end{pmatrix}.
+  \]
+  We expand this determinant along the third row:
+  \[
+  \det(C - \lambda I) = (2 - \lambda) \cdot \det \begin{pmatrix} -1 - \lambda & 0 \\ -3 & 4 - \lambda \end{pmatrix}.
+  \]
+  Now, we compute the $2 \times 2$ determinant:
+  \[
+  \det \begin{pmatrix} -1 - \lambda & 0 \\ -3 & 4 - \lambda \end{pmatrix} = (-1 - \lambda)(4 - \lambda) - (0)(-3) = (\lambda+1)(\lambda-4).
+  \]
+  Hence the characteristic polynomial is exactly
+  \[ (\lambda+1)(\lambda-4)(2-\lambda) = 0. \]
+  The eigenvalues are hence given by
+  \begin{align*}
+    \lambda_1 &= 2 \\
+    \lambda_2 &= 4 \\
+    \lambda_3 &= -1.
+  \end{align*}
+  For each eigenvalue, we solve the system $(C - \lambda I)\mathbf{v} = 0$, where $\mathbf{v} = \begin{pmatrix} v_1 \\ v_2 \\ v_3 \end{pmatrix}$.
+  \begin{itemize}
+  \item {Eigenvalue $\lambda_1 = 2$:}
+  We solve:
+  \begin{align*}
+    (C - 2I) \mathbf{v}
+    &= \begin{pmatrix} -1 - 2 & 0 & 1 \\ -3 & 4 - 2 & 1 \\ 0 & 0 & 2 - 2 \end{pmatrix} \begin{pmatrix} v_1 \\ v_2 \\ v_3 \end{pmatrix} \\
+    &= \begin{pmatrix} -3 & 0 & 1 \\ -3 & 2 & 1 \\ 0 & 0 & 0 \end{pmatrix}
+    \begin{pmatrix} v_1 \\ v_2 \\ v_3 \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix}.
+  \end{align*}
+  This gives the system of equations:
+  \[ -3v_1 + v_3 = 0, \qquad  -3v_1 + 2v_2 + v_3 = 0. \]
+  From the first equation, we get $v_3 = 3v_1$.
+  Substituting this into the second equation:
+  \[ -3v_1 + 2v_2 + 3v_1 = 0 \implies 2v_2 = 0 \implies v_2 = 0. \]
+  Thus, the eigenvector corresponding to $\lambda_1 = 2$ is (up to constant multiple):
+  \[ \mathbf{v}_1 = \begin{pmatrix} 1 \\ 0 \\ 3 \end{pmatrix}. \]
+
+  \item {Eigenvalue $\lambda_2 = 4$:}
+  We solve:
+  \begin{align*}
+    (C - 4I) \mathbf{v}
+    &= \begin{pmatrix} -1 - 4 & 0 & 1 \\ -3 & 4 - 4 & 1 \\ 0 & 0 & 2 - 4 \end{pmatrix} \begin{pmatrix} v_1 \\ v_2 \\ v_3 \end{pmatrix} \\
+    &= \begin{pmatrix} -5 & 0 & 1 \\ -3 & 0 & 1 \\ 0 & 0 & -2 \end{pmatrix} \begin{pmatrix} v_1 \\ v_2 \\ v_3 \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix}.
+  \end{align*}
+  This gives the system of equations:
+  \[ -5v_1 + v_3 = 0 , \qquad -3v_1 + v_3 = 0, \qquad -2v_3 = 0. \]
+  From the third equation, we get $v_3 = 0$.
+  Substituting $v_3 = 0$ into the first and second equations gives $v_1 = 0$.
+  Therefore, $v_2$ is free to vary.
+
+  Thus, the eigenvector corresponding to $\lambda_2 = 4$ is up to constant multiple:
+  \[ \mathbf{v}_2 = \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix}. \]
+
+  \item {Eigenvalue $\lambda_3 = -1$:}
+  We solve:
+  \begin{align*}
+    (C + I) \mathbf{v}
+    &= \begin{pmatrix} -1 + 1 & 0 & 1 \\ -3 & 4 + 1 & 1 \\ 0 & 0 & 2 + 1 \end{pmatrix} \begin{pmatrix} v_1 \\ v_2 \\ v_3 \end{pmatrix} \\
+    &= \begin{pmatrix} 0 & 0 & 1 \\ -3 & 5 & 1 \\ 0 & 0 & 3 \end{pmatrix} \begin{pmatrix} v_1 \\ v_2 \\ v_3 \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix}.
+  \end{align*}
+  This gives the system of equations:
+  \[ v_3 = 0, \qquad -3v_1 + 5v_2 = 0, \qquad 3v_3 = 0. \]
+  From the second equation, we get $v_1 = \frac{5}{3}v_2$.
+  Thus, the eigenvector corresponding to $\lambda_3 = -1$ is (up to constant multiple):
+  \[ \mathbf{v}_3 = \begin{pmatrix} 5 \\ 3 \\ 0 \end{pmatrix}. \]
+  \end{itemize}
+\end{solution}
+
+
+\question For any real numbers $a$ and $b$, compute eigenvalues and eigenvectors of the following matrices.
+\begin{itemize}
+\item $A =  \begin{pmatrix} a & 0\\0 & b\end{pmatrix}$
+
+\item $B =  \begin{pmatrix} a & 1\\0 & a\end{pmatrix}$.
+\end{itemize}
+When $a=b$, what is the difference between the answers for $A$ and $B$?
+
+\begin{solution}
+  For the matrix $A$, one could follow the brute-force procedure in problem 1 again.
+  But it might be easier to find the eigenvectors by inspection:
+  \begin{itemize}
+    \item $A \begin{pmatrix} 1 \\ 0 \end{pmatrix} = \begin{pmatrix} a \\ 0 \end{pmatrix}$;
+    hence $\mathbf{e}_1$ (and its multiples) are eigenvectors with eigenvalue $a$.
+    \item $A \begin{pmatrix} 0 \\ 1 \end{pmatrix} = \begin{pmatrix} 0 \\ b \end{pmatrix}$;
+    hence $\mathbf{e}_1$ (and its multiples) are eigenvectors with eigenvalue $b$.
+  \end{itemize}
+  When $a \neq b$, this means $A$ has eigenvalues $a$ and $b$
+  with multiples of the basis vectors as eigenvectors.
+  (Indeed, this checks out with $\operatorname{Tr} A = a+b$ and $\det A = ab$.)
+  When $a = b$, however, the matrix $A = aI$ has \emph{every} vector of $\mathbb R^2$
+  as an eigenvector of eigenvalue $a$; see Remark 6.13 of Poonen.
+
+  For the matrix $B$, because $\operatorname{Tr} B = 2a$ and $\det A = a^2$,
+  the characteristic polynomial is
+  \[ \lambda^2 - 2a \lambda + a^2 = (\lambda-a)^2. \]
+  Hence the only eigenvalue is $a$.
+  We will show, however, there is only a single eigenline.
+  Indeed, set $\begin{pmatrix} v \\ w \end{pmatrix}$ as an eigenvector.
+  We have
+  \[
+    (B - aI) \begin{pmatrix} v \\ w \end{pmatrix}
+    = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix}
+    \begin{pmatrix} v \\ w \end{pmatrix}
+    = \begin{pmatrix} v \\ 0 \end{pmatrix}.
+  \]
+  Hence, the eigenvalues for $B$ are exactly those with $v = 0$,
+  i.e.\ the multiples of the basis vector $\mathbf{e}_2 = \begin{pmatrix} 0 \\ 1 \end{pmatrix}$.
+
+  To summarize the answer in a table:
+  \begin{center}
+    \begin{tabular}{ccc}
+      Problem & Eigenvalues & Eigenvectors \\ \hline
+      Matrix $A$, when $a \neq b$ & $a$ and $b$ & Multiples of $\mathbf{e}_1$ (for $a$) \\
+      && Multiples of $\mathbf{e}_2$ (for $b$) \\
+      Matrix $A$, when $a = b$ & $a$ & Every vector in $\mathbb{R}^2$ \\
+      Matrix $B$ & $a$ & Multiples of $\mathbf{e}_2$ only.
+    \end{tabular}
+  \end{center}
+
+  (This can feel wrong, because $B$ seems like it is ``missing''
+  one dimension of eigenvectors.
+  This phenomenon only happens when the characteristic polynomial has repeated roots.
+  If you are curious to see what happens in higher dimensions,
+  the correct keywords to search for are ``Jordan normal form''.)
+\end{solution}
+
+\end{questions}
+
+\end{document}
