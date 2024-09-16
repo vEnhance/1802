@@ -113,3 +113,8 @@ $ A = mat(1,2;2,1), #h(1em) B = mat(1,2;1,-2), #h(1em) C = mat(-1,0,1;3,4,1;0,0,
 / 3: For any real numbers $a$ and $b$, find the eigenvalues and eigenvectors of
     $A = mat(a,0;0,b)$ and $B = mat(a,1;0,a)$.
     If $a = b$, how do these answers differ?
+
+= Post-recitation notes
+
+To be added after recitation.
+(I'm finding there's always things to add after seeing the actual questions in recitation.)
