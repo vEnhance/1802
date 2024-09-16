@@ -236,3 +236,17 @@ Consequently, I do not think 18.02 will ask you for $n >= 4$ and $d > 1$.
   If so, the span is *all of $RR^3$*.
   - Example: The span of $vec(3,42,18)$, $vec(1, 53, 17)$, $vec(71,91,13)$ in $RR^3$.
     This was @random3 earlier.
+
+== Systems of equations
+
+To reiterate the table from before, if you have a square matrix $A$
+for an system of $n$ equations in $n$ variables, the following table applies.
+#align(center)[
+  #table(
+    columns: 2,
+    table.header([*Non-degenerate*], [*Degenerate*]),
+    [$det A != 0$], [$det A = 0$],
+    [_Always_ a unique solution], [No solutions at all (contradictory equations)],
+    [(ignore RHS's)], [OR infinitely many solutions (redundant equations)]
+  )
+]
