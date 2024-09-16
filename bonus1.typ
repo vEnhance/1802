@@ -38,8 +38,8 @@ The problems are sorted by the order the topics appeared in class (not by diffic
 
 / Problem 2.:
   Suppose $A$, $B$, $C$, $D$ are points in $RR^3$.
-  Give a geometric interpretation for this equation:
-  $ arrow(D A) dot (arrow(D B) times arrow(D C)) = 0. $
+  Give a geometric interpretation for this expression:
+  $ |arrow(D A) dot (arrow(D B) times arrow(D C))|. $
 
 / Problem 3.:
   Fix a plane $cal(P)$ in $RR^3$ which passes through the origin.
@@ -121,16 +121,8 @@ $ bf(a) = vec(4-7/2, 5-7/2, 6-2(7/2)) = vec(1/2, 3/2, -1). $
 
 == Solution to problem 2
 
-*Answer*: The equation holds if and only if points $A$, $B$, $C$, $D$ lie on a single plane.
+*Answer*: This equals the volume of the parallelepiped formed by $arrow(D A)$, $arrow(D B)$, $arrow(D C)$.
 
-In fact, I will prove that the following more general result:
-
-#theorem[
-  The expression $arrow(D A) dot (arrow(D B) times arrow(D C))$
-  equals the volume of the parallelepiped formed by $arrow(D A)$, $arrow(D B)$, $arrow(D C)$.
-]
-In particular, as I mentioned in recitation and on Piazza,
-the four points lie in the same plane if and only if that parallelepiped volume equals zero.
 Here are two approaches for proving it.
 
 === First approach using coordinates
