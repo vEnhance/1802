@@ -149,7 +149,7 @@ in the following two examples however they liked:
 
 #exercise[
   What is the span of $vec(420, 321)$ and $vec(666, 5)$ in $RR^2$?
-]
+] <random2>
 #soln[
   Because the two vectors are not multiples of each other, they are linearly independent.
   (Alternatively, calculate $det(mat(420, 666; 321, 5)) = 420 dot 5 - 321 dot 666 = -211686 != 0$.)
@@ -159,7 +159,7 @@ in the following two examples however they liked:
 
 #exercise[
   What is the span of $vec(3,42,18)$, $vec(1, 53, 17)$, $vec(71,91,13)$ in $RR^3$?
-]
+] <random3>
 #soln[
   As we mentioned above (@big-coeff), you shouldn't eyeball three or more dimensions;
   if you get three vectors in $RR^3$ and want to know if they are linearly independent or not,
@@ -206,6 +206,7 @@ Consequently, I do not think 18.02 will ask you for $n >= 4$ and $d > 1$.
 - *2-D case*: Are there two (nonzero) vectors not pointing in the same direction
   (equivalently, are linearly independent)? If so, the span is *all of $RR^2$*.
   - Example: The span of $vec(420, 321)$ and $vec(666, 5)$ is all of $RR^2$.
+    This was @random2 earlier.
 
 === Flowchart for $RR^3$
 
@@ -234,3 +235,4 @@ Consequently, I do not think 18.02 will ask you for $n >= 4$ and $d > 1$.
 - *3-D case*: Are there three vectors among them which are linearly independent from each other?
   If so, the span is *all of $RR^3$*.
   - Example: The span of $vec(3,42,18)$, $vec(1, 53, 17)$, $vec(71,91,13)$ in $RR^3$.
+    This was @random3 earlier.
