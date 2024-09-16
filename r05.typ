@@ -44,7 +44,7 @@ This makes no difference.)
 
 == Example with non-real eigenvalues (not for exam)
 
-Let $M = mat(cos(60 degree), sin(60 degree); -sin(60 degree), cos(60 degree))$
+Let $M = mat(cos(60 degree), -sin(60 degree); sin(60 degree), cos(60 degree))$
 be the matrix corresponding to rotation by $60$ degrees.
 (Feel free to replace $60$ by a different number.)
 I claim that $M$ has no real eigenvalues or eigenvectors.
