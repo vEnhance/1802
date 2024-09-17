@@ -64,7 +64,7 @@ grade algebra.
 
 Here's a question: what's the set of vectors in $RR^2$ perpendicular to $vec(1,2)$?
 It's a line of slope $-1/2$ through the origin, namely
-$ 0 = vec(x,y) dot vec(1, 2) <=> 0 = x + 2 y. $
+$ 0 = vec(x,y) dot vec(1, 2) <==> 0 = x + 2 y. $
 
 #figure(
   image("figures/r02-x-plus-2y.png", width: 12cm),
