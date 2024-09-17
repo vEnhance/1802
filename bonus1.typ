@@ -97,7 +97,7 @@ $ bf(a) = (op("comp")_(bf(n)) (bf(v))) (bf(n))/(|bf(n)|)
 Then the desired projection is
 $ bf(v) - op("proj")_(bf(n)) (bf(v)) = vec(1/2, 3/2, -1). $
 
-=== Second approach using vector projection
+=== Second approach using normal vectors only (no projection stuff)
 
 A lot of you don't find vector projection natural (I certainly don't).
 So it might be easier to imagine shifting $bf(v)$ by _some_ multiple of $bf(n) = vec(1,1,2)$
