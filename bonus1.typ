@@ -186,7 +186,15 @@ Pick two more unit vectors $bf(b)_1$ and $bf(b)_2$ perpendicular to $bf(n)$ that
 Then $bf(b)_1$, $bf(b)_2$ and $bf(n)$ are linearly independent and spanning, i.e. a basis of $RR^3$.
 So we can change coordinates to use these instead.
 
-If we wrote $M$ as a matrix _in this new basis_ (rather than the usual basis), we would get
+We know that
+$
+  M(bf(b)_1) &= bf(b)_1 \
+  M(bf(b)_2) &= bf(b)_2 \
+  M(bf(n)_2) &= bf(0).
+$
+
+If we wrote $M$ as a matrix _in this new basis_ $angle.l bf(b)_1, bf(b)_2, bf(n) angle.r$
+(rather than the usual basis), we would get
 the matrix
 $ M = mat(1,0,0;0,1,0;0,0,0) $
 which has determinant $0$.
@@ -264,7 +272,7 @@ $ M = mat(5,4;9,7) mat(4,5;7,9)^(-1)
 (Of course, we get the same entries for $M$ as the last approach.)
 Again the trace is $17 + (-17) = 0$.
 
-=== Third approach: Finding eigenvalues
+=== Third approach: Guessing eigenvectors and eigenvalues
 
 Let $bf(b)_1 = vec(4,7)$ and $bf(b)_2 = vec(5,9)$.
 Adding and subtracting the given equations gives
@@ -281,7 +289,7 @@ Call in the answer $1 + (-1) = 0$.
 
 === Fourth approach: Change coordinates
 
-This approach requires you to know the fact that the determinant doesn't change
+This approach requires you to know the fact that the trace doesn't change
 if you rewrite the matrices in a new basis.
 
 Since $bf(b)_1 = vec(4,7)$ and $bf(b)_2 = vec(5,9)$ are a basis of $RR^2$,
@@ -289,7 +297,8 @@ we can change coordinates to use the $bf(b)_i$.
 In that case,
 $ M(bf(b)_1) = bf(b)_2 " and " M(bf(b)_2) = bf(b)_1. $
 
-If we wrote $M$ as a matrix _in this new basis_ (rather than the usual basis), we would get the matrix
+If we wrote $M$ as a matrix _in this new basis_ $angle.l bf(b)_1, bf(b)_2, angle.r$
+(rather than the usual basis), we would get the matrix
 $ M = mat(0,1;1,0) $
 which has trace $0+0=0$.
 
