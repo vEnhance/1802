@@ -237,7 +237,7 @@ Consequently, I do not think 18.02 will ask you for $n >= 4$ and $d > 1$.
   - Example: The span of $vec(3,42,18)$, $vec(1, 53, 17)$, $vec(71,91,13)$ in $RR^3$.
     This was @random3 earlier.
 
-== Systems of equations
+== Number of solutions to systems of equations
 
 To reiterate the table from before, if you have a square matrix $A$
 for an system of $n$ equations in $n$ variables, the following table applies.
@@ -246,7 +246,47 @@ for an system of $n$ equations in $n$ variables, the following table applies.
     columns: 2,
     table.header([*Non-degenerate*], [*Degenerate*]),
     [$det A != 0$], [$det A = 0$],
-    [_Always_ a unique solution], [No solutions at all (contradictory equations)],
-    [(ignore RHS's)], [OR infinitely many solutions (redundant equations)]
+    [_Always_ a _unique_ solution \ (you can ignore RHS's)],
+    [EITHER no solutions at all (contradictory equations) \
+    OR infinitely many solutions (redundant equations)],
+    [What to expect if $A$ is randomly generated],
+    [Needs cherry-picked $A$]
   )
 ]
+
+So if you are asked to find the number of solutions to a square system
+$
+  a_11 x_1 + a_12 x_2 + ... + a_1n x_n &= b_1 \
+  a_21 x_1 + a_22 x_2 + ... + a_2n x_n &= b_2 \
+  &dots.v \
+  a_(n 1) x_1 + a_(n 2) x_2 + ... + a_(n n) x_n &= b_n \
+$
+you always start by checking whether $det A = 0$ or not
+(where $A$ is the $n times n$ matrix made by the coefficients).
+
+- If $det A != 0$, you don't even have to look at $b_i$; just *answer 1*.
+- If $det A = 0$, then you have to do a bit more work to see whether the equations
+  contain any contradictions within them, or if there's some redundant equations.
+  - If the instructor was nice enough to ask with $b_1 = b_2 = ... = b_n = 0$,
+    then the system of equations has an obvious answer: $x_1 = ... = x_n = 0$.
+    So you're not in the "zero solutions" case, and
+    by process of elimination, *answer "infinitely many"*.
+
+  - Otherwise, you can follow an ad-hoc procedure to see if you can find any contradiction.
+    In 18.02 you'll probably only be asked for $n = 2$ or $n = 3$.
+    When $n = 2$, you can tell just by looking, e.g.
+
+    - The system $x + 3y = 8$ and $10x + 30y = 80$ is obviously "infinitely many",
+      because the two equations are the same. In a case like this, *answer "infinitely many"*.
+
+    - The system $x + 3y = 8$ and $10x + 30y = 42$ is obviously "no solutions",
+      because it would imply $80 = 10 dot 8 = 10 dot (x+3y) = 10x + 30y = 42$,
+      which is self-contradictory.
+      In a case like this, *answer 0*.
+
+    When $n = 3$, there's more work involved.
+    I would say just eliminate one variable like in school algebra,
+    which brings you down to $n = 2$ again.
+
+    For $n > 3$, there are more advanced methods and you want to be systematic at that point,
+    but I don't think those cases will be arise in 18.02.
