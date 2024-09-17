@@ -6,7 +6,7 @@ label("Re", (1.3,0), dir(-90));
 label("Im", (0,1.3), dir(180));
 
 pair O = (0,0);
-pair A = dir(50.19);
+pair A = dir(16.73);
 pair B = A*dir(120);
 pair C = B*dir(120);
 draw(O--A, blue, EndArrow);
