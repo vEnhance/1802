@@ -239,7 +239,7 @@ $
   ==>
   cases(
     (5-lambda)x - 2y = 0,
-    3x - (10-lambda)y = 0,
+    3x + (10-lambda)y = 0,
   )
 $
 
@@ -343,8 +343,10 @@ I would rather call it the following interlocked thing:
 
 #align(center)[
   We cherry-pick $lambda$ to make sure the system doesn't just solve to $x=y=0$.
-]
 
+  To do the cherry-picking, ensure $det(A - lambda I) = 0$
+  so that our system is degenerate.
+]
 
 === Degenerate systems of two equations all look stupid
 
@@ -356,13 +358,16 @@ $
       -2x - 2y = 0,
       3x + 3y = 0,
     )
+    #h(2em)
     " and "
+    #h(2em)
     cases(
       -3x - 2y = 0,
       3x + 2y = 0,
     ).
 $
-Both look moronic to the eye, because the two equations are obviously redundant to each other.
+Both look moronic to the eye, because in each equation,
+the two equations say the same thing.
 This is by design: when you're solving the eigenvector problem,
 _you're going out of your way to find degenerate systems_
 so that there will actually be solutions besides $x = y = 0$.
@@ -405,4 +410,4 @@ And it indeed fits the third equation too.
 == Good news for people who don't like eigenthings
 
 If you don't like eigen-things, I have some good news for you:
-they won't actually be used much later on this course.
+according to what I'm hearing, they won't actually be used much later on this course.
