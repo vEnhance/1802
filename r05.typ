@@ -110,7 +110,7 @@ I'll show you how to do it with eigenvectors.
 
 = Recitation problems from Prof Maulik
 
-$ A = mat(1,2;2,1), #h(1em) B = mat(1,2;1,-2), #h(1em) C = mat(-1,0,1;3,4,1;0,0,2). $
+$ A = mat(1,2;2,1), #h(1em) B = mat(1,2;-1,-2), #h(1em) C = mat(-1,0,1;3,4,1;0,0,2). $
 
 / 1: Find the eigenvalues and eigenvectors of $A$ and $B$.
 / 2: Find the eigenvalues and eigenvectors of $C$.
