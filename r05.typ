@@ -401,3 +401,8 @@ $
 for $x$ and $y$, as a function of $z$.
 I think this particular example works out to $x = -109/29 z$, $y = 37/29 z$.
 And it indeed fits the third equation too.
+
+== Good news for people who don't like eigenthings
+
+If you don't like eigen-things, I have some good news for you:
+they won't actually be used much later on this course.
