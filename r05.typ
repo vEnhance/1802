@@ -137,7 +137,7 @@ First, the relevant definition:
   $ A bf(v) = lambda bf(v) $
   for some nonzero vector $bf(v)$.
   Then we say that $bf(v)$ is an _eigenvector_ for $A$,
-  and $lambda$ is the eigenvalue.
+  and $lambda$ is the _eigenvalue_.
 ]
 The prefix "eigen-" means self or own.
 It means that $A$ maps $bf(v)$ to a multiple of itself.
@@ -164,7 +164,7 @@ Phrased another way, the problem of finding eigenvectors is, by definition,
 looking for $lambda$, $x$, $y$ such that
 
 $
-  A vec(x,y) = lambda vec(x y)
+  A vec(x,y) = lambda vec(x, y)
   <==>
   cases(
     5 x - 2 y = lambda x,
@@ -224,7 +224,8 @@ At this point, you should be remembering something I told you in R04:
 a "random" system of equations and variables usually only has a unique solution.
 So if I keep picking numbers out of a hat like $100$, $1000$, etc.,
 then I'm unlikely to find anything interesting.
-In order to get a system that doesn't just solve to $x=y=0$, I'm going to need to cherry-pick my number.
+In order to get a system that doesn't just solve to $x=y=0$,
+I'm going to need to cherry-pick my number $lambda$.
 
 === Cherry-picking $lambda$
 
