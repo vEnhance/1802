@@ -18,6 +18,7 @@ This handout (and any other DLC's I write) are posted at
   - #todo[Add in times etc.]
 - Please fill out the survey at #url("https://forms.gle/AsXPweCbJ1Nvzp3k7") when you can.
 - I made a Discord server. If you didn't get the link emailed to you, ask me to join.
+- Remember that September 30 is the last day to switch sections freely on Canvas.
 
 = Complex numbers
 
