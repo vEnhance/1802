@@ -19,8 +19,9 @@ This handout (and any other DLC's I write) are posted at
 
 = It's a miracle that multiplication in $CC$ has geometric meaning
 
-We let $CC$ denote the set of complex numbers (just as $RR$ denotes the real numbers).
-We often draw complex numbers as $RR^2$, and you can make a lot of analogies.
+Let $CC$ denote the set of complex numbers (just as $RR$ denotes the real numbers).
+It's important that realize that, *until we add in complex multiplication,
+$CC$ is just an elaborate $RR^2$ cosplay*.
 
 #align(center)[
   #table(
@@ -35,9 +36,6 @@ We often draw complex numbers as $RR^2$, and you can make a lot of analogies.
   )
 ]
 
-If you read every row but the last, $CC$ would just seem like an $RR^2$ cosplay.
-The last row is the miracle.
-
 - All the way back in R01, when I warned you about type safety,
   I repeatedly stressed you that you *cannot multiply two vectors in $RR^n$ to get another vector*.
   You had a "dot product", but it spits out a number.
@@ -47,8 +45,8 @@ The last row is the miracle.
   is to define a product on vectors component-wise:
   why can't $vec(x_1, dots.v, x_n)$ and $vec(y_1, dots.v, y_n)$ have "product"
   $vec(x_1 y_1, dots.v, x_n y_n)$?
-  Well, in 18.02, every definition we made with a vector had to have some geometric picture
-  to go with it in order for us to consider it worthy of attention (see table at start of `r03.pdf`).
+  Well, in 18.02, every vector definition we needed a corresponding geometric picture
+  for us to consider it worthy of attention (see table at start of `r03.pdf`).
   This definition has no geometric meaning.
 
 - However, there is a big miracle for $CC$. For complex numbers, you can define multiplication by
@@ -59,7 +57,7 @@ Unfortunately, AFAIK there is no English word for
 "complex number whose absolute value is one" (err, CNWAVIO?),
 the same way there is for "unit vector".
 For 18.02, we instead use
-$ e^(i theta) := cos theta + i sin theta $
+$e^(i theta) := cos theta + i sin theta$
 as the "word"; whenever you see $e^(i theta)$, draw it as unit vector $cos theta + i sin theta$.
 
 It's worth pointing out the notation $e^(i theta)$ should strike you as _nonsense_.
@@ -83,11 +81,10 @@ i.e. a silly way to remember the following result:
     = (cos theta_1 + i sin theta_1) (cos theta_2 + i sin theta_2). $
   More generally, multiplying two complex numbers multiplies the norms and adds the angles.
 ] <miracle>
-This is (in my opinion) by far the biggest miracle that happens in precalculus.
-
+This is IMO the biggest miracle that happens in precalculus.
 Corollary: $e^(i n theta) = (e^(i theta))^n
 <==> (cos theta + i sin theta)^n = cos(n theta) + i sin(n theta)$,
-so it's easy to take $n$th roots, see Maulik's notes for the example $z^2 = 2i$.
+allows taking $n$th roots, Maulik showed $z^2 = 2i$ in class.
 
 = Rectangular vs polar
 
