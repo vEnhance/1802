@@ -1,4 +1,6 @@
 #import "@local/evan:1.0.0":*
+#import "@local/svg-emoji:0.1.0": setup-emoji // only if you want to use GH names for emojis
+#show: setup-emoji
 
 #show: evan.with(
   title: [Notes for 18.02 Recitation 6],
@@ -32,7 +34,7 @@ $CC$ is just an elaborate $RR^2$ cosplay*.
     [Length], [Length $|bf(v)|$], [Abs val $|z|$],
     [Direction], [(slope, maybe?)], [argument $theta$],
     [Length $1$], [unit vector], [$e^(i theta) = cos theta + i sin theta$],
-    [Multiply], [_NONE_], [$z_1 z_2$]
+    [Multiply], [_NONE_], [$z_1 z_2$ ✨]
   )
 ]
 
@@ -84,7 +86,7 @@ i.e. a silly way to remember the following result:
 This is IMO the biggest miracle that happens in precalculus.
 Corollary: $e^(i n theta) = (e^(i theta))^n
 <==> (cos theta + i sin theta)^n = cos(n theta) + i sin(n theta)$,
-allows taking $n$th roots, Maulik showed $z^2 = 2i$ in class.
+allows taking $n$th roots; Maulik showed $z^2 = 2i$ in class.
 
 = Rectangular vs polar
 
@@ -97,10 +99,12 @@ Depending on what you are trying to do, some forms are easier to work with than 
     columns: 3,
     align: left,
     table.header([*Operation*], [*In rectangular*], [*In polar*]),
-    [$z_1 plus.minus z_2$], [Yes, component-wise], [Not recommended unless same direction],
-    [$z_1 z_2$], [Yes, easy by expanding], [Yes, easy by @miracle],
-    [$z_1 slash z_2$], [Yes, but needs $1/(c+d i) = (c - d i) / (c^2+d^2)$ trick], [Yes, easy by @miracle],
-    [$n$th root of $z_1$], [Strongly not recommended for $n > 1$], [Yes, easy by @miracle],
+    [$z_1 plus.minus z_2$],
+      [✅ Component-wise like in $RR^2$],
+      [❌ Unless $z_1$ is a real multiple of $z_2$],
+    [$z_1 z_2$], [✅ Expanding], [✅ by @miracle],
+    [$z_1 slash z_2$], [✅ Use $1/(c+d i) = (c - d i) / (c^2+d^2)$ trick then multiply], [✅ by @miracle],
+    [$n$#super[th] root of $z_1$], [❌ Not recommended for $n > 1$], [✅ by @miracle corollary],
   )
 ]
 
