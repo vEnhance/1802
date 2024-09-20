@@ -14,7 +14,7 @@
 This handout (and any other DLC's I write) are posted at
 #url("https://web.evanchen.cc/1802.html").
 
-- Optional midterm 1 review session on Thu, 4:30pm-6:30pm. Led by me, Vinjay, and Sebastian.
+- Optional midterm review, 4-270, Thu 4:30pm-6:30pm. Led by me, Vinjay, and Sebastian.
 - Please fill out the survey at #url("https://forms.gle/AsXPweCbJ1Nvzp3k7") when you can.
 - I made a Discord server. If you didn't get the link emailed to you, ask me to join.
 - Remember that September 30 is the last day to switch sections freely on Canvas.
