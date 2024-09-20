@@ -49,7 +49,7 @@ $CC$ is just an elaborate $RR^2$ cosplay*.
   is to define a product on vectors component-wise:
   why can't $vec(x_1, dots.v, x_n)$ and $vec(y_1, dots.v, y_n)$ have "product"
   $vec(x_1 y_1, dots.v, x_n y_n)$?
-  Well, in 18.02, every vector definition we needed a corresponding geometric picture
+  Well, in 18.02, every vector definition needed a corresponding geometric picture
   for us to consider it worthy of attention (see table at start of `r03.pdf`).
   This definition has no geometric meaning.
 
@@ -85,7 +85,7 @@ i.e. a silly way to remember the following result:
     = (cos theta_1 + i sin theta_1) (cos theta_2 + i sin theta_2). $
   More generally, multiplying two complex numbers multiplies the norms and adds the angles.
 ] <miracle>
-This is IMO the biggest miracle that happens in precalculus.
+This is IMO the biggest miracle in all of precalculus.
 Corollary: $e^(i n theta) = (e^(i theta))^n
 <==> (cos theta + i sin theta)^n = cos(n theta) + i sin(n theta)$,
 allows taking $n$th roots; Maulik showed $z^2 = 2i$ in class.
