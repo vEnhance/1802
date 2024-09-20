@@ -43,7 +43,7 @@ $CC$ is just an elaborate $RR^2$ cosplay*.
 - All the way back in R01, when I warned you about type safety,
   I repeatedly stressed you that you *cannot multiply two vectors in $RR^n$ to get another vector*.
   You had a "dot product", but it spits out a number.
-  Honestly, you shouldn't think of dot product as multiplication; the name sucks.
+  (Honestly, you shouldn't think of dot product as a "product"; the name sucks.)
 
 - Of course, the classic newbie mistake (which you better not make on your midterm)
   is to define a product on vectors component-wise:
