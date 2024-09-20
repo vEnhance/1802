@@ -64,13 +64,16 @@ as the "word"; whenever you see $e^(i theta)$, draw it as unit vector $cos theta
 
 It's worth pointing out the notation $e^(i theta)$ should strike you as _nonsense_.
 What meaning does it have to raise a number to an imaginary power?
-Does $i^i$ have a meaning?#footnote[Answer: you don't want to know.
+Does $i^i$ have a meaning?#footnote[Answer: *you don't want to know*.
   Maulik explained in class how to do some cases:
   you start by _redefining_ exponentiation as $e^x = sum x^k / k!$.
   This redefinition is sweeping a lot of the work under the rug;
   for example, it's not obvious $sum x^k / k! sum y^k / k! = sum (x+y)^k / k!$,
   but if you know enough 18.100/18.112, you can do enough book-keeping and derive Euler's formula.
-  But then when the exponent is non-real, all goes haywire.]
+  But then when the exponent is non-real, all goes haywire.
+  Which of $i^i = (e^(i pi slash 2))^i = e^(-pi slash 2)$
+  and $i^i = (e^(i 5 pi slash 2))^i = e^(-5pi slash 2)$ do you think is right?
+]
 When starting out, I would actually think of the notation $e^(i theta)$ as a _mnemonic_,
 i.e. a silly way to remember the following result:
 #theorem[
@@ -79,7 +82,7 @@ i.e. a silly way to remember the following result:
     cos (theta_1 + theta_2) + i sin (theta_1 + theta_2)
     = (cos theta_1 + i sin theta_1) (cos theta_2 + i sin theta_2). $
   More generally, multiplying two complex numbers multiplies the norms and adds the angles.
-]
+] <miracle>
 This is (in my opinion) by far the biggest miracle that happens in precalculus.
 
 Corollary: $e^(i n theta) = (e^(i theta))^n
@@ -97,10 +100,10 @@ Depending on what you are trying to do, some forms are easier to work with than 
     columns: 3,
     align: left,
     table.header([*Operation*], [*In rectangular*], [*In polar*]),
-    [$z_1 plus.minus z_2$], [Yes, component-wise], [Usually unpleasant],
-    [$z_1 z_2$], [Yes, expand], [Yes, easy],
-    [$z_1 slash z_2$], [Yes, but needs $1/(c+d i) = (c - d i) / (c^2+d^2)$ trick], [Yes, easy],
-    [$n$th root of $z_1$], [No, literally impossible], [Yes, easy],
+    [$z_1 plus.minus z_2$], [Yes, component-wise], [Not recommended unless same direction],
+    [$z_1 z_2$], [Yes, easy by expanding], [Yes, easy by @miracle],
+    [$z_1 slash z_2$], [Yes, but needs $1/(c+d i) = (c - d i) / (c^2+d^2)$ trick], [Yes, easy by @miracle],
+    [$n$th root of $z_1$], [Strongly not recommended for $n > 1$], [Yes, easy by @miracle],
   )
 ]
 
