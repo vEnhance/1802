@@ -241,18 +241,19 @@ Consequently, I do not think 18.02 will ask you for $n >= 4$ and $d > 1$.
 
 To reiterate the table from before, if you have a square matrix $A$
 for an system of $n$ equations in $n$ variables, the following table applies.
-#align(center)[
-  #table(
+#figure(
+  table(
     columns: 2,
-    table.header([*Non-degenerate*], [*Degenerate*]),
+    table.header([Non-degenerate], [Degenerate]),
     [$det A != 0$], [$det A = 0$],
     [_Always_ a _unique_ solution \ (you can ignore RHS's)],
     [EITHER no solutions at all (contradictory equations) \
     OR infinitely many solutions (redundant equations)],
     [What to expect if $A$ is randomly generated],
     [Needs cherry-picked $A$]
-  )
-]
+  ),
+  kind: table
+)
 
 So if you are asked to find the number of solutions to a square system
 $

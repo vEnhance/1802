@@ -47,15 +47,16 @@ as I move around, since that seemed more useful.
 - Remember that every vector has both a *direction* and a *magnitude*,
   which both have geometric meaning (or insignificance); see table below.
 
-#align(center)[
-  #table(
+#figure(
+  table(
     columns: 3,
-    table.header([*Object*], [*Direction*], [*Magnitude*]),
+    table.header([Object], [Direction], [Magnitude]),
     [Normal vector to plane], [Perpendicular to plane], [_Irrelevant!_],
     [Vector projection of $bf(v)$ to $bf(w)$], [Same as $bf(w)$], [Scalar projection],
     [Cross product $bf(a) times bf(b)$], [Perpendicular to both $bf(a)$ and $bf(b)$], [Area of parallelogram]
-  )
-]
+  ),
+  kind: table
+)
 
 - Remember: *the $RR^2$ concept of slope is overridden by the concept of normal vector for $RR^3$*.
   This is an important lesson from last time that I didn't call enough attention to,
@@ -272,11 +273,10 @@ It's important to realize *all the work of the problem is the "values at basis"*
 and that *only uses up to R02 material*.
 The only new step introduced in R03 is "to encode as matrix, glue your answers together".
 
-#align(center)[
-
-  #table(
+#figure(
+  table(
     columns: 4,
-    table.header([*Q*], [*Transf.*], [*Values at basis*], [*Encoded matrix*]),
+    table.header([Q], [Transf.], [Values at basis], [Encoded matrix]),
     [2b],
       [$T = $ "Reflect around $y=-x$"],
       [$ T(bf(e)_1) = vec(0,-1) \ T(bf(e)_2) = vec(-1,0) $],
@@ -289,6 +289,6 @@ The only new step introduced in R03 is "to encode as matrix, glue your answers t
       [$T = $ "vector projection as in R02"],
       [$ T(bf(e)_1) = vec(1/5,2/5) \ T(bf(e)_2) = vec(2/5,4/5) $],
       [$mat(1/5,2/5;2/5,4/5)$],
-  )
-
-]
+  ),
+  kind: table
+)

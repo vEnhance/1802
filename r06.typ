@@ -25,18 +25,20 @@ Let $CC$ denote the set of complex numbers (just as $RR$ denotes the real number
 It's important that realize that, *until we add in complex multiplication,
 $CC$ is just an elaborate $RR^2$ cosplay*.
 
-#align(center)[
-  #table(
+#figure(
+  table(
     columns: 3,
-    table.header([*Concept*], [*For $RR^2$*], [*For $CC$*]),
+    align: left,
+    table.header([Concept], [For $RR^2$], [For $CC$]),
     [Notation], [$bf(v)$], [$z$],
     [Components], [$vec(x, y)$], [$x + y i$],
     [Length], [Length $|bf(v)|$], [Abs val $|z|$],
     [Direction], [(slope, maybe?)], [argument $theta$],
     [Length $1$], [unit vector], [$e^(i theta) = cos theta + i sin theta$],
-    [Multiply], [_NONE_], [$z_1 z_2$ ✨]
-  )
-]
+    [Multiply], [_NONE_], [✨ $z_1 z_2$ ✨]
+  ),
+  kind: table
+)
 
 - All the way back in R01, when I warned you about type safety,
   I repeatedly stressed you that you *cannot multiply two vectors in $RR^n$ to get another vector*.
@@ -94,20 +96,20 @@ Every complex number can be written in either
 _rectangular form_ ($a+b i$ for $a,b in RR$) or _polar form_ ($r e^(i theta)$).
 Depending on what you are trying to do, some forms are easier to work with than others.
 
-#align(center)[
-  #table(
+#figure(
+  table(
     columns: 3,
     align: left,
-    table.header([*Operation*], [*In rectangular*], [*In polar*]),
+    table.header([Operation], [In rectangular], [In polar]),
     [$z_1 plus.minus z_2$],
       [✅ Component-wise like in $RR^2$],
       [❌ Unless $z_1$ is a real multiple of $z_2$],
     [$z_1 z_2$], [✅ Expanding], [✅ by @miracle],
     [$z_1 slash z_2$], [✅ Use $1/(c+d i) = (c - d i) / (c^2+d^2)$ trick then multiply], [✅ by @miracle],
     [$n$#super[th] root of $z_1$], [❌ Not recommended for $n > 1$], [✅ by @miracle corollary],
-  )
-]
-
+  ),
+  kind: table
+)
 
 = Recitation problems from Prof Maulik
 
