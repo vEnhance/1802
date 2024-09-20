@@ -72,9 +72,9 @@ Does $i^i$ have a meaning?#footnote[Answer: *you don't want to know*.
   This redefinition is sweeping a lot of the work under the rug;
   for example, it's not obvious $sum x^k / k! sum y^k / k! = sum (x+y)^k / k!$,
   but if you know enough 18.100/18.112, you can do enough book-keeping and derive Euler's formula.
-  But then when the exponent is non-real, all goes haywire.
+  But then when the _base_ is non-real, everything goes haywire.
   Which of $i^i = (e^(i pi slash 2))^i = e^(-pi slash 2)$
-  and $i^i = (e^(i 5 pi slash 2))^i = e^(-5pi slash 2)$ do you think is right?
+  and $i^i = (e^(5 pi i slash 2))^i = e^(-5 pi slash 2)$ do you think is right?
 ]
 When starting out, I would actually think of the notation $e^(i theta)$ as a _mnemonic_,
 i.e. a silly way to remember the following result:
