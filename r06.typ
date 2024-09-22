@@ -66,18 +66,11 @@ as the "word"; whenever you see $e^(i theta)$, draw it as unit vector $cos theta
 
 It's worth pointing out the notation $e^(i theta)$ should strike you as _nonsense_.
 What meaning does it have to raise a number to an imaginary power?
-Does $i^i$ have a meaning?#footnote[Answer: *you don't want to know*.
-  Maulik explained in class how to do some cases:
-  you start by _redefining_ exponentiation as $e^x = sum x^k / k!$.
-  This redefinition sweeps much work under the rug;
-  e.g. $sum x^k / k! sum y^k / k! = sum (x+y)^k / k!$ needs to be proved.
-  But if you know 18.100/18.112, you can do enough book-keeping and prove everything.
+Does $i^i$ have a meaning? Does $cos(i)$ have a meaning?
+(If you want to know, check @i-to-the-i in the post-recitation notes.)
 
-  However, when the _base_ is non-real, everything goes haywire, e.g.
-  $i^i = (e^(i pi slash 2))^i = e^(-pi slash 2)$
-  and $i^i = (e^(5 pi i slash 2))^i = e^(-5 pi slash 2)$.
-]
-When starting out, I would actually think of the notation $e^(i theta)$ as a _mnemonic_,
+But for 18.02, when starting out,
+I would actually think of the notation $e^(i theta)$ as a _mnemonic_,
 i.e. a silly way to remember the following result:
 #theorem[
   If you multiply two CNWAVIO's, you get the CNWAVIO with the angles added:
@@ -139,4 +132,117 @@ Depending on what you are trying to do, some forms are easier to work with than 
 
 = Post-recitation notes
 
-#todo[To be written.]
+#todo[To be developed after recitation.]
+
+== The importance of definitions, $cos(i)$, and $i^i$ <i-to-the-i>
+
+When learning mathematics, I believe definitions are actually more important than theorems.
+A lot of confusion comes from not having been given careful definitions of the objects.
+(See #url("https://web.evanchen.cc/handouts/NaturalProof/NaturalProof.pdf") for more on that.)
+
+So in general any time you are confused about whether an operation is "legal",
+the first thing to really check whether you have been given a precise definition.
+The endless debates on whether $0$ is even or whether $0.999... = 1$ or not are a symptom
+of people not knowing where definitions lie.
+
+With that in mind, let's fix $a > 0$ a positive real number and think about what $a^r$ should mean.
+
+#definition[18.100][
+- When $n > 0$ is an integer, then $a^n := a times ... times a$, where $a$ is repeated $n$ times.
+- Then we let $a^(-n) := 1 / a^n$ for each integer $n > 0$.
+- When $m/n$ is a rational number, $a^(m/n)$ means the unique $b > 0$ such that $a^m = b^n$.
+  (In 18.100, one proves this $b$ is unique and does exist.)
+- It's less clear what $a^x$ means when $x in RR$, like $x = sqrt(2)$ or $x = pi$.
+  I think usually one takes a limit of rational numbers $q$ close to $x$
+  and lets $a^x := lim_(q -> x) a^q$.
+  (In 18.100, one proves this limit does in fact exist.)
+] <def18100>
+But when $z in CC$, what does $a^z$ mean? There's no good way to do this.
+
+You likely don't find an answer until 18.112, but I'll tell you know.
+In 18.100 you will also prove that the Taylor series
+$ e^x = sum_(k >= 0) r^k / k! $
+is correct, where $e := sum_(k >= 0) 1/k!$ is Euler's constant.
+
+So then when you start 18.112, we will flip the definition on its head:
+
+#definition[18.112][
+  If $z in CC$, we _define_ $ e^z := sum_(k >= 0) z^k / k!. $
+  Then for $a > 0$, we let $a^z = e^(z log a)$.
+] <def18112>
+
+To summarize: in 18.100, we defined exponents in the way you learned in grade school
+and then proved there was a Taylor series. But in 18.112, you _start_ with the Taylor series
+and _then_ prove that the rules in grade school you learned still applied.
+
+And checking this consistency requires work.
+Because we threw away @def18100, identities like
+$ e^(z_1 + z_2) = e^(z_1) e^(z_2) " and " (e^(z_1))^(z_2) = e^(z_1 z_2)$
+are no longer "free": they have to be proved rigorously too.
+I think you shouldn't be _surprised_ they're true;
+we know it's true for $RR$, so it's one heck of a good guess.
+But you shouldn't take these on faith.
+At least get your professor to acknowledge they _require_ a (non-obvious) proof,
+even if you aren't experienced enough to follow the proof yourself yet.
+
+Anyway, if we accept this definition, then Euler's formula makes more sense:
+#theorem[Euler][We have $ e^(i theta) = cos theta + i sin theta. $] <euler>
+The point is that cosine and sine also have a Taylor series that is compatible with definition:
+#eqn[
+  $
+    cos(x) &= 1 - x^2/2! + x^4/4! - x^6/6! + ... \
+    sin(x) &= x - x^3/3! + x^5/5! - x^7/7! + ... .
+  $
+  <trig>
+]
+And if you put these together, you can verify @euler, up to some technical issues with infinite sums.
+I think Maulik even showed this in class:
+$
+  cos(theta) + i sin(theta)
+  &= (1 - theta^2 / 2! + theta^4 / 4! - ...) + (theta - theta^3 / 3! + theta^5 / 5! - ...) i \
+  &= 1 + (theta i) + (theta i)^2 / 2! + (theta i)^3 / 3! + (theta i^4) / 4! + (theta i)^5 / 5! \
+  &= e^(i theta).
+$
+
+But what about $i^i$?
+Our @def18112 above only worked for positive real numbers.
+Here, it turns out you're out of luck.
+There isn't any way to define $i^i$ in a way that makes internal sense.
+The problem is that there's no way to take a single log of a complex number,
+so the analogy with $log a$ breaks down.
+
+Indeed, if you _try_ to guess a value of $i^i$, you immediately run into some contradictions:
+$ i &= e^(i pi slash 2) ==> i^i = e^(-i pi slash 2) \
+  i &= e^(5 i pi slash 2) ==> i^i = e^(-5 i pi slash 2). $
+Yeah, trouble.
+
+On the other hand, $cos(i)$ can be defined:
+use the Taylor series @trig, like we did for $e^z$.
+To spell it out:
+#definition[18.112 trig definitions][
+  If $z$ is a complex number, we define
+  $
+    cos(z) &:= 1 - z^2/2! + z^4/4! - z^6/6! + ... \
+    sin(z) &:= z - z^3/3! + z^5/5! - z^7/7! + ... .
+  $
+] <def18112trig>
+
+If you do this, then @def18112 implies the following identities are kosher:
+#proposition[
+  Under @def18112trig, we have the identities
+  $ cos(z) &:= (e^(i z) + e^(-i z)) / 2 \
+    sin(z) &:= (e^(i z) - e^(-i z)) / (2i). $
+] <reimtrig>
+#proof[
+  If you write out $e^(i z) = sum (i z)^k / k!$
+  and $e^(-i z) = sum (-i z)^k / k!$ and add them,
+  the odd $k$'s cancel out and the even $k$'s don't, which gives you
+  $ e^(i z) + e^(-i z) = 2  - 2 dot z^2/2! + 2 dot z^4/4! - 2 dot z^6/6! + ... . $
+  So dividing by $2$, we see $cos(z)$ on the right-hand side, as needed.
+  The argument with $sin$ is similar, but this time the even $k$'s cancel
+  and you divide by $2i$ instead.
+]
+
+So for example, from @reimtrig, we conclude for example that
+$ cos(i) = (e + 1/e) / 2. $
+Strange but true.
