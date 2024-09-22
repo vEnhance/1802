@@ -10,4 +10,5 @@ answerkeys/r02s.pdf
 answerkeys/r03s.pdf
 answerkeys/r04s.pdf
 answerkeys/r05s.pdf
+answerkeys/r06s.pdf
 bonus1.pdf
