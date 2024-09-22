@@ -145,6 +145,8 @@ the first thing to really check whether you have been given a precise definition
 The endless debates on whether $0$ is even or whether $0.999... = 1$ or not are a symptom
 of people not knowing where definitions lie.
 
+=== Real exponents, real base
+
 With that in mind, let's fix $a > 0$ a positive real number and think about what $a^r$ should mean.
 
 #definition[18.100][
@@ -157,6 +159,9 @@ With that in mind, let's fix $a > 0$ a positive real number and think about what
   and lets $a^x := lim_(q -> x) a^q$.
   (In 18.100, one proves this limit does in fact exist.)
 ] <def18100>
+
+=== Complex exponents, real base
+
 But when $z in CC$, what does $a^z$ mean? There's no good way to do this.
 
 You likely don't find an answer until 18.112, but I'll tell you know.
@@ -204,6 +209,8 @@ $
   &= e^(i theta).
 $
 
+=== Complex exponents, complex base
+
 But what about $i^i$?
 Our @def18112 above only worked for positive real numbers.
 Here, it turns out you're out of luck.
@@ -211,10 +218,15 @@ There isn't any way to define $i^i$ in a way that makes internal sense.
 The problem is that there's no way to take a single log of a complex number,
 so the analogy with $log a$ breaks down.
 
-Indeed, if you _try_ to guess a value of $i^i$, you immediately run into some contradictions:
-$ i &= e^(i pi slash 2) ==> i^i = e^(-i pi slash 2) \
-  i &= e^(5 i pi slash 2) ==> i^i = e^(-5 i pi slash 2). $
+Put another way: there's no good way to assign a value to $log(i)$,
+because $e^(i pi slash 2) = e^(5 i pi slash / 2) = ...$ are all equal to $i$.
+You might hear this phrased "complex-valued logarithms are multivalued".
+You can have some fun with this paradox:
+$ i &= e^(i pi slash 2) ==> i^i = e^(- pi slash 2) \
+  i &= e^(5 i pi slash 2) ==> i^i = e^(-5 pi slash 2). $
 Yeah, trouble.
+
+=== Trig functions with complex arguments
 
 On the other hand, $cos(i)$ can be defined:
 use the Taylor series @trig, like we did for $e^z$.
