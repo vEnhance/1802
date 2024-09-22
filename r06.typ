@@ -69,12 +69,13 @@ What meaning does it have to raise a number to an imaginary power?
 Does $i^i$ have a meaning?#footnote[Answer: *you don't want to know*.
   Maulik explained in class how to do some cases:
   you start by _redefining_ exponentiation as $e^x = sum x^k / k!$.
-  This redefinition is sweeping a lot of the work under the rug;
-  for example, it's not obvious $sum x^k / k! sum y^k / k! = sum (x+y)^k / k!$,
-  but if you know enough 18.100/18.112, you can do enough book-keeping and derive Euler's formula.
-  But then when the _base_ is non-real, everything goes haywire.
-  Which of $i^i = (e^(i pi slash 2))^i = e^(-pi slash 2)$
-  and $i^i = (e^(5 pi i slash 2))^i = e^(-5 pi slash 2)$ do you think is right?
+  This redefinition sweeps much work under the rug;
+  e.g. $sum x^k / k! sum y^k / k! = sum (x+y)^k / k!$ needs to be proved.
+  But if you know 18.100/18.112, you can do enough book-keeping and prove everything.
+
+  However, when the _base_ is non-real, everything goes haywire, e.g.
+  $i^i = (e^(i pi slash 2))^i = e^(-pi slash 2)$
+  and $i^i = (e^(5 pi i slash 2))^i = e^(-5 pi slash 2)$.
 ]
 When starting out, I would actually think of the notation $e^(i theta)$ as a _mnemonic_,
 i.e. a silly way to remember the following result:
@@ -117,7 +118,7 @@ Depending on what you are trying to do, some forms are easier to work with than 
   vice versa:
     - $(x , y) = (- sqrt(3) , 1)$
     - $(r , theta) = (3 , pi \/ 6)$
-    - $(- sqrt(6) , - sqrt(2))$
+    - $(x, y) = (- sqrt(6) , - sqrt(2))$
 / 2.: Show that $sin (theta) = frac(1, 2 i) (e^(i theta) - e^(- i theta))$ and
   $cos (theta) = 1 / 2 (e^(i theta) + e^(- i theta))$. Use this to write
   $(sin (theta))^3$ in terms $sin (3 theta)$ and $sin (theta)$.
