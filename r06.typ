@@ -112,8 +112,27 @@ Depending on what you are trying to do, some forms are easier to work with than 
 )
 
 = Recitation problems from Prof Maulik
-
-#todo[To be written.]
+.
+/ 1: For each of the following points, convert it from Cartesian to polar or
+  vice versa:
+    - $(x , y) = (- sqrt(3) , 1)$
+    - $(r , theta) = (3 , pi \/ 6)$
+    - $(- sqrt(6) , - sqrt(2))$
+/ 2.: Show that $sin (theta) = frac(1, 2 i) (e^(i theta) - e^(- i theta))$ and
+  $cos (theta) = 1 / 2 (e^(i theta) + e^(- i theta))$. Use this to write
+  $(sin (theta))^3$ in terms $sin (3 theta)$ and $sin (theta)$.
+/ 3.: Consider the complex number $f (t) = frac(t + 2 i, 1 - 3 i)$ where $t$ is real.
+  - Find the real and imaginary part of $f (t)$.
+  - Find $overline(f (t))$ and $lr(|f (t)|)^2$.
+/ 4.: Use polar form to find the fourth powers of $2 + 2 i$ and
+  $- 3 + i sqrt(3)$. Graph these numbers and their fourth powers on the
+  complex plane.
+/ 5.: (If you have time) Consider the matrix
+  $A = mat(0, - 1; 1, 0)$. In class, working with real
+  numbers, this had no eigenvectors. But now we can treat it as a matrix
+  with complex number entries. Find complex number eigenvalues for $A$ and
+  for each one, find an eigenvector in $CC^2$, i.e. a
+  two-component vector $vec(z, w)$ where $z$, $w$ are complex numbers.
 
 #pagebreak()
 
