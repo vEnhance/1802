@@ -132,7 +132,7 @@ Depending on what you are trying to do, some forms are easier to work with than 
 
 = Post-recitation notes
 
-== The importance of definitions; also $cos(i)$ and $i^i$ <i-to-the-i>
+== The importance of definitions; also $cos(i)$ and $i^i$ (not for exam) <i-to-the-i>
 
 When learning mathematics, I believe definitions are actually more important than theorems.
 A lot of confusion comes from not having been given careful definitions of the objects.
@@ -260,7 +260,7 @@ So for example, from @reimtrig, we conclude for example that
 $ cos(i) = (e + 1/e) / 2. $
 Strange but true.
 
-== A glimpse of the future: what are 18.100 and 18.112 anyway?
+== The future: what are 18.100 and 18.112 anyway? (not for exam)
 
 First I need to tell you what analysis is.
 When students in USA ask me what analysis is,
@@ -360,3 +360,24 @@ then the arguments of $z$ satisfying $z^n = w$
 start at $theta / n$ and then go up in increments of $(360 degree) / n$.
 (For example, they started at $(90 degree) / 5 = 18 degree$ for
 answers to $z^5 = 243 i$.)
+So you can describe the general recipe as:
+
+#theorem[Recipe for $n$th roots][
+1. Convert $w$ to polar form; say it has angle $theta$.
+2. One of the $n$ answers will be $|w|^(1/n) (cos theta / n + i sin theta / n)$.
+3. The other $n-1$ answers are obtained by increasing the angle in increments of $360 degree / n$.
+]
+
+To reiterate, if we are asked to find $z$ such that
+$ z^5 = 243 i $
+then we first convert to polar form as
+$ 243 i = 243 (cos 90 degree + i sin 90 degree) $
+and see that $243^(1/5) = 3$, and $theta = 90 degree$.
+So the five answers are
+$
+z_1 = 3 (cos 18 degree + i sin 18 degree) \
+z_2 = 3 (cos 90 degree + i sin 90 degree) \
+z_3 = 3 (cos 162 degree + i sin 162 degree) \
+z_4 = 3 (cos 234 degree + i sin 234 degree) \
+z_5 = 3 (cos 306 degree + i sin 306 degree).
+$
