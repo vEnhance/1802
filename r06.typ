@@ -368,29 +368,46 @@ So you can describe the general recipe as:
 3. The other $n-1$ answers are obtained by increasing the angle in increments of $(360 degree) / n$.
 ]
 
-*Example 1*: To reiterate, if we are asked to find $z$ such that
-$ z^5 = 243 i $
-then we first convert to polar form as
-$ 243 i = 243 (cos 90 degree + i sin 90 degree) $
-and see that $243^(1/5) = 3$, and $theta = 90 degree$.
-So the five answers are
-$
-z_1 = 3 (cos 18 degree + i sin 18 degree) \
-z_2 = 3 (cos 90 degree + i sin 90 degree) \
-z_3 = 3 (cos 162 degree + i sin 162 degree) \
-z_4 = 3 (cos 234 degree + i sin 234 degree) \
-z_5 = 3 (cos 306 degree + i sin 306 degree).
-$
+- *Example 1*: Solve $z^5 = 243 i$.
 
-*Example 2*: If we are asked to find $z$ such that
-$ z^4 = 8 + 8 sqrt(3) i $
-then we first convert to polar form as
-$ 8 + 8 sqrt(3) i = 16 (cos 60 degree + i sin 60 degree) $
-and see that $16^(1/4) = 2$, and $theta = 15 degree$.
-So the four answers are
-$
-z_1 = 2 (cos 15 degree + i sin 15 degree) \
-z_2 = 2 (cos 105 degree + i sin 105 degree) \
-z_3 = 2 (cos 195 degree + i sin 195 degree) \
-z_4 = 2 (cos 275 degree + i sin 275 degree).
-$
+  *Answer 1*: we first convert to polar form as
+  $ 243 i = 243 (cos 90 degree + i sin 90 degree) $
+  and see that $243^(1/5) = 3$, and $theta = 90 degree$.
+  The first angle is $theta / 5 = 18 degree$.
+  So the five answers are
+  $
+  z_1 = 3 (cos 18 degree + i sin 18 degree) \
+  z_2 = 3 (cos 90 degree + i sin 90 degree) \
+  z_3 = 3 (cos 162 degree + i sin 162 degree) \
+  z_4 = 3 (cos 234 degree + i sin 234 degree) \
+  z_5 = 3 (cos 306 degree + i sin 306 degree).
+  $
+  (As it happens, $z_2 = 3i$, which is easy to check by hand works.)
+
+- *Example 2*: Solve $z^4 = 8 + 8 sqrt(3) i$.
+
+  *Answer 2*: We first convert to polar form as
+  $ 8 + 8 sqrt(3) i = 16 (cos 60 degree + i sin 60 degree) $
+  and see that $16^(1/4) = 2$, and $theta = 60 degree$.
+  The first angle is $theta / 4 = 15 degree$.
+  So the four answers are
+  $
+  z_1 = 2 (cos 15 degree + i sin 15 degree) \
+  z_2 = 2 (cos 105 degree + i sin 105 degree) \
+  z_3 = 2 (cos 195 degree + i sin 195 degree) \
+  z_4 = 2 (cos 285 degree + i sin 285 degree).
+  $
+
+- *Example 3*: Solve $z^3 = -1000$.
+
+  *Answer 3*: We first convert to polar form as
+  $ -1000 = 1000 (cos 180 degree + i sin 180 degree) $
+  and see that $1000^(1/3) = 10$, and $theta = 180 degree$.
+  The first angle is $theta / 3 = 60 degree$.
+  So the three answers are
+  $
+  z_1 = 10 (cos 60 degree + i sin 60 degree) \
+  z_2 = 10 (cos 180 degree + i sin 180 degree) \
+  z_3 = 10 (cos 300 degree + i sin 300 degree).
+  $
+  As it happens, $z_2 = -10$, as expected.
