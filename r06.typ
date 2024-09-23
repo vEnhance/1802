@@ -288,6 +288,75 @@ If you ever take either class, I think the thing to know about them is:
 Personally, I think it's insane that MIT uses 18.100 as their "intro to proofs" topic.
 (This is why 18.100 is a prerequisite for 18.701, abstract algebra, which makes no sense either.)
 
-== TODO
+= Exponentiation (for exam)
 
-#todo[To be developed further after recitation.]
+This section is dedicated to $z^n$ and is *on-syllabus for exam*.
+Specifically, you ought to be able to solve equations like
+$ z^5 = 243 i$.
+This section shows you how.
+
+In this whole section, you always prefer to work in polar form.
+So if you get input in rectangular form, you should first convert to rectangular form.
+Conversely, if the answer is asked for in rectangular form,
+you should work with polar form anyway,
+and only convert to rectangular output at the end.
+
+== Raising to the $n$th power
+
+Before being able to extract $n$th roots, I need to make sure you know how to do $n$th powers.
+This is easy:
+$ (r (cos theta  + i sin theta))^n = r^n (cos n theta + i sin n theta). $
+For example,
+$ (3 (cos 18 degree + i sin 18 degree))^5 = 243 (cos 90 degree + i sin 90 degree) = 243 i. $
+
+== Extracting $n$th roots
+
+If you can run the process in forwards, then you should be able to run the process backwards too.
+First, I will tell you what the answer looks like:
+
+#theorem[
+  Consider solving the equation $z^n = w$, where $w$ is a given nonzero complex number, for $z$.
+  Then you should always output exactly $n$ answers.
+  Those $n$ answers all have magnitude $|w|^(1/n)$ and arguments spaced apart by $(360 degree) / n$.
+]
+
+I think it's most illustrative if I show you the five answers to
+$ z^5 = 243 i $ to start.
+Again, first we want to convert everything to polar coordinates:
+$ z^5 = 243 i = 243 (cos 90 degree + i sin 90 degree). $
+At this point, we know that if $|z^5| = 243$, then $|z| = 3$;
+all the answers should have absolute $3$.
+So the idea is to find the angles.
+Here are the five answers:
+
+$
+z_1 = 3 (cos 18 degree + i sin 18 degree) ==> (z_1)^5 &= 243 (cos 90 degree + i sin 90 degree) \
+z_2 = 3 (cos 90 degree + i sin 90 degree) ==> (z_2)^5 &= 243 (cos 450 degree + i sin 450 degree) \
+z_3 = 3 (cos 162 degree + i sin 162 degree) ==> (z_3)^5 &= 243 (cos 810 degree + i sin 810 degree) \
+z_4 = 3 (cos 234 degree + i sin 234 degree) ==> (z_4)^5 &= 243 (cos 1170 degree + i sin 1170 degree) \
+z_5 = 3 (cos 306 degree + i sin 306 degree) ==> (z_5)^5 &= 243 (cos 1530 degree + i sin 1530 degree).
+$
+
+Here's a picture of the five numbers:
+
+#figure(
+  image("figures/r06-circle.png", width: 80%),
+  caption: [The five answers to $z^5 = 243 i$, each of length $3$.],
+)
+
+
+On the right column, all the numbers are equal.
+Notice something interesting happening on the right-hand side.
+The numbers $cos 90 degree + i sin 90 degree$
+and $cos 450 degree + i sin 450 degree$, etc.
+are all the same number; if you draw them in the plane, they'll point to the same thing.
+However, they give five _different_ answers on the left.
+But if you continue the pattern one more, you start getting a cycle
+$ z_6 = 3 (cos 378 degree + i sin 378 degree) ==> (z_6)^5 &= 243 (cos 1890 degree + i sin 1890 degree). $
+This doesn't give you a new answer, because $z_6 = z_1$.
+
+In general, if $w$ has argument $theta$,
+then the arguments of $z$ satisfying $z^n = w$
+start at $theta / n$ and then go up in increments of $(360 degree) / n$.
+(For example, they started at $(90 degree) / 5 = 18 degree$ for
+answers to $z^5 = 243 i$.)
