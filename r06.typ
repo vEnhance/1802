@@ -365,10 +365,10 @@ So you can describe the general recipe as:
 #theorem[Recipe for $n$th roots][
 1. Convert $w$ to polar form; say it has angle $theta$.
 2. One of the $n$ answers will be $|w|^(1/n) (cos theta / n + i sin theta / n)$.
-3. The other $n-1$ answers are obtained by increasing the angle in increments of $360 degree / n$.
+3. The other $n-1$ answers are obtained by increasing the angle in increments of $(360 degree) / n$.
 ]
 
-To reiterate, if we are asked to find $z$ such that
+*Example 1*: To reiterate, if we are asked to find $z$ such that
 $ z^5 = 243 i $
 then we first convert to polar form as
 $ 243 i = 243 (cos 90 degree + i sin 90 degree) $
@@ -380,4 +380,17 @@ z_2 = 3 (cos 90 degree + i sin 90 degree) \
 z_3 = 3 (cos 162 degree + i sin 162 degree) \
 z_4 = 3 (cos 234 degree + i sin 234 degree) \
 z_5 = 3 (cos 306 degree + i sin 306 degree).
+$
+
+*Example 2*: If we are asked to find $z$ such that
+$ z^4 = 8 + 8 sqrt(3) i $
+then we first convert to polar form as
+$ 8 + 8 sqrt(3) i = 16 (cos 60 degree + i sin 60 degree) $
+and see that $16^(1/4) = 2$, and $theta = 15 degree$.
+So the four answers are
+$
+z_1 = 2 (cos 15 degree + i sin 15 degree) \
+z_2 = 2 (cos 105 degree + i sin 105 degree) \
+z_3 = 2 (cos 195 degree + i sin 195 degree) \
+z_4 = 2 (cos 275 degree + i sin 275 degree).
 $
