@@ -376,11 +376,11 @@ So you can describe the general recipe as:
   The first angle is $theta / 5 = 18 degree$.
   So the five answers are
   $
-  z_1 = 3 (cos 18 degree + i sin 18 degree) \
-  z_2 = 3 (cos 90 degree + i sin 90 degree) \
-  z_3 = 3 (cos 162 degree + i sin 162 degree) \
-  z_4 = 3 (cos 234 degree + i sin 234 degree) \
-  z_5 = 3 (cos 306 degree + i sin 306 degree).
+  z_1 &= 3 (cos 18 degree + i sin 18 degree) \
+  z_2 &= 3 (cos 90 degree + i sin 90 degree) \
+  z_3 &= 3 (cos 162 degree + i sin 162 degree) \
+  z_4 &= 3 (cos 234 degree + i sin 234 degree) \
+  z_5 &= 3 (cos 306 degree + i sin 306 degree).
   $
   (As it happens, $z_2 = 3i$, which is easy to check by hand works.)
 
@@ -392,10 +392,10 @@ So you can describe the general recipe as:
   The first angle is $theta / 4 = 15 degree$.
   So the four answers are
   $
-  z_1 = 2 (cos 15 degree + i sin 15 degree) \
-  z_2 = 2 (cos 105 degree + i sin 105 degree) \
-  z_3 = 2 (cos 195 degree + i sin 195 degree) \
-  z_4 = 2 (cos 285 degree + i sin 285 degree).
+  z_1 &= 2 (cos 15 degree + i sin 15 degree) \
+  z_2 &= 2 (cos 105 degree + i sin 105 degree) \
+  z_3 &= 2 (cos 195 degree + i sin 195 degree) \
+  z_4 &= 2 (cos 285 degree + i sin 285 degree).
   $
 
 - *Example 3*: Solve $z^3 = -1000$.
@@ -406,8 +406,8 @@ So you can describe the general recipe as:
   The first angle is $theta / 3 = 60 degree$.
   So the three answers are
   $
-  z_1 = 10 (cos 60 degree + i sin 60 degree) \
-  z_2 = 10 (cos 180 degree + i sin 180 degree) \
-  z_3 = 10 (cos 300 degree + i sin 300 degree).
+  z_1 &= 10 (cos 60 degree + i sin 60 degree) \
+  z_2 &= 10 (cos 180 degree + i sin 180 degree) \
+  z_3 &= 10 (cos 300 degree + i sin 300 degree).
   $
   As it happens, $z_2 = -10$, as expected.
