@@ -132,18 +132,18 @@ Depending on what you are trying to do, some forms are easier to work with than 
 
 = Post-recitation notes
 
-#todo[To be developed after recitation.]
-
-== The importance of definitions, $cos(i)$, and $i^i$ <i-to-the-i>
+== The importance of definitions; also $cos(i)$ and $i^i$ <i-to-the-i>
 
 When learning mathematics, I believe definitions are actually more important than theorems.
 A lot of confusion comes from not having been given careful definitions of the objects.
 (See #url("https://web.evanchen.cc/handouts/NaturalProof/NaturalProof.pdf") for more on that.)
 
-So in general any time you are confused about whether an operation is "legal",
-the first thing to really check whether you have been given a precise definition.
-The endless debates on whether $0$ is even or whether $0.999... = 1$ or not are a symptom
-of people not knowing where definitions lie.
+So in general any time you are confused about whether an operation is "legal" ---
+and this is true in all of math, not just 18.02 ---
+*the first thing to really check whether you have been given a precise definition*.
+The endless Internet debates on whether $0$ is even or whether $0.999... = 1$ or whether $1/x$ is
+a continuous function (hint: yes) are all examples of people who don't know
+the definitions of objects they're dsicussing.
 
 === Real exponents, real base
 
@@ -164,7 +164,7 @@ With that in mind, let's fix $a > 0$ a positive real number and think about what
 
 But when $z in CC$, what does $a^z$ mean? There's no good way to do this.
 
-You likely don't find an answer until 18.112, but I'll tell you know.
+You likely don't find an answer until 18.112, but I'll tell you now.
 In 18.100 you will also prove that the Taylor series
 $ e^x = sum_(k >= 0) r^k / k! $
 is correct, where $e := sum_(k >= 0) 1/k!$ is Euler's constant.
@@ -184,6 +184,7 @@ And checking this consistency requires work.
 Because we threw away @def18100, identities like
 $ e^(z_1 + z_2) = e^(z_1) e^(z_2) " and " (e^(z_1))^(z_2) = e^(z_1 z_2)$
 are no longer "free": they have to be proved rigorously too.
+(To be fair, they need to be proved in 18.100 too, but there it's comparatively easier.)
 I think you shouldn't be _surprised_ they're true;
 we know it's true for $RR$, so it's one heck of a good guess.
 But you shouldn't take these on faith.
@@ -212,14 +213,14 @@ $
 === Complex exponents, complex base
 
 But what about $i^i$?
-Our @def18112 above only worked for positive real numbers.
+Our @def18112 above only worked for positive real numbers $a > 0$.
 Here, it turns out you're out of luck.
 There isn't any way to define $i^i$ in a way that makes internal sense.
 The problem is that there's no way to take a single log of a complex number,
 so the analogy with $log a$ breaks down.
 
 Put another way: there's no good way to assign a value to $log(i)$,
-because $e^(i pi slash 2) = e^(5 i pi slash / 2) = ...$ are all equal to $i$.
+because $e^(i pi slash 2) = e^(5 i pi slash 2) = ...$ are all equal to $i$.
 You might hear this phrased "complex-valued logarithms are multivalued".
 You can have some fun with this paradox:
 $ i &= e^(i pi slash 2) ==> i^i = e^(- pi slash 2) \
@@ -258,3 +259,35 @@ If you do this, then @def18112 implies the following identities are kosher:
 So for example, from @reimtrig, we conclude for example that
 $ cos(i) = (e + 1/e) / 2. $
 Strange but true.
+
+== A glimpse of the future: what are 18.100 and 18.112 anyway?
+
+First I need to tell you what analysis is.
+When students in USA ask me what analysis is,
+I sometimes say "calculus but you actually prove things".
+But that's actually a bit backwards; it turns out that in much parts of the world,
+there is no topic called "calculus".#footnote[See #url("https://web.evanchen.cc/faq-school.html#S-10").]
+It would be more accurate to say calculus is analysis with proofs, theorems,
+and coherent theorem statements deleted,
+and it only exists in some parts of the world
+(which is why mathematicians will tend to look down on it).
+
+With that out of the way,
+
+- 18.100 is real analysis, i.e. analysis of functions over $RR$
+- 18.112 is complex analysis, i.e. analysis of functions over $CC$.
+
+If you ever take either class, I think the thing to know about them is:
+
+#quote(attribution: [Charles Pugh, in _Real Mathematical Analysis_])[
+  Complex analysis is the good twin and real analysis is the evil one:
+  beautiful formulas and elegant theorems seem to blossom spontaneously in the complex domain,
+  while toil and pathology rule the reals
+]
+
+Personally, I think it's insane that MIT uses 18.100 as their "intro to proofs" topic.
+(This is why 18.100 is a prerequisite for 18.701, abstract algebra, which makes no sense either.)
+
+== TODO
+
+#todo[To be developed further after recitation.]
