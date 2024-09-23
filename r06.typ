@@ -410,4 +410,4 @@ So you can describe the general recipe as:
   z_2 &= 10 (cos 180 degree + i sin 180 degree) \
   z_3 &= 10 (cos 300 degree + i sin 300 degree).
   $
-  As it happens, $z_2 = -10$, as expected.
+  (As it happens, $z_2 = -10$, as expected, since $(-10)^3 = -1000$.)
