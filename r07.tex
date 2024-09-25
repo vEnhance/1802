@@ -1,0 +1,126 @@
+\documentclass[11pt]{amsart}
+\begin{document}
+
+\title{Exam Review (Recitation 7)}
+\date{25 September 2024}
+\maketitle
+
+\section{Problems from Prof Maulik}
+\subsection{Vectors}
+Let $P = (1,0,1)$, $Q = (1,1,2)$, and $R = (-1,1,1).$
+\begin{enumerate}
+\item What is the vector connecting $P$ to the \emph{midpoint} of the line segment connecting $Q$ and $R$?
+\item What is the area of the triangle with vertices $P,Q,R$?
+\item What is the equation of the plane through these three points?
+\end{enumerate}
+
+\subsection{Quadratic}
+Suppose we have real numbers $x_1, x_2, x_3, y_1, y_2, y_3$ satisfying the conditions
+$x_1^2 + x_2^2 + x_3^2 = 4$ and $y_1^2 + y_2^2 + y_3^2 = 9$.  What is the range of possible values for
+$$x_1y_1 + x_2y_2+x_3y_3?$$
+
+\subsection{Planes}
+Let $P_1$ be the plane with equation $x + 2y + 3z = 0$ and $P_2$ be the plane with equation $2y - z = 0$.
+\begin{enumerate}
+\item Write down a vector {\bf parallel} to both $P_1$ and $P_2$.
+\item Find the distance from the point $(2, 1, 4)$ to the plane $P_1$.
+\end{enumerate}
+
+\subsection{Matrix}
+\begin{enumerate}
+\item Calculate the matrix $M$ associated to the linear transformation of ${\bf R}^2$ given by rotation {\bf counterclockwise} by $5\pi/4$.
+\item Let $N = \begin{pmatrix} 1 & 2 & 4\\ -3 & 6 & 2\end{pmatrix}.$  Calculate (if defined) the matrix products $MN$ and $NM$.
+\end{enumerate}
+
+\subsection{Parallellopiped}
+Consider the vectors
+\[ {\bf v}_1 = \begin{pmatrix} 2 \\ 3 \\ 0 \end{pmatrix},  {\bf v}_2 = \begin{pmatrix} 0 \\ 5 \\ 1 \end{pmatrix},  {\bf v}_3 = \begin{pmatrix} 1 \\ 2 \\ 0 \end{pmatrix}.\]
+
+\begin{enumerate}
+\item What is the volume of the parallelopiped whose sides are given by the vectors ${\bf v}_1, {\bf v}_2, {\bf v}_3$?
+\item Are these vectors a basis for ${\bf R}^3$?
+\end{enumerate}
+
+\subsection{System}
+Consider the following system of equations with unknown variables $x,y$, which depend on a real parameter $a$
+$$
+x + 3y = 0$$
+$$-ax - y = 1$$
+
+\begin{enumerate}
+\item Write this system of equations as a single matrix equation with a vector unknown.
+\item Find all values of $a$ for which this system has a unique solution.
+\item By computing the inverse of a $2\times 2$ matrix, find the solution to this equation in terms of $a$.
+\end{enumerate}
+
+\subsection{Eigenvectors}
+Consider the matrix
+$$
+A = \begin{pmatrix} 5 & 8 \\ 7 & 4 \end{pmatrix}.
+$$
+
+\begin{enumerate}
+\item Calculate the characteristic polynomial and the eigenvalues of $A$.
+\item For the largest eigenvalue, find a corresponding eigenvector ${\bf v}$.
+\end{enumerate}
+
+
+\subsection{Complex}
+\begin{enumerate}
+\item Calculate $(1 - i\sqrt{3})^7$.
+\item Let $z = 2+3i$ and $w = 1+ 2i$.  Find $zw$, $z/\overline{w}$.
+\end{enumerate}
+
+\section{Older problems from Evan}
+\begin{enumerate}
+\item
+In \({\mathbb{R}}^{3}\), compute the projection of the vector
+\(\begin{pmatrix}
+4 \\
+5 \\
+6
+\end{pmatrix}\) onto the plane \(x + y + 2z = 0\).
+\item
+Suppose \(A\), \(B\), \(C\), \(D\) are points in \({\mathbb{R}}^{3}\).
+Give a geometric interpretation for this expression:
+\[|\overset{\rightarrow}{DA} \cdot \left( \overset{\rightarrow}{DB} \times \overset{\rightarrow}{DC} \right)|.\]
+\item
+Fix a plane \(\mathcal{P}\) in \({\mathbb{R}}^{3}\) which passes through
+the origin. Consider the linear transformation
+\(f:{\mathbb{R}}^{3} \rightarrow {\mathbb{R}}^{3}\) where
+\(f\left( \mathbf{\mathrm{v}} \right)\) is the projection of
+\(\mathbf{\mathrm{v}}\) onto \(\mathcal{P}\). Let \(M\) denote the
+\(3 \times 3\) matrix associated to \(f\). Compute the determinant of
+\(M\).
+\item
+Let \(\mathbf{\mathrm{a}}\) and \(\mathbf{\mathrm{b}}\) be two
+perpendicular unit vectors in \({\mathbb{R}}^{3}\). A third vector
+\(\mathbf{\mathrm{v}}\) in \({\mathbb{R}}^{3}\) lies in the span of
+\(\mathbf{\mathrm{a}}\) and \(\mathbf{\mathrm{b}}\). Given that
+\(\mathbf{\mathrm{v}} \cdot \mathbf{\mathrm{a}} = 2\) and
+\(\mathbf{\mathrm{v}} \cdot \mathbf{\mathrm{b}} = 3\), compute the
+magnitudes of the cross products
+\(\mathbf{\mathrm{v}} \times \mathbf{\mathrm{a}}\) and
+\(\mathbf{\mathrm{v}} \times \mathbf{\mathrm{b}}\).
+\item
+Compute the trace of the \(2 \times 2\) matrix \(M\) given the two
+equations \[M\begin{pmatrix}
+4 \\
+7
+\end{pmatrix} = \begin{pmatrix}
+5 \\
+9
+\end{pmatrix}\text{  and  }M\begin{pmatrix}
+5 \\
+9
+\end{pmatrix} = \begin{pmatrix}
+4 \\
+7
+\end{pmatrix}.\]
+\item
+There are three complex numbers \(z\) satisfying \(z^{3} = 5 + 6i\).
+Suppose we plot these three numbers in the complex plane. Compute the
+area of the triangle they enclose.
+\end{enumerate}
+
+\end{document}
