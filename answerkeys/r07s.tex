@@ -1,0 +1,675 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[colorlinks]{hyperref}
+
+\begin{document}
+\title{Quick answer key to Recitation 7 (Exam 1 practice)}
+\author{ChatGPT 4o}
+\date{September 25, 2024}
+\maketitle
+
+Use the table of contents below to skip to a specific part
+without seeing spoilers to the other parts.
+
+I just used ChatGPT to write this one quickly.
+ChatGPT can make mistakes, so if you spot anything that's wrong, flag me to ask.
+
+\tableofcontents
+
+
+
+\newpage
+
+\section{Solution}
+
+We are given the points \( P = (1, 0, 1) \), \( Q = (1, 1, 2) \), and \( R = (-1, 1, 1) \). We will compute the required values step by step.
+
+\subsection{Part 1: Vector from \( P \) to the midpoint of the line segment connecting \( Q \) and \( R \)}
+
+The midpoint \( M \) of the line segment connecting \( Q \) and \( R \) is given by the average of the coordinates of \( Q \) and \( R \):
+\[
+M = \left( \frac{1 + (-1)}{2}, \frac{1 + 1}{2}, \frac{2 + 1}{2} \right) = (0, 1, \frac{3}{2})
+\]
+
+The vector connecting \( P \) to \( M \) is the difference between their coordinates:
+\[
+\overrightarrow{PM} = M - P = (0 - 1, 1 - 0, \frac{3}{2} - 1) = (-1, 1, \frac{1}{2})
+\]
+
+Thus, the vector from \( P \) to the midpoint of the line segment connecting \( Q \) and \( R \) is:
+\[
+\overrightarrow{PM} = (-1, 1, \frac{1}{2})
+\]
+
+\newpage
+
+\subsection{Part 2: Area of the triangle with vertices \( P, Q, R \)}
+
+The area of the triangle with vertices \( P, Q, R \) is given by:
+\[
+\text{Area} = \frac{1}{2} \left\| \overrightarrow{PQ} \times \overrightarrow{PR} \right\|
+\]
+First, we compute the vectors \( \overrightarrow{PQ} \) and \( \overrightarrow{PR} \):
+\[
+\overrightarrow{PQ} = Q - P = (1 - 1, 1 - 0, 2 - 1) = (0, 1, 1)
+\]
+\[
+\overrightarrow{PR} = R - P = (-1 - 1, 1 - 0, 1 - 1) = (-2, 1, 0)
+\]
+
+Next, we compute the cross product \( \overrightarrow{PQ} \times \overrightarrow{PR} \):
+\[
+\overrightarrow{PQ} \times \overrightarrow{PR} = \begin{vmatrix} \mathbf{i} & \mathbf{j} & \mathbf{k} \\ 0 & 1 & 1 \\ -2 & 1 & 0 \end{vmatrix}
+= \mathbf{i} \begin{vmatrix} 1 & 1 \\ 1 & 0 \end{vmatrix} - \mathbf{j} \begin{vmatrix} 0 & 1 \\ -2 & 0 \end{vmatrix} + \mathbf{k} \begin{vmatrix} 0 & 1 \\ -2 & 1 \end{vmatrix}
+\]
+\[
+= \mathbf{i} (1(0) - 1(1)) - \mathbf{j} (0(0) - 1(-2)) + \mathbf{k} (0(1) - 1(-2))
+\]
+\[
+= \mathbf{i}(-1) - \mathbf{j}(2) + \mathbf{k}(2)
+\]
+\[
+= (-1, -2, 2)
+\]
+
+Now, compute the magnitude of this vector:
+\[
+\left\| \overrightarrow{PQ} \times \overrightarrow{PR} \right\| = \sqrt{(-1)^2 + (-2)^2 + 2^2} = \sqrt{1 + 4 + 4} = \sqrt{9} = 3
+\]
+
+Thus, the area of the triangle is:
+\[
+\text{Area} = \frac{1}{2} \times 3 = \frac{3}{2}
+\]
+
+\newpage
+
+\subsection{Part 3: Equation of the plane through \( P, Q, R \)}
+
+The normal vector to the plane is given by the cross product \( \overrightarrow{PQ} \times \overrightarrow{PR} \), which we found to be \( (-1, -2, 2) \). The equation of a plane passing through a point \( (x_0, y_0, z_0) \) with normal vector \( \mathbf{n} = \langle A, B, C \rangle \) is:
+\[
+A(x - x_0) + B(y - y_0) + C(z - z_0) = 0
+\]
+Substitute \( A = -1 \), \( B = -2 \), \( C = 2 \), and the coordinates of \( P = (1, 0, 1) \):
+\[
+-1(x - 1) - 2(y - 0) + 2(z - 1) = 0
+\]
+Simplifying:
+\[
+-(x - 1) - 2y + 2(z - 1) = 0
+\]
+\[
+-x + 1 - 2y + 2z - 2 = 0
+\]
+\[
+-x - 2y + 2z - 1 = 0
+\]
+Thus, the equation of the plane is:
+\[
+x + 2y - 2z = -1
+\]
+
+
+
+
+\newpage
+
+\section{Solution}
+
+We are given the following conditions:
+\[
+x_1^2 + x_2^2 + x_3^2 = 4 \quad \text{and} \quad y_1^2 + y_2^2 + y_3^2 = 9
+\]
+We are asked to find the range of possible values for:
+\[
+x_1 y_1 + x_2 y_2 + x_3 y_3
+\]
+This expression is the dot product of the vectors \( \mathbf{x} = \langle x_1, x_2, x_3 \rangle \) and \( \mathbf{y} = \langle y_1, y_2, y_3 \rangle \).
+
+\subsection*{Step 1: Use the dot product formula}
+
+The dot product of two vectors \( \mathbf{x} \) and \( \mathbf{y} \) is given by:
+\[
+\mathbf{x} \cdot \mathbf{y} = x_1 y_1 + x_2 y_2 + x_3 y_3 = |\mathbf{x}| |\mathbf{y}| \cos \theta
+\]
+where:
+\[
+|\mathbf{x}| = \sqrt{x_1^2 + x_2^2 + x_3^2} = \sqrt{4} = 2
+\]
+\[
+|\mathbf{y}| = \sqrt{y_1^2 + y_2^2 + y_3^2} = \sqrt{9} = 3
+\]
+and \( \theta \) is the angle between the vectors \( \mathbf{x} \) and \( \mathbf{y} \).
+
+Thus, the dot product becomes:
+\[
+\mathbf{x} \cdot \mathbf{y} = 2 \cdot 3 \cdot \cos \theta = 6 \cos \theta
+\]
+
+\subsection*{Step 2: Determine the range of values}
+
+Since \( \cos \theta \) ranges between \( -1 \) and \( 1 \), the dot product \( \mathbf{x} \cdot \mathbf{y} \) will range between:
+\[
+6 \cos \theta \quad \text{where} \quad -1 \leq \cos \theta \leq 1
+\]
+
+Thus, the range of \( \mathbf{x} \cdot \mathbf{y} \) is:
+\[
+-6 \leq x_1 y_1 + x_2 y_2 + x_3 y_3 \leq 6
+\]
+
+\subsection*{Conclusion}
+
+The range of possible values for \( x_1 y_1 + x_2 y_2 + x_3 y_3 \) is:
+\[
+\boxed{[-6, 6]}
+\]
+
+
+
+
+\newpage
+
+\section{Solution}
+
+We are given the planes:
+\[
+P_1: x + 2y + 3z = 0 \quad \text{and} \quad P_2: 2y - z = 0
+\]
+
+\subsection{Part 1: A vector parallel to both \( P_1 \) and \( P_2 \)}
+
+To find a vector parallel to both planes, we note that the normal vector to a plane is perpendicular to all vectors lying in the plane. The normal vectors to the planes are:
+\[
+\mathbf{n}_1 = \langle 1, 2, 3 \rangle \quad \text{for} \quad P_1
+\]
+\[
+\mathbf{n}_2 = \langle 0, 2, -1 \rangle \quad \text{for} \quad P_2
+\]
+
+A vector that is parallel to both planes must be perpendicular to both normal vectors. Such a vector can be found by taking the cross product of \( \mathbf{n}_1 \) and \( \mathbf{n}_2 \).
+
+We compute the cross product \( \mathbf{n}_1 \times \mathbf{n}_2 \):
+\[
+\mathbf{n}_1 \times \mathbf{n}_2 = \begin{vmatrix} \mathbf{i} & \mathbf{j} & \mathbf{k} \\ 1 & 2 & 3 \\ 0 & 2 & -1 \end{vmatrix}
+= \mathbf{i} \begin{vmatrix} 2 & 3 \\ 2 & -1 \end{vmatrix} - \mathbf{j} \begin{vmatrix} 1 & 3 \\ 0 & -1 \end{vmatrix} + \mathbf{k} \begin{vmatrix} 1 & 2 \\ 0 & 2 \end{vmatrix}
+\]
+\[
+= \mathbf{i} \left( (2)(-1) - (3)(2) \right) - \mathbf{j} \left( (1)(-1) - (3)(0) \right) + \mathbf{k} \left( (1)(2) - (2)(0) \right)
+\]
+\[
+= \mathbf{i}(-2 - 6) - \mathbf{j}(-1) + \mathbf{k}(2)
+= -8\mathbf{i} + \mathbf{j} + 2\mathbf{k}
+\]
+\[
+= \langle -8, 1, 2 \rangle
+\]
+
+Thus, a vector parallel to both planes is:
+\[
+\langle -8, 1, 2 \rangle
+\]
+
+\newpage
+
+\subsection{Part 2: Distance from the point \( (2, 1, 4) \) to the plane \( P_1 \)}
+
+The formula for the distance from a point \( (x_1, y_1, z_1) \) to a plane \( Ax + By + Cz + D = 0 \) is given by:
+\[
+\text{Distance} = \frac{|Ax_1 + By_1 + Cz_1 + D|}{\sqrt{A^2 + B^2 + C^2}}
+\]
+For the plane \( P_1: x + 2y + 3z = 0 \), we have:
+\[
+A = 1, \quad B = 2, \quad C = 3, \quad D = 0
+\]
+The point is \( (2, 1, 4) \), so we substitute the values into the formula:
+\[
+\text{Distance} = \frac{|1(2) + 2(1) + 3(4) + 0|}{\sqrt{1^2 + 2^2 + 3^2}}
+= \frac{|2 + 2 + 12|}{\sqrt{1 + 4 + 9}} = \frac{16}{\sqrt{14}}
+\]
+\[
+\text{Distance} = \frac{16}{\sqrt{14}} \approx 4.28
+\]
+
+Thus, the distance from the point \( (2, 1, 4) \) to the plane \( P_1 \) is \( \frac{16}{\sqrt{14}} \approx 4.28 \).
+
+
+
+
+\newpage
+
+\section{Solution}
+
+\subsection{Part 1: Rotation matrix \( M \) associated with counterclockwise rotation by \( \frac{5\pi}{4} \)}
+
+The matrix associated with a counterclockwise rotation by an angle \( \theta \) in \( \mathbb{R}^2 \) is given by:
+\[
+M = \begin{pmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{pmatrix}
+\]
+In this case, the angle of rotation is \( \theta = \frac{5\pi}{4} \).
+
+First, we compute \( \cos\left( \frac{5\pi}{4} \right) \) and \( \sin\left( \frac{5\pi}{4} \right) \):
+\[
+\cos\left( \frac{5\pi}{4} \right) = -\frac{1}{\sqrt{2}}, \quad \sin\left( \frac{5\pi}{4} \right) = -\frac{1}{\sqrt{2}}
+\]
+
+Thus, the rotation matrix \( M \) is:
+\[
+M = \begin{pmatrix} -\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\ -\frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}} \end{pmatrix}
+\]
+
+\newpage
+
+\subsection{Part 2: Calculate \( MN \) and \( NM \)}
+
+We are given the matrix \( N = \begin{pmatrix} 1 & 2 & 4 \\ -3 & 6 & 2 \end{pmatrix} \).
+
+\subsubsection*{Check if \( MN \) is defined}
+
+The matrix \( M \) is a \( 2 \times 2 \) matrix, and \( N \) is a \( 2 \times 3 \) matrix. The product \( MN \) is defined because the number of columns in \( M \) matches the number of rows in \( N \). The result will be a \( 2 \times 3 \) matrix.
+
+We now calculate \( MN \):
+\[
+MN = \begin{pmatrix} -\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\ -\frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}} \end{pmatrix} \begin{pmatrix} 1 & 2 & 4 \\ -3 & 6 & 2 \end{pmatrix}
+\]
+
+We compute each element of the resulting matrix by taking the dot product of the rows of \( M \) with the columns of \( N \):
+\[
+MN = \begin{pmatrix}
+\left( -\frac{1}{\sqrt{2}}(1) + \frac{1}{\sqrt{2}}(-3) \right) & \left( -\frac{1}{\sqrt{2}}(2) + \frac{1}{\sqrt{2}}(6) \right) & \left( -\frac{1}{\sqrt{2}}(4) + \frac{1}{\sqrt{2}}(2) \right) \\
+\left( -\frac{1}{\sqrt{2}}(1) + -\frac{1}{\sqrt{2}}(-3) \right) & \left( -\frac{1}{\sqrt{2}}(2) + -\frac{1}{\sqrt{2}}(6) \right) & \left( -\frac{1}{\sqrt{2}}(4) + -\frac{1}{\sqrt{2}}(2) \right)
+\end{pmatrix}
+\]
+\[
+= \begin{pmatrix}
+\frac{-1 + 3}{\sqrt{2}} & \frac{-2 + 6}{\sqrt{2}} & \frac{-4 + 2}{\sqrt{2}} \\
+\frac{-1 - 3}{\sqrt{2}} & \frac{-2 - 6}{\sqrt{2}} & \frac{-4 - 2}{\sqrt{2}}
+\end{pmatrix}
+= \begin{pmatrix}
+\frac{2}{\sqrt{2}} & \frac{4}{\sqrt{2}} & \frac{-2}{\sqrt{2}} \\
+\frac{-4}{\sqrt{2}} & \frac{-8}{\sqrt{2}} & \frac{-6}{\sqrt{2}}
+\end{pmatrix}
+\]
+\[
+= \begin{pmatrix}
+\sqrt{2} & 2\sqrt{2} & -\sqrt{2} \\
+-2\sqrt{2} & -4\sqrt{2} & -3\sqrt{2}
+\end{pmatrix}
+\]
+
+\newpage
+
+\subsubsection*{Check if \( NM \) is defined}
+
+The matrix \( N \) is \( 2 \times 3 \) and \( M \) is \( 2 \times 2 \). The product \( NM \) is not defined because the number of columns in \( N \) does not match the number of rows in \( M \).
+
+Thus, \( NM \) is **not defined**.
+
+\subsubsection*{Conclusion}
+
+The matrix product \( MN \) is:
+\[
+MN = \begin{pmatrix}
+\sqrt{2} & 2\sqrt{2} & -\sqrt{2} \\
+-2\sqrt{2} & -4\sqrt{2} & -3\sqrt{2}
+\end{pmatrix}
+\]
+The matrix product \( NM \) is not defined.
+
+\newpage
+
+\section{Solution}
+
+We are given the vectors:
+\[
+\mathbf{v}_1 = \begin{pmatrix} 2 \\ 3 \\ 0 \end{pmatrix}, \quad \mathbf{v}_2 = \begin{pmatrix} 0 \\ 5 \\ 1 \end{pmatrix}, \quad \mathbf{v}_3 = \begin{pmatrix} 1 \\ 2 \\ 0 \end{pmatrix}
+\]
+
+\subsection{Part 1: Volume of the parallelepiped}
+Take the determinant:
+\[
+  \det \begin{bmatrix} 2 & 3 & 0 \\ 0 & 5 & 1 \\ 1 & 2 & 0 \end{bmatrix} = -1.
+\]
+
+Thus, the volume of the parallelepiped is:
+\[
+\text{Volume} = | -1 | = 1
+\]
+
+\newpage
+
+\subsection{Part 2: Are these vectors a basis for \( \mathbb{R}^3 \)?}
+
+To determine if the vectors \( \mathbf{v}_1 \), \( \mathbf{v}_2 \), and \( \mathbf{v}_3 \) form a basis for \( \mathbb{R}^3 \), we check if they are linearly independent.
+The vectors are linearly independent if the determinant above was non-zero.
+
+Since the determinant is \( -1 \), which is non-zero, the vectors are linearly independent.
+
+Therefore, the vectors \( \mathbf{v}_1 \), \( \mathbf{v}_2 \), and \( \mathbf{v}_3 \) form a basis for \( \mathbb{R}^3 \).
+
+
+
+
+\newpage
+
+
+
+\newpage
+
+\section{Solution}
+
+We are given the system of equations:
+\[
+x + 3y = 0 \quad \text{(1)}
+\]
+\[
+-ax - y = 1 \quad \text{(2)}
+\]
+
+\subsection{Part 1: Matrix equation}
+
+We can write this system of equations as a matrix equation. The system can be written as:
+\[
+\begin{pmatrix} 1 & 3 \\ -a & -1 \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} 0 \\ 1 \end{pmatrix}
+\]
+
+Thus, the matrix equation is:
+\[
+A \mathbf{v} = \mathbf{b}
+\]
+where:
+\[
+A = \begin{pmatrix} 1 & 3 \\ -a & -1 \end{pmatrix}, \quad \mathbf{v} = \begin{pmatrix} x \\ y \end{pmatrix}, \quad \mathbf{b} = \begin{pmatrix} 0 \\ 1 \end{pmatrix}
+\]
+
+\newpage
+
+\subsection{Part 2: Values of \( a \) for which the system has a unique solution}
+
+The system has a unique solution if the matrix \( A \) is invertible, which occurs when the determinant of \( A \) is non-zero. The determinant of \( A \) is given by:
+\[
+\det(A) = \det\begin{pmatrix} 1 & 3 \\ -a & -1 \end{pmatrix} = (1)(-1) - (3)(-a) = -1 + 3a
+\]
+
+For the matrix to be invertible, we require \( \det(A) \neq 0 \):
+\[
+-1 + 3a \neq 0
+\]
+\[
+3a \neq 1 \quad \Rightarrow \quad a \neq \frac{1}{3}
+\]
+
+Thus, the system has a unique solution for all values of \( a \) except \( a = \frac{1}{3} \).
+
+\newpage
+
+\subsection{Part 3: Solution in terms of \( a \) using the inverse matrix}
+
+To solve the system using the inverse of the matrix, we first compute the inverse of \( A \), assuming \( a \neq \frac{1}{3} \).
+
+The inverse of a \( 2 \times 2 \) matrix \( A = \begin{pmatrix} a & b \\ c & d \end{pmatrix} \) is given by:
+\[
+A^{-1} = \frac{1}{\det(A)} \begin{pmatrix} d & -b \\ -c & a \end{pmatrix}
+\]
+
+For the matrix \( A = \begin{pmatrix} 1 & 3 \\ -a & -1 \end{pmatrix} \), we already know that:
+\[
+\det(A) = -1 + 3a
+\]
+
+Thus, the inverse of \( A \) is:
+\[
+A^{-1} = \frac{1}{-1 + 3a} \begin{pmatrix} -1 & -3 \\ a & 1 \end{pmatrix}
+\]
+
+Now, we solve for \( \mathbf{v} = A^{-1} \mathbf{b} \):
+\[
+\mathbf{v} = \frac{1}{-1 + 3a} \begin{pmatrix} -1 & -3 \\ a & 1 \end{pmatrix} \begin{pmatrix} 0 \\ 1 \end{pmatrix}
+\]
+\[
+= \frac{1}{-1 + 3a} \begin{pmatrix} -3 \\ 1 \end{pmatrix}
+\]
+
+Thus, the solution is:
+\[
+\mathbf{v} = \begin{pmatrix} x \\ y \end{pmatrix} = \frac{1}{-1 + 3a} \begin{pmatrix} -3 \\ 1 \end{pmatrix}
+\]
+
+The solutions for \( x \) and \( y \) in terms of \( a \) are:
+\[
+x = \frac{-3}{-1 + 3a}, \quad y = \frac{1}{-1 + 3a}
+\]
+
+
+
+
+\newpage
+
+\section{Solution}
+
+We are given the matrix:
+\[
+A = \begin{pmatrix} 5 & 8 \\ 7 & 4 \end{pmatrix}
+\]
+
+\subsection{Part 1: Characteristic polynomial and eigenvalues}
+
+The characteristic polynomial of a matrix \( A \) is given by:
+\[
+\det(A - \lambda I) = 0
+\]
+where \( \lambda \) is an eigenvalue and \( I \) is the identity matrix.
+
+We compute \( A - \lambda I \):
+\[
+A - \lambda I = \begin{pmatrix} 5 & 8 \\ 7 & 4 \end{pmatrix} - \lambda \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix} = \begin{pmatrix} 5 - \lambda & 8 \\ 7 & 4 - \lambda \end{pmatrix}
+\]
+
+Now, we compute the determinant of \( A - \lambda I \):
+\[
+\det(A - \lambda I) = \det\begin{pmatrix} 5 - \lambda & 8 \\ 7 & 4 - \lambda \end{pmatrix}
+\]
+\[
+= (5 - \lambda)(4 - \lambda) - (8)(7)
+\]
+\[
+= (5 - \lambda)(4 - \lambda) - 56
+\]
+\[
+= 20 - 9\lambda + \lambda^2 - 56 = \lambda^2 - 9\lambda - 36
+\]
+
+Thus, the characteristic polynomial is:
+\[
+\lambda^2 - 9\lambda - 36 = 0
+\]
+
+We solve this quadratic equation using the quadratic formula:
+\[
+\lambda = \frac{-(-9) \pm \sqrt{(-9)^2 - 4(1)(-36)}}{2(1)} = \frac{9 \pm \sqrt{81 + 144}}{2} = \frac{9 \pm \sqrt{225}}{2} = \frac{9 \pm 15}{2}
+\]
+
+The solutions are:
+\[
+\lambda_1 = \frac{9 + 15}{2} = 12, \quad \lambda_2 = \frac{9 - 15}{2} = -3
+\]
+
+Thus, the eigenvalues of \( A \) are:
+\[
+\lambda_1 = 12, \quad \lambda_2 = -3
+\]
+
+\newpage
+
+\subsection{Part 2: Eigenvector corresponding to the largest eigenvalue \( \lambda_1 = 12 \)}
+
+To find the eigenvector corresponding to \( \lambda_1 = 12 \), we solve the system:
+\[
+(A - 12I) \mathbf{v} = 0
+\]
+where \( \mathbf{v} = \begin{pmatrix} v_1 \\ v_2 \end{pmatrix} \).
+
+First, compute \( A - 12I \):
+\[
+A - 12I = \begin{pmatrix} 5 - 12 & 8 \\ 7 & 4 - 12 \end{pmatrix} = \begin{pmatrix} -7 & 8 \\ 7 & -8 \end{pmatrix}
+\]
+
+Now, solve the system \( (A - 12I) \mathbf{v} = 0 \):
+\[
+\begin{pmatrix} -7 & 8 \\ 7 & -8 \end{pmatrix} \begin{pmatrix} v_1 \\ v_2 \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix}
+\]
+
+This gives the system of equations:
+\[
+-7v_1 + 8v_2 = 0 \quad \text{(1)}
+\]
+\[
+7v_1 - 8v_2 = 0 \quad \text{(2)}
+\]
+
+Both equations are the same, so we can solve for \( v_1 \) in terms of \( v_2 \). From equation (1), we get:
+\[
+-7v_1 + 8v_2 = 0 \quad \Rightarrow \quad v_1 = \frac{8}{7}v_2
+\]
+
+Thus, a corresponding eigenvector is:
+\[
+\mathbf{v} = \begin{pmatrix} \frac{8}{7}v_2 \\ v_2 \end{pmatrix} = v_2 \begin{pmatrix} \frac{8}{7} \\ 1 \end{pmatrix}
+\]
+
+For simplicity, we can choose \( v_2 = 7 \), which gives:
+\[
+\mathbf{v} = \begin{pmatrix} 8 \\ 7 \end{pmatrix}
+\]
+
+Therefore, an eigenvector corresponding to \( \lambda_1 = 12 \) is:
+\[
+\mathbf{v} = \begin{pmatrix} 8 \\ 7 \end{pmatrix}
+\]
+
+
+
+
+\newpage
+
+\section{Solution}
+
+\subsection{Part 1: Calculate \( (1 - i\sqrt{3})^7 \) by converting to polar form}
+
+We are tasked with finding \( (1 - i\sqrt{3})^7 \). To do this, we first convert \( 1 - i\sqrt{3} \) to polar form and then apply De Moivre's theorem.
+
+\paragraph{Step 1: Convert to polar form}
+
+The modulus \( r \) of \( 1 - i\sqrt{3} \) is:
+\[
+r = |1 - i\sqrt{3}| = \sqrt{1^2 + (-\sqrt{3})^2} = \sqrt{1 + 3} = \sqrt{4} = 2
+\]
+
+Next, we calculate the argument \( \theta \):
+\[
+\theta = \arg(1 - i\sqrt{3}) = \tan^{-1}\left( \frac{-\sqrt{3}}{1} \right) = -\frac{\pi}{3}
+\]
+Thus, the polar form of \( 1 - i\sqrt{3} \) is:
+\[
+1 - i\sqrt{3} = 2 \left( \cos\left( -\frac{\pi}{3} \right) + i \sin\left( -\frac{\pi}{3} \right) \right)
+\]
+
+\paragraph{Step 2: Apply De Moivre's theorem}
+
+Using De Moivre's theorem, we compute:
+\[
+(1 - i\sqrt{3})^7 = \left[ 2 \left( \cos\left( -\frac{\pi}{3} \right) + i \sin\left( -\frac{\pi}{3} \right) \right) \right]^7
+\]
+\[
+= 2^7 \left( \cos\left( 7 \times -\frac{\pi}{3} \right) + i \sin\left( 7 \times -\frac{\pi}{3} \right) \right)
+\]
+\[
+= 128 \left( \cos\left( -\frac{7\pi}{3} \right) + i \sin\left( -\frac{7\pi}{3} \right) \right)
+\]
+
+Since \( -\frac{7\pi}{3} = -2\pi - \frac{\pi}{3} \), we simplify using periodicity:
+\[
+\cos\left( -\frac{7\pi}{3} \right) = \cos\left( -\frac{\pi}{3} \right) = \frac{1}{2}, \quad \sin\left( -\frac{7\pi}{3} \right) = \sin\left( -\frac{\pi}{3} \right) = -\frac{\sqrt{3}}{2}
+\]
+
+Thus, we have:
+\[
+(1 - i\sqrt{3})^7 = 128 \left( \frac{1}{2} + i \left( -\frac{\sqrt{3}}{2} \right) \right)
+\]
+\[
+= 128 \times \frac{1}{2} + 128 \times \left( -\frac{\sqrt{3}}{2} \right) i
+\]
+\[
+= 64 - 64\sqrt{3} i
+\]
+
+Therefore:
+\[
+(1 - i\sqrt{3})^7 = 64 - 64\sqrt{3} i
+\]
+
+\newpage
+
+\subsection{Part 2: Find \( zw \) and \( \frac{z}{\overline{w}} \)}
+
+We are given \( z = 2 + 3i \) and \( w = 1 + 2i \).
+
+\paragraph{Step 1: Compute \( zw \)}
+
+The product of two complex numbers is given by:
+\[
+zw = (2 + 3i)(1 + 2i)
+\]
+Expand the product:
+\[
+zw = 2(1) + 2(2i) + 3i(1) + 3i(2i)
+\]
+\[
+= 2 + 4i + 3i + 6i^2
+\]
+Since \( i^2 = -1 \), this simplifies to:
+\[
+zw = 2 + 7i + 6(-1) = 2 + 7i - 6 = -4 + 7i
+\]
+
+Thus:
+\[
+zw = -4 + 7i
+\]
+
+\paragraph{Step 2: Compute \( \frac{z}{\overline{w}} \)}
+
+The conjugate of \( w = 1 + 2i \) is \( \overline{w} = 1 - 2i \). We now compute \( \frac{z}{\overline{w}} \):
+\[
+\frac{z}{\overline{w}} = \frac{2 + 3i}{1 - 2i}
+\]
+We multiply the numerator and denominator by the conjugate of the denominator \( 1 + 2i \):
+\[
+\frac{z}{\overline{w}} = \frac{(2 + 3i)(1 + 2i)}{(1 - 2i)(1 + 2i)}
+\]
+
+First, compute the denominator:
+\[
+(1 - 2i)(1 + 2i) = 1^2 - (2i)^2 = 1 - (-4) = 5
+\]
+
+Now, compute the numerator:
+\[
+(2 + 3i)(1 + 2i) = 2(1) + 2(2i) + 3i(1) + 3i(2i)
+\]
+\[
+= 2 + 4i + 3i + 6i^2 = 2 + 7i + 6(-1) = 2 + 7i - 6 = -4 + 7i
+\]
+
+Thus:
+\[
+\frac{z}{\overline{w}} = \frac{-4 + 7i}{5} = -\frac{4}{5} + \frac{7}{5}i
+\]
+
+Therefore:
+\[
+\frac{z}{\overline{w}} = -\frac{4}{5} + \frac{7}{5}i
+\]
+
+
+\end{document}
