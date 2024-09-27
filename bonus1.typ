@@ -232,10 +232,10 @@ Similarly, $bf(b) times bf(v)$ has magnitude $2$.
 
 == Solution to problem 5
 
-*Answer*: 0
+*Answer*: $0$.
 
 There are several approaches possible.
-The first two show how to the four entries of the matrix $M$.
+The first two show how to find the four entries of the matrix $M$.
 The latter sidestep this entirely and show that the matrix is actually always trace $0$.
 
 === First approach: brute force
