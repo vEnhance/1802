@@ -115,7 +115,7 @@ but surprisingly it turns out that
 ]
 Without "slope", you cannot notice these dependences by sight for $n >= 3$, so use the determinant.
 
-= Recitation questions from Prof Maulik
+= Recitation questions from official course
 
 Today will discuss matrices and linear transformations.#footnote[
   Evan says: I actually think this is the easiest recitation set we've had so far,

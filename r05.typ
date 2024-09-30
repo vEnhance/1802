@@ -108,7 +108,7 @@ I'll show you how to do it with eigenvectors.
   although the eigenvalues might end up being complex numbers.
 ]
 
-= Recitation problems from Prof Maulik
+= Recitation problems from official course
 
 $ A = mat(1,2;2,1), #h(1em) B = mat(1,2;-1,-2), #h(1em) C = mat(-1,0,1;3,4,1;0,0,2). $
 

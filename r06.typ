@@ -105,7 +105,7 @@ Depending on what you are trying to do, some forms are easier to work with than 
   kind: table
 )
 
-= Recitation problems from Prof Maulik
+= Recitation problems from official course
 
 / 1.: For each of the following points, convert it from Cartesian to polar or
   vice versa:

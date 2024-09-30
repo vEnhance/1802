@@ -58,7 +58,7 @@ Working out the angle is a bit annoying;
 but the point is no calculus or theory is involved, just work out the geometry.
 Then when you want the velocity, just differentiate $bf(r)(t)$, and so on.
 
-= Recitation problems from Prof Maulik
+= Recitation problems from official course
 
 / 1: A hunter walks toward the origin along the positive $x$-axis, with unit
   speed; at time $t = 0$ they are at $x = 10$. Their arrow (of unit length)

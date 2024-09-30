@@ -178,7 +178,7 @@ Thursday/Friday lectures are _really_ nontrivial.
 
   (In truth, the cross product is secretly a worse form of the wedge product. Just saying. `;)`)
 
-= Recitation questions from Prof Maulik
+= Recitation questions from official course
 
 == Problem 1
 
