@@ -76,13 +76,16 @@ Then when you want the velocity, just differentiate $bf(r)(t)$, and so on.
 / 2b: Show how taking the derivative interacts with cross product:
     $ (bf(a) (t) times bf(b) (t))' = bf(a)' (t) times bf(b) (t) + bf(a) (t) times bf(b)' (t). $
 / 3: A point $P$ moves in space, with position vector
-  $ bf(r) (t) = arrow(O P) = 3 cos (t) bf(i) + 5 sin (t) bf(j) + 4 cos (t) bf(k). $
+  $bf(r) (t) = arrow(O P) = 3 cos (t) bf(i) + 5 sin (t) bf(j) + 4 cos (t) bf(k)$.
 / 3a: Show it moves on the surface of a sphere centered at the origin.
 / 3b: Show it also moves on a plane through the origin (so with the first
     part, actually moves on a great circle given by intersecting the plane
     with the sphere).
 / 3c: Show its speed is constant.
 / 3d: Show the acceleration is directed toward the origin.
+
+Also: I'm authorized to go over any midterm problems people want to see
+(now or in office hours).
 
 = If you're thinking about majoring in course 18...
 
@@ -104,9 +107,9 @@ the world of pre-university math and serious math.
 Once you clear these two classes, the floodgates open and the world of
 modern math is yours to explore.
 
-The truth is that *18.02 is not designed for future math majors*.
+I'm of the impression that *18.02 is not designed for future math majors*; it's a GIR.
 For example, if you take 18.701, the instructor will literally _throw away_ the "definitions"
-of linear transformations you learned in 18.02/18.06/etc. and replace them
+of linear transformations (and others) you learned in 18.02/18.06/etc. and replace them
 with the "correct" ones. You've seen me do this already.
 Similarly, you will have completely new (and rigorous) definitions of derivatives and integrals.
 In some sense, 18.100 is really _redoing_ all of 18.01 and 18.02 with actual proofs.
@@ -127,7 +130,11 @@ but if Poonen is on the list of instructors I trust him.
 
 == From the instructor's Slack
 
-Me trying to do question 1a.
+Me trying to do question 1a.#footnote[As it happened,
+  I was sitting around in the ill-fated flight UA 499 from Newark to Boston
+  when I sent this, which was delayed until around 11:00pm.
+  I got home way later than I should have.
+  If I seem cranky this morning, that's probably why.]
 
 #figure(
   image("figures/brainfart.png", width: 95%),
