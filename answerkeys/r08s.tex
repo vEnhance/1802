@@ -1,0 +1,333 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[colorlinks]{hyperref}
+
+\begin{document}
+\title{Quick answer key to Recitation 8}
+\author{ChatGPT 4o}
+\date{29 September 2024}
+\maketitle
+
+Use the table of contents below to skip to a specific part
+without seeing spoilers to the other parts.
+
+I just used ChatGPT to write this one quickly.
+ChatGPT can make mistakes, so if you spot anything that's wrong, flag me to ask.
+
+\tableofcontents
+
+
+
+\newpage
+
+\section{Solution}
+
+We are given the following information:
+
+- The hunter walks toward the origin along the positive x-axis with unit speed. At time \( t = 0 \), they are at \( x = 10 \). \\
+- The rabbit moves with constant velocity \( \sqrt{5} \) along the line \( y = 2x \) in the first quadrant, starting at the origin at time \( t = 0 \). \\
+- The hunter always aims their arrow (of unit length) toward the rabbit.
+
+\subsection{Part 1: Vector-valued function \( A(t) \) for the arrow at time \( t \)}
+
+Let \( A(t) \) be the vector-valued function representing the arrow's direction at time \( t \).
+
+\paragraph{Hunter's position:}
+The hunter moves along the x-axis toward the origin with unit speed. Thus, the position of the hunter at time \( t \) is:
+\[
+\text{Hunter's position} = \langle 10 - t, 0 \rangle
+\]
+
+\paragraph{Rabbit's position:}
+The rabbit moves along the line \( y = 2x \) with constant velocity \( \sqrt{5} \). Let the position of the rabbit at time \( t \) be \( \langle x_r(t), y_r(t) \rangle \).
+
+Since the rabbit moves along the line \( y = 2x \), we have \( y_r(t) = 2x_r(t) \). The rabbit's velocity \( \sqrt{5} \) corresponds to the magnitude of the velocity vector:
+\[
+\text{Velocity of the rabbit} = \left\| \frac{d}{dt} \begin{pmatrix} x_r(t) \\ y_r(t) \end{pmatrix} \right\| = \sqrt{5}
+\]
+We know that:
+\[
+\frac{dx_r(t)}{dt} = v_x, \quad \frac{dy_r(t)}{dt} = 2v_x
+\]
+Using the Pythagorean theorem:
+\[
+\sqrt{v_x^2 + (2v_x)^2} = \sqrt{5}
+\]
+\[
+\sqrt{5v_x^2} = \sqrt{5} \quad \Rightarrow \quad v_x = 1
+\]
+Thus, the rabbit's velocity components are \( v_x = 1 \) and \( v_y = 2 \). Therefore, the rabbit's position at time \( t \) is:
+\[
+\text{Rabbit's position} = \langle t, 2t \rangle
+\]
+
+\paragraph{Arrow direction:}
+At any time \( t \), the hunter aims the arrow directly at the rabbit. The vector pointing from the hunter's position to the rabbit's position is:
+\[
+\mathbf{d}(t) = \langle t - (10 - t), 2t - 0 \rangle = \langle 2t - 10, 2t \rangle
+\]
+
+Now, we normalize this vector to ensure that the magnitude of the arrow's direction vector \( A(t) \) is always 1. The magnitude of \( \mathbf{d}(t) \) is:
+\[
+|\mathbf{d}(t)| = \sqrt{(2t - 10)^2 + (2t)^2} = \sqrt{(4t^2 - 40t + 100) + 4t^2} = \sqrt{8t^2 - 40t + 100}
+\]
+
+Thus, the normalized arrow direction vector is:
+\[
+A(t) = \frac{\mathbf{d}(t)}{|\mathbf{d}(t)|} = \frac{\langle 2t - 10, 2t \rangle}{\sqrt{8t^2 - 40t + 100}}
+\]
+
+Therefore, the vector-valued function for the arrow at time \( t \) is:
+\[
+A(t) = \frac{\langle 2t - 10, 2t \rangle}{\sqrt{8t^2 - 40t + 100}}
+\]
+
+\newpage
+
+\subsection{Part 2: When does the hunter shoot and miss when closest to the rabbit?}
+
+To find when the hunter is closest to the rabbit, we calculate the distance between the hunter and the rabbit as a function of time. The distance function \( D(t) \) is given by:
+\[
+D(t) = \left\| \text{Hunter's position} - \text{Rabbit's position} \right\| = \left\| \langle 10 - t, 0 \rangle - \langle t, 2t \rangle \right\|
+\]
+\[
+D(t) = \left\| \langle 10 - t - t, 0 - 2t \rangle \right\| = \left\| \langle 10 - 2t, -2t \rangle \right\|
+\]
+\[
+D(t) = \sqrt{(10 - 2t)^2 + (-2t)^2} = \sqrt{(10 - 2t)^2 + 4t^2}
+\]
+
+We minimize this distance by finding the critical points of \( D(t) \). We first differentiate \( D(t) \) with respect to \( t \). Let:
+\[
+f(t) = (10 - 2t)^2 + 4t^2
+\]
+Then:
+\[
+f'(t) = 2(10 - 2t)(-2) + 2(4t) = -4(10 - 2t) + 8t
+\]
+\[
+f'(t) = -40 + 8t + 8t = -40 + 16t
+\]
+Setting \( f'(t) = 0 \) to find the critical points:
+\[
+-40 + 16t = 0 \quad \Rightarrow \quad t = \frac{40}{16} = 2.5
+\]
+
+Thus, the hunter is closest to the rabbit at time \( t = 2.5 \).
+
+\newpage
+
+\subsection{Conclusion}
+
+1. The vector-valued function for the arrow at time \( t \) is:
+\[
+A(t) = \frac{\langle 2t - 10, 2t \rangle}{\sqrt{8t^2 - 40t + 100}}
+\]
+2. The hunter is closest to the rabbit at time \( t = 2.5 \).
+
+
+
+
+\newpage
+
+\section{Solution}
+
+Let \( a(t) \) and \( b(t) \) be vector-valued functions in \( \mathbb{R}^3 \), and let \( a(t) = \langle a_1(t), a_2(t), a_3(t) \rangle \) and \( b(t) = \langle b_1(t), b_2(t), b_3(t) \rangle \). We will show how the derivative interacts with the dot product and cross product of these vector-valued functions.
+
+\subsection{Part 1: Derivative of the dot product}
+
+We wish to show that the derivative of the dot product of \( a(t) \) and \( b(t) \) satisfies:
+\[
+\frac{d}{dt} \left( a(t) \cdot b(t) \right) = a'(t) \cdot b(t) + a(t) \cdot b'(t)
+\]
+
+The dot product of \( a(t) \) and \( b(t) \) is:
+\[
+a(t) \cdot b(t) = a_1(t) b_1(t) + a_2(t) b_2(t) + a_3(t) b_3(t)
+\]
+
+Taking the derivative with respect to \( t \):
+\[
+\frac{d}{dt} \left( a(t) \cdot b(t) \right) = \frac{d}{dt} \left( a_1(t) b_1(t) + a_2(t) b_2(t) + a_3(t) b_3(t) \right)
+\]
+Applying the product rule for each term:
+\[
+= \frac{d}{dt} \left( a_1(t) b_1(t) \right) + \frac{d}{dt} \left( a_2(t) b_2(t) \right) + \frac{d}{dt} \left( a_3(t) b_3(t) \right)
+\]
+\[
+= a_1'(t) b_1(t) + a_1(t) b_1'(t) + a_2'(t) b_2(t) + a_2(t) b_2'(t) + a_3'(t) b_3(t) + a_3(t) b_3'(t)
+\]
+
+Rearranging the terms:
+\[
+= \left( a_1'(t) b_1(t) + a_2'(t) b_2(t) + a_3'(t) b_3(t) \right) + \left( a_1(t) b_1'(t) + a_2(t) b_2'(t) + a_3(t) b_3'(t) \right)
+\]
+\[
+= a'(t) \cdot b(t) + a(t) \cdot b'(t)
+\]
+
+Thus, we have shown:
+\[
+\frac{d}{dt} \left( a(t) \cdot b(t) \right) = a'(t) \cdot b(t) + a(t) \cdot b'(t)
+\]
+
+\newpage
+
+\subsection{Part 2: Derivative of the cross product}
+
+We wish to show that the derivative of the cross product of \( a(t) \) and \( b(t) \) satisfies:
+\[
+\frac{d}{dt} \left( a(t) \times b(t) \right) = a'(t) \times b(t) + a(t) \times b'(t)
+\]
+
+The cross product of \( a(t) \) and \( b(t) \) is given by:
+\[
+a(t) \times b(t) = \begin{vmatrix} \mathbf{i} & \mathbf{j} & \mathbf{k} \\ a_1(t) & a_2(t) & a_3(t) \\ b_1(t) & b_2(t) & b_3(t) \end{vmatrix}
+\]
+
+To take the derivative of the cross product, we differentiate each component of the vector:
+\[
+\frac{d}{dt} \left( a(t) \times b(t) \right) = \frac{d}{dt} \begin{pmatrix} a_2(t)b_3(t) - a_3(t)b_2(t) \\ a_3(t)b_1(t) - a_1(t)b_3(t) \\ a_1(t)b_2(t) - a_2(t)b_1(t) \end{pmatrix}
+\]
+
+Applying the product rule to each component:
+\[
+= \begin{pmatrix} a_2'(t)b_3(t) + a_2(t)b_3'(t) - a_3'(t)b_2(t) - a_3(t)b_2'(t) \\ a_3'(t)b_1(t) + a_3(t)b_1'(t) - a_1'(t)b_3(t) - a_1(t)b_3'(t) \\ a_1'(t)b_2(t) + a_1(t)b_2'(t) - a_2'(t)b_1(t) - a_2(t)b_1'(t) \end{pmatrix}
+\]
+
+We can rearrange this as:
+\[
+= \begin{pmatrix} a_2'(t)b_3(t) - a_3'(t)b_2(t) \\ a_3'(t)b_1(t) - a_1'(t)b_3(t) \\ a_1'(t)b_2(t) - a_2'(t)b_1(t) \end{pmatrix} + \begin{pmatrix} a_2(t)b_3'(t) - a_3(t)b_2'(t) \\ a_3(t)b_1'(t) - a_1(t)b_3'(t) \\ a_1(t)b_2'(t) - a_2(t)b_1'(t) \end{pmatrix}
+\]
+
+The first term corresponds to \( a'(t) \times b(t) \), and the second term corresponds to \( a(t) \times b'(t) \). Thus, we have:
+\[
+\frac{d}{dt} \left( a(t) \times b(t) \right) = a'(t) \times b(t) + a(t) \times b'(t)
+\]
+
+
+
+
+\newpage
+
+\section{Solution}
+
+The position vector of a point \( P \) is given by:
+\[
+\mathbf{r}(t) = 3 \cos(t) \mathbf{i} + 5 \sin(t) \mathbf{j} + 4 \cos(t) \mathbf{k}
+\]
+
+We will analyze this motion in the following parts.
+
+\subsection{Part 1: Show that it moves on the surface of a sphere centered at the origin}
+
+To show that the point \( P \) moves on the surface of a sphere centered at the origin, we calculate the magnitude of the position vector \( \mathbf{r}(t) \).
+
+The magnitude \( |\mathbf{r}(t)| \) is given by:
+\[
+|\mathbf{r}(t)| = \sqrt{(3 \cos(t))^2 + (5 \sin(t))^2 + (4 \cos(t))^2}
+\]
+\[
+= \sqrt{9 \cos^2(t) + 25 \sin^2(t) + 16 \cos^2(t)}
+\]
+\[
+= \sqrt{(9 + 16) \cos^2(t) + 25 \sin^2(t)}
+\]
+\[
+= \sqrt{25 \cos^2(t) + 25 \sin^2(t)}
+\]
+\[
+= \sqrt{25 (\cos^2(t) + \sin^2(t))} = \sqrt{25} = 5
+\]
+
+Since the magnitude of the position vector is constant (5), the point \( P \) moves on the surface of a sphere with radius 5 centered at the origin.
+
+\newpage
+
+\subsection{Part 2: Show that it also moves on a plane through the origin}
+
+To show that the point \( P \) moves on a plane, we analyze the coordinates of the position vector. The position vector is:
+\[
+\mathbf{r}(t) = \langle 3 \cos(t), 5 \sin(t), 4 \cos(t) \rangle
+\]
+
+To check if \( P \) lies on a plane, we look for a relationship between the components. Notice that:
+\[
+\frac{x(t)}{3} = \cos(t), \quad \frac{z(t)}{4} = \cos(t)
+\]
+
+Thus, we can eliminate the parameter \( t \):
+\[
+\frac{x(t)}{3} = \frac{z(t)}{4} \quad \Rightarrow \quad 4x(t) = 3z(t)
+\]
+
+This is the equation of a plane through the origin. Therefore, the point \( P \) also moves on the plane \( 4x - 3z = 0 \).
+
+\newpage
+
+\subsection{Part 3: Show that its speed is constant}
+
+The speed of the point \( P \) is given by the magnitude of the velocity vector \( \mathbf{v}(t) = \frac{d\mathbf{r}(t)}{dt} \).
+
+First, calculate the velocity vector:
+\[
+\mathbf{v}(t) = \frac{d}{dt} \left( 3 \cos(t) \mathbf{i} + 5 \sin(t) \mathbf{j} + 4 \cos(t) \mathbf{k} \right)
+\]
+\[
+= -3 \sin(t) \mathbf{i} + 5 \cos(t) \mathbf{j} - 4 \sin(t) \mathbf{k}
+\]
+
+Now, compute the magnitude of the velocity vector:
+\[
+|\mathbf{v}(t)| = \sqrt{(-3 \sin(t))^2 + (5 \cos(t))^2 + (-4 \sin(t))^2}
+\]
+\[
+= \sqrt{9 \sin^2(t) + 25 \cos^2(t) + 16 \sin^2(t)}
+\]
+\[
+= \sqrt{(9 + 16) \sin^2(t) + 25 \cos^2(t)}
+\]
+\[
+= \sqrt{25 \sin^2(t) + 25 \cos^2(t)}
+\]
+\[
+= \sqrt{25 (\sin^2(t) + \cos^2(t))} = \sqrt{25} = 5
+\]
+
+Since the magnitude of the velocity vector is constant (5), the speed of the point \( P \) is constant.
+
+\newpage
+
+\subsection{Part 4: Show that the acceleration is directed toward the origin}
+
+The acceleration vector is the derivative of the velocity vector:
+\[
+\mathbf{a}(t) = \frac{d\mathbf{v}(t)}{dt} = \frac{d}{dt} \left( -3 \sin(t) \mathbf{i} + 5 \cos(t) \mathbf{j} - 4 \sin(t) \mathbf{k} \right)
+\]
+\[
+= -3 \cos(t) \mathbf{i} - 5 \sin(t) \mathbf{j} - 4 \cos(t) \mathbf{k}
+\]
+
+Thus, the acceleration vector is:
+\[
+\mathbf{a}(t) = \langle -3 \cos(t), -5 \sin(t), -4 \cos(t) \rangle
+\]
+
+Notice that \( \mathbf{a}(t) \) is a scalar multiple of \( \mathbf{r}(t) \):
+\[
+\mathbf{a}(t) = -1 \cdot \mathbf{r}(t)
+\]
+
+Therefore, the acceleration vector is always directed toward the origin, as it is the negative of the position vector.
+
+\newpage
+
+\subsection{Conclusion}
+
+1. The point \( P \) moves on the surface of a sphere with radius 5 centered at the origin. \\
+2. The point \( P \) moves on the plane \( 4x - 3z = 0 \). \\
+3. The speed of the point \( P \) is constant and equal to 5. \\
+4. The acceleration of the point \( P \) is always directed toward the origin.
+
+
+\end{document}
