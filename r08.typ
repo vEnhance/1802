@@ -42,6 +42,7 @@ and then just do single-variable calculus or calculations on each $f_i$.
 Need to differentiate $F$? Differentiate each component.
 Need to integrate $F$? Integrate each component.
 Need the absolute value of $F$? Square root of sum of components. And so on.
+(See @brainfart on page 3 for another example.)
 
 == Adding two vectors
 
@@ -65,7 +66,8 @@ Then when you want the velocity, just differentiate $bf(r)(t)$, and so on.
   $sqrt(5)$ in the first quadrant along the line $y = 2 x$; at time
   $t = 0$ it is at the origin.
 / 1a: Write down the vector-valued function $bf(A) (t)$ for the arrow at time $t$.
-/ 1b: The hunter shoots and misses when closest to the rabbit; when does that happen?
+  (Clarification: this vector starts from the hunter's location, points towards the rabbit, and has length $1$.)
+/ 1b: The hunter shoots and (thankfully) misses when closest to the rabbit; when does that happen?
 / 2: Remember the product rule for the derivative:
   $(f (t) g (t))' = f' (t) g (t) + f (t) g' (t)$.
   Let $bf(a) (t) , bf(b) (t) in bb(R)^3$ be two vector-valued functions of $t$.
@@ -87,7 +89,10 @@ Then when you want the velocity, just differentiate $bf(r)(t)$, and so on.
 After the review session on Thursday evening#footnote[Which by the way was a disaster,
   so if you didn't come, good call.
   I'll try to come up with a better plan in the future,
-  since I apparently volunteered to lead the next two.],
+  since I apparently volunteered to lead the next two.
+  Suggestions welcome.
+  Right now I'm thinking literally to run a mock exam for 50 minutes
+  and then go over solutions afterwards, given the number of people attending.],
 one student mentioned to me they were thinking about majoring in course 18.
 Here's the advice I gave.
 
@@ -103,9 +108,10 @@ The truth is that *18.02 is not designed for future math majors*.
 For example, if you take 18.701, the instructor will literally _throw away_ the "definitions"
 of linear transformations you learned in 18.02/18.06/etc. and replace them
 with the "correct" ones. You've seen me do this already.
-Similarly, you will have completely new definitions of derivatives and integrals.
+Similarly, you will have completely new (and rigorous) definitions of derivatives and integrals.
+In some sense, 18.100 is really _redoing_ all of 18.01 and 18.02 with actual proofs.
 
-A prerequisite to both 18.100 and 18.700-18.703 isn't any particular theory, but proof experience.
+A prerequisite to both 18.100 and 18.701--18.702 isn't any particular theory, but proof experience.
 It used to be that they just threw you to the wolves in 18.100 and you learned by trial by fire
 (which for the record I thought was idiotic).#footnote[This historical reason
   is AFAIK why 18.100 is officially listed as one of the possible prerequisites for 18.701.
@@ -114,3 +120,16 @@ However, I've been told in recent years there's a class called *18.090*
 that tries to teach this instead.
 This class is new enough I don't even have any secondhand accounts,
 but if Poonen is on the list of instructors I trust him.
+
+#pagebreak()
+
+= Post-recitation notes
+
+== From the instructor's Slack
+
+Me trying to do question 1a.
+
+#figure(
+  image("figures/brainfart.png", width: 95%),
+  caption: [Seriously, just do everything componentwise.],
+) <brainfart>
