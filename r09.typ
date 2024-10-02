@@ -9,53 +9,56 @@
   date: [1 October 2024],
 )
 
-#quote(attribution: [Ars Brevis, by Piet Hein])[
-There is \
-one art, \
-no more, \
-no less: \
-to do \
-all things \
-with art- \
-lessness. \
-]
+#quote(attribution: [Ozpin, in RWBY])[You brought your army to my kingdom, James. Use it.]
 
 This handout (and any other DLC's I write) are posted at
 #url("https://web.evanchen.cc/1802.html").
 
 = Keep doing everything component-wise
 
-As I promised pretty much nothing happens these lectures
-and all you need to do is do everything componentwise.
-There's only one additional theorem you need:
+As I promised pretty much nothing happened yesterday
+and you still do everything componentwise.
+(Don't worry about Kepler's law.)
+There's one additional theorem you need.
 
 #theorem[Arc length][
-  $ L = integral_("start time")^("stop time") ||bf(v)(t)|| dif t. $
+  $L = integral_("start time")^("stop time") ||bf(v)(t)|| dif t$.
 ]
 
-Don't worry about Kepler's law.
 
 = Preview of Thursday/Friday's lecture
 
-Philosophy: the goal of the first-order derivative is to approximate a function by a linear one.
-(Think $f(5.01) approx f(5) + f'(5) dot 0.01$.)
-In 18.01 this was done with $f'$, slope, tangent line.
-But in 18.02 your domains have multiple variables.
-So $nabla f$ carries much _more_ information: there are $n$ directions to move in.
-To spell out types:
+== Level curves replace $x y$-graphs
 
-- $nabla f$ is a function accepting vectors in $RR^n$ and outputting vectors in $RR^n$,
-- $nabla f(bf(v))$ is a vector in $RR^n$.
+In high school algebra, you drew 2D graphs of one-variable functions like $y = 2 x + 5$ or $y = x^2 + 7$.
+So it might have seemed a bit weird to you that in R01/R02, our planes were usually written
+like $2 x + 5 y + 3 z = 7$ rather than, say, $z = (7 - 2 x - 5 y) / 3$.
+But this form turned out to be better, because it let us easily access the normal vector
+(which here is $angle.l 2, 5, 3 angle.r$).
 
-In R01, I told you something really important that's going to come back again later this week:
-_everything you used slopes for before, you should use normal vectors instead_.
-A similar analogy carries through:
+We'll keep up this trend often with multivariate functions.
+That is, if we had a _two_ variable function like $f(x,y) = x^2 + 3 y$,
+and you want to draw a 3D picture of it,
+you may prefer to think of a _three_ variable level curve $x^2 + 3 y - z = 0$.
+
+== Gradients
+
+There are two important pieces of philosophy.
+First: the goal of the first-order derivative is to approximate a function by a linear one.
+Second (from R01): _everything you used slopes for before, you should use normal vectors instead_.
+Here's how this plays out:
 
 - In 18.01, when $f : RR -> RR$, you defined a *derivative* $f'(p)$ at each input $p in RR$,
   which you thought of as the *slope* of the *tangent line* at $p$.
+  Think $f(5.01) approx f(5) + f'(5) dot 0.01$.
 - In 18.02, when $f : RR^n -> RR$, you will instead define the *gradient*
   $nabla f(bf(v))$ for each $bf(v) in RR^n$.
   (For _level-curve pictures_, this is a normal vector to the tangent line/plane/hyperplane.)
+  So $nabla f$ carries much _more_ information: there are $n$ directions to move in.
+
+(To spell out type signatures:
+$nabla f$ is a function accepting vectors in $RR^n$ and outputting vectors in $RR^n$;
+$nabla f(bf(v))$ is a vector in $RR^n$.)
 
 The *dot product* is now going to be really important.#footnote[You
   might have thought it was weird that back in R01 and R02,
