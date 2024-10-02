@@ -1,0 +1,307 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[colorlinks]{hyperref}
+
+\begin{document}
+\title{Quick answer key to Recitation 9}
+\author{ChatGPT 4o}
+\date{1 October 2024}
+\maketitle
+
+Use the table of contents below to skip to a specific part
+without seeing spoilers to the other parts.
+
+I just used ChatGPT to write this one quickly.
+ChatGPT can make mistakes, so if you spot anything that's wrong, flag me to ask.
+
+\tableofcontents
+
+
+
+\newpage
+
+\section{Solution}
+
+The acceleration vector of the ball is given by:
+\[
+\mathbf{a}(t) = 2 \mathbf{i} - 32 \mathbf{k}
+\]
+The initial velocity vector of the ball is:
+\[
+\mathbf{v}(0) = 80 \mathbf{j} + 80 \mathbf{k}
+\]
+
+We are tasked with finding the velocity vector \( \mathbf{v}(t) \), the position vector \( \mathbf{r}(t) \), and the speed of the ball when it hits the ground.
+
+\subsection{Part 1: Find \( \mathbf{v}(t) \) (the velocity vector)}
+
+To find the velocity vector \( \mathbf{v}(t) \), we integrate the acceleration vector \( \mathbf{a}(t) \) with respect to time \( t \):
+\[
+\mathbf{v}(t) = \int \mathbf{a}(t) \, dt = \int (2 \mathbf{i} - 32 \mathbf{k}) \, dt
+\]
+\[
+\mathbf{v}(t) = 2t \mathbf{i} - 32t \mathbf{k} + \mathbf{C}
+\]
+where \( \mathbf{C} \) is the constant vector of integration.
+
+Using the initial condition \( \mathbf{v}(0) = 80 \mathbf{j} + 80 \mathbf{k} \), we can solve for \( \mathbf{C} \). At \( t = 0 \):
+\[
+\mathbf{v}(0) = \mathbf{C} = 0 \mathbf{i} + 80 \mathbf{j} + 80 \mathbf{k}
+\]
+Thus, the velocity vector is:
+\[
+\mathbf{v}(t) = 2t \mathbf{i} + 80 \mathbf{j} + (80 - 32t) \mathbf{k}
+\]
+
+\newpage
+
+\subsection{Part 2: Find \( \mathbf{r}(t) \) (the position vector)}
+
+To find the position vector \( \mathbf{r}(t) \), we integrate the velocity vector \( \mathbf{v}(t) \):
+\[
+\mathbf{r}(t) = \int \mathbf{v}(t) \, dt = \int (2t \mathbf{i} + 80 \mathbf{j} + (80 - 32t) \mathbf{k}) \, dt
+\]
+\[
+\mathbf{r}(t) = \left( t^2 \mathbf{i} \right) + \left( 80t \mathbf{j} \right) + \left( 80t - 16t^2 \right) \mathbf{k} + \mathbf{D}
+\]
+where \( \mathbf{D} \) is the constant vector of integration.
+
+Using the initial condition that the ball starts at the origin, \( \mathbf{r}(0) = \mathbf{0} \), we solve for \( \mathbf{D} \). At \( t = 0 \):
+\[
+\mathbf{r}(0) = \mathbf{D} = \mathbf{0}
+\]
+Thus, the position vector is:
+\[
+\mathbf{r}(t) = t^2 \mathbf{i} + 80t \mathbf{j} + (80t - 16t^2) \mathbf{k}
+\]
+
+\newpage
+
+\subsection{Part 3: Find the speed when the ball hits the ground}
+
+The ball hits the ground when its \( z \)-coordinate (the \( \mathbf{k} \)-component) is zero. From the position vector \( \mathbf{r}(t) \), the \( z \)-coordinate is:
+\[
+z(t) = 80t - 16t^2
+\]
+Setting \( z(t) = 0 \) to find the time when the ball hits the ground:
+\[
+80t - 16t^2 = 0
+\]
+\[
+t(80 - 16t) = 0
+\]
+\[
+t = 0 \quad \text{or} \quad t = \frac{80}{16} = 5
+\]
+
+The ball hits the ground at \( t = 5 \) seconds. To find the speed at that moment, we calculate the magnitude of the velocity vector \( \mathbf{v}(t) \) at \( t = 5 \).
+
+The velocity vector at \( t = 5 \) is:
+\[
+\mathbf{v}(5) = 2(5) \mathbf{i} + 80 \mathbf{j} + (80 - 32(5)) \mathbf{k} = 10 \mathbf{i} + 80 \mathbf{j} + (80 - 160) \mathbf{k} = 10 \mathbf{i} + 80 \mathbf{j} - 80 \mathbf{k}
+\]
+
+The speed is the magnitude of the velocity vector:
+\[
+\text{Speed} = |\mathbf{v}(5)| = \sqrt{10^2 + 80^2 + (-80)^2} = \sqrt{100 + 6400 + 6400} = \sqrt{12900}
+\]
+\[
+\text{Speed} = \sqrt{12900} \approx 113.6 \, \text{feet per second}
+\]
+
+\newpage
+
+\subsection{Conclusion}
+
+1. The velocity vector is:
+\[
+\mathbf{v}(t) = 2t \mathbf{i} + 80 \mathbf{j} + (80 - 32t) \mathbf{k}
+\]
+2. The position vector is:
+\[
+\mathbf{r}(t) = t^2 \mathbf{i} + 80t \mathbf{j} + (80t - 16t^2) \mathbf{k}
+\]
+3. The speed of the ball when it hits the ground is approximately \( 113.6 \, \text{feet per second} \).
+
+
+
+
+\newpage
+
+\section{Solution}
+
+\newpage
+
+\subsection{Trajectory 1: \( \mathbf{r}(t) = \langle t^2, t^3 \rangle \) for \( 0 \leq t \leq 2 \)}
+
+To find the total distance traveled by the particle along the trajectory, we compute the arc length of the curve given by \( \mathbf{r}(t) \). The formula for arc length is:
+\[
+L = \int_{a}^{b} |\mathbf{v}(t)| \, dt
+\]
+where \( \mathbf{v}(t) = \frac{d\mathbf{r}(t)}{dt} \) is the velocity vector and \( |\mathbf{v}(t)| \) is its magnitude.
+
+First, calculate the velocity vector \( \mathbf{v}(t) \):
+\[
+\mathbf{v}(t) = \frac{d}{dt} \langle t^2, t^3 \rangle = \langle 2t, 3t^2 \rangle
+\]
+
+Now, find the magnitude of the velocity vector:
+\[
+|\mathbf{v}(t)| = \sqrt{(2t)^2 + (3t^2)^2} = \sqrt{4t^2 + 9t^4}
+\]
+
+The total distance traveled by the particle is the arc length:
+\[
+L = \int_{0}^{2} \sqrt{4t^2 + 9t^4} \, dt
+\]
+Factor the expression inside the square root:
+\[
+L = \int_{0}^{2} t \sqrt{4 + 9t^2} \, dt
+\]
+
+To solve this, we use substitution. Let \( u = 4 + 9t^2 \), so \( du = 18t \, dt \). Then:
+\[
+L = \frac{1}{18} \int_{4}^{40} \sqrt{u} \, du = \frac{1}{18} \left[ \frac{2}{3} u^{3/2} \right]_{4}^{40}
+\]
+\[
+L = \frac{1}{18} \times \frac{2}{3} \left[ 40^{3/2} - 4^{3/2} \right]
+= \frac{1}{27} \left[ 40^{3/2} - 8 \right]
+\]
+
+Thus, the total distance traveled by the particle along the trajectory is approximately:
+\[
+L \approx \frac{1}{27} \times (253.26 - 8) \approx 9.08 \text{ units}
+\]
+
+\newpage
+
+\subsection{Trajectory 2: \( \mathbf{r}(t) = \langle 2 \cos(3t), 2 \sin(3t) \rangle \) for \( 0 \leq t \leq 2\pi \)}
+
+Again, we compute the total distance traveled by the particle using the arc length formula.
+
+First, calculate the velocity vector \( \mathbf{v}(t) \):
+\[
+\mathbf{v}(t) = \frac{d}{dt} \langle 2 \cos(3t), 2 \sin(3t) \rangle = \langle -6 \sin(3t), 6 \cos(3t) \rangle
+\]
+
+Now, find the magnitude of the velocity vector:
+\[
+|\mathbf{v}(t)| = \sqrt{(-6 \sin(3t))^2 + (6 \cos(3t))^2} = \sqrt{36 \sin^2(3t) + 36 \cos^2(3t)} = \sqrt{36 (\sin^2(3t) + \cos^2(3t))} = 6
+\]
+
+The magnitude of the velocity vector is constant, so the total distance traveled is:
+\[
+L = \int_{0}^{2\pi} 6 \, dt = 6 \times 2\pi = 12\pi \, \text{units}
+\]
+
+\newpage
+
+\subsection{Comparison with the Length of the Curve on the \( xy \)-Plane}
+
+The given trajectory \( \mathbf{r}(t) = \langle 2 \cos(3t), 2 \sin(3t) \rangle \) represents a parameterization of a circle with radius 2. The particle traces this circle three times as \( t \) runs from \( 0 \) to \( 2\pi \).
+
+The circumference of a circle with radius 2 is:
+\[
+\text{Circumference} = 2\pi \times 2 = 4\pi \, \text{units}
+\]
+
+Since the particle completes three full circles, the total length of the curve is:
+\[
+\text{Length} = 3 \times 4\pi = 12\pi \, \text{units}
+\]
+
+This matches the total distance traveled by the particle, confirming that the particle moves along a circular path with radius 2 and completes three full revolutions.
+
+
+
+
+\newpage
+
+\section{Solution}
+
+\subsection{Part 1: Show that a particle moves at constant speed if and only if its velocity vector and acceleration vector are always perpendicular}
+
+Let \( \mathbf{r}(t) \) be the position vector of a particle at time \( t \), and let \( \mathbf{v}(t) = \frac{d\mathbf{r}(t)}{dt} \) be its velocity vector and \( \mathbf{a}(t) = \frac{d\mathbf{v}(t)}{dt} \) be its acceleration vector.
+
+\paragraph{Forward Direction:}
+We assume that the particle moves at constant speed and show that the velocity vector and acceleration vector are always perpendicular.
+
+If the particle moves at constant speed, then the magnitude of the velocity vector \( |\mathbf{v}(t)| \) is constant. Let \( v(t) = |\mathbf{v}(t)| \). Since the speed is constant, we have:
+\[
+\frac{d}{dt} \left( v(t) \right) = \frac{d}{dt} \left( |\mathbf{v}(t)| \right) = 0
+\]
+
+Now, recall that the speed is the magnitude of the velocity vector:
+\[
+v(t)^2 = \mathbf{v}(t) \cdot \mathbf{v}(t)
+\]
+Differentiating both sides with respect to time, we obtain:
+\[
+\frac{d}{dt} \left( v(t)^2 \right) = \frac{d}{dt} \left( \mathbf{v}(t) \cdot \mathbf{v}(t) \right)
+\]
+\[
+0 = 2 \mathbf{v}(t) \cdot \mathbf{a}(t)
+\]
+
+This implies:
+\[
+\mathbf{v}(t) \cdot \mathbf{a}(t) = 0
+\]
+
+Thus, the velocity vector and acceleration vector are always perpendicular when the particle moves at constant speed.
+
+\paragraph{Reverse Direction:}
+Now, assume that the velocity vector and acceleration vector are always perpendicular, i.e., \( \mathbf{v}(t) \cdot \mathbf{a}(t) = 0 \), and show that the particle moves at constant speed.
+
+Since \( \mathbf{v}(t) \cdot \mathbf{a}(t) = 0 \), we have:
+\[
+\frac{d}{dt} \left( \mathbf{v}(t) \cdot \mathbf{v}(t) \right) = 2 \mathbf{v}(t) \cdot \mathbf{a}(t) = 0
+\]
+
+This implies that \( \mathbf{v}(t) \cdot \mathbf{v}(t) \), which is the square of the speed \( v(t)^2 \), is constant. Therefore, the speed \( v(t) \) is constant.
+
+Thus, a particle moves at constant speed if and only if its velocity vector and acceleration vector are always perpendicular.
+
+\newpage
+
+\subsection{Part 2: Suppose that the position vector and acceleration vector are always proportional to each other; show that \( \mathbf{r}(t) \times \mathbf{v}(t) \) is a constant vector}
+
+Let the position vector \( \mathbf{r}(t) \) and acceleration vector \( \mathbf{a}(t) \) be proportional to each other. This means there exists a scalar function \( \lambda(t) \) such that:
+\[
+\mathbf{a}(t) = \lambda(t) \mathbf{r}(t)
+\]
+
+We want to show that the vector \( \mathbf{r}(t) \times \mathbf{v}(t) \) is constant.
+
+First, recall that the acceleration vector \( \mathbf{a}(t) \) is the derivative of the velocity vector:
+\[
+\mathbf{a}(t) = \frac{d\mathbf{v}(t)}{dt}
+\]
+
+To prove that \( \mathbf{r}(t) \times \mathbf{v}(t) \) is constant, we differentiate \( \mathbf{r}(t) \times \mathbf{v}(t) \) with respect to time:
+\[
+\frac{d}{dt} \left( \mathbf{r}(t) \times \mathbf{v}(t) \right) = \frac{d\mathbf{r}(t)}{dt} \times \mathbf{v}(t) + \mathbf{r}(t) \times \frac{d\mathbf{v}(t)}{dt}
+\]
+\[
+= \mathbf{v}(t) \times \mathbf{v}(t) + \mathbf{r}(t) \times \mathbf{a}(t)
+\]
+
+Since the cross product of any vector with itself is zero, the first term vanishes:
+\[
+\mathbf{v}(t) \times \mathbf{v}(t) = 0
+\]
+
+Using the assumption that \( \mathbf{a}(t) = \lambda(t) \mathbf{r}(t) \), the second term becomes:
+\[
+\mathbf{r}(t) \times \mathbf{a}(t) = \mathbf{r}(t) \times \left( \lambda(t) \mathbf{r}(t) \right) = \lambda(t) \left( \mathbf{r}(t) \times \mathbf{r}(t) \right) = 0
+\]
+
+Thus:
+\[
+\frac{d}{dt} \left( \mathbf{r}(t) \times \mathbf{v}(t) \right) = 0
+\]
+
+This shows that \( \mathbf{r}(t) \times \mathbf{v}(t) \) is a constant vector.
+
+
+\end{document}
