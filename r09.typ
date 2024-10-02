@@ -27,7 +27,7 @@ This handout (and any other DLC's I write) are posted at
 
 As I promised pretty much nothing happens these lectures
 and all you need to do is do everything componentwise.
-There's only one additional theorem you should remember that was introduced in lecture:
+There's only one additional theorem you need:
 
 #theorem[Arc length][
   $ L = integral_("start time")^("stop time") ||bf(v)(t)|| dif t. $
@@ -47,29 +47,28 @@ I want to prepare you by writing out the full analogy now:
   which you thought of as the *slope* of the *tangent line* at $p$.
 - In 18.02, when $f : RR^n -> RR$, you will instead define the *gradient*
   $nabla f(bf(v))$ for each $bf(v) in RR^n$.
-  This is thought of as a *normal vector* to the *tangent (hyper)plane* at $bf(v)$.
+  If you draw level curves, this is a normal vector to the tangent line/plane/hyperplane.
 
 The type signature is not intuitive, so to spell it out:
 
 - $nabla f$ is a function accepting vectors in $RR^n$ and outputting vectors in $RR^n$,
 - $nabla f(bf(v))$ is a vector in $RR^n$.
 
-The *dot product* is going to be really important.
+The *dot product* is going to be really important.#footnote[
 You might have thought it was weird that back in R01 and R02,
 every time used the dot product $bf(a) dot bf(b) = |bf(a)| |bf(b)| cos theta$,
 there was almost always this "unwanted" absolute value that we would immediately strip off.
-But in the gradient, we'll actually use both the absolute values.
-
+But in the gradient, we'll actually use both the absolute values.]
 Here's how.
 - In 18.01, if you know $f(5)$ and $f'(5)$, then $f(5.01) approx f(5) + f'(5) dot 0.01$,
   because we think of $f'(5)$ as a slope ("rise/run") and $0.01$ as the run.
 - In 18.02, if you know $f(5,8)$ and $nabla f(5,8)$, then the analogy goes
   $ f(5.01, 7.996) approx f(5,8) + nabla f(5,8) dot angle.l 0.01, -0.004 angle.r. $
   Yes, the dot is a dot product; both $nabla f(5,8)$ and $angle.l 0.01, -0.004 angle.r$
-  have type "vector in $RR^2$". This will take a bit of time to get used to.
+  have type "vector in $RR^2$".
+  This will take a lot of time to get used to, but everything afterwards depends on it,
+  so do whatever you can to get this into your instincts.
   I'll draw you a picture next recitation.
-
-To summarize this section.
 
 #figure(
   table(
@@ -78,20 +77,23 @@ To summarize this section.
     table.header([Thing], [18.01], [18.02]),
     [Function], [$f: RR -> RR$], [$f: RR^n -> RR$],
     [Differentiate], [$f': RR -> RR$], [$nabla f: RR^n -> RR^n$],
-    [Think of as], [Slope (rise/run)], [Gradient],
-    [Approximation], [Multiply by run], [Dot product with displacement]
+    [Think of as], [Slope (rise/run)], [Gradient (measures change in $n$ directions)],
+    [Approximation], [Multiply by small run], [Dot product with small displacement]
   ),
   kind: table
 )
 
-= Advice for this week
+In 18.100, the *total derivative* replaces the gradient.
+(I don't know whether total derivative appears in 18.02.)
+
+== Advice for this week
 
 - Honestly, just ignore all this parametric stuff until MT2-ish,
-  because basically nothing happens (you just do everything component-wise)
+  because basically nothing substantial happens (you just do everything component-wise)
   and also it won't be reused until after MT2.
-- Start early on PSet 4B, it's long and introduces a lot of new concepts
+- *Start early on PSet 4B*, it's long and introduces a lot of new concepts
   compared to PSet 1-3.
-- Skim through section 8 of Poonen before this Thursday and Friday lecture and thank me after.
+- *Skim through section 8 of Poonen* before Thursday and Friday lecture and thank me after.
   If you're seeing this stuff for the first time,
   it'll be almost impossible to keep up without pre-reading.
 
