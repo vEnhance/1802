@@ -35,6 +35,66 @@ There's only one additional theorem you should remember that was introduced in l
 
 Don't worry about Kepler's law.
 
+= Preview of Thursday/Friday's lecture
+
+In R01, I told you something really important that's going to come back again later this week:
+_everything you used slopes for before, you should use normal vectors instead_.
+
+This is exactly what's going to happen tomorrow and Friday when Maulik introduces the gradient.
+I want to prepare you by writing out the full analogy now:
+
+- In 18.01, when $f : RR -> RR$, you defined a *derivative* $f'(p)$ at each input $p in RR$,
+  which you thought of as the *slope* of the *tangent line* at $p$.
+- In 18.02, when $f : RR^n -> RR$, you will instead define the *gradient*
+  $nabla f(bf(v))$ for each $bf(v) in RR^n$.
+  This is thought of as a *normal vector* to the *tangent (hyper)plane* at $bf(v)$.
+
+The type signature is not intuitive, so to spell it out:
+
+- $nabla f$ is a function accepting vectors in $RR^n$ and outputting vectors in $RR^n$,
+- $nabla f(bf(v))$ is a vector in $RR^n$.
+
+The *dot product* is going to be really important.
+You might have thought it was weird that back in R01 and R02,
+every time used the dot product $bf(a) dot bf(b) = |bf(a)| |bf(b)| cos theta$,
+there was almost always this "unwanted" absolute value that we would immediately strip off.
+But in the gradient, we'll actually use both the absolute values.
+
+Here's how.
+- In 18.01, if you know $f(5)$ and $f'(5)$, then $f(5.01) approx f(5) + f'(5) dot 0.01$,
+  because we think of $f'(5)$ as a slope ("rise/run") and $0.01$ as the run.
+- In 18.02, if you know $f(5,8)$ and $nabla f(5,8)$, then the analogy goes
+  $ f(5.01, 7.996) approx f(5,8) + nabla f(5,8) dot angle.l 0.01, -0.004 angle.r. $
+  Yes, the dot is a dot product; both $nabla f(5,8)$ and $angle.l 0.01, -0.004 angle.r$
+  have type "vector in $RR^2$". This will take a bit of time to get used to.
+  I'll draw you a picture next recitation.
+
+To summarize this section.
+
+#figure(
+  table(
+    columns: 3,
+    align: left,
+    table.header([Thing], [18.01], [18.02]),
+    [Function], [$f: RR -> RR$], [$f: RR^n -> RR$],
+    [Differentiate], [$f': RR -> RR$], [$nabla f: RR^n -> RR^n$],
+    [Think of as], [Slope (rise/run)], [Gradient],
+    [Approximation], [Multiply by run], [Dot product with displacement]
+  ),
+  kind: table
+)
+
+= Advice for this week
+
+- Honestly, just ignore all this parametric stuff until MT2-ish,
+  because basically nothing happens (you just do everything component-wise)
+  and also it won't be reused until after MT2.
+- Start early on PSet 4B, it's long and introduces a lot of new concepts
+  compared to PSet 1-3.
+- Skim through section 8 of Poonen before this Thursday and Friday lecture and thank me after.
+  If you're seeing this stuff for the first time,
+  it'll be almost impossible to keep up without pre-reading.
+
 = Recitation problems from official course
 
 / 1: (Example 10 from 12.5 of EP) A ball is thrown in the air from the origin
