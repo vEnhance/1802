@@ -6,7 +6,7 @@
   title: [Notes for 18.02 Recitation 8],
   subtitle: [18.02 Recitation MW9],
   author: "Evan Chen",
-  date: [23 September 2024],
+  date: [30 September 2024],
 )
 
 #quote(attribution: [Calvin in _Calvin and Hobbes_])[I like maxims that don't encourage behavior modification.]
