@@ -172,7 +172,7 @@ $
   ).
 $
 
-Smart-aleckes will say $x=y=0$ always works for every $lambda$.
+Smart-alecks will say $x=y=0$ always works for every $lambda$.
 _Are there other solutions?_
 
 === Why guessing the eigenvalues is ill-fated
