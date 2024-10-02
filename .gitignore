@@ -2,3 +2,4 @@
 **.xcf
 outputs/*
 !outputs/.gitkeep
+worksheets/*
