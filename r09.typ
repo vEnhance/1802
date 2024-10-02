@@ -37,28 +37,31 @@ Don't worry about Kepler's law.
 
 = Preview of Thursday/Friday's lecture
 
+Philosophy: the goal of the first-order derivative is to approximate a function by a linear one.
+(Think $f(5.01) approx f(5) + f'(5) dot 0.01$.)
+In 18.01 this was done with $f'$, slope, tangent line.
+But in 18.02 your domains have multiple variables.
+So $nabla f$ carries much _more_ information: there are $n$ directions to move in.
+To spell out types:
+
+- $nabla f$ is a function accepting vectors in $RR^n$ and outputting vectors in $RR^n$,
+- $nabla f(bf(v))$ is a vector in $RR^n$.
+
 In R01, I told you something really important that's going to come back again later this week:
 _everything you used slopes for before, you should use normal vectors instead_.
-
-This is exactly what's going to happen tomorrow and Friday when Maulik introduces the gradient.
-I want to prepare you by writing out the full analogy now:
+A similar analogy carries through:
 
 - In 18.01, when $f : RR -> RR$, you defined a *derivative* $f'(p)$ at each input $p in RR$,
   which you thought of as the *slope* of the *tangent line* at $p$.
 - In 18.02, when $f : RR^n -> RR$, you will instead define the *gradient*
   $nabla f(bf(v))$ for each $bf(v) in RR^n$.
-  If you draw level curves, this is a normal vector to the tangent line/plane/hyperplane.
+  (For _level-curve pictures_, this is a normal vector to the tangent line/plane/hyperplane.)
 
-The type signature is not intuitive, so to spell it out:
-
-- $nabla f$ is a function accepting vectors in $RR^n$ and outputting vectors in $RR^n$,
-- $nabla f(bf(v))$ is a vector in $RR^n$.
-
-The *dot product* is going to be really important.#footnote[
-You might have thought it was weird that back in R01 and R02,
-every time used the dot product $bf(a) dot bf(b) = |bf(a)| |bf(b)| cos theta$,
-there was almost always this "unwanted" absolute value that we would immediately strip off.
-But in the gradient, we'll actually use both the absolute values.]
+The *dot product* is now going to be really important.#footnote[You
+  might have thought it was weird that back in R01 and R02,
+  every time used the dot product $bf(a) dot bf(b) = |bf(a)| |bf(b)| cos theta$,
+  there was almost always this "unwanted" absolute value that we would immediately strip off.
+  But in the gradient, we'll actually use both the absolute values.]
 Here's how.
 - In 18.01, if you know $f(5)$ and $f'(5)$, then $f(5.01) approx f(5) + f'(5) dot 0.01$,
   because we think of $f'(5)$ as a slope ("rise/run") and $0.01$ as the run.
