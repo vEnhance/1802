@@ -36,10 +36,9 @@ like $2 x + 5 y + 3 z = 7$ rather than, say, $z = (7 - 2 x - 5 y) / 3$.
 But this form turned out to be better, because it let us easily access the normal vector
 (which here is $angle.l 2, 5, 3 angle.r$).
 
-We'll keep up this trend often with multivariate functions.
-That is, if we had a _two_ variable function like $f(x,y) = x^2 + 3 y$,
-and you want to draw a 3D picture of it,
-you may prefer to think of a _three_ variable level curve $x^2 + 3 y - z = 0$.
+We'll keep up this trend often with multivariate functions; prefer constant RHS's.
+That is, suppose we want to draw a _two_ variable function like $f(x,y) = x^2 + 3 y$.
+Either do a 2D level curve $x^2 + 3y = c$, or think of it as the 3D level curve $x^2 + 3 y - z = 0$.
 
 == Gradients
 
