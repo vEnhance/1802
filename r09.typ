@@ -83,8 +83,9 @@ Here's how.
   kind: table
 )
 
-In 18.100, the *total derivative* replaces the gradient.
-(I don't know whether total derivative appears in 18.02.)
+(In math-major classes like 18.100, the *total derivative* replaces the gradient.
+I don't know remember if total derivative appears in 18.02 as well,
+but if it does, I'll talk more about it.)
 
 == Advice for this week
 
