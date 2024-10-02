@@ -51,13 +51,13 @@ Here's how this plays out:
   which you thought of as the *slope* of the *tangent line* at $p$.
   Think $f(5.01) approx f(5) + f'(5) dot 0.01$.
 - In 18.02, when $f : RR^n -> RR$, you will instead define the *gradient*
-  $nabla f(bf(v))$ for each $bf(v) in RR^n$.
+  $nabla f(P)$ for each $P in RR^n$.
   (For _level-curve pictures_, this is a normal vector to the tangent line/plane/hyperplane.)
   So $nabla f$ carries much _more_ information: there are $n$ directions to move in.
 
 (To spell out type signatures:
-$nabla f$ is a function accepting vectors in $RR^n$ and outputting vectors in $RR^n$;
-$nabla f(bf(v))$ is a vector in $RR^n$.)
+$nabla f$ is a function accepting points in $RR^n$ and outputting vectors in $RR^n$;
+$nabla f(P)$ is a vector in $RR^n$.)
 
 The *dot product* is now going to be really important.#footnote[You
   might have thought it was weird that back in R01 and R02,
