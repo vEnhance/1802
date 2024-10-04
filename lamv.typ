@@ -2,7 +2,7 @@
 
 #show: evan.with(
   title: [Linear Algebra and Multivariable Calculus],
-  subtitle: [Notes from an 18.02 course],
+  subtitle: [Notes from 18.02 Fall 2024],
   author: "Evan Chen",
   date: datetime.today(),
 )

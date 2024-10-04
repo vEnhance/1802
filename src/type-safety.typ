@@ -8,7 +8,7 @@ This is an important safeguard for the future in checking your work
 and auditing your understanding of a topic;
 a good instructor will point out, in your work, any time you make a type-error.
 
-== Type errors
+== [TEXT] Type errors
 
 In mathematics, statements are usually either true or false. Examples of
 false statements#footnote[Indiana Pi bill and 1984, respectively.]
@@ -17,7 +17,7 @@ However, it’s possible to write statements that are not merely false,
 but not even "grammatically correct", such as the nonsense equations
 $
   pi = mat(1, 0; 0, 1) , #h(2em)
-  lr(|bf(i) + 3 bf(j)|) = cos (bf(k)), #h(2em)
+  bf(i) + 3 bf(j) = cos (bf(k)), #h(2em)
   det vec(5, 11) != sqrt(2).
 $
 To call these equations false is misleading.
@@ -67,7 +67,7 @@ Table @operations lists some common examples with vectors you've seen from preca
   kind: table
 ) <operations>
 
-== Where does @operations come from?
+== [SIDENOTE] Where does @operations come from?
 
 A common question at this point is how you are supposed to figure out
 whether a certain operation is allowed or not.
@@ -87,7 +87,7 @@ Or more sarcastically, it's all just a social construct.#footnote[Of
   whatever definitions you want. Instead, definitions are judged by whether they are _useful_.
   Which is obviously subjective, but it’s less subjective than you might guess.]
 
-== Why you should care
+== [TEXT] Why you should care
 
 What this means is that, every time you encounter a new kind of
 mathematical object or operation (e.g. partial derivative),
@@ -102,11 +102,21 @@ $"kg" dot "meters" dot "seconds"^(- 2)$ on the left
 but $"kg" dot "meters" dot "seconds"^(- 1)$ on the right.
 
 For example, if you are reading your work and you see something like
-$ lr(|arrow(v) times arrow(p)|) = 9 arrow(p) $
+#eqn[
+  $ lr(|arrow(v) times arrow(p)|) = 9 arrow(p) $
+  <wrong-type>
+]
 then you can immediately tell that there’s a mistake,
 because the two sides are incompatible —
 the left-hand side is a real number (scalar), but the right-hand side is a vector.
 
-== Exercises
+== [RECAP] Takeaways from type safety
+
+- Throughout this book, every time you meet a new operation,
+  make sure you know what types of objects it takes as input and which it takes as output.
+- Whenever you write an equation, make sure it passes a type-check.
+  You can catch a lot of errors like @wrong-type using type safety alone.
+
+== [EXER] Practice with type safety
 
 #todo[have a list of equations here, and ask to identify the type errors? or similar]

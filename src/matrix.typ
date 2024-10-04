@@ -91,7 +91,7 @@ $ T( vec(1,0) ) = vec(1, 3) " and " T( vec(0,1) ) = vec(2, 4)
 ]
 
 
-== Matrix multiplication
+== TEXT: Matrix multiplication <matrix-mult>
 
 In the prerequisites, I said that you were supposed to know the rule for
 multiplying matrices, so you should already know for example that

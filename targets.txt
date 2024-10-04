@@ -18,3 +18,4 @@ answerkeys/r07s.pdf
 answerkeys/r08s.pdf
 answerkeys/r09s.pdf
 bonus1.pdf
+lamv.pdf

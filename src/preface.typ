@@ -6,7 +6,7 @@ At MIT, the course 18.02 (multivariable calculus) is a general institute require
 every student must pass this class in order to graduate.
 These are lecture notes based upon the fall 2024 instance of the course, taught by Davesh Maulik.
 
-== Goals of this book
+== [TEXT] Goals of this book
 
 These notes have the following lofty goal:
 #proposition[
@@ -28,12 +28,12 @@ But with this goal in mind, here are some parts of the design philosophy of this
   emphasizes giving straight cookbook-like answers to common exam questions.
   - I better say something about memorizing recipes.
     In principle, if you have perfect memory, you could potentially get a passing score
-    on the final exam by _only_ memorizing the recipes.
+    (but not a perfect score) on the final exam by _only_ memorizing the recipes.
 
     I don't recommend this approach; even a vague conceptual understanding of where a recipe
     is at minimum quite helpful for remembering said recipe.
-    But it may be useful to know in principle that the recipe is all you need
-    (and conversely, that you should have the recipes down by heart).
+    But it may be useful to know in principle that the recipe is all you need,
+    and conversely, that you should have the recipes down by heart.
 
 - *It's concrete*. We only work in $RR^n$, and not a generic vector space.
   We don't use anywhere near the level of abstraction as, say, the Napkin#footnote[
@@ -49,7 +49,7 @@ But with this goal in mind, here are some parts of the design philosophy of this
 - *It has full solutions to its exercises*. I really believe in writing things out.
 - *It tries to explain where formulas come from*.
   For example, these notes spell out how matrix multiplication corresponds
-  to function composition, something that isn't clearly stated in many places.
+  to function composition (in @matrix-mult), something that isn't clearly stated in many places.
   I believe that seeing this context makes it easier to internalize the material.
 - *It marks more complicated explanations as "not for exam"*.
   That is, we draw a clear line between
@@ -58,7 +58,7 @@ But with this goal in mind, here are some parts of the design philosophy of this
 - *It's written by Evan Chen*. That's either really good or really bad, depending on your tastes.
   If you've ever seen me teach a class in person, you know what I mean.
 
-== Prerequisites
+== [TEXT] Prerequisites
 
 As far as prerequisites go, a working knowledge of pre-calculus
 and calculus as taught in United States high schools is assumed.
@@ -85,8 +85,10 @@ and calculus as taught in United States high schools is assumed.
     If you haven't seen this before, there are plenty of tutorials online; find any of them.
 
     You are _not_ expected to have any idea why the heck the rule is defined this way;
+    an explanation for where this rule comes from is in @matrix-mult.
     we will explain what this rule means later.
     So we'll assume you have memorized this strange rule, but don't know what it means.
+
   - We'll assume you know the formula for the determinant of a $2 times 2$ and $3 times 3$ matrix; that is
     $ det mat(a,b;c,d) = a d - b c $
     and
@@ -96,16 +98,24 @@ and calculus as taught in United States high schools is assumed.
     - a_2 det mat(b_1, b_3; c_1, c_3)
     + a_3 det mat(b_1, b_2; c_1, c_2).
     $
+
+    For example, you should be able to verify the correctness of the following equation:
+    $ det mat(1, 0, 5; 0, 2, 13; 4, 1, 1) = -51. $
+
     We won't assume you know where this formula comes from,
     and in fact we won't be able to explain that within these notes.
+    But if you're curious, you should read Chapter 12 of the Napkin.
 
 - *Calculus*: You should know single variable derivatives and integrals, for example:
   - You should be able to differentiate $x^7 + sin(x)$ to get $7x^6 + cos(x)$.
   - You should be able to integrate $integral_0^1 x^2 dif x$ to get $1/3$.
 
+  This is covered in the course 18.01 at MIT,
+  and also in the AP calculus courses in the United States.
+
 No proof-based background is expected.
 
-== Topics covered
+== [TEXT] Topics covered
 
 - The first two parts of the text is dedicated to *linear algebra* (vectors and matrices).
   This is intentional, because some working knowledge of linear algebra is important.
@@ -123,4 +133,26 @@ No proof-based background is expected.
 
 #todo[...]
 
-== Acknowledgments
+== [TEXT] The structure of this book
+
+You will quickly notice that all the subsections are labeled with different headings.
+Here's an explanation of what they mean.
+
+/ TEXT: Good old prose.
+  An explanation like you might hear in a lecture.
+/ RECIPE: Contains only the final recipe, as you need it on the exam.
+  As I mentioned before, I don't like the idea of just memorizing recipes,
+  but in theory you might still be able to pass the exams by doing only this.
+/ SIDENOTE: An optional extended discussion.
+  You can skip these unless you're interested in them.
+/ RECAP: A summary of what happened in this chapter.
+/ EXER: Problems to work on.
+
+== [TEXT] Other references
+
+These notes are most closely related to Poonen's fall 2021 notes, available at
+#todo[link].
+
+== [SIDENOTE] If you're thinking of becoming a math major
+
+== [SIDENOTE] Acknowledgments
