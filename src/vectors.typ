@@ -10,7 +10,9 @@
 
 #todo[define it]
 
-== Normal vectors to planes
+== [TEXT] Two different definitions of the dot product
+
+== [TEXT] Normal vectors to lines in $RR^2$
 
 #todo[clean up ends]
 If you are confused about normal vectors in the plane, it might help to first do the $RR^2$ case,
@@ -47,7 +49,29 @@ it won't be a single number).
 Nevertheless, even if we can't talk about slope, we can still talk about parallel planes,
 and now the whole discussion carries over wholesale.
 
-== Projection
+== [RECIPE] Normal vectors to a plane
+
+#recipe[Normal vector to a plane][
+  To find the normal vector of a plane given in the form $a x + b y + c z = d$:
+
+  1. Output $angle.l a,b,c angle.r$.
+]
+
+
+== [TEXT] Projection
+
+== [RECIPE] Projection of one vector along the direction of another
+
+Suppose $bf(v)$ and $bf(w)$ are given vectors in $RR^n$.
+To find the length of the projection of $bf(v)$ along $bf(w)$:
+
+1. Output $(bf(v) dot bf(w)) / (|bf(w)|)$.
+
+To find the actual vector $bf(v)$ along $bf(w)$:
+
+1. Output $(bf(v) dot bf(w)) / (|bf(w)|) (bf(w)) / (|bf(w)|)$.
+
+== [RECIPE] Distance to a plane
 
 == Distance to a plane
 
