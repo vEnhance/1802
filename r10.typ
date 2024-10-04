@@ -14,6 +14,15 @@
 This handout (and any other DLC's I write) are posted at
 #url("https://web.evanchen.cc/1802.html").
 
+A couple of announcements:
+
+- I'm working on writing a replacement set of lecture notes!
+  You can find them posted on my usual website, filename `lamv.pdf`.
+- Lichen Zhang will be here for a while as teaching mentee,
+  meaning he'll observe some number of the recitations
+  and then try to teach one of them (and get feedback from you all).
+  Please be nice to Lichen!
+
 = Review of Oct 1 recitation and Oct 2-3 lecture
 
 I won't repeat myself from `r09.pdf`; I have about 10 extra copies of `r09.pdf` if you need one.
