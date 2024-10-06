@@ -12,18 +12,22 @@
 #pagebreak()
 
 #include "src/preface.typ"
+#pagebreak()
 #include "src/type-safety.typ"
 #pagebreak()
 
 #part[Linear Algebra I: Vectors]
 #include "src/vectors.typ"
+#pagebreak()
+
 #part[Linear Algebra II: Matrices]
 #include "src/matrix.typ"
+#pagebreak()
 #include "src/basis.typ"
 #pagebreak()
 
 #part[Parametric side-quest]
-TBD.
+To be written later.
 #pagebreak()
 
 #part[Multivariable differentiation]

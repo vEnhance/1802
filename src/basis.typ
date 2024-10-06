@@ -2,9 +2,15 @@
 
 = Linear combinations of vectors
 
-== Basis of vectors
+== [TEXT] Basis of vectors
+
+== [RECIPE] Describing spans of explicit vectors
 
 == Systems of equations
+
+== [RECIPE] Number of solutions to a square system of linear equations
+
+#pagebreak()
 
 = Eigenthings
 

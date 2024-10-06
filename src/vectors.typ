@@ -1,16 +1,20 @@
 #import "@local/evan:1.0.0":*
 
-= Three-dimensional geometry
+= Review of vectors
 
-== Real numbers, points, and vectors
+== [TEXT] Real numbers, points, and vectors
 
-== Planes in $RR^3$
+== [TEXT] Areas and volumes
+
+== [RECIPE] Areas and volumes
+
+#pagebreak()
 
 = The dot product
 
-#todo[define it]
-
 == [TEXT] Two different definitions of the dot product
+
+#todo[define it]
 
 == [TEXT] Normal vectors to lines in $RR^2$
 
@@ -49,6 +53,31 @@ it won't be a single number).
 Nevertheless, even if we can't talk about slope, we can still talk about parallel planes,
 and now the whole discussion carries over wholesale.
 
+== [RECIPE] Checking whether two vectors are perpendicular
+
+== [TEXT] Projection
+
+== [RECIPE] Projection of one vector along the direction of another
+
+#recipe[Projecting one vector along another][
+  Suppose $bf(v)$ and $bf(w)$ are given vectors in $RR^n$.
+  To find the length of the projection of $bf(v)$ along $bf(w)$:
+
+  1. Output $(bf(v) dot bf(w)) / (|bf(w)|)$.
+
+  To find the actual vector $bf(v)$ along $bf(w)$:
+
+  1. Output $(bf(v) dot bf(w)) / (|bf(w)|) (bf(w)) / (|bf(w)|)$.
+]
+
+#todo[define it]
+
+#pagebreak()
+
+= Planes and their normal vectors
+
+== [TEXT] Planes in $RR^3$
+
 == [RECIPE] Normal vectors to a plane
 
 #recipe[Normal vector to a plane][
@@ -58,21 +87,10 @@ and now the whole discussion carries over wholesale.
 ]
 
 
-== [TEXT] Projection
-
-== [RECIPE] Projection of one vector along the direction of another
-
-Suppose $bf(v)$ and $bf(w)$ are given vectors in $RR^n$.
-To find the length of the projection of $bf(v)$ along $bf(w)$:
-
-1. Output $(bf(v) dot bf(w)) / (|bf(w)|)$.
-
-To find the actual vector $bf(v)$ along $bf(w)$:
-
-1. Output $(bf(v) dot bf(w)) / (|bf(w)|) (bf(w)) / (|bf(w)|)$.
+== [TEXT] Calculating distance to a plane
 
 == [RECIPE] Distance to a plane
 
-== Distance to a plane
+#pagebreak()
 
 = The cross product
