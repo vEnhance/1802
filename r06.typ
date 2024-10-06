@@ -72,7 +72,7 @@ Does $i^i$ have a meaning? Does $cos(i)$ have a meaning?
 But for 18.02, when starting out,
 I would actually think of the notation $e^(i theta)$ as a _mnemonic_,
 i.e. a silly way to remember the following result:
-#theorem[
+#thm[
   If you multiply two CNWAVIO's, you get the CNWAVIO with the angles added:
   $ e^(i theta_1) e^(i theta_2) = e^(i (theta_1 + theta_2)) <==>
     cos (theta_1 + theta_2) + i sin (theta_1 + theta_2)
@@ -149,7 +149,7 @@ the definitions of objects they're dsicussing.
 
 With that in mind, let's fix $a > 0$ a positive real number and think about what $a^r$ should mean.
 
-#definition[18.100][
+#defn[18.100 definition][
 - When $n > 0$ is an integer, then $a^n := a times ... times a$, where $a$ is repeated $n$ times.
 - Then we let $a^(-n) := 1 / a^n$ for each integer $n > 0$.
 - When $m/n$ is a rational number, $a^(m/n)$ means the unique $b > 0$ such that $a^m = b^n$.
@@ -171,7 +171,7 @@ is correct, where $e := sum_(k >= 0) 1/k!$ is Euler's constant.
 
 So then when you start 18.112, we will flip the definition on its head:
 
-#definition[18.112][
+#defn[18.112 definition][
   If $z in CC$, we _define_ $ e^z := sum_(k >= 0) z^k / k!. $
   Then for $a > 0$, we let $a^z = e^(z log a)$.
 ] <def18112>
@@ -192,7 +192,7 @@ At least get your professor to acknowledge they _require_ a (non-obvious) proof,
 even if you aren't experienced enough to follow the proof yourself yet.
 
 Anyway, if we accept this definition, then Euler's formula makes more sense:
-#theorem[Euler][We have $ e^(i theta) = cos theta + i sin theta. $] <euler>
+#thm[Euler][We have $ e^(i theta) = cos theta + i sin theta. $] <euler>
 The point is that cosine and sine also have a Taylor series that is compatible with definition:
 #eqn[
   $
@@ -232,7 +232,7 @@ Yeah, trouble.
 On the other hand, $cos(i)$ can be defined:
 use the Taylor series @trig, like we did for $e^z$.
 To spell it out:
-#definition[18.112 trig definitions][
+#defn[18.112 trig definitions][
   If $z$ is a complex number, we define
   $
     cos(z) &:= 1 - z^2/2! + z^4/4! - z^6/6! + ... \
@@ -241,7 +241,7 @@ To spell it out:
 ] <def18112trig>
 
 If you do this, then @def18112 implies the following identities are kosher:
-#proposition[
+#prop[
   Under @def18112trig, we have the identities
   $ cos(z) &:= (e^(i z) + e^(-i z)) / 2 \
     sin(z) &:= (e^(i z) - e^(-i z)) / (2i). $
@@ -314,7 +314,7 @@ $ (3 (cos 18 degree + i sin 18 degree))^5 = 243 (cos 90 degree + i sin 90 degree
 If you can run the process in forwards, then you should be able to run the process backwards too.
 First, I will tell you what the answer looks like:
 
-#theorem[
+#thm[
   Consider solving the equation $z^n = w$, where $w$ is a given nonzero complex number, for $z$.
   Then you should always output exactly $n$ answers.
   Those $n$ answers all have magnitude $|w|^(1/n)$ and arguments spaced apart by $(360 degree) / n$.
@@ -362,7 +362,7 @@ start at $theta / n$ and then go up in increments of $(360 degree) / n$.
 answers to $z^5 = 243 i$.)
 So you can describe the general recipe as:
 
-#theorem[Recipe for $n$th roots][
+#recipe(title: [Recipe for $n$th roots])[
 1. Convert $w$ to polar form; say it has angle $theta$.
 2. One of the $n$ answers will be $|w|^(1/n) (cos theta / n + i sin theta / n)$.
 3. The other $n-1$ answers are obtained by increasing the angle in increments of $(360 degree) / n$.

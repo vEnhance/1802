@@ -90,7 +90,7 @@ For now, a summary:
 
 So the really, really important principle to understand is:
 
-#proposition[
+#idea[
   A matrix *encodes all outputs* of a linear transformation $T$
   by *writing the outputs* of $T(bf(e)_1)$, ..., $T(bf(e)_n)$ as a list of *column vectors*.
 ]
@@ -138,7 +138,7 @@ here's an elaboration of @lintransf as I presented it today.
 == One matrix
 
 Here's the answer to the pop quiz in @lintransf (I'll restate the question first):
-#problem[
+#prob[
   If $T : RR^2 -> RR^2$ is a linear transform and it's given that
   $ T( vec(3,4) ) = vec(pi, 9) " and " T( vec(100, 100) ) = vec(0, 12) $
   what are the vectors for $T( vec(103,104) )$ and $T( vec(203, 204) )$?
@@ -155,7 +155,7 @@ Here's the answer to the pop quiz in @lintransf (I'll restate the question first
 
 Now more generally, here's the example with the made-up numbers
 (I forget which random numbers the audience gave me for the actual recitation, sorry).
-#problem[
+#prob[
   If $T : RR^2 -> RR^2$ is a linear transform and it's given that
   $ T( vec(1,0) ) = vec(1, 3) " and " T( vec(0,1) ) = vec(2, 4) $
   what is $T( vec(50, 70) )$?
@@ -185,7 +185,7 @@ as we did for @pop2.
 (In recitation, I actually circled where $1 dot 50$ and $2 dot 70$ showed up
 in the solution to @pop2 on the board.)
 
-#remark[The identity matrix deserves its name][
+#example(title: [Example: the identity matrix deserves its name])[
   This also gives a "better" reason why the identity matrix is the one
   with $1$'s on the diagonal than the "well try multiplying by it".
 
@@ -214,7 +214,7 @@ Any time we have functions in math, we can _compose_ them.#footnote[
 So let's play the same game with a pair of functions $S$ and $T$,
 and think about their composition $S compose T$.
 
-#problem[
+#prob[
   Let $T : RR^2 -> RR^2$ be a linear transform such that
   $ T( vec(1,0) ) = vec(1, 3) " and " T( vec(0,1) ) = vec(2, 4). $
   Then let $S : RR^2 -> RR^2$ be the linear transform such that

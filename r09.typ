@@ -21,7 +21,7 @@ and you still do everything componentwise.
 (Don't worry about Kepler's law.)
 There's one additional theorem you need.
 
-#theorem[Arc length][
+#thm[Arc length][
   $L = integral_("start time")^("stop time") ||bf(v)(t)|| dif t$.
 ]
 

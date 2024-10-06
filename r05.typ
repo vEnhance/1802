@@ -62,7 +62,7 @@ which has two nonreal roots $(1 plus.minus sqrt(-3))/2$.
 
 = An example showing a use for eigenvectors (not for exam)
 
-#exercise[
+#problem[
   Let $M$ be the matrix $mat(2,1;0,3)$.
   Calculate $M^100$.
 ]
@@ -132,7 +132,7 @@ Math builds on itself, so you need to have those down to make further progress h
 == Terminology
 
 First, the relevant definition:
-#definition[
+#defn[
   Given a square matrix $A : RR^n -> RR^n$, suppose that
   $ A bf(v) = lambda bf(v) $
   for some nonzero vector $bf(v)$.
@@ -143,7 +143,7 @@ The prefix "eigen-" means self or own.
 It means that $A$ maps $bf(v)$ to a multiple of itself.
 
 The basic problem is:
-#problem[
+#prob[
   If we have a matrix $A$, can we find any and all the eigen-things for it?
 ]
 
