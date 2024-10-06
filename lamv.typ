@@ -27,5 +27,6 @@ TBD.
 #pagebreak()
 
 #part[Multivariable differentiation]
-TBD.
+#include "src/grad.typ"
+
 #pagebreak()
