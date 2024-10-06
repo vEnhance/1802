@@ -149,7 +149,7 @@ See the following picture from #url("https://en.wikipedia.org/wiki/Triple_produc
 (in the Wikipedia figure, $bf(a)$ denotes our $arrow(D A)$, etc.).
 
 #figure(
-  image("figures/parallelepiped.png", width: 50%),
+  image("media/parallelepiped.png", width: 50%),
   caption: [Triple product image taken from Wikipedia.],
 )
 
