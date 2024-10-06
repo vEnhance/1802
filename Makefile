@@ -12,5 +12,8 @@ figures/%.pdf: figures/%.asy
 figures/%.png: figures/%.pdf
 	magick -density 384 $< $@
 
-%.pdf: %.typ $(PNG_OUTPUTS)
+%.pdf: %.typ
+	typst compile $<
+
+lamv.pdf: lamv.typ $(wildcard src/*.typ) $(PNG_INPUTS)
 	typst compile $<
