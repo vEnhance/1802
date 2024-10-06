@@ -31,7 +31,22 @@ The contrast to what you're used to is that:
   with $x$ representing the input and $y = f(X)$ representing output.
 - In 18.02, when we draw a function $f(x,y)$
   both $x$ and $y$ are inputs; we treat them all with equal respect.
-  Meanwhile, the _output_ of the function does _not_ have a variable name in the graph.
+  Meanwhile, the _output_ of the function does _not_ have a variable name.
+  If we really want to refer to it, we might sometimes write $f = 2$ as a shorthand
+  for "the level curve for output $2$".
+
+To repeat that in table format:
+#figure(
+  table(
+    columns: 2,
+    align: left,
+    table.header([18.01 $x y$-graphs], [18.02 level curves]),
+    [$x$ is input], [Both variables are inputs],
+    [$y$ is output], [No variable name for output],
+  ),
+  kind: table
+)
+
 
 We give some examples.
 
@@ -87,8 +102,8 @@ by plotting all the points in $RR^3$ for which $f(x,y,z) = c$.
 
 #example[
   If $f(x,y,z) = x + 2 y + 3 z$,
-  all the level surfaces of $f$ are planes with normal vectors $RR^3$
-  which are parallel to each other.
+  all the level surfaces of $f$ are planes in $RR^3$,
+  which are parallel to each other with normal vector $vec(1,2,3)$.
 ]
 
 #pagebreak()
