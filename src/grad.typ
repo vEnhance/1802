@@ -47,16 +47,90 @@ To repeat that in table format:
   kind: table
 )
 
-
 We give some examples.
 
 === Example: the level curves of $f(x,y) = y - x^2$
 
+To draw the level curves of the function $f(x, y) = y - x^2$,
+we begin by recalling that a level curve corresponds to a set of points $(x, y)$
+such that the function takes on a constant value, say $c$.
+For our function, this becomes:
+$ y - x^2 = c $
+which rearranges to
+$ y = x^2 + c. $
+This is an equation in 18.01 form, where $y$ is a function of $x$,
+so you can draw it easily.
+This equation represents a family of parabolas, each corresponding to a different value of $c$.
+As $c$ varies, the level curves are parabolas that shift upward or downward along the $y$-axis.
+The shape of these curves is determined by the quadratic term $x^2$,
+which indicates that all level curves will have the same basic "U" shape.
+
+#figure(
+  image("figures/grad-levelcurve1.png"),
+  caption: [The level curves of $f(x,y) = y-x^2$.],
+)
+
 === Example: the level curves of $f(x,y) = x - y^2$
+
+This example is exactly like the previous one, except the roles of $x$ and $y$ are flipped.
+
+#figure(
+  image("figures/grad-levelcurve2.png"),
+  caption: [The level curves of $f(x,y) = x-y^2$.],
+)
 
 === Example: the level curves of $f(x,y) = x^2+y^2$
 
+For each $c$ we want to sketch the curve
+$ x^2 + y^2 = c. $
+When $c < 0$, no points at all appear on this curve, and when $c = 0$
+the only point is the origin $(0,0)$.
+For $c > 0$ this equation represents a family of circles centered at the origin $(0, 0)$,
+with radius $sqrt(c)$.
+For example:
+
+- No points work for $c < 0$.
+- For $c = 0$, the level curve is the single point $(0,0)$.
+- For $c = 1$, the level curve is a circle with radius $1$.
+- For $c = 4$, the level curve is a circle with radius $2$.
+- For $c = 9$, the level curve is a circle with radius $3$.
+
+As $c$ increases, the circles expand outward from the origin.
+These concentric circles represent the level curves of the function $f(x, y) = x^2 + y^2$.
+
+#figure(
+  image("figures/grad-levelcurve3.png"),
+  caption: [Four of the level curves for $f(x,y) = x^2+y^2$.],
+)
+
 === Example: the level curves of $f(x,y) = |x| + |y|$
+
+To draw the level curve for $c$, we are looking at
+$ |x| + |y| = c. $
+
+Like before, if $c < 0$ there are no pairs $(x,y)$ at all and for $c = 0$ there is only a single point.
+
+This equation represents a family of polygons.
+Specifically, for a given value of $c$,
+the set of points that satisfy this equation form a diamond shape centered at the origin.
+Indeed, in the first quadrant (where the absolute values don't do anything)
+it represents the line segment joining $(0,c)$ to $(c,0)$.
+
+So for example,
+
+- When $c < 0$, there are no points.
+- For $c = 0$, the level curve is just the point $(0,0)$.
+- For $c = 1$, the level curve is a diamond with vertices at $(1, 0)$, $(-1, 0)$, $(0, 1)$, and $(0, -1)$.
+- For $c = 2$, the level curve is a larger diamond with vertices at $(2, 0)$, $(-2, 0)$, $(0, 2)$, and $(0, -2)$.
+- For $c = 3$, the diamond expands further, with vertices at $(3, 0)$, $(-3, 0)$, $(0, 3)$, and $(0, -3)$.
+
+As $c$ increases, the diamonds expand outward, maintaining their shape but increasing in size.
+Each level curve is a square rotated by 45 degrees.
+
+#figure(
+  image("figures/grad-levelcurve4.png"),
+  caption: [Four of the level curves for $f(x,y) = |x|+|y|$.],
+)
 
 == [RECIPE] Drawing level curves
 
@@ -192,7 +266,8 @@ Here are a bunch more examples that you can try to follow along:
 
 = The gradient
 
-The gradient is the single most important concept in the multivariable differentiation.
+The gradient of $f : RR^n -> RR$, denoted $nabla f$,
+is the single most important concept in this part of the notes.
 Although its definition is actually quite easy to compute,
 I want to give a proper explanation for where this comes from.
 
@@ -201,7 +276,49 @@ Throughout this section, remember two important ideas:
 - The goal of the derivative is to approximate a function by a linear one.
 - Everything you used slopes for before, you should use normal vectors instead.
 
+If you want spoilers for what's to come, see the following table.
+
+#figure(
+  table(
+    columns: 3,
+    align: left,
+    table.header([Thing], [18.01], [18.02]),
+    [Input], [$f: RR -> RR$], [$f: RR^n -> RR$],
+    [Output], [$f': RR -> RR$], [$nabla f: RR^n -> RR^n$],
+    [Think of as], [Slope (rise/run)], [Measures change in $n$ directions],
+    [Approximation], [Multiply by small run], [Dot product with small displacement],
+    [Picture], [Slope of tangent in $x y$-graph], [Normal vector to tangent of level curve]
+  ),
+  kind: table,
+  caption: [How to think of $nabla f$.]
+)
+
 == [TEXT] The point of differentiation is to approximate nearby values with linear ones
+
+In 18.01, when $f : RR -> RR$, you defined a *derivative* $f'(p)$ at each input $p in RR$,
+which you thought of as the *slope* of the *tangent line* at $p$.
+Think $f(5.01) approx f(5) + f'(5) dot 0.01$.
+This slope roughly tells you, if you move a slight distance away from the input $p$,
+this is how fast you expect $f$ to change.
+To drill the point home again in 18.01,
+$ f(p + epsilon) = f(p) + f'(p) dot epsilon. $
+
+#figure(
+  image("figures/grad-slope.png", width: auto),
+  caption: [The slope of $f'(p)$ tells you how quickly $f$ changes near $p$.],
+)
+
+The 18.01 derivative had type "scalar".
+But for a _two-variable_ function, that's not enough.
+For concreteness, let's take
+$ f(x,y) = x^2+y^2 $
+as our example function (for which we have drawn level curves before),
+and consider some point $(3,4)$.
+
+Then, what would a point "close" to $(3,4)$ mean?
+The point $(3.01,4)$ is close, but so is $(3,4.01)$.
+For that matter, so is $(3.01, 4.01)$.
+So having a single number isn't enough to describe the rate of change anymore.
 
 == [RECIPE] Calculating the gradient
 == [RECIPE] Linear approximation
