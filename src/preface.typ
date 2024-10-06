@@ -156,3 +156,8 @@ These notes are most closely related to Poonen's fall 2021 notes, available at
 == [SIDENOTE] If you're thinking of becoming a math major
 
 == [SIDENOTE] Acknowledgments
+
+#todo[write this]
+
+For now: the author thanks OpenAI for being gifted a Plus subscription to ChatGPT,
+which helped a lot with generating text explanations throughout the document.
