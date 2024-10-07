@@ -24,14 +24,16 @@ lessness. \
 This handout (and any other DLC's I write) are posted at
 #url("https://web.evanchen.cc/1802.html").
 
-A couple of announcements:
-
-- I'm working on writing a replacement set of lecture notes!
+#notify(title: [I'm writing unified course notes now!])[
+  I'm working on writing a replacement set of lecture notes!
   You can find them posted on my usual website, filename `lamv.pdf`.
-- Lichen Zhang will be here for a while as teaching mentee,
+]
+#notify(title: [Say hi to Lichen])[
+  Lichen Zhang will be here as a teaching mentee,
   meaning he'll observe some number of the recitations
   and then try to teach one of them (and get feedback from you all).
   Please be nice to Lichen!
+]
 
 = Review of Oct 1 recitation and Oct 2-3 lecture
 
@@ -77,6 +79,12 @@ See the table in `r09.pdf`. The two important things to know are:
 
 To concretely compute $nabla f$, take the partial derivatives of $f$ with respect
 to each of the input variables.
+
+== Notational difference
+
+I think Maulik places arrows over $nabla f$ to emphasize it's a vector,
+but I'm not going to write the arrow because I think it makes the equation harder to read.
+Feel free to add the arrow yourself if it helps you, though.
 
 = Recitation questions from official course
 
