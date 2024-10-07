@@ -29,9 +29,10 @@ This handout (and any other DLC's I write) are posted at
   You can find them posted on my usual website, filename `lamv.pdf`.
 ]
 #notify(title: [Say hi to Lichen])[
-  Lichen Zhang will be here as a teaching mentee,
+  At some point (I don't know exactly when)
+  Lichen will be here as a teaching mentee,
   meaning he'll observe some number of the recitations
-  and then try to teach one of them (and get feedback from you all).
+  and then try to teach one (and get feedback from you all).
   Please be nice to Lichen!
 ]
 
