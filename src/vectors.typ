@@ -99,3 +99,5 @@ and now the whole discussion carries over wholesale.
 #pagebreak()
 
 = The cross product
+
+#todo[To be written]

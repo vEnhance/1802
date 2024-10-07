@@ -53,9 +53,17 @@ To expand on this:
   <t-apply>
 ]
 
-More generally, if $T : RR^n -> RR^m$,
-then telling you the output of $T(bf(e)_1)$, ..., $T(bf(e)_n)$
-is the smallest amount of information I can give you that lets you reconstruct any other output.
+More generally, from understanding the solution to the above two questions,
+you should understand the following important statement that we'll use over and over.
+
+#memo[
+  Let $T : RR^n -> RR^m$ be a linear transformation.
+  If you know the outputs $T$ on a basis,
+  then you can deduce the value of $T$ at any other input.
+]
+
+For now "basis" refers to just the $n$ vectors $bf(e)_1$, ..., $bf(e)_n$.
+But later on we will generalize this notion to some other settings too.
 
 == Matrix encoding
 
@@ -69,15 +77,12 @@ A _matrix_ is a way of _encoding_ the _outputs_ of $T$ using as few numbers as p
 Now, I told you a linear transformation $T$ can be _encoded_ as a matrix.
 This is really easy: glue the outputs of $T$ at the basis vectors and format it as an array:
 $ T( vec(1,0) ) = vec(1, 3) " and " T( vec(0,1) ) = vec(2, 4)
-  <==> T " encoded as " mat(1,2;3,4) $
+  <==> T " encoded as " mat(1,2;3,4). $
 
-#todo[Write the other examples]
+Here's more examples.
 
-#remark(title: [The identity matrix deserves its name])[
-  This also gives a "better" reason why the identity matrix is the one
-  with $1$'s on the diagonal than the "well try multiplying by it".
-
-  Let $I : RR^3 -> RR^3$ denote the 3d identity function.
+#example(title: [Example: The identity matrix deserves its name])[
+  Let $I : RR^3 -> RR^3$ denote the 3D identity function, meaning $I(bf(v)) = bf(v)$.
   To encode it, we look at its values at $bf(e)_1$, $bf(e)_2$, $bf(e)_3$:
   $
     I(bf(e)_1) = bf(e)_1 = vec(1,0,0),
@@ -88,16 +93,21 @@ $ T( vec(1,0) ) = vec(1, 3) " and " T( vec(0,1) ) = vec(2, 4)
   $
   We encode it as a matrix by writing the columns side by side, getting what you expect:
   $ I " encoded as " mat(1,0,0;0,1,0;0,0,1). $
+  This gives a more natural reason why the identity matrix
+  is the one with $1$'s on the diagonal and $0$'s elsewhere
+  (compared to the "well try multiplying by it" you learned in high school).
 ]
 
+#todo[Write more examples]
 
-== TEXT: Matrix multiplication <matrix-mult>
+== [SIDENOTE] Matrix multiplication <matrix-mult>
 
 In the prerequisites, I said that you were supposed to know the rule for
 multiplying matrices, so you should already know for example that
 $ mat(5,6;7,8) mat(1,2;3,4) = mat(23, 34; 31, 46). $
 
-The goal of this section is to now explain why matrix multiplication is defined in this funny way.
+The goal of this section is to now explain why matrix multiplication
+is defined in this funny way.
 We will see two results:
 
 - Multiplication of the matrix for $T$ by a column vector $bf(v)$
@@ -163,10 +173,11 @@ But in 18.700/18.701, the matrix multiplication recipe is a _theorem_;
 it's what happens if you generalize @pop3 to eight variables
 (or $n^2+n^2 = 2n^2$ variables for $n times n$ matrices).
 
-As an aside, this should explain why matrix multiplication is associative but not commutative:
-- Because #link("https://w.wiki/BAHh")[function composition is associative],
-  so is matrix multiplication.
-- Because function composition is _not_ commutative in general,
-  matrix multiplication isn't either.
+#digression[
+  As an aside, this should explain why matrix multiplication is associative but not commutative:
 
-== Determinants
+  - Because #link("https://w.wiki/BAHh")[function composition is associative],
+    so is matrix multiplication.
+  - Because function composition is _not_ commutative in general,
+    matrix multiplication isn't either.
+]
