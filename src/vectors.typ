@@ -59,7 +59,7 @@ and now the whole discussion carries over wholesale.
 
 == [RECIPE] Projection of one vector along the direction of another
 
-#recipe[Projecting one vector along another][
+#recipe(title: [Recipe for projecting one vector along another])[
   Suppose $bf(v)$ and $bf(w)$ are given vectors in $RR^n$.
   To find the length of the projection of $bf(v)$ along $bf(w)$:
 
@@ -80,10 +80,15 @@ and now the whole discussion carries over wholesale.
 
 == [RECIPE] Normal vectors to a plane
 
-#recipe[Normal vector to a plane][
+#memo[
+  Everything we used slope for in 18.01,
+  we should rethink in terms of normal vectors for 18.02.
+]
+
+#recipe(title: [Recipe for calculating normal vector to a plane])[
   To find the normal vector of a plane given in the form $a x + b y + c z = d$:
 
-  1. Output $angle.l a,b,c angle.r$.
+  1. Output $vec(a,b,c)$ (or any other multiple of $vec(a,b,c)$).
 ]
 
 

@@ -67,32 +67,46 @@ Table @operations lists some common examples with vectors you've seen from preca
   kind: table
 ) <operations>
 
-== [SIDENOTE] Where does @operations come from?
+#digression[
+  A common question at this point is how you are supposed to figure out
+  whether a certain operation is allowed or not.
+  For example, many students want to try and multiply two vectors together component-wise;
+  why is
+  $ vec(2, 3) vec(4, 5) =^? vec(8, 15) $
+  not a legal sentence?
+  It seems like it would make sense.
 
-A common question at this point is how you are supposed to figure out
-whether a certain operation is allowed or not.
-For example, many students want to try and multiply two vectors together component-wise;
-why is
-$ vec(2, 3) vec(4, 5) =^? vec(8, 15) $
-not a legal sentence?
-It seems like it would make sense.
+  The answer is that you _don't_ have to figure out — you are _told_;
+  @operations isn't something that you derive.
+  Instead, it's the set of _definitions_ which you have been given.
 
-The answer is that you _don't_ have to figure out — you are _told_;
-@operations isn't something that you derive.
-Instead, it's the set of _definitions_ which you have been given.
-Or more sarcastically, it's all just a social construct.#footnote[Of
-  course, it’s not quite as arbitrary as it sounds. The long explanation
-  goes something like this. Definitions aren't judged by "correctness",
-  because that doesn't even make sense; you are allowed to make up
-  whatever definitions you want. Instead, definitions are judged by whether they are _useful_.
-  Which is obviously subjective, but it’s less subjective than you might guess.]
+  (Or more sarcastically, it's all just a social construct.
+  Well, it's bit more nuanced than that.
+  Definitions aren't judged by "correctness";
+  that doesn't make sense; you are allowed to make up whatever definitions you want.
+  Instead, definitions are judged by whether they are _useful_.
+  Which is obviously subjective, but it’s less subjective than you might guess.)
+]
 
 == [TEXT] Why you should care
+
+There are two action items to take away from this section.
+
+=== When learning a new object, examine its types first
 
 What this means is that, every time you encounter a new kind of
 mathematical object or operation (e.g. partial derivative),
 *the first thing you should do is ask what types are at play*.
 This helps give you a sanity check on your understanding of the new concept.
+
+We'll use boxes like this throughout the box to do this:
+#typesig[
+  This is an example of a type signature box.
+  When we want to make comments about the types of new objects,
+  we'll put them in boxes like this.
+]
+
+=== Whenever writing an equation, make sure the types check out
 
 Practically, what's really useful is that if you have a good handle on types,
 then it *gives you a way to type-check your work*.

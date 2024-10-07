@@ -22,7 +22,7 @@ The important principle to understand is that if you know the values of a transf
 at enough points, you can recover the rest.
 Here's an easy example to start:
 
-#problem[
+#prob[
   If $T : RR^2 -> RR^2$ is a linear transform and it's given that
   $ T( vec(3,4) ) = vec(pi, 9) " and " T( vec(100, 100) ) = vec(0, 12) $
   what are the vectors for $T( vec(103,104) )$ and $T( vec(203, 204) )$?
@@ -35,7 +35,7 @@ Here's an easy example to start:
 ]
 
 Here's another example.
-#problem[
+#prob[
   If $T : RR^2 -> RR^2$ is a linear transform and it's given that
   $ T( vec(1,0) ) = vec(1, 3) " and " T( vec(0,1) ) = vec(2, 4) $
   what is $T( vec(50, 70) )$?
@@ -73,7 +73,7 @@ $ T( vec(1,0) ) = vec(1, 3) " and " T( vec(0,1) ) = vec(2, 4)
 
 #todo[Write the other examples]
 
-#remark[The identity matrix deserves its name][
+#remark(title: [The identity matrix deserves its name])[
   This also gives a "better" reason why the identity matrix is the one
   with $1$'s on the diagonal than the "well try multiplying by it".
 
@@ -127,7 +127,7 @@ Any time we have functions in math, we can _compose_ them.#footnote[
 So let's play the same game with a pair of functions $S$ and $T$,
 and think about their composition $S compose T$.
 
-#problem[
+#prob[
   Let $T : RR^2 -> RR^2$ be a linear transform such that
   $ T( vec(1,0) ) = vec(1, 3) " and " T( vec(0,1) ) = vec(2, 4). $
   Then let $S : RR^2 -> RR^2$ be the linear transform such that

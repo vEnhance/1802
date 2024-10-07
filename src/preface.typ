@@ -9,7 +9,7 @@ These are lecture notes based upon the fall 2024 instance of the course, taught 
 == [TEXT] Goals of this book
 
 These notes have the following lofty goal:
-#proposition[
+#goal[
   In theory, an incoming MIT student should be able to pass the 18.02 final exam
   by *only* reading these notes and problems, working through several practice final exams,
   and going to a weekly office-hours#footnote[
@@ -47,14 +47,28 @@ But with this goal in mind, here are some parts of the design philosophy of this
   They are meant to stand alone, and anything that would normally
   be said out loud is instead written out in text.
 - *It has full solutions to its exercises*. I really believe in writing things out.
+  #todo[Okay this is not true yet lol I'm working on it. There will be solutions one day.
+  Especially since ChatGPT can do all the exercises anyway kappa.]
+
 - *It tries to explain where formulas come from*.
   For example, these notes spell out how matrix multiplication corresponds
   to function composition (in @matrix-mult), something that isn't clearly stated in many places.
   I believe that seeing this context makes it easier to internalize the material.
 - *It marks more complicated explanations as "not for exam"*.
-  That is, we draw a clear line between
+  I hope the digressions are interesting to you (or I wouldn't have written them).
+  But I want to draw a clear boundary between
   "this explanation is meant for your curiosity or to show where this formula comes from"
   versus "this is something you should know by heart to answer exam questions".
+
+  There are two kinds of ways we mark things as not for exam:
+
+  - Anything in a gray digression box is not for exam.
+    #digression[
+      Here's an example of a digression box.
+    ]
+
+  - Anything in an entire section marked *[SIDENOTE]* is not for exam.
+
 - *It's written by Evan Chen*. That's either really good or really bad, depending on your tastes.
   If you've ever seen me teach a class in person, you know what I mean.
 
@@ -100,7 +114,7 @@ and calculus as taught in United States high schools is assumed.
     $
 
     For example, you should be able to verify the correctness of the following equation:
-    $ det mat(1, 0, 5; 0, 2, 13; 4, 1, 1) = -51. $
+    $ det mat(0, 1, 5; 2, 0, 13; 1, 4, 1) = 51. $
 
     We won't assume you know where this formula comes from,
     and in fact we won't be able to explain that within these notes.
@@ -112,6 +126,12 @@ and calculus as taught in United States high schools is assumed.
 
   This is covered in the course 18.01 at MIT,
   and also in the AP calculus courses in the United States.
+
+#tip[
+  If you're not at MIT, you should replace the words "18.01" and "18.02" with
+  the course names corresponding to "single-variable calculus"
+  and "multi-variable calculus" at your home institution.
+]
 
 No proof-based background is expected.
 
@@ -131,7 +151,7 @@ No proof-based background is expected.
 
 - The fifth part ...
 
-#todo[...]
+#todo[finish writing this]
 
 == [TEXT] The structure of this book
 
@@ -148,10 +168,14 @@ Here's an explanation of what they mean.
 / RECAP: A summary of what happened in this chapter.
 / EXER: Problems to work on.
 
+You'll also see some colored boxes that mark where certain chunks begin and end.
+These should be self-explanatory.
+
 == [TEXT] Other references
 
-These notes are most closely related to Poonen's fall 2021 notes, available at
-#todo[link].
+These notes are most closely related to this one are
+probably Poonen's fall 2021 notes, available at
+#url("https://math.mit.edu/~poonen/notes02.pdf").
 
 == [SIDENOTE] If you're thinking of becoming a math major
 
