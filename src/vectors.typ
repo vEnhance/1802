@@ -8,6 +8,11 @@
 
 == [RECIPE] Areas and volumes
 
+== [TEXT] Directions and unit vectors
+
+== [RECIPE] Computing unit vectors
+
+
 #pagebreak()
 
 = The dot product
@@ -18,7 +23,7 @@
 
 == [TEXT] Normal vectors to lines in $RR^2$
 
-#todo[clean up ends]
+#todo[work this in]
 If you are confused about normal vectors in the plane, it might help to first do the $RR^2$ case,
 which is easier to draw and for which you might have better intuition from eighth or ninth
 grade algebra.

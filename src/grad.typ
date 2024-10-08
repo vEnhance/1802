@@ -210,7 +210,7 @@ See figure below.
 
 #figure(
   image("figures/grad-slope.png", width: auto),
-  caption: [The slope $f'(p)$ tells you how quickly $f$ changes near $p$.],
+  caption: [In 18.01, the slope $f'(p)$ tells you how quickly $f$ changes near $p$.],
 )
 
 The 18.01 derivative had type "scalar".
@@ -242,7 +242,7 @@ The second blank is similar.
 So we need a way to calculate these; the answer to our wish is
 what's called a _partial derivative_.
 
-== [TEXT] Computing partial derivatives is actually just 18.01
+== [TEXT] Computing partial derivatives is actually just 18.01 <text-compute-partial>
 
 The good news about partial derivatives is that *they're actually really easy to calculate*.
 You pretty much just need to do what you were taught in 18.01
@@ -262,11 +262,11 @@ Here's the definition:
 ]
 
 #typesig[
-  Each partial derivative has the same type signature as $f$.
-  If $f : RR^n -> RR$ is a function
-  then the partial derivative $(partial f) / (partial x) = f_x$
-  has the same type signature of $f$:
-  it accepts points in $RR^n$ and outputs real numbers.
+  Each partial derivative has the same type signature as $f$. That is:
+
+  - Given $f : RR^n -> RR$ which accepts *points* in $RR^n$ and outputs *scalars*.
+  - Then the partial derivative $(partial f) / (partial x) = f_x$
+    also accepts *points* in $RR^n$ and outputs *scalars*.
 ]
 
 But that's a lot of words.
@@ -301,7 +301,7 @@ In fact you could probably just read the examples and ignore the definition abov
   $ f_x (x,y,z) = y z dot e^(x y z). $
   For analogous reasons:
   $
-    f_y (x,y,z) &= z x dot e^(x y z) \
+    f_y (x,y,z) &= x z dot e^(x y z) \
     f_z (x,y,z) &= x y dot e^(x y z).
   $
 ]
@@ -338,7 +338,7 @@ In fact you could probably just read the examples and ignore the definition abov
   We'll return to @example-circle-3-4 later when we introduce the gradient.
 ]
 
-== [RECIPE] Computing partial derivatives
+== [RECIPE] Computing partial derivatives <recipe-compute-partial>
 
 You probably can already figure out the recipe from the sections above,
 but let's write it here just for completeness.
@@ -357,14 +357,69 @@ but let's write it here just for completeness.
 
 We just saw three examples where we computed the partials for $f(x,y) = x^3 y^2 + cos (y)$,
 $f(x,y,z) = e^(x y z)$, and $f(x,y) = x^2+y^2$.
-
 Here are a bunch more examples that you can try to follow along:
 
-#todo[Insert a bunch of examples here]
+#question[
+  Calculate the partial derivatives of $f(x,y,z) = x+y+z$.
+]
+#solution[
+  The partial derivative with respect to $x$ is obtained by differentiating
+  $ x |-> x + y + z. $
+  Since we pretend $y$ and $z$ are constants, we just differentiate $x$ to get $1$.
+  The same thing happens with $y$ and $z$.
+  Hence
+  $
+  f_x (x,y,z) &= 1 \
+  f_y (x,y,z) &= 1 \
+  f_z (x,y,z) &= 1.
+  $
+]
+
+#question[
+  Calculate the partial derivatives of $f(x,y,z) = x y + y z + z x$.
+]
+#solution[
+  We differentiate with respect to $x$ first, where we view as the function
+  $ x |-> (y + z) x + y z $
+  pretending that $y$ and $z$ are constants.
+  This gives derivative $f_x (x,y,z) = y + z$.
+  Similarly, $f_y (x,y,z) = x + z$ and $f_z (x,y,z) = x + y$.
+  So
+  $
+  f_x (x, y, z) &= y + z  \
+  f_y (x, y, z) &= z + x  \
+  f_z (x, y, z) &= x + y.
+  $
+]
+
+#question[
+  Calculate the partial derivatives of $f(x,y) = x^y$, where w
+]
+#solution[
+  Our last example is $ f(x,y) = x^y, $
+  where let's say for $x,y > 0$ for simplicity
+  (otherwise the exponentiation may not be defined).
+
+  If we view $y$ as a constant and $x$ as a variable, then
+  $ x |-> x^y $
+  is differentiated by the "power rule" to get $y x^(y-1)$.
+  However, if we view $x$ as constant and $y$ as a variable, then
+  $ y |-> x^y = e^(log x dot y) $
+  ends up with derivative $log x dot e^(log x dot y) = log x dot e^y$.
+  Hence
+  $
+    f_x (x,y) &= y x^(y-1) \
+    f_y (x,y) &= log x dot e^y.
+  $
+]
 
 == [EXER] Exercises
 
-#todo[Generate a bunch of boring exercises]
+Find all the partial derivatives of the following functions, defined for $x,y,z > 0$:
+
+- $f(x,y,z) = x / y + y / z + z / x$
+- $f(x,y,z) = sin(x y z)$
+- $f(x,y,z) = x^y + y^z + z^x$.
 
 #pagebreak()
 
@@ -449,17 +504,31 @@ $
 
 Now the idea that will let us do geometry is to replace the pair of numbers
 $epsilon_x$ and $epsilon_y$ with a single "small displacement" vector
-$bf(u) = vec(epsilon_x, epsilon_y)$,
+$bf(v) = vec(epsilon_x, epsilon_y)$,
 and the pair of numbers $6$ and $6$
 with the vector $vec(6,8)$ instead,
 so that *the approximation part just becomes a dot product*:
-$ f(vec(3,4) + bf(u)) approx f(vec(3,4)) + vec(6,8) dot bf(u). $
+$ f(vec(3,4) + bf(v)) approx f(vec(3,4)) + vec(6,8) dot bf(v). $
+
+The approximation part is used so often it has its own name and symbol.
+#warning[
+  In some places you see the abbreviation
+  $D_bf(v) f (P) := nabla f (P) dot bf(v)$
+  and the name "directional derivative" for it.
+  I hate this term, because some people have different notations and definitions
+  (according to Wikipedia, some authors require $bf(v)$ to be a unit vector, etc.).
+
+  So I will always just write the dot product $nabla f (P) dot bf(v)$ instead,
+  which is unambiguous and means you have one less symbol to remember.
+]
 
 In full abstraction, we can rewrite linear approximation as:
 #memo[
-  Linear approximation asserts that if $f$ is differentiable at a point $P$,
-  then for small displacement vectors $bf(u)$ we should have
-  $ f(P + bf(u)) approx f(P) + nabla f(P) dot bf(u). $
+  Suppose if $f$ is differentiable at a point $P$.
+  Then for small displacement vectors $bf(v)$,
+  the *net change* from $f(P)$ to $f(P + bf(u))$
+  is approximated by the dot product $ nabla f(P) dot bf(u). $
+  This procedure is called *linear approximation*.
 ]
 Up until now, all we've done is rewrite the earlier equation with a different notation;
 so far, nothing new has been introduced.
@@ -484,26 +553,100 @@ then I'll explain why the gradient is the normal vector we need to complete our 
   2. Output the vector whose components are those partial derivatives.
 ]
 
-#todo[examples...]
+#question[
+  Consider the six functions
+  $
+  f_1(x,y) = x^3 y^2 + cos(y), &#h(2em) f_2(x,y,z) = e^(x y z)  \
+  f_3(x,y) = x^2 + y^2, &#h(2em) f_4(x,y,z) = x+y+z \
+  f_5(x,y,z) = x y + y z + z x  &#h(2em) f_6(x,y) = x^y
+  $
+  from back in @text-compute-partial and @recipe-compute-partial.
+  Compute all six gradients.
+]
 
+#solution[
+  Take the partial derivatives we already computed and make them the components:
+  $
+  nabla f_1 (x,y) = vec(3x^2 y^2, 2 x^3 y - sin(y)), &#h(2em)
+  nabla f_2 (x,y) = vec( y z e^(x y z), x z e^(x y z), x y e^(x y z) ), \
+  nabla f_3 (x,y) = vec(2 x, 2 y), &#h(2em)
+  nabla f_4 (x,y,z) = vec(1,1,1), \
+  nabla f_5 (x,y,z) = vec(y+z, x+z, x+y), &#h(2em)
+  nabla f_6 (x,y) = vec(y x^(y-1), log(y) dot x^y).
+  $
+]
 
 == [RECIPE] Linear approximation
 
 We actually could have stated an equivalent recipe right after we
 defined partial derivatives,
-but conceptually I think it's better to think of everything in terms of the gradient.
+but conceptually I think it's better to think of everything in terms of the gradient,
+so I waited until after I had defined the gradient to write the recipe.
 
 #recipe(title: [Recipe for calculating the gradient])[
-  To do linear approximation of $f(P + bf(u))$ for a small displacement vector $bf(u)$:
+  To do linear approximation of $f(P + bf(v))$ for a small displacement vector $bf(v)$:
 
   1. Compute $nabla f (P)$, the gradient of $f$ at the point $P$.
-  2. Take the dot product $nabla f(P) dot bf(u)$ to get a number, the approximate change.
+  2. Take the dot product $nabla f(P) dot bf(v)$ to get a number, the approximate change.
   3. Output $f(P)$ plus the change from the previous step.
 ]
 
-#todo[examples...]
+#question[
+  Let $f(x, y) = x^2 + y^2$.
+  Approximate the value of $f(3.01, 4.01)$ by using linear approximation from $(3,4)$.
+]
+#solution[
+  Compute the gradient by taking both partial derivatives:
+  $ nabla f(x, y) = vec(2x, 2y). $
+  So the gradient vector at the starting point is given by
+  $ nabla f(3, 4) = vec(6, 8). $
+  The target point $(3.01, 4.01)$ differs from the starting point $(3,4)$
+  by the displacement $bf(v) = (0.01, 0.01)$.
+  So the approximate change in $f$ is given by
+  $ underbrace(vec(6,8), = nabla f(3,4)) dot underbrace(vec(0.01, 0.01), =bf(v))
+    = (6 dot 0.01 + 8 dot 0.01) = 0.14. $
+  Therefore,
+  $ f(3.01, 4.01) approx underbrace(f(3,4), = 25) + 0.14 = 25.14. $
+]
 
-== [TEXT] Gradients are normal vectors
+
+#question[
+  Let $f(x, y) = x^3 - y^3$.
+  Approximate the value of $f(2.01, -1.01)$ by using linear approximation from $(2,-1)$.
+]
+#solution[
+  Compute the gradient by taking both partial derivatives:
+  $ nabla f(x, y) = vec(3x^2, -3y^2). $
+  So the gradient vector at the starting point $(2,-1)$ is given by
+  $ nabla f(2, -1) = vec(3(2)^2, -3(-1)^2) = vec(12, -3). $
+  The target point $(2.01, -1.01)$ differs from the starting point $(2,-1)$
+  by the displacement $bf(v) = (0.01, -0.01)$.
+  So the approximate change in $f$ is given by
+  $ underbrace(vec(12,-3), = nabla f(2,-1)) dot underbrace(vec(0.01, -0.01), =bf(v))
+    = (12 dot 0.01 + (-3) dot (-0.01)) = 0.15. $
+  Therefore,
+  $ f(2.01, -1.01) approx underbrace(f(2,-1), = 9) + 0.15 = 9.14. $
+]
+
+#question[
+  Let $f(x, y) = e^x sin(y) + 777$.
+  Approximate the value of $f(0.04, 0.03)$ by using linear approximation from the point $(0,0)$.
+]
+#solution[
+  Compute the gradient by taking both partial derivatives:
+  $ nabla f(x,y) = vec(e^x sin y, e^x cos y). $
+  So the gradient vector at the starting point $(0,0)$ is given by
+  $ nabla f(0,0) = vec(e^0 sin 0, e^0 cos 0) = vec(1,0). $
+  The target point $(0.04, 0.03)$ differs from the starting point $(0,0)$ by $(0.04, 0.03)$.
+  So the approximate change in $f$ is given by
+  $ underbrace(vec(1,0), = nabla f(0,0)) dot underbrace(vec(0.04, 0.03), =bf(v))
+    = 1 dot 0.04 + 0 dot 0.03 = 0.04. $
+  Therefore,
+  $ f(0.04, 0.01) approx underbrace(f(0,0), =777) + 0.04 = 777.04$.
+]
+
+== [TEXT] Gradient descent; and Gradients are normal vectors
+
 
 == [RECIPE] Computing tangent lines/planes to level curves/surfaces
 
@@ -516,10 +659,6 @@ but conceptually I think it's better to think of everything in terms of the grad
 ]
 
 #todo[examples...]
-
-== [TEXT] Gradient descent, and directional derivatives
-== [RECIPE] Directional derivatives
-
 
 == [RECAP] A recap of multivariable differentiation
 

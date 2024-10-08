@@ -69,7 +69,7 @@ which has two nonreal roots $(1 plus.minus sqrt(-3))/2$.
 This looks impossible at first glance without a computer.
 I'll show you how to do it with eigenvectors.
 
-#soln[
+#solution[
   In R03 and R04, I repeatedly stress the idea if you have a linear operator $T$,
   and you know the outputs of $T$ on _any_ basis, that tells you all the outputs of $T$.
 

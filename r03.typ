@@ -143,7 +143,7 @@ Here's the answer to the pop quiz in @lintransf (I'll restate the question first
   $ T( vec(3,4) ) = vec(pi, 9) " and " T( vec(100, 100) ) = vec(0, 12) $
   what are the vectors for $T( vec(103,104) )$ and $T( vec(203, 204) )$?
 ] <pop1>
-#soln[
+#solution[
   $
   T( vec(103,104) ) = vec(pi, 9) + vec(0, 12) = vec(pi, 21) \
   T( vec(203,204) ) = vec(pi, 9) + 2 vec(0, 12) = vec(pi, 33). #qedhere
@@ -160,7 +160,7 @@ Now more generally, here's the example with the made-up numbers
   $ T( vec(1,0) ) = vec(1, 3) " and " T( vec(0,1) ) = vec(2, 4) $
   what is $T( vec(50, 70) )$?
 ] <pop2>
-#soln[
+#solution[
   $ T( vec(50, 70) ) = 50 vec(1,3) + 70 vec(2,4) = vec(190, 430). #qedhere $
 ]
 
@@ -221,7 +221,7 @@ and think about their composition $S compose T$.
   $ S( vec(1,0) ) = vec(5, 7) " and " S( vec(0,1) ) = vec(6, 8). $
   Evaluate $S(T(vec(1, 0)))$ and $S(T(vec(0, 1)))$.
 ] <pop3>
-#soln[
+#solution[
   $
   S(T(vec(1, 0))) = S(vec(1, 3)) = 1 vec(5,7) + 3 vec(6, 8) = vec(23, 31) \
   S(T(vec(0, 1))) = S(vec(2, 4)) = 2 vec(5,7) + 4 vec(6, 8) = vec(34, 46). #qedhere

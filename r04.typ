@@ -150,7 +150,7 @@ in the following two examples however they liked:
 #exercise[
   What is the span of $vec(420, 321)$ and $vec(666, 5)$ in $RR^2$?
 ] <random2>
-#soln[
+#solution[
   Because the two vectors are not multiples of each other, they are linearly independent.
   (Alternatively, calculate $det(mat(420, 666; 321, 5)) = 420 dot 5 - 321 dot 666 = -211686 != 0$.)
 
@@ -160,7 +160,7 @@ in the following two examples however they liked:
 #exercise[
   What is the span of $vec(3,42,18)$, $vec(1, 53, 17)$, $vec(71,91,13)$ in $RR^3$?
 ] <random3>
-#soln[
+#solution[
   As we mentioned above (@big-coeff), you shouldn't eyeball three or more dimensions;
   if you get three vectors in $RR^3$ and want to know if they are linearly independent or not,
   you should always take the determinant.
