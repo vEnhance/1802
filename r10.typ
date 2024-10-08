@@ -36,7 +36,7 @@ This handout (and any other DLC's I write) are posted at
   Please be nice to Lichen!
 ]
 
-= Review of Oct 1 recitation and Oct 2-3 lecture
+= Review of Oct 2 recitation and Oct 3-4 lecture
 
 I won't repeat myself from `r09.pdf`; I have about 10 extra copies of `r09.pdf` if you need one.
 
