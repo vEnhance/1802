@@ -359,10 +359,10 @@ We just saw three examples where we computed the partials for $f(x,y) = x^3 y^2 
 $f(x,y,z) = e^(x y z)$, and $f(x,y) = x^2+y^2$.
 Here are a bunch more examples that you can try to follow along:
 
-#question[
+#sample[
   Calculate the partial derivatives of $f(x,y,z) = x+y+z$.
 ]
-#solution[
+#soln[
   The partial derivative with respect to $x$ is obtained by differentiating
   $ x |-> x + y + z. $
   Since we pretend $y$ and $z$ are constants, we just differentiate $x$ to get $1$.
@@ -371,14 +371,14 @@ Here are a bunch more examples that you can try to follow along:
   $
   f_x (x,y,z) &= 1 \
   f_y (x,y,z) &= 1 \
-  f_z (x,y,z) &= 1.
+  f_z (x,y,z) &= 1. #qedhere
   $
 ]
 
-#question[
+#sample[
   Calculate the partial derivatives of $f(x,y,z) = x y + y z + z x$.
 ]
-#solution[
+#soln[
   We differentiate with respect to $x$ first, where we view as the function
   $ x |-> (y + z) x + y z $
   pretending that $y$ and $z$ are constants.
@@ -388,14 +388,14 @@ Here are a bunch more examples that you can try to follow along:
   $
   f_x (x, y, z) &= y + z  \
   f_y (x, y, z) &= z + x  \
-  f_z (x, y, z) &= x + y.
+  f_z (x, y, z) &= x + y. #qedhere
   $
 ]
 
-#question[
+#sample[
   Calculate the partial derivatives of $f(x,y) = x^y$, where w
 ]
-#solution[
+#soln[
   Our last example is $ f(x,y) = x^y, $
   where let's say for $x,y > 0$ for simplicity
   (otherwise the exponentiation may not be defined).
@@ -409,7 +409,7 @@ Here are a bunch more examples that you can try to follow along:
   Hence
   $
     f_x (x,y) &= y x^(y-1) \
-    f_y (x,y) &= log x dot e^y.
+    f_y (x,y) &= log x dot e^y. #qedhere
   $
 ]
 
@@ -453,9 +453,7 @@ If you want spoilers for what's to come, see the following table.
     compared to the derivative in 18.01.]
 )
 
-To summarize the idea behind this section, I would say just remember that:
-
-== [TEXT] The gradient rewrites linear approximation into a dot product
+== [TEXT] The gradient rewrites linear approximation into a dot product <text-gradient>
 
 In 18.01, when $f : RR -> RR$ was a function and $p in RR$ was an input,
 we thought of the single number $f'(p)$ as the slope to interpret it geometrically.
@@ -553,7 +551,7 @@ then I'll explain why the gradient is the normal vector we need to complete our 
   2. Output the vector whose components are those partial derivatives.
 ]
 
-#question[
+#sample[
   Consider the six functions
   $
   f_1(x,y) = x^3 y^2 + cos(y), &#h(2em) f_2(x,y,z) = e^(x y z)  \
@@ -561,10 +559,10 @@ then I'll explain why the gradient is the normal vector we need to complete our 
   f_5(x,y,z) = x y + y z + z x  &#h(2em) f_6(x,y) = x^y
   $
   from back in @text-compute-partial and @recipe-compute-partial.
-  Compute all six gradients.
+  Compute their gradients.
 ]
 
-#solution[
+#soln[
   Take the partial derivatives we already computed and make them the components:
   $
   nabla f_1 (x,y) = vec(3x^2 y^2, 2 x^3 y - sin(y)), &#h(2em)
@@ -572,7 +570,7 @@ then I'll explain why the gradient is the normal vector we need to complete our 
   nabla f_3 (x,y) = vec(2 x, 2 y), &#h(2em)
   nabla f_4 (x,y,z) = vec(1,1,1), \
   nabla f_5 (x,y,z) = vec(y+z, x+z, x+y), &#h(2em)
-  nabla f_6 (x,y) = vec(y x^(y-1), log(y) dot x^y).
+  nabla f_6 (x,y) = vec(y x^(y-1), log(y) dot x^y). #qedhere
   $
 ]
 
@@ -583,7 +581,7 @@ defined partial derivatives,
 but conceptually I think it's better to think of everything in terms of the gradient,
 so I waited until after I had defined the gradient to write the recipe.
 
-#recipe(title: [Recipe for calculating the gradient])[
+#recipe(title: [Recipe for linear approximation])[
   To do linear approximation of $f(P + bf(v))$ for a small displacement vector $bf(v)$:
 
   1. Compute $nabla f (P)$, the gradient of $f$ at the point $P$.
@@ -591,30 +589,30 @@ so I waited until after I had defined the gradient to write the recipe.
   3. Output $f(P)$ plus the change from the previous step.
 ]
 
-#question[
+#sample[
   Let $f(x, y) = x^2 + y^2$.
   Approximate the value of $f(3.01, 4.01)$ by using linear approximation from $(3,4)$.
 ]
-#solution[
+#soln[
   Compute the gradient by taking both partial derivatives:
   $ nabla f(x, y) = vec(2x, 2y). $
   So the gradient vector at the starting point is given by
-  $ nabla f(3, 4) = vec(6, 8). $
+  $ nabla f(3, 4) = vec(2 dot 3, 2 dot 4) = vec(6, 8). $
   The target point $(3.01, 4.01)$ differs from the starting point $(3,4)$
   by the displacement $bf(v) = (0.01, 0.01)$.
   So the approximate change in $f$ is given by
   $ underbrace(vec(6,8), = nabla f(3,4)) dot underbrace(vec(0.01, 0.01), =bf(v))
     = (6 dot 0.01 + 8 dot 0.01) = 0.14. $
   Therefore,
-  $ f(3.01, 4.01) approx underbrace(f(3,4), = 25) + 0.14 = 25.14. $
+  $ f(3.01, 4.01) approx underbrace(f(3,4), = 25) + 0.14 = 25.14. #qedhere $
 ]
 
 
-#question[
+#sample[
   Let $f(x, y) = x^3 - y^3$.
   Approximate the value of $f(2.01, -1.01)$ by using linear approximation from $(2,-1)$.
 ]
-#solution[
+#soln[
   Compute the gradient by taking both partial derivatives:
   $ nabla f(x, y) = vec(3x^2, -3y^2). $
   So the gradient vector at the starting point $(2,-1)$ is given by
@@ -625,14 +623,14 @@ so I waited until after I had defined the gradient to write the recipe.
   $ underbrace(vec(12,-3), = nabla f(2,-1)) dot underbrace(vec(0.01, -0.01), =bf(v))
     = (12 dot 0.01 + (-3) dot (-0.01)) = 0.15. $
   Therefore,
-  $ f(2.01, -1.01) approx underbrace(f(2,-1), = 9) + 0.15 = 9.14. $
+  $ f(2.01, -1.01) approx underbrace(f(2,-1), = 9) + 0.15 = 9.14. #qedhere $
 ]
 
-#question[
+#sample[
   Let $f(x, y) = e^x sin(y) + 777$.
   Approximate the value of $f(0.04, 0.03)$ by using linear approximation from the point $(0,0)$.
 ]
-#solution[
+#soln[
   Compute the gradient by taking both partial derivatives:
   $ nabla f(x,y) = vec(e^x sin y, e^x cos y). $
   So the gradient vector at the starting point $(0,0)$ is given by
@@ -642,11 +640,80 @@ so I waited until after I had defined the gradient to write the recipe.
   $ underbrace(vec(1,0), = nabla f(0,0)) dot underbrace(vec(0.04, 0.03), =bf(v))
     = 1 dot 0.04 + 0 dot 0.03 = 0.04. $
   Therefore,
-  $ f(0.04, 0.01) approx underbrace(f(0,0), =777) + 0.04 = 777.04$.
+  $ f(0.04, 0.01) approx underbrace(f(0,0), =777) + 0.04 = 777.04. #qedhere $
 ]
 
-== [TEXT] Gradient descent; and Gradients are normal vectors
+== [TEXT] Gradient descent
 
+At the end of @text-gradient, we promised the geometric definition of the dot product
+would pay dividends. We now make good on that promise.
+
+The motivating question here is:
+#question[
+  Let $f(x,y) = x^2 + y^2$.
+  Imagine we're standing at the point $P = (3,4)$.
+  We'd like to take a step $0.01$ away in some direction of our choice.
+  For example, we could go to $(2.99, 4)$, or $(3, 4.01)$ or $(2.992, 4.006)$,
+  or any other point on the circle we've marked in the figure below.
+  (For the third point, note that $sqrt((3-2.992)^2-(4.006)^2) = 0.01$,
+  so that point is indeed $0.01$ away.)
+
+  - Which way should we step if we want to maximize the $f$-value at the new point?
+  - Which way should we step if we want to the $f$-value to stay about the same?
+  - Which way should we step if we want to minimize the $f$-value at the new point?
+]
+
+You can see a cartoon of the situation in @fig-grad-descent.
+Note that this figure is not to scale, because $0.01$ is too small to be legibly drawn,
+so the black circle is a lot larger than it actually is.
+
+#figure(
+  image("figures/grad-gdescent.png", width: auto),
+  caption: [Starting from $P = (3,4)$, we make a step $bf(v)$ away, where $|bf(v)|=0.01$.
+    Not to scale.],
+) <fig-grad-descent>
+
+To answer the question, we use the geometric interpretation of the dot product now.
+Remember that the change in $f$ is approximated by
+$ f(P + bf(v)) - f(P) approx nabla f (P) dot bf(v). $
+The geometric definition of the dot product is that it equals
+$ nabla f (P) dot bf(v) = |nabla f(P)| |bf(v)| cos theta $
+where $theta$ is the included angle.
+But $|nabla f(P)|$ is fixed (in this example, it's $sqrt(6^2+8^2)=10$)
+and $|bf(v)|$ is fixed as well (in this example we chose it to be the small number $0.01$).
+
+So actually all we care about is the angle $theta$! Think about that for a moment.
+Then remember how the cosine function works:
+
+- $cos(0 degree) = 1$ is the most positive value of the cosine,
+  and that occurs when $bf(v)$ and $nabla f(P)$ point the same direction.
+- $cos(180 degree) = 1$ is the most negative value of the cosine,
+  and that occurs when $bf(v)$ and $nabla f(P)$ point the same direction.
+- If $nabla f (P)$ and $bf(v)$ are perpendicular
+  (so $theta = 90 degree$ or $theta = 270 degree$), then the dot product is zero.
+
+Translation:
+
+#memo[
+  - Move *along* the gradient to increase $f$ as quickly as possible.
+  - Move *against* the gradient to decrease $f$ as quickly as possible.
+  - Move *perpendicular to* the gradient to avoid changing $f$ by much either direction.
+]
+
+== [TEXT] Normal vectors to the tangent line/plane
+
+We only need to add one more idea:
+#idea[
+  The tangent line/plane corresponds to the last case above.
+]
+Indeed, in the 2D case, the tangent line is the line that "hugs" the level curve the closest,
+so we think of it as the direction causing $f$ to avoid much change.
+The same is true for a tangent plane to a level surface in the 3D case.
+Translation:
+
+#memo[
+  The gradient $nabla f (P)$ is the normal vector to the tangent line/plane at $P$.
+]
 
 == [RECIPE] Computing tangent lines/planes to level curves/surfaces
 
@@ -658,8 +725,10 @@ so I waited until after I had defined the gradient to write the recipe.
   2. Adjust the right-hand side so it passes through $P$.
 ]
 
-#todo[examples...]
+#todo[write out examples...]
 
 == [RECAP] A recap of multivariable differentiation
 
 Let's summarize the last few sections.
+
+#todo[recap...]
