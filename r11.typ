@@ -73,13 +73,28 @@ The same caveats in 18.01 apply in 18.02 as well:
   you are promised in advance the answer won't be "no global min" or "no global max".
 ]
 
+= Updates on course logistics
+
+- *Midterm 2* is probably up to Lagrange multipliers, covered this Friday.
+- *Midterm 2 review session* is likely to be Monday, August 21, 3pm-5pm, run by just me.
+  I'll email out once the date/time/room is finalized.
+  - It will be a mock exam for one hour then solution presentation for an hour.
+  - I will post the exam beforehand, so if you can only make
+    4pm-5pm you can try the mock exam on your own time before coming.
+- My *LAMV course notes* are coming along! 🎉
+  (This is the mega-file titled "Linear Algebra and Multivariable Calculus" on my page.)
+  - The gradient stuff is pretty much all written up now.
+  - Hope to have all MT2 material written up by Wednesday, Oct 16 in preparation for MT2.
+    - However, my thesis defense is in a couple months, so no promises LOL.
+  - Over time I'll try to backfill MT1 material as well (for future years of 18.02).
+
 = Recitation questions from official course
 
 / 1.: Consider the function $f (x , y) = x y (1 - x - y)$ defined on the
   region $- 1 lt.eq x lt.eq 1$, $- 1 lt.eq y lt.eq 1$.
-  + Find the critical points of $f$ (that is the points where
+  - Find the critical points of $f$ (that is the points where
     $arrow(nabla) f = upright(bold(0))$).
-  + Find the global maximum and global minimum values for $f (x , y)$ on
+  - Find the global maximum and global minimum values for $f (x , y)$ on
     the region $R$.
 / 2.: Consider the surface $S$ consisting of points in $upright(bold(R))^3$ of
   the form $(x , y , 2 \/ sqrt(x y))$, with $x , y > 0$. Find the point on
