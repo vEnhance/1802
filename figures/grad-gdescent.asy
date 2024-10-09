@@ -1,10 +1,14 @@
+import graph;
 size(10cm);
+xaxis("$x$", -6, 6, Ticks(Step=2));
+yaxis("$y$", -6, 6, Ticks(Step=2));
+
 draw(scale(5)*unitcircle, blue);
 real eps = 1.8;
 pair P = (3,4);
 pair P1 = (3+eps,4);
 draw(circle(P, abs(P-P1)), black);
-label("The level curve $f(x,y) = x^2+y^2=25$", 5*dir(-90), dir(-90), blue);
+label("Level curve $f(x,y) = x^2+y^2=25$", 5*dir(-71), dir(-71), blue);
 draw(P--1.9*P, deepgreen+1.2, EndArrow);
 label("$\nabla f(P) = \langle 6,8 \rangle$", 1.9*P, dir(P), deepgreen);
 real s = 5;

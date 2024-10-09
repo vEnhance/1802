@@ -1,6 +1,6 @@
 #import "@local/evan:1.0.0":*
 
-= Level curves (aka contour plots)
+= Level curves (aka contour plots) <sec-level-curve>
 
 == [TEXT] Level curves replace $x y$-graphs
 
@@ -195,7 +195,7 @@ for some values for the following functions:
 
 #pagebreak()
 
-= Partial derivatives
+= Partial derivatives <sec-partial-derivative>
 
 == [TEXT] The point of differentiation is linear approximation
 
@@ -423,7 +423,7 @@ Find all the partial derivatives of the following functions, defined for $x,y,z 
 
 #pagebreak()
 
-= The gradient
+= The gradient <sec-gradient>
 
 The gradient of $f : RR^n -> RR$, denoted $nabla f$,
 is the single most important concept in the entire "Multivariable differentiation" part.
@@ -665,7 +665,7 @@ The motivating question here is:
 
 You can see a cartoon of the situation in @fig-grad-descent.
 Note that this figure is not to scale, because $0.01$ is too small to be legibly drawn,
-so the black circle is a lot larger than it actually is.
+so the black circle is drawn much larger than it actually is.
 
 #figure(
   image("figures/grad-gdescent.png", width: auto),
@@ -703,32 +703,108 @@ Translation:
 == [TEXT] Normal vectors to the tangent line/plane
 
 We only need to add one more idea:
-#idea[
-  The tangent line/plane corresponds to the last case above.
-]
+_keeping $f$ about the same should correspond to moving along the tangent line or plane_.
+
 Indeed, in the 2D case, the tangent line is the line that "hugs" the level curve the closest,
 so we think of it as the direction causing $f$ to avoid much change.
-The same is true for a tangent plane to a level surface in the 3D case.
-Translation:
+The same is true for a tangent plane to a level surface in the 3D case;
+the plane hugs the curve near the point $P$.
+So that means the last bullet could be rewritten as
 
 #memo[
-  The gradient $nabla f (P)$ is the normal vector to the tangent line/plane at $P$.
+  The gradient $nabla f (P)$ is normal to the tangent line/plane at $P$.
+  It points towards the direction that increases $f$.
+]
+#example[
+  In the previous example with a level curve, the gradient pointed away from the interior.
+  This is not true in general.
+  For example, imagine instead the function
+  $ f(x,y) = 1 / (x^2 + y^2). $
+  The point $(3,4)$ lies on the level curve of $f(3,4) = 1/25$.
+  The level curve of $f(x,y)$ with value $1/25$ is _also_ a circle of radius $5$,
+  because it corresponds to the equation $1/(x^2+y^2) = 1/25$.
+
+  However, the gradient looks quite different: with enough calculation one gets
+  $ nabla f(x,y) = vec((-2x) / ((x^2+y^2)^2), (-2y) / ((x^2+y^2)^2)). $
+  Evaluating at $(3,4)$, we get
+  $ nabla f(3,4) = vec(-6/625, -8/625). $
+  Hence, for the function $f(x,y) = 1/(x^2+y^2)$,
+  drawing the figure analogous to @fig-grad-descent gives something that looks quite similar,
+  except the green arrow points the _other_ way and is way smaller.
+  This makes sense: as you move _towards_ the origin, you expect $1/(x^2+y^2)$ to get larger.
+  See @fig-grad-descent-2.
+]
+
+#figure(
+  image("figures/grad-gdescent2.png", width: auto),
+  caption: [Similar picture but for $f(x,y) = 1/(x^2+y^2)$.
+    It looks very similar to @fig-grad-descent, but now the gradient points the other way
+    and has much smaller absolute value, indicating
+    that the value of $f$ increases as we go _towards_ the center (but only slightly).
+    Not to scale.]
+) <fig-grad-descent-2>
+
+#remark[
+  Back in the 3D geometry in the linear algebra part of the course,
+  we usually neither knew nor cared what the sign and magnitude of the normal vector was.
+  That is, when asked "what is a normal vector to the plane $x-y+2z=8$?",
+  you could answer $vec(1,-1,2)$ or $vec(-1,1,-2)$ or even $vec(-100, 100, -200)$.
+  But this doesn't apply to the gradient anymore:
+  while it is a normal vector to the tangent line/plane,
+  the magnitude carries additional information we shouldn't just throw away.
 ]
 
 == [RECIPE] Computing tangent lines/planes to level curves/surfaces
+
+At this point, we can compute tangent lines and planes easily.
+We apply the old recipe in @recipe-plane-known-dir
+(finding a plane given a point with a known normal vector)
+with $nabla f (P)$ as the normal vector.
+To spell it out:
 
 #recipe[
   To find the tangent line/plane to a level curve/surface of a function $f$ at point $P$:
 
   1. Compute the gradient $nabla f$. This is a normal vector,
     so it tells you the left-hand side for the equation of the line/plane.
-  2. Adjust the right-hand side so it passes through $P$.
+  2. Adjust the right-hand side so it passes through $P$, like in @recipe-plane-known-dir.
 ]
 
-#todo[write out examples...]
+#sample[
+  Find the tangent line to $x^2 + y^2 = 25$ at the point $(3, 4)$.
+]
+#soln[
+  Let $f(x,y) = x^2 + y^2$, so we are looking at the level curve for $25$ of $f$.
+  We have seen already that
+  $ nabla f = vec(6, 8). $
+  Hence, the tangent line should take the form
+  $ 6x + 8y = d $
+  for some $d$.
+  To pass through $d = (3,4)$, we need $d = 42$, so the answer is
+  $ 6 x + 8 y = 42. #qedhere $
+]
 
-== [RECAP] A recap of multivariable differentiation
+#todo[A couple more examples here would be nice...]
+
+== [RECAP] A recap of multivariable differentiation so far
 
 Let's summarize the last few sections.
 
-#todo[recap...]
+- We replaced the old graphs we used in 18.01 with level curve and level surface pictures
+  in @sec-level-curve.
+  These new pictures differed from 18.01 pictures because all the variables on the axes
+  are inputs now, and we treat them all with equal respect.
+- We explained in @sec-partial-derivative how to take a partial derivative
+  of $f(x,y)$ or $f(x,y,z)$, which measures the change in just one of the variables.
+- We used these partial derivatives to define the gradient $nabla f$ in @sec-gradient.
+  This made linear approximation into a dot product,
+  where $f(P + bf(v)) approx f(P) + nabla f(P) dot bf(v)$ for a small displacement $bf(v)$.
+- Using the geometric interpretation of a dot product, $nabla f (P)$ was a normal vector
+  to the level curve of $f$ passing through $P$, and:
+  - Going along the gradient increases $f$ most rapidly
+  - Going against the gradient decreases $f$ most rapidly
+  - Going perpendicular to the gradient puts you along the tangent line or plane at $P$.
+
+== [EXER] Exercises
+
+#todo[Make some exercises up]

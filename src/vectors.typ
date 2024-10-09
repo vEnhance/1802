@@ -96,6 +96,27 @@ and now the whole discussion carries over wholesale.
   1. Output $vec(a,b,c)$ (or any other multiple of $vec(a,b,c)$).
 ]
 
+== [RECIPE] Finding a plane through a point with a direction <recipe-plane-known-dir>
+
+#recipe(title: [Recipe for finding a plane given a normal vector and a point on it])[
+  Suppose the given normal vector is $vec(a,b,c)$, and $P in RR^3$ is a given point.
+
+  1. Write $a x + b y + c z$ for the left-hand side.
+  2. Evaluate the left-hand side at $P$ to get a number $d$.
+  3. Output $a x + b y + c z = d$.
+]
+
+#sample[
+  Find the equation of the plane parallel to $x + 2 y + 3 z = 100$
+  which passes through the point $(1, 4, 9)$.
+]
+#solution[
+  Planes are parallel when they have the same normal vector,
+  so we know the normal vector is $vec(1,2,3)$ for both.
+  Hence the answer should take the form $x + 2 y + 3 z = d$ for some $d$.
+  In order to pass through $(1, 4, 9)$ we should choose $d = 1 + 2 dot 4 + 3 dot 9 = 36$.
+  So output $ x + 2 y + 3 z = 36$.
+]
 
 == [TEXT] Calculating distance to a plane
 

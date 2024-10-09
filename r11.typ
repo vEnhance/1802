@@ -83,10 +83,10 @@ The same caveats in 18.01 apply in 18.02 as well:
     4pm-5pm you can try the mock exam on your own time before coming.
 - My *LAMV course notes* are coming along! 🎉
   (This is the mega-file titled "Linear Algebra and Multivariable Calculus" on my page.)
-  - The gradient stuff is pretty much all written up now.
-  - Hope to have all MT2 material written up by Wednesday, Oct 16 in preparation for MT2.
+  - Gradient (up to last recitation) pretty much all written up now.
+  - If things go really well I may have all MT2 material written up by Wednesday, Oct 16.
     - However, my thesis defense is in a couple months, so no promises LOL.
-  - Over time I'll try to backfill MT1 material as well (for future years of 18.02).
+  - Over time I may try to backfill MT1 material as well (for future years of 18.02).
 
 = Recitation questions from official course
 
