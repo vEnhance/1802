@@ -76,7 +76,7 @@ The same caveats in 18.01 apply in 18.02 as well:
 = Updates on course logistics
 
 - *Midterm 2* is probably up to Lagrange multipliers, covered this Friday.
-- *Midterm 2 review session* is likely to be Monday, August 21, 3pm-5pm, run by just me.
+- *Midterm 2 review session* is likely to be Monday, October 21, 3pm-5pm, run by just me.
   I'll email out once the date/time/room is finalized.
   - It will be a mock exam for one hour then solution presentation for an hour.
   - I will post the exam beforehand, so if you can only make
