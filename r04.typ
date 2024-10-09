@@ -147,7 +147,7 @@ any associated equation has only one solution, etc.
 To demonstrate this in recitation, I asked the audience to generate the numbers
 in the following two examples however they liked:
 
-#exercise[
+#exer[
   What is the span of $vec(420, 321)$ and $vec(666, 5)$ in $RR^2$?
 ] <random2>
 #solution[
@@ -157,7 +157,7 @@ in the following two examples however they liked:
   Hence they are a basis of $RR^2$ and the span is all of $RR^2$.
 ]
 
-#exercise[
+#exer[
   What is the span of $vec(3,42,18)$, $vec(1, 53, 17)$, $vec(71,91,13)$ in $RR^3$?
 ] <random3>
 #solution[
