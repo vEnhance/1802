@@ -68,9 +68,9 @@ The same caveats in 18.01 apply in 18.02 as well:
   Then if $f : cal(R) -> RR^n$ is defined everywhere continuously,
   you are *promised at least one global minimum and at least one global maximum exist*.
 
-  This can be a useful thing to know in advance, e.g. for something like Q1 below,
-  where $cal(R)$ is a closed square of length $2$,
-  you are promised in advance the answer won't be "no global min" or "no global max".
+  Useful thing to know for something like Q1 below,
+  (where $cal(R)$ is a closed square of length $2$);
+  you know in advance the answer won't be "no global min" or "no global max".
 ]
 
 = Updates on course logistics
@@ -80,13 +80,14 @@ The same caveats in 18.01 apply in 18.02 as well:
   I'll email out once the date/time/room is finalized.
   - It will be a mock exam for one hour then solution presentation for an hour.
   - I will post the exam beforehand, so if you can only make
-    4pm-5pm you can try the mock exam on your own time before coming.
+    4pm-5pm you can try the mock yourself and then come to solutions.
 - My *LAMV course notes* are coming along! 🎉
   (This is the mega-file titled "Linear Algebra and Multivariable Calculus" on my page.)
   - Gradient (up to last recitation) pretty much all written up now.
   - If things go really well I may have all MT2 material written up by Wednesday, Oct 16.
     - However, my thesis defense is in a couple months, so no promises LOL.
   - Over time I may try to backfill MT1 material as well (for future years of 18.02).
+  - In the future, I'll also update LAMV rather than fill in post-recitation notes.
 
 = Recitation questions from official course
 
