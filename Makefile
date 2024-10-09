@@ -10,7 +10,7 @@ figs: $(PNG_OUTPUTS)
 figures/%.pdf: figures/%.asy
 	asy -f pdf $< -o $(basename $@)
 figures/%.png: figures/%.pdf
-	magick -density 384 $< $@
+	magick -density 192 $< $@
 
 %.pdf: %.typ
 	typst compile $<
