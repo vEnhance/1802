@@ -2,20 +2,134 @@
 
 = Review of vectors
 
-== [TEXT] Real numbers, points, and vectors
+== [TEXT] Notation for scalars, vectors, points
 
-== [TEXT] Areas and volumes
+If you haven't seen $RR$ before, let's introduce it now:
+#definition[
+  We denote by $RR$ the set of real numbers, so $3, sqrt(2), -pi$ are elements of $RR$.
+  Sometimes we'll also refer to a real number as a *scalar*.
+]
+The symbol "$in$", if you haven't seen it before, means "is a member of".
+So $3 in RR$ is the statement "$3$ is a real number".
+Or $x in RR$ means that $x$ is a real number.
 
-== [RECIPE] Areas and volumes
+Unfortunately, right off the bat I have to mention that the notation $RR^n$ could mean two things:
+#definition[
+  By $RR^n$ we could mean one of two things, depending on context:
+
+  - The set of vectors of length $n$, e.g. the vector $vec(pi, 5)$ is a vector in $RR^2$.
+  - The set of points in $n$-dimensional space, e.g. $(sqrt(2), 7)$ is a point in $RR^2$.
+]
+
+To work around the awkwardness of $RR^n$ meaning two possible things,
+this book will adopt the following conventions for variable names:
+
+#typesig[
+- Bold lowercase letters like $bf(u)$ and $bf(v)$ will be used for vectors.
+  When we draw pictures of vectors, we always draw them as _arrows_.
+
+- Capital letters like $P$ and $Q$ are used for points.
+  When we draw pictures of vectors, we always draw them as _dots_.
+]
+
+We'll also use different notation for actual elements:
+
+#typesig[
+- A vector will either be written in column format like $vec(1,2,3)$,
+  or with angle brackets as $angle.l 1,2,3 angle.r$ if the column format is too tall to fit.
+- But a point will always be written with parentheses like $(1,2,3)$.
+]
+
+Some vectors in $RR^3$ are special enough to get their own shorthand.
+(The notation "$:=$" means "is defined as".)
+#definition[
+  When working in $RR^2$, we define
+  $ bf(e)_1 := vec(1,0), #h(1em) bf(e)_2 := vec(0,1) $
+  and $ bf(0) = vec(0,0). $
+]
+#definition[
+  When working in $RR^3$, we define
+  $ bf(e)_1 := vec(1,0,0), #h(1em) bf(e)_2 := vec(0,1,0), #h(1em) bf(e)_3 := vec(0,0,1). $
+  We also let $ bf(0) := vec(0,0,0). $
+
+  In other places, you'll sometimes see $bf(i)$, $bf(j)$, $bf(k)$ instead,
+  but this book will always use $bf(e)_i$.
+]
+
+#definition[
+  The *length* of a vector is denoted by $|bf(v)|$
+  and corresponds to the length of the arrow drawn.
+  It is given by the Pythagorean theorem.
+
+  - In two dimensions:
+    $ bf(v) = vec(x,y) ==> |bf(v)| := sqrt(x^2+y^2). $
+  - If three dimensions:
+    $ bf(v) = vec(x,y,z) ==> |bf(v)| := sqrt(x^2+y^2+z^2). $
+
+  In $n$ dimensions, if $bf(v) = angle.l x_1, ..., x_n angle.r$,
+  the length is $|bf(v)| := sqrt(x_1^2 + ... + x_n^2)$.
+]
+
+#typesig[
+  The length $|bf(v)|$ has type scalar. It is always positive unless $bf(v) = bf(0)$,
+  in which case the length is $0$.
+]
 
 == [TEXT] Directions and unit vectors
 
-== [RECIPE] Computing unit vectors
+Remember that a vector always has
 
-== [EXER] Exercises
+- both a *magnitude*, which is how long the arrow is in the picture
+- a *direction*, which refers to which way the arrow points.
 
-#exer[
-  If $A$ is a $3 times 3$ matrix with determinant $2$, what values could $det(10 A)$ take?
+In other words, the geometric picture of a vector always carries two pieces of information.
+
+In a lot of geometry situations we only care about the direction,
+and we want to ignore the magnitude.
+When that happens, one convention is to just set the magnitude equal to $1$.
+To that end, a *unit vector* will be a vector that has magnitude $1$.
+
+== [RECIPE] Areas and volumes
+
+If $bf(v)_1 = vec(x_1, y_1)$ and $bf(v)_2 = vec(x_2, y_2)$ are vectors,
+then their sum $bf(v)_1 + bf(v)_2$ makes a parallelogram in the plane with $bf(0)$
+as shown in @fig-parallelogram.
+
+#figure(
+  image("figures/vectors-area.png", width: auto),
+  caption: [Vector addition in $RR^2$.],
+) <fig-parallelogram>
+
+The following theorem is true, but we won't be able to prove it in 18.02.
+
+#recipe[
+  The area of the parallelogram formed by $bf(v)_1 = vec(x_1, y_1)$ and $bf(v)_2 = vec(x_2, y_2)$ is equal to
+  the absolute value of the determinant
+  $ det mat(x_1, x_2; y_1, y_2) = x_1 y_2 - x_2 y_1. $
+]
+
+A similar theorem is true for the parallelepiped#footnote[I hate trying to spell this word.]
+with three vectors in $RR^3$; see @fig-parallelepiped.
+
+#recipe[
+  The volume of the parallelepiped formed by
+  $bf(v)_1 = vec(x_1, y_1, z_1)$,
+  $bf(v)_2 = vec(x_2, y_2, z_2)$,
+  $bf(v)_3 = vec(x_3, y_3, z_3)$
+  is equal to the absolute value of the determinant
+  $ det mat(x_1, x_2, x_3; y_1, y_2, y_3; z_1, z_2, z_3). $
+]
+
+#figure(
+  image("figures/vectors-parallelepiped.png", width: auto),
+  caption: [Three vectors in $RR^3$ making a parallelepiped.],
+) <fig-parallelepiped>
+
+#digression[
+  If you're interested in the proof of these results
+  and their $n$-dimensional generalizations, the tool needed is the *wedge product*.
+  You can see chapter 12 of #link("https://web.evanchen.cc/napkin.html")[Napkin]
+  if you want to see the proof-based version of the determinant.
 ]
 
 

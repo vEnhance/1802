@@ -12,14 +12,41 @@
 
 #pagebreak()
 
-= Eigenthings
+= Eigenvalues and eigenvectors
 
-== The problem of finding eigenvectors
+== [TEXT] The problem of finding eigenvectors
 
-== How to come up with the recipe for eigenvalues
+Let's define the relevant term first:
 
-Let's pretend we didn't go to lecture or recitation,
-and see how to solve this problem.
+#definition[
+  Suppose $T$ is a matrix or linear transformation, and $bf(v)$ is a vector such that
+  $ T(bf(v)) = lambda bf(v); $
+  that is, $T$ sends $bf(v)$ to a multiple of itself.
+  Then we call $lambda$ an *eigenvalue* and $bf(v)$ an *eigenvector*.
+]
+
+#example[
+  Let $T = mat(74,52;32,36)$ and consider the vector $bf(v) = vec(2,1)$. Then
+  $ T(bf(v)) = mat(74,52;32,36) vec(2,1) = vec(200,100) = 100 vec(2,1) = 100 bf(v). $
+  So we would say $bf(v)$ is an eigenvector with eigenvalue $100$.
+
+  Of course, if $bf(v)$ is an eigenvector, so are all its multiples, e.g.
+  $ mat(74,52;32,36) vec(20,10) = vec(2000,1000) = 100 vec(20,10) $
+  so $vec(20,10)$ is an eigenvector with the same eigenvalue $100$, etc.
+]
+
+#remark[
+  The stupid solution $bf(v) = bf(0)$ always satisfies the eigenvector equation for any $lambda$,
+  so we will pretty much ignore it and focus only on finding nonzero eigenvectors.
+]
+
+The goal of this section is to show:
+#question[
+  Given an encoding of $T$ as a matrix, how can we find its eigenvectors (besides $bf(0)$)?
+]
+
+== [TEXT] How to come up with the recipe for eigenvalues
+
 For this story, our protagonist will be the matrix
 $ A = mat(5, -2; 3, 10). $
 Phrased another way, the problem of finding eigenvectors is, by definition,
@@ -181,7 +208,7 @@ Indeed, let's check this:
   "the eigenvectors with eigenvalue $7$ are the multiples of $vec(200,-300)$"
   and still get credit, but that's silly.
 
-== Summary
+== [RECAP] Summary
 
 To summarize the story above:
 
@@ -210,6 +237,29 @@ I would rather call it the following interlocked thing:
   To do the cherry-picking, ensure $det(A - lambda I) = 0$
   so that our system is degenerate.
 ]
+
+== [RECIPE] Calculating all the eigenvalues
+
+To repeat the story:
+
+#recipe(title: [Recipe for finding the eigenvectors and eigenvalues])[
+  Given a matrix $A$, to find its eigenvectors and eigenvalues:
+
+  1. Find all the values of $lambda$ such that, if you subtract $lambda$ from every diagonal
+    entry of $A$ (that is, look at $A - lambda I)$,
+    the resulting square matrix of coefficients has determinant $0$.
+  2. For each $lambda$, solve the degenerate system and output the solutions to it.
+    (You should find there is at least a one-dimensional space of solutions.)
+]
+
+#todo[Write example]
+
+== [TEXT] Solving degenerate systems
+
+When carrying out the recipe for finding eigenvectors and eigenvalues,
+after cherry-picking $lambda$, you have to solve a degenerate system of equations.
+Since most of the systems of equations you encounter in practice are nondegenerate,
+here's a few words of advice on instincts for solving the degenerate ones.
 
 === Degenerate systems of two equations all look stupid
 
@@ -270,4 +320,68 @@ for $x$ and $y$, as a function of $z$.
 I think this particular example works out to $x = -109/29 z$, $y = 37/29 z$.
 And it indeed fits the third equation too.
 
-== Application of eigenvectors: matrix powers
+== [SIDENOTE] Complex eigenvectors
+
+Even in the $2 times 2$ case, you'll find a lot of matrices $M$ with real coefficients
+don't have eigenvectors.
+Here's one example.
+
+Let $ M = mat(cos(60 degree), -sin(60 degree); sin(60 degree), cos(60 degree))
+  = mat(1/2, -sqrt(3)/2; sqrt(3)?2, 1/2). $
+be the matrix corresponding to rotation by $60$ degrees.
+(Feel free to replace $60$ by a different number.)
+I claim that $M$ has no real eigenvalues or eigenvectors.
+
+Indeed, if $bf(v) in RR^2$ was an eigenvector,
+then $M bf(v)$ needs to point in the same direction as $bf(v)$, by definition.
+But that can never happen: $M$ is rotation by $60 degree$,
+so $M bf(v)$ and $bf(v)$ necessarily point in different directions --- $60$ degrees apart.
+
+#todo[what goes wrong?]
+
+== [SIDENOTE] Application of eigenvectors: matrix powers
+
+This is off-syllabus for 18.02, but I couldn't resist including it because
+it shows you a good use of eigenvalues in a seemingly unrelated problem,
+and also reinforces the idea that I keep axe-grinding:
+#align(center)[
+  If you have a linear operator $T$,
+  and you know the outputs of $T$ on _any_ basis, that tells you all the outputs of $T$.
+]
+
+The problem is this:
+#question[
+  Let $M$ be the matrix $mat(2,1;0,3)$.
+  Calculate $M^(100)$.
+]
+At first glance, you might thinks question is obviously impossible without a computer,
+because raising a matrix to the $100$th power would require $100$ matrix multiplications.
+But I'll show you how to do it with eigenvectors.
+
+#soln[
+  First, we compute the eigenvectors and eigenvalues of $M$.
+  If you follow the recipe, you'll get the following results:
+
+  - The vector $vec(1,0)$ is an eigenvector with eigenvalue $2$ (as is any multiple of $vec(1,0)$),
+    because $M vec(1,0) = vec(2,0) = 2 vec(1,0)$.
+  - The vector $vec(1,1)$ is an eigenvector with eigenvalue $3$ (as is any multiple of $vec(1,1)$),
+    because $M vec(1,1) = vec(3,3) = 3 vec(1,1)$.
+
+  Now the trick is the following:
+  it's really easy to apply $M^(100)$ to the _eigenvectors_,
+  because it's just multiplication by a constant:
+  $
+    M^(100) vec(1,0) = 2^(100) vec(1,0); #h(2em)
+    M^(100) vec(1,1) = 3^(100) vec(1,1).
+  $
+  So now we know the outputs of $M^(100)$ at two linearly independent vectors.
+  It would be sufficient, then, to use this information to
+  extract $M^(100) (bf(e)_1)$ and $M^100 (bf(e)_2)$.
+  We can now rewrite this as
+  $
+    M^(100) vec(1,0) = vec(2^(100), 0); #h(2em)
+    M^(100) vec(0,1) = M^(100) vec(1,1) - M^(100) vec(1,0) = vec(3^(100) - 2^(100), 3^(100)).
+  $
+  Thus encoding $M$ gives the answer:
+  $ M^(100) = mat(2^(100), 3^(100)-2^(100); 0, 3^(100)). #qedhere $
+]
