@@ -26,11 +26,23 @@
 #include "src/basis.typ"
 #pagebreak()
 
+#part[Review of complex numbers]
+#include "src/complex.typ"
+#pagebreak()
+#include "src/mt1.typ"
+#pagebreak()
+
 #part[Parametric side-quest]
 To be written later.
 #pagebreak()
 
 #part[Multivariable differentiation]
 #include "src/grad.typ"
-
 #pagebreak()
+
+#part[Optimization]
+#include "src/minmax.typ"
+#pagebreak()
+
+#part[Solutions to the exercises and problems]
+#include "src/sol-mt1.typ"
