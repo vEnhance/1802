@@ -12,6 +12,12 @@
 
 == [RECIPE] Computing unit vectors
 
+== [EXER] Exercises
+
+#exer[
+  If $A$ is a $3 times 3$ matrix with determinant $2$, what values could $det(10 A)$ take?
+]
+
 
 #pagebreak()
 

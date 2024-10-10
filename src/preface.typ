@@ -142,14 +142,21 @@ No proof-based background is expected.
   In fact, if I was designing a serious course in multivariable calculus for math majors,
   it would come after an entire semester of properly-done linear algebra first.
 
-- The third part covers the calculus of functions $RR -> RR^n$, which turns out to be easy
+- The third part is a review of complex numbers.
+  I don't know why this is part of 18.02, to be honest,
+  but since it happened I included a short section on it.
+
+- The fourth part _Parametric Side-Quest_
+  covers the calculus of functions $RR -> RR^n$, which turns out to be easy
   because it's pretty much all 18.01 material.
   This part is therefore only a few pages long.
 
-- The fourth part covers the differentiation of functions $RR^n -> RR$.
+- The fifth part and sixth part are titled
+  _Multivariable differentiation_ and _Optimization_,
+  and they cover the differentiation of functions $RR^n -> RR$.
   This is the first serious multivariable calculus usage.
 
-- The fifth part ...
+-
 
 #todo[finish writing this]
 

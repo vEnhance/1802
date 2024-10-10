@@ -185,13 +185,21 @@ by plotting all the points in $RR^3$ for which $f(x,y,z) = c$.
 
 == [EXER] Exercises
 
-For some practice with level curves, try to draw 2-D level curves
-for some values for the following functions:
+#exer[
+  Draw 2-D level curves
+  for some values for the following functions:
 
-- $f(x,y) = 5 x + y$
-- $f(x,y) = x y$
-- $f(x,y) = max(x,y)$ (i.e.~$f$ outputs the larger of its two inputs,
-  so $f(3,5)=5$ and $f(2,-9)=2$, for example).
+  - $f(x,y) = 5 x + y$
+  - $f(x,y) = x y$
+  - $f(x,y) = e^(x^2 + y^2)$
+  - $f(x,y) = max(x,y)$ (i.e.~$f$ outputs the larger of its two inputs,
+    so $f(3,5)=5$ and $f(2,-9)=2$, for example).
+]
+
+#exerstar[
+  Give an example of a polynomial function $f(x,y)$
+  for which the level curve for the value $100$ consists of exactly seven points.
+]
 
 #pagebreak()
 
@@ -415,11 +423,13 @@ Here are a bunch more examples that you can try to follow along:
 
 == [EXER] Exercises
 
-Find all the partial derivatives of the following functions, defined for $x,y,z > 0$:
+#exer[
+  Find all the partial derivatives of the following functions, defined for $x,y,z > 0$:
 
-- $f(x,y,z) = x / y + y / z + z / x$
-- $f(x,y,z) = sin(x y z)$
-- $f(x,y,z) = x^y + y^z + z^x$.
+  - $f(x,y,z) = x / y + y / z + z / x$
+  - $f(x,y,z) = sin(x y z)$
+  - $f(x,y,z) = x^y + y^z + z^x$.
+]
 
 #pagebreak()
 
@@ -522,7 +532,7 @@ The approximation part is used so often it has its own name and symbol.
 
 In full abstraction, we can rewrite linear approximation as:
 #memo[
-  Suppose if $f$ is differentiable at a point $P$.
+  Suppose $f$ is differentiable at a point $P$.
   Then for small displacement vectors $bf(v)$,
   the *net change* from $f(P)$ to $f(P + bf(u))$
   is approximated by the dot product $ nabla f(P) dot bf(u). $
@@ -807,4 +817,14 @@ Let's summarize the last few sections.
 
 == [EXER] Exercises
 
-#todo[Make some exercises up]
+#exer[
+  Find the tangent plane to the sphere $x^2 + y^2 + z^2 = 14$ at the point $(1,2,3)$.
+]
+
+#exer[
+  The level curve of a certain function $f(x,y)$ for the value $-7$
+  turns out to be a circle of radius $2$ centered at $(0,0)$.
+
+  - What are all possible vectors that $nabla f(1.2, -1.6)$ could be?
+  - Do linear approximation to estimate $f(1.208, -1.594)$ starting from the point $(1.2, -1.6)$.
+]
