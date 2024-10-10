@@ -2,7 +2,7 @@
 
 = Solutions to @ch-mt1 <ch-sol-mt1>
 
-== Solution to problem 1
+== Solution to @prob-mt1p1
 
 *Answer*: $vec(1/2, 3/2, -1)$.
 
@@ -50,7 +50,7 @@ $ bf(a) = vec(4-7/2, 5-7/2, 6-2(7/2)) = vec(1/2, 3/2, -1). $
 
 #pagebreak()
 
-== Solution to problem 2
+== Solution to @prob-mt1p2
 
 *Answer*: This equals the volume of the parallelepiped formed by $arrow(D A)$, $arrow(D B)$, $arrow(D C)$.
 
@@ -86,7 +86,7 @@ See the following picture from #url("https://en.wikipedia.org/wiki/Triple_produc
 
 #pagebreak()
 
-== Solution to problem 3
+== Solution to @prob-mt1p3
 
 *Answer*: 0, no matter which plane $cal(P)$ is picked.
 
@@ -139,7 +139,7 @@ which has determinant $0$.
 
 #pagebreak()
 
-== Solution to problem 4
+== Solution to @prob-mt1p4
 
 *Answer*: $|bf(a) times bf(v)| = 3$ and $|bf(b) times bf(v)| = 2$.
 
@@ -161,7 +161,7 @@ Similarly, $bf(b) times bf(v)$ has magnitude $2$.
 
 #pagebreak()
 
-== Solution to problem 5
+== Solution to @prob-mt1p5
 
 *Answer*: $0$.
 
@@ -235,7 +235,7 @@ which has trace $0+0=0$.
 
 #pagebreak()
 
-== Solution to problem 6
+== Solution to @prob-mt1p6
 
 *Answer*: $(3 sqrt(3))/4 root(3, 61)$.
 

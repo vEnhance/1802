@@ -13,8 +13,8 @@ real fe(real x) { return x**2 + 2; }
 real xmin = -3, xmax = 7;
 real ymin = -2, ymax = 2;
 
-xaxis("$x$", xmin, xmax, Ticks(Label(fontsize(8pt)), Step=1));
-yaxis("$y$", ymin, ymax, Ticks(Label(fontsize(8pt)), step=1));
+xaxis("$x$", xmin, xmax, Ticks(Label(fontsize(8pt)), Step=1, begin=false, end=false), Arrows);
+yaxis("$y$", ymin, ymax, Ticks(Label(fontsize(8pt)), step=1, begin=false, end=false), Arrows);
 
 transform t = reflect((0,0), (1,1));
 draw(t*graph(fa, ymin, ymax, operator ..), red, "$c = -2$", align=W);

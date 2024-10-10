@@ -47,6 +47,9 @@ But with this goal in mind, here are some parts of the design philosophy of this
   They are meant to stand alone, and anything that would normally
   be said out loud is instead written out in text.
 - *It has full solutions to its exercises*. I really believe in writing things out.
+  I'd rather have a small number of exercises with properly documented solutions
+  than an enormous pile of mass-produced with no corresponding solutions.
+
   #todo[Okay this is not true yet lol I'm working on it. There will be solutions one day.
   Especially since ChatGPT can do all the exercises anyway kappa.]
 
@@ -97,6 +100,8 @@ and calculus as taught in United States high schools is assumed.
       = mat(1 dot 7 + 2 dot 8 + 3 dot 9; 4 dot 7 + 5 dot 8 + 6 dot 9)
       = mat(50; 122). $
     If you haven't seen this before, there are plenty of tutorials online; find any of them.
+    Poonen's notes (mentioned later) do cover this for example;
+    see section 1-2 of #url("https://math.mit.edu/~poonen/notes02.pdf").
 
     You are _not_ expected to have any idea why the heck the rule is defined this way;
     an explanation for where this rule comes from is in @matrix-mult.
@@ -137,28 +142,34 @@ No proof-based background is expected.
 
 == [TEXT] Topics covered
 
-- The first two parts of the text is dedicated to *linear algebra* (vectors and matrices).
+Here is a brief overview of what happens in these parts
+
+/ Alfa and Bravo: This part is dedicated to *linear algebra* (vectors and matrices).
   This is intentional, because some working knowledge of linear algebra is important.
   In fact, if I was designing a serious course in multivariable calculus for math majors,
   it would come after an entire semester of properly-done linear algebra first.
 
-- The third part is a review of complex numbers.
-  I don't know why this is part of 18.02, to be honest,
+/ Charlie: This short part is review of the *complex numbers* $CC$.
+  I actually don't know why this is part of 18.02, to be honest,
   but since it happened I included a short section on it.
 
-- The fourth part _Parametric Side-Quest_
-  covers the calculus of functions $RR -> RR^n$, which turns out to be easy
-  because it's pretty much all 18.01 material.
-  This part is therefore only a few pages long.
+/ Delta: Covers the calculus of functions $bf(r) : RR -> RR^n$,
+  which is usually thought of as a *parametric* function $bf(r)(t)$
+  (a time-indexed trajectory through the vector space $RR^n$).
+  This section turns out to be easy because it's pretty much all 18.01 material.
+  This part is therefore also only a few pages long.
 
-- The fifth part and sixth part are titled
-  _Multivariable differentiation_ and _Optimization_,
-  and they cover the differentiation of functions $RR^n -> RR$.
+/ Echo and Foxtrot: Cover the *differentiation of multivariable functions* $f : RR^n -> RR$,
+  and the optimization such functions.
+  The start of these two parts in the gradient $nabla f$
   This is the first serious multivariable calculus usage.
 
--
+- #todo[finish writing this]
 
-#todo[finish writing this]
+(The words Alfa, Bravo, Charlie, etc.~are from the
+#link("https://w.wiki/4ur")[NATO phonetic alphabet]
+which the author of this book has memorized from overexposure to
+#link("https://web.evanchen.cc/puzzlehunt.html")[puzzle hunts].)
 
 == [TEXT] The structure of this book
 
@@ -174,15 +185,29 @@ Here's an explanation of what they mean.
   You can skip these unless you're interested in them.
 / RECAP: A summary of what happened in this chapter.
 / EXER: Problems to work on.
+  Starred exercises are harder than questions that will appear in the actual MIT course.
 
 You'll also see some colored boxes that mark where certain chunks begin and end.
 These should be self-explanatory.
 
 == [TEXT] Other references
 
-These notes are most closely related to this one are
-probably Poonen's fall 2021 notes, available at
-#url("https://math.mit.edu/~poonen/notes02.pdf").
+The best resource I have for 18.02 in text is definitely Bjorn Poonen's fall 2021 notes,
+available at
+#align(center)[
+  #url("https://math.mit.edu/~poonen/notes02.pdf").
+]
+Poonen is a really great writer of mathematical exposition in general,
+and I highly recommend these notes as a result.
+In fact, I will even tell you, for each section,
+what the corresponding sections of Poonen are if you decide something I write
+doesn't make sense and you want to reference the corresponding text.
+
+There are lots of other resources on multivariable calculus out there too.
+For example,
+#link("https://ocw.mit.edu/courses/18-02-multivariable-calculus-spring-2006/pages/readings/supp_notes/")[MIT OpenCourseWare]
+has some supplementary notes and problems still used by the math department.
+And so on.
 
 == [SIDENOTE] If you're thinking of becoming a math major
 
@@ -191,4 +216,4 @@ probably Poonen's fall 2021 notes, available at
 #todo[write this]
 
 For now: the author thanks OpenAI for being gifted a Plus subscription to ChatGPT,
-which helped a lot with generating text explanations throughout the document.
+which helped a lot with generating sample questions throughout the document.

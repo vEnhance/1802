@@ -1,7 +1,7 @@
 import graph;
 size(10cm);
-xaxis("$x$", -6, 6, Ticks(Step=2));
-yaxis("$y$", -6, 6, Ticks(Step=2));
+xaxis("$x$", -6, 6, Ticks(Step=2, begin=false, end=false), Arrows);
+yaxis("$y$", -6, 6, Ticks(Step=2, begin=false, end=false), Arrows);
 
 draw(scale(5)*unitcircle, blue);
 real eps = 1.8;

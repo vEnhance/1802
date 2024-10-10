@@ -16,33 +16,37 @@
 #include "src/type-safety.typ"
 #pagebreak()
 
-#part[Linear Algebra I: Vectors]
+#part[Part Alfa: Linear Algebra of Vectors]
 #include "src/vectors.typ"
 #pagebreak()
 
-#part[Linear Algebra II: Matrices]
+#part[Part Bravo: Linear Algebra of Matrices]
 #include "src/matrix.typ"
 #pagebreak()
 #include "src/basis.typ"
 #pagebreak()
 
-#part[Review of complex numbers]
+#part[Part Charlie: Review of complex numbers]
 #include "src/complex.typ"
 #pagebreak()
 #include "src/mt1.typ"
 #pagebreak()
 
-#part[Parametric side-quest]
-To be written later.
+#part[Part Delta: Parametric side-quest]
+#include "src/parametric.typ"
 #pagebreak()
 
-#part[Multivariable differentiation]
+#part[Part Echo: Multivariable differentiation]
 #include "src/grad.typ"
 #pagebreak()
 
-#part[Optimization]
+#part[Part Foxtrot: Optimization]
 #include "src/minmax.typ"
 #pagebreak()
 
 #part[Solutions to the exercises and problems]
 #include "src/sol-mt1.typ"
+#pagebreak()
+
+#part[Appendix]
+#include "src/appendix.typ"
