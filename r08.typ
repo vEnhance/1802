@@ -137,6 +137,6 @@ Me trying to do question 1a.#footnote[As it happened,
   If I seem cranky this morning, that's probably why.]
 
 #figure(
-  image("figures/brainfart.png", width: 95%),
+  image("media/brainfart.png", width: 95%),
   caption: [Seriously, just do everything componentwise.],
 ) <brainfart>

@@ -790,13 +790,13 @@ To spell it out:
   Hence, the tangent line should take the form
   $ 6x + 8y = d $
   for some $d$.
-  To pass through $d = (3,4)$, we need $d = 42$, so the answer is
+  To pass through $P = (3,4)$, we need $d = 42$, so the answer is
   $ 6 x + 8 y = 42. #qedhere $
 ]
 
 #todo[A couple more examples here would be nice...]
 
-== [RECAP] A recap of multivariable differentiation so far
+== [RECAP] A recap of Part Echo on Multivariable Differentation
 
 Let's summarize the last few sections.
 
