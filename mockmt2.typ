@@ -3,36 +3,50 @@
 #show: setup-emoji
 
 #show: evan.with(
-  title: [Practice Midterm 2],
-  subtitle: [18.02 MT2 Review Session],
+  title: [18.02 Mock Midterm 2],
   author: "Evan Chen",
   date: [10 October 2024],
+  maketitle: false,
 )
 
-You have 50 minutes to answer the following five questions.
-Like the real exam, I suggest not using any notes/calculators/etc.
-Full solutions are posted at #url("https://web.evanchen.cc/1802.html")
-under the file `MT2` (not printed to save paper).
+#show heading: set align(center)
+#set heading(numbering: none)
 
-= Questions
+= 18.02 Mock Midterm 2 Instructions
+
+- Don't turn the page until the signal to start is given (3:05 PM in 4-370 on October 21, 2024).
+
+- You have 50 minutes to answer five questions.
+  We're not grading anything, so write your solutions anywhere
+  (the space below, other loose paper, notebook, iPad, etc.).
+
+- Like the real exam, I suggest not referring to any notes/calculators/etc.
+
+- Solutions are posted in Chapter 20 of my LAMV book at #url("https://web.evanchen.cc/1802.html").
+
+#pagebreak()
+
+= 18.02 Mock Midterm 2 Questions
 
 / Question 1.: A particle in the $x y$ plane has position given by
-  $ bf(r)(t) = angle.l cos(t), cos(t) angle.r. $
+  $bf(r)(t) = angle.l cos(t), cos(t) angle.r$.
   - Compute the speed of the particle at $t = pi/3$.
   - Compute the arc length of the trajectory from $t = 0$ to $t = 2 pi$.
+  - Sketch the trajectory of the curve from $t = 0$ to $t = 2pi$ in the $x y$ plane.
 
-/ Question 2.: Let $k > 0$ be a real number and let $ f(x,y) = x^2 + k y^2. $
-  The level curve of $f$ for the value $21$ passes through the point $P = (1,2)$.
-  - Compute $k$.
-  - Compute the equation of the tangent line to this level curve at the point $P$.
+/ Question 2.: Let $k > 0$ be a fixed real number and let $f(x,y) = x^3 + k y^2$.
+  Assume that the level curve of $f$ for the value $21$ passes through the point $P = (1,2)$.
+  Compute the equation of the tangent line to this level curve at the point $P$.
 
 / Question 3.: Let $f(x,y) = x^(5y)$ for $x,y > 0$.
-  Use linear approximation to estimate $f(1.001, 3.001)$ from the point $(1,1)$.
+  Use linear approximation to estimate $f(1.001, 3.001)$ starting from the point $(1,1)$.
 
 / Question 4.:
-  Determine all the saddle points of the function
+  Consider the function $f : RR^2 -> RR$ defined by
   $ f(x,y) = cos(pi x) + y^4/4 - y^3/3 - y^2. $
+  - Compute all the critical points and classify them using the second derivative test.
+  - Find the global minimums and global maximums of $f$, if they exist.
 
 / Question 5.:
   Use Lagrange multipliers to compute the minimum and maximum possible value of $x + 2 y + 2 z$
-  over real numbers $x$, $y$, $z$ satisfying $x^2 + y^2 + z^2 = 1$.
+  over real numbers $x$, $y$, $z$ satisfying $x^2 + y^2 + z^2 = 100$.
