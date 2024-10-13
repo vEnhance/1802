@@ -93,7 +93,7 @@ add(t*axis2);
 t = shift(8,0);
 path surface = (-0.8*w,-0.1*w)..(-0.2*w,-0.3*w)..(0.6*w,-0.6*w)..(0.7*w,-0.1*w)..(0.3*w,0.4*w)..(-0.5*w,0.3*w)..cycle;
 filldraw(t*surface, lightgrey, black+1.4);
-draw("$\int\limits_{u_0}^{u_1} \int\limits_{v_0}^{v_1} f(\mathbf r(u,v)) |\bf{r}_u \times \bf{r}_v| \odif u \odif v$", t*(0,-w), dir(-90), intfont);
+draw("$\int\limits_{u_0}^{u_1} \int\limits_{v_0}^{v_1} f(\mathbf r(u,v)) |\pdv{\bf{r}}{u} \times \pdv{\bf{r}}{v}| \odif u \odif v$", t*(0,-w), dir(-90), intfont);
 label("Surface integral", t*dir(90), deepgreen);
 add(t*axis3);
 
@@ -138,7 +138,7 @@ label("Work", t*dir(90), purple);
 
 /* Flux */
 t = shift(8,-3);
-draw("$\int\limits_{u_0}^{u_1} \int\limits_{v_0}^{v_1} \mathbf{F}(\mathbf{r}(u,v)) \cdot \left( \mathbf{r}_u \times \mathbf{r}_v \right) \odif{u} \odif{v}$", t*(w,-w), dir(0), intfont+purple);
+draw("$\int\limits_{u_0}^{u_1} \int\limits_{v_0}^{v_1} \mathbf{F}(\mathbf{r}(u,v)) \cdot \left( \pdv{\mathbf{r}}{u} \times \pdv{\mathbf{r}}{v} \right) \odif{u} \odif{v}$", t*(w,-w), dir(0), intfont+purple);
 filldraw(t*surface, pink, purple+1.4);
 add(t*axis3);
 add(t*vector_field);
@@ -150,7 +150,7 @@ draw("$\frac{df}{dx}$", (2,8)--(3,8), red, EndArrow);
 draw((1,5)--(1,5.5)--(3,5.5), red, EndArrow);
 label("$\nabla f$ (grad)", (1,5.5), dir(180), red);
 draw((5,5.5)--(8,5.5)--(8,5), red, EndArrow);
-label("$Q_x-P_y$ (2d scalar curl)", (8,5.5), dir(0), red);
+label("$\pdv{g}{x}-\pdv{f}{y}$ (2d scalar curl)", (8,5.5), dir(0), red);
 
 draw((1,-1.5)--(1,-3)--(3,-3), red, EndArrow);
 label("$\nabla f$ (grad)", (1,-2.25), dir(180), red);
