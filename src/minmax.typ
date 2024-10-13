@@ -628,13 +628,6 @@ But again, for 18.02, the rules of thumb should work on all the exam questions.
 Now that we understand both critical points of $f$ and regions $cal(R)$,
 we turn our attention to the problem of finding global minimums and maximums.
 
-#warning[
-  If you are a high-school student preparing for a proof-based math olympiad,
-  you should read the proof-based version of this handout at
-  #url("https://web.evanchen.cc/handouts/LM/LM.pdf") instead.
-  We use compactness there instead of the wishy-washy terms "boundary", "limit case", etc.
-]
-
 == [TEXT] The easy and hard cases
 
 Suppose you have a function $f : RR^n -> RR$ that you can compute $nabla f$ for,
@@ -711,6 +704,13 @@ although it can be done.
 ]
 
 == [TEXT] Lagrange multipliers
+
+#warning(title: [Warning for high-school math olympiad students])[
+  If you are a high-school student preparing for a proof-based math olympiad,
+  read the version at #url("https://web.evanchen.cc/handouts/LM/LM.pdf") instead.
+  We use compactness there instead of the wishy-washy terms "boundary", "limit case", etc.
+]
+
 
 Let $f : RR^n -> RR$ be a function we're optimizing over some region $cal(R)$.
 We now turn to the case where $cal(R)$, is dimension $n-1$,

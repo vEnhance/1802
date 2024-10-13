@@ -1,6 +1,6 @@
 #import "@local/evan:1.0.0":*
 
-= Challenge review problems for everything up to here <ch-mt1>
+= Challenge review problems up to Midterm Exam 1 <ch-mt1>
 
 This is a set of six more difficult problems that I crafted for my students
 to help them prepare for their first midterm exam

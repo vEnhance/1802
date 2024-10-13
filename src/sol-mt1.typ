@@ -1,6 +1,8 @@
 #import "@local/evan:1.0.0":*
 
-= Solutions to @ch-mt1 <ch-sol-mt1>
+= Solutions to the challenge problems from midterm 1 <ch-sol-mt1>
+
+The problem statements are given in @ch-mt1.
 
 == Solution to @prob-mt1p1
 
