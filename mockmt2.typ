@@ -25,12 +25,9 @@ under the file `MT2` (not printed to save paper).
   The level curve of $f$ for the value $21$ passes through the point $P = (1,2)$.
   - Compute $k$.
   - Compute the equation of the tangent line to this level curve at the point $P$.
-  - Use linear approximation to estimate the value of $a$ such that
-    the point $Q = (a, 1.999)$ also lies on the same level curve.
 
-/ Question 3.: Let $f(x,y) = x^(5y)$ for $x,y > 0$ and let
-  $bf(u) = angle.l 1/sqrt(2), 1/sqrt(2) angle.r$ be a unit vector.
-  Compute the directional derivative $D_(bf(u))(1,3)$.
+/ Question 3.: Let $f(x,y) = x^(5y)$ for $x,y > 0$.
+  Use linear approximation to estimate $f(1.001, 3.001)$ from the point $(1,1)$.
 
 / Question 4.:
   Determine all the saddle points of the function
