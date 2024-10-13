@@ -44,6 +44,10 @@
 #include "src/minmax.typ"
 #pagebreak()
 
+#part[Part Golf: Double and triple integrals]
+#include "src/integrals.typ"
+#pagebreak()
+
 #part[Solutions to the exercises and problems]
 #include "src/sol-mt1.typ"
 #pagebreak()

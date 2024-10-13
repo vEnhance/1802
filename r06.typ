@@ -95,7 +95,7 @@ Depending on what you are trying to do, some forms are easier to work with than 
     columns: 3,
     align: left,
     table.header([Operation], [In rectangular], [In polar]),
-    [$z_1 plus.minus z_2$],
+    [$z_1 pm z_2$],
       [✅ Component-wise like in $RR^2$],
       [❌ Unless $z_1$ is a real multiple of $z_2$],
     [$z_1 z_2$], [✅ Expanding], [✅ by @miracle],

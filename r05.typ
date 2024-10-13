@@ -58,7 +58,7 @@ If you want, you can compute the characteristic polynomial for $M$.
 Indeed, $op("Tr")(M) = 2 cos(60 degree) = 1$
 and $det(M) = cos^2(60 degree) + sin^2(60 degree) = 1$.
 So the characteristic polynomial is $lambda^2 - lambda + 1 = 0$,
-which has two nonreal roots $(1 plus.minus sqrt(-3))/2$.
+which has two nonreal roots $(1 pm sqrt(-3))/2$.
 
 = An example showing a use for eigenvectors (not for exam)
 

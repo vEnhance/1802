@@ -281,7 +281,7 @@ $
   M(bf(b)_1 - bf(b)_2) &= -(bf(b)_1 - bf(b)_2).
 $
 
-So $bf(b)_1 plus.minus bf(b)_2$ are eigenvectors with eigenvalues $plus.minus 1$.
+So $bf(b)_1 pm bf(b)_2$ are eigenvectors with eigenvalues $pm 1$.
 Since $M$ is a $2 times 2$ matrix there are at most two eigenvalues: we found them all!
 
 The trace of $M$ is the sum of the eigenvalues.

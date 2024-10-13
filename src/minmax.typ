@@ -79,7 +79,7 @@ As soon as I say this I need to carry over the analogous warnings from 18.01:
   So the issue is the clashing signs of small changes in $x$ and $y$ directions.
   This causes $f$ to neither be a local minimum nor local maximum.
 
-  There's actually nothing special about $plus.minus x$ and $plus.minus y$ in particular;
+  There's actually nothing special about $pm x$ and $pm y$ in particular;
   I only used those to make arithmetic easier.
   You can see @fig-hyperbola-saddle for values of $f$ at other nearby points.
 ]
@@ -466,10 +466,10 @@ The three that you should care about for this class are the following:
   constraints and turn it into and $=$ constraint.
   For example, the boundary of the region cut out by $-1 <= x <= 1$ and $-1 <= y <= 1$
   (which is a square of side length $2$)
-  are the four sides of the square, where either $x = plus.minus 1$ or $y = plus.minus 1$.
+  are the four sides of the square, where either $x = pm 1$ or $y = pm 1$.
 
 - The *limit cases* come in two forms:
-  - If any of the variables can go to $plus.minus oo$, all those cases are usually limit cases.
+  - If any of the variables can go to $pm oo$, all those cases are usually limit cases.
   - If you have any $<$ and $>$ inequalities,
     the cases where the variables approach those strict bounds are usually limit cases.
 
@@ -481,13 +481,13 @@ The three that you should care about for this class are the following:
     Look at all the points of $cal(R)$ that are close to $P$, i.e.~a small neighborhood.
 
     - Say $cal(R)$ is one-dimensional if the small neighborhood could be given a _length_.
-    - Say $cal(R)$ is two-dimensional if the small neighborhood could be given an _area_
+    - Say $cal(R)$ is two-dimensional if the small neighborhood could be given an _area_.
     - Say $cal(R)$ is three-dimensional if the small neighborhood could be given a _volume_.
 
   - Algebraic guess:
     the dimension of a region in $RR^n$ is usually equal to $n$ minus the number of $=$ in constraints.
 
-  Overall, trust your instinct on dimension, it's hard to get it wrong.
+  Overall, trust your instinct on dimension; you'll usually be right.
 
 The table below summarizes how each constraint affects each of the three words above.
 #figure(
@@ -528,6 +528,8 @@ Let's use some examples.
     But there is a *boundary of $x^2 + y^2 = 1$*.
 ]
 
+#todo[Draw a figure for this]
+
 In compensation for the fact that I'm not giving you true definitions,
 I will instead give you a pile of examples, their dimensions, boundaries, and limit cases.
 See @table-1d-regions, @table-2d-regions, @table-3d-regions.
@@ -537,9 +539,9 @@ See @table-1d-regions, @table-2d-regions, @table-3d-regions.
     columns: 4,
     align: center + horizon,
     table.header([Region], [Dim.], [Boundary], [Limit cases]),
-    [All of $RR$], [1-D], [No boundary], [$x -> plus.minus oo$],
-    [$-1 < x < 1$], [1-D], [No boundary], [$x -> plus.minus 1$],
-    [$-1 <= x <= 1$], [1-D], [$x = plus.minus 1$], [No limit cases],
+    [All of $RR$], [1-D], [No boundary], [$x -> pm oo$],
+    [$-1 < x < 1$], [1-D], [No boundary], [$x -> pm 1$],
+    [$-1 <= x <= 1$], [1-D], [$x = pm 1$], [No limit cases],
   ),
   kind: table,
   caption: [Examples of regions inside $RR$ and their properties.]
@@ -550,17 +552,17 @@ See @table-1d-regions, @table-2d-regions, @table-3d-regions.
     columns: 4,
     align: center + horizon,
     table.header([Region], [Dimension], [Boundary], [Limit cases]),
-    [All of $RR^2$], [2-D], [No boundary], [$x -> plus.minus oo$ or $y -> plus.minus oo$],
+    [All of $RR^2$], [2-D], [No boundary], [$x -> pm oo$ or $y -> pm oo$],
     [$x,y > 0$], [2-D], [No boundary], [$x -> 0^+$ or $y -> 0^+$ \ or $x -> +oo$ or $y -> +oo$],
     [$x,y >= 0$], [2-D], [$x=0$ or $y=0$], [$x -> +oo$ or $y -> +oo$],
-    [$-1 < x < 1 \ -1 < y < 1$], [2-D], [No boundary], [$x,y -> plus.minus 1$],
-    [$-1 <= x <= 1 \ -1 <= y <= 1$], [2-D], [$x=plus.minus 1$ or $y=plus.minus 1$], [No boundary],
+    [$-1 < x < 1 \ -1 < y < 1$], [2-D], [No boundary], [$x,y -> pm 1$],
+    [$-1 <= x <= 1 \ -1 <= y <= 1$], [2-D], [$x=pm 1$ or $y=pm 1$], [No boundary],
     [$x^2 + y^2 < 1$], [2-D], [No boundary], [$x^2+y^2 -> 1^-$],
     [$x^2 + y^2 <= 1$], [2-D], [$x^2 + y^2 = 1$], [No limit cases],
     [$x^2 + y^2 = 1$], [1-D], [No boundary], [No limit cases],
     [$x^2 + y^2 = 1 \ x,y > 0$], [1-D], [No boundary], [$x -> 0^+$ or $y -> 0^+$],
     [$x^2 + y^2 = 1 \ x,y >= 0$], [1-D], [$(1,0)$ and $(0,1)$], [No limit cases],
-    [$x + y = 1$], [1-D], [No boundary], [$x -> plus.minus oo$ or $y -> plus.minus oo$],
+    [$x + y = 1$], [1-D], [No boundary], [$x -> pm oo$ or $y -> pm oo$],
     [$x + y = 1 \ x, y > 0$], [1-D], [No boundary], [$x -> 0^+$ or $y -> 0^+$],
     [$x + y = 1 \ x, y >= 0$], [1-D], [$(1,0)$ and $(0,1)$], [No limit cases]
   ),
@@ -573,7 +575,7 @@ See @table-1d-regions, @table-2d-regions, @table-3d-regions.
     columns: 4,
     align: center + horizon,
     table.header([Region], [Dim.], [Boundary], [Limit cases]),
-    [All of $RR^3$], [3-D], [No boundary], [Any var to $plus.minus oo$],
+    [All of $RR^3$], [3-D], [No boundary], [Any var to $pm oo$],
     [$x,y,z > 0$], [3-D], [No boundary], [Any var to $0$ or $oo$],
     [$x,y,z >= 0$], [3-D], [$x=0$ or $y=0$ or $z=0$], [Any var to $oo$],
     [$x^2 + y^2 + z^2 < 1$], [3-D], [No boundary], [$x^2 + y^2 + z^2 -> 1^-$],
@@ -581,7 +583,7 @@ See @table-1d-regions, @table-2d-regions, @table-3d-regions.
     [$x^2 + y^2 + z^2 = 1$], [2-D], [No boundary], [No limit cases],
     [$x^2 + y^2 + z^2 = 1 \ x,y,z > 0$], [2-D], [No boundary], [$(1,0)$ and $(0,1)$],
     [$x^2 + y^2 + z^2 = 1 \ x,y,z >= 0$], [2-D], [$(1,0)$ and $(0,1)$], [No limit cases],
-    [$x + y + z = 1$], [2-D], [No boundary], [Any var to $plus.minus oo$],
+    [$x + y + z = 1$], [2-D], [No boundary], [Any var to $pm oo$],
     [$x + y + z = 1 \ x, y, z > 0$], [2-D], [No boundary], [Any var to $0^+$],
     [$x + y + z = 1 \ x, y, z >= 0$], [2-D], [$x=0$ or $y=0$ or $z=0$], [No limit cases],
   ),
@@ -614,7 +616,7 @@ But again, for 18.02, the rules of thumb should work on all the exam questions.
 
   - The dimension is probably $n$ minus the number of $=$ constraints.
   - The limit cases are obtained by turning and $<$ and $>$ into limits,
-    and considering when any of the variables can go to $plus.minus oo$.
+    and considering when any of the variables can go to $pm oo$.
   - The boundary is obtained when any $<=$ and $>=$ becomes $=$.
 ]
 
@@ -892,7 +894,7 @@ If you've seen the movie _Inception_, yes, one of those.
       $ vec(4x^3, 4y^3, 4z^3) = lambda vec(2x, 2y, 2z). $
       This requires some manual labor to solve, because there are lots of cases.
       The equation for $x$ says that
-      $ 4x^3 = lambda dot 2 x <==> x = 0 " or " x = plus.minus sqrt(lambda/2) $
+      $ 4x^3 = lambda dot 2 x <==> x = 0 " or " x = pm sqrt(lambda/2) $
       and similarly for $y$ and $z$.
 
       In other words, *all the nonzero variables* should have the same absolute value.
@@ -900,23 +902,23 @@ If you've seen the movie _Inception_, yes, one of those.
       So if all three variables are nonzero, then $|x| = |y| = |z| = 1/(sqrt(3))$
       (because $x^2+y^2+z^2=1$ as well).
       If two variables are nonzero, then their absolute values are $1/(sqrt(2))$ by the same token.
-      And if only one variable is nonzero, it is $plus.minus 1$.
+      And if only one variable is nonzero, it is $pm 1$.
       (Note of course that $(0,0,0)$ does not lie on $cal(S)$.)
 
       So in summary, there are *26 LM-critical points* given by the following list:
-      - $(plus.minus 1/(sqrt(3)), plus.minus 1/(sqrt(3)), plus.minus 1/(sqrt(3)))$; there are 8 points in this case.
+      - $(pm 1/(sqrt(3)), pm 1/(sqrt(3)), pm 1/(sqrt(3)))$; there are 8 points in this case.
         The $f$-values are all $1/3$.
-      - $(plus.minus 1/(sqrt(2)), plus.minus 1/(sqrt(2)), 0)$; there are 4 points in this case.
+      - $(pm 1/(sqrt(2)), pm 1/(sqrt(2)), 0)$; there are 4 points in this case.
         The $f$-values are all $1/2$.
-      - $(plus.minus 1/(sqrt(2)), 0, plus.minus 1/(sqrt(2)))$; there are 4 points in this case.
+      - $(pm 1/(sqrt(2)), 0, pm 1/(sqrt(2)))$; there are 4 points in this case.
         The $f$-values are all $1/2$.
-      - $(0, plus.minus 1/(sqrt(2)), plus.minus 1/(sqrt(2)))$; there are 4 points in this case.
+      - $(0, pm 1/(sqrt(2)), pm 1/(sqrt(2)))$; there are 4 points in this case.
         The $f$-values are all $1/2$.
-      - $(plus.minus 1, 0, 0)$; there are 2 points in this case.
+      - $(pm 1, 0, 0)$; there are 2 points in this case.
         The $f$-values are all $1$.
-      - $(0, plus.minus 1, 0)$; there are 2 points in this case.
+      - $(0, pm 1, 0)$; there are 2 points in this case.
         The $f$-values are all $1$.
-      - $(0, 0 plus.minus 1)$; there are 2 points in this case.
+      - $(0, 0 pm 1)$; there are 2 points in this case.
         The $f$-values are all $1$.
 
       Phew! Okay. The other cases are much shorter:
@@ -931,7 +933,7 @@ If you've seen the movie _Inception_, yes, one of those.
   and there were no limit cases of any sort. So:
 
   - $f(0,0,0) = 0$ is the global minimum.
-  - $f(plus.minus 1,0,0) = f(0,plus.minus 1,0) = f(0,0, plus.minus 1) = 1$ are the global maximums. #qedhere
+  - $f(pm 1,0,0) = f(0,pm 1,0) = f(0,0, pm 1) = 1$ are the global maximums. #qedhere
 ]
 
 == [SIDENOTE] Compactness as a way to check your work
@@ -946,7 +948,7 @@ However, I will hazard the following one: for 18.02 examples,
 That is,
 
 - All the constraints are $=$, $<=$, or $>=$; no $<$ or $>$,
-- None of the variables can go to $plus.minus oo$.
+- None of the variables can go to $pm oo$.
 
 #memo(title: [Memorize: Compact optimization theorem])[
   If $cal(R)$ is a compact region,

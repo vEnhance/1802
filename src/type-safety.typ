@@ -49,10 +49,10 @@ Table @operations lists some common examples with vectors you've seen from preca
     align: (left,center,left,left,left,),
     table.header([Operation], [Notation], [Input 1], [Input 2], [Output],),
     table.hline(),
-    [Add/subtract], [$a plus.minus b$], [Scalar], [Scalar], [Scalar],
-    [Add/subtract], [$bf(v) plus.minus bf(w)$], [Length $d$
+    [Add/subtract], [$a pm b$], [Scalar], [Scalar], [Scalar],
+    [Add/subtract], [$bf(v) pm bf(w)$], [Length $d$
     vector], [Length $d$ vector], [Length $d$ vector],
-    [Add/subtract], [$M plus.minus N$], [$m times n$ matrix], [$m times n$
+    [Add/subtract], [$M pm N$], [$m times n$ matrix], [$m times n$
     matrix], [$m times n$ matrix],
     [Multiply], [$c bf(v)$], [Scalar], [Length $d$
     vector], [Length $d$ vector],
