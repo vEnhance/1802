@@ -290,17 +290,22 @@ will essentially be the beginning of the second stage.
 
 == [SIDENOTE] Acknowledgments
 
-#todo[more to come]
-
 - Thank you to the staff and other recitation leaders who made this course possible;
   particularly Davesh Maulik for leading the instance of the course this year full-heartedly
   and Karol Bacik for making so much happen behind the scenes.
   Thanks also to Sefanya Hope for coordinating many other logistics,
   and particularly for helping me book classrooms on short notice on multiple occasions.
 - Thank you to all the students in my recitation section
-  (or in other recitation sections that came anyway)
+  (and those officially enrolled in other sections, but who came to my section anyway!)
   who regularly attended my class every Monday and Wednesday at 9am.
   That's some real early-morning dedication.
+  There's a saying that the enthusiasm of an instructor can be contagious,
+  but I definitely think the enthusiasm of students can be as well.
+  - In particular, I got a lot of words of thanks and encouragements
+    from my students this year, which I am indeed grateful for.
+    I certainly wouldn't have had the motivation to type these notes without these kind words.
 - The author thanks Ritwin Narra for several corrections.
 - Finally, the author thanks OpenAI for being gifted a Plus subscription to ChatGPT,
   which helped a lot with generating sample questions and solutions throughout the document.
+
+#todo[more to come]
