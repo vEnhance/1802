@@ -48,7 +48,7 @@ But with this goal in mind, here are some parts of the design philosophy of this
   be said out loud is instead written out in text.
 - *It has full solutions to its exercises*. I really believe in writing things out.
   I'd rather have a small number of exercises with properly documented solutions
-  than an enormous pile of mass-produced with no corresponding solutions.
+  than an enormous pile of mass-produced questions with no corresponding solutions.
 
   #todo[Okay this is not true yet lol I'm working on it. There will be solutions one day.
   Especially since ChatGPT can do all the exercises anyway kappa.]
@@ -213,7 +213,17 @@ And so on.
 
 == [SIDENOTE] Acknowledgments
 
-#todo[write this]
+#todo[more to come]
 
-For now: the author thanks OpenAI for being gifted a Plus subscription to ChatGPT,
-which helped a lot with generating sample questions throughout the document.
+- Thank you to the staff and other recitation leaders who made this course possible;
+  particularly Davesh Maulik for leading the instance of the course this year full-heartedly
+  and Karol Bacik for making so much happen behind the scenes.
+  Thanks also to Sefanya Hope for coordinating many other logistics,
+  and particularly for helping me book classrooms on short notice on multiple occasions.
+- Thank you to all the students in my recitation section
+  (or in other recitation sections that came anyway)
+  who regularly attended my class every Monday and Wednesday at 9am.
+  That's some real early-morning dedication.
+- The author thanks Ritwin Narra for several corrections.
+- Finally, the author thanks OpenAI for being gifted a Plus subscription to ChatGPT,
+  which helped a lot with generating sample questions and solutions throughout the document.
