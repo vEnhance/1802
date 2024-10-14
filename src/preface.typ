@@ -202,6 +202,7 @@ and I highly recommend these notes as a result.
 In fact, I will even tell you, for each section,
 what the corresponding sections of Poonen are if you decide something I write
 doesn't make sense and you want to reference the corresponding text.
+#todo[make good on this promise lol]
 
 There are lots of other resources on multivariable calculus out there too.
 For example,
@@ -210,6 +211,82 @@ has some supplementary notes and problems still used by the math department.
 And so on.
 
 == [SIDENOTE] If you're thinking of becoming a math major
+
+During the course, one of the students asked me about academic advice
+saying they wanted to become a math major at MIT.
+If that also describes you, here's what I told them.
+The course numbers here are with respect to MIT,
+but this advice should hold equally well at other universities.
+
+=== The two starter topics are algebra and analysis, not calculus
+
+It may come as a surprise to you that 18.02 isn't a prerequisite, even indirectly,
+for most upper-division math classes ($18.x y z$ for $x >= 1$).
+The two most important areas to take in pure math are *18.100* (real analysis)
+and *18.701--18.702* (algebra); these are sort of the barrier between
+the world of pre-university math and serious math.
+Once you clear these two classes, the floodgates open and the world of
+modern math is yours to explore (see the dependency chart in the Napkin for more on this).
+
+For example, if you take 18.701, the instructor will literally _throw away_ the "definitions"
+of linear transformations (and others) you learned in 18.02 and replace them
+with the "correct" ones. You've seen me do this already.
+Similarly, you will have new rigorous definitions of derivatives and integrals.
+In some sense, 18.100 is really _redoing_ all of 18.01 and 18.02 with actual proofs.
+
+=== Proof-writing
+
+A prerequisite to both 18.100 (real analysis) and 18.701--18.702 (algebra)
+isn't any particular theory, but *proof experience*,
+and that's the biggest priority if you don't have that yet.
+(And I don't mean two-column proofs in 9th grade geometry.
+Two-column proofs were something made up for K-12 education and never used again.)
+
+At MIT, I've been told in recent years there's a class called 18.090 for this.
+This class is new enough I don't even have any secondhand accounts,
+but if Poonen is on the list of instructors who developed the course, I trust him.
+If you're at a different school, my suggestion would be to ask any of the math professors
+a question along the lines of
+"I'd like to major in math, but I don't have proof experience yet.
+Which class in your department corresponds to learning proof arguments?".
+They should know exactly what you're talking about.
+
+Alternatively, if you are willing to study proof-writing independently,
+the FAQ #url("https://web.evanchen.cc/faq-contest.html#C-5") on my website has some suggestions.
+In particular, if you're a textbook kind of person, the book I used growing up was
+Rotman's _Journey into Math: An Introduction to Proofs_,
+available at #url("https://store.doverpublications.com/products/9780486453064");
+it worked well for me.
+I'm sure there are other suitable books as well.
+
+=== The three phases of math education (from Tao's blog)
+
+Let me put proof-writing into the bigger framework.
+Terence Tao, on his #link("https://terrytao.wordpress.com/career-advice/theres-more-to-mathematics-than-rigour-and-proofs/")[blog],
+describes a division of mathematical education into three stages.
+The descriptions that follows are copied verbatim from that link:
+
+1. The “pre-rigorous” stage, in which mathematics is taught in an informal, intuitive manner,
+  based on examples, fuzzy notions, and hand-waving. (For instance, calculus is usually first
+  introduced in terms of slopes, areas, rates of change, and so forth.) The emphasis is more on
+  computation than on theory.
+2. The “rigorous” stage, in which one is now taught that in order to do maths “properly”, one
+  needs to work and think in a much more precise and formal manner (e.g. re-doing calculus by
+  using epsilons and deltas all over the place). The emphasis is now primarily on theory; and one
+  is expected to be able to comfortably manipulate abstract mathematical objects without focusing
+  too much on what such objects actually “mean”.
+3. The “post-rigorous” stage, in which one has grown comfortable with all the rigorous
+  foundations of one’s chosen field, and is now ready to revisit and refine one’s pre-rigorous
+  intuition on the subject, but this time with the intuition solidly buttressed by rigorous
+  theory. (For instance, in this stage one would be able to quickly and accurately perform
+  computations in vector calculus by using analogies with scalar calculus, or informal and
+  semi-rigorous use of infinitesimals, big-O notation, and so forth, and be able to convert all
+  such calculations into a rigorous argument whenever required.) The emphasis is now on
+  applications, intuition, and the “big picture”.
+
+These notes are still in the first stage.
+The introduction-to-proofs class at your school
+will essentially be the beginning of the second stage.
 
 == [SIDENOTE] Acknowledgments
 
