@@ -15,12 +15,12 @@ We will assume that $|bf(u)| = 1$ (i.e. $bf(u)$ is a unit vector)
 so that $bf(u) dot bf(v)$ is the length of the projection of $bf(v)$ onto $bf(u)$.
 This is OK to assume because in the general case one just scales everything by $|bf(u)|$.
 
-== Easy special case
+=== Easy special case
 
 As a warmup, try to show that if $bf(u) = vec(a,b)$ is any vector, then $bf(u) dot bf(e)_1 = a$.
 (This is easy. The projection of $bf(u)$ onto $bf(e)_1$ is literally $a$.)
 
-== Proof
+=== Main proof
 
 #figure(
   image("figures/r02-dotproof.png", width: 75%),
