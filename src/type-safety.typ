@@ -17,7 +17,7 @@ However, it’s possible to write statements that are not merely false,
 but not even "grammatically correct", such as the nonsense equations
 $
   pi = mat(1, 0; 0, 1) , #h(2em)
-  bf(i) + 3 bf(j) = cos (bf(k)), #h(2em)
+  mat(0, 1, 2; 3, 4, 5) = cos vec(6, 7), #h(2em)
   det vec(5, 11) != sqrt(2).
 $
 To call these equations false is misleading.

@@ -56,6 +56,8 @@ Some vectors in $RR^3$ are special enough to get their own shorthand.
   but this book will always use $bf(e)_i$.
 ]
 
+== [TEXT] Length
+
 #definition[
   The *length* of a vector is denoted by $|bf(v)|$
   and corresponds to the length of the arrow drawn.
@@ -126,11 +128,11 @@ If you really want, you could say it has _every_ direction, but this is a conven
   Let's first do examples in $RR^2$ so we can drawn some pictures.
 
   - The direction along the vectors $vec(1,0)$, $vec(5,0)$ or $vec(1337,0)$
-    are all $vec(1,0)$, thought of as *due east*.
+    are all $vec(1,0)$, thought of as _due east_.
   - But the direction along the vectors $vec(-1,0)$ or $vec(-9,0)$
-    are both $vec(1,0)$, thought of as *due east*.
+    are both $vec(1,0)$, thought of as _due east_.
   - The direction along the vectors $vec(0,-2)$, $vec(0,-17)$
-    are all $vec(0,-1)$, thought of as *due south*.
+    are all $vec(0,-1)$, thought of as _due south_.
 ]
 
 #example[
@@ -139,7 +141,7 @@ If you really want, you could say it has _every_ direction, but this is a conven
   That's given by the Pythagorean theorem, of course: $ lr(|vec(3,-4)|) = sqrt(3^2+4^2) = 5. $
   So the direction along $vec(3,-4)$ would be
   $ 1/5 vec(3,-4) =  vec(3/5, -4/5). $
-  See @fig-vec-3-4.
+  See @fig-vec-3-4. The direction is somewhere between south and southeast.
 ]
 
 #figure(
