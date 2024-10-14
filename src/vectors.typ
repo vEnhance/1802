@@ -83,15 +83,99 @@ Remember that a vector always has
 - a *direction*, which refers to which way the arrow points.
 
 In other words, the geometric picture of a vector always carries two pieces of information.
+(Here, I'm imagining we've drawn the vector as an arrow
+with one endpoint at the origin and pointing some way.)
 
 In a lot of geometry situations we only care about the direction,
 and we want to ignore the magnitude.
-When that happens, one convention is to just set the magnitude equal to $1$.
-To that end, a *unit vector* will be a vector that has magnitude $1$.
+When that happens, one convention is to just set the magnitude equal to $1$:
+#definition[
+  A *unit vector* will be a vector that has magnitude $1$.
+]
+Thus we use the concept of unit vector to capture direction.
+So in $RR^2$, $vec(1,0)$ is thought of as "due east"
+and $vec(-1,0)$ is "due west", while $vec(0,1)$ is "due north"
+and $vec(1/sqrt(2), 1/sqrt(2))$ is "northeast".
+
+#definition[
+  Given any vector $bf(v)$ in $RR^n$ besides the zero vector,
+  the *direction along $bf(v)$* is the unit vector
+  $ bf(v) / (|bf(v)|) $
+  which is the unit vector that points the same way that $bf(v)$ does.
+]
+We will avoid referring to the direction of the zero-vector $bf(0)$, which doesn't make sense.
+(If you try to apply the formula here, you get division by $0$,
+since $bf(0)$ is the only vector with length $0$)
+If you really want, you could say it has _every_ direction, but this is a convention.
+
+#warning[
+  Depending on what book you're following,
+  more pedantic authors might write "the unit vector in the direction of $bf(v)$"
+  or even "the unit vector in the same direction as $bf(v)$"
+  rather than "direction along $bf(v)$".
+  This is too long to type, so I adopted the shorter phrasing.
+  I think everyone will know what you mean.
+]
+
+#typesig[
+  If $bf(v)$ is a nonzero vector of length $n$,
+  then the direction along $bf(v)$ is also a vector of length $n$.
+]
+
+#example[
+  Let's first do examples in $RR^2$ so we can drawn some pictures.
+
+  - The direction along the vectors $vec(1,0)$, $vec(5,0)$ or $vec(1337,0)$
+    are all $vec(1,0)$, thought of as *due east*.
+  - But the direction along the vectors $vec(-1,0)$ or $vec(-9,0)$
+    are both $vec(1,0)$, thought of as *due east*.
+  - The direction along the vectors $vec(0,-2)$, $vec(0,-17)$
+    are all $vec(0,-1)$, thought of as *due south*.
+]
+
+#example[
+  How about the direction along $vec(3, -4)$?
+  We need to first find the length of the vector so we can scale it down.
+  That's given by the Pythagorean theorem, of course: $ lr(|vec(3,-4)|) = sqrt(3^2+4^2) = 5. $
+  So the direction along $vec(3,-4)$ would be
+  $ 1/5 vec(3,-4) =  vec(3/5, -4/5). $
+  See @fig-vec-3-4.
+]
+
+#figure(
+  image("figures/vectors-vec-3-4.png", width: auto),
+  caption: [The direction along $vec(3,-4)$ (blue) is $vec(3 slash 5, -4 slash 5)$ (red).
+  Unit vectors always lie on the grey circle (unit circle) by definition.],
+) <fig-vec-3-4>
+
+When drawn like @fig-vec-3-4 in the two-dimensional picture $RR^2$,
+the notion of direction along $vec(x,y)$
+is _almost_ like the notion of slope $y / x$ in high school algebra
+(so the slope of the blue ray in @fig-vec-3-4).
+But there are a few reasons our notion of direction is more versatile
+than just using the slope of the blue ray.
+
+- The notion of direction can tell the difference between $vec(3,-4)$, which goes southeast,
+  and $vec(-3,4)$, which goes northwest.
+  Slope cannot; it would assign both of these "slope $-4/3$.
+- The due-north and due-south directions $vec(0,1)$ and $vec(0,-1)$ would have
+  undefined slope due to division-by-zero,
+  so you always have to worry about this extra edge case.
+  With unit vectors, due-north and due-south don't cause extra headache.
+- Our definition of direction works in higher dimension $RR^3$.
+  There isn't a good analog of slope there;
+  a single number cannot usefully capture a notion of direction in $RR^n$ for $n >= 3$.
+
+#example[
+  The direction along the three-dimensional vector $vec(12, -16, 21)$
+  is $ vec(12 slash 21, -16 slash 29, 21 slash 29). $
+  See if you can figure out where the $13$ came from.
+]
 
 == [RECIPE] Areas and volumes
 
 If $bf(v)_1 = vec(x_1, y_1)$ and $bf(v)_2 = vec(x_2, y_2)$ are vectors,
+drawn as arrows with a common starting point,
 then their sum $bf(v)_1 + bf(v)_2$ makes a parallelogram in the plane with $bf(0)$
 as shown in @fig-parallelogram.
 
@@ -132,6 +216,12 @@ with three vectors in $RR^3$; see @fig-parallelepiped.
   if you want to see the proof-based version of the determinant.
 ]
 
+== [EXER] Exercises
+
+#exer[
+  Calculate the unit vector along the direction of the
+  $ vec(-0.0008 pi, -0.0009 pi, -0.0012 pi). $
+]
 
 #pagebreak()
 
@@ -182,7 +272,7 @@ and now the whole discussion carries over wholesale.
 
 == [TEXT] Projection
 
-== [RECIPE] Projection of one vector along the direction of another
+== [RECIPE] Projection of one vector along the direction along another
 
 #recipe(title: [Recipe for projecting one vector along another])[
   Suppose $bf(v)$ and $bf(w)$ are given vectors in $RR^n$.
