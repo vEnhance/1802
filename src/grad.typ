@@ -401,7 +401,7 @@ Here are a bunch more examples that you can try to follow along:
 ]
 
 #sample[
-  Calculate the partial derivatives of $f(x,y) = x^y$, where w
+  Calculate the partial derivatives of $f(x,y) = x^y$, where we assume $x,y > 0$.
 ]
 #soln[
   Our last example is $ f(x,y) = x^y, $
@@ -644,13 +644,13 @@ so I waited until after I had defined the gradient to write the recipe.
   Compute the gradient by taking both partial derivatives:
   $ nabla f(x,y) = vec(e^x sin y, e^x cos y). $
   So the gradient vector at the starting point $(0,0)$ is given by
-  $ nabla f(0,0) = vec(e^0 sin 0, e^0 cos 0) = vec(1,0). $
+  $ nabla f(0,0) = vec(e^0 sin 0, e^0 cos 0) = vec(0,1). $
   The target point $(0.04, 0.03)$ differs from the starting point $(0,0)$ by $(0.04, 0.03)$.
   So the approximate change in $f$ is given by
   $ underbrace(vec(1,0), = nabla f(0,0)) dot underbrace(vec(0.04, 0.03), =bf(v))
-    = 1 dot 0.04 + 0 dot 0.03 = 0.04. $
+    = 0 dot 0.04 + 1 dot 0.03 = 0.04. $
   Therefore,
-  $ f(0.04, 0.01) approx underbrace(f(0,0), =777) + 0.04 = 777.04. #qedhere $
+  $ f(0.04, 0.03) approx underbrace(f(0,0), =777) + 0.03 = 777.03. #qedhere $
 ]
 
 == [TEXT] Gradient descent

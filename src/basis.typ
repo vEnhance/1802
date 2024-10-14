@@ -202,10 +202,10 @@ Indeed, let's check this:
   On exam, you should answer
   "the eigenvectors with eigenvalue $8$ are the multiples of $vec(-2,3)$".
   Or you can say
-  "the eigenvectors with eigenvalue $7$ are the multiples of $vec(2,-3)$" if you want;
+  "the eigenvectors with eigenvalue $8$ are the multiples of $vec(2,-3)$" if you want;
   these are the same thing.
   You could even say
-  "the eigenvectors with eigenvalue $7$ are the multiples of $vec(200,-300)$"
+  "the eigenvectors with eigenvalue $8$ are the multiples of $vec(200,-300)$"
   and still get credit, but that's silly.
 
 == [RECAP] Summary
@@ -327,7 +327,7 @@ don't have eigenvectors.
 Here's one example.
 
 Let $ M = mat(cos(60 degree), -sin(60 degree); sin(60 degree), cos(60 degree))
-  = mat(1/2, -sqrt(3)/2; sqrt(3)?2, 1/2). $
+  = mat(1/2, -sqrt(3)/2; sqrt(3)/2, 1/2). $
 be the matrix corresponding to rotation by $60$ degrees.
 (Feel free to replace $60$ by a different number.)
 I claim that $M$ has no real eigenvalues or eigenvectors.

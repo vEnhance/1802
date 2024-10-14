@@ -60,7 +60,7 @@ and then just do single-variable calculus or calculations on each $f_i$.
 
 - Need to differentiate $bf(r)$? Differentiate each component.
 - Need to integrate $bf(r)$? Integrate each component.
-- Need the absolute value of $bf(r)$? Square root of sum of components. And so on.
+- Need the absolute value of $bf(r)$? Square root of sum of squares of components. And so on.
 
 An example of Evan failing to do this is shown in @fig-brainfart.
 
