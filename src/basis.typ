@@ -369,11 +369,19 @@ But I'll show you how to do it with eigenvectors.
 
   Now the trick is the following:
   it's really easy to apply $M^(100)$ to the _eigenvectors_,
-  because it's just multiplication by a constant:
+  because it's just multiplication by a constant.
+  For example, the first few powers of $M$ on $vec(1,0)$
+  each double the vector, since they are all eigenvectors with eigenvalue $2$; that is:
   $
-    M^(100) vec(1,0) = 2^(100) vec(1,0); #h(2em)
-    M^(100) vec(1,1) = 3^(100) vec(1,1).
+    M vec(1,0) &= vec(2,0) \
+    M^2 vec(1,0) &= M vec(2,0) = vec(4,0) \
+    M^3 vec(1,0) &= M vec(4,0) = vec(8,0)
+    &dots.v
   $
+  and so on, until
+  $ M^(100) vec(1,0) = 2^(100) vec(1,0). $
+  By the same token:
+  $ M^(100) vec(1,1) = 3^(100) vec(1,1). $
   So now we know the outputs of $M^(100)$ at two linearly independent vectors.
   It would be sufficient, then, to use this information to
   extract $M^(100) (bf(e)_1)$ and $M^100 (bf(e)_2)$.
