@@ -29,7 +29,7 @@ this book will adopt the following conventions for variable names:
   When we draw pictures of vectors, we always draw them as _arrows_.
 
 - Capital letters like $P$ and $Q$ are used for points.
-  When we draw pictures of vectors, we always draw them as _dots_.
+  When we draw pictures of points, we always draw them as _dots_.
 ]
 
 We'll also use different notation for actual elements:
