@@ -1,5 +1,6 @@
 size(11cm);
 import graph;
+usepackage("amsmath");
 graph.xaxis("$x$", -1.5,1.5, Arrows);
 graph.yaxis("$y$", -1.5,1.5, Arrows);
 pair O = (0,0);
@@ -8,7 +9,7 @@ draw(O--dir(30), blue, EndArrow);
 draw(O--dir(90), red, EndArrow);
 draw(O--dir(120), red, EndArrow);
 label("$\mathbf{e}_1$", dir(0), dir(45), blue);
-label("$T(\mathbf{e}_1) = \left( \begin{array}{c} \cos 30^\circ  \\ \sin 30^\circ  \end{array} \right)$", dir(30), dir(30), blue);
+label("$T(\mathbf{e}_1) = \begin{pmatrix} \cos 30^\circ  \\ \sin 30^\circ  \end{pmatrix}$", dir(30), dir(30), blue);
 label("$\mathbf{e}_2$", dir(90), dir(45), red);
-label("$T(\mathbf{e}_2) = \left( \begin{array}{c} \cos 120^\circ \\ \sin 120^\circ \end{array} \right)$", dir(120), dir(120), red);
+label("$T(\mathbf{e}_2) = \begin{pmatrix} \cos 120^\circ \\ \sin 120^\circ \end{pmatrix}$", dir(120), dir(120), red);
 draw(unitcircle, grey);
