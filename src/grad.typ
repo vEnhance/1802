@@ -51,7 +51,7 @@ We give some examples.
 
 #example(title: [Example: the level curves of $f(x,y) = y - x^2$])[
   To draw the level curves of the function $f(x, y) = y - x^2$,
-  we begin by recalling that a level curve corresponds to a set of points $(x, y)$
+  we begin by recalling that a level curve corresponds to a the points $(x, y)$
   such that the function takes on a constant value, say $c$.
   For our function, this becomes:
   $ y - x^2 = c $
@@ -114,7 +114,7 @@ We give some examples.
 
   This equation represents a family of polygons.
   Specifically, for a given value of $c$,
-  the set of points that satisfy this equation form a diamond shape centered at the origin.
+  the points that satisfy this equation form a diamond shape centered at the origin.
   Indeed, in the first quadrant (where the absolute values don't do anything)
   it represents the line segment joining $(0,c)$ to $(c,0)$.
 

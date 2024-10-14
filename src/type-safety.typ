@@ -78,7 +78,7 @@ Table @operations lists some common examples with vectors you've seen from preca
 
   The answer is that you _don't_ have to figure out — you are _told_;
   @operations isn't something that you derive.
-  Instead, it's the set of _definitions_ which you have been given.
+  That is, @operations consists of the _definitions_ which you have been given.
 
   (Or more sarcastically, it's all just a social construct.
   Well, it's bit more nuanced than that.

@@ -399,7 +399,7 @@ I'm sorry this will seem to come out of nowhere.
 ]
 
 In 18.02, you'll be asked to find global minimums or maximums over a *constraint region* $cal(R)$,
-which is only a subset of $RR^n$.
+which is only a subregion of $RR^n$.
 For example, if you have a three-variable function $f(x,y,z)$ given to you,
 you may be asked questions like
 
@@ -462,7 +462,7 @@ The three that you should care about for this class are the following:
   but won't hold up in 18.100/18.900.
 ]
 
-- The *boundary* is usually the set of points you get when you choose any one of the $<=$ and $>=$
+- The *boundary* is usually the points you get when you choose any one of the $<=$ and $>=$
   constraints and turn it into and $=$ constraint.
   For example, the boundary of the region cut out by $-1 <= x <= 1$ and $-1 <= y <= 1$
   (which is a square of side length $2$)
@@ -507,7 +507,7 @@ Let's use some examples.
 #example(title: [Example: the circle, open disk, and closed disk])[
   - The circle $x^2 + y^2 = 1$ is a *one-dimensional* shape.
     Again, we consider this region to be _one-dimensional_
-    even though the set of points has two variables.
+    even though the points live in $RR^2$.
     The rule of thumb is that with $2$ variables and $1$ equality, the dimension should be $2-1=1$.
 
     Because there are no inequality constraints at all,

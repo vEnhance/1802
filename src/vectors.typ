@@ -6,7 +6,7 @@
 
 If you haven't seen $RR$ before, let's introduce it now:
 #definition[
-  We denote by $RR$ the set of real numbers, so $3, sqrt(2), -pi$ are elements of $RR$.
+  We denote by $RR$ the real numbers, so $3, sqrt(2), -pi$ are elements of $RR$.
   Sometimes we'll also refer to a real number as a *scalar*.
 ]
 The symbol "$in$", if you haven't seen it before, means "is a member of".
@@ -17,8 +17,8 @@ Unfortunately, right off the bat I have to mention that the notation $RR^n$ coul
 #definition[
   By $RR^n$ we could mean one of two things, depending on context:
 
-  - The set of vectors of length $n$, e.g. the vector $vec(pi, 5)$ is a vector in $RR^2$.
-  - The set of points in $n$-dimensional space, e.g. $(sqrt(2), 7)$ is a point in $RR^2$.
+  - The vectors of length $n$, e.g. the vector $vec(pi, 5)$ is a vector in $RR^2$.
+  - The points in $n$-dimensional space, e.g. $(sqrt(2), 7)$ is a point in $RR^2$.
 ]
 
 To work around the awkwardness of $RR^n$ meaning two possible things,
@@ -233,12 +233,13 @@ with three vectors in $RR^3$; see @fig-parallelepiped.
 
 == [TEXT] Normal vectors to lines in $RR^2$
 
-#todo[work this in]
+Before we get to normal vectors to planes in $RR^3$, I want to do everything in $RR^2$ first.
+
 If you are confused about normal vectors in the plane, it might help to first do the $RR^2$ case,
 which is easier to draw and for which you might have better intuition from eighth or ninth
 grade algebra.
 
-Here's a question: what's the set of vectors in $RR^2$ perpendicular to $vec(1,2)$?
+Here's a question: which vectors in $RR^2$ perpendicular to $vec(1,2)$?
 It's a line of slope $-1/2$ through the origin, namely
 $ 0 = vec(x,y) dot vec(1, 2) <==> 0 = x + 2 y. $
 
@@ -251,7 +252,7 @@ Okay, in that case what does the line
 $ x + 2 y = pi $
 look like? Well, it's a parallel line, the slope is still the same.
 
-Equivalently, you could also imagine it as the set of points $vec(x,y)$ such that
+Equivalently, you could also imagine it as the points $vec(x,y)$ such that
 $ vec(x,y) - vec(pi,0) " is perpendicular to " (1,2) $
 or do the same thing for any point on the line, like
 $ vec(x,y) - vec(0, pi slash 2) " is perpendicular to " (1,2) $
