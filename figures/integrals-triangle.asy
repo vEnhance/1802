@@ -119,3 +119,6 @@ draw(t*(D--s*D), black+1.4);
 draw("$\int\limits_{a_1}^{b_1} \int\limits_{a_2}^{b_2} \int\limits_{a_3}^{b_3} f(x,y,z) \odif x \odif y \odif z$", t*(0,-w), dir(-90), intfont);
 label("Triple/volume integral", t*dir(90), deepgreen);
 add(t*axis3);
+
+/* Advertisement */
+label(minipage("\centering \fbox{\copyright{} 2024 Evan Chen} \\ \texttt{https://web.evanchen.cc/}", 4cm), (12.5,7.5), grey + fontsize(9pt));

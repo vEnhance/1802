@@ -158,3 +158,6 @@ draw((5,-3)--(7,-3), red, EndArrow);
 label("$\nabla \times \mathbf{F}$ (curl)", (6,-3), dir(270), red);
 draw((9,-3)--(12.5,-3)--(12.5,-1.5), red, EndArrow);
 label("$\nabla \cdot \mathbf{F}$ (div)", (12.5,-2.25), dir(0), red);
+
+/* Include advertisement */
+label(minipage("\centering \fbox{\copyright{} 2024 Evan Chen} \\ \texttt{https://web.evanchen.cc/}", 4cm), (12.5,7.5), grey + fontsize(9pt));
