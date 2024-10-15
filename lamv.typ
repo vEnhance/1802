@@ -1,4 +1,5 @@
 #import "@local/evan:1.0.0":*
+#let poonen = link("https://math.mit.edu/~poonen/notes02.pdf")[Poonen's notes]
 
 #show: evan.with(
   title: [Linear Algebra and Multivariable Calculus],
@@ -17,41 +18,41 @@
 #pagebreak()
 
 #part[Part Alfa: Linear Algebra of Vectors]
-This part corresponds approximately to §1, §2, §3.9 of Poonen's notes.
+For comparison, this part corresponds approximately to §1, §2, §3.9 of #poonen.
 #include "src/vectors.typ"
 #pagebreak()
 
 #part[Part Bravo: Linear Algebra of Matrices]
-This part corresponds approximately to §3, §4, §6 of Poonen's notes.
+For comparison, this part corresponds approximately to §3, §4, §6 of #poonen.
 #include "src/matrix.typ"
 #pagebreak()
 #include "src/basis.typ"
 #pagebreak()
 
 #part[Part Charlie: Review of complex numbers]
-This part (not including the review) corresponds approximately to §11 of Poonen's notes.
+For comparison, this part (not including the review) corresponds approximately to §11 of #poonen.
 #include "src/complex.typ"
 #pagebreak()
 #include "src/mt1.typ"
 #pagebreak()
 
 #part[Part Delta: Parametric side-quest]
-This part corresponds approximately to §5 and §7 of Poonen's notes.
+For comparison, this part corresponds approximately to §5 and §7 of #poonen.
 #include "src/parametric.typ"
 #pagebreak()
 
 #part[Part Echo: Multivariable differentiation]
-This part corresponds approximately to §8 and §12.1-§12.3 of Poonen's notes.
+For comparison, this part corresponds approximately to §8 and §12.1-§12.3 of #poonen.
 #include "src/grad.typ"
 #pagebreak()
 
 #part[Part Foxtrot: Optimization]
-This part corresponds approximately to §9 and §12.4-§12.6 of Poonen's notes.
+For comparison, this part corresponds approximately to §9 and §12.4-§12.6 of #poonen.
 #include "src/minmax.typ"
 #pagebreak()
 
 #part[Part Golf: Multivariate integrals]
-This corresponds to §13 and §17 of Poonen.
+For comparison, this corresponds to §13 and §17 of #poonen.
 #include "src/integrals.typ"
 #pagebreak()
 

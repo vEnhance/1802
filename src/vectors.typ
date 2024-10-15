@@ -281,7 +281,7 @@ I promised you two definitions right? So here they are.
 ]
 
 It's totally not obvious that these two definitions are the same?
-The standard proof uses the law of cosines, and it's in Poonen's notes;
+The standard proof uses the law of cosines;
 I'll say a bit more about this once I've done a few examples.
 I also found a proof without trigonometry that I typed in @appendix-dotpf.
 I won't dwell on this proof too much in the interest of moving these notes forward.
@@ -339,6 +339,8 @@ This example shows something new:
   // image("<+Path+>", width: auto),
   caption: [Some pictures of dot product.],
 ) <fig-vectors-example>
+
+== [SIDENOTE] The proof of the equivalence of the dot product properties
 
 == [RECIPE] Checking whether two vectors are perpendicular
 
