@@ -772,7 +772,7 @@ We apply the old recipe in @recipe-plane-known-dir
 with $nabla f (P)$ as the normal vector.
 To spell it out:
 
-#recipe[
+#recipe(title: [Recipe: Tangent line/plane to level curve/surface])[
   To find the tangent line/plane to a level curve/surface of a function $f$ at point $P$:
 
   1. Compute the gradient $nabla f$. This is a normal vector,

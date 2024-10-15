@@ -188,7 +188,7 @@ as shown in @fig-parallelogram.
 
 The following theorem is true, but we won't be able to prove it in 18.02.
 
-#recipe[
+#recipe(title: [Recipe: Area of a parallelogram])[
   The area of the parallelogram formed by $bf(v)_1 = vec(x_1, y_1)$ and $bf(v)_2 = vec(x_2, y_2)$ is equal to
   the absolute value of the determinant
   $ det mat(x_1, x_2; y_1, y_2) = x_1 y_2 - x_2 y_1. $
@@ -197,7 +197,7 @@ The following theorem is true, but we won't be able to prove it in 18.02.
 A similar theorem is true for the parallelepiped#footnote[I hate trying to spell this word.]
 with three vectors in $RR^3$; see @fig-parallelepiped.
 
-#recipe[
+#recipe(title: [Recipe: Volume of a parallelepiped])[
   The volume of the parallelepiped formed by
   $bf(v)_1 = vec(x_1, y_1, z_1)$,
   $bf(v)_2 = vec(x_2, y_2, z_2)$,

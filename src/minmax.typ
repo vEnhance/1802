@@ -950,7 +950,7 @@ That is,
 - All the constraints are $=$, $<=$, or $>=$; no $<$ or $>$,
 - None of the variables can go to $pm oo$.
 
-#memo(title: [Memorize: Compact optimization theorem])[
+#tip(title: [Tip: Compact optimization theorem])[
   If $cal(R)$ is a compact region,
   and $f$ is a function to optimize on the region which is continuously defined everywhere,
   then there must be at least one global minimum, and at least one global maximum.
