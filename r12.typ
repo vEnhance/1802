@@ -110,5 +110,4 @@ compact optimization theorem apply?)
   Find the critical points of the function and use the second derivative test to classify them.
 / 2.: Find the maximum and minimum values of $x^3 + y^3$ on the region given by
   $x^2 + 2y^2 <= 36$.
-/ 3.: Find the point on the ellipsoid $x^2 + 2y^2 + 2z^2 = 5$ farthest from the point $(3, 2, 1)$
-  (by using the distance-squared function).
+/ 3.: Find the maximum and minimum of $x^2 + x + 3y^2 + 2z^2$ on the unit sphere $x^2 + y^2 + z^2 = 1$.

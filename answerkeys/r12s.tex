@@ -287,4 +287,194 @@ f_{\text{min}} = -216 \text{ at } (-6, 0).
 \section{Solution}
 ChatGPT go this wrong. Kappa.
 
+
+
+\newpage
+
+\section{Solution}
+
+We are tasked with finding the maximum and minimum values of the function:
+\[
+f(x, y, z) = x^2 + x + 3y^2 + 2z^2
+\]
+subject to the constraint:
+\[
+g(x, y, z) = x^2 + y^2 + z^2 - 1 = 0.
+\]
+
+\newpage
+
+\subsection{Step 1: Set up the Lagrangian}
+
+We use the method of Lagrange multipliers by defining the Lagrangian function:
+\[
+\mathcal{L}(x, y, z, \lambda) = x^2 + x + 3y^2 + 2z^2 - \lambda (x^2 + y^2 + z^2 - 1).
+\]
+
+\newpage
+
+\subsection{Step 2: Compute the partial derivatives}
+
+Compute the partial derivatives of \( \mathcal{L} \) with respect to \( x \), \( y \), \( z \), and \( \lambda \):
+
+\[
+\frac{\partial \mathcal{L}}{\partial x} = 2x + 1 - 2\lambda x = 0,
+\]
+\[
+\frac{\partial \mathcal{L}}{\partial y} = 6y - 2\lambda y = 0,
+\]
+\[
+\frac{\partial \mathcal{L}}{\partial z} = 4z - 2\lambda z = 0,
+\]
+\[
+\frac{\partial \mathcal{L}}{\partial \lambda} = -(x^2 + y^2 + z^2 - 1) = 0.
+\]
+
+\newpage
+
+\subsection{Step 3: Solve the system of equations}
+
+We have the following system:
+
+\begin{align}
+2x + 1 - 2\lambda x &= 0 \quad \text{(1)} \\
+6y - 2\lambda y &= 0 \quad \text{(2)} \\
+4z - 2\lambda z &= 0 \quad \text{(3)} \\
+x^2 + y^2 + z^2 &= 1 \quad \text{(4)}
+\end{align}
+
+\paragraph{From Equation (2):}
+
+Either \( y = 0 \) or \( 6 - 2\lambda = 0 \).
+
+If \( y \neq 0 \), then:
+\[
+6 - 2\lambda = 0 \quad \Rightarrow \quad \lambda = 3.
+\]
+
+\paragraph{From Equation (3):}
+
+Either \( z = 0 \) or \( 4 - 2\lambda = 0 \).
+
+If \( z \neq 0 \), then:
+\[
+4 - 2\lambda = 0 \quad \Rightarrow \quad \lambda = 2.
+\]
+
+Since \( \lambda \) cannot be both 3 and 2, we consider the cases where either \( y = 0 \) or \( z = 0 \).
+
+\newpage
+
+\subsubsection{Case 1: \( y = 0 \)}
+
+From Equation (3):
+
+\[
+4z - 2\lambda z = 0 \quad \Rightarrow \quad z (4 - 2\lambda) = 0.
+\]
+
+\textbf{Subcase 1.1: \( z = 0 \)}
+
+Then from Equation (1):
+
+\[
+2x + 1 - 2\lambda x = 0 \quad \Rightarrow \quad 2x (1 - \lambda) + 1 = 0.
+\]
+
+\textbf{Subcase 1.1.1: Solve for \( x \)}
+
+If \( x \neq 0 \), then:
+
+\[
+2x (1 - \lambda) + 1 = 0 \quad \Rightarrow \quad x = \frac{-1}{2(1 - \lambda)}.
+\]
+
+But since \( x^2 + y^2 + z^2 = 1 \) and \( y = 0 \), \( z = 0 \), we have:
+
+\[
+x^2 = 1 \quad \Rightarrow \quad x = \pm 1.
+\]
+
+\textbf{Subcase 1.1.2: Find \( \lambda \) for \( x = \pm 1 \)}
+
+For \( x = 1 \):
+
+\[
+2(1) + 1 - 2\lambda (1) = 0 \quad \Rightarrow \quad 2 + 1 - 2\lambda = 0 \quad \Rightarrow \quad \lambda = \frac{3}{2}.
+\]
+
+For \( x = -1 \):
+
+\[
+2(-1) + 1 - 2\lambda (-1) = 0 \quad \Rightarrow \quad -2 + 1 + 2\lambda = 0 \quad \Rightarrow \quad \lambda = \frac{1}{2}.
+\]
+
+\textbf{Subcase 1.2: \( z \neq 0 \)}
+
+Then \( 4 - 2\lambda = 0 \quad \Rightarrow \quad \lambda = 2 \).
+
+From Equation (1):
+
+\[
+2x + 1 - 4x = 0 \quad \Rightarrow \quad -2x + 1 = 0 \quad \Rightarrow \quad x = \frac{1}{2}.
+\]
+
+From Equation (4):
+
+\[
+\left( \frac{1}{2} \right)^2 + 0 + z^2 = 1 \quad \Rightarrow \quad z^2 = \frac{3}{4} \quad \Rightarrow \quad z = \pm \frac{\sqrt{3}}{2}.
+\]
+
+\newpage
+
+\subsubsection{Case 2: \( z = 0 \)}
+
+Similarly, we find \( y = \pm \frac{\sqrt{15}}{4} \) and \( x = \frac{1}{4} \).
+
+\newpage
+
+\subsection{Step 4: Evaluate \( f(x, y, z) \) at critical points}
+
+\paragraph{Point 1: \( (x, y, z) = (1, 0, 0) \)}
+
+\[
+f(1, 0, 0) = (1)^2 + 1 + 0 + 0 = 2.
+\]
+
+\paragraph{Point 2: \( (x, y, z) = (-1, 0, 0) \)}
+
+\[
+f(-1, 0, 0) = (-1)^2 + (-1) + 0 + 0 = 1 - 1 = 0.
+\]
+
+\paragraph{Point 3: \( \left( \frac{1}{2}, 0, \pm \frac{\sqrt{3}}{2} \right) \)}
+
+\[
+f\left( \frac{1}{2}, 0, \pm \frac{\sqrt{3}}{2} \right) = \left( \frac{1}{2} \right)^2 + \frac{1}{2} + 0 + 2 \left( \frac{\sqrt{3}}{2} \right)^2 = \frac{1}{4} + \frac{1}{2} + 0 + \frac{3}{2} = \frac{9}{4} = 2.25.
+\]
+
+\paragraph{Point 4: \( \left( \frac{1}{4}, \pm \frac{\sqrt{15}}{4}, 0 \right) \)}
+
+\[
+f\left( \frac{1}{4}, \pm \frac{\sqrt{15}}{4}, 0 \right) = \left( \frac{1}{4} \right)^2 + \frac{1}{4} + 3 \left( \frac{\sqrt{15}}{4} \right)^2 + 0 = \frac{1}{16} + \frac{1}{4} + 3 \left( \frac{15}{16} \right) = \frac{1}{16} + \frac{1}{4} + \frac{45}{16} = \frac{50}{16} = \frac{25}{8} = 3.125.
+\]
+
+\newpage
+
+\subsection{Step 5: Determine the maximum and minimum values}
+
+From the evaluations, we have:
+
+\begin{itemize}
+    \item \( f_{\text{max}} = \dfrac{25}{8} = 3.125 \) at \( \left( \dfrac{1}{4}, \pm \dfrac{\sqrt{15}}{4}, 0 \right) \).
+    \item \( f_{\text{min}} = 0 \) at \( (-1, 0, 0) \).
+\end{itemize}
+
+\newpage
+
+\subsection{Conclusion}
+
+The maximum value of \( f(x, y, z) \) on the unit sphere is \( \dfrac{25}{8} \) at the points \( \left( \dfrac{1}{4}, \pm \dfrac{\sqrt{15}}{4}, 0 \right) \). The minimum value is \( 0 \) at the point \( (-1, 0, 0) \).
+
+
 \end{document}
