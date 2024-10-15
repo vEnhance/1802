@@ -1,0 +1,290 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[colorlinks]{hyperref}
+\usepackage{tikz, pgfplots}
+\pgfplotsset{compat=1.17}
+
+\begin{document}
+\title{Quick answer key to R12}
+\author{ChatGPT 4o}
+\date{16 October 2024}
+\maketitle
+
+Use the table of contents below to skip to a specific part
+without seeing spoilers to the other parts.
+
+I just used ChatGPT to write this one quickly.
+ChatGPT can make mistakes, so if you spot anything that's wrong, flag me to ask.
+
+\tableofcontents
+
+
+
+\newpage
+
+\section{Solution}
+
+We are given the function:
+\[
+f(x, y) = x^3 - 3xy + y^3.
+\]
+We are tasked with finding the critical points and using the second derivative test to classify them.
+
+\newpage
+
+\subsection{Step 1: Find the critical points}
+
+To find the critical points, we first compute the partial derivatives of \( f(x, y) \) with respect to \( x \) and \( y \).
+
+\paragraph{Partial derivative with respect to \( x \):}
+\[
+f_x = \frac{\partial}{\partial x} \left( x^3 - 3xy + y^3 \right) = 3x^2 - 3y.
+\]
+
+\paragraph{Partial derivative with respect to \( y \):}
+\[
+f_y = \frac{\partial}{\partial y} \left( x^3 - 3xy + y^3 \right) = -3x + 3y^2.
+\]
+
+We set both partial derivatives equal to zero to find the critical points:
+
+\[
+f_x = 3x^2 - 3y = 0 \quad \Rightarrow \quad x^2 = y.
+\]
+\[
+f_y = -3x + 3y^2 = 0 \quad \Rightarrow \quad x = y^2.
+\]
+
+\newpage
+
+\subsection{Step 2: Solve the system of equations}
+
+We substitute \( y = x^2 \) (from \( x^2 = y \)) into the equation \( x = y^2 \) to find the values of \( x \) and \( y \).
+
+Substitute \( y = x^2 \) into \( x = y^2 \):
+\[
+x = (x^2)^2 = x^4.
+\]
+Solve for \( x \):
+\[
+x^4 - x = 0 \quad \Rightarrow \quad x(x^3 - 1) = 0.
+\]
+Thus, \( x = 0 \) or \( x = 1 \).
+
+\paragraph{Case 1: \( x = 0 \)}
+Substitute \( x = 0 \) into \( y = x^2 \):
+\[
+y = 0^2 = 0.
+\]
+Thus, \( (0, 0) \) is a critical point.
+
+\paragraph{Case 2: \( x = 1 \)}
+Substitute \( x = 1 \) into \( y = x^2 \):
+\[
+y = 1^2 = 1.
+\]
+Thus, \( (1, 1) \) is another critical point.
+
+In summary, the critical points are \( (0, 0) \) and \( (1, 1) \).
+
+\newpage
+
+\subsection{Step 3: Use the second derivative test to classify the critical points}
+
+To classify the critical points, we use the second derivative test. First, compute the second partial derivatives of \( f(x, y) \).
+
+\paragraph{Second partial derivatives:}
+\[
+f_{xx} = \frac{\partial}{\partial x} \left( 3x^2 - 3y \right) = 6x,
+\]
+\[
+f_{yy} = \frac{\partial}{\partial y} \left( -3x + 3y^2 \right) = 6y,
+\]
+\[
+f_{xy} = \frac{\partial}{\partial y} \left( 3x^2 - 3y \right) = -3.
+\]
+
+The second derivative test is based on the Hessian determinant \( H \), which is given by:
+\[
+H = f_{xx} f_{yy} - (f_{xy})^2.
+\]
+We evaluate \( H \) at each critical point.
+
+\newpage
+
+\subsubsection{At \( (0, 0) \):}
+
+At \( (0, 0) \), the second partial derivatives are:
+\[
+f_{xx}(0, 0) = 6(0) = 0, \quad f_{yy}(0, 0) = 6(0) = 0, \quad f_{xy}(0, 0) = -3.
+\]
+The Hessian determinant is:
+\[
+H(0, 0) = (0)(0) - (-3)^2 = -9.
+\]
+Since \( H(0, 0) < 0 \), the point \( (0, 0) \) is a **saddle point**.
+
+\newpage
+
+\subsubsection{At \( (1, 1) \):}
+
+At \( (1, 1) \), the second partial derivatives are:
+\[
+f_{xx}(1, 1) = 6(1) = 6, \quad f_{yy}(1, 1) = 6(1) = 6, \quad f_{xy}(1, 1) = -3.
+\]
+The Hessian determinant is:
+\[
+H(1, 1) = (6)(6) - (-3)^2 = 36 - 9 = 27.
+\]
+Since \( H(1, 1) > 0 \) and \( f_{xx}(1, 1) > 0 \), the point \( (1, 1) \) is a **local minimum**.
+
+\newpage
+
+\subsection{Conclusion}
+
+The critical points of the function \( f(x, y) = x^3 - 3xy + y^3 \) are \( (0, 0) \) and \( (1, 1) \). Using the second derivative test:
+- The point \( (0, 0) \) is a **saddle point**.
+- The point \( (1, 1) \) is a **local minimum**.
+
+
+
+
+\newpage
+
+\section{Solution}
+
+We are tasked with finding the maximum and minimum values of the function:
+\[
+f(x, y) = x^3 + y^3
+\]
+on the region defined by the constraint:
+\[
+x^2 + 2y^2 \leq 36.
+\]
+This region is an ellipse centered at the origin.
+
+\newpage
+
+\subsection{Step 1: Analyze the constraint and region}
+
+The region defined by \( x^2 + 2y^2 \leq 36 \) is an ellipse. To parameterize the boundary, we rewrite the equation of the ellipse as:
+\[
+\frac{x^2}{36} + \frac{y^2}{18} = 1.
+\]
+Thus, the semi-major axis is along the \( x \)-axis with length 6, and the semi-minor axis is along the \( y \)-axis with length \( \sqrt{18} \approx 4.24 \).
+
+\newpage
+
+\subsection{Step 2: Use the method of Lagrange multipliers}
+
+To find the maximum and minimum values of \( f(x, y) = x^3 + y^3 \) on the boundary of the region, we use the method of Lagrange multipliers. The constraint function is:
+\[
+g(x, y) = x^2 + 2y^2 - 36 = 0.
+\]
+The gradients of \( f \) and \( g \) are:
+\[
+\nabla f(x, y) = \left\langle 3x^2, 3y^2 \right\rangle,
+\]
+\[
+\nabla g(x, y) = \left\langle 2x, 4y \right\rangle.
+\]
+According to the method of Lagrange multipliers, we must have:
+\[
+\nabla f(x, y) = \lambda \nabla g(x, y).
+\]
+This gives the system of equations:
+\[
+3x^2 = \lambda (2x),
+\]
+\[
+3y^2 = \lambda (4y).
+\]
+
+\paragraph{Case 1: \( x = 0 \)}
+Substitute \( x = 0 \) into the constraint \( x^2 + 2y^2 = 36 \):
+\[
+0^2 + 2y^2 = 36 \quad \Rightarrow \quad y^2 = 18 \quad \Rightarrow \quad y = \pm \sqrt{18} = \pm 3\sqrt{2}.
+\]
+At \( (0, 3\sqrt{2}) \) and \( (0, -3\sqrt{2}) \), the function \( f(x, y) \) becomes:
+\[
+f(0, 3\sqrt{2}) = 0^3 + (3\sqrt{2})^3 = 0 + 54\sqrt{2},
+\]
+\[
+f(0, -3\sqrt{2}) = 0^3 + (-3\sqrt{2})^3 = 0 - 54\sqrt{2}.
+\]
+
+\paragraph{Case 2: \( y = 0 \)}
+Substitute \( y = 0 \) into the constraint \( x^2 + 2y^2 = 36 \):
+\[
+x^2 + 0^2 = 36 \quad \Rightarrow \quad x^2 = 36 \quad \Rightarrow \quad x = \pm 6.
+\]
+At \( (6, 0) \) and \( (-6, 0) \), the function \( f(x, y) \) becomes:
+\[
+f(6, 0) = 6^3 + 0^3 = 216,
+\]
+\[
+f(-6, 0) = (-6)^3 + 0^3 = -216.
+\]
+
+\paragraph{Case 3: \( x \neq 0 \) and \( y \neq 0 \)}
+For \( x \neq 0 \) and \( y \neq 0 \), we can solve for \( \lambda \) from the Lagrange multiplier equations:
+\[
+3x^2 = \lambda (2x) \quad \Rightarrow \quad \lambda = \frac{3x}{2},
+\]
+\[
+3y^2 = \lambda (4y) \quad \Rightarrow \quad \lambda = \frac{3y^2}{4y} = \frac{3y}{4}.
+\]
+Equating the two expressions for \( \lambda \):
+\[
+\frac{3x}{2} = \frac{3y}{4} \quad \Rightarrow \quad 4x = 2y \quad \Rightarrow \quad y = 2x.
+\]
+Substitute \( y = 2x \) into the constraint \( x^2 + 2y^2 = 36 \):
+\[
+x^2 + 2(2x)^2 = 36 \quad \Rightarrow \quad x^2 + 8x^2 = 36 \quad \Rightarrow \quad 9x^2 = 36 \quad \Rightarrow \quad x^2 = 4 \quad \Rightarrow \quad x = \pm 2.
+\]
+When \( x = 2 \), \( y = 4 \), and when \( x = -2 \), \( y = -4 \).
+
+At \( (2, 4) \) and \( (-2, -4) \), the function \( f(x, y) \) becomes:
+\[
+f(2, 4) = 2^3 + 4^3 = 8 + 64 = 72,
+\]
+\[
+f(-2, -4) = (-2)^3 + (-4)^3 = -8 - 64 = -72.
+\]
+
+\newpage
+
+\subsection{Step 4: Evaluate the values}
+
+We summarize the values of \( f(x, y) \) at the critical points:
+
+- \( f(6, 0) = 216 \)
+- \( f(-6, 0) = -216 \)
+- \( f(0, 3\sqrt{2}) = 54\sqrt{2} \approx 76.37 \)
+- \( f(0, -3\sqrt{2}) = -54\sqrt{2} \approx -76.37 \)
+- \( f(2, 4) = 72 \)
+- \( f(-2, -4) = -72 \)
+
+\newpage
+
+\subsection{Step 5: Conclusion}
+
+The **global maximum** value of \( f(x, y) \) on the region \( x^2 + 2y^2 \leq 36 \) is:
+\[
+f_{\text{max}} = 216 \text{ at } (6, 0).
+\]
+
+The **global minimum** value of \( f(x, y) \) on the region \( x^2 + 2y^2 \leq 36 \) is:
+\[
+f_{\text{min}} = -216 \text{ at } (-6, 0).
+\]
+
+
+
+
+\newpage
+
+\section{Solution}
+ChatGPT go this wrong. Kappa.
+
+\end{document}
