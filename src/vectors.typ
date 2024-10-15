@@ -213,9 +213,24 @@ with three vectors in $RR^3$; see @fig-parallelepiped.
 
 #digression[
   If you're interested in the proof of these results
-  and their $n$-dimensional generalizations, the tool needed is the *wedge product*.
-  You can see chapter 12 of #link("https://web.evanchen.cc/napkin.html")[Napkin]
-  if you want to see the proof-based version of the determinant.
+  and their $n$-dimensional generalizations, the tool needed is the *wedge product*,
+  which is denoted $and.big^k(RR^n)$.
+  This is well beyond the scope of 18.02,
+  but it's documented in Chapter 12 of my #link("https://web.evanchen.cc/napkin.html")[Napkin]
+  for those of you that want to read about it.
+
+  Alternatively, I think Wikipedia and Axler#footnote[Who
+    has a paper called #link("https://www.axler.net/DwD.html")[Down with Determinants!],
+    that I approve of.
+  ], among others,
+  use a definition of the determinant as
+  the unique multilinear alternating map on $n$-tuples of column vectors in $RR^n$
+  that equals $1$ for the identity.
+  This definition will work, and will let you derive the formula for determinant,
+  and gives you a reason to believe it should match your concept of area and volume.
+  It's probably also easier to understand than wedge products.
+  However, in the long term I think wedge products are more versatile,
+  even though they take much longer to setup.
 ]
 
 == [EXER] Exercises
@@ -434,4 +449,48 @@ and now the whole discussion carries over wholesale.
 
 = The cross product
 
-#todo[To be written]
+The cross product is the last major linear algebra tool we'll need to introduce
+(together with determinants and the dot product).
+Like the dot product, the cross product also has two definitions, one algebraic and one geometric.
+
+== [TEXT] The two definitions of the cross product
+
+
+== [SIDENOTE] The cross product sucks
+
+Compared to dot products and determinants,
+the cross product might feel the most unnatural, for good reason ---
+it's used much less frequently by serious mathematicians than the other tools you see.
+
+#figure(
+  image("media/cross-products.png", width: 80%),
+  caption: [How to think of cross products.],
+)
+
+The reason that the cross product isn't popular with mathematicians is
+the definition of the cross product is *really quite brittle*.
+For example, the cross product can't be defined for any number of dimensions,#footnote[Just kidding,
+  apparently there's a
+  #link("https://w.wiki/BVNL")[seven dimensional cross product]?
+  Today I learned.
+  Except that there are apparently $480$ different ways to define it in seven dimensions,
+  so, like, probably not a great thing.]
+and you have to remember this weird right-hand rule that adds one more arbitrary convention.
+So the definition is pretty unsatisfying.
+
+To replace the cross product, mathematicians use a different
+kind of object called a _bivector_, an element of a space called $and.big^2(RR^n)$.
+(They might even claim that bivectors do everything cross products can do, but better.)
+Again, this new kind of object is well beyond the scope of 18.02
+but it's documented in Chapter 12 of my #link("https://web.evanchen.cc/napkin.html")[Napkin]
+if you do want to see it.
+
+I'll give you a bit of a teaser though.
+In general, for any $n$, bivectors in $RR^n$ are specified by $(n(n-1))/2$ coordinates.
+So for $n=3$ you _could_ translate every bivector in $RR^3$ into a vector in $RR^3$
+by just reading the coordinates (although you end up with the right-hand rule
+as an artifact of the translation), and the cross product is exactly what you get.
+But for $n=4$, a bivector in $RR^4$ has six numbers,
+which is too much information to store in a vector in $RR^4$.
+Similarly, for $n > 4$, this translation can't be done.
+That's why the cross product is so brittle and can't work past $RR^3$.
