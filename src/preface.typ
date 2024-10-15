@@ -231,7 +231,7 @@ If you're thinking of becoming a math major, there's some advice in @appendix-ma
   - In particular, I got a lot of words of thanks and encouragements
     from my students this year, which I am indeed grateful for.
     I certainly wouldn't have had the motivation to type these notes without these kind words.
-- The author thanks Ritwin Narra for several corrections.
+- The author thanks Ritwin Narra and Royce Yao for several corrections.
 - Finally, the author thanks OpenAI for being gifted a Plus subscription to ChatGPT,
   which helped a lot with generating sample questions and solutions throughout the document.
 

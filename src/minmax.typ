@@ -20,7 +20,7 @@ and you were trying to minimize it, you used the following terms:
   kind: table,
   caption: [18.01 terminology for critical points]
 )
-Each row includes all the ones below it, but not vice-versa.
+Each row includes all the ones above it, but not vice-versa.
 Here's a picture of an example showing these for
 a random function $f(x) = -1/5 x^6 - 2/7 x^5 + 2/3 x^4 + x^3$.
 From left to right in @fig-1801-critical-points, there are four critical points:
@@ -556,7 +556,7 @@ See @table-1d-regions, @table-2d-regions, @table-3d-regions.
     [$x,y > 0$], [2-D], [No boundary], [$x -> 0^+$ or $y -> 0^+$ \ or $x -> +oo$ or $y -> +oo$],
     [$x,y >= 0$], [2-D], [$x=0$ or $y=0$], [$x -> +oo$ or $y -> +oo$],
     [$-1 < x < 1 \ -1 < y < 1$], [2-D], [No boundary], [$x,y -> pm 1$],
-    [$-1 <= x <= 1 \ -1 <= y <= 1$], [2-D], [$x=pm 1$ or $y=pm 1$], [No boundary],
+    [$-1 <= x <= 1 \ -1 <= y <= 1$], [2-D], [$x=pm 1$ or $y=pm 1$], [No limit cases],
     [$x^2 + y^2 < 1$], [2-D], [No boundary], [$x^2+y^2 -> 1^-$],
     [$x^2 + y^2 <= 1$], [2-D], [$x^2 + y^2 = 1$], [No limit cases],
     [$x^2 + y^2 = 1$], [1-D], [No boundary], [No limit cases],
@@ -615,7 +615,7 @@ But again, for 18.02, the rules of thumb should work on all the exam questions.
   Given a region $cal(R)$ contained in $RR^n$, to guess its dimension, limit cases, and boundary:
 
   - The dimension is probably $n$ minus the number of $=$ constraints.
-  - The limit cases are obtained by turning and $<$ and $>$ into limits,
+  - The limit cases are obtained by turning $<$ and $>$ into limits,
     and considering when any of the variables can go to $pm oo$.
   - The boundary is obtained when any $<=$ and $>=$ becomes $=$.
 ]
@@ -835,7 +835,7 @@ to "LM-critical point".
 
     Hence the LM-critical point must have $x = y = z$.
     Since $x y z = 8$, it follows the only LM-critical point is $(2,2,2)$.
-    Evaluating $f$ here gives $f(2,2,2) = 8$.
+    Evaluating $f$ here gives $f(2,2,2) = 6$.
 
   2. The region $cal(R)$ has no boundary, because no $<=$ or $>=$ constraints are present.
   3. The region $cal(R)$ has limit cases when any of the variables $x,y,z$

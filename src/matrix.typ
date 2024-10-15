@@ -24,7 +24,7 @@ I wouldn't worry too much about the axioms until later; for now, read the exampl
   The following are all linear transformations from $RR^2$ to $RR^2$:
 
   - The constant function where $T(bf(v)) = bf(0)$ for every vector $v$
-  - Projection onto the $x$-axis: $T(vec(x,y)) = vec((x,0))$.
+  - Projection onto the $x$-axis: $T(vec(x,y)) = vec(x,0)$.
   - Rotation by an angle
   - Reflection across a line
   - Projection onto the line $y = x$.
@@ -99,7 +99,7 @@ $ T( vec(1,0) ) = vec(1, 3) " and " T( vec(0,1) ) = vec(2, 4)
   <==> T " encoded as " mat(1,2;3,4). $
 
 To put this into recipe form:
-#recipe(title: [Recipe for encoding a transformation])[
+#definition(title: [Definition for encoding a transformation])[
   Given a transformation $T : RR^n -> RR^m$, to encode it as a matrix:
 
   1. Compute $T(bf(e)_1)$ through $T(bf(e)_n)$ and write them as column vectors..
@@ -194,7 +194,13 @@ We will see two results:
 - Multiplication of the matrix for $T$ by a column vector $bf(v)$
   corresponds to evaluation $T(bf(v))$.
 - Multiplication of the matrices for $S$ and $T$
-  gives the matrix for the composed function $S compose T$.
+  gives the matrix for the composed function $S compose T$.#footnote[
+  The $compose$ symbol means the function where you apply $T$ first then $S$ first.
+  So for example, if $f(x) = x^2$ and $g(x) = x+5$, then
+  $(f compose g)(x) = f(g(x)) = (x+5)^2$.
+  We mostly use that circle symbol if we want to refer to $f compose g$ itself without the $x$,
+  since it would look really bad if you wrote "$f(g$" or something.
+]
 
 === One matrix
 
@@ -218,13 +224,7 @@ In other words,
 
 === Two matrices
 
-Now, ny time we have functions in math, we can _compose_ them.#footnote[
-  The $compose$ symbol means the function where you apply $T$ first then $S$ first.
-  So for example, if $f(x) = x^2$ and $g(x) = x+5$, then
-  $(f compose g)(x) = f(g(x)) = (x+5)^2$.
-  We mostly use that circle symbol if we want to refer to $f compose g$ itself without the $x$,
-  since it would look really bad if you wrote "$f(g$" or something.
-]
+Now, any time we have functions in math, we can _compose_ them.
 So let's play the same game with a pair of functions $S$ and $T$,
 and think about their composition $S compose T$.
 Imagine we got asked the following question:

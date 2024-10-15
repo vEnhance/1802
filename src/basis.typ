@@ -19,10 +19,15 @@
 Let's define the relevant term first:
 
 #definition[
-  Suppose $T$ is a matrix or linear transformation, and $bf(v)$ is a vector such that
+  Suppose $T$ is a matrix or linear transformation, $lambda$ a scalar,
+  and $bf(v)$ is a vector such that
   $ T(bf(v)) = lambda bf(v); $
   that is, $T$ sends $bf(v)$ to a multiple of itself.
   Then we call $lambda$ an *eigenvalue* and $bf(v)$ an *eigenvector*.
+]
+
+#typesig[
+  Eigenvalues $lambda$ are always scalars.
 ]
 
 #example[
@@ -175,13 +180,11 @@ Indeed, let's check this:
   $ A vec(-13, 13) = mat(5,-2;3,10) vec(-13, 13) = vec(-91, 91) = 7 vec(-13, 13). $
 
   On exam, you probably answer
-  "the eigenvectors with eigenvalue $7$ are the multiples of $vec(-1,1)$".
-  Or you can say
-  "the eigenvectors with eigenvalue $7$ are the multiples of $vec(1,-1)$" if you want;
+  "the eigenvectors with eigenvalue $7$ are the multiples of $vec(-1,1)$",
+  or "the eigenvectors with eigenvalue $7$ are the multiples of $vec(1,-1)$" if you want;
   these are the same thing.
-  You could even say
-  "the eigenvectors with eigenvalue $7$ are the multiples of $vec(100,-100)$"
-  and still get credit, but that's silly.
+  Or if you want to mess with the grader,
+  "the eigenvectors with eigenvalue $7$ are the multiples of $vec(100,-100)$" is fine too.
 
 - When $lambda = 8$, our system is
   $
@@ -309,7 +312,7 @@ I think 18.02 won't have too many situations where you need to solve a degenerat
 three-variable system of equations, because it's generally annoying to do by hand.
 But if it happens, you should fall back on your high school algebra
 and solve the system however you learned it in 9th or 10th grade.
-The good news is that one of the three equations is always redundant,
+The good news is that at least one of the three equations is redundant,
 so you can just throw one away and solve for the other two.
 For example, in this case we would solve
 $

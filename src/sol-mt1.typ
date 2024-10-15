@@ -24,7 +24,7 @@ To execute the calculation, let $bf(v) = vec(4,5,6)$ and $bf(n) = vec(1,1,2)$.
 The scalar projection is
 $ op("comp")_(bf(n)) (bf(v)) = (bf(v) dot bf(n)) / (|bf(n)|) = (21) / sqrt(6). $
 The vector projection is then
-$ bf(a) = (op("comp")_(bf(n)) (bf(v))) (bf(n))/(|bf(n)|)
+$ (op("comp")_(bf(n)) (bf(v))) (bf(n))/(|bf(n)|)
   = 21/sqrt(6) vec(1,1,2)/sqrt(6)
   = vec(7/2,7/2,7). $
 Then the desired projection is

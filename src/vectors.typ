@@ -130,7 +130,7 @@ If you really want, you could say it has _every_ direction, but this is a conven
   - The direction along the vectors $vec(1,0)$, $vec(5,0)$ or $vec(1337,0)$
     are all $vec(1,0)$, thought of as _due east_.
   - But the direction along the vectors $vec(-1,0)$ or $vec(-9,0)$
-    are both $vec(1,0)$, thought of as _due east_.
+    are both $vec(-1,0)$, thought of as _due west_.
   - The direction along the vectors $vec(0,-2)$, $vec(0,-17)$
     are all $vec(0,-1)$, thought of as _due south_.
 ]
@@ -170,8 +170,8 @@ than just using the slope of the blue ray.
 
 #example[
   The direction along the three-dimensional vector $vec(12, -16, 21)$
-  is $ vec(12 slash 21, -16 slash 29, 21 slash 29). $
-  See if you can figure out where the $13$ came from.
+  is $ vec(12 slash 29, -16 slash 29, 21 slash 29). $
+  See if you can figure out where the $29$ came from.
 ]
 
 == [RECIPE] Areas and volumes
@@ -330,11 +330,9 @@ This example shows something new:
   way easier to do with the algebraic definition.
   This will be true in general throughout this class:
 
-  - Use the algebraic definition to actually calculate the dot product.
+  - Use the algebraic definition when you need to do practical calculation.
   - Use the geometric definition to interpret the result in some way.
 ]
-
-
 
 #figure(
   [TODO],
@@ -352,7 +350,7 @@ This example shows something new:
   Suppose $bf(v)$ and $bf(w)$ are given vectors in $RR^n$.
   To find the length of the projection of $bf(v)$ along $bf(w)$:
 
-  1. Output $(bf(v) dot bf(w)) / (|bf(w)|)$.
+  1. Output the absolute value of $(bf(v) dot bf(w)) / (|bf(w)|)$.
 
   To find the actual vector $bf(v)$ along $bf(w)$:
 
@@ -375,8 +373,8 @@ If you are confused about normal vectors in the plane, it might help to first do
 which is easier to draw and for which you might have better intuition from eighth or ninth
 grade algebra.
 
-Here's a question: which vectors in $RR^2$ perpendicular to $vec(1,2)$?
-It's a line of slope $-1/2$ through the origin, namely
+Here's a question: which vectors in $RR^2$ are perpendicular to $vec(1,2)$?
+They're the vectors line of slope $-1/2$ through the origin, namely
 $ 0 = vec(x,y) dot vec(1, 2) <==> 0 = x + 2 y. $
 
 #figure(
@@ -410,7 +408,7 @@ and now the whole discussion carries over wholesale.
 
 #idea[
   Everything we used slope for in 18.01,
-  we should rethink in terms of normal vectors for 18.02.
+  we should rephrase in terms of normal vectors for 18.02.
 ]
 
 #recipe(title: [Recipe for calculating normal vector to a plane])[
