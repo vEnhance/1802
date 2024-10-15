@@ -374,7 +374,7 @@ which is easier to draw and for which you might have better intuition from eight
 grade algebra.
 
 Here's a question: which vectors in $RR^2$ are perpendicular to $vec(1,2)$?
-They're the vectors line of slope $-1/2$ through the origin, namely
+They're the vectors lying on a line of slope $-1/2$ through the origin, namely
 $ 0 = vec(x,y) dot vec(1, 2) <==> 0 = x + 2 y. $
 
 #figure(

@@ -579,10 +579,13 @@ See @table-1d-regions, @table-2d-regions, @table-3d-regions.
     [$x,y,z > 0$], [3-D], [No boundary], [Any var to $0$ or $oo$],
     [$x,y,z >= 0$], [3-D], [$x=0$ or $y=0$ or $z=0$], [Any var to $oo$],
     [$x^2 + y^2 + z^2 < 1$], [3-D], [No boundary], [$x^2 + y^2 + z^2 -> 1^-$],
-    [$x^2 + y^2 + z^2 <= 1$], [3-D], [$x^2 + y^2 = 1$], [No limit cases],
+    [$x^2 + y^2 + z^2 <= 1$], [3-D], [$x^2 + y^2 + z^2 = 1$], [No limit cases],
     [$x^2 + y^2 + z^2 = 1$], [2-D], [No boundary], [No limit cases],
     [$x^2 + y^2 + z^2 = 1 \ x,y,z > 0$], [2-D], [No boundary], [$(1,0)$ and $(0,1)$],
-    [$x^2 + y^2 + z^2 = 1 \ x,y,z >= 0$], [2-D], [$(1,0)$ and $(0,1)$], [No limit cases],
+    [$x^2 + y^2 + z^2 = 1 \ x,y,z >= 0$], [2-D], [Three quarter-circle arcs#footnote[
+      To be explicit, the first quarter circle is $x^2+y^2=1$, $x,y >=0$ and $z = 0$.
+      The other two quarter-circle arcs are similar.
+    ]], [No limit cases],
     [$x + y + z = 1$], [2-D], [No boundary], [Any var to $pm oo$],
     [$x + y + z = 1 \ x, y, z > 0$], [2-D], [No boundary], [Any var to $0^+$],
     [$x + y + z = 1 \ x, y, z >= 0$], [2-D], [$x=0$ or $y=0$ or $z=0$], [No limit cases],
@@ -846,7 +849,7 @@ to "LM-critical point".
 
   Collating all these results:
 
-  - The unique global minimum is $(2,2,2)$ at which $f(2,2,2) = 8$.
+  - The unique global minimum is $(2,2,2)$ at which $f(2,2,2) = 6$.
   - There is no global maximum. #qedhere
 ]
 
