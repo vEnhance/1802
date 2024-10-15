@@ -12,6 +12,7 @@ Suggested usage: think about each for 15-30 minutes, then read the solution.
 I hope this helps you digest the material; I tried to craft problems
 that teach deep understanding and piece together multiple ideas,
 rather than just using one or two isolated recipes.
+Solutions to these six problems are in @ch-sol-mt1.
 
 #prob[
   In $RR^3$, compute the projection of the vector $vec(4,5,6)$ onto the plane $x+y+2z=0$.
@@ -48,5 +49,3 @@ rather than just using one or two isolated recipes.
   Suppose we plot these three numbers in the complex plane.
   Compute the area of the triangle they enclose.
 ] <prob-mt1p6>
-
-Solutions to these six problems are in @ch-sol-mt1.

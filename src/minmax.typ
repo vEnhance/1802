@@ -942,7 +942,7 @@ This is an optional section containing a nice theorem from
 18.100 that could help you check your work, but isn't necessary in theory.
 
 I need a new word called "compact", and like before,
-it's beyond the scope of 18.02 to give a proper definition,
+it's beyond the scope of 18.02 to give a proper definition.
 However, I will hazard the following one: for 18.02 examples,
 *$cal(R)$ is compact if there are no limit cases*.
 That is,
