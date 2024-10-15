@@ -1,4 +1,4 @@
-size(11cm);
+size(9cm);
 import graph;
 usepackage("amsmath");
 graph.xaxis("$x$", -1.5,1.5, Arrows);

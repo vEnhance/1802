@@ -139,6 +139,7 @@ Here's more examples.
   Write $T$ as a $2 times 2$ matrix.
 ]
 #soln[
+  See @fig-rotate-30.
   By looking at the unit circle, we see that
   $ T(bf(e_1)) = vec(cos 30 degree, sin 30 degree) = (sqrt(3)/2, 1/2). $
   The vector $bf(e)_2$ is $90 degree$ further along
@@ -146,6 +147,11 @@ Here's more examples.
   Glue these together and output $T$ as the matrix
   $ T = mat(sqrt(3)/2, -1/2; 1/2, sqrt(3)/2). #qedhere $
 ]
+#figure(
+  image("figures/matrix-rot.png", width: auto),
+  caption: [Rotation by $30$ degrees.],
+) <fig-rotate-30>
+
 #remark(title: [Remark: This is where the rotation matrix comes from])[
   If you redo this question with $30 degree$ replaced by any angle $theta$, you get the answer
   $ T = mat(cos(theta), cos(theta+90 degree); sin(theta), sin(theta+90 degree)). $
