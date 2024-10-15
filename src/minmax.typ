@@ -501,7 +501,7 @@ The table below summarizes how each constraint affects each of the three words a
   ),
   kind: table,
   caption: [Effects of the rules of thumb.]
-)
+) <table-rule-thumb>
 
 Let's use some examples.
 #example(title: [Example: the circle, open disk, and closed disk])[
@@ -551,7 +551,7 @@ See @table-1d-regions, @table-2d-regions, @table-3d-regions.
   table(
     columns: 4,
     align: center + horizon,
-    table.header([Region], [Dimension], [Boundary], [Limit cases]),
+    table.header([Region], [Dim.], [Boundary], [Limit cases]),
     [All of $RR^2$], [2-D], [No boundary], [$x -> pm oo$ or $y -> pm oo$],
     [$x,y > 0$], [2-D], [No boundary], [$x -> 0^+$ or $y -> 0^+$ \ or $x -> +oo$ or $y -> +oo$],
     [$x,y >= 0$], [2-D], [$x=0$ or $y=0$], [$x -> +oo$ or $y -> +oo$],
@@ -621,6 +621,8 @@ But again, for 18.02, the rules of thumb should work on all the exam questions.
   - The limit cases are obtained by turning $<$ and $>$ into limits,
     and considering when any of the variables can go to $pm oo$.
   - The boundary is obtained when any $<=$ and $>=$ becomes $=$.
+
+  See @table-rule-thumb.
 ]
 
 #todo[Add some more examples here]
@@ -648,7 +650,7 @@ although it can be done.
 
 == [RECIPE] The easy case <sec-recipe-opt-easy>
 
-#recipe(title: [The easy case of optimization])[
+#recipe(title: [Recipe for optimization without Lagrange Multipliers])[
   Suppose you want to find the optimal values of $f : RR^n -> RR$ over a region $cal(R)$,
   and $cal(R)$ has dimension $n$.
 
@@ -658,7 +660,7 @@ although it can be done.
   4. Output the points in the previous steps that give the best values,
     or assert the optimal value doesn't exist (if points in step 3 do better than steps 1-2).
 
-  If there are any points at which $f$ or $nabla f$ are undefined, you should check those as well.
+  If there are any points at which $nabla f$ is undefined, you should check those as well.
   However, these seem to be pretty rare for the examples that show up in 18.02.
 ]
 
@@ -771,7 +773,7 @@ with the LM-critical point definition.
 
 == [RECIPE] Lagrange multipliers
 
-#recipe(title: [The hard case of optimization: Lagrange multipliers])[
+#recipe(title: [Recipe for Lagrange multipliers])[
   Suppose you want to find the optimal values of $f : RR^n -> RR$ over a region $cal(R)$,
   and $cal(R)$ has dimension $n-1$ due to a single constraint $g = c$ for some $g : RR^n -> RR$.
 
@@ -781,7 +783,7 @@ with the LM-critical point definition.
   4. Output the points in the previous steps that give the best values,
     or assert the optimal value doesn't exist (if points in step 3 do better than steps 1-2).
 
-  If there are any points at which $f$, $g$, $nabla f$, $nabla g$ are undefined,
+  If there are any points at which $nabla f$ or $nabla g$ are undefined,
   you should check those as well.
   However, these seem to be pretty rare for the examples that show up in 18.02.
 ]
