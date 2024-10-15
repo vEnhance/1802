@@ -124,7 +124,7 @@ you will find that while there are plenty of critical points,
 the chance of finding a critical inflection point is something like $10^(-15)$ ---
 far worse than the lottery.
 (Of course, if you _know_ where to look, you can find them:
-$f(x) = x^3$ has an inflection point at the origin, for example.)
+$f(x) = x^3$ has a critical inflection point at the origin, for example.)
 
 In 18.02 this is no longer true.
 If we picked a random function of a similar form
@@ -140,7 +140,7 @@ among the critical points that showed up, I ended up with about
 
 And the true limits (if one replaces $10^6$ with $N$ and takes the limit as $N -> oo$)
 are what you would guess from the above: 25%, 25%, 50%.
-(If you want to see the code, it's in the Appendix, section @appendix-saddle-sim.)
+(If you want to see the code, it's in the Appendix, @appendix-saddle-sim.)
 
 Why is the 18.02 situation so different?
 It comes down to this: in 18.02, you can have two clashing directions.
@@ -159,7 +159,7 @@ almost always have the same color.
 So in 18.01, when we could only walk in one direction,
 that meant almost every point was either a local minimum or a local maximum.
 But the picture for 18.02 is totally different because there's nothing that forces
-the north/south pair to have a different direction from the east/west pair.
+the north/south pair to have the same sign as the east/west pair.
 For a "random" function, if you believe the colors are equally likely,
 then half the time the arrows don't match colors and you end up with a saddle point.
 
@@ -301,7 +301,7 @@ I'm sorry this will seem to come out of nowhere.
     These are the partial derivatives of the partial derivatives of $f$ (yes, I'm sorry),
     evaluated at $P$.
     If you prefer gradients, you could write this instead as
-    $ nabla f_x = vec(A,B), #h(1em) nabla f_y = vec(B,C). $
+    $ nabla f_x (P) = vec(A,B), #h(1em) nabla f_y (P) = vec(B,C). $
 
   2. If $A C - B^2 != 0$, output the answer based on the following chart:
     - If $A C - B^2 < 0$, output "saddle point".
@@ -372,8 +372,8 @@ I'm sorry this will seem to come out of nowhere.
 
 #exerstar[
   - Give an example of a differentiable function $f : RR^2 -> RR$ with the following property:
-    for every point $(x,y)$, the point $(x,y)$ is a saddle point if and only if
-    $x$ and $y$ are both integers.
+    every lattice point $(x,y)$ (i.e. a point where both $x$ and $y$ are integers)
+    is a saddle point, and there are no other saddle points.
   - Does there exist a differentiable function $f : RR^2 -> RR$
     such that every point is a saddle point?
 ]
@@ -426,24 +426,24 @@ We provide several examples.
   - An open interval like $-1 < x < 1$ in $RR$.
   - A closed interval like $-1 <= x <= 1$ in $RR$.
 ]
-#example(title: [Examples of two-dimensional regions in $RR$])[
+#example(title: [Examples of two-dimensional regions in $RR^2$])[
   In $RR^2$, some two-dimensional regions:
   - All of $RR^2$, with no further conditions.
   - The first quadrant $x, y > 0$, not including the axes
   - The first quadrant $x, y >= 0$, including the positive $x$ and $y$ axes.
   - The square $-1 < x < 1$ and $-1 < y < 1$, not including the four sides of the square.
   - The square $-1 <= x <= 1$ and $-1 <= y <= 1$, including the four sides.
-]
-#example(title: [Examples of one-dimensional regions in $RR$])[
-  In $RR^2$, some one-dimensional regions:
   - The open disk $x^2 + y^2 < 1$, filled-in unit disk without its circumference.
   - The closed disk $x^2 + y^2 <= 1$, filled-in unit disk including its circumference.
-  - The unit circle $x^2 + y^2 = 1$, which is a circle of radius $1$, not filled. This is 1-D.
+]
+#example(title: [Examples of one-dimensional regions in $RR^2$])[
+  In $RR^2$, some one-dimensional regions:
+  - The unit circle $x^2 + y^2 = 1$, which is a circle of radius $1$, not filled.
   - Both $x^2+y^2=1$ and $x,y > 0$, a quarter-arc, not including $(1,0)$ and $(0,1)$.
   - Both $x^2+y^2=1$ and $x,y >= 0$, a quarter-arc, including $(1,0)$ and $(0,1$).
   - The equation $x + y = 1$ is a line.
-  - The equation $x + y = 1$ and $x,y > 0$ is a line segment not containing the endpoints $(1,0)$ and $(0,1)$.
-  - The equation $x + y = 1$ and $x,y >= 0$ is a line segment containing the endpoints $(1,0)$ and $(0,1)$.
+  - Both $x + y = 1$ and $x,y > 0$: a line segment not containing the endpoints $(1,0)$ and $(0,1)$.
+  - Both $x + y = 1$ and $x,y >= 0$: a line segment containing the endpoints $(1,0)$ and $(0,1)$.
 ]
 
 I could have generated plenty more examples for $RR^2$,
@@ -606,7 +606,7 @@ See @table-1d-regions, @table-2d-regions, @table-3d-regions.
     $ x^2 + y^2 + z^2 = 0 $
     is actually $0$-dimensional, because there's only one point in it: $(0,0,0)$.
 
-  That said, intentionally misleading constraints like this are well off-syllabus for 18.02.
+  That said, intentionally misleading constraints like this are likely off-syllabus for 18.02.
 ]
 
 == [RECIPE] Working with regions
@@ -639,14 +639,14 @@ Suppose you have a function $f : RR^n -> RR$ that you can compute $nabla f$ for,
 and a region $cal(R)$.
 We're going to distinguish between two cases:
 
-- The *easy case* is if $cal(R)$ has dimension $n$ as well;
-  for cases where the rule of thumb works, this is the same as having no "=" constraints.
-- The *hard case* is if $cal(R)$ has dimension $n-1$,
-  which the rule of thumb says means there is one "=" constraint.
+- The *easy case* is if $cal(R)$ has dimension $n$ as well.
+  The rule of thumb says there should be zero "=" constraints.
+- The *hard case* is if $cal(R)$ has dimension $n-1$.
+  Rule of thumb says there should be one "=" constraint.
   In the hard case, we will use *Lagrange multipliers*.
 
-We won't cover the case where $cal(R)$ has dimension $n-2$ or less in 18.02,
-although it can be done.
+We won't cover the case where $cal(R)$ has dimension $n-2$ or less in 18.02
+(i.e. two or more constraints), although it can be done.
 
 == [RECIPE] The easy case <sec-recipe-opt-easy>
 
@@ -892,7 +892,7 @@ If you've seen the movie _Inception_, yes, one of those.
 
     1. Let's find the LM-critical points for $f$ on $cal(S)$.
       Take the gradient of $g$ to get
-      $ nabla g = vec(2x, 2y, 2z) $.
+      $ nabla g = vec(2x, 2y, 2z). $
       The only point at which $nabla g = bf(0)$ is $x=y=z=0$ which isn't on the sphere $cal(S)$,
       so we don't have to worry about $nabla g = bf(0)$ the case.
       Now we instead solve

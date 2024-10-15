@@ -107,7 +107,7 @@ and $vec(1/sqrt(2), 1/sqrt(2))$ is "northeast".
 ]
 We will avoid referring to the direction of the zero-vector $bf(0)$, which doesn't make sense.
 (If you try to apply the formula here, you get division by $0$,
-since $bf(0)$ is the only vector with length $0$)
+since $bf(0)$ is the only vector with length $0$.)
 If you really want, you could say it has _every_ direction, but this is a convention.
 
 #warning[

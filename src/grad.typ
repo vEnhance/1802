@@ -534,8 +534,8 @@ In full abstraction, we can rewrite linear approximation as:
 #memo[
   Suppose $f$ is differentiable at a point $P$.
   Then for small displacement vectors $bf(v)$,
-  the *net change* from $f(P)$ to $f(P + bf(u))$
-  is approximated by the dot product $ nabla f(P) dot bf(u). $
+  the *net change* from $f(P)$ to $f(P + bf(v))$
+  is approximated by the dot product $ nabla f(P) dot bf(v). $
   This procedure is called *linear approximation*.
 ]
 Up until now, all we've done is rewrite the earlier equation with a different notation;
