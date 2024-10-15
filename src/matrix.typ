@@ -98,7 +98,7 @@ $ T( vec(1,0) ) = vec(1, 3) " and " T( vec(0,1) ) = vec(2, 4)
   <==> T " encoded as " mat(1,2;3,4). $
 
 To put this into recipe form:
-#recipe(title: [Recipe: Encoding a trasnformation])[
+#recipe(title: [Recipe for encoding a transformation])[
   Given a transformation $T : RR^n -> RR^m$, to encode it as a matrix:
 
   1. Compute $T(bf(e)_1)$ through $T(bf(e)_n)$ and write them as column vectors..

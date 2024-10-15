@@ -72,7 +72,7 @@ An example of Evan failing to do this is shown in @fig-brainfart.
 == [RECIPE] Parametric things
 
 I'll write this recipe with two variables, but it works equally well for three.
-#recipe(title: [Recipe: Parametric stuff])[
+#recipe(title: [Recipes for parametric stuff])[
   Suppose you're given an equation $bf(r)(t) = vec(x(t), y(t))$.
   There are some things you could be asked:
 
@@ -82,7 +82,7 @@ I'll write this recipe with two variables, but it works equally well for three.
   - To find the *acceleration vector* at a time $t$, it's the second derivative
     of each component: $ bf(r)''(t) = vec(x''(t), y''(t)). $
 ]
-#recipe(title: [Recipe: Parametric integration])[
+#recipe(title: [Recipe for parametric integration])[
   - To integrate $bf(r)(t)$ between two times, take the integral of each component:
     $ integral_("start time")^("stop time") bf(r)(t) dif t =
     vec(
@@ -90,7 +90,7 @@ I'll write this recipe with two variables, but it works equally well for three.
       integral_("start time")^("stop time") y(t) dif t
     ). $
 ]
-#recipe(title: [Recipe: Arc Length])[
+#recipe(title: [Recipe for arc length])[
   The *arc length* from time $t_"start"$ to $t_"stop"$ is the integral of the speed:
   $ "arc length" = integral_("start time")^("stop time") |bf(r)'(t)| dif t. $
 ]

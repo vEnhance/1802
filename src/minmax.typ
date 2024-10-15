@@ -292,7 +292,7 @@ Here's some excuses why:
 So to get this section over with quickly, I'll just give the result.
 I'm sorry this will seem to come out of nowhere.
 
-#recipe(title: [Recipe: the second derivative test])[
+#recipe(title: [Recipe: The second derivative test])[
   Suppose $f(x,y)$ is a function has a critical point at $P$.
   We want to tell whether it's a local minimum, local maximum, or saddle point.
   Assume that $f$ has a continuous second derivative near $P$.
