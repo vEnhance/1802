@@ -941,10 +941,52 @@ If you've seen the movie _Inception_, yes, one of those.
   - $f(pm 1,0,0) = f(0,pm 1,0) = f(0,0, pm 1) = 1$ are the global maximums. #qedhere
 ]
 
+== [SIDENOTE] A little common sense can you save you a lot of work
+
+If you step back and think a bit before you try to dive into calculus,
+you might find that having a bit of "common sense" might save you a lot of work.
+What I mean is, imagine you gave the question to your high school self
+before you learned _any_ calculus at all.
+Would they be able to say anything about what properties the answer could have?
+The answer is, yes, pretty often.
+
+Let's take the example we just did: we asked for the minimum and maximum of
+$ f(x,y,z) = x^4 + y^4 + z^4 $
+over the region $x^2 + y^2 + z^2 <= 1$.
+To show the recipe, I turned off my brain and jumped straight into a really long calculation.
+But it turns out you can cut out a lot of the steps if you just use some common sense,
+not involving any calculus:
+
+- The _minimum_ is actually obvious: it's just $0$,
+  because fourth powers are always nonnegative!
+  So $f >= 0$ is obvious even to a high schooler, and $f(0,0,0) = 0$.
+- The _maximum_ is not obvious,
+  but actually you can see _a priori_ that it must occur on the boundary $x^2 + y^2 + z^2 = 1$.
+  Why is this?
+  Suppose you had a point in the strict interior $P = (0.1, 0.2, 0.3)$ with $f > 0$.
+  Then $f(P) = f(0.1, 0.2, 0.3)$ is some number.
+  But you could obviously increase the value of $f$ just by scaling the absolute value
+  of things in $P$!
+  For example, if I double all the coordinates of $P$ to get $Q = (0.2, 0.4, 0.6)$,
+  then $f(Q) = 16 f(P)$.
+  As long as $Q$ stays within the sphere, this will be a better value.
+
+  So any point in the interior is obviously not a maximum:
+  if you have a point $P$ strictly the interior,
+  you could increase $f(P)$ by changing $P$ to have absolute value.
+
+That means if we had used a bit of common sense,
+we could have gotten the minimum with no work at all,
+and we could have skipped straight to the LM step for the maximum.
+So if you aren't too overwhelmed by material already in this class,
+look for shortcuts like this when you can.
+
 == [SIDENOTE] Compactness as a way to check your work
 
 This is an optional section containing a nice theorem from
-18.100 that could help you check your work, but isn't necessary in theory.
+18.100 that could help you check your work,
+but isn't necessary in theory if you never make mistakes.
+(But in practice...)
 
 I need a new word called "compact", and like before,
 it's beyond the scope of 18.02 to give a proper definition.
