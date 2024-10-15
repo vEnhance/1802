@@ -10,7 +10,8 @@ These are lecture notes based upon the fall 2024 instance of the course, taught 
 
 These notes have the following lofty goal:
 #goal[
-  In theory, an incoming MIT student should be able to pass the 18.02 final exam
+  In theory, an incoming MIT student with a single-variable calculus background
+  should be able to pass the 18.02 final exam
   by *only* reading these notes and problems, working through several practice final exams,
   and going to a weekly office-hours#footnote[
     You can substitute the office hours for a knowledgeable friend, or similar.
