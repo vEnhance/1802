@@ -82,6 +82,7 @@ These notes are still in the first stage.
 The introduction-to-proofs class at your school
 will essentially be the beginning of the second stage.
 
+#pagebreak()
 
 == Proof that the algebraic definition of dot product matches the geometric one <appendix-dotpf>
 
@@ -132,6 +133,8 @@ The same idea will work in $RR^3$ if you use $bf(v) = x bf(e)_1 + y bf(e)_2 + z 
 instead, and replace the parallelogram with a parallelepiped,
 in which case one now has $3$ easy cases.
 And so on in $n$ dimensions.
+
+#pagebreak()
 
 == Saddle point simulation code for @sec-saddle-sim <appendix-saddle-sim>
 

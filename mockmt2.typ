@@ -22,7 +22,7 @@
 
 - Like the real exam, I suggest not referring to any notes/calculators/etc.
 
-- Solutions are posted in Chapter 20 of my LAMV book at #url("https://web.evanchen.cc/1802.html").
+- Solutions are posted in Section 20 of my LAMV book at #url("https://web.evanchen.cc/1802.html").
 
 #pagebreak()
 

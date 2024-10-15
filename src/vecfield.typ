@@ -138,11 +138,12 @@ These terms will be defined next section.
 === The six red arrows
 
 There are also *six new red arrows*.
-They indicate transformations: a way to take one type of input data and make another.
+They indicate transformations on functions:
+a way to take one type of function and use it to build another function.
 
 For example, the gradient $nabla$ is the one we've discussed:
 if you start with a scalar-valued function $f : RR^n -> RR$,
-the gradient changes it into a vector field $nabla f : RR^n -> RR^n$.
+the gradient creates into a vector field $nabla f : RR^n -> RR^n$.
 (The $(dif f) / (dif x)$ in the $f : RR^1 -> RR$ case is also just the gradient,
 though a bit more degenerate.)
 
@@ -175,11 +176,8 @@ This will be a three-phase program:
   Print out a copy of the high-resolution version of @fig-int-chart-stokes
   (which can be downloaded at #url("https://web.evanchen.cc/upload/1802/integrals-stokes.pdf"))
   and hang it in your room.
-]
+] <exer-poster>
 
 #pagebreak()
-
 
 = Work and flux
-
-#pagebreak()

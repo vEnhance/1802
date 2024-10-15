@@ -63,6 +63,7 @@ For comparison, this corresponds to §14, §15, §18, §19, §20, §21 of #poone
 #include "src/vecfield.typ"
 #pagebreak()
 #include "src/gradcurldiv.typ"
+#pagebreak()
 
 #part[Solutions to the exercises and problems]
 #include "src/sol-mt1.typ"
