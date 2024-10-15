@@ -203,7 +203,6 @@ and I highly recommend these notes as a result.
 In fact, I will even tell you, for each section,
 what the corresponding sections of Poonen are if you decide something I write
 doesn't make sense and you want to reference the corresponding text.
-#todo[make good on this promise lol]
 
 There are lots of other resources on multivariable calculus out there too.
 For example,
