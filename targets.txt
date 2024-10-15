@@ -23,3 +23,5 @@ answerkeys/r10s.pdf
 answerkeys/r11s.pdf
 bonus1.pdf
 lamv.pdf
+figures/integrals-triangle.pdf
+figures/integrals-stokes.pdf

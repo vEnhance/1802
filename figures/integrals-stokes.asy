@@ -87,7 +87,7 @@ t = shift(8,3.5);
 path square = box((-0.6*w,-0.6*w), (0.6*w,0.6*w));
 filldraw(t*square, lightgrey, black+1.4);
 draw("$\int\limits_{a_1}^{b_1} \int\limits_{a_2}^{b_2} f(x,y) \odif x \odif y$", t*(0,-w), dir(-90));
-label("Area integral", t*dir(90), deepgreen);
+label("Double/area integral", t*dir(90), deepgreen);
 add(t*axis2);
 
 t = shift(8,0);
@@ -114,7 +114,7 @@ draw(t*(B--s*B), black+1.4);
 draw(t*(C--s*C), black+1.4);
 draw(t*(D--s*D), black+1.4);
 draw("$\int\limits_{a_1}^{b_1} \int\limits_{a_2}^{b_2} \int\limits_{a_3}^{b_3} f(x,y,z) \odif x \odif y \odif z$", t*(0,-w), dir(-90), intfont);
-label("Volume integral", t*dir(90), deepgreen);
+label("Triple/volume integral", t*dir(90), deepgreen);
 add(t*axis3);
 
 /* Work */

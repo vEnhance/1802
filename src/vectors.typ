@@ -494,3 +494,5 @@ But for $n=4$, a bivector in $RR^4$ has six numbers,
 which is too much information to store in a vector in $RR^4$.
 Similarly, for $n > 4$, this translation can't be done.
 That's why the cross product is so brittle and can't work past $RR^3$.
+
+== [RECAP] Recap of vector stuff up to here

@@ -50,7 +50,8 @@ This part corresponds approximately to §9 and §12.4-§12.6 of Poonen's notes.
 #include "src/minmax.typ"
 #pagebreak()
 
-#part[Part Golf: Double and triple integrals]
+#part[Part Golf: Multivariate integrals]
+This corresponds to §13 and §17 of Poonen.
 #include "src/integrals.typ"
 #pagebreak()
 

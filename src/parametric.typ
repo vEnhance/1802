@@ -47,10 +47,10 @@ and every axis is an input variable we treat with equal respect.)
 
 == [TEXT] Just always use components
 
-Why is $bf(r) : RR -> RR^n$ so much easier?
+Why is $bf(r) : RR -> RR^n$ so easy that Part Delta is one section?
 Because there's pretty much only one thing you need to ever do:
 #memo[
-  *TLDR Just always use components.*
+  TLDR Just always use components.
 ]
 That is, if $bf(r) : RR -> RR^3$ (say), basically 90%+ of the time what you do is write
 $ bf(r)(t) = angle.l x(t), y(t), z(t) angle.r
@@ -59,28 +59,31 @@ and then just do single-variable calculus or calculations on each $f_i$.
 
 - Need to differentiate $bf(r)$? Differentiate each component.
 - Need to integrate $bf(r)$? Integrate each component.
-- Need the absolute value of $bf(r)$? Square root of sum of squares of components. And so on.
+- Need the absolute value of $bf(r)$? Square root of sum of squares of components.
 
-An example of Evan failing to do this is shown in @fig-brainfart.
+And so on. An example of Evan failing to do this is shown in @fig-brainfart.
 
 #figure(
-  image("media/brainfart.png", width: 95%),
+  rect[#image("media/brainfart.png", width: 95%)],
   caption: [Seriously, just do everything componentwise.],
 ) <fig-brainfart>
 
 == [RECIPE] Parametric things
 
 I'll write this recipe with two variables, but it works equally well for three.
-#recipe(title: [Recipes for parametric stuff])[
-  Suppose you're given an equation $bf(r)(t) = vec(x(t), y(t))$.
-  There are some things you could be asked:
+Suppose you're given an equation $bf(r)(t) = vec(x(t), y(t))$.
+There are some things you could be asked:
 
+#recipe(title: [Recipes for parametric stuff])[
   - To find the *velocity vector* at a time $t$, it's the derivative $ bf(r)'(t) = vec(x'(t), y'(t)). $
   - To find the *speed* at a time $t$, it's the absolute value of the velocity:
   $ |bf(r')(t)| = sqrt(x'(t)^2 + y'(t)^2). $
   - To find the *acceleration vector* at a time $t$, it's the second derivative
     of each component: $ bf(r)''(t) = vec(x''(t), y''(t)). $
 ]
+I don't know if there's a word for the absolute value of the acceleration vector
+(the way speed is the absolute value of the velocity vector).
+
 #recipe(title: [Recipe for parametric integration])[
   - To integrate $bf(r)(t)$ between two times, take the integral of each component:
     $ integral_("start time")^("stop time") bf(r)(t) dif t =
