@@ -119,9 +119,9 @@ Here's more examples.
 #remark[
   You might note that indeed multiplication by the encoded matrix
   $ mat(1,0;0,0) vec(x,y) = vec(x,0). $
-  matches what you expect.
-  It's generally true that matrix multiplication by the encoded matrix
-  corresponds to applying the function; I'll repeat that idea next section.
+  matches what you expect: $vec(x,0)$ is indeed the projection of $vec(x,y)$ onto the $x$-axis!
+  And this works for every linear transformation.
+  This is so important I'll say it again next section, just mentioning it here first.
 ]
 
 #sample[
