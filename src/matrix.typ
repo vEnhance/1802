@@ -13,13 +13,14 @@ their presentation is likely to be different (and worse).
 The definition I'm about to give is the 18.700/18.701 definition of linear transform,
 but the hill I will die on is that this definition is better than the one 18.02.
 
-#definition[
-  A _linear transform_ $T : RR^n -> RR^m$ is _any_ map obeying $T(c bf(v)) = c T(bf(v))$
-  and $T(bf(v) + bf(w)) = T(bf(v)) + T(bf(w))$.
+#definition(title: [Definition of linear transformation])[
+  A _linear transform_ $T : RR^n -> RR^m$ is _any_ map obeying
+  the two axioms $T(c bf(v)) = c T(bf(v))$ and $T(bf(v) + bf(w)) = T(bf(v)) + T(bf(w))$.
 ]
 So it's a chonky boy: for every $bf(v) in RR^n$, there's an output value $T(bf(v)) in RR^m$.
+I wouldn't worry too much about the axioms until later; for now, read the examples.
 
-#example[
+#example(title: [Examples of linear transformations])[
   The following are all linear transformations from $RR^2$ to $RR^2$:
 
   - The constant function where $T(bf(v)) = bf(0)$ for every vector $v$
@@ -28,8 +29,8 @@ So it's a chonky boy: for every $bf(v) in RR^n$, there's an output value $T(bf(v
   - Reflection across a line
   - Projection onto the line $y = x$.
   - Multiplication by any $2 times 2$ matrix, e.g. the formula
-  $ T(vec(x,y)) = vec(x+2y,3x+4y). $
-  is a linear transformaation too.
+    $ T(vec(x,y)) = vec(x+2y,3x+4y) $
+    is a linear transformation too.
 ]
 #tip[
   Note that $T(bf(0)) = bf(0)$ in any linear transformation.

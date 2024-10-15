@@ -19,18 +19,17 @@ From now on, we're going to usually change notation
 $ bf(r) : RR &-> RR^n \
   bf(r)(t) &= vec("function in " t, dots.v, "function in " t). $
 The choice of letter $t$ for the input variable usually means "time";
-and we use $bf(r)$ for the function name to remind that the output
+and we use $bf(r)$ for the function name to remind that the output is a vector.
 
 #typesig[
   When you see $bf(r)(t)$ or similar notation,
-  the time variable $t$ has type scalar,
-  and the output is a vector.
+  the time variable $t$ has type scalar, and the output is a vector.
 ]
 
 If you're drawing a picture of a parametric function,
 usually all the axes are components of $bf(r)(t)$ and the time variable doesn't have an axis.
-In other words, in the picture, *all the variables are output components*,
-and we treat them all with equal respect.
+In other words, in the picture, *all the axis variables are output components,
+and we treat them all with equal respect*.
 The input time variable doesn't show up at all.
 (This is in contrast to 18.01 $x y$-graphs, where one axis was input and one axis was output.
 In the next section when we talk about _level curves_,
