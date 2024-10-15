@@ -17,30 +17,36 @@
 #pagebreak()
 
 #part[Part Alfa: Linear Algebra of Vectors]
+This part corresponds approximately to §1, §2, §3.9 of Poonen's notes.
 #include "src/vectors.typ"
 #pagebreak()
 
 #part[Part Bravo: Linear Algebra of Matrices]
+This part corresponds approximately to §3, §4, §6 of Poonen's notes.
 #include "src/matrix.typ"
 #pagebreak()
 #include "src/basis.typ"
 #pagebreak()
 
 #part[Part Charlie: Review of complex numbers]
+This part (not including the review) corresponds approximately to §11 of Poonen's notes.
 #include "src/complex.typ"
 #pagebreak()
 #include "src/mt1.typ"
 #pagebreak()
 
 #part[Part Delta: Parametric side-quest]
+This part corresponds approximately to §5 and §7 of Poonen's notes.
 #include "src/parametric.typ"
 #pagebreak()
 
 #part[Part Echo: Multivariable differentiation]
+This part corresponds approximately to §8 and §12.1-§12.3 of Poonen's notes.
 #include "src/grad.typ"
 #pagebreak()
 
 #part[Part Foxtrot: Optimization]
+This part corresponds approximately to §9 and §12.4-§12.6 of Poonen's notes.
 #include "src/minmax.typ"
 #pagebreak()
 
