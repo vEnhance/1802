@@ -382,22 +382,6 @@ I'm sorry this will seem to come out of nowhere.
 
 = Regions
 
-== [TEXT] Constraint regions
-
-#digression(title: [Digression: An English lesson on circle vs disk, sphere vs ball])[
-  To be careful about some words that are confused in English,
-  I will use the following conventions:
-
-  - The word *circle* refers to a one-dimensional object with no inside, like $x^2+y^2=1$.
-    It has no area.
-  - The word *open disk* refers to points strictly inside a circle, like $x^2+y^2 < 1$
-  - The word *closed disk* refers to a circle and all the points inside it, like $x^2+y^2=1$ or $x^2+y^2<1$.
-  - The word *disk* refers to either an open disk or a closed disk.
-
-  Similarly, a *sphere* refers only to the surface, not the volume, like $x^2+y^2+z^2=1$.
-  Then we have *open ball*, *closed ball*, and *ball* defined in the analogous way.
-]
-
 In 18.02, you'll be asked to find global minimums or maximums over a *constraint region* $cal(R)$,
 which is only a subregion of $RR^n$.
 For example, if you have a three-variable function $f(x,y,z)$ given to you,
@@ -415,6 +399,31 @@ It turns out that thinking about constraint regions is actually half the problem
 In 18.01 you usually didn't have to think much about it,
 because the regions you got were always intervals, and that made things easy.
 But in 18.02, you will need to pay much more attention.
+
+#warning(title: [Warning: if you are proof-capable, read the grown-up version])[
+  This entire section is going to be a lot of wishy-washy terms
+  that I don't actually give definitions for.
+  If you are a high-school student preparing for a math olympiad,
+  or you are someone who can read proofs,
+  read the version at #url("https://web.evanchen.cc/handouts/LM/LM.pdf") instead.
+  We use open/closed sets and compactness there to do things correctly.
+]
+
+== [TEXT] Constraint regions
+
+#digression(title: [Digression: An English lesson on circle vs disk, sphere vs ball])[
+  To be careful about some words that are confused in English,
+  I will use the following conventions:
+
+  - The word *circle* refers to a one-dimensional object with no inside, like $x^2+y^2=1$.
+    It has no area.
+  - The word *open disk* refers to points strictly inside a circle, like $x^2+y^2 < 1$
+  - The word *closed disk* refers to a circle and all the points inside it, like $x^2+y^2=1$ or $x^2+y^2<1$.
+  - The word *disk* refers to either an open disk or a closed disk.
+
+  Similarly, a *sphere* refers only to the surface, not the volume, like $x^2+y^2+z^2=1$.
+  Then we have *open ball*, *closed ball*, and *ball* defined in the analogous way.
+]
 
 In 18.02, all the constraint regions we encounter will be made out of some number
 (possibly zero) of equalities and inequalities.
@@ -458,7 +467,7 @@ The three that you should care about for this class are the following:
 #warning[
   As far as I know, in 18.02 it's not possible to give precise definitions for these words.
   So you have to play it by ear.
-  All the items below are rules of thumb that work fine for 18.02,
+  All the items below are rules of thumb that work okay for 18.02,
   but won't hold up in 18.100/18.900.
 ]
 
@@ -710,13 +719,6 @@ We won't cover the case where $cal(R)$ has dimension $n-2$ or less in 18.02
 
 == [TEXT] Lagrange multipliers
 
-#warning(title: [Warning for high-school math olympiad students])[
-  If you are a high-school student preparing for a proof-based math olympiad,
-  read the version at #url("https://web.evanchen.cc/handouts/LM/LM.pdf") instead.
-  We use compactness there instead of the wishy-washy terms "boundary", "limit case", etc.
-]
-
-
 Let $f : RR^n -> RR$ be a function we're optimizing over some region $cal(R)$.
 We now turn to the case where $cal(R)$, is dimension $n-1$,
 because of a single constraint of the form $g(x,y) = c$ or $g(x,y,z) = c$.
@@ -846,7 +848,7 @@ to "LM-critical point".
   3. The region $cal(R)$ has limit cases when any of the variables $x,y,z$
     either approach $0$ or $+oo$.
     However, remember that $x y z = 8$.
-    So if any variable approaches $0$, some other variable must become very large.
+    So if any variable approaches $0$, some other variable must become large.
     Consequently, in every limit case, we find that $f -> +oo$.
 
   Collating all these results:
