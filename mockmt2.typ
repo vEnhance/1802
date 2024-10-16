@@ -49,5 +49,5 @@
   - Find the global minimums and global maximums of $f$, if they exist.
 
 / Question 5.:
-  Use Lagrange multipliers to compute the minimum and maximum possible value of $x + 2 y + 2 z$
-  over real numbers $x$, $y$, $z$ satisfying $x^2 + y^2 + z^2 = 100$.
+  Compute the minimum and maximum possible value of $x + 2 y + 2 z$
+  over real numbers $x$, $y$, $z$ satisfying $x^2 + y^2 + z^2 <= 100$.
