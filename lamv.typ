@@ -50,6 +50,8 @@ For comparison, this part corresponds approximately to §8 and §12.1-§12.3 of 
 For comparison, this part corresponds approximately to §9 and §12.4-§12.6 of #poonen.
 #include "src/minmax.typ"
 #pagebreak()
+#include "src/mt2.typ"
+#pagebreak()
 
 #part[Part Golf: Multivariate integrals]
 For comparison, this corresponds to §13 and §17 of #poonen.
@@ -67,6 +69,8 @@ For comparison, this corresponds to §14, §15, §18, §19, §20, §21 of #poone
 
 #part[Solutions to the exercises and problems]
 #include "src/sol-mt1.typ"
+#pagebreak()
+#include "src/sol-mt2.typ"
 #pagebreak()
 
 #part[Appendix]
