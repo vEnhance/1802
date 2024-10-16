@@ -28,11 +28,11 @@
 
 = 18.02 Mock Midterm 2 Questions
 
-/ Question 1.: A particle in the $x y$ plane has position given by
+/ Question 1.: A butterfly is fluttering in the $x y$ plane with position given by
   $bf(r)(t) = angle.l cos(t), cos(t) angle.r$.
-  - Compute the speed of the particle at $t = pi/3$.
-  - Compute the arc length of the trajectory from $t = 0$ to $t = 2 pi$.
-  - Sketch the trajectory of the curve from $t = 0$ to $t = 2pi$ in the $x y$ plane.
+  - Compute the speed of the butterfly at $t = pi/3$.
+  - Compute the arc length of the butterfly's trajectory from $t = 0$ to $t = 2 pi$.
+  - Sketch the butterfly's trajectory from $t = 0$ to $t = 2pi$ in the $x y$ plane.
 
 / Question 2.: Let $k > 0$ be a fixed real number and let $f(x,y) = x^3 + k y^2$.
   Assume that the level curve of $f$ for the value $21$ passes through the point $P = (1,2)$.

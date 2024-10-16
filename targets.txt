@@ -27,3 +27,4 @@ bonus1.pdf
 lamv.pdf
 figures/integrals-triangle.pdf
 figures/integrals-stokes.pdf
+mockmt2.pdf
