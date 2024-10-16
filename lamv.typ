@@ -50,6 +50,8 @@ For comparison, this part corresponds approximately to §8 and §12.1-§12.3 of 
 For comparison, this part corresponds approximately to §9 and §12.4-§12.6 of #poonen.
 #include "src/minmax.typ"
 #pagebreak()
+#include "src/opt.typ"
+#pagebreak()
 #include "src/mt2.typ"
 #pagebreak()
 
