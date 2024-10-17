@@ -786,16 +786,22 @@ This works in both the easy case (no Lagrange multipliers) and the hard case (wi
 
 == [EXER] Exercises
 
-#todo[Make some up]
+#exer[
+  Let $A B C$ be the triangle in the $x y$-plane with vertices
+  $A = (-5,0)$, $B = (0,12)$, $C = (9,0)$.
+  For what point $P$ in the plane is the sum
+  $ P A ^ 2 + P B ^ 2 + P C ^ 2 $
+  as small as possible?
+] <exer-opt-geo>
 
 #exer[
   Compute the minimum possible value of $x+y$ given that $sin(x)+sin(y)=1$ and $x,y >= 0$.
-] <exer-lm-sin>
+] <exer-opt-lm-sin>
 
 #exerstar[
   Compute the maximum possible value of
   $ 15x^2 + 12 x y + 16 x z + 6 y^2 + 8 z^2 $
   subject to $x,y,z >= 0$ and $x^3 + (x+y)^3 + (x+z)^3 = 1$.
-]
+] <exer-opt-lm-hell>
 
 #pagebreak()

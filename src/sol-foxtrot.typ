@@ -1,6 +1,6 @@
 = Solutions to Part Foxtrot
 
-== Solution to @exer-lm-sin
+== Solution to @exer-opt-lm-sin
 
 We want to minimize the function $ f (x , y) = x + y $ subject to the
 constraint $ g (x , y) = sin (x) + sin (y) = 1 $ and $x,y >= 0$.
