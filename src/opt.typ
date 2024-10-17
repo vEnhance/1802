@@ -254,12 +254,13 @@ but which appears in every equation besides the constraint $g = c$.
 So a couple tips specific to Lagrange Multiplier systems:
 
 #tip(title: [Tip: Advice for Lagrange Multiplier systems])[
-  In addition to the tips in @sec-system-advice, some new suggestions:
+  In addition to the tips in @sec-system-advice,
+  here are some strategies that sometimes help:
 
   - It might make sense to try to get rid of $lambda$ ASAP, if that's easy to do.
     After all, we don't actually care what $lambda$ is.
   - Alternatively, you can try to kill every variable _expect_ $lambda$!
-    This is a common strategy if your equations only involve one non-$lambda$ variable.
+    This is commonly used if your equations only involve one non-$lambda$ variable.
     That is, solve for $x$ in terms of $lambda$; do the same for $y$ and $z$.
     Then plug these in the original constraint equation to solve for $lambda$,
     and hence extract $(x,y,z)$.
@@ -267,7 +268,8 @@ So a couple tips specific to Lagrange Multiplier systems:
 
 Note the second advice bullet is the opposite of the first advice bullet!
 Again, systems of equations can't be solved by blindly following recipes.
-You have to pick whatever method you thinks makes sense for the given problem.
+You should use whatever method you think makes sense for the given problem.
+You don't need anyone's permission to use so-and-so approach.
 
 Here's an example where a good idea is to kill $lambda$ ASAP:
 
@@ -285,6 +287,7 @@ Here's an example where a good idea is to kill $lambda$ ASAP:
   1. Computing the gradients gives
     $ nabla f &= vec(2 x + y , x + 2 y + 1) \
       nabla g &= vec(1 , 2). $
+    Note $nabla g$ is never $bf(0)$.
     Thus, the Lagrange multiplier equation becomes:
     $ vec(2 x + y , x + 2 y + 1) = lambda vec(1 , 2) . $
     This gives the following system of equations:
