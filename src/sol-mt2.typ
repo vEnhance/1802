@@ -1,3 +1,3 @@
 = Solutions to practice midterm 2 <ch-sol-mt2>
 
-To be written later.
+Solutions will be uploaded here sometime on Monday, September 21, 2024.
