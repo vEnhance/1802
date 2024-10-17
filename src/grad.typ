@@ -697,7 +697,7 @@ Then remember how the cosine function works:
 
 - $cos(0 degree) = 1$ is the most positive value of the cosine,
   and that occurs when $bf(v)$ and $nabla f(P)$ point the same direction.
-- $cos(180 degree) = 1$ is the most negative value of the cosine,
+- $cos(180 degree) = -1$ is the most negative value of the cosine,
   and that occurs when $bf(v)$ and $nabla f(P)$ point the same direction.
 - If $nabla f (P)$ and $bf(v)$ are perpendicular
   (so $theta = 90 degree$ or $theta = 270 degree$), then the dot product is zero.
