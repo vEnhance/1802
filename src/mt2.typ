@@ -1,3 +1,3 @@
 = Practice midterm 2
 
-To be posted here later.
+The problems will be posted here sometime between 3PM-4PM on Monday, September 21.
