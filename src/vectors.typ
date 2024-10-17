@@ -443,7 +443,7 @@ and now the whole discussion carries over wholesale.
 
 == [TEXT] Calculating distance to a plane
 
-== [RECIPE] Distance to a plane
+== [RECIPE] Distance to a plane <sec-distance-plane>
 
 #pagebreak()
 

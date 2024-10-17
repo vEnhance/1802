@@ -260,11 +260,167 @@ and examples where the algebra is much more involved.
   ]
   So we get there are four critical points, one for each case: $(0,0)$, $(0,6)$, $(6,0)$ and $(2,2)$.
 ]
-== [TEXT] Advice for solving systems of equations
+== [TEXT] General advice for solving systems of equations <sec-system-advice>
 
-#todo[To be written. Explain that it's not a recipe, you have to treat it like a puzzle.]
+In the last example with $f(x,y) = x y(6 - x - y)$,
+we saw the solving a system of equations is not necessarily an easy task.
+In general, solving a system of generic equations,
+even when the number of variables equals the number of unknowns,
+can be disproportionately difficult in the number of variables.
 
-#warning[Division by zero]
+#digression(title: [Digression: Even simple-looking systems can be challenging])[
+  It's easy to generate examples of systems that can't be solved by hand.
+  But it's also possible to generate examples of systems that look innocent,
+  _and_ can be solved by hand in a nice way,
+  _but_ for which finding that nice way is extremely challenging.
+
+  One example of such a system of equations is
+  $
+  x^3 &= 3 x - 12 y + 50 \
+  y^3 &= 12 y + 3 z - 2 \
+  z^3 &= 27 z + 27 x.
+  $
+  There is a way to solve it by hand, but it's quite hard to come up with,
+  even for the best high school students in the world.
+  (The source of the problem is the
+  #link("https://aops.com/community/p1566057")[USA Team Selection Test 2009].)
+]
+
+This means that you need to put away your chef hat for a moment
+and put on your problem-solving cap:
+The good news is that it's all high-school algebra: no calculus involved, no derivatives, etc.
+The bad news is that it's tricky. You really have to think.
+
+#tip(title: [Tips on systems of equations])[
+  - When solving a system of equations, *treat it like a self-contained algebra puzzle*.
+    That means you cannot just blindly follow a recipe, but need to actually think.
+
+  - Possible strategy in some situations: try to isolate one variable in terms of others.
+    For example, if you see $x^2 + x + 2 y = 7$,
+    one strategy is to rewrite it as $y = 1/2 (7 - (x^2 + x))$
+    and then use that substitution to kill all the $x$'s for your system.
+    This reduces the number of variables by $1$, at the cost of some work.
+
+  - If there's symmetry in the system of equations, see if you can exploit it to save work.
+
+  - Try to factor things when you spot factors.
+    For example, if you see $x y - x = 0$, write it as $x (y-1) = 0$,
+    then either $x=0$ or $y=1$.
+
+  - If you are taking square roots of both sides,
+    That is, if $a^2 = b^2$, you conclude $a = pm b$, not $a = b$.
+
+  - Be careful in making sure you don't miss cases if you start getting OR statements.
+    In the last example, there were $2^2 = 4$ cases.
+    You can easily imagine careless students accidentally forgetting a case.
+
+  - See if you can "guess" some obvious solutions to start (e.g. all-zero).
+    If so, note them down so you know that they should show up later.
+]
+
+I also need one warning: be really careful about *division by zero*.
+For example, in the example from last section,
+careless students might try to divide by $y$ and $x$ to get
+$
+  6 y - 2 x y - y^2 &= 0 ==> 2x + y = 6 \
+  6 x - 2 x y - x^2 &= 0 ==> x + 2y = 6.
+$
+But this is wrong, because $x$ and $y$ could be zero too!
+If you make this mistake you're only getting to one of the four critical points.
+This is important enough I'll box it:
+
+#warning(title: [Warning: Watch for division by zero])[
+  *Any time you divide both sides of an equation*,
+  ask yourself if you the expression you're dividing by could be $0$ as well.
+  If so, that case needs to be handled separately.
+]
+
+I'm going to give two examples, each with three variables,
+to show these ideas in the tip I just mentioned.
+Fair warning: these are deliberately a bit trickier, to give some space to show ideas.
+Don't worry if you can't do these two yourself.
+The exam ones will probably tone down this algebra step a bit.
+
+#sample[
+  Find all the critical points of the function
+  $ f(x, y, z) = x^3 + y^3 + z^3 - 3 x y z. $
+]
+
+#soln[
+  We first compute the gradient:
+  $ nabla f = vec(3 x^2 - 3 y z, 3 y^2 - z x, 3 z ^2 - x y). $
+
+  The critical points occur when $nabla f = bf(0)$,
+  which gives us the system of equations (after dividing by $3$):
+  $
+  x^2 &= y z  \
+  y^2 &= z x  \
+  z^2 &= x y.
+  $
+  We'd like to divide out by the variables, but this would be division by zero.
+  Indeed, note $(0,0,0)$ is a solution!
+
+  - If $x = 0$, then it follows $z = 0$ from the last equation, then $y = 0$ from the second.
+  - By symmetry, if _any_ of the three variables is zero, then all three are.
+
+  Now let's suppose all the variables are nonzero.
+  Then we can write the first equation safely as $ z = x^2 / y$
+  and use that to get rid of $z$ in the second equation:
+  $ y^2 = (x^2 / y) x => x^3 = y^3. $
+  Similarly, we get $y^3 = z^3$ and $z^3 = x^3$.
+
+  So in fact $x = y = z$, because we can safely take cube roots of real numbers.
+  And any triple with $x = y = z$ works fine.
+
+  In conclusion, every point of the form $(t,t,t)$ is a critical point ---
+  an infinite family of critical points!
+]
+
+#sample[
+  Find all the critical points of the function
+  $ f(x, y, z) = z(x-y)(y-z) - 2 x z. $
+]
+#soln[
+  The gradient is given by
+  $ nabla f = vec(z(y - z) - 2 z, z(-2y+x-z), y(x-y) -2z(x-y) -2x). $
+  That looks scary, but it turns out the first two equations factor.
+  Cleaning things up, we get:
+  $
+    z(y-z-2) &= 0 \
+    z(-2y+x+z) &= 0 \
+    y(x-y) -2(x-y)z -2x &= 0.
+  $
+  In the first equation, we have cases on $z = 0$ and $y = z+2$.
+
+  - First case: If $z = 0$, then both the first and second equation are true and give no further information.
+    So we turn to the last equation, which for $z = 0$ says
+    $ y(x-y) - 2x = 0. $
+    This is a linear equation in $x$ that we can isolate:
+    $ (y-2) x - y^2 = 0 ==> (y-2) x = y^2. $
+    Again, before dividing by $y-2$, we check the cases:
+
+    - If $y = 2$, we get an obvious contradiction $0 = 4$.
+    - So we can assume $y != 2$ and $x = y^2/(y-2)$.
+
+    Hence, for _any_ real number $y != 2$, we get a critical point
+    $ (y^2/(y-2), y, 0). $
+
+  - Now assume $z != 0$.
+    Then we can safely divide by $z$ in the first two equations to get
+    $ y &= z + 2 \ x &= 2 y - z. $
+    Our strategy now is to write everything in terms of $z$.
+    The first equation tells us $y = z+2$, so the second equation says
+    $ x = 2(z+2) + z = z + 4. $
+    We have one more equation, so we make the two substitutions everywhere and expand:
+    $ 0 &= (z+2)((z+4)-(z+2)) -2((z+4)-(z+2))z -2(z+4) \
+      &= 2(z+2) - 4z - 2(z+4) = -4z - 4 \
+      &==> z = -1. $
+    Hence, we get one more critical point $(3, 1, -1)$.
+
+  In conclusion, the answer is
+  $ (y^2/(y-2), y, 0) " for every " y != 2 ", plus one extra point" (3, 1, -1). #qedhere $
+]
+
 
 == [RECIPE] The second derivative test for two-variable functions
 
@@ -284,9 +440,9 @@ Here's some excuses why:
   we only did linear algebra, and didn't cover quadratic forms in this context at all.
   I hesitate to introduce an entire chapter on quadratic forms
   (which are much less intuitive than linear functions) and _then_ tie that to eigenvalues
-  of a $2 times 2$ matrix just to justify a single result that most students will just memorize anyway.
-
-  Poonen has some hints on quadratic forms in section 9 of his notes if you want to look there though.
+  of a $2 times 2$ matrix just to justify a single result not reused later.
+  (Poonen has some hints on quadratic forms in section 9 of his notes
+  if you want to look there though.)
 
   The other downside is that even if quadratic forms are done correctly,
   the second derivative test doesn't work in all cases anyway,
@@ -298,9 +454,9 @@ So to get this section over with quickly, I'll just give the result.
 I'm sorry this will seem to come out of nowhere.
 
 #recipe(title: [Recipe: The second derivative test])[
-  Suppose $f(x,y)$ is a function has a critical point at $P$.
+  Suppose $f(x,y)$ has a critical point at $P$.
   We want to tell whether it's a local minimum, local maximum, or saddle point.
-  Assume that $f$ has a continuous second derivative near $P$.
+  Assume $f$ has a continuous second derivative near $P$.
 
   1. Let $A = f_(x x) (P)$, $B = f_(x y) (P) = f_(y x) (P)$, $C = f_(y y) (P)$.
     These are the partial derivatives of the partial derivatives of $f$ (yes, I'm sorry),
@@ -469,7 +625,7 @@ In order to talk about the regions further, I have to introduce some new words.
 The three that you should care about for this class are the following:
 "boundary", "limit cases", and "dimension".
 
-#warning[
+#warning(title: [Warning: This is all going to be waving hands furiously])[
   As far as I know, in 18.02 it's not possible to give precise definitions for these words.
   So you have to play it by ear.
   All the items below are rules of thumb that work okay for 18.02,
