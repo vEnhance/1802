@@ -69,10 +69,14 @@ For comparison, this corresponds to §14, §15, §18, §19, §20, §21 of #poone
 #include "src/gradcurldiv.typ"
 #pagebreak()
 
-#part[Solutions to the exercises and problems]
+#part[Solutions to midterm problems]
 #include "src/sol-mt1.typ"
 #pagebreak()
 #include "src/sol-mt2.typ"
+#pagebreak()
+
+#part[Solutions to normal exercises]
+#include "src/sol-foxtrot.typ"
 #pagebreak()
 
 #part[Appendix]

@@ -401,6 +401,108 @@ And here's an example where we kill every variable _expect_ $lambda$:
   Don't worry, you won't be expected to come up with something like this in 18.02.
 ]
 
+To top all that of, here is a Lagrange multipliers example that requires
+considering tons of cases.
+This is probably too lengthy of a calculation for 18.02
+because of the amount of arithmetic required; it's here just to illustrate.
+
+#sample[
+  Find the minimum and maximum possible of $x^3 + 3y^3 + 4z^3$ subject to $x^4 + y^4 + z^4 = 2$.
+]
+
+#soln[
+  The region has no boundary nor limit cases.
+  So, we will only focus on calculating the LM-critical points.
+
+  The gradients of $f(x,y,z) = x^3+3y^3+4z^3$ and $g(x,y,z) = x^4+y^4+z^4$ are given by
+  $ nabla f &= vec(3x^2, 9y^2, 12z^2) \
+    nabla g &= vec(4x^3, 4y^3, 4z^3). $
+  We begin by simplifying each equation:
+
+  - $3 x^2 - 4 lambda x^3 = 0$ becomes: $x^2 (3 - 4 lambda x) = 0$.
+    This gives two possibilities:
+    - $x = 0$, or
+    - $lambda = (3) / (4 x)$ (assuming $x != 0$).
+  - $9 y^2 - 4 lambda y^3 = 0$ becomes: $y^2 (9 - 4 lambda y) = 0$.
+    This gives two possibilities:
+    - $y = 0$, or
+    - $lambda = (9) / (4 y)$ (assuming $y != 0$).
+  - $12 z^2 - 4 lambda z^3 = 0$ becomes: $z^2 (12 - 4 lambda z) = 0$.
+    This gives two possibilities:
+    - $z = 0$, or
+    - $lambda = 3 / z$ (assuming $z != 0$).
+
+  This gives a total of eight cases!
+  We will go through them all individually.
+
+  / Case 1 where $x = 0$, $y = 0$, $z != 0$:
+    From the constraint $z^4 = 2$, we get: $ z = pm root(4, 2) . $
+    Thus, $lambda = 3 / z = pm 3 / root(4, 2)$.
+  / Case 2 where $x = 0$, $y != 0$, $z = 0$:
+    From the constraint $y^4 = 2$, we get: $ y = pm root(4, 2) . $
+    Thus, $lambda = (9) / (4 y) = pm frac(9, 4 root(4, 2))$.
+  / Case 3 where $x != 0$, $y = 0$, $z = 0$:
+    From the constraint $x^4 = 2$, we get: $ x = pm root(4, 2) . $
+    Thus, $lambda = (3) / (4 x) = pm frac(3, 4 root(4, 2))$.
+  / Case 4 where $x = 0$, $y != 0$, $z != 0$:
+    From the constraint $y^4 + z^4 = 2$, we solve using
+    $lambda = (9) / (4 y)$ and $lambda = 3 / z$. Equating these, we get:
+    $ (9) / (4 y) = 3 / z ==> z = 4 / 3 y . $
+    Substitute into the constraint:
+    $ y^4 + (4 / 3 y)^4 = 2 ==> y^4 + 256 / 81 y^4 = 2 . $
+    This simplifies to:
+    $ 337 / 81 y^4 = 2 ==> y^4 = 162 / 337 ==> y = pm root(4, 162 / 337) . $
+    Thus, $z = pm 4 / 3 root(4, 162 / 337)$.
+  / Case 5 where $x != 0$, $y = 0$, $z != 0$:
+    From the constraint $x^4 + z^4 = 2$, we solve using
+    $lambda = (3) / (4 x)$ and $lambda = 3 / z$. Equating these, we get:
+    $ (3) / (4 x) = 3 / z ==> z = 4 x . $ Substitute
+    into the constraint:
+    $ x^4 + (4 x)^4 = 2 ==> x^4 + 256 x^4 = 2 ==> 257 x^4 = 2 . $
+    Thus, $x^4 = 2 / 257$, and:
+    $ x = pm root(4, 2 / 257) , quad z = pm 4 root(4, 2 / 257) . $
+  / Case 6 where $x != 0$, $y != 0$, $z = 0$:
+    From the constraint $x^4 + y^4 = 2$, we solve using
+    $lambda = (3) / (4 x)$ and $lambda = (9) / (4 y)$. Equating these, we
+    get: $ (3) / (4 x) = (9) / (4 y) ==> y = 3 x . $
+    Substitute into the constraint:
+    $ x^4 + (3 x)^4 = 2 ==> x^4 + 81 x^4 = 2 ==> 82 x^4 = 2 . $
+    Thus, $x^4 = 1 / 41$, and:
+    $ x = pm root(4, 1 / 41) , quad y = pm 3 root(4, 1 / 41) . $
+  / Case 7 where $x != 0$, $y != 0$, $z != 0$:
+    Equating the three expressions for $lambda$:
+    $ (3) / (4 x) = (9) / (4 y) = 3 / z . $ From
+    $(3) / (4 x) = (9) / (4 y)$, we get $y = 3 x$, and from
+    $(3) / (4 x) = 3 / z$, we get $z = 4 x$. Substitute into the
+    constraint:
+    $ x^4 + (3 x)^4 + (4 x)^4 = 2 ==> x^4 + 81 x^4 + 256 x^4 = 2 ==> 338 x^4 = 2 . $
+    Thus, $x^4 = 2 / 338$, and:
+    $ x = pm root(4, 1 / 169) , quad y = pm 3 root(4, 1 / 169) , quad z = pm 4 root(4, 1 / 169) . $
+    Since $169 = 13^2$ is a square, this could be written more simply as
+    $ x = pm 1 / sqrt(13) , quad y = pm 3 / sqrt(13) , quad z = pm 4 / sqrt(13) . $
+  / Case 8 where $x = 0$, $y = 0$, $z = 0$:
+    This doesn't yield a valid solution because it doesn't like on the constraint $x^4+y^4+z^4=2$.
+
+  Hence there are a whopping total of $26$ LM-critical points.
+  They are:
+  - $x = 0$, $y = 0$, $z = pm root(4, 2)$,
+  - $x = 0$, $y = pm root(4, 2)$, $z = 0$,
+  - $x = pm root(4, 2)$, $y = 0$, $z = 0$,
+  - $x = 0$, $y = pm root(4, 162 / 337)$, $z = pm 4 / 3 root(4, 162 / 337)$.
+  - $x = pm root(4, 2 / 257)$, $z = pm 4 root(4, 2 / 257)$, $y = 0$,
+  - $x = pm root(4, 1 / 41)$, $y = pm 3 root(4, 1 / 41)$, $z = 0$,
+  - $x = pm 1 / sqrt(13)$,  $y = pm 3 / sqrt(13)$, $z = pm 4 / sqrt(13)$.
+
+  When searching for the maximum, we should always take $+$ for $pm$ to maximize $f(x,y,z)$;
+  similarly, the minimum uses only $-$ for $pm$.
+  Note also that plugging in all $-$'s is the negative of plugging in all $+$'s.
+  So this reduces us from $26$ cases to just $7$.
+  If we actually try all seven, we find that the last one is the optimal one;
+  that is, the maximum and minimums are
+  $ f(1/sqrt(13), 3/sqrt(13), 4/sqrt(13)) &= 2sqrt(13) \
+    f(-1/sqrt(13), -3/sqrt(13), -4/sqrt(13)) &= -2sqrt(13). #qedhere $
+]
+
 == [TEXT] Example of an easy case with a boundary that can be handled with common sense
 
 As we alluded to earlier, the boundary of the so-called "easy case" can have infinitely
@@ -516,17 +618,25 @@ If you've seen the movie _Inception_, yes, one of those.
       This requires some manual labor to solve, because there are lots of cases.
       The equation for $x$ says that
       $ 4x^3 = lambda dot 2 x <==> x = 0 " or " x = pm sqrt(lambda/2) $
-      and similarly for $y$ and $z$.
+      and similarly for $y$ and $z$:
+      $ 4y^3 = lambda dot 2 y &<==> y = 0 " or " y = pm sqrt(lambda/2) \
+        4z^3 = lambda dot 2 z &<==> z = 0 " or " z = pm sqrt(lambda/2) $
 
-      In other words, *all the nonzero variables* should have the same absolute value.
-      (Think about why this sentence is true.)
-      So if all three variables are nonzero, then $|x| = |y| = |z| = 1/(sqrt(3))$
-      (because $x^2+y^2+z^2=1$ as well).
-      If two variables are nonzero, then their absolute values are $1/(sqrt(2))$ by the same token.
-      And if only one variable is nonzero, it is $pm 1$.
+      A priori, this seems like it will require us to take a lot of cases.
+      However, we can take advantage of symmetry to reduce the amount of work we have to do.
+      The trick is to get rid of $lambda$ as follows:
+      #align(center)[
+        _Observation: All the nonzero variables $x$, $y$, $z$ should have the same absolute value._
+      ]
+      To spell it out:
+      - If all three variables are nonzero, then $|x| = |y| = |z| = 1/(sqrt(3))$
+        (because $x^2+y^2+z^2=1$ as well).
+      - If two variables are nonzero, then their absolute values are $1/(sqrt(2))$ by the same token.
+      - And if only one variable is nonzero, it is $pm 1$.
       (Note of course that $(0,0,0)$ does not lie on $cal(S)$.)
+      Think about why this works.
 
-      So in summary, there are *26 LM-critical points* given by the following list:
+      So there are *26 LM-critical points* given by the following list:
       - $(pm 1/(sqrt(3)), pm 1/(sqrt(3)), pm 1/(sqrt(3)))$; there are 8 points in this case.
         The $f$-values are all $1/3$.
       - $(pm 1/(sqrt(2)), pm 1/(sqrt(2)), 0)$; there are 4 points in this case.
@@ -677,5 +787,15 @@ This works in both the easy case (no Lagrange multipliers) and the hard case (wi
 == [EXER] Exercises
 
 #todo[Make some up]
+
+#exer[
+  Compute the minimum possible value of $x+y$ given that $sin(x)+sin(y)=1$ and $x,y >= 0$.
+] <exer-lm-sin>
+
+#exerstar[
+  Compute the maximum possible value of
+  $ 15x^2 + 12 x y + 16 x z + 6 y^2 + 8 z^2 $
+  subject to $x,y,z >= 0$ and $x^3 + (x+y)^3 + (x+z)^3 = 1$.
+]
 
 #pagebreak()
