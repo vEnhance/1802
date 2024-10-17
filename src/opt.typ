@@ -436,8 +436,12 @@ We give one such example below.
   2. As we saw, we have two boundaries.
     There are infinitely many points on the positive $x$ and $y$ axis,
     so we cannot just plug them all in one by one.
+    In principle, you could redo the entire easy-case recipe for each boundary parts,
+    and it will work.
+
     However, luckily, the function is quite easy to analyze on each part,
     and we can do it with just high school algebra, no calculus needed.
+    This way we don't need to go through the whole recipe again.
 
     / The boundary of $x = 0$ and $y >= 0$:
       Substitute $x = 0$ into the function:
@@ -446,17 +450,16 @@ We give one such example below.
       $ f(0,y) = y^2-6y " across all " y >= 0 $
       could be.
       You _could_ use the derivative of $y$,
-      but I think the fastest thing to do is actually complete the square:
-      the function
+      but I think the fastest thing to do is actually complete the square: the function
       $ f(0,y) = (y-3)^2 - 9 $
       obviously has the smallest value at $f(0,3) = -9$.
-      And $f(0,0) = 0$ and $f(0,+oo) = +oo$ are obviously both worse.
+      (And $f(0,0) = 0$ and $f(0,+oo) = +oo$ are both worse.)
 
     / The boundary of $y = 0$ and $x >= 0$:
       Substitute $y = 0$ into the function:
       $ f (x , 0) = 2 x^2 + 0^2 + x (0) - 6 (0) = 2 x^2 . $
       It's obvious that $f(x,0)$ is minimized at $x = 0$.
-      And $f(0,0) = 0$ and $f(+oo,0) = +oo$ are obviously both worse.
+      (Note that $f(+oo,0) = +oo$ is worse.)
 
   3. In the limit case where either $x -> +oo$ and $y -> +oo$ it's clear that $f -> +oo$.
 
@@ -586,7 +589,7 @@ not involving any calculus:
 
   So any point in the interior is obviously not a maximum:
   if you have a point $P$ strictly the interior,
-  you could increase $f(P)$ by changing $P$ to have absolute value.
+  you could increase $f(P)$ by moving $P$ farther from the origin.
 
 That means if we had used a bit of common sense,
 we could have gotten the minimum with no work at all,
