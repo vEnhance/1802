@@ -51,16 +51,26 @@ We give some examples.
 
 #example(title: [Example: the level curves of $f(x,y) = y - x^2$])[
   To draw the level curves of the function $f(x, y) = y - x^2$,
-  we begin by recalling that a level curve corresponds to a the points $(x, y)$
+  we begin by recalling that a level curve corresponds to the points $(x, y)$
   such that the function takes on a constant value, say $c$.
   For our function, this becomes:
   $ y - x^2 = c $
   which rearranges to
   $ y = x^2 + c. $
-  This is an equation in 18.01 form, where $y$ is a function of $x$,
-  so you can draw it easily.
-  This equation represents a family of parabolas, each corresponding to a different value of $c$.
-  As $c$ varies, the level curves are parabolas that shift upward or downward along the $y$-axis.
+  Let's talk through some values of $c$.
+  - As an example, if $c = 0$, then some points on the level curve would be
+    $(-3,9)$, $(-2,4)$, $(-1,1)$, $(0,0)$, $(1,1)$, $(2,4)$, $(3,9)$,
+    or even $(sqrt(5), 6)$ and $(sqrt(11), 12)$.
+    You probably already recognize what's happening: $y = x^2$ happens to be an equation
+    you met before in 18.01 form, so you get a parabola.
+    (More generally, if you get an equation in 18.01 form where $y$ is a function of $x$,
+    you can sketch it like you did before).
+  - If we change the value of $c = 2$, this equation represents a family of parabolas.
+    For example, the level curve for $2$ will be the parabola with points like
+    $(-2,6)$, $(-1,3)$, $(0,2)$, $(1,3)$, $(2,6)$.
+
+  In general, as $c$ varies, the level curves are parabolas
+  that shift upward or downward along the $y$-axis.
   The shape of these curves is determined by the quadratic term $x^2$,
   which indicates that all level curves will have the same basic "U" shape.
 
