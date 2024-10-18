@@ -76,6 +76,7 @@ For comparison, this corresponds to §14, §15, §18, §19, §20, §21 of #poone
 #pagebreak()
 
 #part[Solutions to normal exercises]
+#include "src/sol-bravo.typ"
 #include "src/sol-foxtrot.typ"
 #pagebreak()
 
