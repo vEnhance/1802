@@ -79,7 +79,8 @@ Let's put these examples into aquatic terms.
   And if you throw a ball into a river, its motion could be described simply as:
   the ball moves downstream.
 ]
-#todo[draw a picture of a river]
+
+#todo[draw a picture of a river with a mountain]
 
 #example(title: [Example of a non-conservative vector field: a whirlpool])[
   Now imagine instead you have a whirlpool.
@@ -93,6 +94,7 @@ Let's put these examples into aquatic terms.
   it looks like lots of concentric rings made by tiny arrows.
   That's an example of a non-conservative vector field.
 ]
+
 #todo[draw a picture of a whirlpool]
 
 == [TEXT] Preview of integration over vector fields
