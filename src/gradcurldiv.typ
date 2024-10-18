@@ -11,7 +11,7 @@
 Remember the red arrows in @fig-int-chart-stokes?
 If you followed my advice in @exer-poster,
 you probably remember where the red arrows in the picture are now.
-Now it'll pay off in spaced, because
+Now it'll pay off in spades, because
 there's only two things you need to know about them for this section.
 
 #memo(title: [Memorize: Two red arrows gives zero])[
