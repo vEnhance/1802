@@ -89,7 +89,7 @@ label("\fbox{2-D integral}", (8,9), deepblue);
 t = shift(8,3.5);
 path square = box((-0.6*w,-0.6*w), (0.6*w,0.6*w));
 filldraw(t*square, lightgrey, black+1.4);
-draw("$\int\limits_{a_1}^{b_1} \int\limits_{a_2}^{b_2} f(x,y) \odif x \odif y$", t*(0,-w), dir(-90));
+draw("$\int\limits_{a_1}^{b_1} \int\limits_{a_2}^{b_2} f(x,y) \odif x \odif y$", t*(0,-w), dir(-90), intfont);
 label("Double/area integral", t*dir(90), deepgreen);
 add(t*axis2);
 
