@@ -503,7 +503,7 @@ because of the amount of arithmetic required; it's here just to illustrate.
     f(-1/sqrt(13), -3/sqrt(13), -4/sqrt(13)) &= -2sqrt(13). #qedhere $
 ]
 
-== [TEXT] Example of an easy case with a boundary that can be handled with common sense
+== [TEXT] Example of easy case with a "common-sense" boundary
 
 As we alluded to earlier, the boundary of the so-called "easy case" can have infinitely
 many points, so you cannot just plug them in one by one to inspect them all.
@@ -569,7 +569,7 @@ We give one such example below.
   being the smallest possible value.
 ]
 
-== [TEXT] Example where the easy case ends up requiring Lagrange multipliers for the boundary
+== [TEXT] Example of easy case that ends up using Lagrange multipliers for the boundary
 
 Now here's a case where the boundary requires Lagrange multipliers.
 So, it's really a hard-case optimization problem _within_ an easy-case optimization problem.
