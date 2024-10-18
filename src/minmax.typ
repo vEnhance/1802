@@ -530,13 +530,28 @@ I'm sorry this will seem to come out of nowhere.
 
 == [EXER] Exercises
 
+#exer[
+  Find the critical points of $f(x,y,z) = x^2 + y^3 + z^4$ and classify them
+  as local minimums, local maximums, or saddle points.
+]
+
+#exer[
+  Show that
+  $ f(x,y) = (x+y)^(100) - (x-y)^(100) $
+  has exactly one critical point, and that critical point is a saddle point.
+]
 
 #exerstar[
-  - Give an example of a differentiable function $f : RR^2 -> RR$ with the following property:
-    every lattice point $(x,y)$ (i.e. a point where both $x$ and $y$ are integers)
-    is a saddle point, and there are no other saddle points.
-  - Does there exist a differentiable function $f : RR^2 -> RR$
-    such that every point is a saddle point?
+  Give an example of a differentiable function $f : RR^2 -> RR$ with the following property:
+  every lattice point $(x,y)$ (i.e. a point where both $x$ and $y$ are integers)
+  is a saddle point, and there are no other saddle points.
+  For example, $(2, -7)$, $(100, 100)$, and $(-42, -13)$ should be saddle points,
+  but $(1/2, 0)$, $(pi, -sqrt(2))$, and $(sqrt(7), sqrt(11))$ should not be.
+]
+
+#exerstar[
+  Does there exist a differentiable function $f : RR^2 -> RR$
+  such that _every_ point in $RR^2$ is a saddle point?
 ]
 
 #pagebreak()

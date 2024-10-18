@@ -186,12 +186,12 @@ by plotting all the points in $RR^3$ for which $f(x,y,z) = c$.
 == [EXER] Exercises
 
 #exer[
-  Draw 2-D level curves
-  for some values for the following functions:
+  Draw 2-D level curves for some values for the following functions:
 
   - $f(x,y) = 5 x + y$
   - $f(x,y) = x y$
-  - $f(x,y) = e^(x^2 + y^2)$
+  - $f(x,y) = sin(x^2 + y^2)$
+  - $f(x,y) = e^(y - x^2)$
   - $f(x,y) = max(x,y)$ (i.e.~$f$ outputs the larger of its two inputs,
     so $f(3,5)=5$ and $f(2,-9)=2$, for example).
 ]
@@ -822,9 +822,24 @@ Let's summarize the last few sections.
 ]
 
 #exer[
-  The level curve of a certain function $f(x,y)$ for the value $-7$
+  The level curve of a certain differentiable function $f(x,y)$ for the value $-7$
   turns out to be a circle of radius $2$ centered at $(0,0)$.
 
+  - Give an example of one such function $f$.
   - What are all possible vectors that $nabla f(1.2, -1.6)$ could be?
   - Do linear approximation to estimate $f(1.208, -1.594)$ starting from the point $(1.2, -1.6)$.
+]
+
+#exer[
+  Let $f(x,y,z)$ be a differentiable function, and let $g(x,y,z) = e^(f(x,y,z))$.
+  Let $P$ be any point in $RR^3$.
+  Suppose $f(P) = 2$, and $nabla f(P)$ is a unit vector.
+  Find the magnitude of $nabla g(P)$.
+]
+
+#exer[
+  Let $cal(S)$ be the level surface of $f(x,y,z) = e^x + e^(2y) + e^(3z)$
+  that passes through the origin.
+  Find all real numbers $t$ such that the vector $vec(t+4, t+5, t+6)$
+  is tangent to $cal(S)$ at the origin.
 ]
