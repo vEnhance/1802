@@ -195,7 +195,7 @@ $ nabla f(1,3) = vec(15,0). $
 The linear approximation of $f (1.001 , y)$ near the point $(1 , 1)$ can be
 expressed in terms of the gradient dot the displacement:
 $ f (1.001 , 3.001) &approx f (1 , 1) + nabla f (1 , 1) dot vec(0.001, 0.001)
-  &= 1 + vec(15,0) dot (0.001, 0.001) = 1.015. $
+  &= 1 + vec(15,0) dot vec(0.001, 0.001) = 1.015. $
 
 #pagebreak()
 
