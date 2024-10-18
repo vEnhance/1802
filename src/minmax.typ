@@ -473,6 +473,9 @@ I'm sorry this will seem to come out of nowhere.
     You have to use a different method instead.
 ]
 
+The quantity $A C - B^2$ is sometimes called the _Hessian determinant_;
+it's the determinant of the matrix $mat(A, B; B, C)$.
+
 #tip[
   It is indeed a theorem that if $f$ is differentiable twice continuously, then $f_(x y) = f_(y x)$.
   That is, if you take a well-behaved function $f$ and differentiate with respect to $x$

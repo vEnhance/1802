@@ -145,7 +145,19 @@ However, in practice, people end up usually breaking into cases like this.
   The parameter $lambda$ is the reason for the name "Lagrange multipliers";
   it's a scalar multiplier on $nabla g$.
   Personally, I don't think this name makes much sense.
+
+  Also, some sources will define an LM-critical point in the following
+  (in my opinion, more confusing) way.
+  Let's say $f(x,y,z)$ is a three-variable function.
+  Define a _four-variable_ "Lagrangian function"
+  $L(x,y,z,lambda) = f(x,y,z) - lambda g(x,y,z)$.
+  Then an LM-critical point is a point for which either $nabla g = bf(0)$
+  or $nabla L = 0$, i.e. a normal critical point of $L$.
+  It can be checked this is equivalent to the original definition,
+  but I personally find this unnatural.
+  However, if you like this definition, feel free to use it instead.
 ]
+
 
 Now that we have this, we can describe the recipe for the "hard" case.
 The only change is to replace the old critical point definition (where $nabla f (P) = 0$)
