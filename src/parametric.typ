@@ -157,6 +157,15 @@ We will compute the following quantities.
   $ L = pi / 3. #qedhere $
 ]
 
+== [TEXT] Constant velocity and angular velocity
+
+#definition[
+  An object is said to have _angular velocity_ $omega$
+  if it rotates at a rate of $omega$ radians per unit time.
+  For example, an angular velocity of "$10 pi$ per second"
+  means the object completes five rotations (of $2 pi$ radians each) every second.
+]
+
 == [RECIPE] Finding the parametrization of complicated-looking trajectories by adding two simpler ones
 
 Since everything is so mechanical once you have an equation for $bf(r)(t)$,
@@ -185,14 +194,6 @@ I write $bf(P)(t)$ for the corresponding parametric curve.
   You have an amusement park ride, or a frisbee, or a planet rotating or something,
   or a wheel rolling some way or other...
   they're all thin flavor-text on the exact same thing over and over.
-]
-
-The examples use the word "angular velocity", which if you haven't seen before I will define now.
-#definition[
-  An object is said to have _angular velocity_ $omega$
-  if it rotates at a rate of $omega$ radians per unit time.
-  For example, an angular velocity of "$10 pi$ per second"
-  means the object completes five rotations (of $2 pi$ radians each) every second.
 ]
 
 Okay, here are some examples.
