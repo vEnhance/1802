@@ -21,6 +21,10 @@
 For comparison, this part corresponds approximately to §1, §2, §3.9 of #poonen.
 #include "src/vectors.typ"
 #pagebreak()
+#include "src/dotprod.typ"
+#pagebreak()
+#include "src/crossprod.typ"
+#pagebreak()
 
 #part[Part Bravo: Linear Algebra of Matrices]
 For comparison, this part corresponds approximately to §3, §4, §6 of #poonen.
