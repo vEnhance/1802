@@ -350,6 +350,7 @@ Example:
   in the previous sample question
   between the time $t = 0$ and $t = 2 pi$.
 ]
+#todo[Write the solution for this]
 
 #remark[
   The shape of $bf(P)$ is called a _cycloid_, and it's shown in Figure.
@@ -371,7 +372,7 @@ Example:
   (See @fig-teacups if you've never seen one of these before.)
   The teacup ride is specified in $RR^2$ as follows:
 
-  - The teacup ride revolves around a fixed center with radius $R$ and
+  - The teacup ride revolves around $(0,0)$ with radius $R$ and
     angular velocity $omega_(upright("ride"))$ _clockwise_.
   - Each individual teacup rotates _counterclockwise_ with angular velocity
     $omega_(upright("cup"))$ and radius $r$.
