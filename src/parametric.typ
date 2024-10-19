@@ -166,24 +166,25 @@ yourself in order to unlock things like velocity/speed/etc.
 
 Something like 90%+ of the time if the shape is weird it's
 because it's the sum of two other vectors and you just add them.
+I'll write a recipe just for comedic value:
+#recipe(title: [Recipe for decomposing paths as a sum of two things])[
+  Suppose $P$ is a point following some weird trajectory.
+  To parametrize $bf(P)(t)$, one common approach is:
+
+  1. Find an expression for some other point of interest $Q$, say $bf(Q)(t)$.
+  2. Find an expression for $bf(v)(t)$, the vector pointing from $Q$ to $P$.
+  3. Output $bf(P)(t) = bf(Q)(t) + bf(v)(t)$.
+]
+
 We give a bunch of examples of this to follow.
+In this section of the notes only, if $P$ is a point,
+I write $bf(P)(t)$ for the corresponding parametric curve.
 #tip[
   This section will feel repetitive.
   Pretty much all the examples look the same after a while.
   You have an amusement park ride, or a frisbee, or a planet rotating or something,
   or a wheel rolling some way or other...
   they're all thin flavor-text on the exact same thing over and over.
-]
-
-I'll write a recipe just for comedic value:
-
-#recipe(title: [Recipe for weird paths])[
-  To parametrize some weird path for a point $bf(P)(t)$
-  that's the sum of two things:
-
-  1. Find an expression for some point $Q$, say $bf(Q)(t)$.
-  2. Find an expression for $bf(v)(t)$, the vector pointing from $Q$ to $P$.
-  3. Output $bf(P)(t) = bf(Q)(t) + bf(v)(t)$.
 ]
 
 The examples use the word "angular velocity", which if you haven't seen before I will define now.
