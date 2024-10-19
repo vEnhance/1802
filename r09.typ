@@ -1,6 +1,4 @@
 #import "@local/evan:1.0.0":*
-#import "@local/svg-emoji:0.1.0": setup-emoji // only if you want to use GH names for emojis
-#show: setup-emoji
 
 #show: evan.with(
   title: [Notes for 18.02 Recitation 9],
