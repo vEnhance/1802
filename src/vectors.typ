@@ -463,7 +463,7 @@ the cross product might feel the most unnatural, for good reason ---
 it's used much less frequently by serious mathematicians than the other tools you see.
 
 #figure(
-  image("media/cross-products.png", width: 80%),
+  image("media/cross-products.jpg", width: 80%),
   caption: [How to think of cross products.],
 )
 
