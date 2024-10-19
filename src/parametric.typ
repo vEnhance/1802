@@ -157,29 +157,263 @@ We will compute the following quantities.
   $ L = pi / 3. #qedhere $
 ]
 
-== [TEXT] Adding two vectors
+== [RECIPE] Finding the parametrization of complicated-looking trajectories by adding two simpler ones
 
 Since everything is so mechanical once you have an equation for $bf(r)(t)$,
 there's a shape of exam question that comes up in 18.02
-where you're given some weird-looking path and need to get its equation
-in order to unlock things like velocity/speed/etc.
+where you're given some weird-looking path and need to get its equation $bf(r)(t)$
+yourself in order to unlock things like velocity/speed/etc.
 
 Something like 90%+ of the time if the shape is weird it's
 because it's the sum of two other vectors and you just add them.
+We give a bunch of examples of this to follow.
+#tip[
+  This section will feel repetitive.
+  Pretty much all the examples look the same after a while.
+  You have an amusement park ride, or a frisbee, or a planet rotating or something,
+  or a wheel rolling some way or other...
+  they're all thin flavor-text on the exact same thing over and over.
+]
 
-The cycloid you saw in class was one hard-ish example of this.
-The curve looked scary.
-But you just ignore the shape, and just think about the equation
-$ bf(r)(t) = angle.l t v , a angle.r + angle.l a cos theta(t), a sin theta(t) angle.r. $
-Working out the angle is a bit annoying;
-but the point is no calculus or theory is involved, just work out the geometry.
-Then when you want the velocity, just differentiate $bf(r)(t)$, and so on.
+I'll write a recipe just for comedic value:
 
-#todo[flesh this section out]
+#recipe(title: [Recipe for weird paths])[
+  To parametrize some weird path for a point $bf(P)(t)$
+  that's the sum of two things:
 
-== [TEXT] Eliminating the parameter $t$
+  1. Find an expression for some point $Q$, say $bf(Q)(t)$.
+  2. Find an expression for $bf(v)(t)$, the vector pointing from $Q$ to $P$.
+  3. Output $bf(P)(t) = bf(Q)(t) + bf(v)(t)$.
+]
 
-For two-dimensional parametric pictures,
-the other shape of question that occasionally pops up is to get rid of $t$.
+The examples use the word "angular velocity", which if you haven't seen before I will define now.
+#definition[
+  An object is said to have _angular velocity_ $omega$
+  if it rotates at a rate of $omega$ radians per unit time.
+  For example, an angular velocity of "$10 pi$ per second"
+  means the object completes five rotations (of $2 pi$ radians each) every second.
+]
 
-#todo[flesh this section out]
+Okay, here are some examples.
+
+#sample[
+  A frisbee has the shape of a circle of radius $r$, and one point $P$
+  on the edge of the frisbee is marked.
+  It’s spinning in a circular motion with angular velocity $omega$ counterclockwise
+  and radius $r$ about its center,
+  while simultaneously moving in a straight line with constant
+  velocity $vec(v_x , v_y)$ in the plane.
+  The frisbee initially starts at $(0 , 0)$ with the marked point at $(0 , r)$.
+
+  Parametrize the position of the marked point $bf(P)(t)$
+  on the edge of the frisbee as a function of time.
+]
+
+#soln[
+  The frisbee is moving with constant velocity $vec(v_x , v_y)$.
+
+  1. The position of the center of the frisbee as a function of time is:
+    $ bf(O) (t) = vec(v_x t , v_y t) . $
+    This gives the trajectory of the center of the frisbee in the plane.
+
+  2. The frisbee is also rotating about its center with angular velocity
+    $omega$. The marked point on the edge of the frisbee follows a circular
+    path around the center of the frisbee with radius $r$.
+
+    Since the marked point starts at $(0 , r)$ at $t = 0$, its rotational
+    motion around the center can be described parametrically as:
+    $ bf(v) (t) = vec(r sin (omega t) , r cos (omega t)) . $
+    Here, $omega$ is the angular velocity (in radians per second), and the
+    sine and cosine terms describe the counterclockwise circular motion of
+    the marked point around the center.
+    (Note for $t = 0$ we get $vec(0, r)$ which is what we want.)
+
+  3. To find the total position of the marked point as a function of time, we
+    need to combine the translational motion of the frisbee’s center
+    $bf(O) (t)$ with the rotational motion $bf(v) (t)$.
+    Thus, the position of the marked point at time $t$ is the sum of the two:
+    $ bf(P) (t) = bf(O) (t) + bf(v) (t) . $
+
+    Substituting the expressions for $bf(O) (t)$ and $bf(v) (t)$, we get:
+    $ bf(P) (t) = vec(v_x t , v_y t) + vec(r sin (omega t) , r cos (omega t)) . $
+  Simplifying, we have:
+  $ bf(P) (t) = vec(v_x t + r sin (omega t) , v_y t + r cos (omega t)) . #qedhere $
+]
+#todo[draw a figure]
+
+#sample[
+  A planet orbits the sun in a circular path with radius $R_s$ and _counterclockwise_ angular velocity $omega_s$.
+  A moon orbits the planet in a circular path with radius $R_m$ and _clockwise_ angular velocity $omega_m$.
+  Parametrize the motion $bf(M)(t)$ of the moon relative to the sun,
+  assuming the sun is at the origin, the planet starts at $(R_s , 0)$,
+  and the moon starts at $(R_s , -R_m)$.
+]
+#soln[
+  1. The planet moves in a counterclockwise orbit around the sun with radius
+    $R_s$ and angular velocity $omega_s$. The position of the planet as a
+    function of time is:
+    $ bf(P) (t) = vec(R_s cos (omega_s t) , R_s sin (omega_s t)) . $
+    This describes a counterclockwise circular motion of the planet with
+    period $(2 pi) / (omega_s)$.
+
+  2. Since the moon is orbiting the planet clockwise, the direction of its
+    motion is reversed compared to the planet’s orbit. The moon starts at
+    $(0 , - R_m)$ relative to the planet and moves with angular velocity $omega_m$.
+
+    The position of the moon relative to the planet, moving clockwise, is
+    given by:
+    $ bf(v) (t) = vec(R_m sin (- omega_m t) , - R_m cos (- omega_m t)) = vec(- R_m sin (omega_m t) , - R_m cos (omega_m t)) . $
+    This describes the clockwise motion of the moon around the planet.
+
+  3. To find the total position of the moon relative to the sun, we combine
+    the position of the planet $bf(P) (t)$ and the moon’s
+    position relative to the planet
+    $bf(v) (t)$. Thus, the position of the
+    moon relative to the sun is:
+    $ bf(M) (t) = bf(P) (t) + bf(v) (t) . $
+    Substituting the expressions for $bf(P) (t)$ and
+    $bf(v) (t)$, we get:
+    $ bf(M) (t) = vec(R_s cos (omega_s t) , R_s sin (omega_s t)) + vec(- R_m sin (omega_m t) , - R_m cos (omega_m t)) . $
+  Simplifying, we have:
+  $ bf(M) (t) = vec(R_s cos (omega_s t) - R_m sin (omega_m t) , R_s sin (omega_s t) - R_m cos (omega_m t)). #qedhere $
+]
+
+#sample[
+  A wheel of radius $r$ rolls without slipping along a straight line with
+  constant velocity $v$. At the same time, a point $P$ on the rim of the wheel
+  traces a circular path relative to the center of the wheel. Parametrize
+  the trajectory of the point $bf(P)(t)$ on the rim of the wheel as it rolls,
+  assuming the wheel starts at the origin and the point on the rim is at
+  the topmost point at $t = 0$.
+]
+
+#soln[
+  This problem is a little trickier because although it's easy to
+  write the motion of the center of the wheel,
+  it's not obvious what the angular velocity of the wheel $omega$ should be.
+  That will require one idea: write the length of the tire track on the ground in two ways.
+
+  1. Easy step: The wheel rolls along a straight line with constant velocity $v$. The
+    position of the center of the wheel at time $t$, given that it starts at
+    the origin, is: $ bf(C) (t) = vec(v t , 0) . $
+    This describes the translational motion of the center of the wheel along
+    the horizontal axis.
+
+  2. The tricky part of the problem is determining the angular velocity of the wheel.
+    The key idea is to look at the length of the tire track of the wheel.
+
+    - On the one hand, after time $t$, the length of the tire track is
+      $ L_("tire track") = v t $
+      because the wheel covers that much distance on the ground.
+    - On the other hand, after time $t$ the length of the tire track should also be
+      $ L_("tire track") = omega t dot r. $
+      (It might be more natural for some of you if I write this as
+      $((omega t) / (2 pi)) dot (2 pi r)$ instead.
+      Because $(omega t) / (2 pi)$ is the number of full rotations made;
+      while $2 pi r$ is the total circumference of the wheel.)
+
+    Setting $L_("tire track")$ equal in the two expressions gives
+    $ v t = omega t dot r ==> omega = v / r. $
+    (We now forget about $L_("tire track")$.
+    Its only purpose was to give us a way to get our hands on $omega$.)
+
+    Now that we've cleared this hurdle, the rest of the sample question is just like the earlier two.
+    The point on the rim starts
+    at the topmost point of the wheel at $t = 0$.
+    Therefore, the position of the point on the rim relative to the center of the wheel
+    at time $t$ can be parametrized as:
+    $ bf(R) (t) = vec(r sin (v / r t) , r cos (v / r t)) . $
+    This describes the circular motion of the point on the rim around the
+    center of the wheel with radius $r$ and angular velocity $v / r$.
+
+  3. To find the total position of the point on the rim of the wheel, we
+    combine the translational motion of the center of the wheel
+    $bf(C) (t)$ with the rotational motion of the point on the
+    rim $bf(R) (t)$. The total position of the point on the rim
+    at time $t$ is:
+    $ bf(P) (t) = bf(C) (t) + bf(R) (t) . $
+    Substituting the expressions for $bf(C) (t)$ and
+    $bf(R) (t)$, we get:
+    $ bf(P) (t) = vec(v t , 0) + vec(r sin (v / r t) , r cos (v / r t)) . $
+  Simplifying, we have:
+  $ bf(P) (t) = vec(v t + r sin (v / r t) , r cos (v / r t)) . #qedhere $
+]
+
+Now that you have parametric equations for each of these,
+you can also answer any questions solved by the methods earlier like
+"what is the total distance traveled" or "what is the speed at this time" or so on.
+Example:
+
+#sample[
+  Find the total arc length of the trajectory of the point $P$
+  in the previous sample question
+  between the time $t = 0$ and $t = 2 pi$.
+]
+
+#remark[
+  The shape of $bf(P)$ is called a _cycloid_, and it's shown in Figure.
+  The shape looks quite scary!
+  However, you don't actually need to know anything about the shape
+  to compute things like the arc length, as we just saw.
+  The geometry picture is only used to extract the algebraic expression of $bf(P)(t)$.
+  After that, you can just forget about the picture
+  and do calculus on the expression you extracted.
+]
+
+#todo[Draw cycloid, and add figure reference]
+
+== [EXER] Exercises
+
+#exer[
+  At an amusement park, a teacup ride consists of teacups
+  rotating clockwise around a fixed center while each individual teacup rotates counterclockwise.
+  (See @fig-teacups if you've never seen one of these before.)
+  The teacup ride is specified in $RR^2$ as follows:
+
+  - The teacup ride revolves around a fixed center with radius $R$ and
+    angular velocity $omega_(upright("ride"))$ _clockwise_.
+  - Each individual teacup rotates _counterclockwise_ with angular velocity
+    $omega_(upright("cup"))$ and radius $r$.
+  - Initially, at $t = 0$, the center of the teacup is at $(R , 0)$, and
+    the toddler is positioned at the rightmost point on the edge of the
+    teacup relative to its center.
+
+  Compute the _velocity_ vector of the toddler at time $t$.
+] <exer-teacup>
+
+#figure(
+  image("media/teacups.jpg", width: 60%),
+  caption: [You know, one of these teacup ride things.],
+) <fig-teacups>
+
+#exer[
+  A helicopter in $RR^3$ is moving upward with constant speed $5$ in the $+z$ direction
+  while its rotor blades
+  are spinning with _clockwise_ angular velocity $pi /3$
+  and radius $2$ in the horizontal plane.
+  Let $P$ be a point on the tip of the blade, initially at $(r,0,0)$.
+
+  - Parametrize the motion of a point on the tip of
+    one of the blades as a function of time,
+    assuming the helicopter starts at height $z = 0$
+    and the blade points along the positive $x$-axis at $t = 0$.
+  - Calculate the distance traveled by $P$ from time $t = 0$ to time $t = 18$.
+] <exer-helicopter>
+
+
+#figure(
+  image("figures/parametric-clockblock.png", width: auto),
+  caption: [The clock problem from the AMC 10A in 2015.],
+) <fig-clockblock>
+
+#exerstar[AMC 10A Problem 2015][
+  In @fig-clockblock, there's a circular clock with radius 20 cm
+  and a circular disk of radius 10 cm externally tangent at the 12 o'clock position.
+  The disk has an arrow painted that points directly up and rolls clockwise.
+  It takes twelve hours for the smaller disk to complete a rotation so that it returns to the top.
+
+  - Find a parametric equation $bf(P)(t)$ for the point at the tip of the arrow at time $t$ in hours.
+    Assume the clock is centered at the origin and $bf(P)(0) = (0,30)$.
+  - At what point on the clock face will the disk be tangent
+    when the arrow is next pointing in the upward vertical direction?
+] <exer-clockblock>
