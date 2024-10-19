@@ -223,7 +223,8 @@ Okay, here are some examples.
 
     Since the marked point starts at $(0 , r)$ at $t = 0$, its rotational
     motion around the center can be described parametrically as:
-    $ bf(v) (t) = vec(r sin (omega t) , r cos (omega t)) . $
+    $ bf(v) (t) = vec(r cos(pi / 2 + omega t), r sin(pi / 2 + omega t))
+      = vec(- r sin (omega t) , r cos (omega t)) . $
     Here, $omega$ is the angular velocity (in radians per second), and the
     sine and cosine terms describe the counterclockwise circular motion of
     the marked point around the center.
@@ -236,9 +237,9 @@ Okay, here are some examples.
     $ bf(P) (t) = bf(O) (t) + bf(v) (t) . $
 
     Substituting the expressions for $bf(O) (t)$ and $bf(v) (t)$, we get:
-    $ bf(P) (t) = vec(v_x t , v_y t) + vec(r sin (omega t) , r cos (omega t)) . $
+    $ bf(P) (t) = vec(v_x t , v_y t) + vec(- r sin (omega t) , r cos (omega t)) . $
   Simplifying, we have:
-  $ bf(P) (t) = vec(v_x t + r sin (omega t) , v_y t + r cos (omega t)) . #qedhere $
+  $ bf(P) (t) = vec(v_x t - r sin (omega t) , v_y t + r cos (omega t)) . #qedhere $
 ]
 #todo[draw a figure]
 
@@ -253,17 +254,20 @@ Okay, here are some examples.
   1. The planet moves in a counterclockwise orbit around the sun with radius
     $R_s$ and angular velocity $omega_s$. The position of the planet as a
     function of time is:
-    $ bf(P) (t) = vec(R_s cos (omega_s t) , R_s sin (omega_s t)) . $
+    $ bf(P) (t) = vec(R_s cos (omega_s t) , R_s sin (omega_s t))  $
+    since the planet starts due east of the sun and spins counterclockwise.
     This describes a counterclockwise circular motion of the planet with
     period $(2 pi) / (omega_s)$.
 
   2. Since the moon is orbiting the planet clockwise, the direction of its
     motion is reversed compared to the planet’s orbit. The moon starts at
-    $(0 , - R_m)$ relative to the planet and moves with angular velocity $omega_m$.
+    $angle.l 0 , - R_m angle.r$ relative to the planet (due south)
+    and moves with angular velocity $omega_m$.
 
     The position of the moon relative to the planet, moving clockwise, is
     given by:
-    $ bf(v) (t) = vec(R_m sin (- omega_m t) , - R_m cos (- omega_m t)) = vec(- R_m sin (omega_m t) , - R_m cos (omega_m t)) . $
+    $ bf(v) (t) = vec(R_m cos (3 pi / 2 - omega_m t) , R_m sin (3 pi / 2 - omega_m t))
+      = vec(- R_m sin (omega_m t) , - R_m cos (omega_m t)) . $
     This describes the clockwise motion of the moon around the planet.
 
   3. To find the total position of the moon relative to the sun, we combine
@@ -280,12 +284,11 @@ Okay, here are some examples.
 ]
 
 #sample[
-  A wheel of radius $r$ rolls without slipping along a straight line with
-  constant velocity $v$. At the same time, a point $P$ on the rim of the wheel
-  traces a circular path relative to the center of the wheel. Parametrize
-  the trajectory of the point $bf(P)(t)$ on the rim of the wheel as it rolls,
-  assuming the wheel starts at the origin and the point on the rim is at
-  the topmost point at $t = 0$.
+  A wheel of radius $r$ starts centered at $(0,r)$
+  and moves in the $+x$ direction with posit constant velocity $v$.
+  At the same time, a point $P$ on the rim of the wheel
+  traces a circular path relative to the center of the wheel starting from $(0, 0)$.
+  Parametrize the trajectory of the point $bf(P)(t)$.
 ]
 
 #soln[
@@ -295,13 +298,12 @@ Okay, here are some examples.
   That will require one idea: write the length of the tire track on the ground in two ways.
 
   1. Easy step: The wheel rolls along a straight line with constant velocity $v$. The
-    position of the center of the wheel at time $t$, given that it starts at
-    the origin, is: $ bf(C) (t) = vec(v t , 0) . $
+    position of the center of the wheel at time $t$ is: $ bf(C) (t) = vec(v t , r) . $
     This describes the translational motion of the center of the wheel along
     the horizontal axis.
 
   2. The tricky part of the problem is determining the angular velocity of the wheel.
-    The key idea is to look at the length of the tire track of the wheel.
+    The key idea is to look at the length of the tire track made on the ground.
 
     - On the one hand, after time $t$, the length of the tire track is
       $ L_("tire track") = v t $
@@ -319,11 +321,12 @@ Okay, here are some examples.
     Its only purpose was to give us a way to get our hands on $omega$.)
 
     Now that we've cleared this hurdle, the rest of the sample question is just like the earlier two.
-    The point on the rim starts
-    at the topmost point of the wheel at $t = 0$.
+    The point on the rim starts at the bottom point of the wheel at $t = 0$, due south.
+    The rotation of the wheel is clockwise (imagine actually rolling the wheel).
     Therefore, the position of the point on the rim relative to the center of the wheel
     at time $t$ can be parametrized as:
-    $ bf(R) (t) = vec(r sin (v / r t) , r cos (v / r t)) . $
+    $ bf(R) (t) = vec(r cos(3 pi / 4 - omega t), r sin(3 pi / 4 - omega t))
+      = vec(-r sin (v / r t) , -r cos (v / r t)) . $
     This describes the circular motion of the point on the rim around the
     center of the wheel with radius $r$ and angular velocity $v / r$.
 
@@ -333,11 +336,10 @@ Okay, here are some examples.
     rim $bf(R) (t)$. The total position of the point on the rim
     at time $t$ is:
     $ bf(P) (t) = bf(C) (t) + bf(R) (t) . $
-    Substituting the expressions for $bf(C) (t)$ and
-    $bf(R) (t)$, we get:
-    $ bf(P) (t) = vec(v t , 0) + vec(r sin (v / r t) , r cos (v / r t)) . $
+    Substituting the expressions for $bf(C) (t)$ and $bf(R) (t)$, we get:
+    $ bf(P) (t) = vec(v t , r) + vec(-r sin (v / r t) , -r cos (v / r t)) . $
   Simplifying, we have:
-  $ bf(P) (t) = vec(v t + r sin (v / r t) , r cos (v / r t)) . #qedhere $
+  $ bf(P) (t) = vec(v t - r sin (v / r t) , r - r cos (v / r t)) . #qedhere $
 ]
 
 Now that you have parametric equations for each of these,
