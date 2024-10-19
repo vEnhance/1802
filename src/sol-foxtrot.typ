@@ -1,3 +1,5 @@
+#import "@local/evan:1.0.0":*
+
 = Solutions to Part Foxtrot
 
 == Solution to @exer-opt-lm-sin
