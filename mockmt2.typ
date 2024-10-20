@@ -44,7 +44,7 @@
   Compute the equation of the tangent line to this level curve at the point $P$.
 
 / Question 3.: Let $f(x,y) = x^(5y)$ for $x,y > 0$.
-  Use linear approximation to estimate $f(1.001, 3.001)$ starting from the point $(1,1)$.
+  Use linear approximation to estimate $f(1.001, 3.001)$ starting from the point $(1,3)$.
 
 / Question 4.:
   Consider the function $f : RR^2 -> RR$ defined by
@@ -177,7 +177,7 @@ $ 3 x + 20 y = 43. $
 == Solution to the linear approximation (P3)
 
 We are given the function: $ f (x , y) = x^(5 y) $ and are asked to
-estimate $f (1.001 , 3.001)$ using linear approximation, starting from the point $(1 , 1)$,
+estimate $f (1.001 , 3.001)$ using linear approximation, starting from the point $(1 , 3)$,
 at which $ f(1,3) = 1. $
 
 We start by computing $nabla f$.
@@ -190,7 +190,7 @@ $ nabla f (x , y) = ⟨5 y x^(5 y - 1) , 5 x^(5 y) log (x)⟩ . $
 The gradient at $(1,3)$ is thus
 $ nabla f(1,3) = vec(15,0). $
 
-The linear approximation of $f (1.001 , y)$ near the point $(1 , 1)$ can be
+The linear approximation of $f (1.001 , y)$ near the point $(1 , 3)$ can be
 expressed in terms of the gradient dot the displacement:
 $ f (1.001 , 3.001) &approx f (1 , 1) + nabla f (1 , 1) dot vec(0.001, 0.001)
   &= 1 + vec(15,0) dot vec(0.001, 0.001) = 1.015. $
