@@ -35,7 +35,7 @@ dot(left_pic, (3,-1), rs);
 
 pen bs = blue + fontsize(9pt);
 dot(right_pic, "$b(0)=0$", (0,0), 2*dir(50), bs);
-dot(right_pic, "$b(2)=-\frac{13}{12}$", (2,-8/3), dir(-90), bs);
+dot(right_pic, "$b(2)=-\frac{8}{3}$", (2,-8/3), dir(-90), bs);
 dot(right_pic, (-1,-5/12), bs);
 label(right_pic, "$b(-1)=-\frac{5}{12}$", (-3,-2), bs);
 draw(right_pic, (-3,-1.8)--(-1,-5/12), blue, EndArrow(TeXHead), Margins);

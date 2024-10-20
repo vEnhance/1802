@@ -311,7 +311,7 @@ $
   a("odd") &= cos(pi dot "odd") = -1 \
   b(-1) &= (-1)^4/4 - (-1)^3/3 - (-1)^2 = -5/12 \
   b(0) &= (0)^4/4 - (0)^3/3 - (0)^2 = 0 \
-  b(2) &= (2)^4/4 - (2)^3/3 - (2)^2 = -13/12.
+  b(2) &= (2)^4/4 - (2)^3/3 - (2)^2 = -8/3
 $
 Then we get the six values shown in @table-sol-mt2-extremes.
 #figure(
@@ -328,8 +328,8 @@ Then we get the six values shown in @table-sol-mt2-extremes.
       [$f("even", 0) = 1 + 0 = 1$],
       [$f("odd", 0) = -1 + 0 = -1$],
     [$y = 2$],
-      [$f("even", 2) = 1 - 13/12 = -1/12$],
-      [$f("odd", 2) = -1 - 13/12 = -25/12$],
+      [$f("even", 2) = 1 - 8/3 = -5/3$],
+      [$f("odd", 2) = -1 - 8/3 = -11/3$],
   ),
   kind: table,
   caption: [Values of $f$ at the critical points]
@@ -355,14 +355,13 @@ So we could have also just used 18.01 methods on $a$ and $b$ individually,
 as in @fig-sol-mt2-graph.
 That is:
 
-- Because $min a(x) = -1$ and $min b(y) = - 13/12$, the global minimum is $-25/12$.
+- Because $min a(x) = -1$ and $min b(y) = - 8/3$, the global minimum is $-11/3$.
 - Because $max a(x) = 1$ and $min b(y) = +oo$, there is no global maximum.
 
 Remember, this only works because we could easily divorce $f(x,y)$
 into a function in $x$ plus a function in $y$.
 For most functions $f(x,y)$ like $x y$ or $e^x sin(y)$,
 this approach is not going to fly.
-
 
 #pagebreak()
 
