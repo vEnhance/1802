@@ -32,6 +32,8 @@ For comparison, this part corresponds approximately to §3, §4, §6 of #poonen.
 #pagebreak()
 #include "src/basis.typ"
 #pagebreak()
+#include "src/eigen.typ"
+#pagebreak()
 
 #part[Part Charlie: Review of complex numbers]
 For comparison, this part (not including the review) corresponds approximately to §11 of #poonen.
