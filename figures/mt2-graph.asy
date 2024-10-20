@@ -22,7 +22,7 @@ label(left_pic, "$\boxed{a(x) = \cos(\pi x)}$", (0,ymin), 3*dir(-90), red);
 label(right_pic, "$\boxed{b(y) = \tfrac{y^4}{4} - \tfrac{y^3}{3} - y^2}$", (0,ymin), 3*dir(-90), blue);
 
 draw(scale(2)*"$f = $", (-4.5,0), dir(180), deepgreen);
-draw(scale(2)*"$+$", (5.75,0), deepgreen);
+draw(scale(2)*"$+$", (5.5,0), deepgreen);
 
 pen rs = red + fontsize(9pt);
 dot(left_pic, (-3,-1), rs);
