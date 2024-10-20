@@ -133,8 +133,6 @@ and calculus as taught in United States high schools is assumed.
   This is covered in the course 18.01 at MIT,
   and also in the AP calculus courses in the United States.
 
-  Note that in these notes, $log$ denotes natural log (not base $10$ log).
-
 #tip[
   If you're not at MIT, you should replace the words "18.01" and "18.02" with
   the course names corresponding to "single-variable calculus"
