@@ -117,7 +117,7 @@ $ "Speed" = lr(|bf(r)' (t)|) = sqrt((- sin (t))^2 + (- sin (t))^2) = sqrt(2 sin^
 
 At $t = pi / 3$, we have: $ sin (pi / 3) = sqrt(3) / 2 . $
 Thus, the speed at $t = pi / 3$ is:
-$ "Speed" = sqrt(2) times sqrt(3) / 2 = sqrt(6) / 2 . $
+$ "Speed" = sqrt(2) dot sqrt(3) / 2 = sqrt(6) / 2 . $
 
 === Arc length of the butterfly’s trajectory from $t = 0$ to $t = 2 pi$
 
@@ -145,7 +145,7 @@ $ L = sqrt(2) (int_0^(pi) sin (t) dif t + int_(pi)^(2 pi) - sin (t) dif t) . $
 Both integrals are the same, so we compute one and multiply by 2:
 $ int_0^pi sin (t) dif t = [- cos (t)]_0^pi = - cos (pi) + cos (0) = 1 + 1 = 2 . $
 Thus, the total arc length is:
-$ L = sqrt(2) times 2 times 2 = 4 sqrt(2) . $
+$ L = sqrt(2) dot 2 dot 2 = 4 sqrt(2) . $
 
 #pagebreak()
 
