@@ -109,7 +109,7 @@ which is the derivative of $bf(r) (t)$ with respect to time $t$.
 
 First, compute the velocity $bf(r)'(t)$:
 $ bf(r)' (t) = (d) / (dif t) angle.l cos (t) , cos (t) angle.r = angle.l - sin (t) , - sin (t) angle.r . $
-(This has direction the same as the long $y=x$, which is what we expect.)
+(This has direction along the line $y=x$, which is what we expect.)
 
 The speed at any time $t$ is the magnitude of the velocity vector:
 $ "Speed" = lr(|bf(r)' (t)|) = sqrt((- sin (t))^2 + (- sin (t))^2) = sqrt(2 sin^2 (t))
