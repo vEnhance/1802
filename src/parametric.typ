@@ -405,12 +405,6 @@ Example:
   - Calculate the distance traveled by $P$ from time $t = 0$ to time $t = 18$.
 ] <exer-helicopter>
 
-
-#figure(
-  image("figures/parametric-clockblock.png", width: auto),
-  caption: [The clock problem from the AMC 10A in 2015.],
-) <fig-clockblock>
-
 #exerstar[AMC 10A Problem 2015][
   In @fig-clockblock, there's a circular clock with radius 20 cm
   and a circular disk of radius 10 cm externally tangent at the 12 o'clock position.
@@ -422,3 +416,8 @@ Example:
   - At what point on the clock face will the disk be tangent
     when the arrow is next pointing in the upward vertical direction?
 ] <exer-clockblock>
+
+#figure(
+  image("figures/parametric-clockblock.png", width: auto),
+  caption: [The clock problem from the AMC 10A in 2015.],
+) <fig-clockblock>

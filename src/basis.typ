@@ -20,7 +20,7 @@
   you would take $bf(v)_1 = vec(5, 17)$ and $bf(v)_2 = vec(19, 94)$.
 
   - Determine the span of those two vectors in $RR^2$.
-  - Find a current or former K-pop idol who gets a different answer from you in part (a)
+  - Find a current or former K-pop idol who gets a different answer from you
     when they use their birthday.
 ] <exer-basis-birthday>
 
