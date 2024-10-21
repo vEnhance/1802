@@ -161,8 +161,8 @@ We will compute the following quantities.
 
 In 18.02, we will see some complicated trajectories
 which are actually the sum of two simpler ones.
-So we start by describing some examples of simple trajectories,
-and then we add them.
+So we start by describing some examples of simple trajectories in this section;
+then in the next section we start adding some of them together.
 
 Constant velocity is easy:
 if you have a point that starts from a point $A_0$ and
@@ -190,8 +190,9 @@ If you haven't seen the term angular velocity, we describe it now.
 
 Suppose a point $P$ moves in a circle of radius $r$ around $(0,0)$
 with constant angular velocity $omega$.
-Then the point can always be written as $r vec(cos(theta), sin(theta))$
-for some angle $theta$ that varies with $t$.
+Then the point can always be written as
+$ (r cos(theta), r sin(theta)) $
+for some angle $theta$ that va/ies with $t$.
 A counterclockwise angular velocity corresponds to $theta$
 increasing by $omega$ per unit time
 (hence the angle at time $t$ is $theta + t omega$);
@@ -497,14 +498,14 @@ Let's see this.
   - Calculate the distance traveled by $P$ from time $t = 0$ to time $t = 18$.
 ] <exer-helicopter>
 
-#exerstar[AMC 10A Problem 2015][
+#exerstar[AMC 10A 2015][
   In @fig-clockblock, there's a circular clock with radius 20 cm
   and a circular disk of radius 10 cm externally tangent at the 12 o'clock position.
   The disk has an arrow painted that points directly up and rolls clockwise.
   It takes twelve hours for the smaller disk to complete a rotation so that it returns to the top.
 
   - Find a parametric equation $bf(P)(t)$ for the point at the tip of the arrow at time $t$ in hours.
-    Assume the clock is centered at the origin and $bf(P)(0) = (0,30)$.
+    Assume the clock is centered at the origin and $bf(P)(0) = (0,40)$.
   - At what point on the clock face will the disk be tangent
     when the arrow is next pointing in the upward vertical direction?
 ] <exer-clockblock>
