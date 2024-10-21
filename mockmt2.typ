@@ -57,9 +57,10 @@
   over real numbers $x$, $y$, $z$ satisfying $x^2 + y^2 + z^2 <= 100$.
 
 / Question 6.:
-  Let $cal(H)$ denote the tangent plane to the level surface of
-  $f(x,y,z) = (x-1)^2 + (y-1)^3 + (z-1)^4$ that passes through the origin.
-  Find two nonzero vectors which span $cal(H)$.
+  Consider the level surface of $f(x,y,z) = (x-1)^2 + (y-1)^3 + (z-1)^4$
+  that passes through the origin $O = (0,0,0)$.
+  Let $cal(H)$ denote the tangent plane to this surface at $O$.
+  Give an example of two nonzero tangent vectors to this surface at $O$, and which span $cal(H)$.
 ]
 
 #pagebreak()
@@ -438,4 +439,20 @@ We follow the steps we described in the recipe in LAMV.
 
 == Solution to the tangent plane (P6)
 
-To be written.
+The gradient of the function $f$
+$ nabla f = vec(2(x-1), 3(y-1)^2, 4(z-1)^3) $
+and so the gradient at the origin is
+$ nabla f (0,0,0) = vec(-2, 3, -4). $
+The tangent plane $cal(H)$ consists of those vectors which are normal to $vec(-2, 3, -4)$.
+This plane is two-dimensional.
+So, to find two vectors spanning $cal(H)$,
+according to the "buy two get one free" result from (TODO LINK PRE-MT1 SECTION),
+we just need to give any two linearly independent (i.e. not multiples of each other) vectors
+which are both perpendicular to $vec(-2, 3, -4)$.
+
+There are many valid choices.
+One such example might be $vec(3, 2, 0)$ and $vec(0, 4, 3)$.
+These two vectors are clearly not multiples of each other, and
+$ vec(-2, 3, -4) dot vec(3,2,0) &= (-2) dot 3 + 3 dot 2 + (-4) dot 0 = 0 \
+  vec(-2, 3, -4) dot vec(0,4,3) &= (-2) dot 0 + 3 dot 4 + (-4) dot 3 = 0 $
+so they are indeed tangent vectors contained in $cal(H)$.
