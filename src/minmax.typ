@@ -348,7 +348,7 @@ The exam ones will probably tone down this algebra step a bit.
 
 #soln[
   We first compute the gradient:
-  $ nabla f = vec(3 x^2 - 3 y z, 3 y^2 - z x, 3 z ^2 - x y). $
+  $ nabla f = vec(3 x^2 - 3 y z, 3 y^2 - 3 z x, 3 z ^2 - 3 x y). $
 
   The critical points occur when $nabla f = bf(0)$,
   which gives us the system of equations (after dividing by $3$):

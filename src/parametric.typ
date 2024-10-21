@@ -39,7 +39,7 @@ and every axis is an input variable we treat with equal respect.)
 #example[
   The classic example
   $ bf(r)(t) = vec(cos(t), sin(t)) $
-  would be drawn as the unit circle circle.
+  would be drawn as the unit circle.
   You can imagine a particle starting at $bf(r)(0) = vec(1,0)$ and then moving around
   the unit circle counterclockwise with constant speed.
   It completes a full revolution in $2 pi$ time: $bf(r)(2 pi) = vec(1,0)$.

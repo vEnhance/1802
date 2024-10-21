@@ -502,7 +502,7 @@ Bear with me for just one second:
   - Then $nabla f : RR^2 -> RR^2$ accepts *points* in $RR^2$ and outputs *vectors* in $RR$.
 
   Keep the distinction between points and vectors in mind when drawing pictures.
-  We'll always draw points as dots, as arrows.
+  We'll always draw points as dots, and vectors as arrows.
 ]
 
 The reason for defining this gradient is that it lets us do
@@ -800,8 +800,8 @@ To spell it out:
   Hence, the tangent line should take the form
   $ 6x + 8y = d $
   for some $d$.
-  To pass through $P = (3,4)$, we need $d = 42$, so the answer is
-  $ 6 x + 8 y = 42. #qedhere $
+  To pass through $P = (3,4)$, we need $d = 6 dot 3 + 8 dot 4$, so the answer is
+  $ 6 x + 8 y = 50. #qedhere $
 ]
 
 #todo[A couple more examples here would be nice...]
