@@ -162,8 +162,11 @@ Here is a brief overview of what happens in these parts
 
 / Echo and Foxtrot: Cover the *differentiation of multivariable functions* $f : RR^n -> RR$,
   and the optimization such functions.
-  The start of these two parts in the gradient $nabla f$
+  The star of these two parts in the gradient $nabla f$,
+  which gets airtime in virtually every kind of question you'll see.
   This is the first serious multivariable calculus usage.
+
+/ Golf and Hotel: TBD.
 
 - #todo[finish writing this]
 

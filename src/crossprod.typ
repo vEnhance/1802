@@ -32,7 +32,7 @@ and you have to remember this weird right-hand rule that adds one more arbitrary
 So the definition is pretty unsatisfying.
 
 To replace the cross product, mathematicians use a different
-kind of object called a _bivector_, an element of a space called $and.big^2(RR^n)$.
+kind of object called a _bivector_, an element of a space called $and.big^2 (RR^n)$.
 (They might even claim that bivectors do everything cross products can do, but better.)
 Again, this new kind of object is well beyond the scope of 18.02
 but it's documented in Chapter 12 of my #link("https://web.evanchen.cc/napkin.html")[Napkin]

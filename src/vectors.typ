@@ -214,7 +214,7 @@ with three vectors in $RR^3$; see @fig-parallelepiped.
 #digression[
   If you're interested in the proof of these results
   and their $n$-dimensional generalizations, the tool needed is the *wedge product*,
-  which is denoted $and.big^k(RR^n)$.
+  which is denoted $and.big^k (RR^n)$.
   This is well beyond the scope of 18.02,
   but it's documented in Chapter 12 of my #link("https://web.evanchen.cc/napkin.html")[Napkin]
   for those of you that want to read about it.
