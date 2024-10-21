@@ -20,11 +20,15 @@ $y$-coordinates are equal for all $t$. Specifically, the butterfly’s
 motion follows the line $y = x$, with $t in [0 , 2 pi]$ producing
 oscillations between $x = 1$ and $x = - 1$.
 
-Here is a sketch of the trajectory:
+Here is a sketch of the trajectory.
 
 #figure(
   image("figures/mt2-butterfly.png", width: auto),
-  caption: [Butterfly fluttering along the plane.],
+  caption: [Butterfly fluttering along the plane.
+  A few more examples of points in the trajectory are marked in green for illustration,
+  but the blue endpoints are the important ones.
+  The green points are a little offset to show both parts of the trajectory,
+  e.g. $bf(r)(pi/2) = (0,0)$ is drawn a little bit left of where it should be.],
 )
 
 The trajectory is a straight line from $(1,1)$ to $(- 1 , - 1)$ and back
@@ -64,11 +68,25 @@ $ L = int_("start time")^("stop time") lr(|bf(r)' (t)|) dif t . $
 We just saw that $lr(|bf(r)' (t)|) = sqrt(2) lr(|sin (t)|)$.
 Therefore, the arc length from $t = 0$ to $t = 2 pi$ is:
 $ L = int_0^(2 pi) sqrt(2) lr(|sin (t)|) dif t . $
+#warning[
+  Don't forget about the absolute value!
+  In general, for real $X$, we have $sqrt(X^2) = |X|$.
+  If you forget the absolute value here, you'll end up getting $0$ as the answer,
+  which doesn't make sense because the butterfly certainly traveled more than $0$ distance.
+  Remember, speed (absolute value of velocity vector) should always be nonnegative.
+]
 
 Because of the absolute value,
 we can break the integral into two parts.
 On the interval $[0 , pi]$, $sin (t) >= 0$, and on the interval $[pi , 2 pi]$, $sin (t) <= 0$, so
 $ L = sqrt(2) (int_0^(pi) sin (t) dif t + int_(pi)^(2 pi) - sin (t) dif t) . $
+See @fig-abs-sin for an illustration of this integral.
+
+#figure(
+  image("figures/mt2-abs-sin.png", width: auto),
+  caption: [The integral $int_0^(2pi) |sin(t)| dif t$ is two copies
+  of the first hump $int_0^(pi) sin(t) dif t$ (which doesn't have an absolute value on it).],
+) <fig-abs-sin>
 
 Both integrals are the same, so we compute one and multiply by 2:
 $ int_0^pi sin (t) dif t = [- cos (t)]_0^pi = - cos (pi) + cos (0) = 1 + 1 = 2 . $
@@ -148,6 +166,13 @@ Setting this equal to $bf(0)$ lets us solve each equation individually:
 So there are infinitely many critical points!
 The critical points occur when $x$ is any integer
 and $y = -1$, $y = 0$, $y = 2$.
+See @fig-mt2-crits.
+
+#figure(
+  image("figures/mt2-crits.png", width: auto),
+  caption: [Plot of the critical points of the function in the $x y$-plane as red dots.],
+) <fig-mt2-crits>
+
 
 === Classification using second derivative test
 
