@@ -2,38 +2,25 @@
 
 = Linear combinations of vectors
 
-#todo[this whole chapter needs to be properly written]
+== [TEXT] Basis <sec-basis>
 
-#exer[
-  What is the span of $vec(420, 321)$ and $vec(666, 5)$ in $RR^2$?
-] <random2>
-#solution[
-  Because the two vectors are not multiples of each other, they are linearly independent.
-  (Alternatively, calculate $det(mat(420, 666; 321, 5)) = 420 dot 5 - 321 dot 666 = -211686 != 0$.)
+#memo(title: [Memorize: Basis for $RR^n$, "buy two get one free"])[
+  Suppose you have a bunch of vectors in $RR^n$.
+  Any two of the following imply the third:
 
-  Hence they are a basis of $RR^2$ and the span is all of $RR^2$.
+  1. There are exactly $n$ vectors.
+  2. The vectors are linearly independent.
+  3. The vectors are span all of $RR^n$.
+
+  Moreover, if item 1 is true, the following fourth item works too:
+
+  4. The determinant of the $n times n$ matrix with the vectors as column vectors is nonzero.
 ]
 
-#exer[
-  What is the span of $vec(3,42,18)$, $vec(1, 53, 17)$, $vec(71,91,13)$ in $RR^3$?
-] <random3>
-#solution[
-  As we mentioned above (@big-coeff), you shouldn't eyeball three or more dimensions;
-  if you get three vectors in $RR^3$ and want to know if they are linearly independent or not,
-  you should always take the determinant.
-  The audience picked some very large numbers for me so I got a chance to show
-  off my amazing mental arithmetic skills, but the point is that
-  $ det(mat(3,1,71; 42,53,91; 18,17,13)) = "ugly arithmetic" = -18522 != 0. $
-  So the three vectors are linearly independent, and hence a basis of $RR^3$.
-  So the span is all of $RR^3$.
-]
-
-== Dimension
-
-For dimension, you can often trust your hunches, and they'll be right.
+This means for dimension, you can often trust your hunches, and they'll be right.
 For example, you might have the feeling that any good quiz question for $T : RR^2 -> RR^2$
 needs to end up having $2$ given equations. You'd be right.
-More examples of correct hunches (this is the _buy two get one free_ in Poonen 4.7):
+More examples of correct hunches implied by the result above:
 
 - In $RR^n$, at least $n+1$ vectors are never linearly independent.
 - In $RR^n$, at most $n-1$ vectors are never spanning. (So a basis is always $n$ vectors exactly.)
@@ -41,10 +28,13 @@ More examples of correct hunches (this is the _buy two get one free_ in Poonen 4
 - Also, if you have exactly $n$ vectors in $RR^n$, and they're spanning, then they're a basis.
   - Most usefully, they're spanning if and only if the $n times n$ matrix
     whose columns are the vectors has *nonzero determinant*.
-    (Reason: for $n=3$, not being spanning in $RR^3$ means the parallelepiped
-    has volume zero --- the trick from PSet 1. Same idea for $n > 3$ with hypervolumes.)
 
-The last bullet matters: the determinant is doing a _lot_ of work for you.
+#todo[Explain why the determinant is true.
+  (Reason: for $n=3$, not being spanning in $RR^3$ means the parallelepiped
+  has volume zero --- the trick from PSet 1. Same idea for $n > 3$ with hypervolumes.)
+]
+
+The determinant thing matters: the determinant is doing a _lot_ of work for you.
 When $n = 2$ the determinant is unnecessary, because you can just use "slope":
 it's obvious that $vec(1,2)$ and $vec(100,200)$ have a dependence.
 But for $n >= 3$ *you can't eyeball it*#footnote[Though
@@ -55,17 +45,14 @@ But for $n >= 3$ *you can't eyeball it*#footnote[Though
   that's easy.
   (Even more stupidly, a single vector is linearly dependent only when it's the zero vector.)]:
 e.g., $bf(v)_1 = vec(1,3,4)$, $bf(v)_2 = vec(10,1,11)$ and $bf(v)_3 = vec(-9,10,1)$
-might look like unrelated small numbers,
-but surprisingly it turns out that
+might look like unrelated small numbers, but surprisingly it turns out that
 #eqn[
   $ 109 bf(v)_1 - 37 bf(v)_2 - 29 bf(v)_3 =0. $
   <big-coeff>
 ]
 Without "slope", you cannot notice these dependences by sight for $n >= 3$, so use the determinant.
 
-
-== [RECIPE] Describing spans of explicit vectors
-
+== [RECIPE] Describing the span of several vectors
 
 #recipe(title: [Recipe for describing the span of vectors in $RR^2$])[
 - *0-D case*: Are all the vectors the zero vector $vec(0,0)$? If so the span is just a single *point*.
@@ -79,9 +66,10 @@ Without "slope", you cannot notice these dependences by sight for $n >= 3$, so u
 - Example: the span of the vectors $vec(3,6)$, $vec(10,20)$, $vec(100,200)$, $vec(5000, 10000)$
   consists of the multiples of $vec(1,2)$.
 - Example: The span of $vec(420, 321)$ and $vec(666, 5)$ is all of $RR^2$.
-  This was @random2 earlier.
+  Because the two vectors are not multiples of each other, they are linearly independent.
+  (Alternatively, calculate $det(mat(420, 666; 321, 5)) = 420 dot 5 - 321 dot 666 = -211686 != 0$.)
+  Hence they are a basis of $RR^2$ and the span is all of $RR^2$.
 
-=== Flowchart for $RR^3$
 
 #recipe(title: [Recipe for describing the span of vectors in $RR^3$])[
   - *0-D case:* Are all the vectors the zero vector $vec(0,0,0)$? If so the span is just a single *point*.
@@ -109,7 +97,14 @@ Without "slope", you cannot notice these dependences by sight for $n >= 3$, so u
   since you only care _whether or not_ there is a dependence,
   not what the coefficients actually are.)
 - Example: The span of $vec(3,42,18)$, $vec(1, 53, 17)$, $vec(71,91,13)$ in $RR^3$.
-  This was @random3 earlier.
+  As we mentioned above (@big-coeff), you shouldn't eyeball three or more dimensions;
+  if you get three vectors in $RR^3$ and want to know if they are linearly independent or not,
+  you should always take the determinant.
+  The audience picked some very large numbers for me so I got a chance to show
+  off my amazing mental arithmetic skills, but the point is that
+  $ det(mat(3,1,71; 42,53,91; 18,17,13)) = "ugly arithmetic" = -18522 != 0. $
+  So the three vectors are linearly independent, and hence a basis of $RR^3$.
+  So the span is all of $RR^3$.
 
 == Systems of equations
 
