@@ -414,10 +414,6 @@ Here are a bunch more examples that you can try to follow along:
   Calculate the partial derivatives of $f(x,y) = x^y$, where we assume $x,y > 0$.
 ]
 #soln[
-  Our last example is $ f(x,y) = x^y, $
-  where let's say for $x,y > 0$ for simplicity
-  (otherwise the exponentiation may not be defined).
-
   If we view $y$ as a constant and $x$ as a variable, then
   $ x |-> x^y $
   is differentiated by the "power rule" to get $y x^(y-1)$.
@@ -480,7 +476,7 @@ we thought of the single number $f'(p)$ as the slope to interpret it geometrical
 Now that we're in 18.02, we have $n$ different rates of change,
 but we haven't talked about how to think of it geometrically yet.
 
-It turns out correct definition is to take the $n$ numbers and make them into a vector.
+It turns out the correct definition is to take the $n$ numbers and make them into a vector.
 Bear with me for just one second:
 
 #definition[
@@ -499,7 +495,7 @@ Bear with me for just one second:
   The types are confusing here. To continue harping on type safety:
 
   - Suppose $f : RR^2 -> RR$ accepts *points* in $RR^2$ and outputs *scalars* in $RR$.
-  - Then $nabla f : RR^2 -> RR^2$ accepts *points* in $RR^2$ and outputs *vectors* in $RR$.
+  - Then $nabla f : RR^2 -> RR^2$ accepts *points* in $RR^2$ and outputs *vectors* in $RR^2$.
 
   Keep the distinction between points and vectors in mind when drawing pictures.
   We'll always draw points as dots, and vectors as arrows.
@@ -528,8 +524,7 @@ with the vector $vec(6,8)$ instead,
 so that *the approximation part just becomes a dot product*:
 $ f(vec(3,4) + bf(v)) approx f(vec(3,4)) + vec(6,8) dot bf(v). $
 
-The approximation part is used so often it has its own name and symbol.
-#warning[
+#warning(title: [Warning: the directional derivative sucks])[
   In some places you see the abbreviation
   $D_bf(v) f (P) := nabla f (P) dot bf(v)$
   and the name "directional derivative" for it.
@@ -538,15 +533,17 @@ The approximation part is used so often it has its own name and symbol.
 
   So I will always just write the dot product $nabla f (P) dot bf(v)$ instead,
   which is unambiguous and means you have one less symbol to remember.
+  The gradient does everything directional derivative can do, and does it better.
 ]
 
 In full abstraction, we can rewrite linear approximation as:
-#memo[
+#memo(title: [Memorize: Linear approximation])[
   Suppose $f$ is differentiable at a point $P$.
   Then for small displacement vectors $bf(v)$,
-  the *net change* from $f(P)$ to $f(P + bf(v))$
-  is approximated by the dot product $ nabla f(P) dot bf(v). $
-  This procedure is called *linear approximation*.
+  *linear approximation* promises that
+  $ f(P + bf(v)) approx f(P) + nabla f(P) dot bf(v). $
+  In other words the net change from $f(P)$ to $f(P + bf(v))$
+  is approximated by the dot product $nabla f(P) dot bf(v)$.
 ]
 Up until now, all we've done is rewrite the earlier equation with a different notation;
 so far, nothing new has been introduced.
@@ -708,7 +705,7 @@ Then remember how the cosine function works:
 - $cos(0 degree) = 1$ is the most positive value of the cosine,
   and that occurs when $bf(v)$ and $nabla f(P)$ point the same direction.
 - $cos(180 degree) = -1$ is the most negative value of the cosine,
-  and that occurs when $bf(v)$ and $nabla f(P)$ point the same direction.
+  and that occurs when $bf(v)$ and $nabla f(P)$ point opposite directions.
 - If $nabla f (P)$ and $bf(v)$ are perpendicular
   (so $theta = 90 degree$ or $theta = 270 degree$), then the dot product is zero.
 
