@@ -55,6 +55,11 @@
 / Question 5.:
   Compute the minimum and maximum possible value of $x + 2 y + 2 z$
   over real numbers $x$, $y$, $z$ satisfying $x^2 + y^2 + z^2 <= 100$.
+
+/ Question 6.:
+  Let $cal(H)$ denote the tangent plane to the level surface of
+  $f(x,y,z) = (x-1)^2 + (y-1)^3 + (z-1)^4$ that passes through the origin.
+  Find two nonzero vectors which span $cal(H)$.
 ]
 
 #pagebreak()
@@ -428,3 +433,9 @@ We follow the steps we described in the recipe in LAMV.
   So if one is observant enough they can skip straight to the LM on $cal(S)$,
   ignoring the region $cal(R)$ entirely.
 ]
+
+#pagebreak()
+
+== Solution to the tangent plane (P6)
+
+To be written.
