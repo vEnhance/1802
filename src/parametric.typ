@@ -159,11 +159,72 @@ We will compute the following quantities.
 
 == [TEXT] Constant velocity and angular velocity
 
+In 18.02, we will see some complicated trajectories
+which are actually the sum of two simpler ones.
+So we start by describing some examples of simple trajectories,
+and then we add them.
+
+Constant velocity is easy:
+if you have a point that starts from a point $A_0$ and
+moves in a straight line with velocity $bf(v)$,
+then the parametrization is $ bf(A)(t) = A_0 + t bf(v). $
+
+#sample[
+  A point $P$ starts at $(1,2,3)$ and moves with constant velocity $5$ in the $+x$ direction.
+  Parametrize the position $bf(P)(t)$.
+]
+#soln[
+  Just write
+  $ bf(P)(t) = vec(1,2,3) + t vec(5,0,0) = vec(5t+1, 2, 3). #qedhere $
+]
+
+Rotation is actually also pretty simple,
+but it uses the term "angular velocity" instead.
+If you haven't seen the term angular velocity, we describe it now.
 #definition[
   An object is said to have _angular velocity_ $omega$
   if it rotates at a rate of $omega$ radians per unit time.
   For example, an angular velocity of "$10 pi$ per second"
   means the object completes five rotations (of $2 pi$ radians each) every second.
+]
+
+Suppose a point $P$ moves in a circle of radius $r$ around $(0,0)$
+with constant angular velocity $omega$.
+Then the point can always be written as $r vec(cos(theta), sin(theta))$
+for some angle $theta$ that varies with $t$.
+A counterclockwise angular velocity corresponds to $theta$
+increasing by $omega$ per unit time
+(hence the angle at time $t$ is $theta + t omega$);
+clockwise is decreasing by $omega$ per unit time instead
+(hence the angle at time $t$ is $theta - t omega$).
+See @fig-angular.
+
+#figure(
+  image("figures/parametric-angular.png", width: auto),
+  caption: [Rotation of a point with constant angular velocity.],
+) <fig-angular>
+
+#recipe(title: [Recipe for motion with constant angular velocity])[
+
+  1. Find the initial angle $theta_0$ corresponding to the position at time $t = 0$.
+  2. If the motion is counterclockwise, output
+    $ bf(P)(t) = vec(r cos(theta_0 + omega t), r sin(theta_0 + omega t)). $
+    If it's clockwise instead output
+    $ bf(P)(t) = vec(r cos(theta_0 - omega t), r sin(theta_0 - omega t)). $
+    (Note the change from $+$ to $-$.)
+]
+
+
+#sample[
+  A point $P$ moves along a circle $x^2+y^2=4$ of radius $2$ centered at $(0,0)$.
+  It starts at $(sqrt(3), 2)$ and moves clockwise with angular velocity $omega$.
+  Parametrize the position $bf(P)(t)$.
+]
+#soln[
+  The point starts at a $pi/6 = 30 degree$ angle.
+  So
+  $ bf(P)(t) = vec(13 + 2cos(pi/6 - omega t), 37 + 2sin(pi / 6 - omega t)). $
+  Note that when $t = 0$ this indeed gives the starting point we originally had.
 ]
 
 == [RECIPE] Finding the parametrization of complicated-looking trajectories by adding two simpler ones
@@ -286,9 +347,8 @@ Okay, here are some examples.
 
 #sample[
   A wheel of radius $r$ starts centered at $(0,r)$
-  and moves in the $+x$ direction with posit constant velocity $v$.
-  At the same time, a point $P$ on the rim of the wheel
-  traces a circular path relative to the center of the wheel starting from $(0, 0)$.
+  and moves in the $+x$ direction with constant speed $v$.
+  Let $P$ be a point on the rim of the wheel initially at $(0,0)$.
   Parametrize the trajectory of the point $bf(P)(t)$.
 ]
 
@@ -348,24 +408,56 @@ you can also answer any questions solved by the methods earlier like
 "what is the total distance traveled" or "what is the speed at this time" or so on.
 Example:
 
-#sample[
-  Find the total arc length of the trajectory of the point $P$
-  in the previous sample question
-  between the time $t = 0$ and $t = 2 pi$.
-]
-#todo[Write the solution for this]
-
 #remark[
-  The shape of $bf(P)$ is called a _cycloid_, and it's shown in Figure.
+  The shape of $bf(P)$ is called a _cycloid_, and it's shown in @fig-cycloid..
   The shape looks quite scary!
   However, you don't actually need to know anything about the shape
-  to compute things like the arc length, as we just saw.
+  to compute things like the arc length (see next sample question).
   The geometry picture is only used to extract the algebraic expression of $bf(P)(t)$.
   After that, you can just forget about the picture
   and do calculus on the expression you extracted.
 ]
 
-#todo[Draw cycloid, and add figure reference]
+#figure(
+  image("figures/parametric-cycloid.png", width: auto),
+  caption: [The cycloid formed as the wheel rolls to the right.],
+) <fig-cycloid>
+
+Let's see this.
+#sample[
+  A wheel of radius $1$ starts centered at $(0,1)$
+  and moves in the $+x$ direction with constant speed $1$.
+  Let $P$ be a point on the rim of the wheel initially at $(0,0)$.
+  Find the total arc length of the trajectory of the point $P$
+  from time $t = 0$ to $t = 2 pi$.
+]
+#soln[
+  We just got the general equation
+  $ bf(P) (t) = vec(v t - r sin (v / r t) , r - r cos (v / r t)) $
+  for a cycloid.
+  For $v = 1$ and $r = 1$ this is
+  $ bf(P) (t) = vec(t - sin (t) , r - r cos (t)). $
+  We differentiate to get the velocity vector
+  $ bf(P)' (t) = vec(1 - cos (t) , sin (t)). $
+  Ergo, the arc length is given by the formula
+  $ L = int_0^(2pi) sqrt((1-cos(t))^2 + sin(t)^2) dif t. $
+
+  This is now an 18.01 integral question.
+  In this particular case, the square root can be simplified using trig calculation.
+  We can expand the terms inside the square root:
+  $ (1 - cos (t))^2 + sin^2 (t) = 1 - 2 cos (t) + cos^2 (t) + sin^2 (t) . $
+  Using the identity $sin^2 (t) + cos^2 (t) = 1$, this simplifies to:
+  $ 1 - 2 cos (t) + 1 = 2 - 2 cos (t)) . $
+  The trick is to use the half-angle formula to convert this to
+  $ 1 - cos(t) = 2sin^2(t/2) ==> sqrt(2 - 2 cos(t)) = sqrt(4sin^2(t/2)) = lr(|2 sin(t/2)|). $
+  Hence, the integral now becomes:
+  $ L = int_0^(2 pi) sqrt(2 (1 - cos (t))) dif t
+    = int_0^(2 pi) lr(|2 sin(t/2)|) dif t. $
+  Over the interval $0 <= t <= 2 pi$ we always have $sin(t/2) >= 0$,
+  so we drop the absolute value:
+  $ L = int_0^(2 pi) 2 sin(t/2) dif t = lr([-4cos(t/2)])_0^(2pi)
+    = -4cos(pi) + 4cos(0) = 8. #qedhere $
+]
 
 == [EXER] Exercises
 
