@@ -60,7 +60,7 @@
   Consider the level surface of $f(x,y,z) = (x-1)^2 + (y-1)^3 + (z-1)^4$
   that passes through the origin $O = (0,0,0)$.
   Let $cal(H)$ denote the tangent plane to this surface at $O$.
-  Give an example of two nonzero tangent vectors to this surface at $O$, and which span $cal(H)$.
+  Give an example of two nonzero tangent vectors to this surface at $O$ whose span is $cal(H)$.
 ]
 
 #pagebreak()
