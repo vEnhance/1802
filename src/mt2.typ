@@ -45,3 +45,5 @@ not special hand-crafted challenges.
   Let $cal(H)$ denote the tangent plane to this surface at $O$.
   Give an example of two nonzero tangent vectors to this surface at $O$ whose span is $cal(H)$.
 ] <prob-mt2p6>
+
+Solutions are in @ch-sol-mt2.
