@@ -217,13 +217,13 @@ See @fig-angular.
 
 #sample[
   A point $P$ moves along a circle $x^2+y^2=4$ of radius $2$ centered at $(0,0)$.
-  It starts at $(sqrt(3), 2)$ and moves clockwise with angular velocity $omega$.
+  It starts at $(sqrt(3), 1)$ and moves clockwise with angular velocity $omega$.
   Parametrize the position $bf(P)(t)$.
 ]
 #soln[
   The point starts at a $pi/6 = 30 degree$ angle.
   So
-  $ bf(P)(t) = vec(13 + 2cos(pi/6 - omega t), 37 + 2sin(pi / 6 - omega t)). $
+  $ bf(P)(t) = vec(2cos(pi/6 - omega t), 2sin(pi / 6 - omega t)). $
   Note that when $t = 0$ this indeed gives the starting point we originally had.
 ]
 
