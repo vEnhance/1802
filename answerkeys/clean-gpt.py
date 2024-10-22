@@ -3,7 +3,9 @@ import sys
 doc_started = False
 content = ""
 for line in sys.stdin:
-    if line.startswith(r"\begin{document}"):
+    if line.strip() == r"\maketitle":
+        continue
+    elif line.startswith(r"\begin{document}"):
         doc_started = True
         continue
     elif not doc_started:
