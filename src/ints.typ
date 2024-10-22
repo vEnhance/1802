@@ -30,6 +30,8 @@ It's easier to see an example before the recipe.
   and recommend you use that notation instead.
 ]
 
+
+
 #sample[
   Integrate $int_(y=0)^6 int_(x=0)^1  x y^2 dif x dif y. $
 ]
@@ -94,9 +96,30 @@ Here's another example.
 
 == [RECIPE] Doing $x y$-integration without a rectangle
 
-In general, a lot of regions can still be done with $x y$ integration,
+In general, a lot of 2-D regions $cal(R)$ can still be done with $x y$ integration,
 even when they aren't rectangles.
+In that case, the integral is notated
+$ iint_(cal(R)) f(x,y) dif x dif y := "integral of " f " over " cal(R) $
+for whatever function $f$ you're integrating.
+If the region is given by a few inequalities you can also write the region directly in,
+i.e. $iint_(x^2+y^2<=1) f(x,y) dif x dif y$ would mean the integral of $f$
+over the unit disk.
+
 Here's how you do it.
+#warning(title: [Warning: We won't use all the other $dif$ variants like $dif A$, $dif bf(n)$, etc. in LAMV])[
+  A lot of other sources might write this as
+  $iint_(cal(R)) f(x,y) dif A$ instead, which is shorter;
+  it's understood that the area element $dif A$ is shorthand for $dif x dif y$.
+  However, I'll usually explicitly write $dif x dif y$,
+  because I don't want to hide the integration variables.
+
+  Reason: in the future, if you use different coordinate systems, $dif A$ can look different.
+  For example, in polar coordinates $(r, theta)$ defined later,
+  you'll have $dif A = r dif r dif theta$ instead (so $dif A != dif r dif theta$).
+  So rather than hide these all in "$dif A$", I'll actually write out what it is each time.
+
+  That said, if you know what you're doing and want to write $dif A$ to save time, go for it!
+]
 
 #recipe(title: [Recipe for converting to $x y$-integration])[
   1. Draw a picture of the region as best you can.
@@ -154,8 +177,6 @@ For example, let's take the region in Poonen's example 13.1:
     If we solve for $y$, we find its region is
     $ x^2 <= y <= x+2. $
     See @fig-pararegion-vert.
-    Hence, we get the double integral as
-    $ int_(x=-1)^2 int_(y=x^2)^(x+2) f(x,y) dif y dif x. $
 
     #figure(
       image("figures/ints-para-vert.png", width: auto),
@@ -164,6 +185,8 @@ For example, let's take the region in Poonen's example 13.1:
       so that for each given $x$ the slice of $y$ (drawn in green) is easy to describe.],
     ) <fig-pararegion-vert>
 
+    Hence, we get the double integral as
+    $ int_(x=-1)^2 int_(y=x^2)^(x+2) f(x,y) dif y dif x. $
 
   / If $y$ is outer:
     On the other hand, let's imagine we used $y$ first.
@@ -175,6 +198,14 @@ For example, let's take the region in Poonen's example 13.1:
     - $y <= x^2$ solves to $-sqrt(y) <= x <= sqrt(y)$
     - $y - x <= 2$ solves to $y-2 <= x$.
 
+    #figure(
+      image("figures/ints-para-horiz.png", width: auto),
+      caption: [Dissecting @fig-pararegion horizontally, which is less nice: there are cases.
+      Above the line $y=1$, you have a blue wall to the left and a curved arc to the right.
+      But below $y=1$, you instead have a red arc of the parabola to the left,
+      and a blue arc of the parabola to the right.],
+    ) <fig-pararegion-horiz>
+
     Se @fig-pararegion-horiz.
 
     If you know how the max function works, you could even write this as
@@ -185,14 +216,6 @@ For example, let's take the region in Poonen's example 13.1:
     So if we wanted to write this as a double integral, we would actually have to split into two:
     $ int_(y=0)^1 int_(x=-sqrt(y))^(sqrt(y)) f(x,y) dif x dif y
       + int_(y=1)^4 int_(x=y-2)^(sqrt(y)) f(x,y) dif x dif y. $
-
-    #figure(
-      image("figures/ints-para-horiz.png", width: auto),
-      caption: [Dissecting @fig-pararegion horizontally, which is less nice: there are cases.
-      Above the line $y=1$, you have a blue wall to the left and a curved arc to the right.
-      But below $y=1$, you instead have a red arc of the parabola to the left,
-      and a blue arc of the parabola to the right.],
-    ) <fig-pararegion-horiz>
 ]
 
 == [TEXT] Example with a concrete function $f$

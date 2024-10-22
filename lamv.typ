@@ -49,6 +49,10 @@ For comparison, this part corresponds approximately to §5 and §7 of #poonen.
 
 #part[Part Echo: Multivariable differentiation]
 For comparison, this part corresponds approximately to §8 and §12.1-§12.3 of #poonen.
+#include "src/level.typ"
+#pagebreak()
+#include "src/partial.typ"
+#pagebreak()
 #include "src/grad.typ"
 #pagebreak()
 
@@ -73,6 +77,8 @@ For comparison, this corresponds to §14, §15, §18, §19, §20, §21 of #poone
 #include "src/vecfield.typ"
 #pagebreak()
 #include "src/gcd.typ"
+#pagebreak()
+#include "src/stokes.typ"
 #pagebreak()
 
 #part[Solutions to mock midterm problems]
