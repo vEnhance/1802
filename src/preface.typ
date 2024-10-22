@@ -213,10 +213,46 @@ For example,
 #link("https://ocw.mit.edu/courses/18-02-multivariable-calculus-spring-2006/pages/readings/supp_notes/")[MIT OpenCourseWare]
 has some supplementary notes and problems still used by the math department.
 And so on.
+You can also find countless final exams from previous years of 18.02 on OCW.
+
+I think the term "treatment" for the way a course is taught is apt,
+because it reflects a reality about education:
+like medicine, there is no one treatment that works for everyone.
+In theory, there might be some people who only read this book and that's all they need.
+In practice, a lot of you would benefit from having friends ask to explain things differently
+for the sections of the book that don't work from you,
+or consulting another text when things here don't suit you.
+You should not feel under any obligation to treat this book as the one true bible of 18.02.
+This book is meant to be an aid, not a cage.
 
 == [SIDENOTE] If you're thinking of becoming a math major
 
 If you're thinking of becoming a math major, there's some advice in @appendix-math-major.
+
+== [SIDENOTE] These exercises are a bit harder than real 18.02 exam questions, so take your time
+
+When setting exercises, I tried to come up with questions
+that require a bit of thought and understanding, for learning purposes.
+I'm intentionally trying to stretch you slightly with my exercises while the timer is off ---
+I want to give you a little bit of an opportunity to take your time and think.
+I think you'll internalize the material better this way and it'll pay off.
+
+But when you actually take an 18.02 midterm in real life,
+you have no time to think#footnote[
+  If you're in India, the JEE exam is even more about speed and tricks
+  than having any real understanding, and I apologize that you have to suffer through it.
+]--- you have to answer each question in 5-10 minutes.
+So on the flip side, you will probably be pleasantly surprised when you find that
+50%-80% of your midterm questions can be solved by turning _off_
+your brain and following recipes to the letter.
+It has to be this way because of the short time limit and the amount of material.
+
+All this is to say to *not be discouraged if you find the exercises on the hard side*.
+It's by design.
+The real exam will have a lot of cookie-cutter no-thought questions
+in return for the short time limit.
+
+(Like most textbooks, the starred exercises are the hardest ones.)
 
 == [SIDENOTE] Acknowledgments
 
