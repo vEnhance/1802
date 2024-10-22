@@ -18,7 +18,7 @@
 #pagebreak()
 
 #part[Part Alfa: Linear Algebra of Vectors]
-For comparison, this part corresponds approximately to §1, §2, §3.9 of #poonen.
+For comparison, Part Alfa corresponds approximately to §1, §2, §3.9 of #poonen.
 #include "src/vectors.typ"
 #pagebreak()
 #include "src/dotprod.typ"
@@ -27,7 +27,7 @@ For comparison, this part corresponds approximately to §1, §2, §3.9 of #poone
 #pagebreak()
 
 #part[Part Bravo: Linear Algebra of Matrices]
-For comparison, this part corresponds approximately to §3, §4, §6 of #poonen.
+For comparison, Part Bravo corresponds approximately to §3, §4, §6 of #poonen.
 #include "src/matrix.typ"
 #pagebreak()
 #include "src/basis.typ"
@@ -36,19 +36,19 @@ For comparison, this part corresponds approximately to §3, §4, §6 of #poonen.
 #pagebreak()
 
 #part[Part Charlie: Review of complex numbers]
-For comparison, this part (not including the review) corresponds approximately to §11 of #poonen.
+For comparison, Part Charlie (not including the review) corresponds approximately to §11 of #poonen.
 #include "src/complex.typ"
 #pagebreak()
 #include "src/mt1.typ"
 #pagebreak()
 
 #part[Part Delta: Parametric side-quest]
-For comparison, this part corresponds approximately to §5 and §7 of #poonen.
+For comparison, Part Delta corresponds approximately to §5 and §7 of #poonen.
 #include "src/parametric.typ"
 #pagebreak()
 
 #part[Part Echo: Multivariable differentiation]
-For comparison, this part corresponds approximately to §8 and §12.1-§12.3 of #poonen.
+For comparison, Part Echo corresponds approximately to §8 and §12.1-§12.3 of #poonen.
 #include "src/level.typ"
 #pagebreak()
 #include "src/partial.typ"
@@ -57,7 +57,7 @@ For comparison, this part corresponds approximately to §8 and §12.1-§12.3 of 
 #pagebreak()
 
 #part[Part Foxtrot: Optimization]
-For comparison, this part corresponds approximately to §9 and §12.4-§12.6 of #poonen.
+For comparison, Part Foxtrot corresponds approximately to §9 and §12.4-§12.6 of #poonen.
 #include "src/minmax.typ"
 #pagebreak()
 #include "src/opt.typ"
@@ -66,14 +66,14 @@ For comparison, this part corresponds approximately to §9 and §12.4-§12.6 of 
 #pagebreak()
 
 #part[Part Golf: Multivariate integrals]
-For comparison, this corresponds to §13 and §17 of #poonen.
+For comparison, Part Golf corresponds to §13 and §17 of #poonen.
 #include "src/ipep.typ"
 #pagebreak()
 #include "src/ints.typ"
 #pagebreak()
 
 #part[Part Hotel: Grad, Curl, and Div]
-For comparison, this corresponds to §14, §15, §18, §19, §20, §21 of #poonen.
+For comparison, Part Hotel corresponds to §14, §15, §18, §19, §20, §21 of #poonen.
 #include "src/vecfield.typ"
 #pagebreak()
 #include "src/gcd.typ"
