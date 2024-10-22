@@ -58,20 +58,9 @@ The general recipe is the same.
 #recipe(title: [Recipe for integrating over a rectangle])[
   To integrate something of the form $int (int dif y) dif x$:
   1. Evaluate the inner integral as in 18.01, treating $x$ as constant.
-  2. You should get something only depending on $x$. Integrate it as in 18.01.
-]
-#remark[
-  It's also okay to integrate in the other order,
-  and in some cases this will be easier:
-  $ int_(x=a)^b int_(y=c)^d f(x,y) dif y dif x
-    = int_(y=c)^d int_(x=a)^b f(x,y) dif x dif y. $
-  Sometimes this will be easier.
-
-  We'll flesh out this idea next section,
-  where we'll show to $x y$-integrate over a much bigger class of regions,
-  not necessarily rectangles.
-  One general theme is that you have a _choice_ which variable you want
-  to be inner and which to be outer, and one choice is often easier than the other..
+    This should give you some expression in $x$ with no $y$'s left.
+  2. Replace the inner integral with the result from the previous step
+    to get an 18.01 integral with only $x$ in it. Integrate that.
 ]
 
 Here's another example.
@@ -103,7 +92,7 @@ Here's another example.
     $ - (- 1) + 1 = 1 + 1 = 2 . $
 ]
 
-== [RECIPE] Doing $x y$-integration when you don't have a rectangle
+== [RECIPE] Doing $x y$-integration without a rectangle
 
 In general, a lot of regions can still be done with $x y$ integration,
 even when they aren't rectangles.
@@ -112,18 +101,31 @@ Here's how you do it.
 #recipe(title: [Recipe for converting to $x y$-integration])[
   1. Draw a picture of the region as best you can.
   2. Write the region as a list of inequalities.#footnote[I don't
-    think other sources always write the inequalities the way I do.]
+    think other sources always write the inequalities the way I do.
+    But I think this will help you a lot with making sure bounds go the right way.]
   3. Pick _one_ of $x$ and $y$, and use your picture to describe all the values it could take.
   4. Solve for the _other_ variable in all the inequalities.
 ]
 
-(Step 2 is not the way that it's presented in Poonen or the actual course,
-but I find writing it as inequalities makes it much easier to think about.)
+#remark(title: [Remark: This recipe works fine for rectangles, too!])[
+  You can do this recipe even with a rectangle.
+  If you do, what the recipe tells you that for a rectangle you can integrate in either order:
+  given the rectangle $[a,b] times [c,d]$ we have
+  $ int_(x=a)^b int_(y=c)^d f(x,y) dif y dif x
+    = int_(y=c)^d int_(x=a)^b f(x,y) dif x dif y. $
+  Sometimes this will be easier.
+  One shape of exam question will to be choose $f$ such that the left-hand side
+  is annoying to calculate directly but the right-hand side is easy to calculate,
+  and ask for the left-hand side.
+  So this is meant to test your ability to recognize when the other order is better
+]
 
 For example, let's take the region in Poonen's example 13.1:
 #sample[
-  Show both ways of setting up an integral of a function $f(x,y)$ over the region $y-x=2$ and $y=x^2$.
+  Show both ways of setting up an integral of a function $f(x,y)$
+  over the region bounded by $y-x=2$ and $y=x^2$.
 ]
+
 #figure(
   image("figures/ints-pararegion.png", width: auto),
   caption: [The region between $y=x^2$ and $y-x=2$.],
@@ -144,25 +146,36 @@ For example, let's take the region in Poonen's example 13.1:
   $ y >= x^2 \
     y - x &<= 2. $
 
-  Now the path diverges.
-  Again, you can get two different things depending on which way you want to do slicing.
+  Now there are two ways to do the slicing, depending on which of $x$ and $y$ you want outside.
 
   / If $x$ is outer:
     First, let's imagine we let $x$ be the outer integral.
     Then from the picture, you can see $-1 <=  x <= 2$.
     If we solve for $y$, we find its region is
     $ x^2 <= y <= x+2. $
+    See @fig-pararegion-vert.
     Hence, we get the double integral as
     $ int_(x=-1)^2 int_(y=x^2)^(x+2) f(x,y) dif y dif x. $
-    On the other hand, let's imagine we used $y$ first.
-    From the picture, we see that $y$ ranges from $0$ all the way up to $4$.
-    (So in what follows I'll write $y >= 0$ to make notation better.
+
+    #figure(
+      image("figures/ints-para-vert.png", width: auto),
+      caption: [Dissecting @fig-pararegion vertically, which is pretty nice.
+      There's a single top lid (blue) and a bottom lip (purple)
+      so that for each given $x$ the slice of $y$ (drawn in green) is easy to describe.],
+    ) <fig-pararegion-vert>
+
 
   / If $y$ is outer:
-    This is gnarly: when you solve for $x$ you get _three_ inequalities:
+    On the other hand, let's imagine we used $y$ first.
+    From the picture, we see that $y$ ranges from $0$ all the way up to $4$.
+    (So in what follows I'll write $y >= 0$ to make notation better.)
+
+    But $x$ is gnarly. The issue is that when you solve for $x$ you get _three_ inequalities:
 
     - $y <= x^2$ solves to $-sqrt(y) <= x <= sqrt(y)$
     - $y - x <= 2$ solves to $y-2 <= x$.
+
+    Se @fig-pararegion-horiz.
 
     If you know how the max function works, you could even write this as
     $ max(y-2, -sqrt(y)) <= x <= sqrt(y). $
@@ -173,8 +186,149 @@ For example, let's take the region in Poonen's example 13.1:
     $ int_(y=0)^1 int_(x=-sqrt(y))^(sqrt(y)) f(x,y) dif x dif y
       + int_(y=1)^4 int_(x=y-2)^(sqrt(y)) f(x,y) dif x dif y. $
 
-  So if you were actually given a concrete function, you probably want to do the first approach.
+    #figure(
+      image("figures/ints-para-horiz.png", width: auto),
+      caption: [Dissecting @fig-pararegion horizontally, which is less nice: there are cases.
+      Above the line $y=1$, you have a blue wall to the left and a curved arc to the right.
+      But below $y=1$, you instead have a red arc of the parabola to the left,
+      and a blue arc of the parabola to the right.],
+    ) <fig-pararegion-horiz>
 ]
+
+== [TEXT] Example with a concrete function $f$
+
+In the previous example we showed how one would integrate a random function $f$
+over the region between the line $y-x=2$ and the parabola $y=x^2$.
+Again, this process is only based on the region --- it doesn't depend on $f$.
+
+To flesh things out, let's pick an example function $ f(x,y) = 2x+4y $
+as Poonen did, and show how we would find the integral.
+
+#sample[
+  Consider the region $cal(R)$ we just described,
+  the set of points between bounded between $y-x=2$ and $y=x^2$.
+  Integrate $iint_(cal(R)) (2x+4y) dif x dif y$ over this region.
+]
+#soln[
+  As we saw, there are two different ways to set it up.
+  We'll do the one that's nice (and show the worse one afterwards for comparison),
+  where we have $x$ on the outside.
+
+  We are given the integral
+  $ int_(x = - 1)^2 int_(y = x^2)^(x + 2) (2 x + 4 y) dif y dif x. $
+
+  1. The first step is to compute the inner integral with respect to $y$,
+    treating $x$ as a constant.
+
+    The inner integral is:
+    $ int_(y = x^2)^(x + 2) (2 x + 4 y) dif y . $
+
+    We can split this integral into two parts:
+    $ int_(y = x^2)^(x + 2) 2 x dif y + int_(y = x^2)^(x + 2) 4 y dif y . $
+
+    - The first term is:
+      $ 2 x int_(y = x^2)^(x + 2) 1 dif y = 2 x [y]_(y = x^2)^(y = x + 2) = 2 x ((x + 2) - x^2). $
+
+    - The second term is:
+      $ 4 int_(y = x^2)^(x + 2) y dif y = 4 [y^2 / 2]_(y = x^2)^(y = x + 2) = 4 ((x + 2)^2 / 2 - (x^2)^2 / 2)  = 2(x^2 + 4x + 4 - x^4). $
+    Thus, the inner integral is:
+    $ 2 x (x + 2 - x^2) + 2 (x^2 + 4 x + 4 - x^4) = - 2 x^4 - 2 x^3 + 4 x^2 + 12 x + 8 . $
+
+  2. Now, we compute the outer integral:
+    $ & int_(x = - 1)^2 (- 2 x^4 - 2 x^3 + 4 x^2 + 12 x + 8) dif x \
+      &= lr([-2 x^5 / 5 - 2 dot x^4/4 + 4 x^3/3 + 12 dot x^2/2 + 8x])_(x=-1)^2. $
+    This is a lot of arithmetic, sorry.
+    One way is to work term by term:
+    $
+    -2 [x^5 / 5]_(x = - 1)^(x = 2) &= - 2 (32 / 5 - (- 1)^5 / 5) = - 2 dot 33 / 5 = - 66 / 5 \
+    -2 [x^4 / 4]_(x = - 1)^(x = 2) &= - 2 (16 / 4 - 1 / 4) = - 2 dot 15 / 4 = - 15 / 2 \
+    4 [x^3 / 3]_(x = - 1)^(x = 2) &= 4 (8 / 3 - (- 1)^3 / 3) = 4 dot 9 / 3 = 12 \
+    12 [x^2 / 2]_(x = - 1)^(x = 2) &= 12 dot 3 / 2 = 18 \
+    8 times (2 - (- 1)) &= 8 dot 3 = 24.
+    $
+    Add these to get the answer: $ -66/5 -15/2 + 12 + 18 + 24 = 333/10. $
+]
+
+== [SIDENOTE] What it looks like if you integrate the hard way
+
+In the previous sample question, we picked $x$ to be the outer integral
+so that we didn't have to do cases or deal with square roots.
+This was pretty clearly a good choice.
+
+For contrast, I'll show you what happens if you have $y$ in the outer integral instead ---
+just to make a point that things can get ugly.
+(You can read it if you want the practice with iterated integrals,
+or skip it if you believe me.)
+To reiterate, we will directly calculate
+
+$ int_(y=0)^1 int_(x=-sqrt(y))^(sqrt(y)) (2x+4y) dif x dif y
+  + int_(y=1)^4 int_(x=y-2)^(sqrt(y)) (2x+4y) dif x dif y. $
+
+- We calculate the first hunk $ int_(y=0)^1 int_(x=-sqrt(y))^(sqrt(y)) (2x+4y) dif x dif y. $
+
+  1. The first step is to compute the inner integral with respect to $x$,
+    treating $y$ as a constant.
+    The inner integral is:
+    $ int_(x = - sqrt(y))^(sqrt(y)) (2 x + 4 y) dif x . $
+
+    We can split this into two integrals:
+    $ int_(x = - sqrt(y))^(sqrt(y)) 2 x dif x + int_(x = - sqrt(y))^(sqrt(y)) 4 y dif x . $
+
+    - The first term is:
+    $ 2 int_(x = - sqrt(y))^(sqrt(y)) x dif x = 2 [x^2 / 2]_(x = - sqrt(y))^(x = sqrt(y)) = 2 times ((sqrt(y))^2 / 2 - (- sqrt(y))^2 / 2) . $
+
+    - The second term is:
+    $ 4 y int_(x = - sqrt(y))^(sqrt(y)) 1 dif x = 4 y [x]_(x = - sqrt(y))^(x = sqrt(y)) = 4 y (sqrt(y) - (- sqrt(y))) = 4 y dot 2 sqrt(y) = 8 y^(3 / 2) . $
+
+    Thus, the inner integral is: $ 0 + 8 y^(3 / 2) = 8 y^(3 / 2) . $
+
+  2. Now, we compute the outer integral:
+    $ int_(y = 0)^1 8 y^(3 \/ 2) dif y . $
+    We use the power rule for integration:
+    $ integral y^(3 \/ 2) dif y = y^(5 \/ 2) / 5 / 2 = 2 / 5 y^(5 \/ 2) . $
+
+    Thus, the outer integral becomes:
+    $ 8 int_(y = 0)^1 y^(3 / 2) dif y = 8 dot 2 / 5 [y^(5 / 2)]_(y = 0)^(y = 1) = 8 dot 2 / 5 dot (1^(5 / 2) - 0^(5 / 2)) = 8 dot 2 / 5 = 16/5 . $
+
+  Hence the first hunk is $ int_(y=0)^1 int_(x=-sqrt(y))^(sqrt(y)) (2x+4y) dif x dif y = 16/5 = 3.2. $
+
+- We calculate the second hunk $ int_(y=0)^1 int_(x=y-2)^(sqrt(y)) (2x+4y) dif x dif y. $
+  1. The first step is to compute the inner integral with respect to $x$,
+    treating $y$ as a constant.
+    The inner integral is:
+    $ int_(x = y - 2)^(sqrt(y)) (2 x + 4 y) dif x . $
+
+    We can split this into two integrals:
+    $ int_(x = y - 2)^(sqrt(y)) 2 x dif x + int_(x = y - 2)^(sqrt(y)) 4 y dif x . $
+
+    - The first term is:
+      $ int_(x = y - 2)^(sqrt(y)) 2 x dif x = 2 [x^2 / 2]_(x = y - 2)^(x = sqrt(y)) = ((sqrt(y))^2 - (y - 2)^2) . $
+      Simplifying:
+      $ (y - (y^2 - 4 y + 4)) = y - (y^2 - 4 y + 4) = y - y^2 + 4 y - 4 = - y^2 + 5 y - 4 . $
+
+    - The second term is:
+      $ 4 y int_(x = y - 2)^(sqrt(y)) 1 dif x = 4 y (sqrt(y) - (y - 2)) = 4 y (sqrt(y) - y + 2) = 4 y (sqrt(y) - y + 2) . $
+      Thus, the inner integral is:
+      $ (- y^2 + 5 y - 4) + 4 y (sqrt(y) - y + 2) = - y^2 + 5 y - 4 + 4 y sqrt(y) - 4 y^2 + 8 y . $
+
+    Simplifying we get the inner integral to be $ - 5 y^2 + 13 y + 4 y sqrt(y) - 4 . $
+
+  2. Now, we compute the outer integral:
+    $ int_(y = 1)^4 (- 5 y^2 + 13 y + 4 y sqrt(y) - 4) dif y . $
+
+    To keep things organized, we integrate each term individually:
+    $
+    int_(y = 1)^4 - 5 y^2 dif y &= - 5 [y^3 / 3]_(y = 1)^(y = 4) = - 5 times (64 / 3 - 1 / 3) = - 5 times 63 / 3 = - 105 \
+    int_(y = 1)^4 13 y dif y &= 13 [y^2 / 2]_(y = 1)^(y = 4) = 13 times (16 / 2 - 1 / 2) = 13 times 15 / 2 = 97.5 \
+    int_(y = 1)^4 4 y sqrt(y) dif y &= 4 int_(y = 1)^4 y^(3 \/ 2) dif y = 4 times [2 / 5 y^(5 \/ 2)]_(y = 1)^(y = 4) = 4 times 2 / 5 (32 - 1) = 248 / 5 = 49.6 \
+    int_(y = 1)^4 - 4 dif y &= - 4 [y]_(y = 1)^(y = 4) = - 4 (4 - 1) = - 12.
+    $
+
+    Now, add up the integrals: $ - 105 + 97.5 + 49.6 - 12 = 30.1 . $
+
+- The final answer is $3.2 + 30.1 = 33.3$ as expected.
+
+So we got the same answer, no surprise, but it took a lot more work to get it.
 
 
 
