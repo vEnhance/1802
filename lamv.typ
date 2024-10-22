@@ -65,14 +65,14 @@ For comparison, this part corresponds approximately to §9 and §12.4-§12.6 of 
 For comparison, this corresponds to §13 and §17 of #poonen.
 #include "src/ipep.typ"
 #pagebreak()
-#include "src/integrals.typ"
+#include "src/ints.typ"
 #pagebreak()
 
 #part[Part Hotel: Grad, Curl, and Div]
 For comparison, this corresponds to §14, §15, §18, §19, §20, §21 of #poonen.
 #include "src/vecfield.typ"
 #pagebreak()
-#include "src/gradcurldiv.typ"
+#include "src/gcd.typ"
 #pagebreak()
 
 #part[Solutions to mock midterm problems]

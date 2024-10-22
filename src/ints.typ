@@ -124,9 +124,13 @@ For example, let's take the region in Poonen's example 13.1:
 #sample[
   Show both ways of setting up an integral of a function $f(x,y)$ over the region $y-x=2$ and $y=x^2$.
 ]
-#soln[
-  Here's a picture of that region:
+#figure(
+  image("figures/integrals-pararegion.png", width: auto),
+  caption: [The region between $y=x^2$ and $y-x=2$.],
+) <fig-pararegion>
 
+#soln[
+  See @fig-pararegion.
   There are two intersection points that it's pretty clear we'll want to know,
   so we can solve for those intersection points by solving the system and add them to our picture:
   $ cases(y-x=2, y=x^2) &==> x+2 = x^2 ==> x = -1 " or " x = 2 \
