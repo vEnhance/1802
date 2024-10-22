@@ -25,12 +25,15 @@ It's easier to see an example before the recipe.
   $ int_0^6 int_0^1  x y^2 dif x dif y $
   then this actually means
   $ int_0^6 (int_0^1  x y^2 dif x) dif y $
-  but I think it's just much easier to read as
+  so $0 <= x <= 1$ and $0 <= y <= 6$.
+  For me reading backwards like this is annoying as hell,
+  so I think it's just much easier to write
   $ int_(y=0)^6 int_(x=0)^1  x y^2 dif x dif y $
-  and recommend you use that notation instead.
+  and I recommend you use that notation instead.
+  The advantage is that then you pretty much don't have to look at the
+  $dif x dif y$ at the far right anymore;
+  the information you need is all in one place at the far left.
 ]
-
-
 
 #sample[
   Integrate $int_(y=0)^6 int_(x=0)^1  x y^2 dif x dif y. $
