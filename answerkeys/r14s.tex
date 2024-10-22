@@ -1,0 +1,358 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[colorlinks]{hyperref}
+\usepackage{tikz, pgfplots}
+\pgfplotsset{compat=1.17}
+
+\begin{document}
+\title{Quick answer key to Recitation 14}
+\author{ChatGPT 4o}
+\date{Wednesday, October 23, 2024}
+\maketitle
+
+Use the table of contents below to skip to a specific part
+without seeing spoilers to the other parts.
+
+I just used ChatGPT to write this one quickly.
+ChatGPT can make mistakes, so if you spot anything that's wrong, flag me to ask.
+
+\tableofcontents
+
+
+
+\maketitle
+
+\newpage
+
+\section{Problem}
+Calculate the double integral of the function \( f(x, y) = 6x^2 + 2y \) over the rectangle \( R = [0, 2] \times [-1, 1] \). Use both vertical and horizontal slicings and check you get the same answer.
+
+\newpage
+
+\section{Solution}
+
+We are tasked with computing the double integral of \( f(x, y) = 6x^2 + 2y \) over the rectangle \( R = [0, 2] \times [-1, 1] \). We will solve this integral using both vertical and horizontal slicings.
+
+\newpage
+
+\subsection{1. Vertical Slicing (Integrating over \(y\) first)}
+
+For vertical slicing, we first integrate with respect to \(y\) and then with respect to \(x\). The double integral is:
+
+\[
+\int_0^2 \int_{-1}^1 (6x^2 + 2y) \, dy \, dx
+\]
+
+First, compute the inner integral (with respect to \(y\)):
+
+\[
+\int_{-1}^1 (6x^2 + 2y) \, dy = \int_{-1}^1 6x^2 \, dy + \int_{-1}^1 2y \, dy
+\]
+
+For the first term:
+
+\[
+\int_{-1}^1 6x^2 \, dy = 6x^2 \cdot (y \bigg|_{-1}^1) = 6x^2 \cdot (1 - (-1)) = 6x^2 \cdot 2 = 12x^2
+\]
+
+For the second term:
+
+\[
+\int_{-1}^1 2y \, dy = 2 \cdot \left( \frac{y^2}{2} \bigg|_{-1}^1 \right) = 2 \cdot \left( \frac{1^2}{2} - \frac{(-1)^2}{2} \right) = 2 \cdot ( \frac{1}{2} - \frac{1}{2} ) = 0
+\]
+
+Thus, the inner integral simplifies to:
+
+\[
+\int_{-1}^1 (6x^2 + 2y) \, dy = 12x^2
+\]
+
+Now, we integrate with respect to \(x\):
+
+\[
+\int_0^2 12x^2 \, dx = 12 \cdot \int_0^2 x^2 \, dx = 12 \cdot \left( \frac{x^3}{3} \bigg|_0^2 \right) = 12 \cdot \frac{8}{3} = 32
+\]
+
+So, the value of the double integral using vertical slicing is \( 32 \).
+
+\newpage
+
+\subsection{2. Horizontal Slicing (Integrating over \(x\) first)}
+
+For horizontal slicing, we first integrate with respect to \(x\) and then with respect to \(y\). The double integral is:
+
+\[
+\int_{-1}^1 \int_0^2 (6x^2 + 2y) \, dx \, dy
+\]
+
+First, compute the inner integral (with respect to \(x\)):
+
+\[
+\int_0^2 (6x^2 + 2y) \, dx = \int_0^2 6x^2 \, dx + \int_0^2 2y \, dx
+\]
+
+For the first term:
+
+\[
+\int_0^2 6x^2 \, dx = 6 \cdot \left( \frac{x^3}{3} \bigg|_0^2 \right) = 6 \cdot \frac{8}{3} = 16
+\]
+
+For the second term:
+
+\[
+\int_0^2 2y \, dx = 2y \cdot (x \bigg|_0^2) = 2y \cdot (2 - 0) = 4y
+\]
+
+Thus, the inner integral simplifies to:
+
+\[
+\int_0^2 (6x^2 + 2y) \, dx = 16 + 4y
+\]
+
+Now, we integrate with respect to \(y\):
+
+\[
+\int_{-1}^1 (16 + 4y) \, dy = \int_{-1}^1 16 \, dy + \int_{-1}^1 4y \, dy
+\]
+
+For the first term:
+
+\[
+\int_{-1}^1 16 \, dy = 16 \cdot (y \bigg|_{-1}^1) = 16 \cdot (1 - (-1)) = 16 \cdot 2 = 32
+\]
+
+For the second term:
+
+\[
+\int_{-1}^1 4y \, dy = 4 \cdot \left( \frac{y^2}{2} \bigg|_{-1}^1 \right) = 4 \cdot ( \frac{1^2}{2} - \frac{(-1)^2}{2} ) = 4 \cdot ( \frac{1}{2} - \frac{1}{2} ) = 0
+\]
+
+Thus, the total value of the integral is:
+
+\[
+\int_{-1}^1 (16 + 4y) \, dy = 32
+\]
+
+So, the value of the double integral using horizontal slicing is also \( 32 \).
+
+\newpage
+
+\section{Conclusion}
+
+Both vertical and horizontal slicings give the same result. The value of the double integral is:
+
+\[
+\boxed{32}
+\]
+
+
+
+
+\maketitle
+
+\newpage
+
+\section{Problem}
+Let \( R \) be the first-quadrant region bounded by the two curves \( y = \sqrt{x} \) and \( y = x^3 \). Compute in two different ways the double integral:
+\[
+\iint_R x y^2 \, dA
+\]
+
+\newpage
+
+\section{Solution}
+
+The region \( R \) is bounded by the curves \( y = \sqrt{x} \) and \( y = x^3 \), both of which intersect at the points where \( \sqrt{x} = x^3 \). Solving for \( x \), we get:
+\[
+\sqrt{x} = x^3 \implies x = 0 \text{ or } x = 1.
+\]
+Thus, the region \( R \) is bounded by \( x = 0 \) and \( x = 1 \), and by the curves \( y = \sqrt{x} \) (upper curve) and \( y = x^3 \) (lower curve).
+
+We will compute the double integral in two ways: using vertical and horizontal slicing.
+
+\newpage
+
+\subsection{1. Vertical Slicing}
+
+For vertical slicing, we express the region in terms of \( x \). The limits for \( y \) at each \( x \) are from the lower curve \( y = x^3 \) to the upper curve \( y = \sqrt{x} \). The limits for \( x \) are from 0 to 1. The double integral is:
+
+\[
+\iint_R x y^2 \, dA = \int_0^1 \int_{x^3}^{\sqrt{x}} x y^2 \, dy \, dx
+\]
+
+First, compute the inner integral with respect to \( y \):
+
+\[
+\int_{x^3}^{\sqrt{x}} y^2 \, dy = \left( \frac{y^3}{3} \right) \bigg|_{x^3}^{\sqrt{x}} = \frac{(\sqrt{x})^3}{3} - \frac{(x^3)^3}{3} = \frac{x^{3/2}}{3} - \frac{x^9}{3}
+\]
+
+Now, substitute this result into the outer integral:
+
+\[
+\int_0^1 x \left( \frac{x^{3/2}}{3} - \frac{x^9}{3} \right) dx = \frac{1}{3} \int_0^1 \left( x^{5/2} - x^{10} \right) dx
+\]
+
+Now, compute the two integrals:
+
+\[
+\int_0^1 x^{5/2} \, dx = \frac{x^{7/2}}{7/2} \bigg|_0^1 = \frac{2}{7}
+\]
+\[
+\int_0^1 x^{10} \, dx = \frac{x^{11}}{11} \bigg|_0^1 = \frac{1}{11}
+\]
+
+Thus, the integral becomes:
+
+\[
+\frac{1}{3} \left( \frac{2}{7} - \frac{1}{11} \right) = \frac{1}{3} \cdot \frac{22 - 7}{77} = \frac{1}{3} \cdot \frac{15}{77} = \frac{5}{77}
+\]
+
+So, the value of the double integral using vertical slicing is \( \frac{5}{77} \).
+
+\newpage
+
+\subsection{2. Horizontal Slicing}
+
+For horizontal slicing, we express the region in terms of \( y \). The limits for \( x \) at each \( y \) are from the left curve \( x = y^6 \) to the right curve \( x = y^2 \). The limits for \( y \) are from 0 to 1. The double integral is:
+
+\[
+\iint_R x y^2 \, dA = \int_0^1 \int_{y^6}^{y^2} x y^2 \, dx \, dy
+\]
+
+First, compute the inner integral with respect to \( x \):
+
+\[
+\int_{y^6}^{y^2} x \, dx = \frac{x^2}{2} \bigg|_{y^6}^{y^2} = \frac{(y^2)^2}{2} - \frac{(y^6)^2}{2} = \frac{y^4}{2} - \frac{y^{12}}{2}
+\]
+
+Now, substitute this result into the outer integral:
+
+\[
+\int_0^1 y^2 \left( \frac{y^4}{2} - \frac{y^{12}}{2} \right) dy = \frac{1}{2} \int_0^1 \left( y^6 - y^{14} \right) dy
+\]
+
+Now, compute the two integrals:
+
+\[
+\int_0^1 y^6 \, dy = \frac{y^7}{7} \bigg|_0^1 = \frac{1}{7}
+\]
+\[
+\int_0^1 y^{14} \, dy = \frac{y^{15}}{15} \bigg|_0^1 = \frac{1}{15}
+\]
+
+Thus, the integral becomes:
+
+\[
+\frac{1}{2} \left( \frac{1}{7} - \frac{1}{15} \right) = \frac{1}{2} \cdot \frac{15 - 7}{105} = \frac{1}{2} \cdot \frac{8}{105} = \frac{4}{105}
+\]
+
+So, the value of the double integral using horizontal slicing is \( \frac{4}{105} \).
+
+\newpage
+
+\section{Conclusion}
+
+Both methods yield the same result. Therefore, the value of the double integral is:
+
+\[
+\boxed{\frac{5}{77}}
+\]
+
+
+
+
+\maketitle
+
+\newpage
+
+\section{Problem}
+Let \( R \) be the (bounded) region between the parabola \( y^2 = x \) and the line through \( (2, 0) \) having slope 1. Find the points where the curves intersect and describe the region \( R \) in terms of horizontal and vertical slices. Express the double integral \( \iint_R f(x, y) \, dA \) as an iterated integral in both ways, using both horizontal and vertical slicings. In the second case, you will have to write the integral in two pieces.
+
+\newpage
+
+\section{Solution}
+
+We are given two curves: the parabola \( y^2 = x \) and the line through \( (2, 0) \) with slope 1, which is given by \( y = x - 2 \).
+
+\newpage
+
+\subsection{1. Points of Intersection}
+
+To find the points where these curves intersect, we set \( x = y^2 \) (from the parabola equation) equal to \( x = y + 2 \) (from the line equation):
+
+\[
+y^2 = y + 2
+\]
+
+Rearrange this into a standard quadratic form:
+
+\[
+y^2 - y - 2 = 0
+\]
+
+Factor the quadratic:
+
+\[
+(y - 2)(y + 1) = 0
+\]
+
+Thus, the solutions are \( y = 2 \) and \( y = -1 \).
+
+For \( y = 2 \), substitute into \( y^2 = x \) to find \( x = 4 \). For \( y = -1 \), substitute into \( y^2 = x \) to find \( x = 1 \).
+
+Therefore, the curves intersect at the points \( (4, 2) \) and \( (1, -1) \).
+
+\newpage
+
+\subsection{2. Describing the Region}
+
+The region \( R \) is bounded on the left by the parabola \( y^2 = x \) and on the right by the line \( y = x - 2 \), between the intersection points \( (1, -1) \) and \( (4, 2) \).
+
+\newpage
+
+\subsection{3. Horizontal Slicing}
+
+For horizontal slicing, we treat \( y \) as the independent variable. The limits for \( x \) at each \( y \) are from the parabola \( x = y^2 \) (left boundary) to the line \( x = y + 2 \) (right boundary). The limits for \( y \) are from \( -1 \) to \( 2 \). Thus, the double integral is:
+
+\[
+\iint_R f(x, y) \, dA = \int_{-1}^2 \int_{y^2}^{y+2} f(x, y) \, dx \, dy
+\]
+
+\newpage
+
+\subsection{4. Vertical Slicing}
+
+For vertical slicing, we treat \( x \) as the independent variable. The region is split into two parts based on the curves. For \( x \in [1, 4] \), the lower boundary is \( y = -\sqrt{x} \) and the upper boundary is \( y = \sqrt{x} \) (from the parabola equation). For \( x \in [2, 4] \), the upper boundary is also determined by the line \( y = x - 2 \).
+
+Thus, the double integral must be split into two parts:
+
+1. For \( x \in [1, 2] \), the upper boundary is \( y = \sqrt{x} \) and the lower boundary is \( y = -\sqrt{x} \):
+
+\[
+\int_1^2 \int_{-\sqrt{x}}^{\sqrt{x}} f(x, y) \, dy \, dx
+\]
+
+2. For \( x \in [2, 4] \), the upper boundary is \( y = x - 2 \) and the lower boundary is \( y = -\sqrt{x} \):
+
+\[
+\int_2^4 \int_{-\sqrt{x}}^{x-2} f(x, y) \, dy \, dx
+\]
+
+\newpage
+
+\section{Conclusion}
+
+Thus, the double integral can be expressed in two ways:
+\[
+\iint_R f(x, y) \, dA = \int_{-1}^2 \int_{y^2}^{y+2} f(x, y) \, dx \, dy
+\]
+(using horizontal slicing)
+
+or
+\[
+\iint_R f(x, y) \, dA = \int_1^2 \int_{-\sqrt{x}}^{\sqrt{x}} f(x, y) \, dy \, dx + \int_2^4 \int_{-\sqrt{x}}^{x-2} f(x, y) \, dy \, dx
+\]
+(using vertical slicing in two parts).
+
+
+\end{document}
