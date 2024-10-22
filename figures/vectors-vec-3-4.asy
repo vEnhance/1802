@@ -8,8 +8,8 @@ for (int i=-5; i<=1; ++i) {
   draw((-2,i)--(5,i), grey+dotted);
 }
 
-xaxis("$x$", -2, 5, Ticks(Step=1, begin=false, end=false), Arrows);
-yaxis("$y$", -5, 1, Ticks(Step=1, begin=false, end=false), Arrows);
+xaxis("$x$", -2, 5, Ticks(Label(fontsize(9pt)), Step=1, begin=false, end=false), Arrows);
+yaxis("$y$", -5, 1, Ticks(Label(fontsize(9pt)), Step=1, begin=false, end=false), Arrows);
 draw(unitcircle, grey);
 
 draw((0,0)--(3,-4), blue, EndArrow);

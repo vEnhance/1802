@@ -12,8 +12,8 @@ real xmin = -4, xmax = 4;
 real ymin = -4, ymax = 4;
 
 // Draw axes
-xaxis("$x$", xmin, xmax, Ticks(Step=2, begin=false, end=false), Arrows);
-yaxis("$y$", ymin, ymax, Ticks(Step=2, begin=false, end=false), Arrows);
+xaxis("$x$", xmin, xmax, Ticks(Label(fontsize(9pt)), Step=2, begin=false, end=false), Arrows);
+yaxis("$y$", ymin, ymax, Ticks(Label(fontsize(9pt)), Step=2, begin=false, end=false), Arrows);
 
 // Plot the level curves for different values of c
 draw(circle((0, 0), 0), purple, "$c = 0$");

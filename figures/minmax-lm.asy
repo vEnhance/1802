@@ -2,8 +2,8 @@ import graph;
 size(10cm);
 draw(scale(5)*unitcircle, red+dashed);
 draw(scale(2.3)*unitcircle, red+dashed);
-xaxis("$x$", -6, 6, Ticks(Step=2, begin=false, end=false), Arrows);
-yaxis("$y$", -6, 6, Ticks(Step=2, begin=false, end=false), Arrows);
+xaxis("$x$", -6, 6, Ticks(Label(fontsize(9pt)), Step=2, begin=false, end=false), Arrows);
+yaxis("$y$", -6, 6, Ticks(Label(fontsize(9pt)), Step=2, begin=false, end=false), Arrows);
 
 pair D = 4.97*dir(50);
 pair A = 3*dir(78);

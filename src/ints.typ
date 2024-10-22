@@ -125,7 +125,7 @@ For example, let's take the region in Poonen's example 13.1:
   Show both ways of setting up an integral of a function $f(x,y)$ over the region $y-x=2$ and $y=x^2$.
 ]
 #figure(
-  image("figures/integrals-pararegion.png", width: auto),
+  image("figures/ints-pararegion.png", width: auto),
   caption: [The region between $y=x^2$ and $y-x=2$.],
 ) <fig-pararegion>
 

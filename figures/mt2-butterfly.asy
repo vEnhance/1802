@@ -2,8 +2,8 @@
 size(12cm);
 import graph;
 usepackage("amsmath");
-xaxis("$x$", -2, 2, Ticks(Step=1, begin=false, end=false), Arrows);
-yaxis("$y$", -2, 2, Ticks(Step=1, begin=false, end=false), Arrows);
+xaxis("$x$", -2, 2, Ticks(Label(fontsize(9pt)), Step=1, begin=false, end=false), Arrows);
+yaxis("$y$", -2, 2, Ticks(Label(fontsize(9pt)), Step=1, begin=false, end=false), Arrows);
 real eps = 0.04;
 
 draw((1-eps,1)--(-1,-(1-eps)), blue, EndArrow, Margins);
