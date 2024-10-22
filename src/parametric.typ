@@ -23,7 +23,20 @@ and we use $bf(r)$ for the function name to remind that the output is a vector.
 
 #typesig[
   When you see $bf(r)(t)$ or similar notation,
-  the time variable $t$ has type scalar, and the output is a vector.
+  the time variable $t$ has type scalar.
+  The output is in $RR^n$, and depending on context,
+  you can think of it as either a point or a vector.
+]
+#warning(title: [Warning: $bf(r)(t)$ can be drawn as either a dot or arrow,
+  but we still use vector notation anyway in Part Delta])[
+  Unfortunately, even in cases where we think of $bf(r)(t)$ as a point like $(3,5)$,
+  we still use boldface letter $bf(r)$ and write $vec(3,5)$.
+  Type enthusiasts may rightfully object to this,
+  but this is so entrenched that it will cause confusion with other sources
+  if I'm too pedantic.
+
+  So, don't worry too much about the difference between dot and arrow in this section.
+  Throughout all of Part Delta we will not treat $(3,5)$ and $vec(3,5)$ as different.
 ]
 
 If you're drawing a picture of a parametric function,
@@ -77,20 +90,22 @@ There are some things you could be asked:
 #recipe(title: [Recipes for parametric stuff])[
   - To find the *velocity vector* at a time $t$, it's the derivative $ bf(r)'(t) = vec(x'(t), y'(t)). $
   - To find the *speed* at a time $t$, it's the absolute value of the velocity:
-  $ |bf(r')(t)| = sqrt(x'(t)^2 + y'(t)^2). $
+    $ |bf(r')(t)| = sqrt(x'(t)^2 + y'(t)^2). $
   - To find the *acceleration vector* at a time $t$, it's the second derivative
     of each component: $ bf(r)''(t) = vec(x''(t), y''(t)). $
+  For three-variable $bf(r)(t) = angle.l x(t), y(t), z(t) angle.r$, do the same thing with three components.
 ]
 I don't know if there's a word for the absolute value of the acceleration vector
 (the way speed is the absolute value of the velocity vector).
 
 #recipe(title: [Recipe for parametric integration])[
-  - To integrate $bf(r)(t)$ between two times, take the integral of each component:
-    $ integral_("start time")^("stop time") bf(r)(t) dif t =
+  To integrate $bf(r)(t)$ between two times, take the integral of each component:
+  $ integral_("start time")^("stop time") bf(r)(t) dif t =
     vec(
       integral_("start time")^("stop time") x(t) dif t,
       integral_("start time")^("stop time") y(t) dif t
     ). $
+  For three-variable $bf(r)(t) = angle.l x(t), y(t), z(t) angle.r$, do the same thing with three components.
 ]
 #recipe(title: [Recipe for arc length])[
   The *arc length* from time $t_"start"$ to $t_"stop"$ is the integral of the speed:
@@ -102,7 +117,11 @@ and the recipes are "use the definition verbatim".)
 
 #typesig[
   - Velocity $bf(r)'(t)$, acceleration $bf(r)''(t)$, and integrals $integral bf(r)(t) dif t$ are vectors.
-  - But speed $|bf(r)'(t)|$ and arc length are scalars.
+
+    (In these three cases, you should _always_ draw them as arrows (vectors) rather than dots.
+    That is, you should never draw velocity, acceleration, or a vector integral as a dot.)
+
+  - However, speed $|bf(r)'(t)|$ and arc length are scalars (numbers).
 ]
 
 #sample[
@@ -192,7 +211,7 @@ Suppose a point $P$ moves in a circle of radius $r$ around $(0,0)$
 with constant angular velocity $omega$.
 Then the point can always be written as
 $ (r cos(theta), r sin(theta)) $
-for some angle $theta$ that va/ies with $t$.
+for some angle $theta$ that varies with $t$.
 A counterclockwise angular velocity corresponds to $theta$
 increasing by $omega$ per unit time
 (hence the angle at time $t$ is $theta + t omega$);
@@ -351,7 +370,13 @@ Okay, here are some examples.
   and moves in the $+x$ direction with constant speed $v$.
   Let $P$ be a point on the rim of the wheel initially at $(0,0)$.
   Parametrize the trajectory of the point $bf(P)(t)$.
+  (A picture is shown in @fig-cycloid.)
 ]
+
+#figure(
+  image("figures/parametric-cycloid.png", width: auto),
+  caption: [The cycloid formed as the wheel rolls to the right.],
+) <fig-cycloid>
 
 #soln[
   This problem is a little trickier because although it's easy to
@@ -376,6 +401,8 @@ Okay, here are some examples.
       $((omega t) / (2 pi)) dot (2 pi r)$ instead.
       Because $(omega t) / (2 pi)$ is the number of full rotations made;
       while $2 pi r$ is the total circumference of the wheel.)
+
+    #todo[Draw the tire track figure]
 
     Setting $L_("tire track")$ equal in the two expressions gives
     $ v t = omega t dot r ==> omega = v / r. $
@@ -418,11 +445,6 @@ Example:
   After that, you can just forget about the picture
   and do calculus on the expression you extracted.
 ]
-
-#figure(
-  image("figures/parametric-cycloid.png", width: auto),
-  caption: [The cycloid formed as the wheel rolls to the right.],
-) <fig-cycloid>
 
 Let's see this.
 #sample[
