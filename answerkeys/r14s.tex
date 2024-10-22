@@ -20,8 +20,6 @@ ChatGPT can make mistakes, so if you spot anything that's wrong, flag me to ask.
 
 
 
-\maketitle
-
 \newpage
 
 \section{Problem}
@@ -147,9 +145,6 @@ Both vertical and horizontal slicings give the same result. The value of the dou
 
 
 
-
-\maketitle
-
 \newpage
 
 \section{Problem}
@@ -161,107 +156,8 @@ Let \( R \) be the first-quadrant region bounded by the two curves \( y = \sqrt{
 \newpage
 
 \section{Solution}
-
-The region \( R \) is bounded by the curves \( y = \sqrt{x} \) and \( y = x^3 \), both of which intersect at the points where \( \sqrt{x} = x^3 \). Solving for \( x \), we get:
-\[
-\sqrt{x} = x^3 \implies x = 0 \text{ or } x = 1.
-\]
-Thus, the region \( R \) is bounded by \( x = 0 \) and \( x = 1 \), and by the curves \( y = \sqrt{x} \) (upper curve) and \( y = x^3 \) (lower curve).
-
-We will compute the double integral in two ways: using vertical and horizontal slicing.
-
-\newpage
-
-\subsection{1. Vertical Slicing}
-
-For vertical slicing, we express the region in terms of \( x \). The limits for \( y \) at each \( x \) are from the lower curve \( y = x^3 \) to the upper curve \( y = \sqrt{x} \). The limits for \( x \) are from 0 to 1. The double integral is:
-
-\[
-\iint_R x y^2 \, dA = \int_0^1 \int_{x^3}^{\sqrt{x}} x y^2 \, dy \, dx
-\]
-
-First, compute the inner integral with respect to \( y \):
-
-\[
-\int_{x^3}^{\sqrt{x}} y^2 \, dy = \left( \frac{y^3}{3} \right) \bigg|_{x^3}^{\sqrt{x}} = \frac{(\sqrt{x})^3}{3} - \frac{(x^3)^3}{3} = \frac{x^{3/2}}{3} - \frac{x^9}{3}
-\]
-
-Now, substitute this result into the outer integral:
-
-\[
-\int_0^1 x \left( \frac{x^{3/2}}{3} - \frac{x^9}{3} \right) dx = \frac{1}{3} \int_0^1 \left( x^{5/2} - x^{10} \right) dx
-\]
-
-Now, compute the two integrals:
-
-\[
-\int_0^1 x^{5/2} \, dx = \frac{x^{7/2}}{7/2} \bigg|_0^1 = \frac{2}{7}
-\]
-\[
-\int_0^1 x^{10} \, dx = \frac{x^{11}}{11} \bigg|_0^1 = \frac{1}{11}
-\]
-
-Thus, the integral becomes:
-
-\[
-\frac{1}{3} \left( \frac{2}{7} - \frac{1}{11} \right) = \frac{1}{3} \cdot \frac{22 - 7}{77} = \frac{1}{3} \cdot \frac{15}{77} = \frac{5}{77}
-\]
-
-So, the value of the double integral using vertical slicing is \( \frac{5}{77} \).
-
-\newpage
-
-\subsection{2. Horizontal Slicing}
-
-For horizontal slicing, we express the region in terms of \( y \). The limits for \( x \) at each \( y \) are from the left curve \( x = y^6 \) to the right curve \( x = y^2 \). The limits for \( y \) are from 0 to 1. The double integral is:
-
-\[
-\iint_R x y^2 \, dA = \int_0^1 \int_{y^6}^{y^2} x y^2 \, dx \, dy
-\]
-
-First, compute the inner integral with respect to \( x \):
-
-\[
-\int_{y^6}^{y^2} x \, dx = \frac{x^2}{2} \bigg|_{y^6}^{y^2} = \frac{(y^2)^2}{2} - \frac{(y^6)^2}{2} = \frac{y^4}{2} - \frac{y^{12}}{2}
-\]
-
-Now, substitute this result into the outer integral:
-
-\[
-\int_0^1 y^2 \left( \frac{y^4}{2} - \frac{y^{12}}{2} \right) dy = \frac{1}{2} \int_0^1 \left( y^6 - y^{14} \right) dy
-\]
-
-Now, compute the two integrals:
-
-\[
-\int_0^1 y^6 \, dy = \frac{y^7}{7} \bigg|_0^1 = \frac{1}{7}
-\]
-\[
-\int_0^1 y^{14} \, dy = \frac{y^{15}}{15} \bigg|_0^1 = \frac{1}{15}
-\]
-
-Thus, the integral becomes:
-
-\[
-\frac{1}{2} \left( \frac{1}{7} - \frac{1}{15} \right) = \frac{1}{2} \cdot \frac{15 - 7}{105} = \frac{1}{2} \cdot \frac{8}{105} = \frac{4}{105}
-\]
-
-So, the value of the double integral using horizontal slicing is \( \frac{4}{105} \).
-
-\newpage
-
-\section{Conclusion}
-
-Both methods yield the same result. Therefore, the value of the double integral is:
-
-\[
-\boxed{\frac{5}{77}}
-\]
-
-
-
-
-\maketitle
+I think ChatGPT is just completely wrong here LOL.
+Not even going to paste that output.
 
 \newpage
 
@@ -322,17 +218,17 @@ For horizontal slicing, we treat \( y \) as the independent variable. The limits
 
 \subsection{4. Vertical Slicing}
 
-For vertical slicing, we treat \( x \) as the independent variable. The region is split into two parts based on the curves. For \( x \in [1, 4] \), the lower boundary is \( y = -\sqrt{x} \) and the upper boundary is \( y = \sqrt{x} \) (from the parabola equation). For \( x \in [2, 4] \), the upper boundary is also determined by the line \( y = x - 2 \).
+For vertical slicing, we treat \( x \) as the independent variable. The region is split into two parts based on the curves. For \( x \in [1, 4] \), the lower boundary is \( y = -\sqrt{x} \) and the upper boundary is \( y = \sqrt{x} \) (from the parabola equation). For \( x \in [0, 1] \), the upper boundary is instead determined by the line \( y = x - 2 \).
 
 Thus, the double integral must be split into two parts:
 
-1. For \( x \in [1, 2] \), the upper boundary is \( y = \sqrt{x} \) and the lower boundary is \( y = -\sqrt{x} \):
+1. For \( x \in [0, 1] \), the upper boundary is \( y = \sqrt{x} \) and the lower boundary is \( y = -\sqrt{x} \):
 
 \[
 \int_1^2 \int_{-\sqrt{x}}^{\sqrt{x}} f(x, y) \, dy \, dx
 \]
 
-2. For \( x \in [2, 4] \), the upper boundary is \( y = x - 2 \) and the lower boundary is \( y = -\sqrt{x} \):
+2. For \( x \in [1, 4] \), the upper boundary is \( y = x - 2 \) and the lower boundary is \( y = -\sqrt{x} \):
 
 \[
 \int_2^4 \int_{-\sqrt{x}}^{x-2} f(x, y) \, dy \, dx
@@ -350,7 +246,7 @@ Thus, the double integral can be expressed in two ways:
 
 or
 \[
-\iint_R f(x, y) \, dA = \int_1^2 \int_{-\sqrt{x}}^{\sqrt{x}} f(x, y) \, dy \, dx + \int_2^4 \int_{-\sqrt{x}}^{x-2} f(x, y) \, dy \, dx
+\iint_R f(x, y) \, dA = \int_0^1 \int_{-\sqrt{x}}^{\sqrt{x}} f(x, y) \, dy \, dx + \int_1^4 \int_{-\sqrt{x}}^{x-2} f(x, y) \, dy \, dx
 \]
 (using vertical slicing in two parts).
 
