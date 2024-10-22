@@ -410,7 +410,7 @@ you can also answer any questions solved by the methods earlier like
 Example:
 
 #remark[
-  The shape of $bf(P)$ is called a _cycloid_, and it's shown in @fig-cycloid..
+  The shape of $bf(P)$ is called a _cycloid_, and it's shown in @fig-cycloid.
   The shape looks quite scary!
   However, you don't actually need to know anything about the shape
   to compute things like the arc length (see next sample question).
