@@ -8,7 +8,7 @@ all: $(PNG_OUTPUTS) $(PDF_OUTPUTS)
 figs: $(PNG_OUTPUTS)
 
 figures/%.pdf: figures/%.asy
-	asy -f pdf $< -o $(basename $@)
+	cd figures; asy -f pdf $(notdir $<) -o $(basename $(notdir $@))
 figures/%.png: figures/%.pdf
 	magick -density 192 $< $@
 
