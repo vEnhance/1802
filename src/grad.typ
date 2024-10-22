@@ -399,10 +399,12 @@ Let's summarize the last few sections.
 ]
 
 #exer[
-  Let $f(x,y,z)$ be a differentiable function, and let $g(x,y,z) = e^(f(x,y,z))$.
-  Let $P$ be any point in $RR^3$.
-  Suppose $f(P) = 2$, and $nabla f(P)$ is a unit vector.
-  Find the magnitude of $nabla g(P)$.
+  For each part, either give an example of $f$ or show that none exist.
+
+  - Can you find a function $f : RR^2 -> RR^2$ such that $nabla f (x,y) = vec(x,y)$?
+  - Can you find a function $f : RR^2 -> RR^2$ such that $nabla f (x,y) = vec(100 x,y)$?
+  - Can you find a function $f : RR^2 -> RR^2$ such that $nabla f (x,y) = vec(y,x)$?
+  - Can you find a function $f : RR^2 -> RR^2$ such that $nabla f (x,y) = vec(100 y,x)$?
 ]
 
 #exer[
@@ -410,4 +412,11 @@ Let's summarize the last few sections.
   that passes through the origin.
   Find all real numbers $t$ such that the vector $vec(t+4, t+5, t+6)$
   is tangent to $cal(S)$ at the origin.
+]
+
+#exer[
+  Let $f(x,y,z)$ be a differentiable function, and let $g(x,y,z) = e^(f(x,y,z))$.
+  Let $P$ be any point in $RR^3$.
+  Suppose $f(P) = 2$, and $nabla f(P)$ is a unit vector.
+  Find the magnitude of $nabla g(P)$.
 ]

@@ -201,6 +201,8 @@ For example, let's take the region in Poonen's example 13.1:
     - $y <= x^2$ solves to $-sqrt(y) <= x <= sqrt(y)$
     - $y - x <= 2$ solves to $y-2 <= x$.
 
+    See @fig-pararegion-horiz.
+
     #figure(
       image("figures/ints-para-horiz.png", width: auto),
       caption: [Dissecting @fig-pararegion horizontally, which is less nice: there are cases.
@@ -209,7 +211,6 @@ For example, let's take the region in Poonen's example 13.1:
       and a blue arc of the parabola to the right.],
     ) <fig-pararegion-horiz>
 
-    Se @fig-pararegion-horiz.
 
     If you know how the max function works, you could even write this as
     $ max(y-2, -sqrt(y)) <= x <= sqrt(y). $
@@ -356,45 +357,37 @@ $ int_(y=0)^1 int_(x=-sqrt(y))^(sqrt(y)) (2x+4y) dif x dif y
 
 So we got the same answer, no surprise, but it took a lot more work to get it.
 
+== [TEXT] Area
 
+I'll quickly mention now that if you choose $f = 1$ you get area:
 
-#pagebreak()
-
-= Change of variables
-
-#pagebreak()
-
-= Parametrized integrals
-
+#recipe(title: [Recipe for area])[
+  To find the area of a region $cal(R)$, compute $iint_(cal(R)) 1 dif x dif y$.
+]
 
 #sample[
-  Compute the line integral of the vector field
-  $bf(F) (x , y) = vec(2 x , 3 y)$ along the curve $C$
-  which is the upper half of the circle $x^2 + y^2 = 1$, oriented counterclockwise.
+  Consider the region $cal(R)$ we just described,
+  the set of points between bounded between $y-x=2$ and $y=x^2$.
+  Compute its area.
 ]
-
 #soln[
-  The line integral of a vector field $bf(F)$ along a curve $C$
-  is given by: $ int_C bf(F)(bf(r)(t)) dot bf(r)'(t) dif t $
-  Parametrize the curve $C$ as $bf(r) (t) = (cos t , sin t)$, where $t in [0 , pi]$.
-
-  First we compute $bf(r)'(t)$ which is $ bf(r)'(t) dif t = (- sin t, cos t) $.
-  Meanwhile, the values of $bf(F)$ along the curve rae
-  $ bf(F) (bf(r) (t)) = bf(F) (cos t , sin t) = (2 cos t , 3 sin t) $
-
-  Hence, the dot product being integrated is
-  $ bf(F) (bf(r) (t)) dot bf(r)'(t)
-    &= (2 cos t) (- sin t) + (3 sin t) (cos t) \
-    &= - 2 cos t sin t + 3 sin t cos t = cos t sin t $
-
-  Integrate with respect to $t$ from $0$ to $pi$:
-  $ int_0^pi cos t sin t dif t $
-
-  Using the identity $cos t sin t = 1 / 2 sin (2 t)$, we rewrite the integral:
-  $ int_0^pi cos t sin t dif t &= 1 / 2 int_0^pi sin (2 t) dif t \
-    &= 1 / 2 [- 1 / 2 cos (2 t)]_0^pi \
-    &= 1 / 2 [- 1 / 2 cos (2 pi) + 1 / 2 cos (0)] \
-      &= 1 / 2 [- 1 / 2 (1) + 1 / 2 (1)] = 0. #qedhere $
+  We'll write this as
+  $ int_(x = - 1)^2 int_(y = x^2)^(x + 2) 1 dif y dif x. $
+  The inner integral is easy $int_(y=x^2)^(x+2) dif y = (x+2)-x^2$.
+  So the answer is
+  $ int_(x = - 1)^2 (x+2-x^2) dif x =
+    lr([x^2/2 + 2x - x^3/3])_(x=-1)^(x=2)
+    = (2+4-8/3) - (1/2-2+1/3) = 9/2. #qedhere $
 ]
+
+== [EXER] Exercises
+
+#todo[make up some boring exercises]
 
 #pagebreak()
+
+= Triple integrals
+
+Triple integrals appear in 18.02 as well,
+but there is nothing new compared to double integrals.
+Every recipe from the previous section carries over with the obvious changes.
