@@ -214,7 +214,7 @@ For example, let's take the region in Poonen's example 13.1:
 
     If you know how the max function works, you could even write this as
     $ max(y-2, -sqrt(y)) <= x <= sqrt(y). $
-    The point is the lower endpoint for $x$ behaves differently with cases.
+    The main issue is that the lower endpoint for $x$ behaves differently with cases.
     For $y <= 1$, the bound of $-sqrt(y)$ triumphs over the bound of $y-2$.
     But for $y >= 1$, the bound of $y-2$ is the more informative inequality.
     So if we wanted to write this as a double integral, we would actually have to split into two:
@@ -367,7 +367,8 @@ We give a few examples here:
 If you choose $f = 1$ you get area.
 
 #recipe(title: [Recipe for area])[
-  To find the area of a region $cal(R)$, compute $iint_(cal(R)) 1 dif x dif y$.
+  To find the area of a region $cal(R)$, use
+  $ op("Area")(cal(R)) = iint_(cal(R)) 1 dif x dif y. $
 ]
 
 #sample[
@@ -385,9 +386,71 @@ If you choose $f = 1$ you get area.
     = (2+4-8/3) - (1/2-2+1/3) = 9/2. #qedhere $
 ]
 
-=== Mass
+=== Mass and center of mass
 
-=== Center of Mass
+If you imagine your region $cal(R)$ as a blob of some substance (concrete, wood, water, etc.),
+then you could also imagine it has a _density_ at each point in the region
+(say, in grams per square meter).
+In 18.02 we usually denote the density by $rho$,
+which is a function taking each point $P$ in the region $cal(R)$ and outputting its density.
+
+In that case, the total mass of $cal(R)$ is the integral of the densities:
+$ op("mass")(cal(R)) = iint_(cal(R)) rho(x,y) dif x dif y. $
+Given a region you can also consider the _center of mass_.
+The idea/definition is that the $x$-coordinate of the center of mass should be
+the weighted average of the $x$-coordinates of the points in the region:
+$ x"-coord of the center of mass" = 1/(op("mass")(cal(R))) iint_(cal(R)) x dot rho(x,y) dif x dif y. $
+And the same for the others.
+Let's repeat this in recipe form.
+
+#recipe(title: [Recipe for total mass and center of mass])[
+  Suppose $cal(R)$ is a region and $rho$ is a density function for the region.
+
+  1. The total mass is given by $op("mass")(cal(R)) = iint_(cal(R)) rho(x,y) dif x dif y. $
+  2. The center of mass is given by the point
+  $ lr(( (iint_(cal(R)) x dot rho(x,y) dif x dif y) / (op("mass")(cal(R))),
+    (iint_(cal(R)) y dot rho(x,y) dif x dif y) / (op("mass")(cal(R))))). $
+]
+
+(It took considerable self-restraint to not title the recipe "Mass Tech".)
+
+#typesig[
+  If $cal(R)$ is a region in $RR^2$,
+  - Then a density function $rho : cal(R) -> RR_(>= 0)$
+    should take on nonnegative values.
+    (For physicists: in SI units, you might imagine it as grams per square meter.)
+  - The mass is a nonnegative real number (grams).
+  - The center of mass is also a _point_ inside $cal(R)$. (Draw this as a dot, not an arrow.)
+]
+
+#todo[Write some example]
+
+#remark[
+  Unsurprisingly if $rho = 1$ is constant (imagine 1 gram per square meter),
+  then the mass of the region $cal(R)$ is just $iint_(cal(R)) dif x dif y$, i.e. the area.
+  (So a region whose area is $17$ square meters and where the density is
+  1 gram per square meter in the whole substance should be $17$ grams.)
+]
+
+
+== [SIDENOTE] What's the analogy to "area under the curve" from 18.01?
+
+In 18.01, you were told that the integral $int_(x=a)^b f(x) dif x$
+denotes the area under the curve $y = f(x)$ from $x = a$ to $x = b$.
+
+In 18.02, if you have $iint_(cal(R)) f(x,y) dif x dif y$,
+and you want to interpret it analogously,
+what you would do is look at the surface $z = f(x,y)$ in an $x y z$-plane,
+where you imagine the $x y$-plane and the region $cal(R)$ at the bottom, and $z$ being a height.
+Then the double integral analogously calculates the volume underneath the surface.
+
+However, we won't actually use this interpretation much in 18.02.
+As I said before, in 18.02 we usually prefer to draw pictures
+where all the axis variables are treated with equal respect.
+(Whereas the 18.01 picture I just mentioned uses $x$ as input and $y$ as output;
+the two axes don't play the same role.)
+So picturing the double integral with things like mass or center of mass
+is more in line with the 18.02 spirit, even though there is no 18.01 analog.
 
 == [EXER] Exercises
 
@@ -400,4 +463,10 @@ If you choose $f = 1$ you get area.
   Let $cal(R)$ be all the points on or inside the triangle
   with vertices $(0,0)$, $(1,2)$ and $(2,1)$.
   Compute $iint_(cal(R)) x y dif x dif y$.
+]
+
+#exer[
+  Let $cal(R)$ be the region between the curves $y = sqrt(x)$ and $y = x^2$.
+  Assume $cal(R)$ has constant density.
+  Calculate its center of mass.
 ]

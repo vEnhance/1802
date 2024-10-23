@@ -420,3 +420,11 @@ Let's summarize the last few sections.
   Suppose $f(P) = 2$, and $nabla f(P)$ is a unit vector.
   Find the magnitude of $nabla g(P)$.
 ]
+
+#exer[
+  Let $a$, $b$, $c$ be real numbers and
+  consider the function $ f(x,y) = a e^(x+y) + b e^(x-y). $
+  It turns out that the level curve of $f$ for the value $c$
+  passes through $(log 6, log 3)$ is tangent to the line $y = 5x$ at the origin.
+  Find $a$, $b$, and $c$.
+]

@@ -20,7 +20,12 @@ One quick notational thing if you haven't seen this before:
   corner is at the origin.
   Similarly, $[0,5] times [0,3]$ would be a rectangle of width $5$ and height $3$.
 ]
-#todo[draw a figure]
+#figure(
+  image("figures/chvar-rect.png", width: auto),
+  caption: [A picture of $[0,5] times [0,3]$. This is just the set of points where $x$ is in
+  the interval $[0,5]$ and $y$ is in the closed interval $[0,3]$.],
+)
+
 
 == [TEXT] Transition maps
 
@@ -52,12 +57,14 @@ To do this, I need to tell you a new term:
   Let $cal(S)$ be another region, often a rectangle.
   A *transition map* for $cal(R)$ is a function $bf(T) : cal(S) -> cal(R)$
   that transforms $cal(S)$ to $cal(R)$.
-  (If $cal(S)$ is a rectangle, we also call $bf(T)$ a *cell*.)
 
   In 18.02 we always require that all the points except possibly the boundaries of $cal(S)$
   get mapped to different points in $cal(R)$.
   Thus, writing the inverse $bf(T)^(-1)$ usually also makes sense.
 ]
+
+If $cal(S)$ is a rectangle --- again, that's quite common ---
+then sometimes $bf(T)$ is also called a cell (see Napkin).
 
 #remark(title: [Remark: An analogy to the world map])[
   Cartography or geography enthusiasts will find that the word "map" gives them the right instincts.
@@ -138,15 +145,14 @@ the 18.02 is the grown-up version where you have a transition map instead.
      1/2 u^(-1/2) v^(1/2), 1/2 u^(1/2) v^(-1/2)). $
 ]
 #example[
-  We can also find the Jacobian of the _inverse_ map too, that is
+  We can also find the Jacobian of the _inverse_ map too,
+  that is the transition map $bf(T) : bf(R) -> bf(S)$ defined by
   $ bf(T)^(-1)(x,y) = (y/x, x y). $
+  In other words, this is the map that transforms $(x,y)$ into $(u,v)$.
   This is actually less painful because you don't have to deal with the square roots everywhere.
-  $ partial / (partial x) (y/x) &= -y/x^2 \
-    partial / (partial y) (y/x) &= 1/x $
-  and
-  $ partial / (partial x) (x y) &= y \
-    partial / (partial y) (x y) &= x. $
-  So the Jacobian matrix for $bf(T)$ is
+  $ partial / (partial x) (y/x) &= -y/x^2, &#h(2em) partial / (partial y) (y/x) &= 1/x \
+    partial / (partial x) (x y) &= y, &#h(2em) partial / (partial y) (x y) &= x. $
+  So the Jacobian matrix for $bf(T)^(-1)$ is
   $ J_(bf(T)^(-1)) = mat(-y/x^2, 1/x; y, x). $
 ]
 
@@ -156,14 +162,32 @@ Okay, now for the result.
   Suppose you need to integrate $iint_(cal(R)) f(x,y) dif x dif y$
   and you have a transition map $bf(T)(u,v) : cal(S) -> cal(R)$.
   Then the transition map lets you change the integral as follows:
-  $ iint_(cal(R)) f(x,y) dif x dif y = iint_(cal(S)) f(u,v) |det J_(bf(T))| dif u dif v $
+  $ iint_(cal(R)) f(x,y) dif x dif y = iint_(cal(S)) f(u,v)/(|det J_(bf(T))|) dif u dif v $
   Alternatively, if it's easier to compute $J_(bf(T)^(-1))$, the following formula also works:
-  $ iint_(cal(R)) f(x,y) dif x dif y = iint_(cal(S)) f(u,v) 1/(|det J_(bf(T)^(-1))|) dif u dif v $
+  $ iint_(cal(R)) f(x,y) dif x dif y = iint_(cal(S)) f(u,v) |det J_(bf(T)^(-1))| dif u dif v $
 ]
 Here $|det J_(bf(T))|$ is called the *area scaling factor*:
 it's the absolute value of the determinant of the Jacobian matrix.
+It's indeed true that $ det J_(bf(T)^(-1)) = 1 / det(J_(bf(T))) $
+which means that if your transition map has a nicer inverse than the original,
+you might prefer to use that instead.
+
 #typesig[
   The area scaling is always a _nonnegative_ real number.
+]
+#tip[
+  You might find it easier to remember both formulas if you write
+  $ dif u dif v = |det J_(bf(T))| dif x dif y $
+  so it looks more like $dif u = (partial u) / (partial x) dif x$ from 18.01.
+]
+
+#digression(title: [Digression on what $dif u dif v$ means])[
+  For 18.02, the equation $dif u dif v = |det J_(bf(T))| dif x dif y$
+  is more of a mnemonic right now than an actual equation;
+  that's because in 18.02 we don't give a definition of what $dif x$ or $dif y$ etc.
+  It can be made into a precise statement using something called a _differential form_.
+  This is out of scope for 18.02, which has the unfortunate consequence
+  that I can't give a formal explanation why the change-of-variable formula works.
 ]
 
 This is the analog in 18.01 when you did change of variables from $x$ to $u$
@@ -173,14 +197,35 @@ In 18.02, the derivative from 18.01 is replaced by the enormous Jacobian determi
 Let's see an example of how to carry out this integration.
 
 #sample[
-  Find the area of the region bounded by the curves
+  Find the area of the region $cal(R)$ bounded by the curves
   $ x y = 16/9, #h(1em) x y = 16/25, #h(1em) x = 4 y, #h(1em) y = 4 x. $
 ]
+#soln[
+  In the previous sections we introduced variables $u = y/x$ and $v = x y$,
+  and considered the region $ cal(S) = [1/4, 4] times [16/25, 16/9] $
+  which were the pairs of points $(u,v$).
+  We made a transition map $bf(T) : cal(S) -> cal(R)$ written as either
+  $ bf(T)(u,v) &= (sqrt(v/u), sqrt(u v)) \
+    bf(T)^(-1)(x,y) &= (y/x, x y). $
+  We don't like square roots, so we'll the determinant of the Jacobian for $bf(T)^(-1)$, which is
+  $ det (J_(bf(T)^(-1))) = det mat(-y/x^2, 1/x; y, x)
+    = (- y / x^2) dot x - 1 / x dot y = - y / x - y / x = - (2 y) / (x) . $
+  Since $u = y / x$, we can express this as:
+  $ det (J_(bf(T)^(-1))) = - 2 u . $
+  Hence, the area is given by the double integral
+  $
+    op("Area")(cal(R))
+    &= int_(u = 1 / 4)^4 int_(v = 16 / 25)^(16 / 9) lr(|det (J)|) dif v dif u \
+    &= int_(u = 1 / 4)^4 int_(v = 16 / 25)^(16 / 9) 2u dif v dif u \
+    &= int_(u = 1 / 4)^4  2u (16/9-16/25) dif u = 512/225 int_(u = 1 / 4)^4  u dif u \
+    &= 512 / 225 [u^2 / 2]_(u = 1 / 4)^4 = 512 / 225 dot 1 / 2 (4^2 - (1 / 4)^2) = 272/15. #qedhere
+  $
+]
 
-== [TEXT] Another example: the area of a unit disk
+== [TEXT] Another example: the area of a unit disk <sec-chvar-polar>
 
 #sample[
-  Show that the area of the unit disk $x^2 + y^2 <= R^2$ is $pi$.
+  Show that the area of the unit disk $x^2 + y^2 <= 1$ is $pi$.
 ]
 
 #soln[
@@ -188,7 +233,7 @@ Let's see an example of how to carry out this integration.
   we use the letters $r$ and $theta$ rather than $u$ and $v$ for this problem.
   This time our cartographer's transition map is going to be given by
   $ bf(T) : [0,1] times [0, 2pi] &-> RR^2 \
-    (r, theta) &|-> (r cos theta, r sin theta). $
+    bf(T)(r, theta) &:= (r cos theta, r sin theta). $
   You might recognize this as polar coordinates.
   This gives us a way to plot the unit disk as a rectangular map; see the figure.
   (Careful students might notice that the points on $(0,0)$ to $(1,0)$
@@ -197,10 +242,10 @@ Let's see an example of how to carry out this integration.
 
   We calculate the Jacobian of $bf(T)$:
   $ J_(bf(T)) = mat(
-      (partial / partial r)(cos theta),
-      (partial / partial r)(sin theta);
-      (partial / partial theta)(r cos theta),
-      (partial / partial theta)(r sin theta))
+      partial / (partial r) cos theta,
+      partial / (partial r) sin theta;
+      partial / (partial theta) (r cos theta),
+      partial / (partial theta) (r sin theta))
     = mat(cos theta, sin theta; -r sin theta, r cos theta). $
   The area scaling factor is then
   $ |det J_(bf(T))| =
