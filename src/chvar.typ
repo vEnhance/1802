@@ -63,8 +63,9 @@ To do this, I need to tell you a new term:
   Thus, writing the inverse $bf(T)^(-1)$ usually also makes sense.
 ]
 
-If $cal(S)$ is a rectangle --- again, that's quite common ---
-then sometimes $bf(T)$ is also called a cell (see Napkin).
+If $cal(S)$ is a rectangle --- and again, that's quite common ---
+then sometimes $bf(T)$ is also called a cell
+(e.g. my Napkin does this when discussing differential forms).
 
 #remark(title: [Remark: An analogy to the world map])[
   Cartography or geography enthusiasts will find that the word "map" gives them the right instincts.

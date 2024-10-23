@@ -271,7 +271,7 @@ So a couple tips specific to Lagrange Multiplier systems:
 
   - It might make sense to try to get rid of $lambda$ ASAP, if that's easy to do.
     After all, we don't actually care what $lambda$ is.
-  - Alternatively, you can try to kill every variable _expect_ $lambda$!
+  - Alternatively, you can try to kill every variable _except_ $lambda$!
     This is commonly used if your equations only involve one non-$lambda$ variable.
     That is, solve for $x$ in terms of $lambda$; do the same for $y$ and $z$.
     Then plug these in the original constraint equation to solve for $lambda$,
@@ -345,7 +345,7 @@ Here's an example where a good idea is to kill $lambda$ ASAP:
   In conclusion, the global minimum is $f(1/3, 4/3) = 11/3$.
 ]
 
-And here's an example where we kill every variable _expect_ $lambda$:
+And here's an example where we kill every variable _except_ $lambda$:
 
 #sample[
   Use Lagrange multipliers to find the smallest possible value of

@@ -495,7 +495,7 @@ Let's see this.
   - Each individual teacup rotates _counterclockwise_ with angular velocity
     $omega_(upright("cup"))$ and radius $r$.
   - Initially, at $t = 0$, the center of the teacup is at $(R , 0)$, and
-    the toddler is positioned at the rightmost point on the edge of the
+    a toddler is positioned at the rightmost point on the edge of the
     teacup relative to its center.
 
   Compute the _velocity_ vector of the toddler at time $t$.
