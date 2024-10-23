@@ -26,9 +26,7 @@ So philosophically, a $0$-dimensional integral is just a finite sum of $f$ at so
 This might seem stupid that I bring up this degenerate case,
 but it turns out later when we cover div/grad/curl the $0$-dimensional case is relevant.
 
-With that, I present to you the following chart of ten different kinds of integrals,
-one for each $(d,n)$ with $0 <= d <= n <= 3$.
-See @fig-int-chart-triangle in all its glory.
+Here's a giant chart in @fig-int-chart-triangle.
 (The chart is so big it doesn't quite fit in the page,
 but you can download a
 #link("https://web.evanchen.cc/upload/1802/integrals-triangles.pdf")[large PDF version]).
@@ -41,6 +39,8 @@ but you can download a
   ]
 ) <fig-int-chart-triangle>
 
+This chart has ten different kinds of integrals,
+one for each $(d,n)$ with $0 <= d <= n <= 3$.
 Here's a rundown of the things in the chart.
 
 - The case $d = 0$ is stupid, as I just said,
@@ -151,5 +151,3 @@ _actually already know how to do_ from 18.01.
 The same will be true for multivariable integrals.
 The challenge won't actually be the anti-derivatives, which are unchanged for 18.01.
 The hard part will actually be figuring out the _limits_ of integration!
-
-#pagebreak()

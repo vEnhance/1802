@@ -203,4 +203,12 @@ and now the whole discussion carries over wholesale.
 
 == [RECIPE] Distance to a plane <sec-distance-plane>
 
+== [EXER] Exercises
+
+#exer[
+  Find all possible values of $a x + b y + c z$
+  over real numbers $a$, $b$, $c$, $x$, $y$, $z$
+  satisfying $a^2 + b^2 + c^2 = 2$ and $x^2 + y^2 + z^2 = 5$.
+]
+
 #pagebreak()

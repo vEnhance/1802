@@ -75,6 +75,8 @@ For comparison, Part Golf corresponds to §13 and §17 of #poonen.
 #pagebreak()
 #include "src/polar.typ"
 #pagebreak()
+#include "src/triple.typ"
+#pagebreak()
 #include "src/paraint.typ"
 #pagebreak()
 

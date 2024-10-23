@@ -2,8 +2,25 @@
 
 = Change of variables
 
-To make this section easier to read, we'll do just the 2-D stuff;
-the 3-D situation is actually exactly the same, but the notation is hideous.
+We'll do just two variables for now;
+the 3-D situation is exactly the same and we cover it later.
+
+== [TEXT] Interval notation
+
+One quick notational thing if you haven't seen this before:
+
+#definition(title: [Definition: Interval notation])[
+  Suppose $[a,b]$ and $[c,d]$ are closed intervals in $RR$ (so $a <= b$ and $c <= d$).
+  By $[a,b] times [c,d]$ we mean the rectangle consisting of points
+  $(x,y)$ such that $a <= x <= b$ and $c <= y <= d$.
+  (So the four corners of the rectangle are $(a,c)$, $(a,d)$, $(b,c)$, $(b,d)$.)
+]
+#example[
+  For example $[0,1] times [0,1]$ would be a unit square whose southwest
+  corner is at the origin.
+  Similarly, $[0,5] times [0,3]$ would be a rectangle of width $5$ and height $3$.
+]
+#todo[draw a figure]
 
 == [TEXT] Transition maps
 
@@ -153,5 +170,53 @@ This is the analog in 18.01 when you did change of variables from $x$ to $u$
 (called $u$-substitution sometimes), and you changed $dif x$ to $(dif x)/(dif u) dif u$.
 In 18.02, the derivative from 18.01 is replaced by the enormous Jacobian determinant.
 
+Let's see an example of how to carry out this integration.
 
-#pagebreak()
+#sample[
+  Find the area of the region bounded by the curves
+  $ x y = 16/9, #h(1em) x y = 16/25, #h(1em) x = 4 y, #h(1em) y = 4 x. $
+]
+
+== [TEXT] Another example: the area of a unit disk
+
+#sample[
+  Show that the area of the unit disk $x^2 + y^2 <= R^2$ is $pi$.
+]
+
+#soln[
+  For reasons that will soon be obvious,
+  we use the letters $r$ and $theta$ rather than $u$ and $v$ for this problem.
+  This time our cartographer's transition map is going to be given by
+  $ bf(T) : [0,1] times [0, 2pi] &-> RR^2 \
+    (r, theta) &|-> (r cos theta, r sin theta). $
+  You might recognize this as polar coordinates.
+  This gives us a way to plot the unit disk as a rectangular map; see the figure.
+  (Careful students might notice that the points on $(0,0)$ to $(1,0)$
+  are repeated more than once under the transition map;
+  again, in 18.02 we allow this repetition on the boundary.)
+
+  We calculate the Jacobian of $bf(T)$:
+  $ J_(bf(T)) = mat(
+      (partial / partial r)(cos theta),
+      (partial / partial r)(sin theta);
+      (partial / partial theta)(r cos theta),
+      (partial / partial theta)(r sin theta))
+    = mat(cos theta, sin theta; -r sin theta, r cos theta). $
+  The area scaling factor is then
+  $ |det J_(bf(T))| =
+    det mat(cos theta, sin theta; -r sin theta, r cos theta)
+    = r cos^2 theta - (-r sin^2 theta) = r(cos^2 theta + sin^2 theta) = r. $
+  Hence, the transition map gives us the following change of variables:
+  $ iint_(x^2+y^2=1) 1 dif x dif y
+    = int_(r=0)^1 int_(theta=0)^(2 pi) r dif theta dif r. $
+  This is easy to integrate:
+  $
+    int_(r=0)^1 ( int_(theta=0)^(2 pi) r dif theta) dif r
+    &= int_(r=0)^1 ( 2 pi r ) dif r \
+    &= 2 pi int_(r=0)^1 ( r ) dif r \
+    &= 2 pi [r^2/2]_(r=0)^(r=1) = pi. #qedhere
+  $
+]
+
+
+== [EXER] Exercises

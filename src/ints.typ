@@ -48,14 +48,14 @@ It's easier to see an example before the recipe.
     it out of the integral: $ y^2 int_(x=0)^1 x dif x . $
 
     Now, compute $int_(x=0)^1 x dif x$:
-    $ int_0^1 x dif x = [x^2 / 2]_0^1 = 1^2 / 2 - 0^2 / 2 = 1 / 2 . $
+    $ int_(x=0)^1 x dif x = [x^2 / 2]_0^1 = 1^2 / 2 - 0^2 / 2 = 1 / 2 . $
 
     Thus, the result of the inner integral is:
     $ y^2 dot 1 / 2 = y^2 / 2 . $
 
   2. Now, substitute the result of the inner integral into the outer integral:
     $ int_(y=0)^6 y^2 / 2 dif y &= 1 / 2 int_(y=0)^6 y^2 dif y  \
-    &= 1/2 int_0^6 y^2 dif y = 1/2 [y^3 / 3]_0^6 = 1/2( 6^3 / 3 - 0^3 / 3) &= 36. $
+    &= 1/2 int_(y=0)^6 y^2 dif y = 1/2 [y^3 / 3]_0^6 = 1/2( 6^3 / 3 - 0^3 / 3) &= 36. $
 ]
 Easy, right?
 The general recipe is the same.
@@ -88,10 +88,10 @@ Here's another example.
     $ x dot sin(x) / x = sin (x) . $
 
   2. Now, substitute the result of the inner integral into the outer
-    integral: $ int_0^pi sin (x) dif x . $
+    integral: $ int_(x=0)^pi sin (x) dif x . $
 
     We know that $integral sin (x) dif x = - cos (x)$. Therefore:
-    $ int_0^pi sin (x) dif x = [- cos (x)]_0^pi = - cos (pi) + cos (0) . $
+    $ int_(x=0)^pi sin (x) dif x = [- cos (x)]_0^pi = - cos (pi) + cos (0) . $
 
     Using $cos (pi) = - 1$ and $cos (0) = 1$, we get:
     $ - (- 1) + 1 = 1 + 1 = 2 . $
@@ -136,7 +136,7 @@ Here's how you do it.
 #remark(title: [Remark: This recipe works fine for rectangles, too!])[
   You can do this recipe even with a rectangle.
   If you do, what the recipe tells you that for a rectangle you can integrate in either order:
-  given the rectangle $[a,b] times [c,d]$ we have
+  given the rectangle of points $(x,y)$ with $a <= x <= b$ and $c < y <= d$, we have
   $ int_(x=a)^b int_(y=c)^d f(x,y) dif y dif x
     = int_(y=c)^d int_(x=a)^b f(x,y) dif x dif y. $
   Sometimes this will be easier.
@@ -271,7 +271,7 @@ as Poonen did, and show how we would find the integral.
     -2 [x^4 / 4]_(x = - 1)^(x = 2) &= - 2 (16 / 4 - 1 / 4) = - 2 dot 15 / 4 = - 15 / 2 \
     4 [x^3 / 3]_(x = - 1)^(x = 2) &= 4 (8 / 3 - (- 1)^3 / 3) = 4 dot 9 / 3 = 12 \
     12 [x^2 / 2]_(x = - 1)^(x = 2) &= 12 dot 3 / 2 = 18 \
-    8 times (2 - (- 1)) &= 8 dot 3 = 24.
+    8 dot (2 - (- 1)) &= 8 dot 3 = 24.
     $
     Add these to get the answer: $ -66/5 -15/2 + 12 + 18 + 24 = 333/10. $
 ]
@@ -302,7 +302,7 @@ $ int_(y=0)^1 int_(x=-sqrt(y))^(sqrt(y)) (2x+4y) dif x dif y
     $ int_(x = - sqrt(y))^(sqrt(y)) 2 x dif x + int_(x = - sqrt(y))^(sqrt(y)) 4 y dif x . $
 
     - The first term is:
-    $ 2 int_(x = - sqrt(y))^(sqrt(y)) x dif x = 2 [x^2 / 2]_(x = - sqrt(y))^(x = sqrt(y)) = 2 times ((sqrt(y))^2 / 2 - (- sqrt(y))^2 / 2) . $
+    $ 2 int_(x = - sqrt(y))^(sqrt(y)) x dif x = 2 [x^2 / 2]_(x = - sqrt(y))^(x = sqrt(y)) = 2 dot ((sqrt(y))^2 / 2 - (- sqrt(y))^2 / 2) . $
 
     - The second term is:
     $ 4 y int_(x = - sqrt(y))^(sqrt(y)) 1 dif x = 4 y [x]_(x = - sqrt(y))^(x = sqrt(y)) = 4 y (sqrt(y) - (- sqrt(y))) = 4 y dot 2 sqrt(y) = 8 y^(3 / 2) . $
@@ -345,9 +345,9 @@ $ int_(y=0)^1 int_(x=-sqrt(y))^(sqrt(y)) (2x+4y) dif x dif y
 
     To keep things organized, we integrate each term individually:
     $
-    int_(y = 1)^4 - 5 y^2 dif y &= - 5 [y^3 / 3]_(y = 1)^(y = 4) = - 5 times (64 / 3 - 1 / 3) = - 5 times 63 / 3 = - 105 \
-    int_(y = 1)^4 13 y dif y &= 13 [y^2 / 2]_(y = 1)^(y = 4) = 13 times (16 / 2 - 1 / 2) = 13 times 15 / 2 = 97.5 \
-    int_(y = 1)^4 4 y sqrt(y) dif y &= 4 int_(y = 1)^4 y^(3 \/ 2) dif y = 4 times [2 / 5 y^(5 \/ 2)]_(y = 1)^(y = 4) = 4 times 2 / 5 (32 - 1) = 248 / 5 = 49.6 \
+    int_(y = 1)^4 - 5 y^2 dif y &= - 5 [y^3 / 3]_(y = 1)^(y = 4) = - 5 dot (64 / 3 - 1 / 3) = - 5 dot 63 / 3 = - 105 \
+    int_(y = 1)^4 13 y dif y &= 13 [y^2 / 2]_(y = 1)^(y = 4) = 13 dot (16 / 2 - 1 / 2) = 13 dot 15 / 2 = 97.5 \
+    int_(y = 1)^4 4 y sqrt(y) dif y &= 4 int_(y = 1)^4 y^(3 \/ 2) dif y = 4 dot [2 / 5 y^(5 \/ 2)]_(y = 1)^(y = 4) = 4 dot 2 / 5 (32 - 1) = 248 / 5 = 49.6 \
     int_(y = 1)^4 - 4 dif y &= - 4 [y]_(y = 1)^(y = 4) = - 4 (4 - 1) = - 12.
     $
 
@@ -357,9 +357,14 @@ $ int_(y=0)^1 int_(x=-sqrt(y))^(sqrt(y)) (2x+4y) dif x dif y
 
 So we got the same answer, no surprise, but it took a lot more work to get it.
 
-== [TEXT] Area
+== [TEXT] A few physical interpretations of integrals
 
-I'll quickly mention now that if you choose $f = 1$ you get area:
+Depending on what function $f$ is chosen, the integral may have some physical meaning.
+We give a few examples here:
+
+=== Area
+
+If you choose $f = 1$ you get area.
 
 #recipe(title: [Recipe for area])[
   To find the area of a region $cal(R)$, compute $iint_(cal(R)) 1 dif x dif y$.
@@ -380,14 +385,19 @@ I'll quickly mention now that if you choose $f = 1$ you get area:
     = (2+4-8/3) - (1/2-2+1/3) = 9/2. #qedhere $
 ]
 
+=== Mass
+
+=== Center of Mass
+
 == [EXER] Exercises
 
-#todo[make up some boring exercises]
+#exer[
+  Let $cal(R)$ be the region between the curves $y = sqrt(x)$ and $y = x^3$.
+  Compute $iint_(cal(R)) x^(100) y^(200) dif x dif y$ in both ways.
+]
 
-#pagebreak()
-
-= Triple integrals
-
-Triple integrals appear in 18.02 as well,
-but there is nothing new compared to double integrals.
-Every recipe from the previous section carries over with the obvious changes.
+#exer[
+  Let $cal(R)$ be all the points on or inside the triangle
+  with vertices $(0,0)$, $(1,2)$ and $(2,1)$.
+  Compute $iint_(cal(R)) x y dif x dif y$.
+]
