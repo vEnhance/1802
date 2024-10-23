@@ -7,12 +7,7 @@
   date: [23 October 2024],
 )
 
-#quote(attribution: [A grant reviewer from the
-  #link("https://aops.com/community/c864h980625")[Department of Education]])[
-  While challenging and improving the mathematical problem-solving skills of
-  high-performing students are surely every-day objectives of those who teach such students,
-  it is not a problem, relatively speaking, of major import in American education.
-]
+#quote(attribution: [Lemony Snicket, in A Series of Unfortunate Events])[The world is quiet here.]
 
 
 This handout (and any other DLC's I write) are posted at
