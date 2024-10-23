@@ -278,6 +278,19 @@ So a couple tips specific to Lagrange Multiplier systems:
     and hence extract $(x,y,z)$.
 ]
 
+#warning(title: [Warning: Make sure you only divide by nonzero things!])[
+  Remember: watch out for division by zero!
+  For example, if you get to the equation $2 lambda y = 10 y$,
+  for example, this implies EITHER $lambda = 5$ OR $y = 0$.
+
+  During the 2024 midterm, an equation like this appeared
+  as part of a step in a standard Lagrange multipliers question.
+  Something like 50%-80% of students who got this equation would forget one of the two cases
+  (which one they forgot about varied).
+  Don't let this be you!
+  Whenever you try to cancel, check if it could be zero!
+]
+
 Note the second advice bullet is the opposite of the first advice bullet!
 Again, systems of equations can't be solved by blindly following recipes.
 You should use whatever method you think makes sense for the given problem.
@@ -757,9 +770,9 @@ That is,
 ]
 This works in both the easy case (no Lagrange multipliers) and the hard case (with Lagrange multipliers).
 
-#example[
-  Here's some examples of how this theorem can help you:
+Here's some examples of how this theorem can help you:
 
+#example[
   - Suppose you are asked to optimize a continuous function $f(x,y)$
     on the square $-1 <= x <= 1$, $-1 <= y <= 1$.
     We saw this square has no limit cases.
