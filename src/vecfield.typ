@@ -8,13 +8,15 @@ In Part Golf, we only considered integrals of scalar-valued functions.
 However, in Part Hotel we will meet a *vector field*,
 which is another name for a function that inputs points and outputs vectors.
 #definition[
-  A *vector field* for $RR^n$ is a function $F : RR^n -> RR^n$
+  A *vector field* for $RR^n$ is a function $bf(F) : RR^n -> RR^n$
   that assigns to each point $P in RR^n$ a vector $bf(F)(P) in RR^n$.
 ]
+In contrast, we might use the word *scalar field* for the old kind of functions $f : RR^n -> RR$
+that gave a number at each input point rather than a vector.
 
 You actually have met a lot of vector fields before:
 #example[
-  Every gradient is an examples of a vector fields!
+  Every gradient is an example of a vector fields!
   That is, if $f : RR^n -> RR$, then $nabla f$ is a vector field for $RR^n$.
 ]
 This case is so important that there's a word for it:
@@ -295,12 +297,16 @@ Know this going in to each of the concepts to follow.
 == Stay determined
 
 This is probably super overwhelming right now,
-and @fig-int-chart-stokes might be frightening to look at because there's so much information in it.
-Don't worry, we'll take @fig-int-chart-stokes apart one piece at a time over the rest of the semester.
-This will be a three-phase program:
+and @fig-int-chart-stokes might be frightening to look at
+because there's so much information in it.
+Don't worry, we'll take @fig-int-chart-stokes apart one piece
+at a time over the rest of the semester.
 
-- First, I'll tell you how to _integrate_ work and flux of a vector field.
-- Second, I will define _individually_ each of the three transformations grad, curl, div.
+- First, I'll tell you how to compute each of grad, curl, div in @sec-gcd.
+  This section has no integration in it.
+- Second, I'll talk about work, and how it's computed.
+  I'll also
+
   (Actually we defined the first one already, so it's just curl and div.)
 - Third, I'll tell you how grad, curl, and div interact,
   using the _generalized Stokes' theorem_.

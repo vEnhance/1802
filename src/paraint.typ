@@ -52,6 +52,9 @@ On the rare occasions when you need it, you get a scalar-field line integral as:
   then the *scalar-field line integral* of $f$ is defined by
   $ int_("start time")^("stop time") f(bf(r)(t)) lr(|bf(r)'(t)|) dif t. $
 ]
+#typesig[
+  The scalar-field line integral (and hence arc length as well) outputs a scalar.
+]
 
 Note that arc length is just letting $f$ be the constant function $1$.
 We'll pretty much only use this generalization for mass/density type questions, and nowhere else.
@@ -103,10 +106,15 @@ Okay, so in analogy to here are surface area and the scalar-field surface integr
   the *surface area* is given by
   $ op("Area")(cal(S)) := iint_(cal(R))
     lr(|(partial bf(r))/(partial u) times (partial bf(r))/(partial v)|) dif u dif v. $
-  More generally if we have a function $f : RR^3 -> RR$ we define the integral of $f$ over $cal(S)$ as
+  More generally if we have a function $f : RR^3 -> RR$ we define the
+  *scalar-field surface integral* of $f$ over $cal(S)$ as
   $ iint_(cal(R)) f(bf(r)(u,v)) lr(|(partial bf(r))/(partial u) times (partial bf(r))/(partial v)|) dif u dif v. $
 ]
 So like before, surface area is the integral of the constant function $1$.
+
+#typesig[
+  The scalar-field surface integral (and hence surface area as well) outputs a scalar.
+]
 
 Yes, there's a cross product. Yes, it sucks (see @sec-cross-sucks).
 This is one case where you probably would prefer to use the shorthand
@@ -114,8 +122,8 @@ $ dif S := lr(|(partial bf(r))/(partial u) times (partial bf(r))/(partial v)|) d
 so that one can swallow surface area into just
 $ op("Area")(cal(S)) &:= iint_(cal(S)) dif S $
 where we also cut out the region $cal(R)$ on our cartographer's map from the notation;
-instead we write $cal(S)$ directly
-More generally the integral of $f$ is just $iint_(cal(S)) f dif S$.
+instead we write $cal(S)$ directly.
+Similarly we have an abbreviation $iint_(cal(S)) f dif S$.
 
 #example(title: [Example: Surface area of a sphere])[
   Show that the surface area of the sphere $x^2+y^2+z^2=1$ is $4 pi$.

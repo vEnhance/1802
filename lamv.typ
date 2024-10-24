@@ -95,12 +95,6 @@ For comparison, Part Hotel corresponds to §14, §15, §18, §19, §20, §21 of 
 #include "src/stokes.typ"
 #pagebreak()
 
-#part[Solutions to mock midterm problems]
-#include "src/sol-mt1.typ"
-#pagebreak()
-#include "src/sol-mt2.typ"
-#pagebreak()
-
 #part[Solutions to normal exercises]
 #include "src/sol-bravo.typ"
 #pagebreak()
@@ -109,6 +103,12 @@ For comparison, Part Hotel corresponds to §14, §15, §18, §19, §20, §21 of 
 #include "src/sol-foxtrot.typ"
 #pagebreak()
 #include "src/sol-golf.typ"
+#pagebreak()
+
+#part[Solutions to mock midterm problems]
+#include "src/sol-mt1.typ"
+#pagebreak()
+#include "src/sol-mt2.typ"
 #pagebreak()
 
 #part[Appendix]

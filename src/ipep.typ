@@ -76,7 +76,7 @@ Here's a rundown of the things in the chart.
   In other words, if you have $d=1$ and $n > 1$,
   you basically replace it right away with a single integral
   over the parametrizing line segment.
-  In other words *line integrals translate directly into single 18.01 integrals*
+  In other words *line integrals translate directly into single 18.01 integrals*.
 
 - When $d = 2$ and $n = 3$, we have the *surface integral*.
   To compute these, you usually have to parametrize a _surface_;
