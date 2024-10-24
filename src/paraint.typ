@@ -62,7 +62,7 @@ We'll pretty much only use this generalization for mass/density type questions, 
 As I mentioned in the shorthand table (@table-shorthand), many other sources abbreviate
 $ dif s := lr(|bf(r)'(t)|) dif t. $
 Whenever this shorthand is being used, one frequently cuts out the start and stop time too.
-The way this is done is, you let $cal(C)$ denote the curve that $bf(r)(t)$ cuts out.
+The way this is done is, you let $cal(C)$ denote the curve that $bf(r)(t)$ traces out.
 Then we abbreviate
 $ int_("start time")^("stop time") f(bf(r)(t)) lr(|bf(r)'(t)|) dif t $
 all the way down to just

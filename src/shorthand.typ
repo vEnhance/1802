@@ -94,7 +94,7 @@ So here's the deal.
   and I might occasionally relent.
 - Third, in each place where the shorthand _could_ be used for the first time,
   I'll mention it.
-  That is, I'll say each time a new row of the table is introduced.
+  That is, I'll let you know every time a new row of the table is introduced.
 
 But again, I think the thing to take away is that each of these is a shorthand.
 So if you don't like shorthands, you can just always replace it with the thing it stands for.

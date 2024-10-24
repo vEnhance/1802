@@ -294,7 +294,7 @@ Instead, treat this as a template for all the theorem statements you are going t
 *Every red arrow has an associated Stokes' theorem*.
 Know this going in to each of the concepts to follow.
 
-== Stay determined
+== [TEXT] Stay determined
 
 This is probably super overwhelming right now,
 and @fig-int-chart-stokes might be frightening to look at
@@ -302,16 +302,13 @@ because there's so much information in it.
 Don't worry, we'll take @fig-int-chart-stokes apart one piece
 at a time over the rest of the semester.
 
-- First, I'll tell you how to compute each of grad, curl, div in @sec-gcd.
-  This section has no integration in it.
-- Second, I'll talk about work, and how it's computed.
-  I'll also
-
-  (Actually we defined the first one already, so it's just curl and div.)
-- Third, I'll tell you how grad, curl, and div interact,
-  using the _generalized Stokes' theorem_.
-  Generalized Stokes' theorem is generally concerned the main tourist attraction
-  of the 18.02 syllabus.
+- In @sec-gcd, I'll tell you how to compute each of grad, curl, div.
+  This section has no integration in it, so if you hate integration, you'll like this section.
+- I'll start talking about work in @sec-work.
+  I'll define it, and then I'll show you how it ties in to the fundamental theorem of calculus
+  (which are some of the cases of generalized Stokes' theorem).
+- Then @sec-flux will define flux.
+  This will let us talk about the rest of the cases of generalized Stokes' theorem.
 
 == [EXER] Exercises
 

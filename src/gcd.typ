@@ -25,28 +25,34 @@ There is no integration in this section, and so it's actually pretty straightfor
   kind: table
 )
 
-#digression(title: [Digression on aquatics and calculus exams])[
-  By the way, a quick word about aquatics.
-  For each of these, I'm trying to tell you how to think of the quantity in terms of real life.
-  This may help you internalize the material.
-  However, on the actual 18.02 exam, you will find that most of the functions
-  you are taking curl's or divergence's of are rather artificial functions.
-  So your aquatic intuition is more or less useless for actually doing calculation.
+== [SIDENOTE] Aquatics are unlikely to improve your exam score
 
-  It's kind of how like, you were told in 18.01 that derivatives measured rate of change.
-  But then on the calculus final exam you were asked things like
-  "differentiate $f(x) = sin(e^x)^2$".
-  Probably it wasn't much help to know that $f'(x)$ was the rate of change of $f$,
-  because the function $f$ is completely artificial and would never appear in real life.
-  The question was really testing whether you can apply a recipe
-  with the chain rule to get $f'(x) = 2e^x sin(e^x) cos(e^x)$.
+By the way, a quick word about aquatics.
+For each of these, I'm trying to tell you how to think of the quantity in terms of real life.
+This may help you internalize and remember the results.
+However, on the actual 18.02 exam, you will find that most of the functions
+you are taking curl's or divergence's of are rather artificial functions.
+So your aquatic intuition is more or less useless for actually doing calculation.
 
-  The same is true in this section.
-  Exam questions about grad, curl, div tend to use artificial functions.
-  So the aquatic intuition is not going to be directly helpful
-  and you just need to be good at following the recipe.
-]
+It's kind of how like, you were told in 18.01 that derivatives measured rate of change.
+But then on the calculus final exam you were asked things like
+"differentiate $f(x) = sin(e^x)^2$".
+Probably it wasn't much help to know that $f'(x)$ was the rate of change of $f$,
+because the function $f$ is completely artificial and would never appear in real life.
+The question was really testing whether you can apply a recipe
+with the chain rule to get $f'(x) = 2e^x sin(e^x) cos(e^x)$.
 
+The same is true in this section.
+Exam questions about grad, curl, div tend to use artificial functions.
+So the aquatic intuition is not going to be directly helpful
+and you just need to be good at following the recipe.
+
+For this reason, in these notes, I'm not even going to bother trying to explain
+where the curl and div formulas come from.
+Many have tried and many have failed.
+If you want to see the grown-ups discuss this,
+see #url("https://mathoverflow.net/q/21881/70654"),
+where the top comment is "My advice: at this level, stick _strictly_ to the textbook".
 
 == [TEXT] Gradient
 
@@ -290,12 +296,28 @@ negative numbers mean clockwise spin.
   $ bf(F)(x,y) = vec(f(x,y),g(x,y)) $
   is a 2D vector field.
   Then the *2D scalar curl* of $bf(F)$ is the scalar field defined by
-  $ op("curl") bf(F) := nabla times bf(F)
+  $ op("curl") bf(F) :=
     := (partial g) / (partial x) - (partial f) / (partial y). $
 ]
 
+#tip(title: [Tip: 2D scalar curl is a special case of 3D scalar curl])[
+  The mnemonic $nabla times bf(F)$ actually still works if you just pretend $bf(F)$
+  is a 3D vector field where the $z$-coordinate is always zero.
+  That is, given $bf(F) = vec(f(x,y), g(x,y))$, consider the mnemonic
+  $ nabla times vec(f(x,y), g(x,y), 0). $
+  If you follow through, you will find you get
+  $ det mat(bf(e)_1, bf(e)_2, bf(e)_3;
+      partial / (partial x), partial / (partial y), partial / (partial z);
+      f(x,y), g(x,y), 0). $
+  All the terms involving $partial / (partial z)$ disappear, because there's no $z$ anywhere.
+  So only the terms in front of $bf(e)_3$ survives, and you get
+  $ det mat(partial / (partial x), partial / (partial y); f(x,y), g(x,y)) bf(e)_3
+      = ((partial g) / (partial x) - (partial f) / (partial y)) bf(e)_3. $
+  Like before, this is all just mnemonic.
+]
+
 It's still true that the curl of a conservative 2D vector field is zero.
-Try to prove it directly.
+(Try to prove it directly.)
 
 #todo[example]
 
@@ -316,5 +338,13 @@ So I'll just mention it briefly.
 The physical interpretation is the same too, just in 2D bodies of water.
 
 #todo[example of 2D divergence]
+
+== [TEXT] Where do all these formulas come from anyway?
+
+We talked about the gradient at length.
+
+Also, it is totally out of the scope of 18.02 to explain why any of these definitions
+match their physical meaning. Many have tried, and many have failed.
+
 
 == [EXER] Exercises
