@@ -2,7 +2,7 @@
 
 = All the gazillion weird $dif$ shorthands
 
-== [TEXT] Shorthand for area
+== [TEXT] The shorthand $dif A := dif x dif y$ for area
 
 Up to here I've been pretty careful to always write
 $ iint_(cal(R)) f(x,y) dif x dif y$
@@ -22,6 +22,13 @@ For that reason, at this point I hereby bestow on you the following definition:
 ]
 So now you can just write:
 $ int_(x=0)^5 int_(y=0)^(3) f(x,y) dif A. $
+
+#tip(title: [Variable names might not even be there])[
+  In fact, when you use shorthand, you may even leave out $x$ and $y$ from $f$ and just write
+  $ int_(x=0)^5 int_(y=0)^(3) f dif A. $
+  So any time shorthand is being used,
+  don't be surprised if the variable names are missing altogether.
+]
 
 Be careful about overdoing this shorthand!
 For example, if you are working with _polar_ coordinates, then in fact

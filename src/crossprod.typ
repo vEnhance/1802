@@ -9,7 +9,7 @@ Like the dot product, the cross product also has two definitions, one algebraic 
 == [TEXT] The two definitions of the cross product
 
 
-== [SIDENOTE] The cross product sucks
+== [SIDENOTE] The cross product sucks <sec-cross-sucks>
 
 Compared to dot products and determinants,
 the cross product might feel the most unnatural, for good reason ---

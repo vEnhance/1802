@@ -225,6 +225,10 @@ in vague non-precise terms (we'll make precise later), for each of these six red
   $ f(Q) - f(P) = int_("start time")^("stop time") nabla f(bf(r)(t)) dot bf(r)'(t) dif t. $
   The right-hand side is the work done by $nabla f$ on the path $bf(r)$.
 
+  If you use shorthand where let $cal(C)$ be the curve formed by $bf(r)$,
+  this could be rewritten as
+  $ f(Q) - f(P) = int_(cal(C)) nabla f dot dif bf(r). $
+
 / Line integral $->$ double/area integral:
   Suppose now $bf(F) : RR^2 -> RR^2$ is a vector field.
   Write $bf(F) = (f(x,y), g(x,y))$.
@@ -237,33 +241,56 @@ in vague non-precise terms (we'll make precise later), for each of these six red
   The weird expression $(partial g) / (partial x) - (partial f) / (partial y)$
   in the right-hand side is called the 2-d scalar curl, but we haven't defined this term yet.
 
-  Of all the variants here, Green's theorem is definitely the most unnatural one.
+  If you use shorthand as in @table-shorthand, this can be simplified.
+  Let $cal(C)$ be the curve formed by $bf(r)$,
+  this could be rewritten as
+  $ int_(cal(C)) bf(F) dot dif bf(r)
+    = iint_(cal(R)) ((partial g) / (partial x) - (partial f) / (partial y)) dif A. $
+
+  Of all the results here, I think Green's theorem is the most unnatural one.
+  (Poonen's notes deliberately do Green's theorem last, a decision I like.)
   There's a second form of Green's theorem I'll show you when I get to it.
   However, ironically the 3-D red arrows make more sense than the 2-D red arrows.
 
 / Line integral $->$ surface integral:
   Suppose now $bf(F) : RR^3 -> RR^3$ is a vector field.
-  Let $bf(r)_2(u,v)$ parametrizes some two dimensional surface (like a metal sheet),
+  Let $bf(r)_2(u,v)$ parametrizes some two dimensional surface $cal(S)$ (like a metal sheet),
   and suppose further that the _boundary_ of this surface is parametrized by a curve $bf(r)_1(t)$
   (e.g. the edges of the sheet).
   Then _Stokes' theorem_ (the non-generalized version) says that
   $ int_("start time")^("stop time") bf(F)(bf(r)_1(t)) dot bf(r)_1'(t) dif t
-    = iint_(cal(R)) (nabla times bf(F))(bf(r)_2(u,v)) lr(|(partial bf(r)_2)/(partial u) times (partial bf(r)_2)/(partial v)|) dif u dif v. $
+    = iint_(cal(S)) (nabla times bf(F))(bf(r)_2(u,v)) dot lr(((partial bf(r)_2)/(partial u) times (partial bf(r)_2)/(partial v))) dif u dif v. $
   The nonsense expression $nabla times bf(F)$ is called the curl, but we haven't defined this term yet.
+
+  The shorthand version following @table-shorthand is much easier to read,
+  because the shorthand $dif bf(S)$ stands for the entire hunk
+  $lr(((partial bf(r)_2)/(partial u) times (partial bf(r)_2)/(partial v))) dif u dif v$.
+  Suppose the curve for $bf(r)_1$ is denoted $cal(C)$.
+  Then the above equation compresses all the way down to
+  $ int_(cal(C)) bf(F) dot dif bf(r)_1 = iint_(cal(S)) (nabla times bf(F)) dot dif bf(S). $
+  so yes, that does save a lot of characters.
+
 
 / Surface integral $->$ triple/volume integral:
   Suppose now $bf(F) : RR^3 -> RR^3$ is a vector field.
   Let $cal(R)$ be some three-dimensional region (e.g. metal ball).
   Suppose further the boundary of $cal(R)$ is parametrized
-  by some two-dimensional surface $bf(r)(u,v)$ (e.g. metal sphere).
+  by some two-dimensional surface $bf(r)(u,v)$ (e.g. metal sphere), which we call $cal(S)$.
   Then the _divergence theorem_ says that
-  $ iint_(u,v) bf(F)(bf(r)(u,v)) lr(|(partial bf(r))/(partial u) times (partial bf(r))/(partial v)|) dif u dif v
+  $ iint_(cal(S)) bf(F)(bf(r)(u,v)) dot lr(((partial bf(r))/(partial u)
+    times (partial bf(r))/(partial v))) dif u dif v
     =  iiint_(cal(R)) (nabla dot bf(F))(x,y,z) dif x dif y dif z. $
+  If we adopt shorthand again, this reads just
+  $ iint_(cal(S)) bf(F) dot dif bf(S) = iiint_(cal(R)) (nabla dot bf(F)) dif V. $
+
   The nonsense expression $nabla dot bf(F)$ is called the divergence, but we haven't defined this term yet.
 
-Again, *these bullets will not make sense to you yet*,
-because we haven't defined any of the terms in it.
+Again, these bullets will not make sense to you yet (except the first one,
+which is the 18.01 fundamental theorem of calculus),
+because there are several undefined terms.
 Instead, treat this as a template for all the theorem statements you are going to learn soon.
+*Every red arrow has an associated Stokes' theorem*.
+Know this going in to each of the concepts to follow.
 
 == Stay determined
 
@@ -275,8 +302,10 @@ This will be a three-phase program:
 - First, I'll tell you how to _integrate_ work and flux of a vector field.
 - Second, I will define _individually_ each of the three transformations grad, curl, div.
   (Actually we defined the first one already, so it's just curl and div.)
-- Third, I'll tell you how grad, curl, and div interact with each other,
-  using the notorious _generalized Stokes' theorem_.
+- Third, I'll tell you how grad, curl, and div interact,
+  using the _generalized Stokes' theorem_.
+  Generalized Stokes' theorem is generally concerned the main tourist attraction
+  of the 18.02 syllabus.
 
 == [EXER] Exercises
 
