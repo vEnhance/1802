@@ -1,6 +1,6 @@
 #import "@local/evan:1.0.0":*
 
-= Triple integrals
+= Triple integrals <sec-triple>
 
 We're going to now consider integrals with three variables, rather than two.
 If you understood double integrals, then triple integrals is more of the same:
@@ -17,8 +17,8 @@ except with two variables rather than three.
 - Over a rectangular prism,
   we still integrate $int_(x = a_1)^(b_1) int_(y = a_2)^(b_2) int_(z = a_3)^(b_3) f(x,y,z) dif z dif y dif x$
   one variable at a time.
-- You can use $dif V := dif x dif y dif z$ as a shorthand if you want,
-  but I won't do so.
+- You can use $ dif V := dif x dif y dif z $ as a shorthand if you want;
+  this is the last row of @table-shorthand.
 - Instead of $x y$ integration we have $x y z$-integration.
   Whereas for double integrations you had two choices ($x$ outer and $y$ inner vs. $y$ outer and $x$ inner),
   now you have $3! = 6$ choices for the order to do things in:
@@ -39,7 +39,7 @@ except with two variables rather than three.
       (partial u) / (partial z), (partial v) / (partial z), (partial w) / (partial z);
     ). $
 - Volume is $op("Vol")(cal(R)) := iiint_(cal(R)) dif x dif y dif z$.
-- If $rho : cal(R) -> RR$ is density, then
+- If $rho : cal(R) -> RR$ is a density function for a 3-D space, then
   $ op("Mass")(cal(R)) := iiint_(cal(R)) rho(x,y,z) dif x dif y dif z $ is the total mass.
 - The center of mass is given by three coordinates now:
   $ (

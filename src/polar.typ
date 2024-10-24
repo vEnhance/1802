@@ -34,8 +34,12 @@ while if you have polar coordinates then $dif A = r dif r dif theta$.
 (They're equal, after all.)
 Again, this can be made more precise later on in life once you have access
 to a new object called a _differential form_,
-but for now just treat it as a mnemonic for one very common change of variables,
+but for now just treat it as a mnemonic for one really common change of variables,
 rather than a formal statement.
+I'm still going to avoid writing $dif A$ for now,
+so that when you see $dif x dif y$ or $dif y dif x$ you know you're _supposed_
+to make a change of variables
+(and won't accidentally write $dif r dif theta$ with the factor of $r$ missing).
 
 The upshot is that in practice:
 #idea[
@@ -47,7 +51,7 @@ The upshot is that in practice:
 For example, if you want to find the area of the unit disk,
 you know in polar coordinates the unit disk is $0 <= r <= 1$ and $0 <= theta <= 2pi$,
 so you can just directly think via the integral
-$ int_(r=0)^1 int_(theta=0)^(2 pi) r dif r dif theta $
+$ int_(r=0)^1 int_(theta=0)^(2 pi) r dif theta dif r $
 and not even bother writing the $x y$-version $iint_(x^2+y^2<=1) dif x dif y$.
 Compared to back in @sec-chvar-polar, it's the same thing;
 it's just a shift in mindset where you go from

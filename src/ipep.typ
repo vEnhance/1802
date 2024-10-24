@@ -95,6 +95,25 @@ We'll see some examples of this later;
 but it'll actually be the _last_ thing we cover in part Golf.
 Most of part Golf will be dedicated towards double and triple integrals instead.
 
+== [TEXT] Warning about the bottom trio <sec-warning-trio>
+
+The integrals in @fig-int-chart-triangle would be better called
+*scalar-field line integral* and *scalar-field surface integral* to emphasize
+that this is integration for a _scalar_ function $f : RR^2 -> RR$ or $f : RR^3 -> RR$.
+The reason you won't see this term much is the following important caveat
+*the line integral and surface integral in @fig-int-chart-triangle are used rarely*.
+
+In 18.02 the only cases where we use these are:
+- Arc length (for $d=1$) and surface area (for $d=2$)
+- Questions related to mass, or center of mass, of objects like wires
+  (for $d=1$) or metal plates (for $d=2$).
+
+In this book, this will happen in @sec-scalar-field-ints, and then
+after that the line and surface integrals will
+always be the *vector field* variant instead (in Part Hotel).
+If you want to flip ahead,
+take a glance at @fig-int-chart-stokes at @table-purples.
+
 == [TEXT] Idea of how these are computed when $d = n$ and $n >= 2$
 
 So as I just said, focus for now on $d = n = 2$ or $d = n = 3$
@@ -125,7 +144,7 @@ or you are trying to do a *volume integral* over the ball $x^2+y^2+z^2 <= 1$ for
 
 - If rewriting as a double or triple integral fails,
   then the strategy is instead to *change variables*.
-  This method will be covered extensively later.
+  This method will be covered extensively in @sec-chvar.
 
 So to summarize
 #idea[

@@ -12,18 +12,17 @@ which is another name for a function that inputs points and outputs vectors.
   that assigns to each point $P in RR^n$ a vector $bf(F)(P) in RR^n$.
 ]
 
-You actually have met these before
+You actually have met a lot of vector fields before:
 #example[
   Every gradient is an examples of a vector fields!
   That is, if $f : RR^n -> RR$, then $nabla f$ is a vector field for $RR^n$.
 ]
-In fact, there's a word for this:
+This case is so important that there's a word for it:
 #definition[
   A vector field for $RR^n$ is called *conservative*
   if it happens to equal $nabla f$ for some function $f : RR^n -> RR$.
 ]
 In Part Hotel we'll meet vector fields that aren't conservative too.
-
 #typesig[
   For standalone vector fields, we'll always use capital bold letters like $bf(F)$ to denote them.
   That said, remember $nabla f$ is _also_ a vector field.
@@ -75,7 +74,7 @@ Let's put these examples into aquatic terms.
   (For mountainous rivers, $f$ might instead be thought of as decreasing in elevation.)
 
   Then the vector field corresponding to the river is the gradient $nabla f$.
-  Remember, the gradient of $f$ tells you what direction to move in to increase $f$.
+  Remember, the gradient $nabla f$ tells you what direction to move in to increase $f$.
   And if you throw a ball into a river, its motion could be described simply as:
   the ball moves downstream.
 ]
@@ -99,8 +98,13 @@ Let's put these examples into aquatic terms.
 
 == [TEXT] Preview of integration over vector fields
 
-So far everything's great.
-But soon we'll have to start integrating over vector fields.
+As we mentioned in @sec-warning-trio,
+the line integral and surface integral we encountered in Part Golf
+(which had a scalar-valued function) are actually the ugly ducklings that don't get used.
+For most cases, if you are doing a line integral or surface integral,
+you actually want *vector-valued line and surface integrals*,
+where one takes a line or surface integral over the entire field.
+
 That's when the type signatures go crazy.
 
 In order for this to be even remotely memorable,
@@ -137,6 +141,29 @@ These terms will be defined next section.
   i.e. work and flux are both numbers, not vectors.
 ]
 
+As we mentioned in @sec-warning-trio,
+the purple pictures will basically replace the corresponding green ones.
+Conversely, vector fields will usually only be integrated
+in the situations described in the purple picture.
+This is summarized in @table-purples.
+
+#figure(
+  table(
+    columns: 3,
+    align: left,
+    table.header([], [For scalar fields $f : RR^n -> RR$], [For vector fields $bf(F): RR^n -> RR^n$]),
+    [*18.01 integral*], [✅ Used all the time], [❌ Never used in 18.02],
+    [*Line integral*], [🔵 Only for arc length and mass], [✅ Used all the time (work)],
+    [*Double/Area integral*], [✅ Used all the time], [❌ Never used in 18.02],
+    [*Surface integral*], [🔵 Only for surface area and mass], [✅ Used all the time (flux)],
+    [*Triple/Volume integral*], [✅ Used all the time], [❌ Never used in 18.02],
+  ),
+  caption: [What the various kinds of integrals are used for.
+    The integrals with ❌ markers never appear in 18.02,
+    so they don't appear in the chart @fig-int-chart-stokes either.],
+  kind: table
+) <table-purples>
+
 === The six red arrows
 
 There are also *six new red arrows*.
@@ -155,7 +182,90 @@ We'll soon meet three more transformations:
 - *3D curl*, which converts a vector field on $RR^3$ into _another_ vector field;
 - *divergence*, which converts a vector field on $RR^3$ _back_ into a scalar-valued function.
 
-=== Stay determined
+== [TEXT] Foreshadowing of Stokes' theorem
+
+All the red arrows have two important properties I will tell you _right now_.
+Because I haven't talked much about any of the red arrows yet,
+*you won't be able to understand what this means yet*.
+That's okay.
+We'll go over what this means for each individual red arrow means when we get to it.
+However, I want tell you _in advance_ that every time we meet a red arrow,
+there will be a case of Stokes' theorem that applies to it.
+
+#memo(title: [Memorize: Two red arrows gives zero])[
+  In @fig-int-chart-stokes,
+  if you follow two red arrows consecutively, you get zero.
+]
+
+#memo(title: [Memorize: Generalized Stokes' Theorem, for 18.02])[
+  In @fig-int-chart-stokes, take any of the six red arrows
+  #text(rgb("ff0000"))[$X -> op("del")(X)$].
+  Let $cal(R)$ be a compact region.
+  Then the integral of $X$ over the *boundary* of $cal(R)$
+  equals the integral of $op("del")(X)$ over $cal(R)$:
+  $ int_(op("boundary")(cal(R))) X = int_(cal(R)) op("del")(X). $
+]
+
+In fact let me tell you what generalized Stokes' theorem says,
+in vague non-precise terms (we'll make precise later), for each of these six red arrows:
+
+/ Evaluation $->$ 18.01 integral:
+  For the $(dif f)/(dif x)$ arrow joining evaluation to the 18.01 integral,
+  it's the fundamental theorem of calculus.
+  The region $cal(R)$ is the line segment $[a,b]$, and the boundary is the two endpoints $a$ and $b$.
+  Then we have the _fundamental theorem of calculus_:
+  $ f(b) - f(a) = int_a^b (dif f) / (dif x)(x) dif x. $
+
+/ Evaluation $->$ line integral ($times 2$):
+  There are two such red arrows, but the statement is the same for both.
+  Suppose $bf(r)(t)$ parametrizes a path joining point $P$ to $Q$
+  (say, the line segment $P Q$, or some more curvy path).
+  The region $cal(R)$ is this path, and the endpoints are $P$ and $Q$:
+  Then we get the _fundamental theorem of calculus for line integrals_:
+  $ f(Q) - f(P) = int_("start time")^("stop time") nabla f(bf(r)(t)) dot bf(r)'(t) dif t. $
+  The right-hand side is the work done by $nabla f$ on the path $bf(r)$.
+
+/ Line integral $->$ double/area integral:
+  Suppose now $bf(F) : RR^2 -> RR^2$ is a vector field.
+  Write $bf(F) = (f(x,y), g(x,y))$.
+  Let $cal(R)$ be some two dimensional region, like a disk.
+  Suppose further that the _boundary_ of $cal(R)$ is parametrized by a curve $bf(r)(t)$
+  (e.g. the circumference of the disk).
+  Then _Green's theorem_ says that
+  $ int_("start time")^("stop time") bf(F)(bf(r)(t)) dot bf(r)'(t) dif t
+    = iint_(cal(R)) ((partial g) / (partial x) - (partial f) / (partial y)) dif x dif y. $
+  The weird expression $(partial g) / (partial x) - (partial f) / (partial y)$
+  in the right-hand side is called the 2-d scalar curl, but we haven't defined this term yet.
+
+  Of all the variants here, Green's theorem is definitely the most unnatural one.
+  There's a second form of Green's theorem I'll show you when I get to it.
+  However, ironically the 3-D red arrows make more sense than the 2-D red arrows.
+
+/ Line integral $->$ surface integral:
+  Suppose now $bf(F) : RR^3 -> RR^3$ is a vector field.
+  Let $bf(r)_2(u,v)$ parametrizes some two dimensional surface (like a metal sheet),
+  and suppose further that the _boundary_ of this surface is parametrized by a curve $bf(r)_1(t)$
+  (e.g. the edges of the sheet).
+  Then _Stokes' theorem_ (the non-generalized version) says that
+  $ int_("start time")^("stop time") bf(F)(bf(r)_1(t)) dot bf(r)_1'(t) dif t
+    = iint_(cal(R)) (nabla times bf(F))(bf(r)_2(u,v)) lr(|(partial bf(r)_2)/(partial u) times (partial bf(r)_2)/(partial v)|) dif u dif v. $
+  The nonsense expression $nabla times bf(F)$ is called the curl, but we haven't defined this term yet.
+
+/ Surface integral $->$ triple/volume integral:
+  Suppose now $bf(F) : RR^3 -> RR^3$ is a vector field.
+  Let $cal(R)$ be some three-dimensional region (e.g. metal ball).
+  Suppose further the boundary of $cal(R)$ is parametrized
+  by some two-dimensional surface $bf(r)(u,v)$ (e.g. metal sphere).
+  Then the _divergence theorem_ says that
+  $ iint_(u,v) bf(F)(bf(r)(u,v)) lr(|(partial bf(r))/(partial u) times (partial bf(r))/(partial v)|) dif u dif v
+    =  iiint_(cal(R)) (nabla dot bf(F))(x,y,z) dif x dif y dif z. $
+  The nonsense expression $nabla dot bf(F)$ is called the divergence, but we haven't defined this term yet.
+
+Again, *these bullets will not make sense to you yet*,
+because we haven't defined any of the terms in it.
+Instead, treat this as a template for all the theorem statements you are going to learn soon.
+
+== Stay determined
 
 This is probably super overwhelming right now,
 and @fig-int-chart-stokes might be frightening to look at because there's so much information in it.
@@ -179,7 +289,3 @@ This will be a three-phase program:
   (which can be downloaded at #url("https://web.evanchen.cc/upload/1802/integrals-stokes.pdf"))
   and hang it in your room.
 ] <exer-poster>
-
-#pagebreak()
-
-= Work and flux

@@ -109,19 +109,16 @@ i.e. $iint_(x^2+y^2<=1) f(x,y) dif x dif y$ would mean the integral of $f$
 over the unit disk.
 
 Here's how you do it.
-#warning(title: [Warning: We won't use all the other $dif$ variants like $dif A$, $dif bf(n)$, etc. in LAMV])[
+#remark[
   A lot of other sources might write this as
   $iint_(cal(R)) f(x,y) dif A$ instead, which is shorter;
   it's understood that the area element $dif A$ is shorthand for $dif x dif y$.
-  However, I'll usually explicitly write $dif x dif y$,
-  because I don't want to hide the integration variables.
 
-  Reason: in the future, if you use different coordinate systems, $dif A$ can look different.
-  For example, in polar coordinates $(r, theta)$ defined later,
-  you'll have $dif A = r dif r dif theta$ instead (so $dif A != dif r dif theta$).
-  So rather than hide these all in "$dif A$", I'll actually write out what it is each time.
-
+  However, when you're starting off I will still explicitly write $dif x dif y$,
+  because I don't want to hide the integration variables --- training wheels, I guess.
   That said, if you know what you're doing and want to write $dif A$ to save time, go for it!
+
+  We'll talk more about the weirder $dif$ symbols later.
 ]
 
 #recipe(title: [Recipe for converting to $x y$-integration])[

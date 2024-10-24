@@ -75,6 +75,8 @@ For comparison, Part Golf corresponds to §13 and §17 of #poonen.
 #pagebreak()
 #include "src/polar.typ"
 #pagebreak()
+#include "src/parade.typ"
+#pagebreak()
 #include "src/triple.typ"
 #pagebreak()
 #include "src/paraint.typ"
@@ -83,6 +85,10 @@ For comparison, Part Golf corresponds to §13 and §17 of #poonen.
 #part[Part Hotel: Grad, Curl, and Div]
 For comparison, Part Hotel corresponds to §14, §15, §18, §19, §20, §21 of #poonen.
 #include "src/vecfield.typ"
+#pagebreak()
+#include "src/work.typ"
+#pagebreak()
+#include "src/flux.typ"
 #pagebreak()
 #include "src/gcd.typ"
 #pagebreak()

@@ -96,7 +96,7 @@ add(t*axis2);
 t = shift(8,0);
 path surface = (-0.8*w,-0.1*w)..(-0.2*w,-0.3*w)..(0.6*w,-0.6*w)..(0.7*w,-0.1*w)..(0.3*w,0.4*w)..(-0.5*w,0.3*w)..cycle;
 filldraw(t*surface, lightgrey, black+1.4);
-draw("$\int\limits_{u_0}^{u_1} \int\limits_{v_0}^{v_1} f(\mathbf r(u,v)) |\pdv{\bf{r}}{u} \times \pdv{\bf{r}}{v}| \odif u \odif v$", t*(0,-w), dir(-90), intfont);
+draw("$\int\limits_{u_0}^{u_1} \int\limits_{v_0}^{v_1} f(\mathbf r(u,v)) |\pdv{\mathbf{r}}{u} \times \pdv{\mathbf{r}}{v}| \odif u \odif v$", t*(0,-w), dir(-90), intfont);
 label("Surface integral", t*dir(90), deepgreen);
 add(t*axis3);
 

@@ -1,6 +1,6 @@
 #import "@local/evan:1.0.0":*
 
-= Change of variables
+= Change of variables <sec-chvar>
 
 We'll do just two variables for now;
 the 3-D situation is exactly the same and we cover it later.
@@ -85,7 +85,7 @@ then sometimes $bf(T)$ is also called a cell
 ]
 
 #figure(
-  box(image("media/xkcd-977.png", width: 40%), stroke: 1pt),
+  box(image("media/xkcd-977.png", width: 60%), stroke: 1pt),
   caption: [One of the map projections from #link("https://xkcd.com/977/")[XKCD 977],
   a chart titled _What your favorite map projection says about you_.
   There's several more if you're curious.],
@@ -204,7 +204,7 @@ Let's see an example of how to carry out this integration.
 #soln[
   In the previous sections we introduced variables $u = y/x$ and $v = x y$,
   and considered the region $ cal(S) = [1/4, 4] times [16/25, 16/9] $
-  which were the pairs of points $(u,v$).
+  which were the pairs of points $(u,v)$ in that rectangle we described earlier.
   We made a transition map $bf(T) : cal(S) -> cal(R)$ written as either
   $ bf(T)(u,v) &= (sqrt(v/u), sqrt(u v)) \
     bf(T)^(-1)(x,y) &= (y/x, x y). $
