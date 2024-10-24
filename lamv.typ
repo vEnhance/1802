@@ -86,11 +86,11 @@ For comparison, Part Golf corresponds to §13 and §17 of #poonen.
 For comparison, Part Hotel corresponds to §14, §15, §18, §19, §20, §21 of #poonen.
 #include "src/vecfield.typ"
 #pagebreak()
+#include "src/gcd.typ"
+#pagebreak()
 #include "src/work.typ"
 #pagebreak()
 #include "src/flux.typ"
-#pagebreak()
-#include "src/gcd.typ"
 #pagebreak()
 #include "src/stokes.typ"
 #pagebreak()
