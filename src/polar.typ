@@ -43,7 +43,7 @@ to make a change of variables
 
 The upshot is that in practice:
 #idea[
-  Once you remember that $dif x dif y$ turns into $1 dif r dif theta$,
+  Once you remember that $dif x dif y$ turns into $r dif r dif theta$,
   you can jump into problems directly in polar coordinates,
   skipping the $x$ and $y$ altogether.
 ]

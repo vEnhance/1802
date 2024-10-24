@@ -22,8 +22,9 @@ For that reason, at this point I hereby bestow on you the following definition:
 ]
 So now you can just write:
 $ int_(x=0)^5 int_(y=0)^(3) f(x,y) dif A. $
+I guess that saves two characters.
 
-#tip(title: [Variable names might not even be there])[
+#tip(title: [Tip: Variable names are often omitted too])[
   In fact, when you use shorthand, you may even leave out $x$ and $y$ from $f$ and just write
   $ int_(x=0)^5 int_(y=0)^(3) f dif A. $
   So any time shorthand is being used,
@@ -39,10 +40,10 @@ Seriously, $dif A != dif r dif theta$!
 If you trust yourself to not forget about the factor of $r$,
 or if you're doing a calculation for which the actual variables don't matter,
 you can also use $dif A$ here.
-For example, if $cal(R)$ is the unit disk, you could write
-$ int_(cal(R)) dif A = pi $
-to say the area integral of the unit disk is $pi$ --- that's a bit nice philosophically,
-because this equation doesn't commit you to a choice of coordinates.
+For example, you might write
+$ iint_("unit disk") dif A = pi $
+to say the area integral of the unit disk is $pi$.
+(Pure mathematicians might appreciate how this does not commit to any choice of coordinates.)
 
 But if you do this, be honest with yourself about whether you trust yourself with the shorthand:
 #quote[A bad workman blames his tools.]
