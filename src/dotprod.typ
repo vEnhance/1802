@@ -69,6 +69,22 @@ I won't dwell on this proof too much in the interest of moving these notes forwa
     $ bf(v) dot bf(w) = |bf(v)| |bf(w)| cos theta = 10 dot 14 dot cos(150 degree)
       = 140 dot - sqrt(3)/2 = -70sqrt(3). $
 ]
+#figure(
+  [TODO],
+  // image("<+Path+>", width: auto),
+  caption: [Some pictures of dot product.],
+) <fig-vectors-example>
+
+
+#tip[
+  You can see from this example that computing the dot product
+  of two given vectors with coordinates is
+  way easier to do with the algebraic definition.
+  This will be true in general throughout this class:
+
+  - Use the algebraic definition when you need to do practical calculation.
+  - Use the geometric definition to interpret the result in some way.
+]
 
 #todo[an example of perpendicular in 2D]
 
@@ -81,23 +97,6 @@ This example shows something new:
 #todo[an example of lengths]
 
 #memo[The dot product of a vector with itself is the squared length.]
-
-#tip[
-  You can see from this example that computing the dot product
-  of two given vectors with coordinates is
-  way easier to do with the algebraic definition.
-  This will be true in general throughout this class:
-
-  - Use the algebraic definition when you need to do practical calculation.
-  - Use the geometric definition to interpret the result in some way.
-]
-
-#figure(
-  [TODO],
-  // image("<+Path+>", width: auto),
-  caption: [Some pictures of dot product.],
-) <fig-vectors-example>
-
 == [SIDENOTE] The proof of the equivalence of the dot product properties
 
 == [RECIPE] Checking whether two vectors are perpendicular

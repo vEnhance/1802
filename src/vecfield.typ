@@ -16,7 +16,7 @@ that gave a number at each input point rather than a vector.
 
 You actually have met a lot of vector fields before:
 #example[
-  Every gradient is an example of a vector fields!
+  Every gradient is an example of a vector field!
   That is, if $f : RR^n -> RR$, then $nabla f$ is a vector field for $RR^n$.
 ]
 This case is so important that there's a word for it:
@@ -215,8 +215,8 @@ in vague non-precise terms (we'll make precise later), for each of these six red
   For the $(dif f)/(dif x)$ arrow joining evaluation to the 18.01 integral,
   it's the fundamental theorem of calculus.
   The region $cal(R)$ is the line segment $[a,b]$, and the boundary is the two endpoints $a$ and $b$.
-  Then we have the _fundamental theorem of calculus_:
-  $ f(b) - f(a) = int_a^b (dif f) / (dif x)(x) dif x. $
+  Then we have the _fundamental theorem of calculus_ from 18.01:
+  $ f(b) - f(a) = int_a^b (dif f) / (dif x) dif x. $
 
 / Evaluation $->$ line integral ($times 2$):
   There are two such red arrows, but the statement is the same for both.

@@ -296,8 +296,7 @@ negative numbers mean clockwise spin.
   $ bf(F)(x,y) = vec(f(x,y),g(x,y)) $
   is a 2D vector field.
   Then the *2D scalar curl* of $bf(F)$ is the scalar field defined by
-  $ op("curl") bf(F) :=
-    := (partial g) / (partial x) - (partial f) / (partial y). $
+  $ op("curl") bf(F) := (partial g) / (partial x) - (partial f) / (partial y). $
 ]
 
 #tip(title: [Tip: 2D scalar curl is a special case of 3D scalar curl])[
@@ -310,7 +309,7 @@ negative numbers mean clockwise spin.
       partial / (partial x), partial / (partial y), partial / (partial z);
       f(x,y), g(x,y), 0). $
   All the terms involving $partial / (partial z)$ disappear, because there's no $z$ anywhere.
-  So only the terms in front of $bf(e)_3$ survives, and you get
+  So only the terms in front of $bf(e)_3$ survive, and you get
   $ det mat(partial / (partial x), partial / (partial y); f(x,y), g(x,y)) bf(e)_3
       = ((partial g) / (partial x) - (partial f) / (partial y)) bf(e)_3. $
   Like before, this is all just mnemonic.

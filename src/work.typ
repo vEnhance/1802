@@ -2,9 +2,7 @@
 
 = Work and conservative vector fields <sec-work>
 
-
-
-
+#todo[This entire section is to be written]
 
 #sample[
   Compute the line integral of the vector field

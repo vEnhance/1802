@@ -92,8 +92,6 @@ For comparison, Part Hotel corresponds to §14, §15, §18, §19, §20, §21 of 
 #pagebreak()
 #include "src/flux.typ"
 #pagebreak()
-#include "src/stokes.typ"
-#pagebreak()
 
 #part[Solutions to normal exercises]
 #include "src/sol-bravo.typ"
