@@ -102,6 +102,8 @@ For comparison, Part Hotel corresponds to §14, §15, §18, §19, §20, §21 of 
 #pagebreak()
 #include "src/sol-foxtrot.typ"
 #pagebreak()
+#include "src/sol-golf.typ"
+#pagebreak()
 
 #part[Appendix]
 #include "src/appendix.typ"

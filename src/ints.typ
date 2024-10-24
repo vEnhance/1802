@@ -97,7 +97,7 @@ Here's another example.
     $ - (- 1) + 1 = 1 + 1 = 2 . $
 ]
 
-== [RECIPE] Doing $x y$-integration without a rectangle
+== [RECIPE] Doing $x y$-integration without a rectangle <sec-convert-x-y-integration>
 
 In general, a lot of 2-D regions $cal(R)$ can still be done with $x y$ integration,
 even when they aren't rectangles.
@@ -452,6 +452,107 @@ the two axes don't play the same role.)
 So picturing the double integral with things like mass or center of mass
 is more in line with the 18.02 spirit, even though there is no 18.01 analog.
 
+== [RECIPE] Swapping the order of integration
+
+If you're an instructor teaching multivariable calculus,
+one trope for generating exam questions
+is to take some region $cal(R)$ that can be sliced both horizontally and vertically,
+but for which one way is much easier to integrate than the other.
+For the problem statement, you give the student the integral written in the "bad" order.
+The solution is to convert _back_ into a region $cal(R)$,
+and then use this to recover the "good" order.
+Put in recipe form:
+#recipe(title: [Recipe for swapping the order of integration])[
+  If you are given $int_(x=?)^? int_(y=?)^? f(x,y) dif y dif x$
+  and you wish to switch the order of integration the other way:
+
+  1. Convert the limits of integration back into equality format,
+    writing the region $cal(R)$.
+  2. Re-apply the recipe from @sec-convert-x-y-integration
+    using the other variable.
+]
+
+#sample[
+  Evaluate the double integral:
+  $ int_(x = 0)^2 int_(y = x/2)^(1) e^(y^2) dif y dif x . $
+]
+
+#soln[
+  To evaluate this integral, note that integrating $e^(y^2)$ directly with
+  respect to $y$ is not feasible using standard methods from 18.01.
+  Thus, we need to swap the order of integration.
+
+  First convert this back into region format:
+  $ cal(R) = cases(0 <= x <= 2, x/2 <= y <= 1). $
+  We see that $y$ goes in the range $0 <= y <= 1$.
+  Solving for $x$ in terms of $y$ gives three conditions:
+  in addition to $0 <= x <= 2$ we need $x <= 2y$.
+  Since $y <= 1$, we can ignore the condition $x <= 2$,
+  and the region can be rewritten to
+  $ cal(R) = cases(0 <= y <= 1, 0 <= x <= 2 y). $
+  Turning this _back_ into a double integral gives
+  $ int_(y=0)^1 int_(x=0)^(2y) e^(y^2) dif y dif x. $
+
+  #todo[figure]
+
+  The inner integral is with respect to $x$,
+  but the integrand $e^(y^2)$ is independent of $x$.
+  Therefore, the inner integral becomes:
+  $ int_(x = 0)^(2 y) e^(y^2) dif x = 2 y e^(y^2) . $
+  Thus, it remains to calculate
+  $ int_(y=0)^1 2y e^(y^2) dif y dif x. $
+
+  And now things are different: $2 y e^(y^2)$ _does_ have a valid anti-derivative.
+  If you use the 18.01 method or even just are good at guessing,
+  you can find the indefinite 18.01 integral
+  $ int 2 y e^(y^2) dif y = e^(y^2) + C. $
+  So the final answer to the problem is
+  $ int_(y=0)^1 2y e^(y^2) dif y dif x = lr([e^(y^2)])_(y=0)^(y=1) = e^1 - 1. #qedhere $
+]
+
+#sample[
+  Let $ k = root(5, 37/3 pi) approx 2.078. $
+  Evaluate the double integral:
+  $ int_(y = 0)^(k^2) int_(x = sqrt(y))^k y sin (x^5) dif x dif y $
+]
+#soln[
+  Integrating $sin(x^5)$ is not reasonable, so we swap the order of integration and pray.
+  The region being integrated is
+  $ cal(R) = cases(0 <= y <= k^2, sqrt(y) <= x <= k). $
+  The values of $x$ range all the way from $0$ to $k$.
+  Solving for $y$, we see that we have three constraints,
+  $0 <= y$, $y <= x^2$ and $y <= k^2$.
+  But since $x <= k$, the condition $y <= k^2$ is redundant.
+  The region can be rewritten as simply
+  $ cal(R) = cases(0 <= x <= k, 0 <= y <= x^2). $
+
+  Convert back into a double integral:
+  $ int_(x = 0)^k int_(y = 0)^(x^2) y sin (x^5) dif y dif x. $
+
+  We now compute the inner integral with respect to $y$:
+  $ int_(y = 0)^(x^2) y sin (x^5) dif y . $
+
+  Since $sin (x^5)$ is independent of $y$, we can factor it out of the integral:
+  $ sin (x^5) int_(y = 0)^(x^2) y dif y = sin (x^5) [y^2 / 2]_(y = 0)^(y = x^2) . $
+  Substituting the limits of integration:
+  $ sin (x^5) dot x^4 / 2 . $
+
+  Now substitute this result into the outer integral:
+  $ int_(x = 0)^k x^4 / 2 sin (x^5) dif x . $
+
+  Let’s perform the 18.01 $u$-substitution $u = x^5$,
+  so $dif u = 5 x^4 dif x$, or $dif x = (dif u) / (5 x^4)$.
+  The limits of integration change as follows:
+  - When $x = 0$, $u = 0$.
+  - When $x = k$, $u = 37/3 pi$.
+  Thus, knowing that $int sin(u) = -cos(u) + C$, the integral becomes:
+  $ 1 / 2 int_(u = 0)^(37/3 pi) sin(u) / 5 dif u
+    &= 1 / 10 int_(u = 0)^(37/3 pi) sin(u) dif u \
+    &= 1 / 10 (- cos (37/3 pi) + cos (0)) . $
+  Using $cos (37/3 pi) = 1 / 2$ and $cos (0) = 1$, we get:
+  $ 1 / 10 (- 1 / 2 + 1) = 1 / 10 dot 1 / 2 = 1 / 20 . #qedhere $
+]
+
 == [EXER] Exercises
 
 #exer[
@@ -470,3 +571,13 @@ is more in line with the 18.02 spirit, even though there is no 18.01 analog.
   Assume $cal(R)$ has constant density.
   Calculate its center of mass.
 ]
+
+#exer[
+  Evaluate the double integral:
+  $ int_(y=0)^1 int_(x=y)^(root(5, y)) (x y^2) / (1-x^(12)) dif x dif y. $
+] <exer-swapint-fifth>
+
+#exer[
+  Evaluate the double integral:
+  $ int_(x = 0)^(pi/4) int_(y = x)^(min(pi/4, sqrt(x))) (x sin (y)) / (y^4 - y^2) dif y dif x. $
+] <exer-swapint-min>

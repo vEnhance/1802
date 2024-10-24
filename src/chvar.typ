@@ -237,6 +237,7 @@ Let's see an example of how to carry out this integration.
     bf(T)(r, theta) &:= (r cos theta, r sin theta). $
   You might recognize this as polar coordinates.
   This gives us a way to plot the unit disk as a rectangular map; see the figure.
+  #todo[figure]
   (Careful students might notice that the points on $(0,0)$ to $(1,0)$
   are repeated more than once under the transition map;
   again, in 18.02 we allow this repetition on the boundary.)
