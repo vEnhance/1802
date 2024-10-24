@@ -98,15 +98,7 @@ There are some things you could be asked:
 I don't know if there's a word for the absolute value of the acceleration vector
 (the way speed is the absolute value of the velocity vector).
 
-#recipe(title: [Recipe for parametric integration])[
-  To integrate $bf(r)(t)$ between two times, take the integral of each component:
-  $ integral_("start time")^("stop time") bf(r)(t) dif t =
-    vec(
-      integral_("start time")^("stop time") x(t) dif t,
-      integral_("start time")^("stop time") y(t) dif t
-    ). $
-  For three-variable $bf(r)(t) = angle.l x(t), y(t), z(t) angle.r$, do the same thing with three components.
-]
+One more thing to mention now:
 #recipe(title: [Recipe for arc length])[
   The *arc length* from time $t_"start"$ to $t_"stop"$ is the integral of the speed:
   $ "arc length" = integral_("start time")^("stop time") |bf(r)'(t)| dif t. $
@@ -116,10 +108,9 @@ since these are really the _definition_ of the terms involved,
 and the recipes are "use the definition verbatim".)
 
 #typesig[
-  - Velocity $bf(r)'(t)$, acceleration $bf(r)''(t)$, and integrals $integral bf(r)(t) dif t$ are vectors.
-
-    (In these three cases, you should _always_ draw them as arrows (vectors) rather than dots.
-    That is, you should never draw velocity, acceleration, or a vector integral as a dot.)
+  - Velocity $bf(r)'(t)$ and acceleration $bf(r)''(t)$, are vectors.
+    In these cases, you should _always_ draw them as arrows (vectors) rather than dots.
+    That is, you should never draw velocity or acceleration as a dot.
 
   - However, speed $|bf(r)'(t)|$ and arc length are scalars (numbers).
 ]
@@ -131,7 +122,6 @@ and the recipes are "use the definition verbatim".)
   - The velocity vector at time $t = pi/3$.
   - The speed at time $t = pi/3$.
   - The acceleration vector at time $t = pi / 3$.
-  - The integral $ integral_(0)^(pi/3) bf(r)(t) dif t$.
   - The arc length from $t = 0$ to $t = pi / 3$.
 ]
 #soln[
@@ -158,17 +148,6 @@ We will compute the following quantities.
   $ bf(a) (pi / 3) = vec(- cos (pi / 3) , - sin (pi / 3)) = vec(- 1 / 2 , - sqrt(3) / 2) . $
   Thus, the acceleration vector at $t = pi / 3$ is:
   $ bf(a) (pi / 3) = vec(- 1 / 2 , - sqrt(3) / 2) . $
-/ Integral:
-  The integral of $bf(r) (t)$ is computed component-wise:
-  $ integral_0^(pi / 3) bf(r) (t) dif t = integral_0^(pi / 3) vec(cos (t) , sin (t)) dif t = vec(integral_0^(pi / 3) cos (t) dif t , integral_0^(pi / 3) sin (t) dif t) . $
-
-  Compute the integrals, using $integral cos(t) dif t = sin(t) + C$
-  and $integral sin(t) dif t = cos(t) + C$:
-  $ integral_0^(pi / 3) cos (t) dif t = sin (pi / 3) - sin (0) = sqrt(3) / 2 \
-  integral_0^(pi / 3) sin (t) dif t = - cos (pi / 3) + cos (0) = - 1 / 2 + 1 = 1 / 2 . $
-  Thus, the integral is:
-  $ integral_0^(pi / 3) bf(r) (t) dif t = vec(sqrt(3) / 2 , 1 / 2) . $
-
 / Arc length:
   The arc length of a parametric curve is given by:
   $ L = integral_0^(pi / 3) lr(|bf(r)' (t)|) dif t = integral_0^(pi / 3) 1 dif t = pi / 3 . $
