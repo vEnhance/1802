@@ -133,6 +133,17 @@ and calculus as taught in United States high schools is assumed.
   This is covered in the course 18.01 at MIT,
   and also in the AP calculus courses in the United States.
 
+  One note: *by $log(x)$ we mean the _natural_ log with base $e$*.#footnote[I considered
+    using the notation $ln$ to avoid confusion.
+    However, $ln$ is never used by mathematicians past introductory calculus;
+    see #url("https://math.stackexchange.com/q/293783/229197").
+    I figured I should just get you used to $log$ being base $e$ now.
+    There's a real chance that if you take an 18.02 exam at MIT,
+    the professor straight-up forgets to remind the students that $log$ is base $e$,
+    because they haven't used $ln$ in a quarter century.
+  ]
+  We will never use a base-2 or base-10 logarithm in these notes.
+
 #tip[
   If you're not at MIT, you should replace the words "18.01" and "18.02" with
   the course names corresponding to "single-variable calculus"

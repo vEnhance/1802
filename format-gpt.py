@@ -55,6 +55,6 @@ typst_text = typst_text.replace(r"⟨ ", "vec(")
 typst_text = typst_text.replace(r"⟨", "vec(")
 typst_text = typst_text.replace(r" ⟩", ")")
 typst_text = typst_text.replace(r"⟩", ")")
-# typst_text = typst_text.replace(r" ln (", "r log (")
+typst_text = typst_text.replace(r" ln (", "r log (")
 
 print(typst_text)

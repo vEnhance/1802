@@ -148,8 +148,9 @@ then I'll explain why the gradient is the normal vector we need to complete our 
   nabla f_3 (x,y) = vec(2 x, 2 y), &#h(2em)
   nabla f_4 (x,y,z) = vec(1,1,1), \
   nabla f_5 (x,y,z) = vec(y+z, x+z, x+y), &#h(2em)
-  nabla f_6 (x,y) = vec(y x^(y-1), ln(y) dot x^y). #qedhere
+  nabla f_6 (x,y) = vec(y x^(y-1), log(y) dot x^y). #qedhere
   $
+  (Remember $log$ is the natural log, not base $10$.)
 ]
 
 == [RECIPE] Linear approximation
