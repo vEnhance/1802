@@ -107,7 +107,7 @@ $
 
 which... isn't any better. We still don't get any solutions besides $x = y = 0$.
 
-At this point, you should be remembering something I told you in R04:
+At this point, you should be remembering something I told you last section:
 a "random" system of equations and variables usually only has a unique solution.
 So if I keep picking numbers out of a hat like $100$, $1000$, etc.,
 then I'm unlikely to find anything interesting.
@@ -133,7 +133,7 @@ $
 
 We need to cherry-pick $lambda$ to make sure that the system doesn't just
 solve to $x = y = 0$ like the examples we tried with $100$ and $1000$.
-But we learned how to do this in R04:
+But we learned how to do this in the last section:
 in order to get a degenerate system you need to make sure that
 $
   0 = det mat(5-lambda, -2; 3, 10-lambda).
@@ -695,12 +695,20 @@ But I'll show you how to do it with eigenvectors.
 #exer[
   Compute the eigenvalues and eigenvectors for $mat(9,0;0,9)$.
 ]
-
+#exer[
+  Compute the eigenvalues and eigenvectors for $mat(6,1;0,6)$.
+]
 #exer[
   Give an example of a $2 times 2$ matrix with four nonzero entries
   whose eigenvalues are $5$ and $7$.
   Then find the corresponding eigenvectors.
 ]
+#exer[
+  Find the unique $2 times 2$ matrix for which
+  $vec(1,1)$ is an eigenvector with eigenvalue $3$
+  and $vec(2,1)$ is an eigenvector with eigenvalue $4$.
+]
+
 
 #exer[
   Let $A = mat(4,3;4,8)$.
@@ -713,8 +721,8 @@ But I'll show you how to do it with eigenvectors.
   Compute the eigenvalues and eigenvectors of the $3 times 3$ matrix $ mat(1,2,3;2,4,6;3,9,6). $
 ]
 #exer[
-  Find the eigenvectors and eigenvalues of the $4 times 4$ matrix
-  $ mat(5,0,0,0; 0,-9,0,0; 0,0,5,0; 0,0,0,7). $
+  Find the eigenvectors and eigenvalues of the $6 times 6$ matrix
+  $ mat(5,0,0,0,0,0; 0,-9,0,0,0,0; 0,0,5,0,0,0; 0,0,0,0,0,0; 0,0,0,0,8,1; 0,0,0,0,0,8). $
 ]
 
 #exerstar[
