@@ -3,9 +3,11 @@
 = Eigenvalues and eigenvectors
 
 In this section, we'll define an eigenvalue and eigenvector.
-The main goal of this section is that you should be able to,
-given a $2 times 2$ or $3 times 3$ matrix,
-extract all the eigenvalues and eigenvectors by hand.
+The main goal of this section is that:
+#goal[
+  Given a $2 times 2$ or $3 times 3$ matrix, by the end of this section,
+  you should be able to find all the eigenvalues and eigenvectors by hand.
+]
 
 == [TEXT] The problem of finding eigenvectors
 

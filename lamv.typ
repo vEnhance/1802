@@ -55,6 +55,8 @@ For comparison, Part Echo corresponds approximately to §8 and §12.1-§12.3 of 
 #pagebreak()
 #include "src/grad.typ"
 #pagebreak()
+#include "src/antigrad.typ"
+#pagebreak()
 
 #part[Part Foxtrot: Optimization]
 For comparison, Part Foxtrot corresponds approximately to §9 and §12.4-§12.6 of #poonen.
@@ -95,7 +97,7 @@ For comparison, Part Hotel corresponds to §14, §15, §18, §19, §20, §21 of 
 #include "src/flux.typ"
 #pagebreak()
 
-#part[Solutions to normal exercises]
+#part[Part India: Solutions]
 #include "src/sol-bravo.typ"
 #pagebreak()
 #include "src/sol-charlie.typ"
@@ -109,5 +111,5 @@ For comparison, Part Hotel corresponds to §14, §15, §18, §19, §20, §21 of 
 #include "src/sol-mt2.typ"
 #pagebreak()
 
-#part[Appendix]
+#part[Part Juliett: Appendix]
 #include "src/appendix.typ"
