@@ -632,7 +632,7 @@ like the example we got where $(lambda-5)^2 = 0 ==> lambda = 5$.
 We won't define what "repeated" means here,
 but you need to define repetition correctly to handle these edge cases.
 
-== [SIDENOTE] Application of eigenvectors: matrix powers
+== [SIDENOTE] Application of eigenvectors: matrix powers <sec-matrix-power>
 
 This is off-syllabus for 18.02, but I couldn't resist including it because
 it shows you a good use of eigenvalues in a seemingly unrelated problem,
@@ -668,7 +668,7 @@ But I'll show you how to do it with eigenvectors.
   $
     M vec(1,0) &= vec(2,0) \
     M^2 vec(1,0) &= M vec(2,0) = vec(4,0) \
-    M^3 vec(1,0) &= M vec(4,0) = vec(8,0)
+    M^3 vec(1,0) &= M vec(4,0) = vec(8,0) \
     &dots.v
   $
   and so on, until
@@ -704,7 +704,7 @@ But I'll show you how to do it with eigenvectors.
   Then find the corresponding eigenvectors.
 ]
 #exer[
-  Find the unique $2 times 2$ matrix for which
+  Find the unique $2 times 2$ matrix $A$ for which
   $vec(1,1)$ is an eigenvector with eigenvalue $3$
   and $vec(2,1)$ is an eigenvector with eigenvalue $4$.
 ]
@@ -720,11 +720,15 @@ But I'll show you how to do it with eigenvectors.
 #exer[
   Compute the eigenvalues and eigenvectors of the $3 times 3$ matrix $ mat(1,2,3;2,4,6;3,9,6). $
 ]
-#exer[
+#exerstar[
   Find the eigenvectors and eigenvalues of the $6 times 6$ matrix
   $ mat(5,0,0,0,0,0; 0,-9,0,0,0,0; 0,0,5,0,0,0; 0,0,0,0,0,0; 0,0,0,0,8,1; 0,0,0,0,0,8). $
+  (You can do this question without using any determinants.)
 ]
 
 #exerstar[
-  Evaluate $ mat(4,3;7,8)^(100). $
+  Show that
+  $ mat(4,3;6,7)^(20) = mat(33333333333333333334, 33333333333333333333;
+    66666666666666666666, 66666666666666666667). $
+  (Each number on the right-hand side is $20$ digits.)
 ]
