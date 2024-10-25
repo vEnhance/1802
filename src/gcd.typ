@@ -283,13 +283,14 @@ but if you have a 2D body of water, there's only two ways to rotate:
 either clockwise or counterclockwise.
 (In contrast, if you put a paddle wheel into the ocean, there are _lots_ of ways it can rotate.)
 
-So the 2D scalar curl, true to its name, only *outputs a number*,
+So the 2D scalar curl, true to its name, only *outputs a number at each point*,
 which you think of as an angular velocity of the spinning paddle wheel.
 Unlike with the usual 3D curl it's no longer needed to specify an entire vector
 so that you can talk about the direction of rotation.
+Instead we take the convention that
 
-We take the convention that positive numbers mean counterclockwise spin,
-negative numbers mean clockwise spin.
+- positive numbers mean counterclockwise spin,
+- negative numbers mean clockwise spin.
 
 #definition(title: [Definition of 2D scalar curl])[
   Suppose
@@ -337,13 +338,5 @@ So I'll just mention it briefly.
 The physical interpretation is the same too, just in 2D bodies of water.
 
 #todo[example of 2D divergence]
-
-== [TEXT] Where do all these formulas come from anyway?
-
-We talked about the gradient at length.
-
-Also, it is totally out of the scope of 18.02 to explain why any of these definitions
-match their physical meaning. Many have tried, and many have failed.
-
 
 == [EXER] Exercises
