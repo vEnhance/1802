@@ -2,6 +2,12 @@
 
 = Linear transformations and matrices
 
+The goal of this section is to tell you how to take a linear transformation
+and encode it as a matrix.
+In other words, there is only one recipe covered.
+However, one upshot of this presentation is that I'll finally be able to explain
+why matrix multiplication is defined in this way you learned.
+
 This section will be presented a bit differently than you'll see in many other places;
 I talk about linear transformations first,
 and then talk about matrices as an encoding of linear transformations.
@@ -11,7 +17,7 @@ their presentation is likely to be different (and worse).
 == [TEXT] Linear transformation
 
 The definition I'm about to give is the 18.700/18.701 definition of linear transform,
-but the hill I will die on is that this definition is better than the one 18.02.
+but the hill I will die on is that this definition is better than the one in 18.02.
 
 #definition(title: [Definition of linear transformation])[
   A _linear transform_ $T : RR^n -> RR^m$ is _any_ map obeying
@@ -99,7 +105,7 @@ $ T( vec(1,0) ) = vec(1, 3) " and " T( vec(0,1) ) = vec(2, 4)
   <==> T " encoded as " mat(1,2;3,4). $
 
 To put this into recipe form:
-#definition(title: [Definition for encoding a transformation])[
+#recipe(title: [Recipe for encoding a transformation])[
   Given a transformation $T : RR^n -> RR^m$, to encode it as a matrix:
 
   1. Compute $T(bf(e)_1)$ through $T(bf(e)_n)$ and write them as column vectors..
@@ -181,13 +187,13 @@ Another example is the identity function:
   (compared to the "well try multiplying by it" you learned in high school).
 ]
 
-== [TEXT] Matrix multiplication <matrix-mult>
+== [SIDENOTE] Matrix multiplication <matrix-mult>
 
 In the prerequisites, I said that you were supposed to know the rule for
 multiplying matrices, so you should already know for example that
 $ mat(5,6;7,8) mat(1,2;3,4) = mat(23, 34; 31, 46). $
 
-The goal of this section is to now explain why matrix multiplication
+The goal of this side note is to now explain why matrix multiplication
 is defined in this funny way.
 We will see two results:
 
@@ -280,8 +286,9 @@ it's what happens if you generalize @pop3 to eight variables
     matrix multiplication isn't either.
 ]
 
-
 == [EXER] Exercises
+
+#todo[write a bunch of boring exercises]
 
 #exer[
   If $A$ is a $3 times 3$ matrix with determinant $2$, what values could $det(10 A)$ take?

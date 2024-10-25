@@ -98,13 +98,11 @@ For comparison, Part Hotel corresponds to §14, §15, §18, §19, §20, §21 of 
 #pagebreak()
 #include "src/sol-charlie.typ"
 #pagebreak()
+#include "src/sol-mt1.typ"
+#pagebreak()
 #include "src/sol-foxtrot.typ"
 #pagebreak()
 #include "src/sol-golf.typ"
-#pagebreak()
-
-#part[Solutions to mock midterm problems]
-#include "src/sol-mt1.typ"
 #pagebreak()
 #include "src/sol-mt2.typ"
 #pagebreak()

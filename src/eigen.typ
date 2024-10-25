@@ -2,6 +2,11 @@
 
 = Eigenvalues and eigenvectors
 
+In this section, we'll define an eigenvalue and eigenvector.
+The main goal of this section is that you should be able to,
+given a $2 times 2$ or $3 times 3$ matrix,
+extract all the eigenvalues and eigenvectors by hand.
+
 == [TEXT] The problem of finding eigenvectors
 
 Let's define the relevant term first:
@@ -35,7 +40,7 @@ Let's define the relevant term first:
 
 The goal of this section is to show:
 #question[
-  Given an encoding of $T$ as a matrix, how can we find its eigenvectors (besides $bf(0)$)?
+  Given a matrix $T$, how can we find its eigenvectors (besides $bf(0)$)?
 ]
 
 == [TEXT] How to come up with the recipe for eigenvalues
@@ -222,12 +227,9 @@ to make it into a recipe.
 But don't lose sight of how they're connected!
 I would rather call it the following interlocked thing:
 
-#align(center)[
-  We cherry-pick $lambda$ to make sure the system doesn't just solve to $x=y=0$.
-
-  To do the cherry-picking, ensure $det(A - lambda I) = 0$
+- We cherry-pick $lambda$ to make sure the system doesn't just solve to $x=y=0$.
+- To do the cherry-picking, ensure $det(A - lambda I) = 0$
   so that our system is degenerate.
-]
 
 == [RECIPE] Calculating all the eigenvalues
 
@@ -243,9 +245,239 @@ To repeat the story:
     (You should find there is at least a one-dimensional space of solutions.)
 ]
 
-#todo[Write example]
+#remark[
+  Eigenvectors are sometimes grouped into so-called _eigenlines_ because
+  every multiple of an eigenvector is also an eigenvector.
+  For example, if you get $2x + y = 0$ for $lambda = 2$,
+  any of the following outputs is often acceptable:
 
-== [TEXT] Solving degenerate systems
+  - "Any multiple of $vec(1, -2)$ is an eigenvector for $lambda = 2$"
+  - "Any multiple of $vec(-1, 2)$ is an eigenvector for $lambda = 2$"
+  - "Any multiple of $vec(100, -200)$ is an eigenvector for $lambda = 2$"
+  - ...
+
+  And in practice people will just say "$vec(1,-2)$ is _the_ eigenvector for $lambda = 2$"
+  and the "any multiple of" is understood.
+]
+
+#sample[
+  Find all eigenvalues and eigenvectors of $ A = mat(4, 1; 2, 3). $
+]
+#soln[
+  We follow the recipe:
+  1. We compute $A - lambda I$, where
+    $I$ is the identity matrix:
+    $ A - lambda I = mat(4, 1; 2, 3) - lambda mat(1, 0; 0, 1) = mat(4 - lambda, 1; 2, 3 - lambda) . $
+    Now, compute the determinant of $A - lambda I$ and set it equal to zero:
+    $ det (A - lambda I) = (4 - lambda) (3 - lambda) - (2 dot 1) = (4 - lambda) (3 - lambda) - 2 . $
+    Expanding this:
+    $ (4 - lambda) (3 - lambda) = 12 - 7 lambda + lambda^2 , $ so the
+    equation becomes:
+    $ 12 - 7 lambda + lambda^2 - 2 = 0 ==> 0 = lambda^2 - 7 lambda + 10 = (lambda-2)(lambda-5). $
+    Solving for $lambda$ gives $lambda = 2$ or $lambda = 5$.
+  2. There are two cases:
+    - For $lambda = 5$, solve
+      $(A - 5 I) bf(v) = 0$:
+      $ A - 5 I = mat(- 1, 1; 2, - 2) , ==> mat(- 1, 1; 2, - 2) vec(x, y) = vec(0, 0) . $
+      This gives the equation $- x + y = 0$,
+      so the eigenvector is $bf(v)_1 = vec(1, 1)$ as well as any multiple of it.
+
+    - For $lambda = 2$, solve $(A - 2 I) bf(v) = 0$:
+      $ A - 2 I = mat(2, 1; 2, 1) , ==> mat(2, 1; 2, 1) vec(x, y) = vec(0, 0) . $
+      This gives the equation $2 x + y = 0$, so the eigenvector is
+      $bf(v)_2 = vec(1, - 2)$ or any multiple of it.
+
+  In conclusion, $vec(1,1)$ and its multiples are the eigenvectors for $lambda = 5$
+  and $vec(1,-2)$ and its multiples are the eigenvectors for $lambda = 2$.
+]
+
+#sample[
+  Find the eigenvalues and eigenvectors of the matrix $ A = mat(3, 3; 4, - 1). $
+]
+#soln[
+  We follow the recipe:
+  1. First, we compute $A - lambda I$:
+    $ A - lambda I = mat(3, 3; 4, - 1) - lambda mat(1, 0; 0, 1) = mat(3 - lambda, 3; 4, - 1 - lambda) . $
+    To find the eigenvalues, we set the determinant of $A - lambda I$ equal to zero:
+    $ det (A - lambda I) = upright("det") mat(3 - lambda, 3; 4, - 1 - lambda)
+      = (3 - lambda) (- 1 - lambda) - (3 dot 4) = (3 - lambda) (- 1 - lambda) - 12 . $
+    Expanding this expression:
+    $ (3 - lambda) (- 1 - lambda) = - 3 - 3 lambda + lambda + lambda^2 = lambda^2 - 2 lambda - 3 . $
+    Now, substitute this into the equation:
+    $ lambda^2 - 2 lambda - 3 - 12 = 0 ==> 0 = lambda^2 - 2 lambda - 15 = (lambda-5)(lambda+3) . $
+    Solving for $lambda$ gives $lambda = 5$ or $lambda = -3$.
+
+  2. Now, we find the eigenvectors corresponding to each eigenvalue.
+    - For $lambda = 5$, we solve $(A - 5 I) bf(v) = 0$.
+      First, compute $A - 5 I$:
+      $ A - 5 I = mat(3 - 5, 3; 4, - 1 - 5) = mat(- 2, 3; 4, - 6) . $
+      We now solve the system:
+      $ mat(- 2, 3; 4, - 6) vec(x, y) = vec(0, 0) . $
+      This gives the equations:
+      $ - 2 x + 3 y = 0 , quad 4 x - 6 y = 0 . $
+      From the first equation, we get $x = 3 / 2 y$.
+      Therefore, the eigenvectors corresponding to $lambda = 5$
+      are the multiples of $vec(3,2)$.
+    - For $lambda = - 3$, we solve $(A + 3 I) bf(v) = 0$.
+      First, compute $A + 3 I$:
+      $ A + 3 I = mat(3 + 3, 3; 4, - 1 + 3) = mat(6, 3; 4, 2) . $
+      We now solve the system:
+      $ mat(6, 3; 4, 2) vec(x, y) = vec(0, 0) . $
+      This gives the equations:
+      $ 6 x + 3 y = 0 , quad 4 x + 2 y = 0 . $
+      From the first equation, we get $x = - 1 / 2 y$. Therefore, the
+      eigenvector corresponding to $lambda = - 3$ is $vec(-1,2)$.
+
+  In conclusion, $vec(3,2)$ and its multiples are the eigenvectors for $lambda = 5$
+  and $vec(-1,2)$ and its multiples are the eigenvectors for $lambda = -3$.
+]
+
+#sample[
+  Find the eigenvalues and eigenvectors of the matrix
+  $ A = mat(2, 9; - 1, 8). $
+]
+
+#soln[
+  We follow the recipe, but this time we'll find the quadratic polynomial in $lambda$
+  we get has a repeated root, a new phenomenon.
+  Nothing changes much though, recipe still works fine.
+
+  1. We need to find the matrix $A - lambda I$, where $I$ is the identity
+    matrix. First, we compute $A - lambda I$:
+    $ A - lambda I = mat(2, 9; - 1, 8) - lambda mat(1, 0; 0, 1) = mat(2 - lambda, 9; - 1, 8 - lambda) . $
+
+    To find the eigenvalues, we set the determinant of $A - lambda I$ equal
+    to zero:
+    $ det (A - lambda I) &= det mat(2 - lambda, 9; - 1, 8 - lambda) \
+      &= (2 - lambda) (8 - lambda) - 9 dot (-1) = (2 - lambda) (8 - lambda) + 9 \
+      &= lambda^2 - 10 lambda + 25 = (lambda - 5)^2. $
+    This gives $lambda = 5$. So we only have one case!
+
+  2. First, compute $A - 5 I$:
+    $ A - 5 I = mat(2 - 5, 9; - 1, 8 - 5) = mat(- 3, 9; - 1, 3) . $
+    We now solve the system:
+    $ mat(- 3, 9; - 1, 3) vec(x, y) = vec(0, 0) . $
+    This gives the equations:
+    $ - 3 x + 9 y = 0 , quad - x + 3 y = 0 . $
+    From the first equation, we get $x = 3 y$. Therefore, the
+    eigenvector corresponding to $lambda = 5$ is $vec(3, 1)$ and its multiples.
+
+  The only eigenvalue of the matrix $A = mat(2, 9; - 1, 8)$ is $lambda = 5$ (with multiplicity 2).
+  The corresponding eigenvector is $vec(3, 1)$ and its multiples.
+]
+
+#sample[
+  Find the eigenvalues and eigenvectors of the matrix
+  $A = mat(1, 2, 0; 0, 3, 0; 0, 1, 4)$.
+]
+
+#soln[
+  The matrix is $3 times 3$, but that's no big deal.
+  1. We need to find the matrix $A - lambda I$, where $I$ is the identity
+    matrix. First, we compute $A - lambda I$:
+    $ A - lambda I = mat(1, 2, 0; 0, 3, 0; 0, 1, 4) - lambda mat(1, 0, 0; 0, 1, 0; 0, 0, 1) = mat(1 - lambda, 2, 0; 0, 3 - lambda, 0; 0, 1, 4 - lambda) . $
+    To find the eigenvalues, we set the determinant of $A - lambda I$ equal to zero:
+    $ det (A - lambda I) &= det mat(1 - lambda, 2, 0; 0, 3 - lambda, 0; 0, 1, 4 - lambda) \
+      &= (1 - lambda) upright("det") mat(3 - lambda, 0; 1, 4 - lambda)
+      &= (1 - lambda)(3 - lambda)(4 - lambda). $
+    Setting this equal to $0$ and solving gives $lambda = 1$, $lambda = 3$, $lambda = 4$.
+
+  2. Now, we find the eigenvectors corresponding to each eigenvalue.
+
+    - For $lambda_1 = 1$:
+      We solve $(A - I) bf(v) = 0$. First, compute $A - I$:
+      $ A - I = mat(0, 2, 0; 0, 2, 0; 0, 1, 3) . $
+      We now solve the system:
+      $ mat(0, 2, 0; 0, 2, 0; 0, 1, 3) vec(x, y, z) = vec(0, 0, 0) . $
+      In other words $2y = 0$, $2y = 0$ and $y + 3z = 0$.
+      From the first and second rows, we have $2 y = 0$, so $y = 0$. From
+      the third row, we have $z = 0$.
+      There are no constraints on $x$ at all
+      Thus, the eigenvector corresponding to $lambda = 1$ is $ vec(1, 0, 0) $
+      and all its multiples, i.e. those vectors for which the second and third component are zero.
+
+    - For $lambda = 3$:
+      We solve $(A - 3 I) bf(v) = 0$. First, compute $A - 3 I$:
+      $ A - 3 I = mat(- 2, 2, 0; 0, 0, 0; 0, 1, 1) . $
+      We now solve the system:
+      $ mat(- 2, 2, 0; 0, 0, 0; 0, 1, 1) vec(x, y, z) = vec(0, 0, 0) . $
+      In other words, $-2x+2z = 0$, $0=0$ and $y+z=0$.
+      From the third row, we have $y = - z$. From the first row, we get
+      $- 2 x + 2 z = 0$, so $x = z$. Thus, the eigenvector
+      corresponding to $lambda = 3$ is:
+      $ vec(1, - 1, 1) $
+      and its multiples.
+
+    - For $lambda = 4$:
+      We solve $(A - 4 I) bf(v) = 0$. First, compute $A - 4 I$:
+      $ A - 4 I = mat(- 3, 2, 0; 0, - 1, 0; 0, 1, 0) . $
+      We now solve the system:
+      $ mat(- 3, 2, 0; 0, - 1, 0; 0, 1, 0) vec(x, y, z) = vec(0, 0, 0) . $
+      In other words, $-3x+2y=0$, $-y=0$, $y=0$.
+      Hence $x=y=0$ and there are no constraints on $z$.
+      Therefore, the eigenvector corresponding to $lambda = 4$ is:
+      $ vec(0, 0, 1) $
+      and its multiples, i.e. any vector for which the first two components are $0$.
+
+  In conclusion, the eigenvalues of the matrix $A = mat(1, 2, 0; 0, 3, 0; 0, 1, 4)$
+  are $lambda_1 = 1$, $lambda_2 = 3$, and $lambda_3 = 4$;
+  the corresponding eigenvectors are:
+  $ bf(v)_1 = vec(1, 0, 0) , quad bf(v)_2 = vec(1, - 1, 1), quad bf(v)_3 = vec(0, 0, 1) $
+  and their multiples.
+]
+
+Up until now I picked examples for which the solutions turn out nicely.
+Most of the time it's not like that though.
+
+#sample[
+  Find the eigenvalues and eigenvectors of the matrix
+  $A = mat(1, 2; 4, 7)$.
+]
+
+#soln[
+  Keep going, even with terrible numbers.
+
+  1. We need to find the matrix $A - lambda I$, where $I$ is the identity
+    matrix. First, we compute $A - lambda I$:
+    $ A - lambda I = mat(1, 2; 4, 7) - lambda mat(1, 0; 0, 1) = mat(1 - lambda, 2; 4, 7 - lambda) . $
+    To find the eigenvalues, we set the determinant of $A - lambda I$ equal to zero:
+    $ det (A - lambda I) = det mat(1 - lambda, 2; 4, 7 - lambda)
+      = (1 - lambda) (7 - lambda) - (4 times 2) = (1 - lambda) (7 - lambda) - 8 . $
+    Expanding this expression:
+    $ (1 - lambda) (7 - lambda) = 7 - 8 lambda + lambda^2 , $
+    so the equation becomes:
+    $ 7 - 8 lambda + lambda^2 - 8 = 0 ==> lambda^2 - 8 lambda - 1 = 0 . $
+    We now solve the quadratic equation $lambda^2 - 8 lambda - 1 = 0$ using
+    the quadratic formula:
+    $ lambda = frac(- (- 8) pm sqrt((- 8)^2 - 4 (1) (- 1)), 2 (1)) = frac(8 pm sqrt(64 + 4), 2) = frac(8 pm sqrt(68), 2) = frac(8 pm 2 sqrt(17), 2) . $
+    Thus, the eigenvalues are:
+    $ lambda_1 = 4 + sqrt(17) , quad lambda_2 = 4 - sqrt(17) . $
+
+  2. Now, we find the eigenvectors corresponding to each eigenvalue.
+
+    - For $lambda_1 = 4 + sqrt(17)$:
+      We solve $(A - lambda_1 I) bf(v) = 0$. First, compute $A - lambda_1 I$:
+      $ A - lambda_1 I = mat(1 - (4 + sqrt(17)), 2; 4, 7 - (4 + sqrt(17))) = mat(- 3 - sqrt(17), 2; 4, 3 - sqrt(17)) . $
+      We now solve the system:
+      $ mat(- 3 - sqrt(17), 2; 4, 3 - sqrt(17)) vec(x, y) = vec(0, 0) . $
+      This gives the equations:
+      $ (- 3 - sqrt(17)) x + 2 y = 0 , quad 4 x + (3 - sqrt(17)) y = 0 . $
+      From the first equation, we get $y = frac(3 + sqrt(17), 2) x$.
+      Therefore, the eigenvector corresponding to $lambda_1 = 4 + sqrt(17)$ is:
+      $ bf(v)_1 = vec(1, frac(3 + sqrt(17), 2)) . $
+
+    - For $lambda_2 = 4 + sqrt(17)$, it's actually exactly the same with $sqrt(17)$
+      replaced by $-sqrt(17)$, so I won't repeat it.
+      You get the eigenvector
+      $ bf(v)_2 = vec(1, frac(3 - sqrt(17), 2)) . $
+
+  In conclusion the eigenvalues of the matrix $A = mat(1, 2; 4, 7)$ are:
+  $ lambda_1 = 4 + sqrt(17) , quad lambda_2 = 4 - sqrt(17) . $
+  The corresponding eigenvectors are:
+  $ bf(v)_1 = vec(1, frac(3 + sqrt(17), 2)) , quad bf(v)_2 = vec(1, frac(3 - sqrt(17), 2)) . #qedhere $
+]
+
+== [TEXT] What to expect when solving degenerate systems
 
 When carrying out the recipe for finding eigenvectors and eigenvalues,
 after cherry-picking $lambda$, you have to solve a degenerate system of equations.
@@ -282,10 +514,11 @@ That means you either didn't do the cherry-picking step correctly,
 or something went wrong when you were solving the system.
 If that happens, check your work!
 
-=== Degenerate systems of three equations may not look stupid, but they are
+=== Degenerate systems of three equations may or may not look stupid
 
-When you have three or more equations instead, they don't necessarily look as stupid.
-To reuse the example I mentioned from R04, we have
+When you have three or more equations instead, they don't necessarily look as stupid
+(although they still can).
+To reuse the example I mentioned before, consider the system of equations
 $
   x + 10 y - 9 z &= 0 \
   3 x + y  + 10 z &= 0 \
@@ -311,7 +544,7 @@ for $x$ and $y$, as a function of $z$.
 I think this particular example works out to $x = -109/29 z$, $y = 37/29 z$.
 And it indeed fits the third equation too.
 
-== [SIDENOTE] Complex eigenvectors
+== [SIDENOTE] Complex eigenvalues
 
 Even in the $2 times 2$ case, you'll find a lot of matrices $M$ with real coefficients
 don't have eigenvectors.
@@ -328,25 +561,94 @@ then $M bf(v)$ needs to point in the same direction as $bf(v)$, by definition.
 But that can never happen: $M$ is rotation by $60 degree$,
 so $M bf(v)$ and $bf(v)$ necessarily point in different directions --- $60$ degrees apart.
 
-#todo[what goes wrong?]
+Nevertheless, let's boldly try this and see what goes wrong in the recipe.
+The answer is that you just get some complex numbers instead.
+
+
+#sample[
+  Find the eigenvalues and eigenvectors of the matrix
+  $A = mat(1 / 2, - sqrt(3) / 2; sqrt(3) / 2, 1 / 2)$.
+]
+
+#soln[
+  Follow the recipe, just don't be scared of complex numbers:
+  1. We need to find the matrix $A - lambda I$, where $I$ is the identity
+    matrix. First, we compute $A - lambda I$:
+    $ A - lambda I = mat(1 / 2, - sqrt(3) / 2; sqrt(3) / 2, 1 / 2) - lambda mat(1, 0; 0, 1) = mat(1 / 2 - lambda, - sqrt(3) / 2; sqrt(3) / 2, 1 / 2 - lambda) . $
+
+    To find the eigenvalues, we set the determinant of $A - lambda I$ equal to zero:
+    $ det (A - lambda I) &= det mat(1 / 2 - lambda, - sqrt(3) / 2; sqrt(3) / 2, 1 / 2 - lambda) \
+      &= (1 / 2 - lambda) (1 / 2 - lambda) - (- sqrt(3) / 2 times sqrt(3) / 2) \
+      &= (1 / 2 - lambda)^2 + 3 / 4 . $
+    Setting this equal to zero and solving, we get
+    $ lambda = (1 pm sqrt(3) i) / 2 $
+    as the two eigenvalues.
+
+  2. Now, we find the eigenvectors corresponding to each eigenvalue.
+
+    - Choose $lambda_1 = frac(1 + i sqrt(3), 2)$ first.
+      We solve $(A - lambda_1 I) bf(v) = 0$.
+      First, compute $A - lambda_1 I$:
+      $ A - lambda_1 I = mat(1 / 2 - frac(1 + i sqrt(3), 2), - sqrt(3) / 2; sqrt(3) / 2, 1 / 2 - frac(1 + i sqrt(3), 2)) = mat(- frac(i sqrt(3), 2), - sqrt(3) / 2; sqrt(3) / 2, - frac(i sqrt(3), 2)) . $
+      We now solve the system:
+      $ mat(- frac(i sqrt(3), 2), - sqrt(3) / 2; sqrt(3) / 2, - frac(i sqrt(3), 2)) vec(v_1, v_2) = vec(0, 0) . $
+      This gives the equations:
+      $ - frac(i sqrt(3), 2) v_1 - sqrt(3) / 2 v_2 = 0 , quad sqrt(3) / 2 v_1 - frac(i sqrt(3), 2) v_2 = 0 . $
+      From the first equation, we get $v_1 = i v_2$. Therefore, the
+      eigenvector corresponding to $lambda_1 = frac(1 + i sqrt(3), 2)$ is:
+      $ bf(v)_1 = vec(i, 1) $
+      and its multiples.
+    - When $lambda_2 = frac(1 - i sqrt(3), 2)$, all the $i$'s flip to $-i$'s and nothing else changes.
+      The eigenvector corresponding to $lambda_2 = frac(1 - i sqrt(3), 2)$ is thus
+      $ bf(v)_2 = vec(-i, 1) $
+      and its multiples.
+
+  In conclusion, the two eigenvalues are
+  $ lambda_1 = frac(1 + i sqrt(3), 2) , quad lambda_2 = frac(1 - i sqrt(3), 2) . $
+  and the corresponding eigenvectors are:
+  $ bf(v)_1 = vec(i, 1) , quad bf(v)_2 = vec(- i, 1). #qedhere $
+]
+
+== [TEXT] Trace and determinant
+
+In 18.02 the following definition is briefly mentioned, but we won't do much with it:
+
+#definition(title: [Definition of trace])[
+  The trace is the sum of the diagonal entries of the matrix.
+]
+
+Then the following two theorems are roughly true:
+
+- The trace of a matrix equals the sum of the eigenvalues, either real or complex.
+- The determinant of a matrix equals the product of the eigenvalues, either real or complex.
+
+I say "roughly" because there is a caveat:
+most of the time, if you have an $n times n$ matrix,
+then there will be $n$ different eigenvalues (if you allow complex ones).
+You probably noticed this above.
+However, sometimes you'll run into a matrix for which there are fewer than $n$,
+and some of the eigenvalues are "repeated",
+like the example we got where $(lambda-5)^2 = 0 ==> lambda = 5$.
+We won't define what "repeated" means here,
+but you need to define repetition correctly to handle these edge cases.
 
 == [SIDENOTE] Application of eigenvectors: matrix powers
 
 This is off-syllabus for 18.02, but I couldn't resist including it because
 it shows you a good use of eigenvalues in a seemingly unrelated problem,
 and also reinforces the idea that I keep axe-grinding:
-#align(center)[
+#idea[
   If you have a linear operator $T$,
   and you know the outputs of $T$ on _any_ basis, that tells you all the outputs of $T$.
 ]
 
-The problem is this:
-#question[
+Okay, so here's the application I promised you.
+#sample[
   Let $M$ be the matrix $mat(2,1;0,3)$.
   Calculate $M^(100)$.
 ]
-At first glance, you might thinks question is obviously impossible without a computer,
-because raising a matrix to the $100$th power would require $100$ matrix multiplications.
+At first glance, you might think this question is obviously impossible without a computer!
+Raising a matrix to the $100$th power seems like it would require $100$ matrix multiplications.
 But I'll show you how to do it with eigenvectors.
 
 #soln[
@@ -383,4 +685,38 @@ But I'll show you how to do it with eigenvectors.
   $
   Thus encoding $M$ gives the answer:
   $ M^(100) = mat(2^(100), 3^(100)-2^(100); 0, 3^(100)). #qedhere $
+]
+
+== [EXER] Exercises
+
+#exer[
+  Compute the eigenvalues and eigenvectors for $mat(1,1;1,1)$ and $mat(5,1;2,4)$.
+]
+#exer[
+  Compute the eigenvalues and eigenvectors for $mat(9,0;0,9)$.
+]
+
+#exer[
+  Give an example of a $2 times 2$ matrix with four nonzero entries
+  whose eigenvalues are $5$ and $7$.
+  Then find the corresponding eigenvectors.
+]
+
+#exer[
+  Let $A = mat(4,3;4,8)$.
+  - Compute the eigenvalues and eigenvectors for $A$.
+  - Compute the eigenvalues and eigenvectors for $A^2$.
+  - Compute the eigenvalues and eigenvectors for $A^(100)$.
+]
+
+#exer[
+  Compute the eigenvalues and eigenvectors of the $3 times 3$ matrix $ mat(1,2,3;2,4,6;3,9,6). $
+]
+#exer[
+  Find the eigenvectors and eigenvalues of the $4 times 4$ matrix
+  $ mat(5,0,0,0; 0,-9,0,0; 0,0,5,0; 0,0,0,7). $
+]
+
+#exerstar[
+  Evaluate $ mat(4,3;7,8)^(100). $
 ]

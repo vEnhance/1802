@@ -2,6 +2,8 @@
 
 = Linear combinations of vectors
 
+#todo[To be written. Import the pop quiz. Define spanning, linearly independent, basis.]
+
 == [TEXT] Basis <sec-basis>
 
 #memo(title: [Memorize: Basis for $RR^n$, "buy two get one free"])[

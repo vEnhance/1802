@@ -48,6 +48,7 @@ typst_text = typst_text.replace(r" lt.eq ", " <= ")
 typst_text = typst_text.replace(r" eq.not ", " != ")
 typst_text = typst_text.replace(r" plus.minus ", " pm ")
 typst_text = typst_text.replace(r" plus.minus ", " pm ")
+typst_text = typst_text.replace(r'delim: "(", ', "")
 # we prefer column vectors
 typst_text = typst_text.replace(r"angle.l ", "vec(")
 typst_text = typst_text.replace(r" angle.r", ")")
