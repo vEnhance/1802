@@ -426,6 +426,7 @@ Let's summarize the last few sections.
   Let $a$, $b$, $c$ be real numbers and
   consider the function $ f(x,y) = a e^(x+y) + b e^(x-y). $
   It turns out that the level curve of $f$ for the value $c$
-  passes through $(log 6, log 3)$ is tangent to the line $y = 5x$ at the origin.
+  is tangent to the line $y = 5x$ at the origin,
+  and also passes through the point $(log 6, log 3)$.
   Find $a$, $b$, and $c$.
 ]
