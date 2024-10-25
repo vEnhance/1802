@@ -384,7 +384,7 @@ To repeat the story:
 
   2. Now, we find the eigenvectors corresponding to each eigenvalue.
 
-    - For $lambda_1 = 1$:
+    - For $lambda = 1$:
       We solve $(A - I) bf(v) = 0$. First, compute $A - I$:
       $ A - I = mat(0, 2, 0; 0, 2, 0; 0, 1, 3) . $
       We now solve the system:
