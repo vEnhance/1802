@@ -402,16 +402,16 @@ Let's summarize the last few sections.
 #exer[
   For each part, either give an example of $f$ or show that none exist.
 
-  - Can you find a function $f : RR^2 -> RR^2$ such that $nabla f (x,y) = vec(x,y)$?
-  - Can you find a function $f : RR^2 -> RR^2$ such that $nabla f (x,y) = vec(100 x,y)$?
-  - Can you find a function $f : RR^2 -> RR^2$ such that $nabla f (x,y) = vec(y,x)$?
-  - Can you find a function $f : RR^2 -> RR^2$ such that $nabla f (x,y) = vec(100 y,x)$?
+  - Can you find a function $f : RR^2 -> RR^2$ such that $nabla f (x,y) = angle.l x,y angle.r$?
+  - Can you find a function $f : RR^2 -> RR^2$ such that $nabla f (x,y) = angle.l 100 x,y angle.r$?
+  - Can you find a function $f : RR^2 -> RR^2$ such that $nabla f (x,y) = angle.l y,x angle.r$?
+  - Can you find a function $f : RR^2 -> RR^2$ such that $nabla f (x,y) = angle.l 100 y,x angle.r$?
 ]
 
 #exer[
   Let $cal(S)$ be the level surface of $f(x,y,z) = e^x + e^(2y) + e^(3z)$
   that passes through the origin.
-  Find all real numbers $t$ such that the vector $vec(t+4, t+5, t+6)$
+  Find all real numbers $t$ such that the vector $angle.l t+4, t+5, t+6 angle.r$
   is tangent to $cal(S)$ at the origin.
 ]
 
