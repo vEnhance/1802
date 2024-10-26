@@ -163,9 +163,9 @@ Okay, now for the result.
   Suppose you need to integrate $iint_(cal(R)) f(x,y) dif x dif y$
   and you have a transition map $bf(T)(u,v) : cal(S) -> cal(R)$.
   Then the transition map lets you change the integral as follows:
-  $ iint_(cal(R)) f(x,y) dif x dif y = iint_(cal(S)) f(u,v)/(|det J_(bf(T))|) dif u dif v $
+  $ iint_(cal(R)) f(x,y) dif x dif y = iint_(cal(S)) f(u,v) lr(|det J_(bf(T))|) dif u dif v $
   Alternatively, if it's easier to compute $J_(bf(T)^(-1))$, the following formula also works:
-  $ iint_(cal(R)) f(x,y) dif x dif y = iint_(cal(S)) f(u,v) |det J_(bf(T)^(-1))| dif u dif v $
+  $ iint_(cal(R)) f(x,y) dif x dif y = iint_(cal(S)) f(u,v) / (lr(|det J_(bf(T)^(-1))|)) dif u dif v $
 ]
 Here $|det J_(bf(T))|$ is called the *area scaling factor*:
 it's the absolute value of the determinant of the Jacobian matrix.
@@ -212,14 +212,14 @@ Let's see an example of how to carry out this integration.
   $ det (J_(bf(T)^(-1))) = det mat(-y/x^2, 1/x; y, x)
     = (- y / x^2) dot x - 1 / x dot y = - y / x - y / x = - (2 y) / (x) . $
   Since $u = y / x$, we can express this as:
-  $ det (J_(bf(T)^(-1))) = - 2 u . $
-  Hence, the area is given by the double integral
+  $ det (J_(bf(T)^(-1))) = - 2 u. $
   $
     op("Area")(cal(R))
-    &= int_(u = 1 / 4)^4 int_(v = 16 / 25)^(16 / 9) lr(|det (J)|) dif v dif u \
-    &= int_(u = 1 / 4)^4 int_(v = 16 / 25)^(16 / 9) 2u dif v dif u \
-    &= int_(u = 1 / 4)^4  2u (16/9-16/25) dif u = 512/225 int_(u = 1 / 4)^4  u dif u \
-    &= 512 / 225 [u^2 / 2]_(u = 1 / 4)^4 = 512 / 225 dot 1 / 2 (4^2 - (1 / 4)^2) = 272/15. #qedhere
+    &= int_(u = 1 / 4)^4 int_(v = 16 / 25)^(16 / 9) 1/lr(|det (J_(bf(T)^(-1)))|) dif v dif u \
+    &= int_(u = 1 / 4)^4 int_(v = 16 / 25)^(16 / 9) 1/(2u) dif v dif u \
+    &= int_(u = 1 / 4)^4 1/(2u) dot (16/9-16/25) dif u \
+    &= 128/225 int_(u = 1 / 4)^4 1/(u) dif u \
+    &= 128/225 (log 4 - log (1/4)) = (512 log 2) / 225. #qedhere
   $
 ]
 

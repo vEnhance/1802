@@ -6,7 +6,8 @@
 
 Last section one of the transition maps we used was
 $ bf(T)_"polar" (r, theta) = (r cos theta, r sin theta). $
-This map is so common that you should actually memorize its area scaling factor.
+This particular  is so common that you should actually memorize its Jacobian determinant
+and area scaling factor.
 Remember from last section we computed
 $ J_(bf(T)) &= mat(
     partial / (partial r) cos theta,

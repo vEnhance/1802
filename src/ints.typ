@@ -466,7 +466,7 @@ Put in recipe form:
   1. Convert the limits of integration back into equality format,
     writing the region $cal(R)$.
   2. Re-apply the recipe from @sec-convert-x-y-integration
-    using the other variable.
+    using the other variable as the outer one now.
 ]
 
 #sample[
