@@ -54,7 +54,7 @@ Today's guest instructor is Lichen.
     $ I_1 = integral.double_P dif A quad I_2 = integral.double_P (x^2 - y^2) dif A $
     by performing the change of variables to parallelogram coordinates.
 / 2.: Evaluate the following integral using the given change of coordinates:
-  $ integral.double_R x^2 y^4 dif A $ where $R$ is the region bounded by
+  $ integral.double_R x^2 y^4 dif A $ where $R$ is the region in the first quadrant bounded by
   $x y = 4$; $x y = 8$; $y = x$; and $y = 4 x$ using the transformation
   $x = 2 sqrt(u \/ v)$ and $y = 2 sqrt(u v)$.
 / 3.: Find the area of the region of points $(x , y)$ in the plane satisfying
