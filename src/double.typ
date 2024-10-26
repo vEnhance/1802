@@ -150,7 +150,7 @@ For example, let's take the region in Poonen's example 13.1:
 ]
 
 #figure(
-  image("figures/ints-pararegion.png", width: auto),
+  image("figures/double-pararegion.png", width: auto),
   caption: [The region between $y=x^2$ and $y-x=2$.],
 ) <fig-pararegion>
 
@@ -179,7 +179,7 @@ For example, let's take the region in Poonen's example 13.1:
     See @fig-pararegion-vert.
 
     #figure(
-      image("figures/ints-para-vert.png", width: auto),
+      image("figures/double-para-vert.png", width: auto),
       caption: [Dissecting @fig-pararegion vertically, which is pretty nice.
       There's a single top lid (blue) and a bottom lip (purple)
       so that for each given $x$ the slice of $y$ (drawn in green) is easy to describe.],
@@ -201,7 +201,7 @@ For example, let's take the region in Poonen's example 13.1:
     See @fig-pararegion-horiz.
 
     #figure(
-      image("figures/ints-para-horiz.png", width: auto),
+      image("figures/double-para-horiz.png", width: auto),
       caption: [Dissecting @fig-pararegion horizontally, which is less nice: there are cases.
       Above the line $y=1$, you have a blue wall to the left and a curved arc to the right.
       But below $y=1$, you instead have a red arc of the parabola to the left,

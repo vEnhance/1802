@@ -73,7 +73,7 @@ For comparison, Part Foxtrot corresponds approximately to §9 and §12.4-§12.6 
 For comparison, Part Golf corresponds to §13 and §17 of #poonen.
 #include "src/ipep.typ"
 #pagebreak()
-#include "src/ints.typ"
+#include "src/double.typ"
 #pagebreak()
 #include "src/chvar.typ"
 #pagebreak()
@@ -83,7 +83,7 @@ For comparison, Part Golf corresponds to §13 and §17 of #poonen.
 #pagebreak()
 #include "src/triple.typ"
 #pagebreak()
-#include "src/paraint.typ"
+#include "src/scalint.typ"
 #pagebreak()
 
 #part[Part Hotel: Grad, Curl, and Div]
