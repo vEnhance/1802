@@ -4,72 +4,55 @@
   title: [Notes for 18.02 Recitation 14],
   subtitle: [18.02 Recitation MW9],
   author: "Evan Chen",
-  date: [23 October 2024],
+  date: [26 October 2024],
 )
 
-#quote(attribution: [Lemony Snicket, in A Series of Unfortunate Events])[The world is quiet here.]
+#quote(attribution: [])[]
 
 
 This handout (and any other DLC's I write) are posted at
 #url("https://web.evanchen.cc/1802.html").
 
-= Reading
+= From last time
 
-You should read section 21 of LAMV for the full details, which don't fit on the page.
-The following are just excerpts for quick reference.
+If you missed Wednesday's recitation, some advice:
 
-= Recipes
+- For this class, take $dif A$ as a shorthand for $dif x dif y$. (See LAMV 25.1.)
+- The result $dif x dif y = r dif r dif theta$ is a special case of _change of variables_,
+  covered in tomorrow's lecture and recitation on Wednesday (led by Lichen).
+- Write regions as inequalities, e.g. if you have the region cut out by $y=x^2$ and $y=x+2$,
+  I would prefer to write $y >= x^2$ (above parabola) and $y <= x+2$ (below line).
+- I suggest writing the variables into the integration signs, e.g.,
+  rather than $int_0^2 int_(y/2)^1 e^(-x^2) dif x dif y$
+  I think this is clearer as $int_(y=0)^2 int_(x=y/2)^1 e^(-x^2) dif x dif y$.
 
-#recipe(title: [Recipe for integrating over a rectangle])[
-  To integrate something of the form $int (int dif y) dif x$:
-  1. Evaluate the inner integral as in 18.01, treating $x$ as constant.
-  2. You should get something only depending on $x$. Integrate it as in 18.01.
-]
-#recipe(title: [Recipe for converting to $x y$-integration])[
-  1. Draw a picture of the region as best you can.
-  2. Write the region as a list of inequalities.#footnote[I don't
-    think other sources always write the inequalities the way I do.
-    But I think this will help you a lot with making sure bounds go the right way.]
-  3. Pick _one_ of $x$ and $y$, and use your picture to describe all the values it could take.
-  4. Solve for the _other_ variable in all the inequalities.
-]
+= Polar coordinates is a special case of change of variables (tomorrow)
 
-= Pictures for the example from Poonen's notes
-#sample[
-  Show both ways of setting up an integral of a function $f(x,y)$
-  over the region bounded by $y-x=2$ and $y=x^2$.
-]
-
-Here the region would be described as $y >= x^2$ and $y-x <= 2$.
-
-#align(center)[
-  #image("figures/ints-pararegion.png", width: 50%)
-]
-
-#align(center)[
-  #table(
-    columns: 2,
-    align: left,
-    stroke: none,
-    [#image("figures/ints-para-vert.png", width: 90%)],
-    [#image("figures/ints-para-horiz.png", width: 90%)],
-  ),
-]
+The map
+$ bf(T)_"polar" (r, theta) = (r cos theta, r sin theta). $
+is so common you may as well memorize its Jacobian:
+$ J_(bf(T)) &= mat(
+    partial / (partial r) cos theta,
+    partial / (partial r) sin theta;
+    partial / (partial theta) (r cos theta),
+    partial / (partial theta) (r sin theta))
+  = mat(cos theta, sin theta; -r sin theta, r cos theta). \
+  |det J_(bf(T))| &=
+    det mat(cos theta, sin theta; -r sin theta, r cos theta)
+    = r cos^2 theta - (-r sin^2 theta) = r(cos^2 theta + sin^2 theta) = r. $
+You should actually just remember the final result of this calculation
+so you don't have to work it out again.
+Hence $dif x dif y = r dif r dif theta$.
 
 = Recitation questions from official course
 
-/ 1.: Calculate the double integral of the function $f (x , y) = 6 x^2 + 2 y$
-  over the rectangle $R = [0 , 2] times [- 1 , 1]$. Use both vertical and
-  horizontal slicings and check you get the same answer.
-
-/ 2.: Let $R$ be the first-quadrant region bounded by the two curves
-  $y = sqrt(x)$ and $y = x^3$. Compute in two different ways the double
-  integral $ iint_R x y^2 dif A . $
-
-/ 3.: Let $R$ be the (bounded) region between the parabola $y^2 = x$ and the
-  line through $(2 , 0)$ having slope $1$. Find the points where the
-  curves intersect and describe the region $R$ in terms of horizontal
-  slices and vertical slices. Express the double integral
-  $ iint_R f (x , y) dif A$ as an iterated integral in both
-  ways, using both horizontal and vertical slicings.
-  In the second case, you will have to write the integral in two pieces.
+/ 1.: Evaluate the iterated integral
+  $int_0^2 int_(y \/ 2)^1 e^(- x^2) dif x dif y$.
+/ 2.: Evaluate the integral $ iint_D (d A) / (3 + x^2 + y^2) $
+  where $D$ is the region such that $x >= 0$, $y >= 0$ and
+  $x^2 + y^2 <= 9$.
+/ 3.: A shape has a density given by $delta (x , y) = sqrt(x^2 + y^2)$. What
+  is the mass of the shape defined by $x^2 + (y - 1)^2 <= 1$?
+/ 4.: Evaluate the integral
+  $ iint_D frac(d A, sqrt(1 - x^2 - y^2)) $ where $D$ is the
+  region such that $x >= 0$ and $x^2 + (y - 1 \/ 2)^2 <= 1 \/ 4$.
