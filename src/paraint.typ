@@ -43,6 +43,11 @@ In other words, the arc length is the integral of the function $1$ over the whol
   for differentiable functions $f : RR -> RR$.
   But that's simply not the case.
   There's just no analog of FTC for arc length.
+  (Indeed, the arc length on the left-hand side depends on _how_ you travel from
+  $bf(r)(a)$ to $bf(r)(b)$ --- a straight line will be shortest mileage,
+  a windy meander with detours will be much longer mileage.
+  So you can't possibly know just from the starting point and the destination point
+  how long of a route you took.)
 ]
 
 On the rare occasions when you need it, you get a scalar-field line integral as:
