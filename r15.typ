@@ -7,8 +7,8 @@
   date: [28 October 2024],
 )
 
-#quote(attribution: [])[]
 
+#quote(attribution: [Jose Unpingco, in `doc/vim/quotes.txt`])[Vim is the greatest editor since the stone chisel.]
 
 This handout (and any other DLC's I write) are posted at
 #url("https://web.evanchen.cc/1802.html").
@@ -38,9 +38,9 @@ It's indeed true that $ det J_(bf(T)^(-1)) = 1 / det(J_(bf(T))) $
 which means that if your transition map has a nicer inverse than the original,
 you might prefer to use that instead.
 
-
 = Recitation questions from official course
 
+Today's guest instructor is Lichen.
 
 / 1.: Define the parallelogram coordinates $(u , v)$ by $x = u + v$ and
   $y = u - v$.
