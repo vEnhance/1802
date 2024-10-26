@@ -55,8 +55,7 @@ To do this, I need to tell you a new term:
 #definition(title: [Definition of transition map])[
   Suppose $cal(R)$ is a region.
   Let $cal(S)$ be another region, often a rectangle.
-  A *transition map* for $cal(R)$ is a function $bf(T) : cal(S) -> cal(R)$
-  that transforms $cal(S)$ to $cal(R)$.
+  A *transition map* for $cal(R)$ is a function $bf(T) : cal(S) -> cal(R)$ that transforms $cal(S)$ to $cal(R)$.
 
   In 18.02 we always require that all the points except possibly the boundaries of $cal(S)$
   get mapped to different points in $cal(R)$.
@@ -185,7 +184,7 @@ you might prefer to use that instead.
 #digression(title: [Digression on what $dif u dif v$ means])[
   For 18.02, the equation $dif u dif v = |det J_(bf(T))| dif x dif y$
   is more of a mnemonic right now than an actual equation;
-  that's because in 18.02 we don't give a definition of what $dif x$ or $dif y$ etc.
+  that's because in 18.02 we don't give a definition of what $dif x$ or $dif y$ mean.
   It can be made into a precise statement using something called a _differential form_.
   This is out of scope for 18.02, which has the unfortunate consequence
   that I can't give a formal explanation why the change-of-variable formula works.
@@ -238,7 +237,7 @@ Let's see an example of how to carry out this integration.
   You might recognize this as polar coordinates.
   This gives us a way to plot the unit disk as a rectangular map; see the figure.
   #todo[figure]
-  (Careful students might notice that the points on $(0,0)$ to $(1,0)$
+  (Careful students might notice that the points on the line segment from $(0,0)$ to $(1,0)$
   are repeated more than once under the transition map;
   again, in 18.02 we allow this repetition on the boundary.)
 
