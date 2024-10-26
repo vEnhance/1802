@@ -28,9 +28,9 @@ while $v = x y$ ranges from $16/25$ to $16/9$, giving the bottom half of the fig
   Suppose you need to integrate $iint_(cal(R)) f(x,y) dif x dif y$
   and you have a transition map $bf(T)(u,v) : cal(S) -> cal(R)$.
   Then the transition map lets you change the integral as follows:
-  $ iint_(cal(R)) f(x,y) dif x dif y = iint_(cal(S)) f(u,v)/(|det J_(bf(T))|) dif u dif v $
+  $ iint_(cal(R)) f(x,y) dif x dif y = iint_(cal(S)) f(u,v) lr(|det J_(bf(T))|) dif u dif v $
   Alternatively, if it's easier to compute $J_(bf(T)^(-1))$, the following formula also works:
-  $ iint_(cal(R)) f(x,y) dif x dif y = iint_(cal(S)) f(u,v) |det J_(bf(T)^(-1))| dif u dif v $
+  $ iint_(cal(R)) f(x,y) dif x dif y = iint_(cal(S)) f(u,v)/lr(|det J_(bf(T)^(-1))|) dif u dif v $
 ]
 Here $|det J_(bf(T))|$ is called the *area scaling factor*:
 it's the absolute value of the determinant of the Jacobian matrix.
