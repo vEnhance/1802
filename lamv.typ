@@ -14,7 +14,7 @@
 
 #include "src/preface.typ"
 #pagebreak()
-#include "src/type-safety.typ"
+#include "src/tsafe.typ"
 #pagebreak()
 
 #part[Part Alfa: Linear Algebra of Vectors]
