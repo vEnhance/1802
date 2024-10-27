@@ -16,3 +16,9 @@ Some practice questions from topics through the entire course.
   Find all real numbers $t$ such that the vector $angle.l t+4, t+5, t+6 angle.r$
   is tangent to $cal(S)$ at the origin.
 ]
+
+#exer[
+  Let $cal(R)$ denote the region in the $x y$-plane cut out by
+  $y = x + 2$, $y = x + 20$, and $y = x^2$.
+  Compute the area of $cal(R)$.
+]

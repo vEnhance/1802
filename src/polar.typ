@@ -58,3 +58,5 @@ Compared to back in @sec-chvar-polar, it's the same thing;
 it's just a shift in mindset where you go from
 "take an $x y$-picture and translate into polar coordinates"
 to "take a picture and write it directly in polar coordinates".
+
+= [EXER] Exercises

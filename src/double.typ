@@ -395,8 +395,9 @@ In that case, the total mass of $cal(R)$ is the integral of the densities:
 $ op("mass")(cal(R)) = iint_(cal(R)) rho(x,y) dif x dif y. $
 Given a region you can also consider the _center of mass_.
 The idea/definition is that the $x$-coordinate of the center of mass should be
-the weighted average of the $x$-coordinates of the points in the region:
-$ x"-coord of the center of mass" = 1/(op("mass")(cal(R))) iint_(cal(R)) x dot rho(x,y) dif x dif y. $
+the weighted average of the $x$-coordinates of the points in the region,
+and is usually denoted $dash(x)$:
+$ dash(x) := x"-coord of the center of mass" = 1/(op("mass")(cal(R))) iint_(cal(R)) x dot rho(x,y) dif x dif y. $
 And the same for the others.
 Let's repeat this in recipe form.
 
@@ -404,8 +405,8 @@ Let's repeat this in recipe form.
   Suppose $cal(R)$ is a region and $rho$ is a density function for the region.
 
   1. The total mass is given by $op("mass")(cal(R)) = iint_(cal(R)) rho(x,y) dif x dif y. $
-  2. The center of mass is given by the point
-  $ lr(( (iint_(cal(R)) x dot rho(x,y) dif x dif y) / (op("mass")(cal(R))),
+  2. The center of mass is the point $(dash(x), dash(y))$ defined by
+  $ (dash(x), dash(y)) := lr(( (iint_(cal(R)) x dot rho(x,y) dif x dif y) / (op("mass")(cal(R))),
     (iint_(cal(R)) y dot rho(x,y) dif x dif y) / (op("mass")(cal(R))))). $
 ]
 

@@ -33,15 +33,38 @@
 
 = 18.02 Mock Midterm 3 Questions
 
-/ Question 1:
-/ Question 2:
-/ Question 3:
-/ Question 4:
-/ Question 5:
+/ Question 1.:
+  Another butterfly is fluttering in the $x y$ plane
+  with position $bf(r)(t) = angle.l sin(t), sin(t) angle.r$.
+  Let $cal(C)$ denote the trajectory of the butterfly
+  from time $t = 0$ to time $t = 2pi$.
+
+  - Compute the arc length $int_(cal(C)) dif s$.
+  - A wind is blowing on the butterfly,
+    given by the vector field $bf(F)(x,y) = angle.l e^x, e^y angle.r$.
+    Compute the line integral $int_(cal(C)) bf(F) dot dif bf(r)$.
+
+/ Question 2.:
+  Compute the area of the region in the first quadrant between $x y = 1$ and $x + y = 101/10$.
+
+/ Question 3.:
+  Consider the region defined by $y >= 0$, $y^2 >= 3x^2$ and $x^2+y^2 <= 9$.
+  Assuming it has uniform density, compute its center of mass.
+
+/ Question 4.:
+  Suppose $h(x)$ is a function for which the vector field $bf(F) : RR^2 -> RR^2$ defined by
+  $ bf(F)(x,y) = vec(x y + cos(x), h(x) + cos(y)) $
+  is conservative. Compute $h$ and find a potential function for $bf(F)$.
+
+/ Question 5.:
+  Let $cal(C)$ denote the unit circle $x^2+y^2=1$ oriented counterclockwise,
+  and consider the vector field $bf(F) = vec(x+2y, 4x+8y)$.
+  Compute the flux of $bf(F)$ through $cal(C)$.
+
 
 #v(3em)
 
-The solutions to all the problems are now posted in Section #todo[...] of my LAMV book:
+The solutions to all the problems are now posted in Section 44 of my LAMV book:
 #align(center)[
   #url("https://web.evanchen.cc/upload/1802/lamv.pdf").
 ]
@@ -54,4 +77,82 @@ May contain typos/errors/gaps. Still working on it.
 
 #outline()
 
-= Solution 1
+== Solution 1
+
+
+
+= Solution
+
+== Sketch the region
+
+First, we sketch the region.
+The condition $x^2 + y^2 <= 9$ represents a circle of radius 3
+centered at the origin.
+The inequality $y >= 0$ and $y >= sqrt(3) lr(|x|)$ describes two lines:
+- $y = sqrt(3) x$
+- $y = - sqrt(3) x.$
+These lines form a wedge covering the top half of the circle within the angle range
+$pi / 3 <= theta <= (2 pi) / (3)$ in polar coordinates.
+
+#todo[figure]
+
+== Setup of integral
+
+To simplify integration, switch to polar coordinates:
+$ x = r cos theta , quad y = r sin theta . $
+The region in polar coordinates is bounded by:
+- $0 <= r <= 3$ (radius of the circle),
+- $pi / 3 <= theta <= (2 pi) / (3)$ (angular bounds determined by $y = sqrt(3) x$ and $y = - sqrt(3) x$).
+
+Since density is uniform, the mass is proportional to the area.
+The area $A$ of the region can be found by integrating in polar coordinates:
+$ op("Area")(cal(R)) = int_(theta = pi / 3)^((2 pi) / (3)) int_(r = 0)^3 r dif r dif theta . $
+The coordinates of the center of mass $(X , Y)$ are then given by:
+$ dash(x) = 1 / (op("Area")(cal(R))) iint_cal(R) x dif A , quad dash(y) = 1 / (op("Area")(cal(R))) iint_cal(R) y dif A . $
+
+== Calculation of area
+
+Geometers may just notice that the region is one-sixth of the area of the full circle,
+since it's a $60 degree$ slice.
+Hence $ A = 1/6 dot (3^2 dot pi) = (3 pi) / 2. $
+
+#digression(title: [Digression: the long way])[
+  Of course, if you don't notice this, you could integrate it too.
+  First, integrate with respect to $r$:
+  $ int_(r = 0)^3 r dif r = [r^2 / 2]_(r = 0)^3 = 9 / 2 . $
+  Then, integrate with respect to $theta$:
+  $ A = int_(theta = pi / 3)^((2 pi) / (3)) 9 / 2 dif theta = 9 / 2 ((2 pi) / (3) - pi / 3) = 9 / 2 dot pi / 3 = (3 pi) / (2) . $
+]
+
+== Calculation of $x$-coordinate
+
+It is obvious from symmetry that $ dash(x) = 0. $ That's it.
+
+#digression(title: [Digression: the long way])[
+  For comparison, we show what happens if you didn't notice the symmetry and proceed to integrate.
+  In polar coordinates, $x = r cos theta$ and $dif A = r dif r dif theta$.
+  So:
+  $ iint_cal(R) x dif A = int_(r = 0)^3 int_(theta = pi / 3)^((2 pi) / (3))  r cos theta dot r dif r dif theta
+    = int_(r = 0)^3 r^2 int_(theta = pi / 3)^((2 pi) / (3)) cos theta  dif theta dif r. $
+  However, the inner integral is
+  $ int_(theta = pi / 3)^((2 pi) / (3)) cos theta dif theta &= [sin theta]_(theta = pi / 3)^((2 pi) / (3)) \
+    &= sin ((2 pi) / (3)) - sin (pi / 3) = sqrt(3) / 2 - sqrt(3) / 2 = 0. $
+  So the whole thing is $0$.
+]
+
+== Calculation of $y$-coordinate
+
+Use $y = r sin theta$:
+$ dash(y) = iint_cal(R) y dif A = int_(theta = pi / 3)^((2 pi) / (3)) int_(r = 0)^3 r sin theta dot r dif r dif theta = int_(theta = pi / 3)^((2 pi) / (3)) sin theta int_(r = 0)^3 r^2 dif r dif theta . $
+First, we compute
+$ int_(r = 0)^3 r^2 dif r = [r^3 / 3]_(r = 0)^3 = 27 / 3 = 9 . $
+Hence
+$ dash(y) = iint_cal(R) y dif A = 9 int_(theta = pi / 3)^((2 pi) / (3)) sin theta dif theta . $
+Integrate $sin theta$ with respect to $theta$:
+$ int_(theta = pi / 3)^((2 pi) / (3)) sin theta dif theta
+  = - [cos theta]_(theta = pi / 3)^((2 pi) / (3)) = - cos ((2 pi) / (3)) + cos (pi / 3)
+  = - (- 1 / 2) + 1 / 2 = 1 . $
+Thus, $ iint_cal(R) y dif A = 9 dot 1 = 9 , $ and so
+$ dash(y) = 1 / (op("Area")(cal(R))) iint_cal(R) y dif A = 9 / (3 pi) / (2) = 6 / pi . $
+
+In conclusion, the center of mass is given by $ (X,Y) = (0, 6/pi). $
