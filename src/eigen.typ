@@ -706,13 +706,6 @@ But I'll show you how to do it with eigenvectors.
   Then find the corresponding eigenvectors.
 ]
 #exer[
-  Find the unique $2 times 2$ matrix $A$ for which
-  $vec(1,1)$ is an eigenvector with eigenvalue $3$
-  and $vec(2,1)$ is an eigenvector with eigenvalue $4$.
-]
-
-
-#exer[
   Let $A = mat(4,3;4,8)$.
   - Compute the eigenvalues and eigenvectors for $A$.
   - Compute the eigenvalues and eigenvectors for $A^2$.
