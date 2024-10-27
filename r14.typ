@@ -16,6 +16,8 @@ Couple notes:
 
 - If you want to come to review session 3
   you can vote on the time at #url("https://forms.gle/Xh8B5C2tPVtD5xDU6").
+  - I have to say I'm amazed that so many people are checking their email on a minute-by-minute
+    basis on a Sunday morning.
 - Wednesday's recitation will have Lichen as a guest instructor.
   (I'll be in the audience.)
 
@@ -48,21 +50,22 @@ $ J_(bf(T)) &= mat(
   |det J_(bf(T))| &=
     det mat(cos theta, sin theta; -r sin theta, r cos theta)
     = r cos^2 theta - (-r sin^2 theta) = r(cos^2 theta + sin^2 theta) = r. $
-So by change-of-variables (covered tomorrow), $ dif x dif y = r dif r dif theta. $
+So by change-of-variables (covered tomorrow),
+#memo(title: [Memorize: Change-of-variables Jacobian for polar coordinates])[
+  $ dif x dif y = r dif r dif theta. $
+]
 This particular change is so common you should memorize it so you don't have
 to re-compute the Jacobian above all the time.
 
 Many other sources will write $dif A$ as a shorthand for _both_:
-so if you have $(x,y)$ coordinates then $dif A := dif x dif y$,
+so if you have Cartesian $(x,y)$ coordinates then $dif A := dif x dif y$,
 while if you have polar coordinates then $dif A = r dif r dif theta$.
 (They're equal, after all.)
 If you are worried about forgetting the factor of $r$,
 you can write $dif x dif y$ or $dif y dif x$ you know you're _supposed_ to make a change of variables
 (and won't accidentally write $dif r dif theta$ with the factor of $r$ missing).
 
-= Recipes
-
-See LAMV 22 for details.
+= Recipes (see LAMV §22 for details)
 
 #recipe(title: [Recipe for total mass and center of mass])[
   Suppose $cal(R)$ is a region and $rho$ is a density function for the region.
@@ -74,8 +77,8 @@ See LAMV 22 for details.
 ]
 
 #recipe(title: [Recipe for swapping the order of integration])[
-  If you are given $int_(x=?)^? int_(y=?)^? f(x,y) dif y dif x$
-  and you wish to switch the order of integration the other way:
+  Given $int_(x=?)^? int_(y=?)^? f(x,y) dif y dif x$,
+  to switch the order of integration the other way:
 
   1. Convert the limits of integration back into equality format,
     writing the region $cal(R)$.
@@ -85,8 +88,8 @@ See LAMV 22 for details.
 
 = Recitation questions from official course
 
-/ 1.: Evaluate the iterated integral
-  $int_0^2 int_(y \/ 2)^1 e^(- x^2) dif x dif y$.
+/ 1.: Evaluate the iterated integral#footnote[Note that exam may just say $int_0^2 int_(y \/ 2)^1 e^(- x^2) dif x dif y$ and make you read backwards.]
+  $int_(y=0)^2 int_(x=y \/ 2)^1 e^(- x^2) dif A$.
 / 2.: Evaluate the integral $ iint_D (d A) / (3 + x^2 + y^2) $
   where $D$ is the region such that $x >= 0$, $y >= 0$ and
   $x^2 + y^2 <= 9$.
