@@ -13,7 +13,7 @@ get tired of writing $dif x dif y$ and $dif y dif x$.
 In particular, I advised you earlier that you should prefer to write
 $ int_(x=0)^5 int_(y=0)^(3) f(x,y) dif y dif x $
 rather than the harder-to-read $int_0^5 int_0^3 f(x,y) dif y dif x$.
-Those of you who took my advise may not want to waste the time of remembering whether
+Those of you who took my advice may not want to waste the time of remembering whether
 it's $dif y dif x$ or $dif x dif y$ at the end, since it doesn't matter for you anymore.
 For that reason, at this point I hereby bestow on you the following definition:
 #definition(title: [Definition of $dif A$])[

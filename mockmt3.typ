@@ -155,4 +155,4 @@ $ int_(theta = pi / 3)^((2 pi) / (3)) sin theta dif theta
 Thus, $ iint_cal(R) y dif A = 9 dot 1 = 9 , $ and so
 $ dash(y) = 1 / (op("Area")(cal(R))) iint_cal(R) y dif A = 9 / (3 pi) / (2) = 6 / pi . $
 
-In conclusion, the center of mass is given by $ (X,Y) = (0, 6/pi). $
+In conclusion, the center of mass is given by $ (dash(x),dash(y)) = (0, 6/pi). $

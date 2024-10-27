@@ -1,0 +1,20 @@
+import graph;
+import geometry;
+size(8cm);
+xaxis("$x$", -0.5, 2.5, Ticks(Label(fontsize(9pt)), Step=1, begin=false, end=false), Arrows);
+yaxis("$y$", -1.5, 1.5, Ticks(Label(fontsize(9pt)), Step=1, begin=false, end=false), Arrows);
+
+filldraw(circle((1,0), 1), opacity(0.4)+paleyellow, blue);
+pair P = (1,0)+dir(110);
+pair O = (0,0);
+pair A = (2,0);
+dot("$O=(0,0)$", O, 2*dir(225), brown);
+draw(O--P, brown);
+label((1,-1), "$\mathcal{R} : (x-1)^2 + y^2 \le 1$", dir(-60), blue);
+draw(arc((0,0), 0.2, 0, 55), deepgreen);
+label("$\theta$", 0.2*dir(27.5), dir(27.5), deepgreen);
+label("$r = 2 \cos \theta$", 0.4*P, dir(0), brown);
+draw(P--A, deepgreen);
+markrightangle(O, P, A, deepgreen);
+dot("$P$", P, dir(90));
+dot("$A=(2,0)$", A, dir(45), deepgreen);

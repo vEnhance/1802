@@ -266,3 +266,9 @@ Let's see an example of how to carry out this integration.
 
 
 == [EXER] Exercises
+
+#exer[
+  Let $cal(R)$ be all the points on or inside the triangle
+  with vertices $(0,0)$, $(1,2)$ and $(2,1)$.
+  Compute $iint_(cal(R)) x y dif x dif y$.
+]

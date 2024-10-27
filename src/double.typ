@@ -559,21 +559,24 @@ Put in recipe form:
 ]
 
 #exer[
-  Let $cal(R)$ be all the points on or inside the triangle
-  with vertices $(0,0)$, $(1,2)$ and $(2,1)$.
-  Compute $iint_(cal(R)) x y dif x dif y$.
-]
-
-#exer[
   Let $cal(R)$ be the region between the curves $y = sqrt(x)$ and $y = x^2$.
   Assume $cal(R)$ has constant density.
   Calculate its center of mass.
 ]
 
 #exer[
+  Suppose the real numbers $a < b$ and $c < d$ are chosen such that
+  $int_(x=a)^b e^(-x^2) dif x = 0.3$ and $int_(y=c)^d e^(-y^2) dif x = 0.7$.
+  What are all the values that
+  $ int_(x=a)^b int_(y=c)^d e^(-x^2 - y^2) dif x dif y $
+  can take?
+]
+
+#exer[
   Evaluate the double integral:
   $ int_(y=0)^1 int_(x=y)^(root(5, y)) (x y^2) / (1-x^(12)) dif x dif y. $
 ] <exer-swapint-fifth>
+
 
 #exer[
   Evaluate the double integral:
