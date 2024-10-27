@@ -86,7 +86,7 @@ For comparison, Part Golf corresponds to §13 and §17 of #poonen.
 #include "src/scalint.typ"
 #pagebreak()
 
-#part[Part Hotel: Grad, Curl, and Div]
+#part[Part Hotel: Grad, curl, and div]
 For comparison, Part Hotel corresponds to §14, §15, §18, §19, §20, §21 of #poonen.
 #include "src/vecfield.typ"
 #pagebreak()
@@ -96,20 +96,38 @@ For comparison, Part Hotel corresponds to §14, §15, §18, §19, §20, §21 of 
 #pagebreak()
 #include "src/flux.typ"
 #pagebreak()
+#include "src/mt3.typ"
+#pagebreak()
 
-#part[Part India: Solutions]
+#part[Part India: Practice questions]
+#include "src/practice.typ"
+#pagebreak()
+
+#part[Part Juliett: Solutions]
+#include "src/sol-alpha.typ"
+#pagebreak()
 #include "src/sol-bravo.typ"
 #pagebreak()
 #include "src/sol-charlie.typ"
 #pagebreak()
 #include "src/sol-mt1.typ"
 #pagebreak()
-#include "src/sol-foxtrot.typ"
+#include "src/sol-delta.typ"
 #pagebreak()
-#include "src/sol-golf.typ"
+#include "src/sol-echo.typ"
+#pagebreak()
+#include "src/sol-foxtrot.typ"
 #pagebreak()
 #include "src/sol-mt2.typ"
 #pagebreak()
+#include "src/sol-golf.typ"
+#pagebreak()
+#include "src/sol-hotel.typ"
+#pagebreak()
+#include "src/sol-mt3.typ"
+#pagebreak()
+#include "src/sol-india.typ"
+#pagebreak()
 
-#part[Part Juliett: Appendix]
+#part[Part Kilo: Appendix]
 #include "src/appendix.typ"
