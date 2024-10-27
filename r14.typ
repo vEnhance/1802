@@ -12,6 +12,13 @@
 This handout (and any other DLC's I write) are posted at
 #url("https://web.evanchen.cc/1802.html").
 
+Couple notes:
+
+- If you want to come to review session 3
+  you can vote on the time at #url("https://forms.gle/Xh8B5C2tPVtD5xDU6").
+- Wednesday's recitation will have Lichen as a guest instructor.
+  (I'll be in the audience.)
+
 = From last time
 
 If you missed Wednesday's recitation, some advice:
