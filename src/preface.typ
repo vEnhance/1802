@@ -286,8 +286,8 @@ in return for the short time limit.
   If you know how to open a GitHub pull request,
   the relevant repository is #url("https://github.com/vEnhance/1802").)
 - Thanks to OpenAI for gifting me a Plus subscription to ChatGPT.
-  Writing this text gave me an excuse to get a chance to use ChatGPT 4o and
-  see what kind of things it did well (and what I could still do faster by hand).
+  Writing this text gave me an excuse to get a chance to use ChatGPT 4o and ChatGPT o1-preview,
+  to see what kind of things it did well (and what I could still do faster by hand).
 
   - ChatGPT was really good at generating full step-by-step solutions
     to the routine exercises, even if there were occasional mistakes.

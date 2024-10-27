@@ -150,7 +150,7 @@ draw("$\frac{df}{dx}$", (2,8)--(3,8), red, EndArrow);
 draw((1,5)--(1,5.5)--(3,5.5), red, EndArrow);
 label("$\nabla f$ (grad)", (1,5.5), dir(180), red);
 draw((5,5.5)--(8,5.5)--(8,5), red, EndArrow);
-label("$\pdv{g}{x}-\pdv{f}{y}$ (2d scalar curl)", (8,5.5), dir(0), red);
+label("$\pdv{q}{x}-\pdv{p}{y}$ (2d scalar curl)", (8,5.5), dir(0), red);
 
 draw((1,-1.5)--(1,-3)--(3,-3), red, EndArrow);
 label("$\nabla f$ (grad)", (1,-2.25), dir(180), red);

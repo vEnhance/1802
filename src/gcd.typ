@@ -69,14 +69,14 @@ Here's the definition of curl in 3D space.
 
 #definition(title: [Definition of curl])[
   Suppose
-  $ bf(F)(x,y,z) = vec(f(x,y,z),g(x,y,z),h(x,y,z)) $
+  $ bf(F)(x,y,z) = vec(p(x,y,z),q(x,y,z),r(x,y,z)) $
   is a 3D vector field.
   Then the *curl* of $bf(F)$ is the vector field defined by
   $ op("curl") bf(F) := nabla times bf(F)
     := vec(
-      (partial h)/(partial y) - (partial g)/(partial z),
-      (partial f)/(partial z) - (partial h)/(partial x),
-      (partial f)/(partial x) - (partial g)/(partial y) ). $
+      (partial r)/(partial y) - (partial q)/(partial z),
+      (partial p)/(partial z) - (partial r)/(partial x),
+      (partial p)/(partial x) - (partial q)/(partial y) ). $
 ]
 
 #typesig[
@@ -88,7 +88,7 @@ Here's the definition of curl in 3D space.
   In practice, everyone remembers this formula using the following mnemonic:
   $ nabla times bf(F) = det mat(bf(e)_1, bf(e)_2, bf(e)_3;
     (partial)/(partial x), (partial)/(partial y), (partial)/(partial z);
-    f, g, h). $
+    p, q, r). $
   This equation does not pass type-safety, because it's a "matrix" whose entries
   are some combination of functions, vectors, and partial derivative operators,
   so it absolutely does not make sense.
@@ -161,7 +161,7 @@ So now we prove the following.
 #memo(title: [Memorize: Curl of conservative field is zero])[
   Let $f : RR^3 -> RR$ be a function (aka scalar field),
   and let $nabla f$ be the corresponding conservative vector field.
-  Then (assuming $f$ has continuous second partial derivatives), the curl of $nabla f$ is zero,
+  Then (assuming $nabla f$ is continuously differentiable), the curl of $nabla f$ is zero,
   i.e.
   $ op("curl")(nabla f) = nabla times (nabla f) = bf(0). $
 ]
@@ -169,16 +169,13 @@ So now we prove the following.
 You can actually verify this theorem pretty easily by definition:
 #proof[
   Since
-  $ nabla f = vec(
-    (partial f)/(partial x), (partial f)/(partial y), (partial f)/(partial z)) $
+  $ nabla f = vec( (partial f)/(partial x), (partial f)/(partial y), (partial f)/(partial z)) $
   we get
   $ op("curl")(nabla f) = vec(
-      (partial f)/(partial z partial y) - (partial f)/(partial y partial z),
-      (partial f)/(partial x partial z) - (partial f)/(partial z partial x),
-      (partial f)/(partial y partial x) - (partial f)/(partial x partial y)). $
-  However, if $f$ has continuous second partial derivatives,
-  then $(partial f)/(partial y partial x) = (partial f)/(partial x partial y)$ and so on.
-  So this is the zero vector everywhere.
+      f_(z y) - f_(y z),
+      f_(x z) - f_(z x),
+      f_(y x) - f_(x y)) = vec(0,0,0) $
+  because we saw in @sec-when-antigrad that $f_(z y) = f_(y z) = 0$, etc.
 ]
 
 However, it's more important to have a visual understanding of why this is true.
@@ -193,10 +190,10 @@ the water will flow directly downhill or uphill, without any swirling or spinnin
 
 #definition(title: [Definition of divergence])[
   Suppose
-  $ bf(F)(x,y,z) = vec(f(x,y,z),g(x,y,z),h(x,y,z)) $
+  $ bf(F)(x,y,z) = vec(p(x,y,z),q(x,y,z),r(x,y,z)) $
   is a 3D vector field.
   Then the *divergence* of $bf(F)$ is the scalar field defined by
-  $ op("div")(bf(F)) := nabla dot bf(F) := (partial f)/(partial x) + (partial g)/(partial y) + (partial h)/(partial z). $
+  $ op("div")(bf(F)) := nabla dot bf(F) := (partial p)/(partial x) + (partial q)/(partial y) + (partial r)/(partial z). $
 ]
 
 #typesig[
@@ -294,26 +291,26 @@ Instead we take the convention that
 
 #definition(title: [Definition of 2D scalar curl])[
   Suppose
-  $ bf(F)(x,y) = vec(f(x,y),g(x,y)) $
+  $ bf(F)(x,y) = vec(p(x,y),q(x,y)) $
   is a 2D vector field.
   Then the *2D scalar curl* of $bf(F)$ is the scalar field defined by
-  $ op("curl") bf(F) := (partial g) / (partial x) - (partial f) / (partial y). $
+  $ op("curl") bf(F) := (partial q) / (partial x) - (partial p) / (partial y). $
 ]
 
 #tip(title: [Tip: 2D scalar curl is a special case of 3D scalar curl])[
   The mnemonic $nabla times bf(F)$ actually still works if you just pretend $bf(F)$
   is a 3D vector field where the $z$-coordinate is always zero.
-  That is, given $bf(F) = vec(f(x,y), g(x,y))$, consider the mnemonic
-  $ nabla times vec(f(x,y), g(x,y), 0). $
+  That is, given $bf(F) = vec(p(x,y), q(x,y))$, consider the mnemonic
+  $ nabla times vec(p(x,y), q(x,y), 0). $
   If you follow through, you will find you get
   $ det mat(bf(e)_1, bf(e)_2, bf(e)_3;
       partial / (partial x), partial / (partial y), partial / (partial z);
-      f(x,y), g(x,y), 0). $
+      p(x,y), q(x,y), 0). $
   All the terms involving $partial / (partial z)$ disappear, because there's no $z$ anywhere.
   So only the terms in front of $bf(e)_3$ survive, and you get
-  $ det mat(partial / (partial x), partial / (partial y); f(x,y), g(x,y)) bf(e)_3
-      = ((partial g) / (partial x) - (partial f) / (partial y)) bf(e)_3. $
-  Like before, this is all just mnemonic.
+  $ det mat(partial / (partial x), partial / (partial y); p(x,y), q(x,y)) bf(e)_3
+      = ((partial q) / (partial x) - (partial p) / (partial y)) bf(e)_3. $
+  And there's the 2D scalar curl, the coefficient of $bf(e)-3$.
 ]
 
 It's still true that the curl of a conservative 2D vector field is zero.
@@ -329,10 +326,10 @@ So I'll just mention it briefly.
 
 #definition(title: [Definition of divergence])[
   Suppose
-  $ bf(F)(x,y) = vec(f(x,y),g(x,y)) $
+  $ bf(F)(x,y) = vec(p(x,y),q(x,y)) $
   is a 2D vector field.
   Then the *divergence* of $bf(F)$ is the scalar field defined by
-  $ op("div") bf(F) := nabla dot bf(F) := (partial f)/(partial x) + (partial g)/(partial y). $
+  $ op("div") bf(F) := nabla dot bf(F) := (partial p)/(partial x) + (partial q)/(partial y). $
 ]
 
 The physical interpretation is the same too, just in 2D bodies of water.

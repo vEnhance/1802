@@ -34,6 +34,11 @@ In Part Hotel we'll meet vector fields that aren't conservative too.
   but the outputs as _vectors_ (arrows). Don't mix them.
 ]
 
+For 2D and 3D vector fields, we'll often write
+$ bf(F) = vec(p(x,y), q(x,y)) quad bf(F) = vec(p(x,y,z), q(x,y,z), r(x,y,z)). $
+I think other sources often use $P$, $Q$, $R$ instead,
+but right now I'm using those for points too, so I'll use lowercase letters.
+
 == [TEXT] How do we picture a vector field?
 
 There's a lot of ways to picture a vector field, especially in physics.
@@ -233,21 +238,21 @@ in vague non-precise terms (we'll make precise later), for each of these six red
 
 / Line integral $->$ double/area integral:
   Suppose now $bf(F) : RR^2 -> RR^2$ is a vector field.
-  Write $bf(F) = (f(x,y), g(x,y))$.
+  Write $bf(F) = (p(x,y), q(x,y))$.
   Let $cal(R)$ be some two dimensional region, like a disk.
   Suppose further that the _boundary_ of $cal(R)$ is parametrized by a curve $bf(r)(t)$
   (e.g. the circumference of the disk).
   Then _Green's theorem_ says that
   $ int_("start time")^("stop time") bf(F)(bf(r)(t)) dot bf(r)'(t) dif t
-    = iint_(cal(R)) ((partial g) / (partial x) - (partial f) / (partial y)) dif x dif y. $
-  The weird expression $(partial g) / (partial x) - (partial f) / (partial y)$
+    = iint_(cal(R)) ((partial q) / (partial x) - (partial p) / (partial y)) dif x dif y. $
+  The weird expression $(partial q) / (partial x) - (partial p) / (partial y)$
   in the right-hand side is called the 2-d scalar curl, but we haven't defined this term yet.
 
   If you use shorthand as in @table-shorthand, this can be simplified.
   Let $cal(C)$ be the curve formed by $bf(r)$,
   this could be rewritten as
   $ int_(cal(C)) bf(F) dot dif bf(r)
-    = iint_(cal(R)) ((partial g) / (partial x) - (partial f) / (partial y)) dif A. $
+    = iint_(cal(R)) ((partial q) / (partial x) - (partial p) / (partial y)) dif A. $
 
   Of all the results here, I think Green's theorem is the most unnatural one.
   (Poonen's notes deliberately do Green's theorem last, a decision I like.)

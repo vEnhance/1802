@@ -137,7 +137,7 @@ More practically, the following two results are true:
     if you can't get the methods in @sec-antigrad to work.
 ]
 
-#todo[example]
+#todo[examples idk]
 
 == [TEXT] Okay, but how do you tell whether $bf(F)$ is conservative?
 
@@ -146,15 +146,27 @@ It turns out that if $bf(F)$ is defined everywhere, then the reverse is true too
 that is, we can use $nabla times bf(F)$ as a criteria for checking conservative fields.
 
 #memo(title: [Memorize: Conservative $<==>$ $nabla times bf(F) = bf(0)$])[
-  - A vector field $bf(F) : RR^2 -> RR^2$ given by $bf(F)(x,y) = vec(f(x,y), g(x,y))$
-    which is defined everywhere is conservative if and only if the 2D scalar curl
-    $(partial g) / (partial x) - (partial f) / (partial y)$ is zero everywhere.
-  - A vector field $bf(F) : RR^3 -> RR^3$ which is defined everywhere
+  Assume here the vector field is continuously differentiable and defined everywhere.
+  - A vector field $bf(F) : RR^2 -> RR^2$
+    given by $bf(F)(x,y) = vec(p(x,y), q(x,y))$
+    is conservative if and only if the 2D scalar curl is zero everywhere:
+    $ (partial q) / (partial x) - (partial p) / (partial y) = 0. $
+  - A vector field $bf(F) : RR^3 -> RR^3$
     is conservative if and only if the curl $nabla times bf(F)$ is zero everywhere.
+    In symbols, if $bf(F)(x,y) = vec(p(x,y,z), q(x,y,z), r(x,y,z))$ then we need
+    all three components of the curl to equal $0$:
+    $ (partial r) / (partial y) - (partial q) / (partial z)
+      = (partial q) / (partial x) - (partial p) / (partial y)
+      = (partial p) / (partial z) - (partial r) / (partial x) = 0. $
 ]
 
+This should look familiar: it's the same thing I told you in @sec-when-antigrad.
+The only thing that's change is that I now have an aquatic interpretation of all the equations:
+that we require the 2D or 3D curl to be zero.
+But the equations are the same.
+
 #digression[
-  This theorem fails if the vector field $bf(F)$ is only defined on part of $RR^n$
+  This theorem also fails if the vector field $bf(F)$ is only defined on part of $RR^n$
   and the region is not _simply connected_.
   In that case it only works one direction --- that is,
   if $nabla times bf(F) != bf(0)$ then $bf(F)$ is definitely not conservative,
