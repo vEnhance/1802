@@ -37,6 +37,8 @@ typst_text = re_hyperlink.sub(r"", typst_text)
 
 typst_text = typst_text.replace(r"dot.op", r"dot")
 typst_text = typst_text.replace(r"integral_", r"int_")
+typst_text = typst_text.replace(r"integral.double", r"iint")
+typst_text = typst_text.replace(r"integral.triple", r"iiint")
 typst_text = typst_text.replace(r"thin dif", "dif")
 typst_text = typst_text.replace(r"quad arrow.r.double quad", "==>")
 typst_text = typst_text.replace(r"\-", "-")
