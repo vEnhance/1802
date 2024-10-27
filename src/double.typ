@@ -563,15 +563,6 @@ Put in recipe form:
   Assume $cal(R)$ has constant density.
   Calculate its center of mass.
 ]
-
-#exer[
-  Suppose the real numbers $a < b$ and $c < d$ are chosen such that
-  $int_(x=a)^b e^(-x^2) dif x = 0.3$ and $int_(y=c)^d e^(-y^2) dif x = 0.7$.
-  What are all the values that
-  $ int_(x=a)^b int_(y=c)^d e^(-x^2 - y^2) dif x dif y $
-  can take?
-]
-
 #exer[
   Evaluate the double integral:
   $ int_(y=0)^1 int_(x=y)^(root(5, y)) (x y^2) / (1-x^(12)) dif x dif y. $

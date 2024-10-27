@@ -258,10 +258,6 @@ Again $x y$-coordinates are either infeasible or at least annoying.
   $ iint_(x^2+(y-1)^2 <= 1) 1/sqrt(x^2+y^2) dif x dif y. $
 ]
 
-#exer[
-  Compute $ int_(x=-oo)^(+oo) int_(y=-oo)^(+oo) e^(-x^2-y^2) dif y dif x. $
-]
-
 #exerstar[
   Compute $ iint_(x^2+y^2 <= 1) sqrt((x+3/5)^2 + (y+4/5)^2) dif x dif y. $
 ]

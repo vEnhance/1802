@@ -22,3 +22,19 @@ Some practice questions from topics through the entire course.
   $y = x + 2$, $y = x + 20$, and $y = x^2$.
   Compute the area of $cal(R)$.
 ]
+
+#exer[
+  Suppose the real numbers $a < b$ and $c < d$ are chosen such that
+  $int_(x=a)^b e^(-x^2) dif x = 0.3$ and $int_(y=c)^d e^(-y^2) dif x = 0.7$.
+  What are all the values that
+  $ int_(x=a)^b int_(y=c)^d e^(-x^2 - y^2) dif x dif y $
+  can take?
+]
+
+#exer[
+  Compute $ int_(x=-oo)^(+oo) int_(y=-oo)^(+oo) e^(-x^2-y^2) dif y dif x. $
+]
+
+#exer[
+  Combine the previous two exercises to figure out what $int_(x=-oo)^(x+oo) e^(-x^2) dif x$ is.
+]
