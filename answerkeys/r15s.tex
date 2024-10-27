@@ -18,4 +18,368 @@ ChatGPT can make mistakes, so if you spot anything that's wrong, flag me to ask.
 
 \tableofcontents
 
+
+
+We define the parallelogram coordinates \( (u, v) \) by the transformations \( x = u + v \) and \( y = u - v \).
+
+\newpage
+
+\section{Problem Solution}
+
+\begin{enumerate}
+    \item \textbf{Sketch the unit square in \( (u, v) \)-coordinates on the \( xy \)-plane.}
+
+    To map the unit square with vertices \( (0, 0), (1, 0), (0, 1), (1, 1) \) in \( (u, v) \)-coordinates onto the \( xy \)-plane, we calculate the coordinates of each vertex under the transformations \( x = u + v \) and \( y = u - v \):
+    \begin{itemize}
+        \item \( (u, v) = (0, 0): \quad (x, y) = (0 + 0, 0 - 0) = (0, 0) \).
+        \item \( (u, v) = (1, 0): \quad (x, y) = (1 + 0, 1 - 0) = (1, 1) \).
+        \item \( (u, v) = (0, 1): \quad (x, y) = (0 + 1, 0 - 1) = (1, -1) \).
+        \item \( (u, v) = (1, 1): \quad (x, y) = (1 + 1, 1 - 1) = (2, 0) \).
+    \end{itemize}
+    Therefore, the unit square in \( (u, v) \)-coordinates maps to a parallelogram in \( (x, y) \)-coordinates with vertices at \( (0, 0), (1, 1), (1, -1), \) and \( (2, 0) \).
+
+    \item \textbf{Evaluate \( dxdy \) in terms of \( dudv \).}
+
+    To find \( dx \, dy \) in terms of \( du \, dv \), we compute the Jacobian determinant:
+    \[
+    \frac{\partial(x, y)}{\partial(u, v)} =
+    \begin{vmatrix}
+        \frac{\partial x}{\partial u} & \frac{\partial x}{\partial v} \\
+        \frac{\partial y}{\partial u} & \frac{\partial y}{\partial v}
+    \end{vmatrix}.
+    \]
+    Since \( x = u + v \) and \( y = u - v \):
+    \[
+    \frac{\partial x}{\partial u} = 1, \quad \frac{\partial x}{\partial v} = 1, \quad \frac{\partial y}{\partial u} = 1, \quad \frac{\partial y}{\partial v} = -1.
+    \]
+    Thus,
+    \[
+    \frac{\partial(x, y)}{\partial(u, v)} = \begin{vmatrix} 1 & 1 \\ 1 & -1 \end{vmatrix} = (1)(-1) - (1)(1) = -2.
+    \]
+    Therefore,
+    \[
+    dx \, dy = \left| \frac{\partial(x, y)}{\partial(u, v)} \right| du \, dv = 2 \, du \, dv.
+    \]
+
+    \item \textbf{Evaluate the integrals \( I_1 = \iint_{P} dA \) and \( I_2 = \iint_{P} (x^2 - y^2) \, dA \) using the change of variables.}
+
+    \subsection*{Integral \( I_1 \)}
+    Since \( P \) is the region in \( xy \)-coordinates with vertices \( (0, 0), (1, 1), (1, -1), (2, 0) \), it corresponds to the unit square \( 0 \leq u \leq 1 \), \( 0 \leq v \leq 1 \) in \( (u, v) \)-coordinates. Thus,
+    \[
+    I_1 = \iint_{P} dA = \int_{0}^{1} \int_{0}^{1} 2 \, du \, dv = 2 \int_{0}^{1} \int_{0}^{1} du \, dv.
+    \]
+    Evaluating the inner integral with respect to \( u \):
+    \[
+    \int_{0}^{1} \int_{0}^{1} du \, dv = \int_{0}^{1} \left[ u \right]_{0}^{1} \, dv = \int_{0}^{1} 1 \, dv = \left[ v \right]_{0}^{1} = 1.
+    \]
+    So,
+    \[
+    I_1 = 2 \cdot 1 = 2.
+    \]
+
+    \subsection*{Integral \( I_2 \)}
+    To evaluate \( I_2 = \iint_{P} (x^2 - y^2) \, dA \), we express \( x^2 - y^2 \) in terms of \( u \) and \( v \). Since \( x = u + v \) and \( y = u - v \),
+    \[
+    x^2 - y^2 = (u + v)^2 - (u - v)^2.
+    \]
+    Expanding each term:
+    \[
+    (u + v)^2 = u^2 + 2uv + v^2 \quad \text{and} \quad (u - v)^2 = u^2 - 2uv + v^2.
+    \]
+    Therefore,
+    \[
+    x^2 - y^2 = (u^2 + 2uv + v^2) - (u^2 - 2uv + v^2) = 4uv.
+    \]
+    So,
+    \[
+    I_2 = \iint_{P} (x^2 - y^2) \, dA = \int_{0}^{1} \int_{0}^{1} 4uv \cdot 2 \, du \, dv = 8 \int_{0}^{1} \int_{0}^{1} uv \, du \, dv.
+    \]
+    Now, evaluate the inner integral with respect to \( u \):
+    \[
+    \int_{0}^{1} \int_{0}^{1} uv \, du \, dv = \int_{0}^{1} \left[ \frac{u^2}{2} \right]_{0}^{1} v \, dv = \int_{0}^{1} \frac{1}{2} v \, dv = \frac{1}{2} \int_{0}^{1} v \, dv = \frac{1}{2} \left[ \frac{v^2}{2} \right]_{0}^{1} = \frac{1}{2} \cdot \frac{1}{2} = \frac{1}{4}.
+    \]
+    Therefore,
+    \[
+    I_2 = 8 \cdot \frac{1}{4} = 2.
+    \]
+
+\end{enumerate}
+
+\newpage
+
+\subsection{Conclusion}
+
+The values of the integrals are:
+\[
+I_1 = 2, \quad I_2 = 2.
+\]
+
+
+
+
+
+
+\newpage
+
+\section{Solution}
+
+We are asked to evaluate the integral:
+\[
+I = \iint_{R} x^2 y^4 \, dA
+\]
+where \( R \) is the region bounded by \( xy = 4 \), \( xy = 8 \), \( y = x \), and \( y = 4x \). We will use the transformation:
+\[
+x = 2 \sqrt{\dfrac{u}{v}}, \quad y = 2 \sqrt{u v}
+\]
+
+\newpage
+
+\subsection{Step 1: Change of Variables}
+
+First, we express \( u \) and \( v \) in terms of \( x \) and \( y \) to find the limits of integration and compute the Jacobian determinant.
+
+From the given transformation:
+\[
+x y = \left(2 \sqrt{\dfrac{u}{v}}\right)\left(2 \sqrt{u v}\right) = 4 u
+\]
+Thus,
+\[
+u = \dfrac{x y}{4}
+\]
+Also,
+\[
+v = \dfrac{y}{x}
+\]
+
+\newpage
+
+\subsection{Step 2: Determining the Region \( S \) in the \( uv \)-Plane}
+
+The region \( R \) in the \( xy \)-plane is bounded by:
+\begin{enumerate}
+    \item \( x y = 4 \implies u = \dfrac{4}{4} = 1 \)
+    \item \( x y = 8 \implies u = \dfrac{8}{4} = 2 \)
+    \item \( y = x \implies v = \dfrac{x}{x} = 1 \)
+    \item \( y = 4x \implies v = \dfrac{4x}{x} = 4 \)
+\end{enumerate}
+Therefore, in the \( uv \)-plane, the region \( S \) is defined by \( 1 \leq u \leq 2 \) and \( 1 \leq v \leq 4 \).
+
+\newpage
+
+\subsection{Step 3: Computing the Jacobian Determinant}
+
+We compute the Jacobian determinant \( J(u,v) = \left| \dfrac{\partial(x,y)}{\partial(u,v)} \right| \).
+
+First, compute the partial derivatives:
+\[
+\begin{aligned}
+\dfrac{\partial x}{\partial u} &= 2 \left( \dfrac{u}{v} \right)^{-1/2} \cdot \dfrac{1}{2} v^{-1} = \dfrac{1}{u^{1/2} v^{1/2}} \\
+\dfrac{\partial x}{\partial v} &= 2 \left( \dfrac{u}{v} \right)^{-1/2} \cdot \left( -\dfrac{u}{2 v^2} \right) = -\dfrac{u^{1/2}}{v^{3/2}} \\
+\dfrac{\partial y}{\partial u} &= 2 (u v)^{-1/2} \cdot \dfrac{1}{2} v = \dfrac{v^{1/2}}{u^{1/2}} \\
+\dfrac{\partial y}{\partial v} &= 2 (u v)^{-1/2} \cdot \dfrac{1}{2} u = \dfrac{u^{1/2}}{v^{1/2}}
+\end{aligned}
+\]
+Compute the determinant:
+\[
+\begin{aligned}
+J(u,v) &= \left| \begin{array}{cc}
+\dfrac{1}{u^{1/2} v^{1/2}} & -\dfrac{u^{1/2}}{v^{3/2}} \\
+\dfrac{v^{1/2}}{u^{1/2}} & \dfrac{u^{1/2}}{v^{1/2}}
+\end{array} \right| \\
+&= \left( \dfrac{1}{u^{1/2} v^{1/2}} \cdot \dfrac{u^{1/2}}{v^{1/2}} \right) - \left( -\dfrac{u^{1/2}}{v^{3/2}} \cdot \dfrac{v^{1/2}}{u^{1/2}} \right) \\
+&= \dfrac{1}{v} + \dfrac{1}{v} = \dfrac{2}{v}
+\end{aligned}
+\]
+
+\newpage
+
+\subsection{Step 4: Transforming the Integral}
+
+We substitute \( x \), \( y \), and \( dA \) into the integral:
+\[
+I = \iint_{S} x^2 y^4 \left| \dfrac{\partial(x,y)}{\partial(u,v)} \right| \, du \, dv
+\]
+Compute \( x^2 \) and \( y^4 \):
+\[
+\begin{aligned}
+x^2 &= \left( 2 \sqrt{\dfrac{u}{v}} \right)^2 = 4 \left( \dfrac{u}{v} \right) \\
+y^4 &= \left( 2 \sqrt{u v} \right)^4 = 16 (u v)^2 = 16 u^2 v^2 \\
+\end{aligned}
+\]
+Thus,
+\[
+x^2 y^4 = 4 \left( \dfrac{u}{v} \right) \times 16 u^2 v^2 = 64 u^3 v
+\]
+Including the Jacobian determinant:
+\[
+x^2 y^4 \left| \dfrac{\partial(x,y)}{\partial(u,v)} \right| = 64 u^3 v \times \dfrac{2}{v} = 128 u^3
+\]
+
+\newpage
+
+\subsection{Step 5: Evaluating the Integral}
+
+The integral becomes:
+\[
+I = \int_{u=1}^2 \int_{v=1}^4 128 u^3 \, dv \, du
+\]
+Since the integrand is independent of \( v \), we can integrate with respect to \( v \):
+\[
+\int_{v=1}^4 128 u^3 \, dv = 128 u^3 (4 - 1) = 384 u^3
+\]
+Now, integrate with respect to \( u \):
+\[
+I = \int_{u=1}^2 384 u^3 \, du = 384 \left[ \dfrac{u^4}{4} \right]_1^2 = 384 \left( \dfrac{16}{4} - \dfrac{1}{4} \right) = 384 \left( \dfrac{15}{4} \right) = 96 \times 15 = 1440
+\]
+
+\newpage
+
+\subsection{Conclusion}
+
+Therefore, the value of the integral is:
+\[
+I = 1440
+\]
+
+
+
+
+\newpage
+
+\section{Solution}
+
+We are asked to find the area of the region in the plane defined by the inequalities:
+\[
+\begin{cases}
+1 \leq x y \leq 3, \\
+2 \leq x y^2 \leq 10, \\
+x \geq 0.
+\end{cases}
+\]
+
+\newpage
+
+\subsection{Step 1: Choose an Appropriate Change of Variables}
+
+We notice that the inequalities involve \( x y \) and \( x y^2 \). Let's define new variables to simplify the region:
+\[
+u = x y, \quad v = y.
+\]
+This substitution will help us transform the given region into a simpler one in the \( uv \)-plane.
+
+\newpage
+
+\subsection{Step 2: Express \( x \) and \( y \) in Terms of \( u \) and \( v \)}
+
+From the substitution:
+\[
+x = \frac{u}{y} = \frac{u}{v}.
+\]
+
+\newpage
+
+\subsection{Step 3: Compute the Jacobian Determinant}
+
+We need to compute the Jacobian determinant \( J(u, v) \) of the transformation:
+\[
+J(u, v) = \left| \frac{\partial(x, y)}{\partial(u, v)} \right|.
+\]
+
+Compute the partial derivatives:
+\[
+\begin{aligned}
+\frac{\partial x}{\partial u} &= \frac{1}{v}, \quad &\frac{\partial x}{\partial v} &= -\frac{u}{v^2}, \\
+\frac{\partial y}{\partial u} &= 0, \quad &\frac{\partial y}{\partial v} &= 1.
+\end{aligned}
+\]
+
+Compute the determinant:
+\[
+J(u, v) = \left| \begin{array}{cc}
+\frac{1}{v} & -\frac{u}{v^2} \\
+0 & 1 \\
+\end{array} \right| = \frac{1}{v}.
+\]
+
+\newpage
+
+\subsection{Step 4: Transform the Inequalities to the \( uv \)-Plane}
+
+Transform the inequalities using the substitution:
+\begin{itemize}
+    \item \( 1 \leq x y = u \leq 3 \).
+    \item \( 2 \leq x y^2 = u v \leq 10 \).
+    \item \( x \geq 0 \implies \frac{u}{v} \geq 0 \).
+\end{itemize}
+
+Since \( v = y \) and \( x = \frac{u}{v} \geq 0 \), we have:
+\[
+\frac{u}{v} \geq 0 \implies u \text{ and } v \text{ have the same sign}.
+\]
+Given \( 1 \leq u \leq 3 \) (so \( u > 0 \)), it follows that \( v > 0 \).
+
+Thus, the inequalities become:
+\[
+\begin{cases}
+1 \leq u \leq 3, \\
+2 \leq u v \leq 10, \\
+v > 0.
+\end{cases}
+\]
+
+\newpage
+
+\subsection{Step 5: Determine the Limits of Integration}
+
+For \( u \) between \( 1 \) and \( 3 \), \( v \) varies according to:
+\[
+2 \leq u v \leq 10 \implies \frac{2}{u} \leq v \leq \frac{10}{u}.
+\]
+
+Therefore, the limits are:
+\[
+\begin{aligned}
+u &\in [1, 3], \\
+v &\in \left[ \dfrac{2}{u}, \dfrac{10}{u} \right].
+\end{aligned}
+\]
+
+\newpage
+
+\subsection{Step 6: Set Up the Integral}
+
+The area \( A \) is given by:
+\[
+A = \iint_{\text{Region}} dx \, dy = \iint_{\text{Region}} \left| \dfrac{\partial(x, y)}{\partial(u, v)} \right| du \, dv = \iint_{\text{Region}} \dfrac{1}{v} \, du \, dv.
+\]
+
+\newpage
+
+\subsection{Step 7: Evaluate the Integral}
+
+Compute the integral:
+\[
+A = \int_{u=1}^{3} \int_{v=\frac{2}{u}}^{\frac{10}{u}} \dfrac{1}{v} \, dv \, du.
+\]
+
+First, integrate with respect to \( v \):
+\[
+\int_{\frac{2}{u}}^{\frac{10}{u}} \dfrac{1}{v} \, dv = \ln\left( \dfrac{10}{u} \right) - \ln\left( \dfrac{2}{u} \right) = \ln\left( \dfrac{10}{u} \times \dfrac{u}{2} \right) = \ln\left( \dfrac{10}{2} \right) = \ln 5.
+\]
+
+So the integral simplifies to:
+\[
+A = \ln 5 \int_{u=1}^{3} du = \ln 5 \times (3 - 1) = 2 \ln 5.
+\]
+
+\newpage
+
+\subsection{Conclusion}
+
+The area of the region is:
+\[
+A = 2 \ln 5.
+\]
+
+
 \end{document}

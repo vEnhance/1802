@@ -18,4 +18,307 @@ ChatGPT can make mistakes, so if you spot anything that's wrong, flag me to ask.
 
 \tableofcontents
 
+\section{Solution 1}
+We are given the iterated integral:
+\[
+\int_{0}^{2} \int_{y/2}^{1} e^{-x^{2}} \, dx \, dy.
+\]
+To simplify the evaluation, we will swap the order of integration.
+
+\newpage
+
+\subsection{Step 1: Determine the region of integration}
+
+The given bounds indicate that \( y \) ranges from \( 0 \) to \( 2 \) and, for each fixed \( y \), \( x \) ranges from \( y/2 \) to \( 1 \). This region can be described by the inequalities:
+\[
+0 \leq y \leq 2 \quad \text{and} \quad \frac{y}{2} \leq x \leq 1.
+\]
+To reverse the order of integration, we express \( y \) in terms of \( x \).
+
+1. From \( x \geq y/2 \), we get \( y \leq 2x \).
+2. Since \( y \leq 2 \), we have \( x \leq 1 \).
+
+Thus, the region can be described by \( 0 \leq x \leq 1 \) and \( 0 \leq y \leq 2x \).
+\newpage
+
+\subsection{Step 2: Rewrite the integral with the new bounds}
+
+Swapping the order of integration, the integral becomes:
+\[
+\int_{0}^{1} \int_{0}^{2x} e^{-x^{2}} \, dy \, dx.
+\]
+\newpage
+
+\subsection{Step 3: Evaluate the inner integral}
+
+Since \( e^{-x^{2}} \) is independent of \( y \), we can factor it out:
+\[
+\int_{0}^{1} \int_{0}^{2x} e^{-x^{2}} \, dy \, dx = \int_{0}^{1} e^{-x^{2}} \left( \int_{0}^{2x} 1 \, dy \right) dx.
+\]
+Now evaluate the inner integral with respect to \( y \):
+\[
+\int_{0}^{2x} 1 \, dy = [y]_{0}^{2x} = 2x.
+\]
+Substituting back, we have:
+\[
+\int_{0}^{1} \int_{0}^{2x} e^{-x^{2}} \, dy \, dx = \int_{0}^{1} 2x e^{-x^{2}} \, dx.
+\]
+\newpage
+
+\subsection{Step 4: Evaluate the outer integral}
+
+Now we integrate with respect to \( x \):
+\[
+\int_{0}^{1} 2x e^{-x^{2}} \, dx.
+\]
+Let \( u = x^{2} \), so \( du = 2x \, dx \). When \( x = 0 \), \( u = 0 \); and when \( x = 1 \), \( u = 1 \). The integral becomes:
+\[
+\int_{0}^{1} e^{-x^{2}} \cdot 2x \, dx = \int_{0}^{1} e^{-u} \, du.
+\]
+Now integrate with respect to \( u \):
+\[
+\int_{0}^{1} e^{-u} \, du = [-e^{-u}]_{0}^{1} = -e^{-1} + e^{0} = 1 - \frac{1}{e}.
+\]
+\newpage
+
+\subsection{Conclusion}
+
+The value of the integral is:
+\[
+\int_{0}^{2} \int_{y/2}^{1} e^{-x^{2}} \, dx \, dy = 1 - \frac{1}{e} \approx 0.6321.
+\]
+
+
+\newpage
+\section{Solution 2}
+We are tasked with evaluating the integral:
+\[
+\int \int_{D} \frac{dA}{3 + x^2 + y^2},
+\]
+where \( D \) is the region defined by \( x \geq 0 \), \( y \geq 0 \), and \( x^2 + y^2 \leq 9 \). This region corresponds to the first quadrant of a disk of radius 3 centered at the origin.
+\newpage
+
+\subsection{Step 1: Convert to polar coordinates}
+
+In polar coordinates, we have:
+\[
+x = r \cos \theta, \quad y = r \sin \theta, \quad \text{and} \quad dA = r \, dr \, d\theta.
+\]
+The expression \( x^2 + y^2 \) becomes \( r^2 \), so the integrand simplifies to:
+\[
+\frac{1}{3 + x^2 + y^2} = \frac{1}{3 + r^2}.
+\]
+\newpage
+
+\subsection{Step 2: Set up the bounds in polar coordinates}
+
+The region \( D \) corresponds to \( x \geq 0 \), \( y \geq 0 \), and \( x^2 + y^2 \leq 9 \). In polar coordinates:
+- \( r \) ranges from \( 0 \) to \( 3 \) (since \( x^2 + y^2 \leq 9 \) implies \( r \leq 3 \)).
+- \( \theta \) ranges from \( 0 \) to \( \frac{\pi}{2} \) (covering the first quadrant).
+
+Thus, the integral becomes:
+\[
+\int \int_{D} \frac{dA}{3 + x^2 + y^2} = \int_{0}^{\pi/2} \int_{0}^{3} \frac{r}{3 + r^2} \, dr \, d\theta.
+\]
+\newpage
+
+\subsection{Step 3: Evaluate the inner integral with respect to \( r \)}
+
+We first evaluate the inner integral:
+\[
+\int_{0}^{3} \frac{r}{3 + r^2} \, dr.
+\]
+To integrate this, we use the substitution \( u = 3 + r^2 \), so \( du = 2r \, dr \) or \( \frac{du}{2} = r \, dr \). When \( r = 0 \), \( u = 3 \); and when \( r = 3 \), \( u = 12 \). Thus, the integral becomes:
+\[
+\int_{0}^{3} \frac{r}{3 + r^2} \, dr = \int_{3}^{12} \frac{1}{u} \cdot \frac{du}{2} = \frac{1}{2} \int_{3}^{12} \frac{1}{u} \, du.
+\]
+Now integrate with respect to \( u \):
+\[
+\frac{1}{2} \int_{3}^{12} \frac{1}{u} \, du = \frac{1}{2} \left[ \ln |u| \right]_{3}^{12} = \frac{1}{2} \left( \ln(12) - \ln(3) \right).
+\]
+Using the property \( \ln(a) - \ln(b) = \ln\left( \frac{a}{b} \right) \), we get:
+\[
+\frac{1}{2} \left( \ln(12) - \ln(3) \right) = \frac{1}{2} \ln\left( \frac{12}{3} \right) = \frac{1}{2} \ln(4) = \frac{1}{2} \cdot 2 \ln(2) = \ln(2).
+\]
+So, the value of the inner integral is \( \ln(2) \).
+\newpage
+
+\subsection{Step 4: Evaluate the outer integral with respect to \( \theta \)}
+
+The outer integral is:
+\[
+\int_{0}^{\pi/2} \ln(2) \, d\theta = \ln(2) \int_{0}^{\pi/2} 1 \, d\theta = \ln(2) \cdot \frac{\pi}{2} = \frac{\pi}{2} \ln(2).
+\]
+\newpage
+
+\subsection{Conclusion}
+
+The value of the integral is:
+\[
+\int \int_{D} \frac{dA}{3 + x^2 + y^2} = \frac{\pi}{2} \ln(2).
+\]
+
+\newpage
+\section{Solution 3 (took like six tries for GPT to get this right and a lot of nudging)}
+
+We are given the density function \( \delta(x, y) = \sqrt{x^2 + y^2} \) and the region defined by
+\[
+x^2 + (y - 1)^2 \leq 1.
+\]
+This region is a disk of radius 1 centered at \( (0, 1) \) in the \( xy \)-plane. We want to find the mass of the shape, which is given by:
+\[
+M = \iint_{D} \delta(x, y) \, dA = \iint_{D} \sqrt{x^2 + y^2} \, dA.
+\]
+\newpage
+
+\subsection{Step 1: Convert to polar coordinates centered at the origin}
+
+In polar coordinates centered at \( (0, 0) \), we have:
+\[
+x = r \cos \theta, \quad y = r \sin \theta,
+\]
+and the differential area element \( dA = r \, dr \, d\theta \). The density function simplifies to:
+\[
+\delta(x, y) = \sqrt{x^2 + y^2} = r.
+\]
+\newpage
+
+\subsection{Step 2: Determine the region \( D \) in polar coordinates}
+
+The region \( D \) is a disk of radius 1 centered at \( (0, 1) \), which corresponds to all points \( (x, y) \) such that \( x^2 + (y - 1)^2 \leq 1 \).
+
+In polar coordinates, this region \( D \) can be described by:
+\[
+0 \leq r \leq 2 \sin \theta, \quad 0 \leq \theta \leq \pi.
+\]
+This is because \( r = 2 \sin \theta \) describes a circle of radius 1 centered at \( (0, 1) \), and \( \theta \) only goes from \( 0 \) to \( \pi \) to capture the upper half-plane where \( y \geq 0 \).
+\newpage
+
+\subsection{Step 3: Set up the integral for the mass}
+
+The mass \( M \) is given by:
+\[
+M = \int_{0}^{\pi} \int_{0}^{2 \sin \theta} r \cdot r \, dr \, d\theta = \int_{0}^{\pi} \int_{0}^{2 \sin \theta} r^2 \, dr \, d\theta.
+\]
+\newpage
+
+\subsection{Step 4: Evaluate the inner integral with respect to \( r \)}
+
+We first integrate with respect to \( r \):
+\[
+\int_{0}^{2 \sin \theta} r^2 \, dr = \left[ \frac{r^3}{3} \right]_{0}^{2 \sin \theta} = \frac{(2 \sin \theta)^3}{3} = \frac{8 \sin^3 \theta}{3}.
+\]
+\newpage
+
+\subsection{Step 5: Evaluate the outer integral with respect to \( \theta \)}
+
+Now, we integrate with respect to \( \theta \):
+\[
+M = \int_{0}^{\pi} \frac{8 \sin^3 \theta}{3} \, d\theta = \frac{8}{3} \int_{0}^{\pi} \sin^3 \theta \, d\theta.
+\]
+
+To evaluate \( \int \sin^3 \theta \, d\theta \), we use the identity \( \sin^3 \theta = \sin \theta \cdot (1 - \cos^2 \theta) \) and let \( u = \cos \theta \), \( du = -\sin \theta \, d\theta \):
+\[
+\int \sin^3 \theta \, d\theta = \int (1 - u^2)(-du) = \int (u^2 - 1) \, du = \left[ \frac{u^3}{3} - u \right]_{1}^{-1}.
+\]
+Evaluating this from \( \theta = 0 \) to \( \pi \), we get:
+\[
+\int_{0}^{\pi} \sin^3 \theta \, d\theta = \frac{4}{3}.
+\]
+
+Thus, the mass \( M \) is:
+\[
+M = \frac{8}{3} \cdot \frac{4}{3} = \frac{32}{9}.
+\]
+\newpage
+
+\subsection{Conclusion}
+
+The mass of the shape is:
+\[
+\boxed{\frac{32}{9}}.
+\]
+
+\newpage
+\section{Solution 4}
+
+
+
+
+We are tasked with evaluating the integral:
+\[
+\int \int_{D} \frac{dA}{\sqrt{1 - x^2 - y^2}},
+\]
+where \( D \) is the region defined by \( x \geq 0 \) and \( x^2 + (y - \frac{1}{2})^2 \leq \frac{1}{4} \). This region is a semicircular disk of radius \( \frac{1}{2} \) centered at \( (0, \frac{1}{2}) \) in the first quadrant.
+\newpage
+
+\subsection{Step 1: Interpret the region \( D \)}
+
+The inequality \( x^2 + (y - \frac{1}{2})^2 \leq \frac{1}{4} \) describes a disk of radius \( \frac{1}{2} \) centered at \( (0, \frac{1}{2}) \). Since \( x \geq 0 \), we are only considering the right half of this disk, which lies in the first quadrant.
+\newpage
+
+\subsection{Step 2: Convert to polar coordinates}
+
+To simplify the integral, we use polar coordinates centered at the origin. In polar coordinates, we have:
+\[
+x = r \cos \theta, \quad y = r \sin \theta,
+\]
+and the differential area element \( dA = r \, dr \, d\theta \).
+
+In these coordinates, the integrand \( \frac{1}{\sqrt{1 - x^2 - y^2}} \) becomes:
+\[
+\frac{1}{\sqrt{1 - x^2 - y^2}} = \frac{1}{\sqrt{1 - r^2}}.
+\]
+\newpage
+
+\subsection{Step 3: Determine the limits for \( r \) and \( \theta \)}
+
+Since the region \( D \) is a semicircular disk of radius \( \frac{1}{2} \) in the first quadrant, we have:
+- \( r \) ranges from \( 0 \) to \( \frac{1}{2} \),
+- \( \theta \) ranges from \( 0 \) to \( \pi \).
+\newpage
+
+\subsection{Step 4: Set up the integral}
+
+Substituting into the integral, we get:
+\[
+\int \int_{D} \frac{dA}{\sqrt{1 - x^2 - y^2}} = \int_{0}^{\pi} \int_{0}^{1/2} \frac{r}{\sqrt{1 - r^2}} \, dr \, d\theta.
+\]
+\newpage
+
+\subsection{Step 5: Evaluate the inner integral with respect to \( r \)}
+
+We first evaluate the inner integral:
+\[
+\int_{0}^{1/2} \frac{r}{\sqrt{1 - r^2}} \, dr.
+\]
+To integrate this, we use the substitution \( u = 1 - r^2 \), so \( du = -2r \, dr \) or \( \frac{-du}{2} = r \, dr \). When \( r = 0 \), \( u = 1 \); and when \( r = \frac{1}{2} \), \( u = \frac{3}{4} \). Thus, the integral becomes:
+\[
+\int_{0}^{1/2} \frac{r}{\sqrt{1 - r^2}} \, dr = \int_{1}^{3/4} \frac{-1}{2 \sqrt{u}} \, du = -\frac{1}{2} \int_{1}^{3/4} u^{-1/2} \, du.
+\]
+Now integrate with respect to \( u \):
+\[
+-\frac{1}{2} \int_{1}^{3/4} u^{-1/2} \, du = -\frac{1}{2} \left[ 2 \sqrt{u} \right]_{1}^{3/4} = -\sqrt{u} \Big|_{1}^{3/4}.
+\]
+Evaluating this, we get:
+\[
+-\sqrt{\frac{3}{4}} + \sqrt{1} = -\frac{\sqrt{3}}{2} + 1 = 1 - \frac{\sqrt{3}}{2}.
+\]
+\newpage
+
+\subsection{Step 6: Evaluate the outer integral with respect to \( \theta \)}
+
+The outer integral is:
+\[
+\int_{0}^{\pi} \left( 1 - \frac{\sqrt{3}}{2} \right) \, d\theta = \left( 1 - \frac{\sqrt{3}}{2} \right) \int_{0}^{\pi} 1 \, d\theta = \left( 1 - \frac{\sqrt{3}}{2} \right) \cdot \pi.
+\]
+\newpage
+
+\subsection{Conclusion}
+
+The value of the integral is:
+\[
+\int \int_{D} \frac{dA}{\sqrt{1 - x^2 - y^2}} = \pi \left( 1 - \frac{\sqrt{3}}{2} \right).
+\]
+
 \end{document}
