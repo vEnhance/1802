@@ -120,7 +120,9 @@ Let's do a two-variable example first.
 
 Here's a three-variable version. It's admittedly a slog.
 #sample[
-  Given that $ nabla f = vec(y^2-sin(x), x y + 2 y z, e^z+2y^2) $ recover $f$.
+  We are given the gradient of a function $f(x,y,z)$:
+  $ nabla f(x,y,z) = vec(y^2-sin(x), x y + 2 y z, e^z+2y^2). $
+  Recover $f$.
 ]
 #soln[
   Again, integrate $(partial f) / (partial x)$ with respect to $x$:
@@ -198,12 +200,12 @@ That's actually a major difference.
   you can follow the usual method and then _reach a contradiction_.
 ]
 
-
 #question[
-  Does there exist a function $f$ such that $nabla f = vec(2 y, x)$?
+  Determine whether or not there exists a differentiable function $f(x,y)$ such that
+  $ nabla f = vec(2 y, x). $
 ]
 We can imagine we follow through the same method as before.
-We start by integrating $partial f / partial x$ with respect to $x$ to get
+We start by integrating $(partial f) / (partial x)$ with respect to $x$ to get
 $ f(x,y) = int 2 y dif x = 2 x y + g(y) $
 to start.
 Then differentiating with respect to $y$ gives
@@ -236,12 +238,12 @@ the function $f$ literally cannot exist.
 
 Okay, so I bet you're all wondering now, "how can I tell if the question is impossible?".
 
-Well, one strategy would just be to run the *recipe I showed you and see if it works out*.
+Well, one strategy would just be to *run the recipe I showed you and see if it works out*.
 
 - If you find a function $f$ that works, great.
 - If you run into a contradiction, well, now you know it's impossible.
 
-But that's a lot of work. And yes, there's a shortcut.
+But that's a lot of work. We'd like a shortcut, and there is one.
 
 The idea is that for functions (for which the partial derivatives are continuous),
 the _partial derivatives_ commute.
@@ -255,6 +257,8 @@ $ (partial)/(partial y) (partial f) / (partial x)
   = (partial)/(partial x) (partial f) / (partial y). $
 In other words, if you try to differentiate with respect to $x$, then with respect to $y$,
 you get the same thing as $y$ first then $x$.
+Sometimes people write this as
+$ (partial^2 f)/(partial x partial y) = (partial^2 f) / (partial y partial x). $
 
 This result is at least a bit surprising,
 and I actually don't expect you to believe me without seeing some examples.
@@ -288,17 +292,19 @@ So let's see some examples:
 
 Okay, so how about the example we gave earlier?
 #question[
-  Does there exist a function $f$ such that $nabla f = vec(2 y, x)$?
+  Determine whether or not there exists a differentiable function $f(x,y)$ such that
+  $ nabla f = vec(2 y, x). $
 ]
+
 Well, if there was such an $f$, and we got a mismatch, then
 $ f_(x y) = partial / (partial y) f_x = partial / (partial y) (2 y) = 2 \
   f_(y x) = partial / (partial x) f_y = partial / (partial x) x = 1. $
-So no such $f$ could happen.
-So we have at least one way to rule out impossible questions!
+So via proof by contradiction, no such $f$ could exist.
 
 == [RECIPE] Ruling out the existence of an anti-gradient <sec-when-antigrad>
 
-As it turns out, this test I described is good enough for 18.02.
+As it turns out, this test I described is good enough for 18.02 ---
+it will catch all impossible questions.
 Specifically, the following theorem is true.
 
 #memo(title: [Memorize: Criteria for 2D anti-gradient to exist])[
@@ -307,6 +313,7 @@ Specifically, the following theorem is true.
   if and only if
   $ (partial p) / (partial y) = (partial q) / (partial x). $
 ]
+You should think of this as $f_(x y) = f_(y x)$.
 We'll see this again much later in Part Hotel, but in different language:
 "the 2D scalar curl of $f$ is zero".
 
@@ -315,16 +322,17 @@ The 3D version tests all the possible pairs:
   Consider $vec(p(x,y,z), q(x,y,z), r(x,y,z))$, where $p$, $q$, $r$ are continuously differentiable.
   Then there exists $f$ such that $ nabla f = vec(p(x,y,z), q(x,y,z), r(x,y,z)) $
   if and only if all three of the following equations hold:
-  $
-    (partial p) / (partial y) &= (partial q) / (partial x) \
-    (partial p) / (partial z) &= (partial r) / (partial x) \
-    (partial q) / (partial z) &= (partial r) / (partial y).
-  $
+  $ (partial p) / (partial y) = (partial q) / (partial x), quad
+    (partial p) / (partial z) = (partial r) / (partial x), quad
+    (partial q) / (partial z) = (partial r) / (partial y). $
 ]
 The above three equations should be remembered as
 $f_(x y) = f_(y x)$, $f_(y z) = f_(z y)$, $f_(z y) = f_(x y)$.
 We'll see this also in Part Hotel again hidden in a different name:
 "the 3D scalar curl of $f$ is zero".
+In that section, the given right-hand side will be called called a *vector field*
+and the function $f$ will be called a *potential function* for it.
+But ignore those names for now.
 
 == [EXER] Exercises
 
