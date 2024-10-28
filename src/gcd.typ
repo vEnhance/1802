@@ -105,7 +105,27 @@ Here's the definition of curl in 3D space.
   but it works really well because you only have to remember "$nabla times bf(F)$".
 ]
 
-#todo[example of computing curl]
+#sample[
+  Compute the curl of the vector field
+  $ bf(F) (x , y , z) = vec(x y, y z, z x). $
+]
+#soln[
+  Let $p(x,y,z) = x y$, $q(x,y,z) = y z$, $r(x,y,z) = z x$.
+  We can compute the first component of the curl by calculating
+  $ (partial r) / (partial y) &= (partial) / (partial y) (z x) = 0 \
+    (partial q) / (partial z) &= (partial) / (partial z) (y z) = y. $
+  Hence:
+  $ (partial r) / (partial y) - (partial q) / (partial z) = (0 - y) = - y $
+  is the first component of the curl.
+
+  The second and third components are done in the same way.
+  The second component is
+  $ ((partial p) / (partial z) - (partial r) / (partial x)) = (0 - z) = - z $
+  and the third component is
+  $ ((partial q) / (partial x) - (partial p) / (partial y)) = (0 - x) = - x. $
+  Hence
+  $ nabla times bf(F) = vec(-y, -z, -x). #qedhere $
+]
 
 Now let's talk about aquatic intuition.
 Suppose as we do for most of our examples
@@ -165,6 +185,11 @@ So now we prove the following.
   i.e.
   $ op("curl")(nabla f) = nabla times (nabla f) = bf(0). $
 ]
+#figure(
+  box(image("figures/gcd-cut-gc.png", width: auto), stroke: 1pt),
+  caption: [Cut-out of two red arrows from @fig-int-chart-stokes that chain to give zero.],
+)
+
 
 You can actually verify this theorem pretty easily by definition:
 #proof[
@@ -185,6 +210,40 @@ curl of the gradient is zero means that if the flow is purely driven by a gradie
 there will be no rotational movement in the water.
 For example, if you have a waterfall,
 the water will flow directly downhill or uphill, without any swirling or spinning motion.
+
+Here's an example showing this:
+#sample[
+  Compute the curl of the vector field
+  $ bf(F)(x,y,z) = vec(y^2-sin(x), 2 x y + 4 y z, e^z+2y^2). $
+]
+Secretly, we happen to know the right-hand side
+is the gradient of the function $f(x,y,z) = y^2 x + cos x + 2y^2 z + e^z + C$;
+this was the last example in @sec-antideriv.
+So with this insider information we expect the answer should come out to $bf(0)$.
+Indeed, it does:
+#soln[
+  Let $p(x,y,z) = y^2-sin(x)$, $q(x,y,z) = 2 x y + 4 y z$, $r(x,y,z) = e^z+2y^2$.
+  First compute $(partial r) / (partial y)$ and $(partial q) / (partial z)$:
+  $ (partial r) / (partial y) &= (partial) / (partial y) (e^z + 2 y^2) = 4 y $
+  $ (partial q) / (partial z) &= (partial) / (partial z) (2 x y + 4 y z) = 4 y. $
+  Compute the first component:
+  $ ((partial r) / (partial y) - (partial q) / (partial z)) = 4 y - 4 y = 0. $
+
+  For the second component, compute $(partial p) / (partial z)$ and $(partial r) / (partial x)$:
+  $ (partial p) / (partial z) &= (partial) / (partial z) (y^2 - sin x) = 0 \
+    (partial r) / (partial x) &= (partial) / (partial x) (e^z + 2 y^2) = 0. $
+  Hence
+  $ ((partial p) / (partial z) - (partial r) / (partial x)) = 0 - 0 = 0. $
+
+  Finally, compute $(partial q) / (partial x)$ and $(partial p) / (partial y)$:
+  $ (partial q) / (partial x) &= (partial) / (partial x) (2 x y + 4 y z) = 2 y \
+    (partial p) / (partial y) &= (partial) / (partial y) (y^2 - sin x) = 2 y. $
+  Compute the third component:
+  $ ((partial q) / (partial x) - (partial p) / (partial y)) = 2 y - 2 y = 0. $
+
+  So the curl of the vector field $bf(F) (x , y , z)$ is $vec(0,0,0) = bf(0)$.
+]
+Hence this is an example of a _conservative_ vector field, which we'll talk more about later.
 
 == [TEXT] Divergence
 
@@ -210,7 +269,20 @@ the water will flow directly downhill or uphill, without any swirling or spinnin
   Again, only for memory; this is totally nonsense math-wise.
 ]
 
-#todo[example of computing divergence]
+#sample[
+  Compute the divergence of the vector field
+  $ bf(F) (x , y , z) = vec(x y, y z, z x). $
+]
+#soln[
+  Let $p(x,y,z) = x y$, $q(x,y,z) = y z$, $r(x,y,z) = z x$.
+  Then
+  $ (partial p) / (partial x) &= (partial) / (partial x) (x y) = y \
+    (partial q) / (partial y) &= (partial) / (partial y) (y z) = z \
+    (partial r) / (partial z) &= (partial) / (partial z) (z x) = x. $
+  Sum the partials to get the divergence:
+  $ nabla dot bf(F) & = (partial F_1) / (partial x) + (partial F_2) / (partial y) + (partial F_3) / (partial z)\
+    & = y + z + x = x + y + z. #qedhere $
+]
 
 Now let's talk about aquatics.
 Again suppose $bf(F)$ represents the flow of
@@ -270,8 +342,6 @@ If there is neither spreading nor converging, the divergence is zero.
   and those arrows are emphatically _not_ a water current (or anything resembling one).
 ]
 
-#todo[example of computing curl]
-
 == [TEXT] 2D scalar curl
 
 The 2D scalar curl is a little more unnatural.
@@ -313,10 +383,49 @@ Instead we take the convention that
   And there's the 2D scalar curl, the coefficient of $bf(e)_3$.
 ]
 
-It's still true that the curl of a conservative 2D vector field is zero.
-(Try to prove it directly.)
+#sample[
+  Compute the 2D scalar curl of
+  $ bf(F)(x,y) = vec(x cos y , e^x + sin y). $
+]
+#soln[
+  The 2D scalar curl is given by
+  $ op("curl") F = (partial q) / (partial x) - (partial p) / (partial y). $
+  Given $q(x,y) = e^x + sin y$, we have
+  $ (partial q) / (partial x) = (partial) / (partial x) (e^x + sin y) = e^x + 0 = e^x. $
+  Given $p(x,y) = x cos y$ we have
+  $ (partial p) / (partial y) = (partial) / (partial y) (x cos y) = x (- sin y) = - x sin y. $
+  Hence
+  $ op("curl") bf(F)(x,y) = e^x + x sin y. $
+]
+It's still true (and indeed follows from the 3D version) that:
+#memo[
+  The curl of a conservative 2D vector field is zero.
+]
+#figure(
+  box(image("figures/gcd-cut-gc2.png", width: auto), stroke: 1pt),
+  caption: [These two red arrows from @fig-int-chart-stokes also chain to give zero.],
+)
 
-#todo[example]
+Let's see an example of that.
+#sample[
+  Compute the 2D scalar curl of
+  $ bf(F) (x , y) = vec(3 x^2 + 4 x y + y^2 , 2 x^2 + 2 x y - 3 y^2) $
+]
+Secretly, we happen to know the right-hand side
+is the gradient of the function $f(x,y) = x^3 + 2x^2 y+x y^2-y^3$,
+because we did this example @sec-antideriv.
+So the 2D scalar curl should be $0$, and indeed it is.
+#soln[
+  Given $q(x,y) = 2 x^2 + 2 x y - 3 y^2$:
+  $ (partial q) / (partial x) & = (partial) / (partial x) (2 x^2 + 2 x y - 3 y^2)\
+    & = 4 x + 2 y $
+  Given $p(x,y) = 3 x^2 + 4 x y + y^2$:
+  $ (partial p) / (partial y) & = (partial) / (partial y) (3 x^2 + 4 x y + y^2)\
+    & = 4 x + 2 y. $
+  Hence
+  $ op("curl") bf(F)(x,y) & = (partial q) / (partial x) - (partial p) / (partial y)\
+     & = (4 x + 2 y) - (4 x + 2 y) = 0. #qedhere $
+]
 
 == [TEXT] 2D divergence
 
@@ -332,8 +441,38 @@ So I'll just mention it briefly.
   $ op("div") bf(F) := nabla dot bf(F) := (partial p)/(partial x) + (partial q)/(partial y). $
 ]
 
-The physical interpretation is the same too, just in 2D bodies of water.
+The aquatic interpretation is the same too, just in 2D bodies of water.
 
-#todo[example of 2D divergence]
+#sample[
+  Compute the divergence of
+  $ bf(F) (x , y) = vec(x cos y , med e^x + sin y) $
+]
+#soln[
+  In two dimensions, the divergence is given by
+  $ nabla dot bf(F) = (partial p) / (partial x) + (partial q) / (partial y). $
+  Given $p(x,y) = x cos y$:
+  $ (partial p) / (partial x) = (partial) / (partial x) (x cos y) = cos y. $
+  Given $q(x,y) = e^x + sin y$:
+  $ (partial q) / (partial y) = (partial) / (partial y) (e^x + sin y) = cos y. $
+  Hence
+  $ nabla dot bf(F)(x,y) & = (partial p) / (partial x) + (partial q) / (partial y)\
+     & = cos y + cos y= 2 cos y. #qedhere $
+   ]
+
+#sample[
+  Compute the divergence of
+  $ bf(F) (x , y) = vec(3 x^2 + 4 x y + y^2 , med 2 x^2 + 2 x y - 3 y^2) $
+]
+#soln[
+  Given $p(x,y) = 3 x^2 + 4 x y + y^2$:
+  $ (partial p) / (partial x) = (partial) / (partial x) (3 x^2 + 4 x y + y^2) = 6 x + 4 y $
+  Given $q(x,y) = 2 x^2 + 2 x y - 3 y^2$:
+  $ (partial q) / (partial y) = (partial) / (partial y) (2 x^2 + 2 x y - 3 y^2) = 2 x - 6 y. $
+  Hence
+  $ nabla dot bf(F)(x,y) & = (partial p) / (partial x) + (partial q) / (partial y)\
+    &= (6 x + 4 y) + (2 x - 6 y)  = 8 x - 2 y. #qedhere $
+]
 
 == [EXER] Exercises
+
+#todo[...]

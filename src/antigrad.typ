@@ -37,7 +37,7 @@ $ nabla f &= vec(x,y) \
   nabla f &= vec(y e^(x y), x e^(x y)) \
   nabla f &= vec(y z, z x, x y). $
 
-== [TEXT] Antiderivative method, if you're promised there is one
+== [TEXT] Antiderivative method, if you're promised there is one <sec-antideriv>
 
 #recipe(title: [How to find an anti-gradient with three variables])[
   1. Let $f$ denote the gradient function.
@@ -69,18 +69,18 @@ Let's do a two-variable example first.
 ]
 #soln[
   This means:
-  $ (partial f) / (partial x) = cos y quad upright("and") quad (partial f) / (partial y) = - x sin y $
+  $ (partial f) / (partial x) = cos y quad upright("and") quad (partial f) / (partial y) = - x sin y. $
 
   First we integrate $(partial f) / (partial x)$ with respect to $x$:
-  $ f (x , y) & = int (partial f) / (partial x) dif x &= int cos y dif x  = x cos y + g (y) $
+  $ f (x , y) & = int (partial f) / (partial x) dif x &= int cos y dif x  = x cos y + g (y). $
   where $g(y)$ is some is an unknown function of $y$.
 
   Now differentiate $f (x , y)$ with respect to $y$:
   $ (partial f) / (partial y) & = (partial) / (partial y) (x cos y + g (y)) \
-    & = - x sin y + g' (y) $
+    & = - x sin y + g' (y). $
 
   We set $(partial f) / (partial y)$ equal to the given expression and solve for $g' (y)$:
-  $ - x sin y + g' (y) & = - x sin y\ ==> g' (y) & = 0 $
+  $ - x sin y + g' (y) & = - x sin y\ ==> g' (y) & = 0. $
   Hence $ g (y) = int 0 dif y = C $ where $C$ is a constant.
   We get the final expression for $f (x , y)$ as:
   $ f (x , y) = x cos y + C. #qedhere $
@@ -94,24 +94,24 @@ Let's do a two-variable example first.
 ]
 #soln[
   This means:
-  $ (partial f) / (partial x) = 3 x^2 + 4 x y + y^2 quad upright("and") quad (partial f) / (partial y) = 2 x^2 + 2 x y - 3 y^2 $
+  $ (partial f) / (partial x) = 3 x^2 + 4 x y + y^2 quad upright("and") quad (partial f) / (partial y) = 2 x^2 + 2 x y - 3 y^2. $
 
   We first integrate $(partial f) / (partial x)$ with respect to $x$:
-  $ f (x , y) & = integral (3 x^2 + 4 x y + y^2) dif x\
-    & = integral 3 x^2 dif x + integral 4 x y dif x + integral y^2 dif x\
-    & = x^3 + 2 x^2 y + x y^2 + g (y) $
+  $ f (x , y) &= integral (3 x^2 + 4 x y + y^2) dif x\
+    &= integral 3 x^2 dif x + integral 4 x y dif x + integral y^2 dif x\
+    &= x^3 + 2 x^2 y + x y^2 + g (y). $
   Here, $g (y)$ is an unknown function of $y$.
 
   Next, differentiate $f (x , y)$ with respect to $y$:
   $ (partial f) / (partial y) & = (partial) / (partial y) (x^3 + 2 x^2 y + x y^2 + g (y))\
     & = 0 + 2 x^2 + 2 x y + g' (y)\
-    & = 2 x^2 + 2 x y + g' (y) $
+    & = 2 x^2 + 2 x y + g' (y). $
 
   Now set $(partial f) / (partial y)$ equal to the given expression and solve for $g' (y)$:
   $ 2 x^2 + 2 x y + g' (y) & = 2 x^2 + 2 x y - 3 y^2\
-    g' (y) & = - 3 y^2 $
+    g' (y) & = - 3 y^2. $
   We integrate $g' (y)$ to find $g (y)$:
-  $ g (y) = integral - 3 y^2 dif y = - y^3 + C $
+  $ g (y) = integral - 3 y^2 dif y = - y^3 + C. $
   where $C$ is a constant of integration.
 
   Putting this together gives
@@ -121,44 +121,43 @@ Let's do a two-variable example first.
 Here's a three-variable version. It's admittedly a slog.
 #sample[
   We are given the gradient of a function $f(x,y,z)$:
-  $ nabla f(x,y,z) = vec(y^2-sin(x), x y + 2 y z, e^z+2y^2). $
+  $ nabla f(x,y,z) = vec(y^2-sin(x), 2 x y + 4 y z, e^z+2y^2). $
   Recover $f$.
 ]
 #soln[
   Again, integrate $(partial f) / (partial x)$ with respect to $x$:
   $ f (x , y , z) & = integral (y^2 - sin x) dif x\
-    & = y^2 x + cos x + g (y , z) $
+    & = y^2 x + cos x + g (y , z). $
   Here, $g (y , z)$ is an unknown function of $y$ and $z$.
 
   Next, we differentiate $f (x , y , z)$ with respect to $y$:
   $ (partial f) / (partial y) & = (partial) / (partial y) (y^2 x + cos x + g (y , z))\
-    & = 2 y x + (partial g) / (partial y) $
+    & = 2 x y + (partial g) / (partial y). $
   If we set $(partial f) / (partial y)$ equal to the given
   expression and solve for $(partial g) / (partial y)$:
-  $ 2 y x + (partial g) / (partial y) & = 2 y (x + 2 z)\
-    2 y x + (partial g) / (partial y) & = 2 y x + 4 y z\
-    (partial g) / (partial y) & = 4 y z $
+  $ 2 x y + (partial g) / (partial y) & = 2 x y + 4 y z\
+    (partial g) / (partial y) & = 4 y z. $
   Now integrate $(partial g) / (partial y)$ with respect to $y$ to find $g (y , z)$:
   $ g (y , z) & = integral 4 y z dif y + h (z)\
-    & = 2 y^2 z + h (z) $
+    & = 2 y^2 z + h (z). $
   Here, $h (z)$ is an unknown function of $z$.
 
-  Finally, 5: Substitute $g (y , z)$ back into $f (x , y , z)$:
-  $ f (x , y , z) = y^2 x + cos x + 2 y^2 z + h (z) $
+  Finally, substitute $g (y , z)$ back into $f (x , y , z)$:
+  $ f (x , y , z) = y^2 x + cos x + 2 y^2 z + h (z). $
   We differentiate one more time:
   $ (partial f) / (partial z) & = (partial) / (partial z) (y^2 x + cos x + 2 y^2 z + h (z))\
     & = 0 + 0 + 2 y^2 + h' (z)\
-    & = 2 y^2 + h' (z) $
+    & = 2 y^2 + h' (z). $
   Set $(partial f) / (partial z)$ equal to the given expression and solve for $h' (z)$:
   $ 2 y^2 + h' (z) & = e^z + 2 y^2\
-    h' (z) & = e^z $
+    h' (z) & = e^z. $
   Integrate $h' (z)$ with respect to $z$ to find $h (z)$:
-  $ h (z) & = integral e^z dif z + C\ & = e^z + C $
+  $ h (z) & = integral e^z dif z + C\ & = e^z + C. $
   Here, $C$ is a constant of integration.
 
   Okay, all done! Put all the work above together:
-  and 9: Write the final expression for $f (x , y , z)$:
-  $ f (x , y , z) = y^2 x + cos x + 2 y^2 z + e^z + C $
+  and write the final expression for $f (x , y , z)$:
+  $ f (x , y , z) = y^2 x + cos x + 2 y^2 z + e^z + C. #qedhere $
 ]
 
 == [TEXT] Actually most of the time there might not be any function $f$
