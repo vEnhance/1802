@@ -176,3 +176,11 @@ But the equations are the same.
 ]
 
 == [TEXT] Green's theorem (in two forms)
+
+== [EXER] Exercises
+
+#exer[
+  Is the vector field
+  $ bf(F)(x,y) = vec(sin(e^x) + cos(e^x), arctan(y)) $
+  conservative?
+]
