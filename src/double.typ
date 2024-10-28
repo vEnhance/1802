@@ -464,8 +464,8 @@ Put in recipe form:
   If you are given $int_(x=?)^? int_(y=?)^? f(x,y) dif y dif x$
   and you wish to switch the order of integration the other way:
 
-  1. Convert the limits of integration back into equality format,
-    writing the region $cal(R)$.
+  1. Convert the limits of integration back into inequality/region format,
+    getting some region $cal(R)$.
   2. Re-apply the recipe from @sec-convert-x-y-integration
     using the other variable as the outer one now.
 ]
