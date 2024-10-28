@@ -12,12 +12,9 @@
 This handout (and any other DLC's I write) are posted at
 #url("https://web.evanchen.cc/1802.html").
 
-Couple notes:
-
-- If you want to come to review session 3
-  you can vote on the time at #url("https://forms.gle/Xh8B5C2tPVtD5xDU6").
-  - I have to say I'm amazed that so many people are checking their email on a minute-by-minute
-    basis on a Sunday morning.
+- You can vote on times for review session 3 at #url("https://forms.gle/Xh8B5C2tPVtD5xDU6").
+  - I'm amazed so many people check their email minute-ly on a Sunday morning.
+- LAMV had a wrong version of change of formulas for a week-ish. Fair warning.
 - Wednesday's recitation will have Lichen as a guest instructor.
   (I'll be in the audience.)
 
