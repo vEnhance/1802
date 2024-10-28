@@ -23,6 +23,8 @@ For comparison, Part Alfa corresponds approximately to §1, §2, §3.9 of #poone
 #pagebreak()
 #include "src/dotprod.typ"
 #pagebreak()
+#include "src/planes.typ"
+#pagebreak()
 #include "src/crossprod.typ"
 #pagebreak()
 

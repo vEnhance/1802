@@ -175,7 +175,7 @@ But the equations are the same.
   any vector fields that aren't defined on a simple connected region.
 ]
 
-== [TEXT] Green's theorem (in two forms)
+== [TEXT] Green's theorem
 
 == [EXER] Exercises
 
