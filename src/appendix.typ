@@ -132,6 +132,160 @@ instead, and replace the parallelogram with a parallelepiped,
 in which case one now has $3$ easy cases.
 And so on in $n$ dimensions.
 
+== What does $i^i$ mean? <appendix-i-to-the-i>
+
+When learning mathematics, I believe definitions are actually more important than theorems.
+A lot of confusion comes from not having been given careful definitions of the objects.
+(See #url("https://web.evanchen.cc/handouts/NaturalProof/NaturalProof.pdf") for more on that.)
+
+So in general any time you are confused about whether an operation is "legal" ---
+and this is true in all of math, not just 18.02 ---
+*the first thing to really check whether you have been given a precise definition*.
+The endless Internet debates on whether $0$ is even or whether $0.999... = 1$ or whether $1/x$ is
+a continuous function (hint: yes) are all examples of people who don't know
+the definitions of objects they're discussing.
+
+=== Real exponents, real base
+
+With that in mind, let's fix $a > 0$ a positive real number and think about what $a^r$ should mean.
+
+#defn[18.100 definition][
+- When $n > 0$ is an integer, then $a^n := a times ... times a$, where $a$ is repeated $n$ times.
+- Then we let $a^(-n) := 1 / a^n$ for each integer $n > 0$.
+- When $m/n$ is a rational number, $a^(m/n)$ means the unique $b > 0$ such that $a^m = b^n$.
+  (In 18.100, one proves this $b$ is unique and does exist.)
+- It's less clear what $a^x$ means when $x in RR$, like $x = sqrt(2)$ or $x = pi$.
+  I think usually one takes a limit of rational numbers $q$ close to $x$
+  and lets $a^x := lim_(q -> x) a^q$.
+  (In 18.100, one proves this limit does in fact exist.)
+] <def18100>
+
+=== Complex exponents, real base
+
+But when $z in CC$, what does $a^z$ mean? There's no good way to do this.
+
+You likely don't find an answer until 18.112, but I'll tell you now.
+In 18.100 you will also prove that the Taylor series
+$ e^x = sum_(k >= 0) r^k / k! $
+is correct, where $e := sum_(k >= 0) 1/k!$ is Euler's constant.
+
+So then when you start 18.112, we will flip the definition on its head:
+
+#defn[18.112 definition][
+  If $z in CC$, we _define_ $ e^z := sum_(k >= 0) z^k / k!. $
+  Then for $a > 0$, we let $a^z = e^(z log a)$.
+] <def18112>
+
+To summarize: in 18.100, we defined exponents in the way you learned in grade school
+and then proved there was a Taylor series. But in 18.112, you _start_ with the Taylor series
+and _then_ prove that the rules in grade school you learned still applied.
+
+And checking this consistency requires work.
+Because we threw away @def18100, identities like
+$ e^(z_1 + z_2) = e^(z_1) e^(z_2) " and " (e^(z_1))^(z_2) = e^(z_1 z_2)$
+are no longer "free": they have to be proved rigorously too.
+(To be fair, they need to be proved in 18.100 too, but there it's comparatively easier.)
+I think you shouldn't be _surprised_ they're true;
+we know it's true for $RR$, so it's one heck of a good guess.
+But you shouldn't take these on faith.
+At least get your professor to acknowledge they _require_ a (non-obvious) proof,
+even if you aren't experienced enough to follow the proof yourself yet.
+
+Anyway, if we accept this definition, then Euler's formula makes more sense:
+#thm[Euler][We have $ e^(i theta) = cos theta + i sin theta. $] <euler>
+The point is that cosine and sine also have a Taylor series that is compatible with definition:
+#eqn[
+  $
+    cos(x) &= 1 - x^2/2! + x^4/4! - x^6/6! + ... \
+    sin(x) &= x - x^3/3! + x^5/5! - x^7/7! + ... .
+  $
+  <trig>
+]
+And if you put these together, you can verify @euler, up to some technical issues with infinite sums.
+I think the professor even showed this in class:
+$
+  cos(theta) + i sin(theta)
+  &= (1 - theta^2 / 2! + theta^4 / 4! - ...) + (theta - theta^3 / 3! + theta^5 / 5! - ...) i \
+  &= 1 + (theta i) + (theta i)^2 / 2! + (theta i)^3 / 3! + (theta i^4) / 4! + (theta i)^5 / 5! \
+  &= e^(i theta).
+$
+
+=== Complex exponents, complex base
+
+But what about $i^i$?
+Our @def18112 above only worked for positive real numbers $a > 0$.
+Here, it turns out you're out of luck.
+There isn't any way to define $i^i$ in a way that makes internal sense.
+The problem is that there's no way to take a single log of a complex number,
+so the analogy with $log a$ breaks down.
+
+Put another way: there's no good way to assign a value to $log(i)$,
+because $e^(i pi slash 2) = e^(5 i pi slash 2) = ...$ are all equal to $i$.
+You might hear this phrased "complex-valued logarithms are multivalued".
+You can have some fun with this paradox:
+$ i &= e^(i pi slash 2) ==> i^i = e^(- pi slash 2) \
+  i &= e^(5 i pi slash 2) ==> i^i = e^(-5 pi slash 2). $
+Yeah, trouble.
+
+=== Trig functions with complex arguments
+
+On the other hand, $cos(i)$ can be defined:
+use the Taylor series @trig, like we did for $e^z$.
+To spell it out:
+#defn[18.112 trig definitions][
+  If $z$ is a complex number, we define
+  $
+    cos(z) &:= 1 - z^2/2! + z^4/4! - z^6/6! + ... \
+    sin(z) &:= z - z^3/3! + z^5/5! - z^7/7! + ... .
+  $
+] <def18112trig>
+
+If you do this, then @def18112 implies the following identities are kosher:
+#prop[
+  Under @def18112trig, we have the identities
+  $ cos(z) &:= (e^(i z) + e^(-i z)) / 2 \
+    sin(z) &:= (e^(i z) - e^(-i z)) / (2i). $
+] <reimtrig>
+#proof[
+  If you write out $e^(i z) = sum (i z)^k / k!$
+  and $e^(-i z) = sum (-i z)^k / k!$ and add them,
+  the odd $k$'s cancel out and the even $k$'s don't, which gives you
+  $ e^(i z) + e^(-i z) = 2  - 2 dot z^2/2! + 2 dot z^4/4! - 2 dot z^6/6! + ... . $
+  So dividing by $2$, we see $cos(z)$ on the right-hand side, as needed.
+  The argument with $sin$ is similar, but this time the even $k$'s cancel
+  and you divide by $2i$ instead.
+]
+
+So for example, from @reimtrig, we conclude for example that
+$ cos(i) = (e + 1/e) / 2. $
+Strange but true.
+
+=== The future: what are 18.100 and 18.112 anyway?
+
+First I need to tell you what analysis is.
+When students in USA ask me what analysis is,
+I sometimes say "calculus but you actually prove things".
+But that's actually a bit backwards; it turns out that in much parts of the world,
+there is no topic called "calculus".#footnote[See #url("https://web.evanchen.cc/faq-school.html#S-10").]
+It would be more accurate to say calculus is analysis with proofs, theorems,
+and coherent theorem statements deleted,
+and it only exists in some parts of the world
+(which is why mathematicians will tend to look down on it).
+
+With that out of the way,
+
+- 18.100 is real analysis, i.e. analysis of functions over $RR$
+- 18.112 is complex analysis, i.e. analysis of functions over $CC$.
+
+If you ever take either class, I think the thing to know about them is:
+
+#quote(attribution: [Charles Pugh, in _Real Mathematical Analysis_])[
+  Complex analysis is the good twin and real analysis is the evil one:
+  beautiful formulas and elegant theorems seem to blossom spontaneously in the complex domain,
+  while toil and pathology rule the reals
+]
+
+
 == Saddle point simulation code for @sec-saddle-sim <appendix-saddle-sim>
 
 #raw(read("include/saddle-demo.py"), lang: "py")
