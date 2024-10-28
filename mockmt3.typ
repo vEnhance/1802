@@ -40,9 +40,9 @@
   from time $t = 0$ to time $t = 2pi$.
 
   - Compute the arc length $int_(cal(C)) dif s$.
-  - A wind is blowing on the butterfly,
-    given by the vector field $bf(F)(x,y) = angle.l e^x, e^y angle.r$.
-    Compute the line integral $int_(cal(C)) bf(F) dot dif bf(r)$.
+  - A wind is blowing given by the vector field $bf(F)(x,y) = angle.l (x+2)^3, (y+4)^5 angle.r$.
+    Compute the line integral $int_(cal(C)) bf(F) dot dif bf(r)$
+    (i.e. total work done by $bf(F)$ on the butterfly).
 
 / Question 2.:
   Compute the area of the region in the first quadrant between $x y = 1$ and $x + y = 101/10$.
@@ -58,7 +58,7 @@
 
 / Question 5.:
   Let $cal(C)$ denote the unit circle $x^2+y^2=1$ oriented counterclockwise,
-  and consider the vector field $bf(F) = vec(x+2y, 4x+8y)$.
+  and consider the vector field $bf(F)(x,y) = vec(x+2y, 4x+8y)$.
   Compute the flux of $bf(F)$ through $cal(C)$.
 
 
