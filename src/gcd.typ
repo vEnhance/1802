@@ -310,7 +310,7 @@ Instead we take the convention that
   So only the terms in front of $bf(e)_3$ survive, and you get
   $ det mat(partial / (partial x), partial / (partial y); p(x,y), q(x,y)) bf(e)_3
       = ((partial q) / (partial x) - (partial p) / (partial y)) bf(e)_3. $
-  And there's the 2D scalar curl, the coefficient of $bf(e)-3$.
+  And there's the 2D scalar curl, the coefficient of $bf(e)_3$.
 ]
 
 It's still true that the curl of a conservative 2D vector field is zero.
