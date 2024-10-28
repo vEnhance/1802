@@ -243,8 +243,8 @@ Let's see an example of how to carry out this integration.
 
   We calculate the Jacobian of $bf(T)$:
   $ J_(bf(T)) = mat(
-      partial / (partial r) cos theta,
-      partial / (partial r) sin theta;
+      partial / (partial r) (r cos theta),
+      partial / (partial r) (r sin theta);
       partial / (partial theta) (r cos theta),
       partial / (partial theta) (r sin theta))
     = mat(cos theta, sin theta; -r sin theta, r cos theta). $

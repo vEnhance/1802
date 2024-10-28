@@ -39,8 +39,8 @@ The map
 $ bf(T)_"polar" (r, theta) = (r cos theta, r sin theta). $
 is so common you may as well memorize its Jacobian:
 $ J_(bf(T)) &= mat(
-    partial / (partial r) cos theta,
-    partial / (partial r) sin theta;
+    partial / (partial r) (r cos theta),
+    partial / (partial r) (r sin theta);
     partial / (partial theta) (r cos theta),
     partial / (partial theta) (r sin theta))
   = mat(cos theta, sin theta; -r sin theta, r cos theta). \

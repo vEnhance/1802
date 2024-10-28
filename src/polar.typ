@@ -10,8 +10,8 @@ This particular  is so common that you should actually memorize its Jacobian det
 and area scaling factor.
 Remember from last section we computed
 $ J_(bf(T)) &= mat(
-    partial / (partial r) cos theta,
-    partial / (partial r) sin theta;
+    partial / (partial r) (r cos theta),
+    partial / (partial r) (r sin theta);
     partial / (partial theta) (r cos theta),
     partial / (partial theta) (r sin theta))
   = mat(cos theta, sin theta; -r sin theta, r cos theta). \
