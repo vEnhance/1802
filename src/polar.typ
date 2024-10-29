@@ -245,6 +245,9 @@ Again $x y$-coordinates are either infeasible or at least annoying.
   $ (dash(x) , dash(y)) = ((4) / (3 pi) , (4) / (3 pi)). #qedhere $
 ]
 
+== [SIDENOTE] A picture of $r dif r dif theta = (r dif theta) dif r$
+
+#todo[copy the picture I drew in recitation]
 
 == [EXER] Exercises
 

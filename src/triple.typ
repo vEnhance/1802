@@ -38,7 +38,8 @@ except with two variables rather than three.
       (partial u) / (partial y), (partial v) / (partial y), (partial w) / (partial y);
       (partial u) / (partial z), (partial v) / (partial z), (partial w) / (partial z);
     ). $
-- Volume is $op("Vol")(cal(R)) := iiint_(cal(R)) dif x dif y dif z$.
+- Volume is $ op("Vol")(cal(R)) := iiint_(cal(R)) dif x dif y dif z. $
+  You can take this as a _definition_ of volume for this class.
 - If $rho : cal(R) -> RR$ is a density function for a 3-D space, then
   $ op("Mass")(cal(R)) := iiint_(cal(R)) rho(x,y,z) dif x dif y dif z $ is the total mass.
 - The center of mass is given by three coordinates now:
@@ -47,6 +48,24 @@ except with two variables rather than three.
     (iiint_(cal(R)) y dot rho(x,y,z) dif x dif y dif z) / (op("Mass")(cal(R))),
     (iiint_(cal(R)) z dot rho(x,y,z) dif x dif y dif z) / (op("Mass")(cal(R)))
   ). $
+
+== [TEXT] Examples of triple integrals
+
+#sample[
+  Compute the volume of the region bounded by $x^2 + y^2 <= 1$ and $x^2 + z^2 <= 1$.
+]
+
+#sample[
+  Compute the volume of the region bounded by the surfaces
+  $z = 3(x^2+y^2)$ and $z = 72 - 5(x^2+y^2)$.
+]
+
+#sample[
+  Compute the volume and center of mass of the cone
+  defined by $z^2 <= 9(x^2 + y^2)$ and $0 <= z <= 5$,
+  assuming uniform density distribution.
+]
+
 
 == [TEXT] Cylindrical coordinates
 

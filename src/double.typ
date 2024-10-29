@@ -367,6 +367,14 @@ If you choose $f = 1$ you get area.
   To find the area of a region $cal(R)$, use
   $ op("Area")(cal(R)) = iint_(cal(R)) 1 dif x dif y. $
 ]
+#digression(title: [Digression: This is the definition of area])[
+  Sometimes people ask me why we choose to integrate $1$ as opposed to some other function.
+  The answer might be a bit surprising:
+  you can actually take the above integral as the _definition_ of area.
+  (If you think back carefully to what you learned in high school,
+  you might realize that nobody actually ever gave you a precise definition of the word "area",
+  and that was for good reason.)
+]
 
 #sample[
   Consider the region $cal(R)$ we just described,
@@ -381,6 +389,12 @@ If you choose $f = 1$ you get area.
   $ int_(x = - 1)^2 (x+2-x^2) dif x =
     lr([x^2/2 + 2x - x^3/3])_(x=-1)^(x=2)
     = (2+4-8/3) - (1/2-2+1/3) = 9/2. #qedhere $
+]
+
+#digression(title: [Digression on "area under the curve" from 18.01])[
+  Here's an example that can convince you the new definition of area
+  matches the definition of "area under the curve" that you learned in 18.01.
+  #todo[write this]
 ]
 
 === Mass and center of mass
