@@ -127,10 +127,20 @@ the 18.02 is the grown-up version where you have a transition map instead.
 
 #definition(title: [Definition: Jacobian determinant])[
   Let $bf(T)$ be a transition map defined from a region in $RR^n$ to $RR^n$.
-  The *Jacobian matrix* is the determinant of the matrix
-  whose rows are the gradients of each component written as row vectors.
-  In these notes we denote it my $J_(bf(T))$.
+  The *Jacobian matrix* is the matrix
+  whose rows are the gradients of each component written as row vectors;
+  the *Jacobian determinant* is its determinant.
+  In these notes we denote the matrix my $J_(bf(T))$
+  (and the determinant by $det J_(bf(T))$.
 ]
+
+For example in a $2 times 2$ case, if the transition map $bf(T)(u,v)$
+is written as $bf(T)(u,v) = (p(u,v), q(u,v))$, then
+$ J_(bf(T)) = mat(
+  (partial p)/(partial u), (partial p)/(partial v);
+  (partial q)/(partial u), (partial q)/(partial v)
+). $
+
 #example[
   Let's consider the transition map $bf(T)(u,v)$ we saw earlier, that is
   $ bf(T)(u,v) = (sqrt(v/u), sqrt(u v)). $
@@ -145,7 +155,7 @@ the 18.02 is the grown-up version where you have a transition map instead.
      1/2 u^(-1/2) v^(1/2), 1/2 u^(1/2) v^(-1/2)). $
 ]
 #example[
-  We can also find the Jacobian of the _inverse_ map too,
+  We can also find the Jacobian matrix of the _inverse_ map too,
   that is the transition map $bf(T) : bf(R) -> bf(S)$ defined by
   $ bf(T)^(-1)(x,y) = (y/x, x y). $
   In other words, this is the map that transforms $(x,y)$ into $(u,v)$.
@@ -165,6 +175,8 @@ Okay, now for the result.
   $ iint_(cal(R)) f(x,y) dif x dif y = iint_(cal(S)) f(u,v) lr(|det J_(bf(T))|) dif u dif v $
   Alternatively, if it's easier to compute $J_(bf(T)^(-1))$, the following formula also works:
   $ iint_(cal(R)) f(x,y) dif x dif y = iint_(cal(S)) f(u,v) / (lr(|det J_(bf(T)^(-1))|)) dif u dif v $
+  However, in the latter case your Jacobian determinant will have $x$ and $y$
+  in it that you need to translate back into $u$ and $v$.
 ]
 Here $|det J_(bf(T))|$ is called the *area scaling factor*:
 it's the absolute value of the determinant of the Jacobian matrix.
@@ -179,6 +191,7 @@ you might prefer to use that instead.
   You might find it easier to remember both formulas if you write
   $ dif u dif v = |det J_(bf(T))| dif x dif y $
   so it looks more like $dif u = (partial u) / (partial x) dif x$ from 18.01.
+  (Indeed the 18.01 formula is the special case of a $1 times 1$ matrix!)
 ]
 
 #digression(title: [Digression on what $dif u dif v$ means])[
@@ -207,10 +220,12 @@ Let's see an example of how to carry out this integration.
   We made a transition map $bf(T) : cal(S) -> cal(R)$ written as either
   $ bf(T)(u,v) &= (sqrt(v/u), sqrt(u v)) \
     bf(T)^(-1)(x,y) &= (y/x, x y). $
-  We don't like square roots, so we'll the determinant of the Jacobian for $bf(T)^(-1)$, which is
+  We don't like square roots, so we'll the determinant of the Jacobian matrix for $bf(T)^(-1)$, which is
   $ det (J_(bf(T)^(-1))) = det mat(-y/x^2, 1/x; y, x)
     = (- y / x^2) dot x - 1 / x dot y = - y / x - y / x = - (2 y) / (x) . $
-  Since $u = y / x$, we can express this as:
+  Since we used the upside-down version of the formula, we need to translate
+  this back into $u$ and $v$ through the given formula.
+  In this case since $u = y / x$, you can do it just by looking:
   $ det (J_(bf(T)^(-1))) = - 2 u. $
   $
     op("Area")(cal(R))
