@@ -16,7 +16,7 @@
 
 - Don't turn the page until the signal to start is given #todo[time].
 
-- You have 50 minutes to answer six questions.
+- You have 50 minutes to answer five questions.
   We're not grading anything, so write your solutions anywhere
   (the space below, other loose paper, notebook, iPad, etc.).
 
@@ -45,23 +45,21 @@
     (i.e. total work done by $bf(F)$ on the butterfly).
 
 / Question 2.:
-  Compute the area of the region in the first quadrant between $x y = 1$ and $x + y = 101/10$.
+  Assuming uniform density, compute the center of mass of the following regions:
+  - The region bounded by $y = log(x)$, $y=0$ and $x=e$. (The $log$ is base $e$.)
+  - The region defined by $y >= 0$, $y^2 >= 3x^2$, and $x^2+y^2 <= 9$.
 
 / Question 3.:
-  Consider the region defined by $y >= 0$, $y^2 >= 3x^2$ and $x^2+y^2 <= 9$.
-  Assuming it has uniform density, compute its center of mass.
+  Suppose $h(x)$ is a function for which the vector field defined by
+  $bf(F)(x,y) = vec(x y + cos(x), h(x) + cos(y))$
+  is conservative. Recover the function $h(x)$, and find a potential function for $bf(F)$.
 
 / Question 4.:
-  Suppose $h(x)$ is a function for which the vector field $bf(F) : RR^2 -> RR^2$ defined by
-  $ bf(F)(x,y) = vec(x y + cos(x), h(x) + cos(y)) $
-  is conservative. Compute $h$ and find a potential function for $bf(F)$.
-
-/ Question 5.:
   Let $cal(C)$ denote the unit circle $x^2+y^2=1$ oriented counterclockwise,
   and consider the vector field $bf(F)(x,y) = vec(x+2y, 4x+8y)$.
   Compute the flux of $bf(F)$ through $cal(C)$.
 
-/ Question 6.:
+/ Question 5.:
   Find all real numbers $k$ such that the region of points $(x,y)$
   satisfying $0 <= k x + y <= 1$ and $0 <= x + k y <= 1$ has area $1/2024$.
 
@@ -79,10 +77,6 @@ The solutions to all the problems are now posted in Section 44 of my LAMV book:
 May contain typos/errors/gaps. Still working on it.
 
 #outline()
-
-== Solution 1
-
-
 
 = Solution
 
