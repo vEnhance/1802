@@ -1,9 +1,9 @@
 #import "@local/evan:1.0.0":*
 
 #show: evan.with(
-  title: [18.02 Mock Midterm 2],
+  title: [18.02 Mock Midterm 3],
   author: "Evan Chen",
-  date: [10 October 2024],
+  date: [13 October 2024],
   maketitle: false,
 )
 
@@ -16,7 +16,7 @@
 
 - Don't turn the page until the signal to start is given #todo[time].
 
-- You have 50 minutes to answer five questions.
+- You have 50 minutes to answer six questions.
   We're not grading anything, so write your solutions anywhere
   (the space below, other loose paper, notebook, iPad, etc.).
 
@@ -61,6 +61,9 @@
   and consider the vector field $bf(F)(x,y) = vec(x+2y, 4x+8y)$.
   Compute the flux of $bf(F)$ through $cal(C)$.
 
+/ Question 6.:
+  Find all real numbers $k$ such that the region of points $(x,y)$
+  satisfying $0 <= k x + y <= 1$ and $0 <= x + k y <= 1$ has area $1/2024$.
 
 #v(3em)
 
