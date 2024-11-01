@@ -212,7 +212,7 @@ Hence the answers are $k = pm sqrt(3) / 2$ and $k = pm sqrt(5) / 2$.
 At face value, this looks like an 18.01 integral,
 but we know from 18.01 that this integral is actually measuring the area under some curve;
 we denote that region by $cal(R)$, shaded in blue below.
-The idea is that, to avoid having to deal with the hideous roots,
+The idea is that, to avoid having to deal with log and square root,
 we are going to use horizontal slicing for the region under the curve shown in the figure.
 
 #figure(
