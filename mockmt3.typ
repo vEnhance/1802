@@ -34,13 +34,12 @@
 = 18.02 Mock Midterm 3 Questions
 
 / 1.:
-  Another butterfly is fluttering in the $x y$ plane
-  with position $bf(r)(t) = angle.l sin(t), sin(t) angle.r$.
-  Let $cal(C)$ denote the butterfly's trajectory from $0 <= t <= 2 pi$.
+  The butterfly from last time is fluttering in the $x y$ plane
+  with position $bf(r)(t) = angle.l cos(t), cos(t) angle.r$.
   A wind is also blowing in the plane, given by the vector field
-  $bf(F)(x,y) = angle.l x^2+3, y^4+5 angle.r$.
-  Compute the arc length $int_(cal(C)) dif s$
-  and the line integral $int_(cal(C)) bf(F) dot dif bf(r)$.
+  $bf(F)(x,y) = angle.l x^3, y^5 angle.r$.
+  Let $cal(C)$ denote the butterfly's trajectory from $0 <= t <= 2 pi$.
+  Compute the line integral $int_(cal(C)) bf(F) dot dif bf(r)$.
 
 / 2.:
   Compute the center of mass of the region where $y >= 0$, $y^2 >= 3x^2$, and $x^2+y^2 <= 9$.
@@ -77,17 +76,10 @@ May contain typos/errors/gaps. Still working on it.
 
 == Solution to butterfly reprise
 
-- Sketching the path of the butterfly, the butterfly goes in a straight line
-  from $(0,0)$ to $(1,1)$ to $(-1,-1)$ then to $(0,0)$.
-  By the same calculation as the previous mock midterm,
-  the total length is thus
-  $ int_(cal(C)) dif s  = sqrt(2) + 2 sqrt(2) + sqrt(2) = 4 sqrt 2 $
-  corresponding to $(0,0) -> (1,1) -> (-1,-1) -> (0,0)$.
-
-- Note that because $ partial / (partial y) (x^2 + 3) = 0 = partial / (partial x) (y^4 + 5), $
-  it follows $bf(F)$ is conservative.
-  Since the butterfly has the same starting and ending point,
-  the total work must be $ int_(cal(C)) bf(F) dot dif bf(r) = 0. $
+Note that because $ partial / (partial y) (x^3) = 0 = partial / (partial x) (y^5), $
+it follows $bf(F)$ is conservative.
+Since the butterfly has the same starting and ending point,
+the total work must be $ int_(cal(C)) bf(F) dot dif bf(r) = 0. $
 
 #pagebreak()
 
@@ -139,7 +131,7 @@ In conclusion, the center of mass is given by $ (dash(x),dash(y)) = (0, 6/pi). $
   $ A = int_(theta = pi / 3)^((2 pi) / (3)) 9 / 2 dif theta = 9 / 2 ((2 pi) / (3) - pi / 3) = 9 / 2 dot pi / 3 = (3 pi) / (2) . $
 ]
 
-#digression(title: [Digression: the long way for $bar(x)$])[
+#digression(title: [Digression: the long way for $dash(x)$])[
   For comparison, we show what happens if you didn't notice the symmetry and proceed to integrate.
   In polar coordinates, $x = r cos theta$ and $dif A = r dif r dif theta$.
   So:
