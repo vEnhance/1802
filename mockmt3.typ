@@ -36,8 +36,9 @@
 / 1.:
   Another butterfly is fluttering in the $x y$ plane
   with position $bf(r)(t) = angle.l sin(t), sin(t) angle.r$.
-  Let $cal(C)$ denote the butterfly's trajectory time $t = 0$ to $t = 2pi$.
-  A wind is also blowing given by the vector field $ bf(F)(x,y) = vec( x^2+3, y^4+5 ). $
+  Let $cal(C)$ denote the butterfly's trajectory from $0 <= t <= 2 pi$.
+  A wind is also blowing in the plane, given by the vector field
+  $bf(F)(x,y) = angle.l x^2+3, y^4+5 angle.r$.
   Compute the arc length $int_(cal(C)) dif s$
   and the line integral $int_(cal(C)) bf(F) dot dif bf(r)$.
 
@@ -46,13 +47,13 @@
   (Assume $rho=1$.)
 
 / 3.:
-  Suppose $h(x)$ is a function for which the following vector field
-  is conservative: $ bf(F)(x,y) = vec(x y + cos(x), h(x) + cos(y)). $
+  Suppose $h(x)$ is a function for which the vector field
+  $bf(F)(x,y) = angle.l x y + cos(x), h(x) + cos(y) angle.r$ is conservative.
   Given $h(0)=1$, recover the function $h(x)$, and find a potential function for $bf(F)$.
 
 / 4.:
   Let $cal(C)$ denote the unit circle $x^2+y^2=1$ oriented counterclockwise,
-  and consider the vector field $bf(F)(x,y) = vec(x+2y, 4x+8y)$.
+  and consider the vector field $bf(F)(x,y) = angle.l x+2y, 4x+8y angle.r$.
   Compute the flux of $bf(F)$ through $cal(C)$.
 
 / 5.:
@@ -61,12 +62,8 @@
 / 6.: Assume $log$ is base $e approx 2.718$. Use any method (recommended: horizontal slicing) to compute
   $ int_(x=0)^((e-1)^2) log(sqrt(x)+1) dif x. $
 
-#v(3em)
 
-The solutions to all the problems are now posted in Section 44 of my LAMV book:
-#align(center)[
-  #url("https://web.evanchen.cc/upload/1802/lamv.pdf").
-]
+Solutions are posted in Section 44 of #url("https://web.evanchen.cc/upload/1802/lamv.pdf").
 ]
 
 #pagebreak()
