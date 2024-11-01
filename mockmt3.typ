@@ -36,10 +36,9 @@
 / 1.:
   The butterfly from last time is fluttering in the $x y$ plane
   with position $bf(r)(t) = angle.l cos(t), cos(t) angle.r$.
-  A wind is also blowing in the plane, given by the vector field
+  A wind is given by the vector field
   $bf(F)(x,y) = angle.l x^3, y^5 angle.r$.
-  Let $cal(C)$ denote the butterfly's trajectory from $0 <= t <= 2 pi$.
-  Compute the line integral $int_(cal(C)) bf(F) dot dif bf(r)$.
+  Compute the line integral $int_(t=0)^(2 pi) bf(F) dot dif bf(r)$.
 
 / 2.:
   Compute the center of mass of the region where $y >= 0$, $y^2 >= 3x^2$, and $x^2+y^2 <= 9$.
@@ -80,6 +79,13 @@ Note that because $ partial / (partial y) (x^3) = 0 = partial / (partial x) (y^5
 it follows $bf(F)$ is conservative.
 Since the butterfly has the same starting and ending point,
 the total work must be $ int_(cal(C)) bf(F) dot dif bf(r) = 0. $
+
+#remark[
+  Even if $bf(F)$ was not conservative, the answer would still be zero.
+  This follows by Green's theorem, because the trajectory $bf(r)$
+  cuts a degenerate parallelogram of area zero.
+]
+
 
 #pagebreak()
 
