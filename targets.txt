@@ -34,3 +34,4 @@ lamv.pdf
 figures/integrals-triangle.pdf
 figures/integrals-stokes.pdf
 mockmt2.pdf
+mockmt3.pdf

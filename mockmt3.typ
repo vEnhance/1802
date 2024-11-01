@@ -14,7 +14,7 @@
 
 = 18.02 Mock Midterm 3 Instructions
 
-- Don't turn the page until the signal to start is given #todo[time].
+- Don't turn the page until the signal to start is given (6:05pm ET in 1-190 on 13 Nov).
 
 - You have 50 minutes to answer six questions.
   We're not grading anything, so write your solutions anywhere
@@ -22,7 +22,7 @@
 
 - Like the real exam, I suggest not referring to any notes/calculators/etc.
 
-- Solutions are posted in Section #todo[?] of my LAMV book at #url("https://web.evanchen.cc/1802.html").
+- Solutions are posted in Section 44 of my LAMV book at #url("https://web.evanchen.cc/1802.html").
 ]
 
 #pagebreak()
@@ -49,7 +49,8 @@
 / 3.:
   Suppose $h(x)$ is a function for which the vector field
   $bf(F)(x,y) = vec(x y + cos(x), h(x) + cos(y))$
-  is conservative. Recover the function $h(x)$, and find a potential function for $bf(F)$.
+  is conservative.
+  Given $h(0)=1$, recover the function $h(x)$, and find a potential function for $bf(F)$.
 
 / 4.:
   Let $cal(C)$ denote the unit circle $x^2+y^2=1$ oriented counterclockwise,
@@ -57,10 +58,11 @@
   Compute the flux of $bf(F)$ through $cal(C)$.
 
 / 5.:
-  Find all $k$ for which the region defined by $0 <= k x + y <= 1$ and $0 <= x + k y <= 1$ has area $1$.
+  Find all real $k$ for which the region defined by $0 <= k x + y <= 1$ and $0 <= x + k y <= 1$ has area $1$.
 
 / 6.:
   Compute $int_0^9 sqrt(sqrt(x)+1) dif x$.
+  (Use any method. Recommended approach: horizontal slicing.)
 
 #v(3em)
 
