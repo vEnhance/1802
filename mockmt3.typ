@@ -16,7 +16,7 @@
 
 - Don't turn the page until the signal to start is given #todo[time].
 
-- You have 50 minutes to answer five questions.
+- You have 50 minutes to answer six questions.
   We're not grading anything, so write your solutions anywhere
   (the space below, other loose paper, notebook, iPad, etc.).
 
@@ -33,35 +33,34 @@
 
 = 18.02 Mock Midterm 3 Questions
 
-/ Question 1.:
+/ 1.:
   Another butterfly is fluttering in the $x y$ plane
   with position $bf(r)(t) = angle.l sin(t), sin(t) angle.r$.
+  A wind is also blowing given by the vector field $bf(F)(x,y) = vec( x^2+3, y^4+5 )$.
   Let $cal(C)$ denote the trajectory of the butterfly
-  from time $t = 0$ to time $t = 2pi$.
+  from time $t = 0$ to $t = 2pi$.
+  Compute the arc length $int_(cal(C)) dif s$
+  and the line integral $int_(cal(C)) bf(F) dot dif bf(r)$.
 
-  - Compute the arc length $int_(cal(C)) dif s$.
-  - A wind is blowing given by the vector field $bf(F)(x,y) = vec( x^2+3, y^4+5 )$.
-    Compute the line integral $int_(cal(C)) bf(F) dot dif bf(r)$
-    (i.e. total work done by $bf(F)$ on the butterfly).
+/ 2.:
+  Compute the center of mass of the region where $y >= 0$, $y^2 >= 3x^2$, and $x^2+y^2 <= 9$.
+  (Assume $rho=1$.)
 
-/ Question 2.:
-  Assuming constant density $rho(x,y) = 1$, compute:
-  - The total mass of the region bounded by $y = sqrt(sqrt(x+1)+1)$, $x=0$ and $x=9$.
-  - The center of mass of the region defined by $y >= 0$, $y^2 >= 3x^2$, and $x^2+y^2 <= 9$.
-
-/ Question 3.:
-  Suppose $h(x)$ is a function for which the vector field defined by
+/ 3.:
+  Suppose $h(x)$ is a function for which the vector field
   $bf(F)(x,y) = vec(x y + cos(x), h(x) + cos(y))$
   is conservative. Recover the function $h(x)$, and find a potential function for $bf(F)$.
 
-/ Question 4.:
+/ 4.:
   Let $cal(C)$ denote the unit circle $x^2+y^2=1$ oriented counterclockwise,
   and consider the vector field $bf(F)(x,y) = vec(x+2y, 4x+8y)$.
   Compute the flux of $bf(F)$ through $cal(C)$.
 
-/ Question 5.:
-  Find all real numbers $k$ such that the region of points $(x,y)$
-  satisfying $0 <= k x + y <= 1$ and $0 <= x + k y <= 1$ has area $1/2024$.
+/ 5.:
+  Find all $k$ for which the region defined by $0 <= k x + y <= 1$ and $0 <= x + k y <= 1$ has area $1$.
+
+/ 6.:
+  Compute $int_0^9 sqrt(sqrt(x)+1) dif x$.
 
 #v(3em)
 
