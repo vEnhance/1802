@@ -40,14 +40,14 @@
   from time $t = 0$ to time $t = 2pi$.
 
   - Compute the arc length $int_(cal(C)) dif s$.
-  - A wind is blowing given by the vector field $bf(F)(x,y) = angle.l (x+2)^3, (y+4)^5 angle.r$.
+  - A wind is blowing given by the vector field $bf(F)(x,y) = vec( x^2+3, y^4+5 )$.
     Compute the line integral $int_(cal(C)) bf(F) dot dif bf(r)$
     (i.e. total work done by $bf(F)$ on the butterfly).
 
 / Question 2.:
-  Assuming uniform density, compute the center of mass of the following regions:
-  - The region bounded by $y = log(x)$, $y=0$ and $x=e$. (The $log$ is base $e$.)
-  - The region defined by $y >= 0$, $y^2 >= 3x^2$, and $x^2+y^2 <= 9$.
+  Assuming constant density $rho(x,y) = 1$, compute:
+  - The total mass of the region bounded by $y = sqrt(sqrt(x+1)+1)$, $x=0$ and $x=9$.
+  - The center of mass of the region defined by $y >= 0$, $y^2 >= 3x^2$, and $x^2+y^2 <= 9$.
 
 / Question 3.:
   Suppose $h(x)$ is a function for which the vector field defined by
