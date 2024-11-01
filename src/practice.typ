@@ -38,3 +38,7 @@ Some practice questions from topics through the entire course.
 #exer[
   Combine the previous two exercises to figure out what $int_(x=-oo)^(x+oo) e^(-x^2) dif x$ is.
 ]
+
+#exerstar[
+  Prove that $ int_(x=0)^(999^5) root(3, root(5,x) + 1) $ is a rational number.
+] <exer-rat-slice>

@@ -46,8 +46,8 @@
   (Assume $rho=1$.)
 
 / 3.:
-  Suppose $h(x)$ is a function for which the following vector field is conservative:
-  $ bf(F)(x,y) = vec(x y + cos(x), h(x) + cos(y)). $
+  Suppose $h(x)$ is a function for which the following vector field
+  is conservative: $ bf(F)(x,y) = vec(x y + cos(x), h(x) + cos(y)). $
   Given $h(0)=1$, recover the function $h(x)$, and find a potential function for $bf(F)$.
 
 / 4.:
@@ -58,9 +58,8 @@
 / 5.:
   Find all real $k$ for which the region defined by $0 <= k x + y <= 1$ and $0 <= x + k y <= 1$ has area $4$.
 
-/ 6.:
-  Compute $int_0^9 sqrt(sqrt(x)+1) dif x$.
-  (Use any method. Recommended approach: horizontal slicing.)
+/ 6.: Assume $log$ is base $e approx 2.718$. Use any method (recommended: horizontal slicing) to compute
+  $ int_(x=0)^((e-1)^2) log(sqrt(x)+1) dif x. $
 
 #v(3em)
 
@@ -84,7 +83,9 @@ May contain typos/errors/gaps. Still working on it.
 - Sketching the path of the butterfly, the butterfly goes in a straight line
   from $(0,0)$ to $(1,1)$ to $(-1,-1)$ then to $(0,0)$.
   By the same calculation as the previous mock midterm,
-  the total length is thus $ int_(cal(C)) dif s  = 4 sqrt(2) $ again.
+  the total length is thus
+  $ int_(cal(C)) dif s  = sqrt(2) + 2 sqrt(2) + sqrt(2) = 4 sqrt 2 $
+  corresponding to $(0,0) -> (1,1) -> (-1,-1) -> (0,0)$.
 
 - Note that because $ partial / (partial y) (x^2 + 3) = 0 = partial / (partial x) (y^4 + 5), $
   it follows $bf(F)$ is conservative.
@@ -212,32 +213,30 @@ Hence the answers are $k = pm sqrt(3) / 2$ and $k = pm sqrt(5) / 2$.
 == Solution to the integral
 
 At face value, this looks like an 18.01 integral,
-but we know from 18.01 that this integral is actually measuring the area under some curve.
-The idea is that, to avoid having to deal with the hideous square roots,
+but we know from 18.01 that this integral is actually measuring the area under some curve;
+we denote that region by $cal(R)$, shaded in blue below.
+The idea is that, to avoid having to deal with the hideous roots,
 we are going to use horizontal slicing for the region under the curve shown in the figure.
 
 #figure(
   image("figures/mt3-undergraph.png", width: auto),
-  caption: [The region $0 <= y <= sqrt(sqrt(x)+1)$ for $0 <= x <= 9$.],
+  caption: [The region $y <= log(sqrt(x)+1)$ for $0 <= x <= (e-1)^2$.],
 )
 
-Let's first convert the region into inequality format: we have $0 <= x <= 9$, $y >= 0$ and
-$ y <= sqrt(sqrt(x)+1) <==> x >= (y^2-1)^2. $
-Hence, the area under the curve can be split into two parts.
-In the range $0 <= y <= 1$ we get the light blue rectangle shown above (bottom half of figure),
-which goes from $0 <= x <= 9$ to $0 <= y <= 1$, and has area $9$.
-Then from $1 <= y <= 2$ the bounds on $x$ are instead given by
-$ (y^2-1)^2 <= x <= 9. $
-This is the dark blue region (top half of figure) and it has area
-$
-  int_(y=1)^2 int_(x = (y^2-1)^2)^9 1 dif x dif y
-  &= int_(y=1)^2 (9 - (y^2-1)^2) dif y \
-  &= int_(y=1)^2 (-y^4 + 2y^2 + 8) dif y \
-  &= [-y^5/5 + 2/3 y^3 + 8y]_(y=1)^2 \
-  &= - (2^5-1^5)/5 + (2(2^3-1^3))/3 + 8 = 97/15.
-$
-Hence the final answer is $ 97/15 + 9 = 232/15. $
-#digression[
-  It is possible to evaluate the integral using 18.01 methods
-  by making the $u$-substitution $u = sqrt(sqrt(x)+1)$, but this is extremely tedious.
+The point is to now rewrite
+$ y <= log(sqrt(x)+1) <==> e^y - 1 <= sqrt(x) <==> x >= (e^y-1)^2. $
+Hence, we could equally well rewrite the shaded blue region $cal(R)$ as:
+$ 0 <= y <= 1 " and " x >= (e^y-1)^2. $
+Writing this as a double integral gives
+$ op("Area")(cal(R))
+  &= int_(y=0)^1 int_(x=(e^y-1)^2)^((e-1)^2) dif x dif y
+  = int_(y=0)^1 ((e-1)^2 - (e^y-1)^2) dif y \
+  &= e^2-2e - int_(y=0)^1 (e^(2y) - 2e^y) dif y
+  = e^2-2e - lr([e^(2y)/2 - 2e^y])_(y=0)^1 \
+  &= e^2-2e - (e^2/2 - 2e) - (1/2-2) = (e^2-3)/2. $
+
+#remark[
+  It is also possible to calculate an antiderivative of $log(sqrt(x)+1)$ directly
+  by using integration by parts and $u$-substitution, but this process is time-consuming.
+  The anti-derivative turns out to equal $-x/2 + sqrt(x) + (x-1)log(sqrt(x)+1) + C$.
 ]
