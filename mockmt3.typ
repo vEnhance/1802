@@ -37,8 +37,7 @@
   Another butterfly is fluttering in the $x y$ plane
   with position $bf(r)(t) = angle.l sin(t), sin(t) angle.r$.
   Let $cal(C)$ denote its trajectory between $0 <= t <= 2pi$.
-  Compute $int_(cal(C)) (x^3 dif x + y^3 dif y)$
-  and $int_(cal(C)) (y dif x - x dif y)$.
+  Compute $int_(cal(C)) (x^3 dif x + y^3 dif y)$ and $int_(cal(C)) (y dif x)$.
 
 / 2.:
   Compute the center of mass of the region where $y >= 0$, $y^2 >= 3x^2$, and $x^2+y^2 <= 9$.
