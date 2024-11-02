@@ -25,15 +25,18 @@ Seriously, I can't make this up.
 
 In any case, the 2D flux is then defined as follows.
 #definition(title: [Definition of 2D flux])[
-  The 2D flux of a vector field $bf(F)$ through the curve $cal(C)$
+  The 2D flux of a vector field $bf(F)$ through the closed loop $cal(C)$
   parametrized by $bf(r)(t)$ is defined by
   $ int_(t="start time")^("stop time") bf(F)(bf(r)(t)) dot
     (90 degree "clockwise rotation of" bf(r)'(t)) dif t. $
 ]
-Aquatically, if the curve $cal(C)$ is thought of as some permeable membrane,
-then the 2D flux measures the rate the current passes through the membrane.
-Assuming $cal(C)$ is oriented counterclockwise,
-the 2D flux is positive if water is (net) moving out of $cal(C)$; it's negative if it flows in.
+
+#typesig[
+  2D flux is a scalar quantity.
+  It's only defined for a vector field in $RR^2$ piercing a closed loop in $RR^2$.
+  (In principle, I can't think of a reason one couldn't define 2D flux
+  for a _path_ in addition to a loop, but I don't think I've ever seen it used.)
+]
 
 The "$90 degree$ clockwise rotation of $bf(r)'(t)$" is so awkward
 that you can bet people immediately made up a shorthand to sweep it under the rug.
@@ -56,6 +59,13 @@ $ oint_(cal(C)) bf(F) dot bf(n) dif s. $
   However, despite the name, it only points outward if we oriented $cal(C)$ counterclockwise.
   If $cal(C)$ is clockwise it points inwards instead!
 ]
+
+== [TEXT] Aquatic interpretation of 2D flux
+
+Aquatically, if the curve $cal(C)$ is thought of as some permeable membrane,
+then the 2D flux measures the rate the current passes through the membrane.
+Assuming $cal(C)$ is oriented counterclockwise,
+the 2D flux is positive if water is (net) moving out of $cal(C)$; it's negative if it flows in.
 
 == [TEXT] 2D flux is a rotation of 2D work
 
@@ -100,6 +110,17 @@ so let me just put everything in one place for sanity's sake:
     = underbrace(iint_(cal(R)) ((partial p) / (partial x) + (partial q) / (partial y)) dif A,
       = iint_(cal(R)) nabla dot bf(F) dif A). $
 ]
+
+#warning(title: [Warning: There's no FTC for flux])[
+  2D flux is conspicuously missing from our poster in @fig-int-chart-stokes.
+  Through this section, we were able to complete an analogy to get one Stokes result
+  by translating 2D flux into 2D work and then quoting Green's theorem.
+  However, as far as I can tell there isn't an analog of FTC that can be made this way.
+  So actually one good thing about the notation $bf(n) dif s$ is that
+  the presence of $dif s$ is a good reminder that there's no FTC result.
+  In other words, 2D flux is missing one red arrow compared to 2D work.
+]
+
 
 == [RECIPE] Computing 2D flux
 

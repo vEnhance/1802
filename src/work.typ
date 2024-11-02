@@ -134,8 +134,8 @@ Let's show some examples of how to calculate this in practice.
     To simplify these trig expressions, we use the fact that
     $ sin^2 t = (1 - cos 2 t) / (2) , quad cos^2 t = (1 + cos 2 t) / (2) . $
     Substitute these into the integral:
-    $ int_(t=0)^pi [- 2 dot (1 - cos 2 t) / (2) + 3 dot (1 + cos 2 t) / (2)] dif t \
-    &= int_(t=0)^pi [- (1 - cos 2 t) + 3 / 2 (1 + cos 2 t)] dif t \
+    $ int_(t=0)^pi [- 2 dot (1 - cos 2 t) / (2) + 3 dot (1 + cos 2 t) / (2)] dif t
+    = int_(t=0)^pi [- (1 - cos 2 t) + 3 / 2 (1 + cos 2 t)] dif t \
     &= int_(t=0)^pi [1 / 2 + 5 / 2 cos 2 t] dif t. $
     The term $int_(t=0)^pi cos(2t) dif t$ is zero by symmetry, so the final integral is $pi/2$.
 
@@ -402,7 +402,7 @@ Here are a few.
 ]
 
 #sample[
-  Evaluate the line integral $ oint_(cal(C)) (y dif x - x dif y) $,
+  Evaluate the line integral $ oint_(cal(C)) (y dif x - x dif y) $
   where $cal(C)$ is the triangle with vertices at $(0 , 0)$, $(1 , 0)$, and
   $(0 , 1)$, oriented counterclockwise.
 ]

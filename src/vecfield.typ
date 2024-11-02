@@ -308,7 +308,7 @@ which is the 18.01 fundamental theorem of calculus),
 because there are several undefined terms.
 Instead, treat this as a template for all the theorem statements you are going to learn soon:
 #idea[
-  Every red arrow has an associated Stokes result.
+  Every red arrow in the poster @fig-int-chart-stokes has an associated Stokes result.
 ]
 Know this going in to each of the concepts to follow.
 
