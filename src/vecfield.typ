@@ -86,7 +86,12 @@ Let's put these examples into aquatic terms.
   the ball moves downstream.
 ]
 
-#todo[draw a picture of a river with a mountain]
+#figure(
+  image("media/waterfall.jpg", width: auto),
+  caption: [A river flowing from the base of a waterfall.
+    Black arrows point along the direction of the gradient.],
+)
+
 
 #example(title: [Example of a non-conservative vector field: a whirlpool])[
   Now imagine instead you have a whirlpool.
@@ -101,7 +106,11 @@ Let's put these examples into aquatic terms.
   That's an example of a non-conservative vector field.
 ]
 
-#todo[draw a picture of a whirlpool]
+#figure(
+  image("media/whirlpool.jpg", width: auto),
+  caption: [A whirlpool. Round and round we go. Not a conservative vector field.],
+)
+
 
 == [TEXT] Preview of integration over vector fields
 
@@ -160,14 +169,16 @@ This is summarized in @table-purples.
     align: left,
     table.header([], [For scalar fields $f : RR^n -> RR$], [For vector fields $bf(F): RR^n -> RR^n$]),
     [*18.01 integral*], [✅ Used all the time], [❌ Never used in 18.02],
-    [*Line integral*], [🔵 Only for arc length and mass], [✅ Used all the time (work)],
+    [*Line integral*], [🔵 Only for arc length], [✅ Used all the time (work)],
     [*Double/Area integral*], [✅ Used all the time], [❌ Never used in 18.02],
-    [*Surface integral*], [🔵 Only for surface area and mass], [✅ Used all the time (flux)],
+    [*Surface integral*], [🔵 Usually only for surface area], [✅ Used all the time (flux)],
     [*Triple/Volume integral*], [✅ Used all the time], [❌ Never used in 18.02],
   ),
   caption: [What the various kinds of integrals are used for.
     The integrals with ❌ markers never appear in 18.02,
-    so they don't appear in the chart @fig-int-chart-stokes either.],
+    so they don't appear in the chart @fig-int-chart-stokes either.
+    (In 18.02 it could happen that line and surface integrals are used for scalar fields
+    if you need mass of a wire or metal plate, but that's quite rare I think.)],
   kind: table
 ) <table-purples>
 
@@ -232,7 +243,7 @@ in vague non-precise terms (we'll make precise later), for each of these six red
   $ f(Q) - f(P) = int_("start time")^("stop time") nabla f(bf(r)(t)) dot bf(r)'(t) dif t. $
   The right-hand side is the work done by $nabla f$ on the path $bf(r)$.
 
-  If you use shorthand where let $cal(C)$ be the curve formed by $bf(r)$,
+  If you use shorthand where $cal(C)$ is the curve formed by $bf(r)$,
   this could be rewritten as
   $ f(Q) - f(P) = int_(cal(C)) nabla f dot dif bf(r). $
 
@@ -255,7 +266,7 @@ in vague non-precise terms (we'll make precise later), for each of these six red
     = iint_(cal(R)) ((partial q) / (partial x) - (partial p) / (partial y)) dif A. $
 
   Of all the results here, I think Green's theorem is the most unnatural one.
-  (Poonen's notes deliberately do Green's theorem last, a decision I like.)
+  (Poonen's notes cover Green's theorem last, a decision I like.)
   There's a second form of Green's theorem I'll show you when I get to it.
   However, ironically the 3-D red arrows make more sense than the 2-D red arrows.
 
@@ -295,8 +306,10 @@ in vague non-precise terms (we'll make precise later), for each of these six red
 Again, these bullets will not make sense to you yet (except the first one,
 which is the 18.01 fundamental theorem of calculus),
 because there are several undefined terms.
-Instead, treat this as a template for all the theorem statements you are going to learn soon.
-*Every red arrow has an associated Stokes' theorem*.
+Instead, treat this as a template for all the theorem statements you are going to learn soon:
+#idea[
+  Every red arrow has an associated Stokes result.
+]
 Know this going in to each of the concepts to follow.
 
 == [TEXT] Stay determined
