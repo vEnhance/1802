@@ -376,6 +376,14 @@ If you choose $f = 1$ you get area.
   and that was for good reason.)
 ]
 
+#tip[
+  You can and will use the recipe the other way too:
+  suppose you're doing some problem and you end up with $iint_(cal(R)) dif x dif y$
+  where $cal(R)$ is the circle $x^2 + y^2 <= 1$.
+  Don't go through the trouble of actually calculating the integral:
+  it's the area of a circle with radius $1$, which is just $pi$!
+]
+
 #sample[
   Consider the region $cal(R)$ we just described,
   the set of points between bounded between $y-x=2$ and $y=x^2$.
