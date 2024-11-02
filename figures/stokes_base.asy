@@ -34,8 +34,8 @@ draw(axis3, (-w/1.6,-w/1.6)--(w/1.6,w/1.6), grey, Arrows(TeXHead));
 
 transform t;
 
-/* 0-D integrals */
-label("\fbox{0-D integral}", (1,9.5), deepblue);
+/* 0D integrals */
+label("\fbox{0D integral}", (1,9.5), deepblue);
 string s = "Eval $f$ at point";
 
 t = shift(1,8);
@@ -53,8 +53,8 @@ add(t*axis3);
 dot("$f(x_0, y_0, z_0)$", t*(-w/3,-2*w/3), dir(-75));
 label(s, t*dir(90), deepgreen);
 
-/* 1-D integrals */
-label("\fbox{1-D integral}", (4,9.5), deepblue);
+/* 1D integrals */
+label("\fbox{1D integral}", (4,9.5), deepblue);
 
 t = shift(4,8);
 add(t*axis1);
@@ -80,8 +80,8 @@ dot(t*(-0.8*w, -0.3*w));
 dot(t*(0.6*w, 0.3*w));
 label("Line integral", t*dir(90), deepgreen);
 
-/* 2-D integrals */
-label("\fbox{2-D integral}", (8,9.5), deepblue);
+/* 2D integrals */
+label("\fbox{2D integral}", (8,9.5), deepblue);
 
 t = shift(8,3.5);
 path square = box((-0.6*w,-0.6*w), (0.6*w,0.6*w));
@@ -97,8 +97,8 @@ draw("$\int\limits_{u_0}^{u_1} \int\limits_{v_0}^{v_1} f(\mathbf r(u,v)) |\pdv{\
 label("Surface integral", t*dir(90), deepgreen);
 add(t*axis3);
 
-/* 3-D integrals */
-label("\fbox{3-D integral}", (12.5,9.5), deepblue);
+/* 3D integrals */
+label("\fbox{3D integral}", (12.5,9.5), deepblue);
 
 t = shift(12.5,0);
 pair A = (-0.4, -0.25);
@@ -150,7 +150,7 @@ draw("$\frac{df}{dx}$", (2,8)--(3,8), red, EndArrow);
 draw((1,5)--(1,5.5)--(3,5.5), red, EndArrow);
 label("$\nabla f$ (grad)", (1,5.5), dir(180), red);
 draw((5,5.5)--(8,5.5)--(8,5), red, EndArrow);
-label("$\pdv{q}{x}-\pdv{p}{y}$ (2d scalar curl)", (8,5.5), dir(0), red);
+label("$\pdv{q}{x}-\pdv{p}{y}$ (2D scalar curl)", (8,5.5), dir(0), red);
 
 draw((1,-1.5)--(1,-3)--(3,-3), red, EndArrow);
 label("$\nabla f$ (grad)", (1,-2.25), dir(180), red);

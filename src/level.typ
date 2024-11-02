@@ -196,7 +196,7 @@ by plotting all the points in $RR^3$ for which $f(x,y,z) = c$.
 == [EXER] Exercises
 
 #exer[
-  Draw 2-D level curves for some values for the following functions:
+  Draw 2D level curves for some values for the following functions:
 
   - $f(x,y) = 5 x + y$
   - $f(x,y) = x y$

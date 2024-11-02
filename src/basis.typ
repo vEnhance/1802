@@ -61,7 +61,7 @@ Without "slope", you cannot notice these dependences by sight for $n >= 3$, so u
 - *1-D case*: Are all the vectors pointing the same direction (i.e. multiples of each other)?
   If so, and there is at least one nonzero vector,
   the span is a *line* in the common direction of the vectors.
-- *2-D case*: Are there two (nonzero) vectors not pointing in the same direction
+- *2D case*: Are there two (nonzero) vectors not pointing in the same direction
   (equivalently, are linearly independent)? If so, the span is *all of $RR^2$*.
 ]
 
@@ -78,10 +78,10 @@ Without "slope", you cannot notice these dependences by sight for $n >= 3$, so u
   - *1-D case*: Are all the vectors pointing the same direction (i.e. multiples of each other)?
     If so, and there is at least one nonzero vector,
     the span is a *line* in the common direction of the vectors.
-  - *2-D case*: Is there more than one direction present,
+  - *2D case*: Is there more than one direction present,
     but you can't find three vectors which are linearly independent?
     If so, the span is a *plane*.
-  - *3-D case*: Are there three vectors among them which are linearly independent from each other?
+  - *3D case*: Are there three vectors among them which are linearly independent from each other?
     If so, the span is *all of $RR^3$*.
 ]
 - Example: the span of the vectors $vec(3,6,9)$, $vec(10,20,30)$ and $vec(100,200,300)$

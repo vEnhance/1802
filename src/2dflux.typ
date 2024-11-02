@@ -101,9 +101,6 @@ so let me just put everything in one place for sanity's sake:
       = iint_(cal(R)) nabla dot bf(F) dif A). $
 ]
 
-
-== [TEXT] 3D flux
-
-#todo[This entire section is to be written]
+== [RECIPE] Computing 2D flux
 
 == [EXER] Exercises

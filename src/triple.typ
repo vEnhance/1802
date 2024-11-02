@@ -40,7 +40,7 @@ except with two variables rather than three.
     ). $
 - Volume is $ op("Vol")(cal(R)) := iiint_(cal(R)) dif x dif y dif z. $
   You can take this as a _definition_ of volume for this class.
-- If $rho : cal(R) -> RR$ is a density function for a 3-D space, then
+- If $rho : cal(R) -> RR$ is a density function for a 3D space, then
   $ op("Mass")(cal(R)) := iiint_(cal(R)) rho(x,y,z) dif x dif y dif z $ is the total mass.
 - The center of mass is given by three coordinates now:
   $ (

@@ -83,8 +83,8 @@ dot(t*(-0.8*w, -0.3*w));
 dot(t*(0.6*w, 0.3*w));
 label("Line integral", t*dir(90), deepgreen);
 
-/* 2-D integrals */
-label("\fbox{2-D integral}", (8,9), deepblue);
+/* 2D integrals */
+label("\fbox{2D integral}", (8,9), deepblue);
 
 t = shift(8,3.5);
 path square = box((-0.6*w,-0.6*w), (0.6*w,0.6*w));
@@ -100,8 +100,8 @@ draw("$\int\limits_{u_0}^{u_1} \int\limits_{v_0}^{v_1} f(\mathbf r(u,v)) |\pdv{\
 label("Surface integral", t*dir(90), deepgreen);
 add(t*axis3);
 
-/* 3-D integrals */
-label("\fbox{3-D integral}", (12.5,9), deepblue);
+/* 3D integrals */
+label("\fbox{3D integral}", (12.5,9), deepblue);
 
 t = shift(12.5,0);
 pair A = (-0.4, -0.25);

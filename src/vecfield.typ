@@ -143,12 +143,12 @@ We'll define them all over the next few sections, so just a few words now.
 
 === The three purple pictures
 
-There are *three new pictures in purple*: they are *work* (for 1-D case) and *flux* (2-D case).
+There are *three new pictures in purple*: they are *work* (for 1D case) and *flux* (2D case).
 Basically, these are the only two situations in which we'll be integrating over a vector field:
 
 - either we have a path along a vector field and want to measure the _work_
   of the vector field _along_ that path (in the physics sense),
-- or we have a surface in a 3-D vector field and want to measure the _flux_
+- or we have a surface in a 3D vector field and want to measure the _flux_
   of the vector field _through_ the surface.
 
 These terms will be defined next section.
@@ -257,7 +257,7 @@ in vague non-precise terms (we'll make precise later), for each of these six red
   $ int_(t="start time")^("stop time") bf(F)(bf(r)(t)) dot bf(r)'(t) dif t
     = iint_(cal(R)) ((partial q) / (partial x) - (partial p) / (partial y)) dif x dif y. $
   The weird expression $(partial q) / (partial x) - (partial p) / (partial y)$
-  in the right-hand side is called the 2-d scalar curl, but we haven't defined this term yet.
+  in the right-hand side is called the 2D scalar curl, but we haven't defined this term yet.
 
   If you use shorthand as in @table-shorthand, this can be simplified.
   Let $cal(C)$ be the curve formed by $bf(r)$,
@@ -268,7 +268,7 @@ in vague non-precise terms (we'll make precise later), for each of these six red
   Of all the results here, I think Green's theorem is the most unnatural one.
   (Poonen's notes cover Green's theorem last, a decision I like.)
   There's a second form of Green's theorem I'll show you when I get to it.
-  However, ironically the 3-D red arrows make more sense than the 2-D red arrows.
+  However, ironically the 3D red arrows make more sense than the 2D red arrows.
 
 / Line integral $->$ surface integral:
   Suppose now $bf(F) : RR^3 -> RR^3$ is a vector field.

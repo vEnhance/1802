@@ -3,7 +3,7 @@
 = Change of variables <sec-chvar>
 
 We'll do just two variables for now;
-the 3-D situation is exactly the same and we cover it later.
+the 3D situation is exactly the same and we cover it later.
 
 == [TEXT] Interval notation
 

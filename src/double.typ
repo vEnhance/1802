@@ -99,7 +99,7 @@ Here's another example.
 
 == [RECIPE] Doing $x y$-integration without a rectangle <sec-convert-x-y-integration>
 
-In general, a lot of 2-D regions $cal(R)$ can still be done with $x y$ integration,
+In general, a lot of 2D regions $cal(R)$ can still be done with $x y$ integration,
 even when they aren't rectangles.
 In that case, the integral is notated
 $ iint_(cal(R)) f(x,y) dif x dif y := "integral of " f " over " cal(R) $
