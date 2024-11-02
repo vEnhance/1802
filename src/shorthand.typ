@@ -48,7 +48,7 @@ to say the area integral of the unit disk is $pi$.
 But if you do this, be honest with yourself about whether you trust yourself with the shorthand:
 #quote[A bad workman blames his tools.]
 
-== [TEXT] ... and five more shorthands
+== [TEXT] ... and six more shorthands
 
 When we talk about vector fields or even just arc length, there are more new types of integrals.
 And people have all sorts of analogous shorthands.
@@ -61,7 +61,7 @@ I can't imagine how annoying this is to someone learning the subject for the fir
   table(
     columns: 4,
     align: left,
-    table.header([Shorthand], [Name], [Used in], [Abbreviation for]),
+    table.header([Symbol], [Name], [Used in], [Abbreviation for]),
     [$dif A$], [Area], [Double/area integrals],
       [$dif x dif y$ (in polar, replaced immediately with $r dif r dif theta$)],
     [$dif s$], [Arc length], [Scalar-field line integrals \ (in @sec-scalar-field-ints)],
@@ -74,6 +74,8 @@ I can't imagine how annoying this is to someone learning the subject for the fir
       [$(partial bf(r))/(partial u) times (partial bf(r))/(partial v) dif u dif v$ \ where $bf(r)(u,v)$ parametrizes a surface],
     [$dif V$], [Volume], [Triple/volume integrals \ (in @sec-triple)],
       [$dif x dif y dif z$],
+    [$bf(n) dif s$], [Outward normal], [Only 2D flux (in @sec-flux)],
+      [$(90 degree "clockwise rotation of" bf(r)'(t)) dif t$]
   ),
   caption: [A bunch of shorthands you'll meet later.
     Note that pretty much there is one shorthand for each kind of integral in @fig-int-chart-triangle.
