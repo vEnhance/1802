@@ -175,9 +175,21 @@ Here is a brief overview of what happens in these parts
   which gets airtime in virtually every kind of question you'll see.
   This is the first serious multivariable calculus usage.
 
-/ Golf and Hotel: TBD.
+/ Golf: *Integrals of multivariable functions* $f : RR^n -> RR$.
+  The double and triple integrals make their first appearances here.
 
-- #todo[finish writing this]
+/ Hotel: *Integrals of vector fields* $bf(F) : RR^n -> RR^n$;
+  that is, work and flux.
+  The famous grad, div, and curl are introduced here,
+  together with the generalized Stokes' theorem that ties them all together.
+  This is the iconic part of multivariable calculus
+  (kind of like how France is associated with the Eiffel tower, say).
+
+/ India: Exercises covering all the earlier parts.
+
+/ Juliett: Solutions to exercises from the text.
+
+/ Kilo: Appendix of odds and ends such as excessively long digressions.
 
 (The words Alfa, Bravo, Charlie, etc.~are from the
 #link("https://w.wiki/4ur")[NATO phonetic alphabet]
