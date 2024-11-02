@@ -18,13 +18,9 @@ ChatGPT can make mistakes, so if you spot anything that's wrong, flag me to ask.
 
 \tableofcontents
 
-
-
 \newpage
 
 \section{Solution}
-
-\newpage
 
 \subsection{(a)}
 
@@ -65,75 +61,47 @@ Therefore, we can expect that the line integral $\displaystyle \int_C x \, dx - 
 
 \newpage
 
-\subsection{(c)}
+\subsection{Corrected Calculation for Part (c)}
 
-We will compute the line integral $\displaystyle \int_C x \, dx - y \, dy$ using a parametrization of $C$.
+Re-parametrize $C$ to match the orientation from $(-1, 0)$ to $(0, -1)$ (clockwise):
 
-Since $C$ is the quarter-circle from $(-1, 0)$ to $(0, -1)$ in the third quadrant, traversed clockwise, we can parametrize it as:
-
-Let $\theta$ range from $\pi$ to $\tfrac{3\pi}{2}$ \textbf{decreasing}:
+Let $\theta$ go from $\pi$ to $\tfrac{3\pi}{2}$ \textbf{decreasing}:
 
 \[
-x = \cos \theta, \quad y = \sin \theta, \quad \theta \in \left[ \tfrac{3\pi}{2}, \pi \right]
+\theta = \pi - t, \quad t \in [0, \tfrac{\pi}{2}]
 \]
 
-However, to maintain the orientation from $(-1, 0)$ to $(0, -1)$ in the clockwise direction, we'll let $\theta$ go from $\tfrac{3\pi}{2}$ to $\pi$.
+Then:
+
+\[
+x = \cos(\theta) = \cos(\pi - t) = -\cos t, \quad y = \sin(\theta) = \sin(\pi - t) = \sin t
+\]
 
 Compute $dx$ and $dy$:
 
 \[
-dx = -\sin \theta \, d\theta, \quad dy = \cos \theta \, d\theta
+dx = \sin t \, dt, \quad dy = \cos t \, dt
 \]
 
 Compute the integral:
 
 \[
-\int_C x \, dx - y \, dy = \int_{\theta=\tfrac{3\pi}{2}}^{\pi} \left( x \, dx - y \, dy \right)
+\int_C x \, dx - y \, dy = \int_{t=0}^{\tfrac{\pi}{2}} \left( -\cos t \cdot \sin t \, dt - \sin t \cdot \cos t \, dt \right) = -2 \int_{0}^{\tfrac{\pi}{2}} \cos t \sin t \, dt
 \]
 
-Substitute $x$, $dx$, $y$, and $dy$:
+Simplify using $\cos t \sin t = \tfrac{1}{2} \sin 2t$:
 
 \[
-= \int_{\tfrac{3\pi}{2}}^{\pi} \left( \cos \theta \cdot \left( -\sin \theta \, d\theta \right) - \sin \theta \cdot \cos \theta \, d\theta \right)
-\]
-
-Simplify:
-
-\[
-= \int_{\tfrac{3\pi}{2}}^{\pi} \left( -\cos \theta \sin \theta - \sin \theta \cos \theta \right) d\theta = -2 \int_{\tfrac{3\pi}{2}}^{\pi} \cos \theta \sin \theta \, d\theta
-\]
-
-Since the limits are from $\tfrac{3\pi}{2}$ to $\pi$, we can change the limits and the sign:
-
-\[
--2 \int_{\tfrac{3\pi}{2}}^{\pi} \cos \theta \sin \theta \, d\theta = -2 \left( - \int_{\pi}^{\tfrac{3\pi}{2}} \cos \theta \sin \theta \, d\theta \right) = 2 \int_{\pi}^{\tfrac{3\pi}{2}} \cos \theta \sin \theta \, d\theta
-\]
-
-Use the identity $\cos \theta \sin \theta = \tfrac{1}{2} \sin 2\theta$:
-
-\[
-2 \int_{\pi}^{\tfrac{3\pi}{2}} \left( \tfrac{1}{2} \sin 2\theta \right) d\theta = \int_{\pi}^{\tfrac{3\pi}{2}} \sin 2\theta \, d\theta
+-2 \times \tfrac{1}{2} \int_{0}^{\tfrac{\pi}{2}} \sin 2t \, dt = -\int_{0}^{\tfrac{\pi}{2}} \sin 2t \, dt
 \]
 
 Integrate:
 
 \[
-\int_{\pi}^{\tfrac{3\pi}{2}} \sin 2\theta \, d\theta = -\tfrac{1}{2} \cos 2\theta \Big|_{\pi}^{\tfrac{3\pi}{2}} = -\tfrac{1}{2} \left( \cos 3\pi - \cos 2\pi \right)
+-\left( -\tfrac{1}{2} \cos 2t \right) \Big|_{0}^{\tfrac{\pi}{2}} = \tfrac{1}{2} \left( \cos \pi - \cos 0 \right) = \tfrac{1}{2} \left( -1 - 1 \right) = -1
 \]
 
-Compute the values:
-
-\[
-\cos 3\pi = -1, \quad \cos 2\pi = 1
-\]
-
-Therefore:
-
-\[
--\tfrac{1}{2} \left( -1 - 1 \right) = -\tfrac{1}{2} (-2) = 1
-\]
-
-Thus, the value of the integral is $\boxed{1}$.
+Thus, the value of the integral is $\boxed{-1}$, consistent with the result from part (d).
 
 \newpage
 
@@ -193,79 +161,7 @@ Therefore:
 
 \newpage
 
-\subsection{Explanation of Discrepancy}
-
-There appears to be a discrepancy between the results of part (c) and part (d). In part (c), we obtained $1$, while in part (d), we obtained $-1$.
-
-This discrepancy arises from the orientation of the path $C$:
-
-- In part (c), our parametrization implied that the path was traversed from $\theta = \tfrac{3\pi}{2}$ to $\theta = \pi$, which reverses the limits of integration and effectively changes the sign of the integral.
-- To correct this, we should ensure that the parametrization aligns with the orientation specified in the problem.
-
-\newpage
-
-\subsection{Corrected Calculation for Part (c)}
-
-Re-parametrize $C$ to match the orientation from $(-1, 0)$ to $(0, -1)$ (clockwise):
-
-Let $\theta$ go from $\pi$ to $\tfrac{3\pi}{2}$ \textbf{decreasing}:
-
-\[
-\theta = \pi - t, \quad t \in [0, \tfrac{\pi}{2}]
-\]
-
-Then:
-
-\[
-x = \cos(\theta) = \cos(\pi - t) = -\cos t, \quad y = \sin(\theta) = \sin(\pi - t) = \sin t
-\]
-
-Compute $dx$ and $dy$:
-
-\[
-dx = \sin t \, dt, \quad dy = \cos t \, dt
-\]
-
-Compute the integral:
-
-\[
-\int_C x \, dx - y \, dy = \int_{t=0}^{\tfrac{\pi}{2}} \left( -\cos t \cdot \sin t \, dt - \sin t \cdot \cos t \, dt \right) = -2 \int_{0}^{\tfrac{\pi}{2}} \cos t \sin t \, dt
-\]
-
-Simplify using $\cos t \sin t = \tfrac{1}{2} \sin 2t$:
-
-\[
--2 \times \tfrac{1}{2} \int_{0}^{\tfrac{\pi}{2}} \sin 2t \, dt = -\int_{0}^{\tfrac{\pi}{2}} \sin 2t \, dt
-\]
-
-Integrate:
-
-\[
--\left( -\tfrac{1}{2} \cos 2t \right) \Big|_{0}^{\tfrac{\pi}{2}} = \tfrac{1}{2} \left( \cos \pi - \cos 0 \right) = \tfrac{1}{2} \left( -1 - 1 \right) = -1
-\]
-
-Thus, the value of the integral is $\boxed{-1}$, consistent with the result from part (d).
-
-\newpage
-
-\subsection{Conclusion}
-
-After correcting for the orientation in part (c), we find that:
-
-\[
-\int_C x \, dx - y \, dy = -1
-\]
-
-This matches the result obtained using the fundamental theorem of line integrals in part (d). Therefore, the line integral evaluates to $-1$.
-
-
-
-
-\newpage
-
 \section{Solution}
-
-\newpage
 
 \subsection{(a)}
 
