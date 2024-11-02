@@ -34,11 +34,11 @@
 = 18.02 Mock Midterm 3 Questions
 
 / 1.:
-  The butterfly from last time is fluttering in the $x y$ plane
-  with position $bf(r)(t) = angle.l cos(t), cos(t) angle.r$.
-  A wind is given by the vector field
-  $bf(F)(x,y) = angle.l x^3, y^5 angle.r$.
-  Compute the line integral $int_(t=0)^(2 pi) bf(F) dot dif bf(r)$.
+  Another butterfly is fluttering in the $x y$ plane
+  with position $bf(r)(t) = angle.l sin(t), sin(t) angle.r$.
+  Let $cal(C)$ denote its trajectory between $0 <= t <= 2pi$.
+  Compute $int_(cal(C)) (x^3 dif x + y^3 dif y)$
+  and $int_(cal(C)) (y dif x - x dif y)$.
 
 / 2.:
   Compute the center of mass of the region where $y >= 0$, $y^2 >= 3x^2$, and $x^2+y^2 <= 9$.
@@ -75,17 +75,20 @@ May contain typos/errors/gaps. Still working on it.
 
 == Solution to butterfly reprise
 
-Note that because $ partial / (partial y) (x^3) = 0 = partial / (partial x) (y^5), $
-it follows $bf(F)$ is conservative.
-Since the butterfly has the same starting and ending point,
-the total work must be $ int_(cal(C)) bf(F) dot dif bf(r) = 0. $
+The answer is $0$ regardless of the vector field $bf(F)$.
+Two ways to see this are:
+- This follows by Green's theorem, because the trajectory $bf(r)$
+  cuts a degenerate parallelogram of area zero.
+- The butterfly is tracing its own path in reverse, so the part from $0 <= t <= pi/2$
+  cancels $pi/2 <= t <= pi$
+  while the part from $pi <= t <= 3 pi / 2$ cancels $3 pi / 2 <= t <= 2 pi$.
 
 #remark[
-  Even if $bf(F)$ was not conservative, the answer would still be zero.
-  This follows by Green's theorem, because the trajectory $bf(r)$
-  cuts a degenerate parallelogram of area zero.
+  For the first integral, the vector field $bf(F) = vec(x^3, y^3)$ is conservative,
+  so the fundamental theorem of calculus also implies the answer is $0$.
+  However, the second integral is not conservative
+  so this approach does not work anymore.
 ]
-
 
 #pagebreak()
 
