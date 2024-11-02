@@ -2,7 +2,7 @@
 
 = Work and conservative vector fields <sec-work>
 
-== [TEXT] Work
+== [TEXT] Work <sec-work-def>
 
 We now define the leftmost purple pictures in our poster @fig-int-chart-stokes.
 When we have a vector field $bf(F) : RR^n -> RR^n$
@@ -50,7 +50,6 @@ that hides both $bf(F)$ and $bf(r)$ altogether.
   $ int_(cal(C)) (p dif x + q dif y + r dif z). $
 ]
 
-
 If you want to visualize the integral,
 you can imagine walking along the path cut out by $bf(r)$.
 At each point, you draw the tangent vector $bf(r)'(t)$ to the path,
@@ -89,7 +88,7 @@ if we choose to hide the parametrization $bf(r)(t)$ from the notation.)
   that makes the calculation easiest for you.
 ]
 
-== [RECIPE] Computing line integrals by hand
+== [RECIPE] Computing line integrals by hand <sec-work-manual-recipe>
 
 #recipe(title: [Recipe for computing line integrals by hand])[
   1. Pick a parametrization $bf(r) : colon RR -> RR^n$.
@@ -299,7 +298,8 @@ It turns out that if $bf(F)$ is defined everywhere, then the reverse is true too
 that is, we can use $nabla times bf(F)$ as a criteria for checking conservative fields.
 
 #memo(title: [Memorize: Conservative $<==>$ $nabla times bf(F) = bf(0)$])[
-  Assume here the vector field is continuously differentiable and defined everywhere.
+  Assume here the vector field is continuously differentiable
+  and defined everywhere on $RR^2$ or $RR^3$.
   - A vector field $bf(F) : RR^2 -> RR^2$
     given by $bf(F)(x,y) = vec(p(x,y), q(x,y))$
     is conservative if and only if the 2D scalar curl is zero everywhere:
@@ -338,13 +338,13 @@ joining the 2D work integral to an area integral.
     from the poster @fig-int-chart-stokes.],
 )
 
-Here is what it says:
+Here is what it says.
 #memo(title: [Memorize: Green's theorem for converting work to curl])[
   Suppose $cal(C)$ is a closed loop parametrized by $bf(r)(t)$
   that encloses a region $cal(R)$ counterclockwise.
   Then for any vector field $bf(F) = vec(p(x,y), q(x,y))$, conservative or not, we have
-  $ oint_(cal(C)) bf(F) dot dif bf(r) = iint_(cal(R))
-    ((partial q)/(partial x) - (partial p)/(partial y)) dif A. $
+  $ oint_(cal(C)) bf(F) dot dif bf(r) = oint_(cal(C)) (p dif x + q dif y)
+    = iint_(cal(R)) ((partial q)/(partial x) - (partial p)/(partial y)) dif A. $
 ]
 There's a new symbol $oint_(cal(C))$ on the left,
 but it has the same meaning as $int_(cal(C))$.
@@ -371,88 +371,101 @@ Green's theorem gives us a way to short-circuit a bunch of calculations
 that we were doing by hand earlier in the case where our loop is closed.
 Here are a few.
 
-#todo[clean up the notation etc. for the following examples]
+#sample[
+  Calculate the line integral
+  $ oint_(cal(C)) (x^3 - y) dif x + (x + y^3) dif y , $
+  where $cal(C)$ is the circle $x^2 + y^2 = 4$ oriented counterclockwise.
+]
 
-#strong[Example 1:]
+#soln[
+  Let $cal(R)$ denote the region enclosed by $cal(C)$.
+  We use Green's theorem with the vector field
+  $ p (x , y) = x^3 - y , quad q (x , y) = x + y^3 . $
+  Calculate the partial derivatives of $q$ with respect to $x$ and $p$
+  with respect to $y$:
+  $ (partial q) / (partial x) = (partial) / (partial x) (x + y^3) &= 1 ,
+    (partial p) / (partial y) = (partial) / (partial y) (x^3 - y) &= - 1 . $
+  Substitute the partial derivatives into Green’s theorem:
+  $ oint_(cal(C)) p dif x + q dif y
+    = iint_(cal(R)) ((partial q) / (partial x) - (partial p) / (partial y)) dif A = iint_(cal(R)) (1 - (- 1)) dif A = iint_(cal(R)) 2 dif A . $
+  The region $cal(R)$ is the disk defined by $x^2 + y^2 <= 4$,
+  which is a circle of radius $2$, hence with area
+  $ op("Area") (cal(R)) = pi r^2 = pi (2)^2 = 4 pi . $
+  So the answer is $2 dot 4 pi = 8 pi. $
+]
 
-Calculate the line integral
-$integral.cont_C (x^2 - y) dif x + (y^2 - x) dif y$, where $C$ is
-the boundary of the region enclosed by the circle $x^2 + y^2 = 4$,
-oriented counterclockwise.
+#sample[
+  Evaluate the line integral $ oint_(cal(C)) (y dif x - x dif y) $,
+  where $cal(C)$ is the triangle with vertices at $(0 , 0)$, $(1 , 0)$, and
+  $(0 , 1)$, oriented counterclockwise.
+]
+#soln[
+  Let $cal(R)$ denote the interior of the triangle.
+  By Green’s theorem:
+  $ oint_(cal(C)) p dif x + q dif y
+    = iint_(cal(R)) ((partial q) / (partial x) - (partial p) / (partial y)) dif A , $
+  where $P (x , y) = y$ and $Q (x , y) = - x$.
+  Calculate $(partial q) / (partial x)$ and $(partial p) / (partial y)$:
+  $ (partial q) / (partial x) = - 1 , quad (partial p) / (partial y) = 1 . $
+  Hence
+  $ iint_(cal(R)) ((partial q) / (partial x) - (partial p) / (partial y)) dif A = iint_(cal(R)) (- 1 - 1) dif A = iint_(cal(R)) - 2 dif A . $
+  The area of the triangle $cal(R)$ is:
+  $ op("Area")(cal(R)) = 1 / 2 dot upright("base") dot upright("height")
+    = 1 / 2 dot 1 dot 1 = 1 / 2 . $
+  Thus: $ iint_(cal(R)) - 2 dif A = - 2 dot 1 / 2 = - 1 . #qedhere $
+]
 
-#strong[Solution:]
+#sample[
+  Calculate the line integral
+  $ oint_(cal(C)) (x^2 dif y - y^2 dif x) $
+  where $C$ is the boundary of the square with vertices at
+  $(1 , 1)$, $(0, 1)$, $(0, 0)$, and $(1 , 0)$,
+  oriented counterclockwise.
+]
 
-By Green’s theorem, we have:
-$ integral.cont_C P dif x + Q dif y = iint_D ((partial Q) / (partial x) - (partial P) / (partial y)) dif A , $
-where $P (x , y) = x^2 - y$ and $Q (x , y) = y^2 - x$.
+#soln[
+  Let $cal(R)$ denote the interior of the square.
+  By Green’s theorem:
+  $ oint_(cal(C)) p dif x + q dif y = iint_(cal(R)) ((partial q) / (partial x) - (partial p) / (partial y)) dif A , $
+  where $p (x , y) = - y^2$ and $q (x , y) = x^2$.
+  Calculate $(partial q) / (partial x)$ and $(partial p) / (partial y)$:
+  $ (partial q) / (partial x) = 2 x , quad (partial p) / (partial y) = - 2 y . $
+  Substitute these into Green’s theorem:
+  $ iint_(cal(R)) (2 x - (- 2 y)) dif A = iint_(cal(R)) (2 x + 2 y) dif A . $
 
-Calculate $(partial Q) / (partial x)$ and $(partial P) / (partial y)$:
-$ (partial Q) / (partial x) = - 1 , quad (partial P) / (partial y) = - 1 . $
+  Since $cal(R)$ is a square with side length $2$ centered at the origin,
+  integrate over $x$ and $y$ from $0$ to $1$:
+  $ iint_(cal(R)) (2 x + 2 y) dif A
+    = 2 int_(y = 0)^1 int_(x = 0)^1 (x + y) dif x dif y . $
 
-Substitute these into Green’s theorem:
-$ iint_D ((partial Q) / (partial x) - (partial P) / (partial y)) dif A = iint_D (- 1 - (- 1)) dif A = iint_D 0 dif A = 0 . $
+  Evaluate the inner integral with respect to $x$:
+  $ [x^2 / 2 + y x]_(x=0)^1 = y + 1/2. $
 
-Since the integrand is zero, the value of the line integral is:
-$ #box(stroke: black, inset: 3pt, [$ 0 $]) . $
+  Evaluate the integral with respect to $y$:
+  $ 2 int_(y = 0)^1 (y+1/2) dif y = 2. #qedhere $
+]
 
-#strong[Example 2:]
+== [RECAP] Evaluating line integrals
 
-Evaluate the line integral $integral.cont_C (y dif x - x dif y)$,
-where $C$ is the triangle with vertices at $(0 , 0)$, $(1 , 0)$, and
-$(0 , 1)$, oriented counterclockwise.
+While we gave a definition of line integrals with parametrization,
+we then saw right away there are a couple shortcuts,
+namely FTC and Green's theorem (in 2D) in certain cases.
+So with this, we can present a recipe that condenses these together.
 
-#strong[Solution:]
+#recipe(title: [Recipe for computing line integrals in general])[
+  Suppose we want to evaluate $ int_(cal(C)) bf(F) dot dif bf(r)$.
 
-By Green’s theorem:
-$ integral.cont_C P dif x + Q dif y = iint_D ((partial Q) / (partial x) - (partial P) / (partial y)) dif A , $
-where $P (x , y) = y$ and $Q (x , y) = - x$.
-
-Calculate $(partial Q) / (partial x)$ and $(partial P) / (partial y)$:
-$ (partial Q) / (partial x) = - 1 , quad (partial P) / (partial y) = 1 . $
-
-Substitute these into Green’s theorem:
-$ iint_D ((partial Q) / (partial x) - (partial P) / (partial y)) dif A = iint_D (- 1 - 1) dif A = iint_D - 2 dif A . $
-
-The area of the triangle $D$ is:
-$ upright("Area") = 1 / 2 dot upright("base") dot upright("height") = 1 / 2 dot 1 dot 1 = 1 / 2 . $
-
-Thus: $ iint_D - 2 dif A = - 2 dot 1 / 2 = - 1 . $
-
-The value of the line integral is:
-$ #box(stroke: black, inset: 3pt, [$ - 1 $]) . $
-
-#strong[Example 3:]
-
-Calculate the line integral
-$integral.cont_C (x^2 dif y - y^2 dif x)$, where $C$ is the
-boundary of the square with vertices at $(1 , 1)$, $(- 1 , 1)$,
-$(- 1 , - 1)$, and $(1 , - 1)$, oriented counterclockwise.
-
-#strong[Solution:]
-
-By Green’s theorem:
-$ integral.cont_C P dif x + Q dif y = iint_D ((partial Q) / (partial x) - (partial P) / (partial y)) dif A , $
-where $P (x , y) = - y^2$ and $Q (x , y) = x^2$.
-
-Calculate $(partial Q) / (partial x)$ and $(partial P) / (partial y)$:
-$ (partial Q) / (partial x) = 2 x , quad (partial P) / (partial y) = - 2 y . $
-
-Substitute these into Green’s theorem:
-$ iint_D (2 x - (- 2 y)) dif A = iint_D (2 x + 2 y) dif A . $
-
-Since $D$ is a square with side length $2$ centered at the origin,
-integrate over $x$ and $y$ from $- 1$ to $1$:
-$ iint_D (2 x + 2 y) dif A = 2 int_(- 1)^1 int_(- 1)^1 (x + y) dif x dif y . $
-
-Evaluate the inner integral with respect to $x$:
-$ 2 int_(- 1)^1 [x^2 / 2 + y x]_(- 1)^1 dif y = 2 int_(- 1)^1 [(1 / 2 + y) - (1 / 2 - y)] dif y = 2 int_(- 1)^1 2 y dif y . $
-
-Evaluate the integral with respect to $y$:
-$ 4 int_(- 1)^1 y dif y = 4 dot 0 = 0 . $
-
-The value of the line integral is:
-$ #box(stroke: black, inset: 3pt, [$ 0 $]) . $
-
+  1. First, check if the vector field is conservative
+    by seeing if the curl is zero.
+    - If so, don't bother parametrizing $cal(C)$.
+      Find a potential function $f$ for the vector field $bf(F)$
+      and use the FTC as a shortcut.
+  2. Second, if the line integral is in $RR^2$, check if $cal(C)$ is a closed loop.
+    - If so, see if Green's theorem gives you an easy shortcut:
+      $ oint_(cal(C)) (p dif x + q dif y) = iint_(cal(R)) ((partial q)/(partial x) - (partial p)/(partial y)) dif A. $
+  3. If both of these fail,
+    fall back the parametrization recipe described in <sec-work-manual-recipe>.
+]
 
 
 == [EXER] Exercises
@@ -461,4 +474,18 @@ $ #box(stroke: black, inset: 3pt, [$ 0 $]) . $
   Is the vector field
   $ bf(F)(x,y) = vec(sin(e^x) + cos(e^x), arctan(y)) $
   conservative?
+]
+
+#exer[
+  Calculate the line integral
+  $ oint_(cal(C)) (x^2 - y) dif x + (y^2 - x) dif y $
+  where $cal(C)$ is the boundary of the region enclosed by the circle $x^2 + y^2 = 4$,
+  oriented counterclockwise.
+]
+#soln[
+  The vector field is conservative, because
+  $ partial / (partial y) (x^2 - y) = -1 = partial / (partial x) (y^2 - x). $
+  So the answer is $0$.
+  (If you didn't notice this at first and tried to use Green's theorem,
+  you should notice at the moment where the curl turns out to $0$.)
 ]
