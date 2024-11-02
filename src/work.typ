@@ -20,7 +20,7 @@ as a path $bf(r) : RR -> RR^n$ through it, we can define the *work* on it.
 ]
 #typesig[
   The work is a scalar quantity (there is a dot product inside the integrand,
-  so it returns a number.)
+  so it returns a number).
 ]
 
 This is commonly abbreviated with shorthand in two ways.
@@ -36,6 +36,20 @@ $ int_(cal(C)) bf(F) dot dif bf(r). $
 Mercifully, the shorthand still writes a dot product in the symbols, to remind you that, yes,
 you should be evaluating a dot product when you compute this.
 I can't imagine how much confusion it would cause if the shorthand didn't have the dot product.
+
+Since that's _still_ not short enough, the following shorthand is also possible
+that hides both $bf(F)$ and $bf(r)$ altogether.
+#definition(title: [Definition: More shorthand for line integrals])[
+  In $RR^2$, suppose $bf(F)(x,y) = vec(p(x,y), q(x,y))$.
+  Then the work integral can further be abbreviated as
+  $ int_(cal(C)) (p dif x + q dif y). $
+
+  Analogously, suppose we have a vector field
+  $bf(F)(x,y,z) = vec(p(x,y,z), q(x,y,z), r(x,y,z))$ for $RR^3$.
+  Then the work integral can further be abbreviated as
+  $ int_(cal(C)) (p dif x + q dif y + r dif z). $
+]
+
 
 If you want to visualize the integral,
 you can imagine walking along the path cut out by $bf(r)$.
@@ -58,7 +72,7 @@ directed from the point $(1,0)$ to $(-1,0)$.
 of which way the integral moves along $cal(C)$,
 if we choose to hide the parametrization $bf(r)(t)$ from the notation.)
 
-#tip(title: [The work integral doesn't depend on the exact parametrization])[
+#tip(title: [Tip: The work integral doesn't depend on the exact parametrization])[
   The work integral depends on which direction you walk along the path
   (it negates if you flip the start and stop point),
   but it doesn't depend on exactly how exactly you parametrize the path.
@@ -75,8 +89,23 @@ if we choose to hide the parametrization $bf(r)(t)$ from the notation.)
   that makes the calculation easiest for you.
 ]
 
+== [RECIPE] Computing line integrals by hand
+
+#recipe(title: [Recipe for computing line integrals by hand])[
+  1. Pick a parametrization $bf(r) : colon RR -> RR^n$.
+    It doesn't matter which one we use as long as the direction is correct.
+  2. Calculate the derivative $bf(r)'(t)$.
+  3. Calculate the dot product $bf(F)(bf(r)(t)) dot bf(r)'(t)$.
+  4. Integrate this from the start time to the stop time.
+]
 
 Let's show some examples of how to calculate this in practice.
+
+#figure(
+  image("figures/work-ex1.png", width: auto),
+  caption: [Two example of a work integral in the vector field $bf(F)(x,y) = vec(2y, 3x)$.
+    The blue path is the upper semicircle of $x^2+y^2=1$; the brown one is a straight line.],
+) <fig-work-ex1>
 
 #sample[
   Compute the line integral of the vector field
@@ -87,13 +116,6 @@ Let's show some examples of how to calculate this in practice.
   - the line segment from $(1,0)$ to $(-1,0)$
     (brown in @fig-work-ex1).
 ]
-
-#figure(
-  image("figures/work-ex1.png", width: auto),
-  caption: [Two example of a work integral in the vector field $bf(F) = vec(2y, 3x)$
-    The blue path is the upper semicircle of $x^2+y^2=1$; the brown one is a straight line.],
-) <fig-work-ex1>
-
 
 #soln[
   We do both parts; to prevent drowning in subscripts, we'll use $cal(C)$ and $bf(r)$
