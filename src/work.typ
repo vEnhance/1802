@@ -218,15 +218,15 @@ and the second case it equals $f(Q)-f(P)$ (for both $cal(C)$ and $cal(C)$').
 But those two bullets are nice philosophically because they don't even require
 you to know anything at all about the function $f$.
 
-More practically, the following two results are true:
+In other words:
 #idea(title: [Idea: Practical consequences of FTC for line integrals])[
   If you _already know_ $bf(F)$ is conservative, then
   - If you also know the potential function $f$,
     then work integrals are extremely easy to calculate:
     just compute $f("ending point")-f("starting point")$.
   - If you don't know the potential function $f$,
-    the integral above could give you a way to find it,
-    if you can't get the methods in @sec-antigrad to work.
+    use the methods in @sec-antigrad to find it.
+  - If the starting point and ending point are the same you don't even need to find $f$.
 ]
 
 Let's see this concretely with a conservative vector field.
