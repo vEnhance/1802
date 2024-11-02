@@ -191,7 +191,7 @@ object’s movement along that path.
 
 == [TEXT] The fundamental theorem of calculus for line integrals
 
-We now show the first special case of Stokes' theorem.
+We now show the first Stokes result.
 It corresponds to a statement for the red arrow shown below.
 
 #figure(
@@ -330,11 +330,11 @@ But the equations are the same.
 
 == [TEXT] Green's theorem (2D only)
 
-We expect there should be a special case of Stokes' theorem as well for the red arrow
+We expect there should be a Stokes result as well for the red arrow
 joining the 2D work integral to an area integral.
 #figure(
   box(image("figures/work-cut-greens.png", width: auto), stroke: 1pt),
-  caption: [Green's theorem is Stokes' theorem for the above red arrow
+  caption: [Green's theorem is the Stokes result for the above red arrow
     from the poster @fig-int-chart-stokes.],
 )
 
