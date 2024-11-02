@@ -88,6 +88,13 @@ if we choose to hide the parametrization $bf(r)(t)$ from the notation.)
   that makes the calculation easiest for you.
 ]
 
+#tip(title: [Tip: Splicing is OK])[
+  There's no issue with cutting up the path into multiple parts.
+  For example, if $cal(C)$ is a closed loop consisting of walking along
+  the perimeter of the square, just cut it into the four line segments.
+]
+
+
 == [RECIPE] Computing line integrals by hand <sec-work-manual-recipe>
 
 #recipe(title: [Recipe for computing line integrals by hand])[
@@ -99,12 +106,6 @@ if we choose to hide the parametrization $bf(r)(t)$ from the notation.)
 ]
 
 Let's show some examples of how to calculate this in practice.
-
-#figure(
-  image("figures/work-ex1.png", width: auto),
-  caption: [Two example of a work integral in the vector field $bf(F)(x,y) = vec(2y, 3x)$.
-    The blue path is the upper semicircle of $x^2+y^2=1$; the brown one is a straight line.],
-) <fig-work-ex1>
 
 #sample[
   Compute the line integral of the vector field
@@ -119,6 +120,12 @@ Let's show some examples of how to calculate this in practice.
 #soln[
   We do both parts; to prevent drowning in subscripts, we'll use $cal(C)$ and $bf(r)$
   for the curve and parametrization for each part.
+
+  #figure(
+    image("figures/work-ex1.png", width: auto),
+    caption: [Two example of a work integral in the vector field $bf(F)(x,y) = vec(2y, 3x)$.
+      The blue path is the upper semicircle of $x^2+y^2=1$; the brown one is a straight line.],
+  ) <fig-work-ex1>
 
   - Let's first do the problem when $cal(C)$ is the arc.
     The upper half of the circle $x^2 + y^2 = 1$ can be parametrized by:
@@ -135,7 +142,7 @@ Let's show some examples of how to calculate this in practice.
     $ sin^2 t = (1 - cos 2 t) / (2) , quad cos^2 t = (1 + cos 2 t) / (2) . $
     Substitute these into the integral:
     $ int_(t=0)^pi [- 2 dot (1 - cos 2 t) / (2) + 3 dot (1 + cos 2 t) / (2)] dif t
-    = int_(t=0)^pi [- (1 - cos 2 t) + 3 / 2 (1 + cos 2 t)] dif t \
+    &= int_(t=0)^pi [- (1 - cos 2 t) + 3 / 2 (1 + cos 2 t)] dif t \
     &= int_(t=0)^pi [1 / 2 + 5 / 2 cos 2 t] dif t. $
     The term $int_(t=0)^pi cos(2t) dif t$ is zero by symmetry, so the final integral is $pi/2$.
 
@@ -159,9 +166,8 @@ for which work integrals are path-independent.
 == [SIDENOTE] Aquatic interpretation of work
 
 Letting $bf(F)$ represent water current as always,
-the "work" done along a trajectory can be thought of
-as a measure of how much the water current assists or resists movement
-along that path.
+the "work" done along a trajectory can be thought of as a measure of
+*how much the water current helps (or hinders) movement along that path*.
 
 To compute this, consider a trajectory along which an object, such as a
 boat or swimmer, moves through the water. The current vector field
@@ -471,7 +477,7 @@ So with this, we can present a recipe that condenses these together.
     - If so, see if Green's theorem gives you an easy shortcut:
       $ oint_(cal(C)) (p dif x + q dif y) = iint_(cal(R)) ((partial q)/(partial x) - (partial p)/(partial y)) dif A. $
   3. If both of these fail,
-    fall back the parametrization recipe described in <sec-work-manual-recipe>.
+    fall back the parametrization recipe described in @sec-work-manual-recipe.
 ]
 
 
@@ -488,11 +494,4 @@ So with this, we can present a recipe that condenses these together.
   $ oint_(cal(C)) (x^2 - y) dif x + (y^2 - x) dif y $
   where $cal(C)$ is the boundary of the region enclosed by the circle $x^2 + y^2 = 4$,
   oriented counterclockwise.
-]
-#soln[
-  The vector field is conservative, because
-  $ partial / (partial y) (x^2 - y) = -1 = partial / (partial x) (y^2 - x). $
-  So the answer is $0$.
-  (If you didn't notice this at first and tried to use Green's theorem,
-  you should notice at the moment where the curl turns out to $0$.)
-]
+] <exer-work-1>

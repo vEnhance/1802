@@ -171,7 +171,7 @@ This is summarized in @table-purples.
     [*18.01 integral*], [✅ Used all the time], [❌ Never used in 18.02],
     [*Line integral*], [🔵 Only for arc length], [✅ Used all the time (work)],
     [*Double/Area integral*], [✅ Used all the time], [❌ Never used in 18.02],
-    [*Surface integral*], [🔵 Usually only for surface area], [✅ Used all the time (flux)],
+    [*Surface integral*], [🔵 Only for surface area], [✅ Used all the time (flux)],
     [*Triple/Volume integral*], [✅ Used all the time], [❌ Never used in 18.02],
   ),
   caption: [What the various kinds of integrals are used for.
