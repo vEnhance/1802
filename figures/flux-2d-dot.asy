@@ -33,5 +33,5 @@ draw(B--Z, black + 1.4, Margins);
 draw(B--Y, deepgreen + 1.2, EndArrow(TeXHead));
 dot(B, blue);
 label("$\boxed{\mathbf{r}'(t)}$", X, dir(10), grey);
-label("$\boxed{\mathbf{n}(t)}$", Z, dir(-110), black);
+label("$\boxed{\text{Rotated }\mathbf{r}'(t)}$", Z, dir(140), black);
 label("$\boxed{\mathbf{F}(\mathbf{r}(t))}$", Y, dir(-65), deepgreen);

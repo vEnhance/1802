@@ -356,6 +356,13 @@ In other words:
   $oint_(cal(C))$ means "$int_(cal(C))$ but with an extra reminder that $cal(C)$ is a loop".
 ]
 
+#tip(title: [Tip: Always use counterclockwise orientation])[
+  Whenever $cal(C)$ is a closed loop in $RR^2$,
+  we'll basically always assume that the direction
+  we walk around it is counterclockwise.
+  It's considered extremely bad manners to break this convention and have a loop oriented clockwise.
+]
+
 Note this doesn't require $bf(F)$ to be conservative!
 (All the past discussion about $bf(F)$ being conservative
 was because we were using the red "grad" arrow in @fig-work-ftc-red-arrow.
