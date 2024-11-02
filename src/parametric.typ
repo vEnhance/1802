@@ -101,7 +101,7 @@ I don't know if there's a word for the absolute value of the acceleration vector
 One more thing to mention now:
 #recipe(title: [Recipe for arc length])[
   The *arc length* from time $t_"start"$ to $t_"stop"$ is the integral of the speed:
-  $ "arc length" = integral_("start time")^("stop time") |bf(r)'(t)| dif t. $
+  $ "arc length" = integral_(t="start time")^("stop time") |bf(r)'(t)| dif t. $
 ]
 (Technically, I should use "definition" boxes rather than "recipe" boxes here,
 since these are really the _definition_ of the terms involved,

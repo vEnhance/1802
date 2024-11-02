@@ -16,7 +16,7 @@ as a path $bf(r) : RR -> RR^n$ through it, we can define the *work* on it.
 #definition(title: [Definition of work])[
   The *work* of $bf(F) : RR^n -> RR^n$ done on a path $bf(r) : RR -> RR^n$
   is defined as
-  $ int_("start time")^("stop time") bf(F)(bf(r)(t)) dot bf(r)'(t) dif t. $
+  $ int_(t="start time")^("stop time") bf(F)(bf(r)(t)) dot bf(r)'(t) dif t. $
 ]
 #typesig[
   The work is a scalar quantity (there is a dot product inside the integrand,

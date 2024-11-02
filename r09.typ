@@ -20,7 +20,7 @@ and you still do everything componentwise.
 There's one additional theorem you need.
 
 #thm[Arc length][
-  $L = integral_("start time")^("stop time") ||bf(v)(t)|| dif t$.
+  $L = integral_(t="start time")^("stop time") ||bf(v)(t)|| dif t$.
 ]
 
 

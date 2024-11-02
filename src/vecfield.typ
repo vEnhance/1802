@@ -240,7 +240,7 @@ in vague non-precise terms (we'll make precise later), for each of these six red
   (say, the line segment $P Q$, or some more curvy path).
   The region $cal(R)$ is this path, and the endpoints are $P$ and $Q$:
   Then we get the _fundamental theorem of calculus for line integrals_:
-  $ f(Q) - f(P) = int_("start time")^("stop time") nabla f(bf(r)(t)) dot bf(r)'(t) dif t. $
+  $ f(Q) - f(P) = int_(t="start time")^("stop time") nabla f(bf(r)(t)) dot bf(r)'(t) dif t. $
   The right-hand side is the work done by $nabla f$ on the path $bf(r)$.
 
   If you use shorthand where $cal(C)$ is the curve formed by $bf(r)$,
@@ -254,7 +254,7 @@ in vague non-precise terms (we'll make precise later), for each of these six red
   Suppose further that the _boundary_ of $cal(R)$ is parametrized by a curve $bf(r)(t)$
   (e.g. the circumference of the disk).
   Then _Green's theorem_ says that
-  $ int_("start time")^("stop time") bf(F)(bf(r)(t)) dot bf(r)'(t) dif t
+  $ int_(t="start time")^("stop time") bf(F)(bf(r)(t)) dot bf(r)'(t) dif t
     = iint_(cal(R)) ((partial q) / (partial x) - (partial p) / (partial y)) dif x dif y. $
   The weird expression $(partial q) / (partial x) - (partial p) / (partial y)$
   in the right-hand side is called the 2-d scalar curl, but we haven't defined this term yet.
@@ -276,7 +276,7 @@ in vague non-precise terms (we'll make precise later), for each of these six red
   and suppose further that the _boundary_ of this surface is parametrized by a curve $bf(r)_1(t)$
   (e.g. the edges of the sheet).
   Then _Stokes' theorem_ (the non-generalized version) says that
-  $ int_("start time")^("stop time") bf(F)(bf(r)_1(t)) dot bf(r)_1'(t) dif t
+  $ int_(t="start time")^("stop time") bf(F)(bf(r)_1(t)) dot bf(r)_1'(t) dif t
     = iint_(cal(S)) (nabla times bf(F))(bf(r)_2(u,v)) dot lr(((partial bf(r)_2)/(partial u) times (partial bf(r)_2)/(partial v))) dif u dif v. $
   The nonsense expression $nabla times bf(F)$ is called the curl, but we haven't defined this term yet.
 

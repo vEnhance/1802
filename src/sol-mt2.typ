@@ -63,7 +63,7 @@ So the total distance is $ 2sqrt(2) + 2sqrt(2) = 4sqrt(2). $
 
 Of course, one could also use the arc length formula, and we show how to do so.
 The arc length of the trajectory is given by the integral of the speed:
-$ L = int_("start time")^("stop time") lr(|bf(r)' (t)|) dif t . $
+$ L = int_(t="start time")^("stop time") lr(|bf(r)' (t)|) dif t . $
 
 We just saw that $lr(|bf(r)' (t)|) = sqrt(2) lr(|sin (t)|)$.
 Therefore, the arc length from $t = 0$ to $t = 2 pi$ is:

@@ -23,7 +23,7 @@ I'll restate it again here for convenience, but this is a repeat:
 #memo(title: [Memorize: Arc length])[
   If the parametrization $bf(r)(t) : RR -> RR^n$ traces out a path in $RR^n$,
   the *arc length* is given by
-  $ L = int_("start time")^("stop time") lr(|bf(r)'(t)|) dif t. $
+  $ L = int_(t="start time")^("stop time") lr(|bf(r)'(t)|) dif t. $
 ]
 
 In other words, the arc length is the integral of the function $1$ over the whole curve.
@@ -56,7 +56,7 @@ On the rare occasions when you need it, you get a scalar-field line integral as:
   If the parametrization $bf(r)(t) : RR -> RR^n$ traces out a path in $RR^n$,
   and $f : RR^n -> RR$ is a function,
   then the *scalar-field line integral* of $f$ is defined by
-  $ int_("start time")^("stop time") f(bf(r)(t)) lr(|bf(r)'(t)|) dif t. $
+  $ int_(t="start time")^("stop time") f(bf(r)(t)) lr(|bf(r)'(t)|) dif t. $
 ]
 #typesig[
   The scalar-field line integral (and hence arc length as well) outputs a scalar.
@@ -70,7 +70,7 @@ $ dif s := lr(|bf(r)'(t)|) dif t. $
 Whenever this shorthand is being used, one frequently cuts out the start and stop time too.
 The way this is done is, you let $cal(C)$ denote the curve that $bf(r)(t)$ traces out.
 Then we abbreviate
-$ int_("start time")^("stop time") f(bf(r)(t)) lr(|bf(r)'(t)|) dif t $
+$ int_(t="start time")^("stop time") f(bf(r)(t)) lr(|bf(r)'(t)|) dif t $
 all the way down to just
 $ int_(cal(C)) f dif s. $
 So that the arc length formula gets written as $L = int_(cal(C)) dif s$
