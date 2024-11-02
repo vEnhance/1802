@@ -45,8 +45,8 @@ But with this goal in mind, here are some parts of the design philosophy of this
 - *It writes things out and has diagrams*.
   A lot of lecture notes were meant to accompany a in-person lecture rather than replace it.
   These notes are meant to stand alone.
-  Anything that would normally be said out loud is written as text.
-  Anything that would normally be drawn on the blackboard is actually typeset into the book.
+  - Anything that would normally be said out loud is written as text.
+  - Anything that would normally be drawn on the blackboard is actually typeset into the book.
 - *It has full solutions to its exercises*. I really believe in writing things out.
   I'd rather have a small number of exercises with properly documented solutions
   than an enormous pile of mass-produced questions with no corresponding solutions.
@@ -106,18 +106,16 @@ and calculus as taught in United States high schools is assumed.
 
     You are _not_ expected to have any idea why the heck the rule is defined this way;
     an explanation for where this rule comes from is in @matrix-mult.
-    we will explain what this rule means later.
+    We will explain what this rule means later.
     So we'll assume you have memorized this strange rule, but don't know what it means.
 
   - We'll assume you know the formula for the determinant of a $2 times 2$ and $3 times 3$ matrix; that is
     $ det mat(a,b;c,d) = a d - b c $
     and
     $ det mat(a_1, a_2, a_3; b_1, b_2, b_3; c_1, c_2, c_3)
-    =
-    a_1 det mat(b_2, b_3; c_2, c_3)
+    = a_1 det mat(b_2, b_3; c_2, c_3)
     - a_2 det mat(b_1, b_3; c_1, c_3)
-    + a_3 det mat(b_1, b_2; c_1, c_2).
-    $
+    + a_3 det mat(b_1, b_2; c_1, c_2). $
 
     For example, you should be able to verify the correctness of the following equation:
     $ det mat(0, 1, 5; 2, 0, 13; 1, 4, 1) = 51. $
@@ -289,8 +287,7 @@ in return for the short time limit.
   Writing this text gave me an excuse to get a chance to use ChatGPT 4o and ChatGPT o1-preview,
   to see what kind of things it did well (and what I could still do faster by hand).
 
-  - ChatGPT was really good at generating full step-by-step solutions
-    to the routine exercises, even if there were occasional mistakes.
+  - ChatGPT was really good at writing full step-by-step solutions to the routine exercises.
     All the solutions went through at least a bit of editing from me
     (in part to make the notation consistent throughout the whole text),
     but it was a lot faster than having to write every single solution by scratch.
