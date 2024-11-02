@@ -42,11 +42,11 @@ But with this goal in mind, here are some parts of the design philosophy of this
     which _does_ assume a proof-based background.
   ].
   We don't assume proof experience.
-- *It writes things out*.
+- *It writes things out and has diagrams*.
   A lot of lecture notes were meant to accompany a in-person lecture rather than replace it.
-  These notes are different.
-  They are meant to stand alone, and anything that would normally
-  be said out loud is instead written out in text.
+  These notes are meant to stand alone.
+  Anything that would normally be said out loud is written as text.
+  Anything that would normally be drawn on the blackboard is actually typeset into the book.
 - *It has full solutions to its exercises*. I really believe in writing things out.
   I'd rather have a small number of exercises with properly documented solutions
   than an enormous pile of mass-produced questions with no corresponding solutions.
