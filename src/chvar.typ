@@ -279,6 +279,57 @@ Let's see an example of how to carry out this integration.
   $
 ]
 
+== [SIDENOTE] Tip: Factoring integrals over rectangles
+
+Especially with polar coordinates, you will often find you get an integral of the shape
+$ int_(u="number")^("number") int_(v="number")^("number")
+  f(u) g(v) dif v dif u $
+that is, the part inside splits cleanly as the product of stuff involving $u$
+and stuff involving $v$.
+In that case, if you imagine actually doing the integration,
+you'll find that this actually just equals
+$ (int_(u="number")^("number") f(u) v dif u)
+  ( int_(v="number")^("number") g(v) dif v). $
+
+For example, consider the following easy question and solution.
+#sample[
+  Evaluate $ int_(x=0)^1 int_(y=0)^pi e^x sin(y) dif y dif x. $
+]
+#soln[
+  The integral can be written as:
+  $ int_(x = 0)^1 e^x (int_(y = 0)^pi sin (y) dif y) dif x . $
+  The inner integral is
+  $ int_(y = 0)^pi sin (y) dif y = [- cos (y)]_(y = 0)^pi = (- cos (pi)) - (- cos (0)) = (- (- 1)) - (- 1) = 1 + 1 = 2 . $
+  Substitute the result back into the integral:
+  $ int_(x = 0)^1 e^x dot 2 dif x = 2 int_(x = 0)^1 e^x dif x . $
+  Compute the integral:
+  $ int_(x = 0)^1 e^x dif x = [e^x]_(x = 0)^1 = e^1 - e^0 = e - 1 . $
+  Multiply the result by 2 to get the answer $2(e-1)$.
+]
+If you pay attention to the solution above,
+you'll notice that in fact $int_(y=0)^pi sin(y) dif y = 2$ is just a number,
+and it gets pulled out of the integral right away.
+So in effect, we actually have
+$ int_(x=0)^1 int_(y=0)^pi e^x sin(y) dif y dif x
+  = (int_(x=0)^1 e^x dif x) (int_(y=0)^pi sin(y) dif y). $
+This is a bit of a convenience feature that might save a bit of headspace.
+It's a tiny optimization, but it's worth pointing out.
+#tip[
+  Look for the common pattern
+  $ int_(u="number")^("number") int_(v="number")^("number")
+    f(u) g(v) dif v dif u
+    = (int_(u="number")^("number") f(u) v dif u)
+      ( int_(v="number")^("number") g(v) dif v). $
+]
+Remember, this doesn't work if either the integrand doesn't factor,
+or the limits of integration aren't just numbers
+(i.e. the limit of $v$ depends on $u$).
+
+As another example of a use case, in the polar integration we just did, we have
+$ int_(r=0)^1 int_(theta=0)^(2 pi) r dif theta dif r
+  = (int_(r=0)^1 r dif r)(int_(theta=0)^(2 pi) theta dif theta)
+  = (r^2/2) dot (2 pi) = pi r^2. $
+Polar coordinates in particular have this particular pattern a lot.
 
 == [EXER] Exercises
 
