@@ -74,7 +74,7 @@ I can't imagine how annoying this is to someone learning the subject for the fir
       [$(partial bf(r))/(partial u) times (partial bf(r))/(partial v) dif u dif v$ \ where $bf(r)(u,v)$ parametrizes a surface],
     [$dif V$], [Volume], [Triple/volume integrals \ (in @sec-triple)],
       [$dif x dif y dif z$],
-    [$bf(n) dif s$], [Outward normal], [Only 2D flux (in @sec-flux)],
+    [$bf(n) dif s$], [Outward normal], [Only 2D flux (in @sec-2d-flux)],
       [$(90 degree "clockwise rotation of" bf(r)'(t)) dif t$]
   ),
   caption: [A bunch of shorthands you'll meet later.

@@ -22,7 +22,7 @@
 
 - Like the real exam, I suggest not referring to any notes/calculators/etc.
 
-- Solutions are posted in Section 44 of my LAMV book at #url("https://web.evanchen.cc/1802.html").
+- Solutions are posted in Section 45 of my LAMV book at #url("https://web.evanchen.cc/1802.html").
 ]
 
 #pagebreak()
@@ -61,7 +61,7 @@
   $ int_(x=0)^((e-1)^2) log(sqrt(x)+1) dif x. $
 
 
-Solutions are posted in Section 44 of #url("https://web.evanchen.cc/upload/1802/lamv.pdf").
+Solutions are posted in Section 45 of #url("https://web.evanchen.cc/upload/1802/lamv.pdf").
 ]
 
 #pagebreak()
