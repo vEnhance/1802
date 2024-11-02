@@ -1,0 +1,616 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[colorlinks]{hyperref}
+\usepackage{tikz, pgfplots}
+\pgfplotsset{compat=1.17}
+
+\begin{document}
+\title{Quick answer key to Recitation 16}
+\author{ChatGPT 4o}
+\date{4 November 2024}
+\maketitle
+
+Use the table of contents below to skip to a specific part
+without seeing spoilers to the other parts.
+
+I just used ChatGPT to write this one quickly.
+ChatGPT can make mistakes, so if you spot anything that's wrong, flag me to ask.
+
+\tableofcontents
+
+
+
+\newpage
+
+\section{Solution}
+
+\newpage
+
+\subsection{(a)}
+
+We are given the vector field $\mathbf{F}(x, y) = \langle x, -y \rangle$ on the $xy$-plane. We are to sketch this vector field and, on the same picture, draw the oriented path $C$ from $(-1, 0)$ to $(0, -1)$ given by the unit circle in the quadrant where $x \leq 0$ and $y \leq 0$.
+
+To sketch the vector field $\mathbf{F}(x, y) = \langle x, -y \rangle$:
+
+- At any point $(x, y)$, the vector points in the direction $\langle x, -y \rangle$.
+- For example:
+  - At $(1, 0)$, $\mathbf{F} = \langle 1, 0 \rangle$, pointing right.
+  - At $(0, 1)$, $\mathbf{F} = \langle 0, -1 \rangle$, pointing downward.
+  - At $(-1, 0)$, $\mathbf{F} = \langle -1, 0 \rangle$, pointing left.
+  - At $(0, -1)$, $\mathbf{F} = \langle 0, 1 \rangle$, pointing upward.
+
+The path $C$ is the quarter-circle from $(-1, 0)$ to $(0, -1)$ along the unit circle in the third quadrant ($x \leq 0$, $y \leq 0$). The path is oriented from $(-1, 0)$ to $(0, -1)$ in the clockwise direction.
+
+\newpage
+
+\subsection{(b)}
+
+Using the picture as a guide, we can estimate whether the line integral $\displaystyle \int_C x \, dx - y \, dy$ is positive, negative, or zero.
+
+Along the path $C$:
+
+- Both $x$ and $y$ are negative.
+- The vector field $\mathbf{F} = \langle x, -y \rangle$ evaluated along $C$ has:
+  - $x$-component negative (since $x < 0$).
+  - $y$-component positive (since $-y > 0$ when $y < 0$).
+
+The tangent vector to the path $C$ is:
+
+- Oriented clockwise from $(-1, 0)$ to $(0, -1)$.
+- At each point, the tangent vector points in the direction of motion along $C$.
+
+Since the vector field $\mathbf{F}$ and the tangent vector to $C$ are generally pointing in opposite directions (the $x$-components are both negative, but the $y$-components are opposite in sign), their dot product will be negative.
+
+Therefore, we can expect that the line integral $\displaystyle \int_C x \, dx - y \, dy$ is \textbf{negative}.
+
+\newpage
+
+\subsection{(c)}
+
+We will compute the line integral $\displaystyle \int_C x \, dx - y \, dy$ using a parametrization of $C$.
+
+Since $C$ is the quarter-circle from $(-1, 0)$ to $(0, -1)$ in the third quadrant, traversed clockwise, we can parametrize it as:
+
+Let $\theta$ range from $\pi$ to $\tfrac{3\pi}{2}$ \textbf{decreasing}:
+
+\[
+x = \cos \theta, \quad y = \sin \theta, \quad \theta \in \left[ \tfrac{3\pi}{2}, \pi \right]
+\]
+
+However, to maintain the orientation from $(-1, 0)$ to $(0, -1)$ in the clockwise direction, we'll let $\theta$ go from $\tfrac{3\pi}{2}$ to $\pi$.
+
+Compute $dx$ and $dy$:
+
+\[
+dx = -\sin \theta \, d\theta, \quad dy = \cos \theta \, d\theta
+\]
+
+Compute the integral:
+
+\[
+\int_C x \, dx - y \, dy = \int_{\theta=\tfrac{3\pi}{2}}^{\pi} \left( x \, dx - y \, dy \right)
+\]
+
+Substitute $x$, $dx$, $y$, and $dy$:
+
+\[
+= \int_{\tfrac{3\pi}{2}}^{\pi} \left( \cos \theta \cdot \left( -\sin \theta \, d\theta \right) - \sin \theta \cdot \cos \theta \, d\theta \right)
+\]
+
+Simplify:
+
+\[
+= \int_{\tfrac{3\pi}{2}}^{\pi} \left( -\cos \theta \sin \theta - \sin \theta \cos \theta \right) d\theta = -2 \int_{\tfrac{3\pi}{2}}^{\pi} \cos \theta \sin \theta \, d\theta
+\]
+
+Since the limits are from $\tfrac{3\pi}{2}$ to $\pi$, we can change the limits and the sign:
+
+\[
+-2 \int_{\tfrac{3\pi}{2}}^{\pi} \cos \theta \sin \theta \, d\theta = -2 \left( - \int_{\pi}^{\tfrac{3\pi}{2}} \cos \theta \sin \theta \, d\theta \right) = 2 \int_{\pi}^{\tfrac{3\pi}{2}} \cos \theta \sin \theta \, d\theta
+\]
+
+Use the identity $\cos \theta \sin \theta = \tfrac{1}{2} \sin 2\theta$:
+
+\[
+2 \int_{\pi}^{\tfrac{3\pi}{2}} \left( \tfrac{1}{2} \sin 2\theta \right) d\theta = \int_{\pi}^{\tfrac{3\pi}{2}} \sin 2\theta \, d\theta
+\]
+
+Integrate:
+
+\[
+\int_{\pi}^{\tfrac{3\pi}{2}} \sin 2\theta \, d\theta = -\tfrac{1}{2} \cos 2\theta \Big|_{\pi}^{\tfrac{3\pi}{2}} = -\tfrac{1}{2} \left( \cos 3\pi - \cos 2\pi \right)
+\]
+
+Compute the values:
+
+\[
+\cos 3\pi = -1, \quad \cos 2\pi = 1
+\]
+
+Therefore:
+
+\[
+-\tfrac{1}{2} \left( -1 - 1 \right) = -\tfrac{1}{2} (-2) = 1
+\]
+
+Thus, the value of the integral is $\boxed{1}$.
+
+\newpage
+
+\subsection{(d)}
+
+We are to find a function $f(x, y)$ such that $\nabla f = \langle x, -y \rangle$.
+
+Compute $f(x, y)$:
+
+- Since $\dfrac{\partial f}{\partial x} = x$, integrate with respect to $x$:
+
+\[
+f(x, y) = \int x \, dx + g(y) = \tfrac{1}{2} x^2 + g(y)
+\]
+
+- Differentiate $f$ with respect to $y$:
+
+\[
+\dfrac{\partial f}{\partial y} = g'(y)
+\]
+
+Given that $\dfrac{\partial f}{\partial y} = -y$, we have:
+
+\[
+g'(y) = -y \implies g(y) = -\tfrac{1}{2} y^2 + C
+\]
+
+Thus, the function is:
+
+\[
+f(x, y) = \tfrac{1}{2} x^2 - \tfrac{1}{2} y^2 + C
+\]
+
+Using the fundamental theorem of line integrals:
+
+\[
+\int_C x \, dx - y \, dy = f\left( (0, -1) \right) - f\left( (-1, 0) \right)
+\]
+
+Compute $f(0, -1)$:
+
+\[
+f(0, -1) = \tfrac{1}{2} (0)^2 - \tfrac{1}{2} (-1)^2 = -\tfrac{1}{2}
+\]
+
+Compute $f(-1, 0)$:
+
+\[
+f(-1, 0) = \tfrac{1}{2} (-1)^2 - \tfrac{1}{2} (0)^2 = \tfrac{1}{2}
+\]
+
+Therefore:
+
+\[
+\int_C x \, dx - y \, dy = f(0, -1) - f(-1, 0) = \left( -\tfrac{1}{2} \right) - \left( \tfrac{1}{2} \right) = -1
+\]
+
+\newpage
+
+\subsection{Explanation of Discrepancy}
+
+There appears to be a discrepancy between the results of part (c) and part (d). In part (c), we obtained $1$, while in part (d), we obtained $-1$.
+
+This discrepancy arises from the orientation of the path $C$:
+
+- In part (c), our parametrization implied that the path was traversed from $\theta = \tfrac{3\pi}{2}$ to $\theta = \pi$, which reverses the limits of integration and effectively changes the sign of the integral.
+- To correct this, we should ensure that the parametrization aligns with the orientation specified in the problem.
+
+\newpage
+
+\subsection{Corrected Calculation for Part (c)}
+
+Re-parametrize $C$ to match the orientation from $(-1, 0)$ to $(0, -1)$ (clockwise):
+
+Let $\theta$ go from $\pi$ to $\tfrac{3\pi}{2}$ \textbf{decreasing}:
+
+\[
+\theta = \pi - t, \quad t \in [0, \tfrac{\pi}{2}]
+\]
+
+Then:
+
+\[
+x = \cos(\theta) = \cos(\pi - t) = -\cos t, \quad y = \sin(\theta) = \sin(\pi - t) = \sin t
+\]
+
+Compute $dx$ and $dy$:
+
+\[
+dx = \sin t \, dt, \quad dy = \cos t \, dt
+\]
+
+Compute the integral:
+
+\[
+\int_C x \, dx - y \, dy = \int_{t=0}^{\tfrac{\pi}{2}} \left( -\cos t \cdot \sin t \, dt - \sin t \cdot \cos t \, dt \right) = -2 \int_{0}^{\tfrac{\pi}{2}} \cos t \sin t \, dt
+\]
+
+Simplify using $\cos t \sin t = \tfrac{1}{2} \sin 2t$:
+
+\[
+-2 \times \tfrac{1}{2} \int_{0}^{\tfrac{\pi}{2}} \sin 2t \, dt = -\int_{0}^{\tfrac{\pi}{2}} \sin 2t \, dt
+\]
+
+Integrate:
+
+\[
+-\left( -\tfrac{1}{2} \cos 2t \right) \Big|_{0}^{\tfrac{\pi}{2}} = \tfrac{1}{2} \left( \cos \pi - \cos 0 \right) = \tfrac{1}{2} \left( -1 - 1 \right) = -1
+\]
+
+Thus, the value of the integral is $\boxed{-1}$, consistent with the result from part (d).
+
+\newpage
+
+\subsection{Conclusion}
+
+After correcting for the orientation in part (c), we find that:
+
+\[
+\int_C x \, dx - y \, dy = -1
+\]
+
+This matches the result obtained using the fundamental theorem of line integrals in part (d). Therefore, the line integral evaluates to $-1$.
+
+
+
+
+\newpage
+
+\section{Solution}
+
+\newpage
+
+\subsection{(a)}
+
+We are asked to calculate the line integral:
+
+\[
+\int_{C} \mathbf{F} \cdot d\mathbf{r}
+\]
+
+where $\mathbf{F} = (x + y)\mathbf{i} + (x y)\mathbf{j}$, and $C$ is the broken line running from $(0, 0)$ to $(2, 2)$ to $(0, 2)$.
+
+\newpage
+
+\subsubsection{Parameterization of the Path $C$}
+
+The path $C$ consists of two segments:
+
+\begin{enumerate}
+    \item Segment $C_1$: from $(0, 0)$ to $(2, 2)$.
+    \item Segment $C_2$: from $(2, 2)$ to $(0, 2)$.
+\end{enumerate}
+
+\paragraph{Segment $C_1$:}
+
+We can parametrize $C_1$ as:
+
+\[
+\begin{aligned}
+x &= t, \\
+y &= t, \\
+t &\in [0, 2].
+\end{aligned}
+\]
+
+Compute $d\mathbf{r}$:
+
+\[
+d\mathbf{r} = (dx, dy) = (dt, dt).
+\]
+
+Compute $\mathbf{F} \cdot d\mathbf{r}$:
+
+\[
+\mathbf{F} \cdot d\mathbf{r} = [(x + y), x y] \cdot (dx, dy) = (x + y) dx + x y dy.
+\]
+
+Since $x = y = t$, we have:
+
+\[
+\begin{aligned}
+x + y &= t + t = 2t, \\
+x y &= t \cdot t = t^2, \\
+dx &= dt, \\
+dy &= dt.
+\end{aligned}
+\]
+
+Therefore,
+
+\[
+\mathbf{F} \cdot d\mathbf{r} = (2t)(dt) + (t^2)(dt) = [2t + t^2] dt.
+\]
+
+Compute the integral over $C_1$:
+
+\[
+\int_{C_1} \mathbf{F} \cdot d\mathbf{r} = \int_{t=0}^{2} [2t + t^2] dt = \left[ t^2 + \tfrac{1}{3} t^3 \right]_0^2 = \left( 4 + \tfrac{8}{3} \right) - 0 = \tfrac{12}{3} + \tfrac{8}{3} = \tfrac{20}{3}.
+\]
+
+\paragraph{Segment $C_2$:}
+
+We can parametrize $C_2$ as:
+
+\[
+\begin{aligned}
+x &= 2 - t, \\
+y &= 2, \\
+t &\in [0, 2].
+\end{aligned}
+\]
+
+Compute $d\mathbf{r}$:
+
+\[
+d\mathbf{r} = (dx, dy) = (-dt, 0).
+\]
+
+Compute $\mathbf{F} \cdot d\mathbf{r}$:
+
+\[
+\mathbf{F} \cdot d\mathbf{r} = [(x + y), x y] \cdot (dx, dy) = (x + y) dx + x y dy.
+\]
+
+Since $y = 2$, $x = 2 - t$, we have:
+
+\[
+\begin{aligned}
+x + y &= (2 - t) + 2 = 4 - t, \\
+x y &= (2 - t)(2) = 4 - 2t, \\
+dx &= -dt, \\
+dy &= 0.
+\end{aligned}
+\]
+
+Therefore,
+
+\[
+\mathbf{F} \cdot d\mathbf{r} = (4 - t)(-dt) + (4 - 2t)(0) = -(4 - t) dt = (-4 + t) dt.
+\]
+
+Compute the integral over $C_2$:
+
+\[
+\int_{C_2} \mathbf{F} \cdot d\mathbf{r} = \int_{t=0}^{2} (-4 + t) dt = \left[ -4t + \tfrac{1}{2} t^2 \right]_0^2 = \left( -8 + 2 \right) - 0 = -6.
+\]
+
+\paragraph{Total Integral:}
+
+Add the integrals over $C_1$ and $C_2$:
+
+\[
+\int_{C} \mathbf{F} \cdot d\mathbf{r} = \int_{C_1} \mathbf{F} \cdot d\mathbf{r} + \int_{C_2} \mathbf{F} \cdot d\mathbf{r} = \tfrac{20}{3} - 6 = \tfrac{20}{3} - \tfrac{18}{3} = \tfrac{2}{3}.
+\]
+
+\newpage
+
+\subsection{Answer:}
+
+\[
+\int_{C} \mathbf{F} \cdot d\mathbf{r} = \frac{2}{3}
+\]
+
+\newpage
+
+\subsection{(b)}
+
+We are asked to calculate the line integral:
+
+\[
+\int_{C} (x^2 - y) \, dx + 2x \, dy
+\]
+
+where $C$ is the path from $(-1, 0)$ to $(1, 0)$ along the parabola $y = 1 - x^2$.
+
+\newpage
+
+\subsubsection{Parametrization of the Path $C$}
+
+We can parametrize $C$ as:
+
+\[
+\begin{aligned}
+x &= t, \\
+y &= 1 - t^2, \\
+t &\in [-1, 1].
+\end{aligned}
+\]
+
+Compute $dx$ and $dy$:
+
+\[
+dx = dt, \quad dy = -2t \, dt.
+\]
+
+Compute the integrand:
+
+\[
+(x^2 - y) \, dx + 2x \, dy.
+\]
+
+Substitute $x$, $y$, $dx$, and $dy$:
+
+\[
+\begin{aligned}
+x^2 - y &= t^2 - (1 - t^2) = t^2 - 1 + t^2 = 2t^2 - 1, \\
+dx &= dt, \\
+2x &= 2t, \\
+dy &= -2t \, dt.
+\end{aligned}
+\]
+
+Compute each term:
+
+\[
+(x^2 - y) \, dx = (2t^2 - 1) dt, \quad 2x \, dy = 2t \cdot (-2t \, dt) = -4t^2 dt.
+\]
+
+Add the terms:
+
+\[
+(x^2 - y) \, dx + 2x \, dy = (2t^2 - 1) dt - 4t^2 dt = (-2t^2 - 1) dt.
+\]
+
+Simplify:
+
+\[
+(-2t^2 - 1) dt = -(2t^2 + 1) dt.
+\]
+
+Compute the integral:
+
+\[
+\int_{t=-1}^{1} -(2t^2 + 1) dt = -\left[ \tfrac{2}{3} t^3 + t \right]_{-1}^{1} = -\left( \left( \tfrac{2}{3} (1)^3 + 1 \right) - \left( \tfrac{2}{3} (-1)^3 + (-1) \right) \right).
+\]
+
+Compute the values:
+
+\[
+\begin{aligned}
+\text{At } t = 1: &\quad \tfrac{2}{3} (1) + 1 = \tfrac{2}{3} + 1 = \tfrac{5}{3}, \\
+\text{At } t = -1: &\quad \tfrac{2}{3} (-1) + (-1) = -\tfrac{2}{3} -1 = -\tfrac{5}{3}.
+\end{aligned}
+\]
+
+Subtract:
+
+\[
+\left( \tfrac{5}{3} \right) - \left( -\tfrac{5}{3} \right) = \tfrac{10}{3}.
+\]
+
+Therefore,
+
+\[
+\int_{C} (x^2 - y) \, dx + 2x \, dy = -\left( \tfrac{10}{3} \right) = -\tfrac{10}{3}.
+\]
+
+\newpage
+
+\subsection{Answer:}
+
+\[
+\int_{C} (x^2 - y) \, dx + 2x \, dy = -\frac{10}{3}
+\]
+
+
+
+
+\newpage
+
+\section{Solution}
+
+\subsection{Part 1: Finding the Gradient Vector Field \(\mathbf{F} = \nabla f(x, y)\)}
+
+Given the function:
+\[
+f(x, y) = \sin(x) \cos(y)
+\]
+
+Compute the partial derivatives with respect to \( x \) and \( y \):
+
+\[
+\begin{aligned}
+\frac{\partial f}{\partial x} &= \cos(x) \cos(y) \\
+\frac{\partial f}{\partial y} &= -\sin(x) \sin(y)
+\end{aligned}
+\]
+
+Therefore, the gradient vector field is:
+
+\[
+\mathbf{F} = \nabla f(x, y) = \left( \cos(x) \cos(y),\ -\sin(x) \sin(y) \right)
+\]
+
+\newpage
+
+\subsection{Part 2: Maximizing the Line Integral \(\displaystyle \int_{C} \mathbf{F} \cdot d\mathbf{r}\)}
+
+Since \(\mathbf{F}\) is the gradient of \( f \), the line integral over a path \( C \) from point \( A \) to point \( B \) is given by the fundamental theorem of line integrals:
+
+\[
+\int_{C} \mathbf{F} \cdot d\mathbf{r} = f(B) - f(A)
+\]
+
+To find the maximum possible value of the line integral as \( C \) ranges over all possible paths in the plane, we need to maximize the difference \( f(B) - f(A) \).
+
+\newpage
+
+\subsubsection{Finding the Maximum and Minimum Values of \( f(x, y) \)}
+
+The function \( f(x, y) = \sin(x) \cos(y) \) attains its maximum and minimum values based on the ranges of the sine and cosine functions:
+
+\[
+\begin{aligned}
+\sin(x) &\in [-1, 1] \\
+\cos(y) &\in [-1, 1]
+\end{aligned}
+\]
+
+Therefore, the maximum and minimum values of \( f(x, y) \) are:
+
+\[
+\begin{aligned}
+f_{\text{max}} &= \sin(x_{\text{max}}) \cos(y_{\text{max}}) = (1)(1) = 1 \\
+f_{\text{min}} &= \sin(x_{\text{min}}) \cos(y_{\text{min}}) = (-1)(-1) = 1
+\end{aligned}
+\]
+
+Wait, this suggests that both the maximum and minimum values are 1, which is incorrect. Let's reconsider.
+
+Actually, the minimum value occurs when one of the functions is 1 and the other is -1:
+
+\[
+\begin{aligned}
+f_{\text{min}} &= \sin(x_{\text{min}}) \cos(y_{\text{min}}) = (1)(-1) = -1 \quad \text{or} \quad (-1)(1) = -1
+\end{aligned}
+\]
+
+Therefore, the correct maximum and minimum values are:
+
+\[
+\begin{aligned}
+f_{\text{max}} &= 1 \\
+f_{\text{min}} &= -1
+\end{aligned}
+\]
+
+\newpage
+
+\subsubsection{Calculating the Maximum Value of the Line Integral}
+
+The maximum possible value of the line integral is:
+
+\[
+\int_{C} \mathbf{F} \cdot d\mathbf{r} = f(B) - f(A) \leq f_{\text{max}} - f_{\text{min}} = 1 - (-1) = 2
+\]
+
+Thus, the maximum possible value of the line integral is \( \boxed{2} \).
+
+\newpage
+
+\subsection{Conclusion}
+
+The gradient vector field is:
+
+\[
+\mathbf{F} = \nabla f(x, y) = \left( \cos(x) \cos(y),\ -\sin(x) \sin(y) \right)
+\]
+
+The maximum possible value of the line integral \( \displaystyle \int_{C} \mathbf{F} \cdot d\mathbf{r} \) as \( C \) ranges over all possible paths in the plane is:
+
+\[
+\int_{C} \mathbf{F} \cdot d\mathbf{r} \leq 2
+\]
+
+Therefore, the maximum value is \( \boxed{2} \).
+
+
+\end{document}
