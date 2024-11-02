@@ -171,7 +171,7 @@ But most of the time that's not true:
 it's easy to set questions for which this task is _really_ impossible*.
 That's actually a major difference.
 
-#digression(title: [Digression: There's a difference
+#digression(title: [Digression: There's a huge difference
   between "not easy to write the answer" and "no such function exists"])[
   Weren't there impossible integrals in 18.01?
   Well, it depends on what you mean by "impossible".
@@ -203,35 +203,37 @@ That's actually a major difference.
   Determine whether or not there exists a differentiable function $f(x,y)$ such that
   $ nabla f = vec(2 y, x). $
 ]
-We can imagine we follow through the same method as before.
-We start by integrating $(partial f) / (partial x)$ with respect to $x$ to get
-$ f(x,y) = int 2 y dif x = 2 x y + g(y) $
-to start.
-Then differentiating with respect to $y$ gives
-$ (partial f) / (partial y) = partial / (partial y) (2 x y + g(y)) = 2 x + g'(y). $
-So then we set this equal and get
-$ 2 x = g'(y) + x $
-and so we need to solve
-$ g'(y) = x $
-which... wait! There's no way a function $g$ can satisfy that for _every_ $x$.
-What's going on?
+#soln[
+  We can imagine we follow through the same method as before.
+  We start by integrating $(partial f) / (partial x)$ with respect to $x$ to get
+  $ f(x,y) = int 2 y dif x = 2 x y + g(y) $
+  to start.
+  Then differentiating with respect to $y$ gives
+  $ (partial f) / (partial y) = partial / (partial y) (2 x y + g(y)) = 2 x + g'(y). $
+  So then we set this equal and get
+  $ 2 x = g'(y) + x $
+  and so we need to solve
+  $ g'(y) = x $
+  which... wait! There's no way a function $g$ can satisfy that for _every_ $x$.
+  What's going on?
 
-It's tempting to write $g(y) = x y + C$, but that's a type error.
-These new functions $g$ and $h$ can only depend on their arguments.
-Indeed, look carefully at everything we wrote for $g$ and $h$ in the previous samples:
-Whenever we wrote $g(y)$ or $g(y,z)$, we never allow it to depend on $x$.
-And when we wrote $h(z)$, we didn't allow it to depend on $x$ or $y$ either.
+  It's tempting to write $g(y) = x y + C$, but that's a type error.
+  These new functions $g$ and $h$ can only depend on their arguments.
+  Indeed, look carefully at everything we wrote for $g$ and $h$ in the previous samples:
+  Whenever we wrote $g(y)$ or $g(y,z)$, we never allow it to depend on $x$.
+  And when we wrote $h(z)$, we didn't allow it to depend on $x$ or $y$ either.
 
-In mathematics there's a concept of _proof by contradiction_:
-if you start from an assumption,
-and then do some logic and reasoning to reach an impossible conclusion,
-then the starting assumption was wrong.
-Here, the starting assumption that there was _some_ function $f$ such that $nabla f = vec(2y, x)$.
-Starting from this assumption we found that there was a function $g : RR -> RR$
-such that $g'(y) = x$ for every real number $x$, which is ridiculous.
-So our assumption was wrong: there can't be such function $f$.
-Not like 18.01 where "$f$ exists but is hard to write down";
-the function $f$ literally cannot exist.
+  In mathematics there's a concept of _proof by contradiction_:
+  if you start from an assumption,
+  and then do some logic and reasoning to reach an impossible conclusion,
+  then the starting assumption was wrong.
+  Here, the starting assumption that there was _some_ function $f$ such that $nabla f = vec(2y, x)$.
+  Starting from this assumption we found that there was a function $g : RR -> RR$
+  such that $g'(y) = x$ for every real number $x$, which is ridiculous.
+  So our assumption was wrong: there can't be such function $f$.
+  Not like 18.01 where "$f$ exists but is hard to write down";
+  the function $f$ literally cannot exist.
+]
 
 == [TEXT] Shortcut for weeding out impossible questions
 
@@ -265,11 +267,11 @@ So let's see some examples:
 #example(title: [Example showing that the order of differentiation doesn't matter])[
   Let $f(x,y) = x^7 y^3$.
   - If we differentiate with respect to $x$ then to $y$ we get
-    $ f_x = 7 x^6 y^3 ==>
-      (partial / (partial y)) f_x = 21 x^6 y^2. $
+    $f_x = 7 x^6 y^3 ==>
+      (partial / (partial y)) f_x = 21 x^6 y^2$.
   - Do it the other order:
-    $ f_y = 3 x^6 y^2 ==>
-      (partial / (partial x)) f_y = 21 x^6 y^2. $
+    $f_y = 3 x^6 y^2 ==>
+      (partial / (partial x)) f_y = 21 x^6 y^2$.
   - Either way we get the same result
     $ f_(x y) = f_(y x) = 21 x^6 y^2. $
 ]
@@ -307,7 +309,7 @@ it will catch all impossible questions.
 Specifically, the following theorem is true.
 
 #memo(title: [Memorize: Criteria for 2D anti-gradient to exist])[
-  Consider $vec(a(x,y), b(x,y))$, where $p$ and $q$ are continuously differentiable.
+  Consider $vec(p(x,y), q(x,y))$, where $p$ and $q$ are continuously differentiable.
   Then there exists $f$ such that $ nabla f = vec(p(x,y), q(x,y)) $
   if and only if
   $ (partial p) / (partial y) = (partial q) / (partial x). $

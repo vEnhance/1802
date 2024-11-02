@@ -28,12 +28,13 @@ I'll restate it again here for convenience, but this is a repeat:
 
 In other words, the arc length is the integral of the function $1$ over the whole curve.
 
-#warning(title: [Warning: You don't get Fundamental Theorem of Calculus for arc length])[
-  One of the reasons we don't like these scalar-field line and surface integrals much
-  is that they just don't behave that well, in part because of the awkward absolute value.
+#warning(title: [Warning: There are no red arrows for these integrals])[
+  *We don't like these scalar-field line and surface integrals as much*;
+  they just don't behave that well, in part because of the awkward absolute value.
   For example, Stokes' theorem --- the biggest theorem in the 18.02 course ---
   doesn't work for arc length (or anything else in this section).
 
+  In particular: *you don't get Fundamental Theorem of Calculus for arc length*.
   To make that warning explicit, note two common "wrong guesses":
   $ int_(t=a)^(b) lr(|bf(r)'(t)|) dif t &!= |bf(r)(b)| - |bf(r)(a)| \
     int_(t=a)^(b) lr(|bf(r)'(t)|) dif t &!= |bf(r)(b) - bf(r)(a)|. $

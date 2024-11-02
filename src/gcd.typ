@@ -2,7 +2,7 @@
 
 = Grad, curl, and div, individually <sec-gcd>
 
-The goal of this section is to _define_ each individual red arrow.
+The goal of this section is to _define_ each individual red arrow in the poster.
 For each red arrow, we'll show you
 
 - How to compute it, and
@@ -187,7 +187,7 @@ So now we prove the following.
 ]
 #figure(
   box(image("figures/gcd-cut-gc.png", width: auto), stroke: 1pt),
-  caption: [Cut-out of two red arrows from @fig-int-chart-stokes that chain to give zero.],
+  caption: [Cut-out of two red arrows from the poster @fig-int-chart-stokes that chain to give zero.],
 )
 
 
@@ -331,7 +331,7 @@ in the context of water flow measures the rate at which water is spreading out
 If there is neither spreading nor converging, the divergence is zero.
 
 #digression(title: [Digression on divergence of curl])[
-  I told you any two red arrows give you zero in @fig-int-chart-stokes.
+  I told you any two red arrows give you zero in the poster @fig-int-chart-stokes.
   So there is technically a theorem that says the divergence of a curl is 0: that is,
   $ op("div")(op("curl")(bf(F))) = nabla dot (nabla times bf(F)) = 0 $
   assuming $bf(F)$ has continuous second partial derivatives.
@@ -403,7 +403,7 @@ It's still true (and indeed follows from the 3D version) that:
 ]
 #figure(
   box(image("figures/gcd-cut-gc2.png", width: auto), stroke: 1pt),
-  caption: [These two red arrows from @fig-int-chart-stokes also chain to give zero.],
+  caption: [These two red arrows from the poster @fig-int-chart-stokes also chain to give zero.],
 )
 
 Let's see an example of that.
