@@ -8,7 +8,8 @@
 )
 
 
-#quote(attribution: [])[]
+#quote(attribution: [Joy to Anxiety in Inside Out 2])[
+  You don't get to choose who Riley is. Anxiety, you need to let her go.]
 
 This handout (and any other DLC's I write) are posted at
 #url("https://web.evanchen.cc/1802.html").
@@ -48,8 +49,6 @@ The work is a scalar quantity (there is a dot product inside the integrand, so i
   2. *Not yet covered in class*: If $cal(C)$ is a closed loop in $RR^2$, use Green's theorem instead.
   3. If both of these fail, fall back the parametrization recipe.
 ]
-
-Here's the FTC again if you forgot it:
 
 #memo(title: [Memorize: FTC for line integrals])[
   Suppose $bf(F) : RR^n -> RR^n$ is a conservative vector field,
