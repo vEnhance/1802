@@ -239,5 +239,3 @@ with three vectors in $RR^3$; see @fig-parallelepiped.
   Calculate the unit vector along the direction of the vector
   $ vec(-0.0008 pi, -0.0009 pi, -0.0012 pi). $
 ]
-
-#pagebreak()

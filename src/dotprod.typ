@@ -22,7 +22,6 @@ I promised you two definitions right? So here they are.
 #definition[
   Suppose $bf(v) = vec(a_1, dots.v, a_n)$ and $bf(w) = vec(b_1, dots.v, b_n)$ are two vectors in $RR^n$.
 
-
   The _algebraic definition_ is to take the sum of the component-wise products:
   $
     vec(a_1, dots.v, a_n)
@@ -61,7 +60,7 @@ I won't dwell on this proof too much in the interest of moving these notes forwa
   - The algebraic definition is easy:
     $ bf(v) dot bf(w) = - 5 dot 7 sqrt(3) + 5 sqrt(3) dot (-7) = -70 sqrt(3). $
 
-  - The geometric definition is a bit more work, see @fig-vectors-example.
+  - The geometric definition is a bit more work, see @fig-dot-ex1.
     In this picture, you can see there are two $30 degree$ angles between the axes,
     and the lengths of the vectors are $10$ and $14$.
     Hence, the angle $theta$ between them is $theta = 90 degree + (30 degree + 30 degree) = 150 degree$.
@@ -69,11 +68,12 @@ I won't dwell on this proof too much in the interest of moving these notes forwa
     $ bf(v) dot bf(w) = |bf(v)| |bf(w)| cos theta = 10 dot 14 dot cos(150 degree)
       = 140 dot - sqrt(3)/2 = -70sqrt(3). $
 ]
+
 #figure(
-  [TODO],
-  // image("<+Path+>", width: auto),
-  caption: [Some pictures of dot product.],
-) <fig-vectors-example>
+  image("figures/dotprod-ex1.png", width: auto),
+  caption: [The dot product of  $bf(v) = vec(-5, 5 sqrt(3))$
+  and $bf(w) = vec(7sqrt(3), -7)$ is $-70sqrt(3)$.]
+) <fig-dot-ex1>
 
 
 #tip[
@@ -86,34 +86,108 @@ I won't dwell on this proof too much in the interest of moving these notes forwa
   - Use the geometric definition to interpret the result in some way.
 ]
 
-#todo[an example of perpendicular in 2D]
+#example[
+  Let's find the dot product of $bf(v) = vec(1, 2)$ and $bf(w) = vec(-6, 3)$ both ways.
+  See @fig-dot-ex2.
+
+  - The algebraic definition is easy:
+    $ bf(v) dot bf(w) = 1 dot (-6) + 2 dot (3) = 0. $
+
+  - In this case the two vectors $bf(v)$ and $bf(w)$ form a $90 degree$ angle between them.
+    You should know this from high school, since the two blue rays in @fig-dot-ex2
+    have slopes $2$ and $-1/2$ respectively.
+    So the cosine of the angle is $0$, and the whole dot product is $0$.
+    (The lengths are $|bf(v)| = sqrt(5)$ and $|bf(w)| = 3sqrt(5)$,
+    but there's no need to actually calculate these.)
+]
+
+#figure(
+  image("figures/dotprod-ex2.png", width: auto),
+  caption: [Two perpendicular dot products],
+) <fig-dot-ex2>
 
 This example shows something new:
 #memo[Two nonzero vectors have perpendicular directions
   if and only if their dot product is $0$.]
 
-#todo[an example of perpendicular in 3D]
+This might seem stupid in two dimensions,
+because it's doing something you already knew how to do with slope.
+But in $RR^3$ there isn't a concept of slope,
+so if you want to see whether two vectors are perpendicular in $RR^3$,
+you'll want to use the dot product.
 
-#todo[an example of lengths]
+#sample[
+  Find the real number $t$ such that $vec(1,2,3)$ and $vec(4,5,t)$ are perpendicular.
+]
+#soln[
+  We need $1 dot 4 + 2 dot 5 + 3 dot t = 0$, so $t = -14/3$.
+]
 
-#memo[The dot product of a vector with itself is the squared length.]
-== [SIDENOTE] The proof of the equivalence of the dot product properties
-
-== [RECIPE] Checking whether two vectors are perpendicular
+#example[
+  If one takes the dot product of a vector $bf(v) = vec(x_1, dots.v, x_n)$ with itself,
+  one gets the *squared length*.
+  - To see this from the algebraic definition, note that
+    $ bf(v) dot bf(v) = x_1^2 + ... + x_n^2 = |bf(v)|^2. $
+  - To see this from the geometric definition, note that
+    $ bf(v) dot bf(v) = |bf(v)| |bf(v)| cos(0) = |bf(v)|^2. $
+]
 
 == [TEXT] Projection
+
+Suppose $bf(v)$ and $bf(w)$ are two nonzero vectors in $RR^n$.
+Let $theta$ denote the angle between them.
+Imagine projecting the vector $bf(v)$ onto the line through $bf(w)$,
+to get the purple vector shown in @fig-project1.
+
+#figure(
+  image("figures/dot-proj1.png", width: auto),
+  caption: [The projection of $bf(v)$ along $bf(w)$],
+) <fig-project1>
+
+
+Let's do an example to see how the dot product lets us compute this.
+#example[
+  Suppose $bf(w) = vec(3,1)$ and $bf(v) = vec(1,3)$, as in @fig-project1.
+]
+
+#definition(title: [Definition of vector projection])[
+  The *vector projection* of $bf(v)$ along the direction of $bf(w)$,
+  which we denote $op("proj")_(bf(w))(bf(v))$,
+  is the vector you get when you take the perpendicular from $bf(v)$ down to $bf(w)$.
+]
+#typesig[
+  The vector projection $op("proj")_(bf(w))(bf(v))$
+  is a vector that points in the same direction as $bf(w)$.
+]
+
+The most direct way to get the purple vector is to first figure out its length.
+#definition(title: [Definition of scalar component])[
+  The *scalar component* is defined by
+  $  op("comp")_(bf(w))(bf(v)) := |v| cos theta. $
+]
+#typesig[
+  The scalar projection is a number, and can be either positive, negative, or zero.
+]
+
 
 == [RECIPE] Projection of one vector along the direction along another
 
 #recipe(title: [Recipe for projecting one vector along another])[
   Suppose $bf(v)$ and $bf(w)$ are given vectors in $RR^n$.
-  To find the length of the projection of $bf(v)$ along $bf(w)$:
+  To find the *length* of the projection of $bf(v)$ along $bf(w)$:
 
   1. Output the absolute value of $(bf(v) dot bf(w)) / (|bf(w)|)$.
 
-  To find the actual vector $bf(v)$ along $bf(w)$:
+  To find the actual *projection* itself $bf(v)$ along $bf(w)$:
 
   1. Output $(bf(v) dot bf(w)) / (|bf(w)|) (bf(w)) / (|bf(w)|)$.
 ]
 
 #todo[define it]
+
+== [EXER] Exercises
+
+#exer[
+  In four-dimensional space $RR^4$, the vectors $vec(1,2,3,4)$
+  and $vec(5,6,7,t)$ are perpendicular. Compute $t$.
+]
