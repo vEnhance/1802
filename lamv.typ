@@ -21,11 +21,11 @@
 For comparison, Part Alfa corresponds approximately to §1, §2, §3.9 of #poonen.
 #include "src/vectors.typ"
 #pagebreak()
-#include "src/dotprod.typ"
+#include "src/dot.typ"
 #pagebreak()
 #include "src/planes.typ"
 #pagebreak()
-#include "src/crossprod.typ"
+#include "src/cross.typ"
 #pagebreak()
 
 #part[Part Bravo: Linear Algebra of Matrices]
