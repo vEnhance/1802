@@ -140,7 +140,7 @@ If you really want, you could say it has _every_ direction, but this is a conven
   We need to first find the length of the vector so we can scale it down.
   That's given by the Pythagorean theorem, of course: $ lr(|vec(3,-4)|) = sqrt(3^2+4^2) = 5. $
   So the direction along $vec(3,-4)$ would be
-  $ 1/5 vec(3,-4) =  vec(3/5, -4/5). $
+  $ 1/5 vec(3,-4) =  vec(3 slash 5, -4 slash 5). $
   See @fig-vec-3-4. The direction is somewhere between south and southeast.
 ]
 
@@ -214,7 +214,7 @@ with three vectors in $RR^3$; see @fig-parallelepiped.
 #digression[
   If you're interested in the proof of these results
   and their $n$-dimensional generalizations, the tool needed is the *wedge product*,
-  which is denoted $and.big^k (RR^n)$.
+  which is denoted $ and.big^k (RR^n). $
   This is well beyond the scope of 18.02,
   but it's documented in Chapter 12 of my #link("https://web.evanchen.cc/napkin.html")[Napkin]
   for those of you that want to read about it.

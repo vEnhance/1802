@@ -4,11 +4,11 @@ pair foot(pair P, pair A, pair B) { return foot(triangle(A,B,P).VC); }
 usepackage("amsmath");
 
 import graph;
-xaxis("$x$", -1.5, 3.5, Ticks(Label(fontsize(9pt)), Step=1, begin=true, end=true), Arrows);
+xaxis("$x$", -1.5, 4.5, Ticks(Label(fontsize(9pt)), Step=1, begin=true, end=true), Arrows);
 yaxis("$y$", -1.5, 3.5, Ticks(Label(fontsize(9pt)), Step=1, begin=true, end=true), Arrows);
 
-pair v = (1,3);
-pair w = (3,1);
+pair v = (2,3);
+pair w = (4,1);
 pair O = (0,0);
 
 draw(O--v, blue, EndArrow);

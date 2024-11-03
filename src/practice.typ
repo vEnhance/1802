@@ -4,6 +4,12 @@
 
 Some practice questions from topics through the entire course.
 
+#exerstar[
+  Find all possible values of $a x + b y + c z$
+  over real numbers $a$, $b$, $c$, $x$, $y$, $z$
+  satisfying $a^2 + b^2 + c^2 = 2$ and $x^2 + y^2 + z^2 = 5$.
+]
+
 #exer[
   Find the unique $2 times 2$ matrix $A$ for which
   $vec(1,1)$ is an eigenvector with eigenvalue $3$

@@ -8,6 +8,45 @@ Like the dot product, the cross product also has two definitions, one algebraic 
 
 == [TEXT] The two definitions of the cross product
 
+This definition is terrible, so bear with me.
+See the extended digression in @sec-cross-sucks for more on that.
+
+#definition[
+  Suppose $bf(v) = vec(a_1, a_2, a_3)$ and $bf(w) = vec(b_1, b_2, b_3)$ are two vectors in $RR^n$.
+
+  The _algebraic definition_ of the cross product is:
+  $ bf(v) times bf(w) := det mat(a_2, a_3; b_2, b_3) bf(e)_1
+    - det mat(a_1, a_3; b_1, b_3) bf(e)_2 + det mat(a_1, a_2; b_1, b_2) bf(e)_3
+    = vec(a_2 b_3 - a_3 b_2, a_3 b_1 - a_1 b_3, a_1 b_2 - a_2 b_1). $
+
+  The _geometric definition_ of the cross product is based on
+  specifying both the direction and magnitude.
+  - The *magnitude* of $bf(v) times bf(w)$ is equal to the area of the parallelepiped
+    formed by $bf(v)$ and $bf(w)$.
+    In trigonometry turns, if $theta$ is the included angle,
+    this equals $|bf(v)| |bf(w)| sin theta$.
+  - The *direction* is given by requiring $bf(v) times bf(w)$ to be perpendicular
+    to _both_ $bf(v)$ and $bf(w)$, and also satisfying the *right-hand rule*.
+]
+#typesig[
+  The cross product *only* accepts two vectors *both of length $3$*.
+  And it outputs a single *vector of length $3$*.
+]
+
+#tip(title: [How to remember the algebraic cross product definition])[
+  The algebraic definition is usually remembered using the following mnemonic:
+  $ bf(v) times bf(w) =
+    det mat(
+      bf(e)_1, bf(e)_2, bf(e)_3;
+      a_1, a_2, a_3;
+      b_1, b_2, b_3
+    ). $
+  Mathematically speaking, the right-hand side doesn't make sense and is a type-error,
+  because one can't have a matrix where some things in it are numbers
+  and other things in it are vectors.
+  However, if you ignore that and multiply anyway, you'll get the algebraic definition above.
+]
+
 
 == [SIDENOTE] The cross product sucks <sec-cross-sucks>
 
