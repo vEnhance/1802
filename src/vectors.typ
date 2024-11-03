@@ -4,7 +4,7 @@
 
 == [TEXT] Notation for scalars, vectors, points
 
-If you haven't seen $RR$ before, let's introduce it now:
+If you haven't seen the symbol $RR$ before, let's introduce it now:
 #definition[
   We denote by $RR$ the real numbers, so $3, sqrt(2), -pi$ are elements of $RR$.
   Sometimes we'll also refer to a real number as a *scalar*.
@@ -30,6 +30,9 @@ this book will adopt the following conventions for variable names:
 
 - Capital letters like $P$ and $Q$ are used for points.
   When we draw pictures of points, we always draw them as _dots_.
+
+- Sometimes, if we need to refer to the vector drawn as an arrow
+  which starts at point $P$ and ends at $Q$, we write $arrow(P Q)$ for it.
 ]
 
 We'll also use different notation for actual elements:

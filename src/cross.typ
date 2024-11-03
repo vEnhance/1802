@@ -4,12 +4,17 @@
 
 The cross product is the last major linear algebra tool we'll need to introduce
 (together with determinants and the dot product).
-Like the dot product, the cross product also has two definitions, one algebraic and one geometric.
+Like the dot product, the cross product also has two definitions,
+one algebraic and one geometric.
+
+However, unlike the dot product, the cross product is really stilted and unnatural,
+and not used as much.
+(More on that in @sec-cross-sucks.)
+I'll try to keep this section brief.
 
 == [TEXT] The two definitions of the cross product
 
 This definition is terrible, so bear with me.
-See the extended digression in @sec-cross-sucks for more on that.
 
 #definition[
   Suppose $bf(v) = vec(a_1, a_2, a_3)$ and $bf(w) = vec(b_1, b_2, b_3)$ are two vectors in $RR^n$.
@@ -33,6 +38,25 @@ See the extended digression in @sec-cross-sucks for more on that.
   And it outputs a single *vector of length $3$*.
 ]
 
+#remark(title: [Remark: The right-hand rule])[
+  The hack with the right-hand rule is necessary
+  because if I tell you only the length of a vector in $RR^3$
+  and that it is normal to two other vectors in $RR^3$,
+  there are actually two vectors.
+  (For example, there are two vectors of length $5$ perpendicular to $bf(e)_1$ and $bf(e)_2$:
+  namely $pm 5 bf(e)_3$.)
+
+  So we need to pick one, and the right-hand rule
+  says that if you point your right index finger along $bf(v)$
+  and right middle finger along $bf(w)$ closer to your palm,
+  and stick out your right thumb, then $bf(v) times bf(w)$ points along your thumb.
+
+  Another way to describe the right-hand rule is to require the following table to be true:
+  $ bf(e)_1 times bf(e)_2 &= bf(e)_3 = -bf(e)_2 times bf(e)_1 \
+    bf(e)_2 times bf(e)_3 &= bf(e)_3 = -bf(e)_3 times bf(e)_2 \
+    bf(e)_3 times bf(e)_1 &= bf(e)_3 = -bf(e)_1 times bf(e)_3. $
+]
+
 #tip(title: [How to remember the algebraic cross product definition])[
   The algebraic definition is usually remembered using the following mnemonic:
   $ bf(v) times bf(w) =
@@ -45,6 +69,104 @@ See the extended digression in @sec-cross-sucks for more on that.
   because one can't have a matrix where some things in it are numbers
   and other things in it are vectors.
   However, if you ignore that and multiply anyway, you'll get the algebraic definition above.
+]
+
+#warning(title: [Warning: Cross product is anti-commutative])[
+  From either definition, you should be able to see that
+  $ bf(v) times bf(w) = - bf(w) times bf(v) $
+  in contrast to the dot product.
+  Note the minus sign.
+  (The right rule means that you can't swap your index and middle finger.)
+
+  Also, note that $bf(v) times bf(v) = 0$
+  (or indeed $bf(v) times bf(w) = 0$ whenever $bf(v)$ and $bf(w)$ are parallel).
+]
+
+I really want to get this section over with so I'll just give you one example with numbers
+and not even talk about the corresponding geometry.
+
+#sample[
+  Compute the cross product of $bf(v) = vec(1,2,3)$ and $bf(w) = vec(4,5,6)$.
+]
+#soln[
+  Write
+  $ bf(v) times bf(w) := det mat(2, 3; 5, 6) bf(e)_1
+    - det mat(1, 3; 4, 6) bf(e)_2 + det mat(1, 2; 4, 5) bf(e)_3
+    = -3 bf(e)_1 + 6bf(e)_2 - 3bf(e)_3 = vec(-3,6,3). #qedhere $
+]
+As a sanity check you can verify that, indeed,
+this vector is perpendicular to both $bf(v)$ and $bf(w)$ using the dot product
+$ vec(-3,6,3) dot vec(1,2,3) &= (-3)(1) + (6)(2) + (3)(3) = 0 \
+  vec(-3,6,3) dot vec(4,5,6) &= (-3)(4) + (6)(5) + (3)(6) = 0. $
+
+== [RECIPE] What to use the cross product for
+
+Unlike the dot product, which is just a number, the cross product is a vector.
+So it has more information in it --- both a direction and a magnitude.
+
+- The direction of $bf(v) times bf(w)$ is perpendicular to both $bf(v)$ and $bf(w)$.
+- The magnitude is the area of the parallelogram.
+
+However in practice, when we use the cross product,
+we'll often _only use one piece of information_.
+
+Hence the following two recipes below.
+
+#recipe(title: [Recipe for normal vectors])[
+  To find a vector perpendicular to both $bf(v)$ and $bf(w)$ at once:
+
+  1. Output any nonzero multiple of $bf(v) times bf(w)$.
+]
+
+#recipe(title: [Recipe for area])[
+  To find the area of the parallelogram formed by $bf(v)$ and $bf(w)$ in $RR^3$:
+
+  1. Output the magnitude of $bf(v) times bf(w)$.
+]
+
+Notice in the first recipe, we ignore the magnitude;
+in the second recipe, we ignore the direction.
+
+#sample[
+  Consider the three points $A = (1,0,0)$, $B = (0,2,0)$, $C = (0,0,3)$.
+
+  - Find a normal vector to the plane through $A$, $B$, $C$.
+  - Find the equation of the plane.
+  - Compute the area of triangle $A B C$.
+]
+#soln[
+  First, let's find a normal vector to the plane through $A$, $B$, and $C$.
+  The idea is to compute two vectors $arrow(A B)$ and $arrow(A C)$:
+  $ arrow(A B) &= vec(0 - 1 , 2 - 0 , 0 - 0) = vec(- 1 , 2 , 0) \
+    arrow(A C) &= vec(0 - 1 , 0 - 0 , 3 - 0) = vec(- 1 , 0 , 3) . $
+  These two vectors can be drawn as arrows contained in the plane through them.
+  So if we compute the cross product, we'll get a normal vector we wanted!
+  That is,
+  $ arrow(A B) times arrow(A C)
+    &= (2 dot 3 - 0 dot 0) bf(e)_1  - (- 1 dot 3 - 0 dot - 1) bf(e)_2
+      + (- 1 dot 0 - 2 dot - 1) bf(e)_3 \
+    &= (6 - 0) bf(e)_1 - (- 3 - 0) bf(e)_2 + (0 - (- 2)) bf(e)_3 = vec(6,3,2). $
+
+  That's the normal vector. To find the equation of the plane, we know that we should have
+  $ 6 x + 3 y + 2 z = d $
+  for some constant $d$.
+  Plugging in any of the three points $A$, $B$, $C$ gives $d = 6$
+  (the redundancy here gives us a way to check our arithmetic, too).
+  So the plane is $ 6 x + 3 y + 2 z = 6. $
+
+  Finally, the area of $triangle.stroked.t A B C$ is half the area of the parallelogram formed by
+  $arrow(A B)$ and $arrow(A C)$, so that
+  $ op("Area")(triangle.stroked.t A B C)
+    = 1 / 2 lr(|arrow(A B) times arrow(A C)|)
+    = 1 / 2 sqrt(6^2 + 3^2 + 2^2) = 7 / 2. #qedhere $
+]
+
+#remark[
+  This shape of question is worth remembering:
+  the cross product often gives you a way to find a normal vector to some plane,
+  because it's so good at making right angles.
+  Then once you have the normal vector, you can find the equation of the plane
+  using the recipe from @recipe-plane-known-dir.
 ]
 
 
@@ -88,3 +210,57 @@ Similarly, for $n > 4$, this translation can't be done.
 That's why the cross product is so brittle and can't work past $RR^3$.
 
 == [RECAP] Recap of vector stuff up to here
+
+A brief summary of the last few chapters.
+
+- The dot and cross products have algebraic formulas and geometric properties
+  that make them useful in a lot of 3D geometry applications.
+
+- The dot product lets you detect perpendicularity and projections.
+  - Two vectors are perpendicular if and only if their dot product is zero.
+
+- The cross products generates perpendicularities and lets you compute area.
+
+- Both are used in the theory of planes:
+  - We use the dot product to show that the normal vector
+    to the plane $a x + b y + c z = d$ was the vector $vec(a,b,c)$.
+  - We use the projection from the dot product to find the distance from a point to a plane.
+  - Given three points on a plane, the cross product let us find the normal vector.
+
+See also @table-vector-objects, which summarizes some of the vectors
+we've seen in applications.
+
+#figure(
+  table(
+    columns: 3,
+    align: left,
+    table.header([Vector], [Direction], [Magnitude]),
+    [Normal vector $bf(n)$ to plane], [Perpendicular to plane], [_Irrelevant!_],
+    [$op("proj")_(bf(w))(bf(v))$], [Same as $bf(w)$], [Scalar projection],
+    [Cross product $bf(v) times bf(w)$], [Perpendicular to both $bf(a)$ and $bf(b)$], [Area of parallelogram]
+  ),
+  caption: [Some commonly used kinds of vectors we've met so far.],
+  kind: table
+) <table-vector-objects>
+
+== [EXER] Exercises
+
+#todo[idk what's good to test with cross products]
+
+#exer[
+  Let $bf(v)$ and $bf(w)$ be vectors in $RR^3$
+  for which $bf(v) times bf(w) = vec(1,2,3)$.
+  Compute $5bf(w) times 4bf(v)$.
+]
+
+#exer[
+  Let $bf(v)$ and $bf(w)$ be unit vectors in $RR^3$.
+  Find all possible values of
+  $ |bf(v) times bf(w)|^2 + (bf(v) dot bf(w))^2. $
+]
+
+#exerstar[
+  Suppose $bf(v)$ is a vector in $RR^3$ such that
+  $ vec(1,2,3) times bf(v) = vec(4,5,k). $
+  Compute $k$.
+]
