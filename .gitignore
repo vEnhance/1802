@@ -3,3 +3,4 @@
 outputs/*
 !outputs/.gitkeep
 worksheets/*
+!published/
