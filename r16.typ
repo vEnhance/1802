@@ -67,7 +67,7 @@ I'm just gonna spoil the answers to all three of Maulik's questions from his not
   #memo(title: [Memorize: Conservative $<==>$ 2D scalar curl is zero])[
     Assume here the vector field is continuously differentiable and defined everywhere on $RR^2$.
     A vector field $bf(F) : RR^2 -> RR^2$
-    given by $bf(F)(x,y) = vec(p(x,y), q(x,y))$ is conservative iff
+    given by $bf(F)(x,y) = vec(p(x,y), q(x,y))$ is conservative if and only if
     $ (partial q) / (partial x) = (partial p) / (partial y) . $
   ]
   When $bf(F) = nabla f$, that condition is just saying $f_(x y) = f_(y x)$,
