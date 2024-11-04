@@ -87,11 +87,10 @@ Let's put these examples into aquatic terms.
 ]
 
 #figure(
-  image("media/waterfall.jpg", width: auto),
+  image("media/waterfall.jpg", width: 50%),
   caption: [A river flowing from the base of a waterfall.
     Black arrows point along the direction of the gradient.],
 )
-
 
 #example(title: [Example of a non-conservative vector field: a whirlpool])[
   Now imagine instead you have a whirlpool.
@@ -107,10 +106,13 @@ Let's put these examples into aquatic terms.
 ]
 
 #figure(
-  image("media/whirlpool.jpg", width: auto),
+  image("media/whirlpool.jpg", width: 50%),
   caption: [A whirlpool. Round and round we go. Not a conservative vector field.],
 )
 
+== [TEXT] Drawing vector fields
+
+#todo[write up how to draw a vector field]
 
 == [TEXT] Preview of integration over vector fields
 
@@ -181,6 +183,13 @@ This is summarized in @table-purples.
     if you need mass of a wire or metal plate, but that's quite rare I think.)],
   kind: table
 ) <table-purples>
+
+This bears repeating:
+#idea[
+  We'll pretty much not use the scalar field integrals besides for arc length and surface area.
+  In other words, you can mostly ignore the green pictures in
+  the poster @fig-int-chart-stokes that got replaced by purple ones.
+]
 
 === The six red arrows
 
@@ -311,6 +320,11 @@ Instead, treat this as a template for all the theorem statements you are going t
   Every red arrow in the poster @fig-int-chart-stokes has an associated Stokes result.
 ]
 Know this going in to each of the concepts to follow.
+
+#figure(
+  image("media/all-stokes.png", width: auto),
+  caption: [It's all Stokes theorem.],
+)
 
 == [TEXT] Stay determined
 
