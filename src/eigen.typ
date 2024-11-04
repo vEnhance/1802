@@ -713,7 +713,7 @@ But I'll show you how to do it with eigenvectors.
 ]
 
 #exer[
-  Compute the eigenvalues and eigenvectors of the $3 times 3$ matrix $ mat(1,2,3;2,4,6;3,9,6). $
+  Compute the eigenvalues and eigenvectors of the $3 times 3$ matrix $ mat(1,2,3;2,4,6;3,6,9). $
 ]
 #exerstar[
   Find the eigenvectors and eigenvalues of the $6 times 6$ matrix
