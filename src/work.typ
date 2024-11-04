@@ -169,6 +169,8 @@ Letting $bf(F)$ represent water current as always,
 the "work" done along a trajectory can be thought of as a measure of
 *how much the water current helps (or hinders) movement along that path*.
 
+#todo[...]
+
 To compute this, consider a trajectory along which an object, such as a
 boat or swimmer, moves through the water. The current vector field
 $bf(F)$ at any point describes the speed and direction of the
@@ -406,6 +408,9 @@ Here are a few.
   $ op("Area") (cal(R)) = pi r^2 = pi (2)^2 = 4 pi . $
   So the answer is $2 dot 4 pi = 8 pi. $
 ]
+
+#todo[example where it's just a straight line]
+#todo[example of like $5 dif x$ or something]
 
 #sample[
   Evaluate the line integral $ oint_(cal(C)) (y dif x - x dif y) $
