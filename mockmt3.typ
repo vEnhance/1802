@@ -60,7 +60,7 @@
   $ int_(x=0)^((e-1)^2) log(sqrt(x)+1) dif x. $
 
 
-Solutions are posted in Section 45 of #url("https://web.evanchen.cc/upload/1802/lamv.pdf").
+Solutions are posted in Section 45 of #url("https://web.evanchen.cc/textbooks/lamv.pdf").
 ]
 
 #pagebreak()

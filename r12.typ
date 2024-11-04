@@ -37,7 +37,7 @@ Welcome back from the long weekend!
 
 = Highlights from LAMV
 
-Again, see the full book at #url("https://web.evanchen.cc/upload/1802/lamv.pdf") for full exposition ---
+Again, see the full book at #url("https://web.evanchen.cc/textbooks/lamv.pdf") for full exposition ---
 (much more than I can fit on one printed page!
 But here is a quick cheat sheet.
 

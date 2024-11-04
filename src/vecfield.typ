@@ -127,13 +127,13 @@ In order for this to be even remotely memorable,
 what I'm going to do is augment the previous @fig-int-chart-triangle
 with pictures corresponding to the situations in which we might integrate a vector field.
 The new chart can also be downloaded as a
-#link("https://web.evanchen.cc/upload/1802/integrals-stokes.pdf")[large PDF version].
+#link("https://web.evanchen.cc/textbooks/poster-stokes.pdf")[large PDF version].
 
 #figure(
   image("figures/integrals-stokes.png", width: 100%),
   caption: [
     Upgraded @fig-int-chart-triangle with vector fields.
-    Download at #url("https://web.evanchen.cc/upload/1802/integrals-stokes.pdf").
+    Download at #url("https://web.evanchen.cc/textbooks/poster-stokes.pdf").
   ]
 ) <fig-int-chart-stokes>
 
@@ -336,6 +336,6 @@ at a time over the rest of the semester.
 ]
 #exer[
   Print out a copy of the high-resolution version of @fig-int-chart-stokes
-  (which can be downloaded at #url("https://web.evanchen.cc/upload/1802/integrals-stokes.pdf"))
+  (which can be downloaded at #url("https://web.evanchen.cc/textbooks/poster-stokes.pdf"))
   and hang it in your room.
 ] <exer-poster>

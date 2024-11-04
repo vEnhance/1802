@@ -29,13 +29,13 @@ but it turns out later when we cover div/grad/curl the $0$-dimensional case is r
 Here's a giant chart in @fig-int-chart-triangle.
 (The chart is so big it doesn't quite fit in the page,
 but you can download a
-#link("https://web.evanchen.cc/upload/1802/integrals-triangle.pdf")[large PDF version]).
+#link("https://web.evanchen.cc/textbooks/poster-ints.pdf")[large PDF version]).
 
 #figure(
   image("figures/integrals-triangle.png", width: 100%),
   caption: [
     For each $0 <= d <= n <= 3$, the kind of integral is drawn and named.
-    Download at #url("https://web.evanchen.cc/upload/1802/integrals-triangle.pdf").
+    Download at #url("https://web.evanchen.cc/textbooks/poster-ints.pdf").
   ]
 ) <fig-int-chart-triangle>
 

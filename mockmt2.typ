@@ -67,6 +67,6 @@
 
 The solutions to all the problems are now posted in Section 29 of my LAMV book:
 #align(center)[
-  #url("https://web.evanchen.cc/upload/1802/lamv.pdf").
+  #url("https://web.evanchen.cc/textbooks/lamv.pdf").
 ]
 ]

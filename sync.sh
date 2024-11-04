@@ -13,4 +13,5 @@ for target in "${TARGET_FILES[@]}"; do
   fi
 done
 
-gcloud storage rsync --no-ignore-symlinks outputs/ gs://web.evanchen.cc/upload/1802/ --cache-control="private,max-age=0"
+gcloud storage rsync --no-ignore-symlinks outputs/ gs://web.evanchen.cc/upload/1802 --cache-control="private,max-age=0"
+gcloud storage rsync --no-ignore-symlinks published/ gs://web.evanchen.cc/textbooks --cache-control="private,max-age=0"
