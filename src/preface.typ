@@ -250,7 +250,7 @@ This book is meant to be an aid, not a cage.
 
 If you're thinking of becoming a math major, there's some advice in @appendix-math-major.
 
-== [SIDENOTE] These exercises are a bit harder than real 18.02 exam questions, so take your time
+== [SIDENOTE] My exercises are harder, so take your time
 
 When setting exercises, I tried to come up with questions
 that require a bit of thought and understanding, for learning purposes.
@@ -264,16 +264,16 @@ you have no time to think#footnote[
   than having any real understanding, and I apologize that you have to suffer through it.
 ]--- you have to answer each question in 5-10 minutes.
 So on the flip side, you will probably be pleasantly surprised when you find that
-50%-80% of your midterm questions can be solved by turning _off_
+50%-80% of real midterm questions can be solved by turning _off_
 your brain and following recipes to the letter.
 It has to be this way because of the short time limit and the amount of material.
 
-All this is to say to *not be discouraged if you find the exercises on the hard side*.
+All this is to say to *not be discouraged if you find the exercises in this book harder*.
 It's by design.
 The real exam will have a lot of cookie-cutter no-thought questions
 in return for the short time limit.
 
-(Like most textbooks, the starred exercises are the hardest ones.)
+(Like most textbooks, the starred exercises are more challenging.)
 
 == [SIDENOTE] Acknowledgments
 
