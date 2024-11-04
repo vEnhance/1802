@@ -146,7 +146,7 @@ Here's the answer to the pop quiz in @lintransf (I'll restate the question first
 #solution[
   $
   T( vec(103,104) ) = vec(pi, 9) + vec(0, 12) = vec(pi, 21) \
-  T( vec(203,204) ) = vec(pi, 9) + 2 vec(0, 12) = vec(pi, 33). #qedhere
+  T( vec(203,204) ) = vec(pi, 9) + 2 vec(0, 12) = vec(pi, 33).
   $
   /* (If you're using the 18.02 definition of linear transform,
   then the above equations hold because matrix multiplication is distributive over addition.
@@ -161,7 +161,7 @@ Now more generally, here's the example with the made-up numbers
   what is $T( vec(50, 70) )$?
 ] <pop2>
 #solution[
-  $ T( vec(50, 70) ) = 50 vec(1,3) + 70 vec(2,4) = vec(190, 430). #qedhere $
+  $ T( vec(50, 70) ) = 50 vec(1,3) + 70 vec(2,4) = vec(190, 430). $
 ]
 
 More generally, the second question shows that if you know
@@ -224,7 +224,7 @@ and think about their composition $S compose T$.
 #solution[
   $
   S(T(vec(1, 0))) = S(vec(1, 3)) = 1 vec(5,7) + 3 vec(6, 8) = vec(23, 31) \
-  S(T(vec(0, 1))) = S(vec(2, 4)) = 2 vec(5,7) + 4 vec(6, 8) = vec(34, 46). #qedhere
+  S(T(vec(0, 1))) = S(vec(2, 4)) = 2 vec(5,7) + 4 vec(6, 8) = vec(34, 46).
   $
 ]
 
