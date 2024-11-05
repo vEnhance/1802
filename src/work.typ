@@ -19,9 +19,22 @@ as a path $bf(r) : RR -> RR^n$ through it, we can define the *work* on it.
   $ int_(t="start time")^("stop time") bf(F)(bf(r)(t)) dot bf(r)'(t) dif t. $
 ]
 #typesig[
-  The work is a scalar quantity (there is a dot product inside the integrand,
-  so it returns a number).
+  Keep in mind the types of the inputs; see @table-types-work.
+  The work is a scalar quantity
+  (there is a dot product inside the integrand, so it outputs a number).
 ]
+#figure(
+  table(
+    columns: 4,
+    align: left,
+    table.header([Symbol], [Name], [Input type], [Output type]),
+    [$bf(r) : RR -> RR^n$], [Parametrization of a path], [Scalar $t$ (time)], [Point (dot) in $RR^n$],
+    [$bf(r)' : RR -> RR^n$], [Velocity vector for $bf(r)$], [Scalar $t$ (time)], [Vector (arrow) in $RR^n$],
+    [$bf(F) : RR^n -> RR^n$], [Vector field], [Point (dot) in $RR^n$], [Vector (arrow) in $RR^n$],
+  ),
+  caption: [The type signatures of the objects in the work integral.],
+  kind: table
+) <table-types-work>
 
 This is commonly abbreviated with shorthand in two ways.
 - First, we mention a new row of the shorthand in @table-shorthand:
@@ -261,12 +274,6 @@ along a different path.
   Compute the line integral
   $ int_(cal(C)) y^(2 slash 3) dif x. $
 ]
-#figure(
-  image("figures/work-ex1b.png", width: auto),
-  caption: [The vector field $bf(F)(x,y) = vec(y^(2 slash 3), 0)$ (little light blue horizontal arrows)
-  and an arc $cal(C)$ from the parabola $y=x^2$ in it (purple).],
-) <fig-work-ex1b>
-
 #soln[
   First we need to expand the shorthand with $dif x$ and $dif y$.
   Recall that $p dif x + q dif y$ is shorthand for the vector field being $vec(p,q)$.
@@ -283,6 +290,12 @@ along a different path.
   (Again, if you imagine the blue arrows as a river current,
   it's definitely helping you swim, even if it's not directly aligned
   since you're not swimming straight east.)
+
+  #figure(
+    image("figures/work-ex1b.png", width: auto),
+    caption: [The vector field $bf(F)(x,y) = vec(y^(2 slash 3), 0)$ (little light blue horizontal arrows)
+    and an arc $cal(C)$ from the parabola $y=x^2$ in it (purple).],
+  ) <fig-work-ex1b>
 
   The arc of the parabola we're trying to traverse needs to start at $(-1,1)$ and end at $(1,1)$.
   Just to make things concrete, examples of points we expect to pass through in our path are
