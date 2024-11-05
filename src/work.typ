@@ -136,18 +136,16 @@ if we choose to hide the parametrization $bf(r)(t)$ from the notation.)
   The work integral depends on which direction you walk along the path
   (it negates if you flip the start and stop point),
   but it doesn't depend on exactly how exactly you parametrize the path.
-
-  Thus, we might talk about the work integral along, say,
-  the arc upper semicircle from $(1,0)$ to $(-1,0)$ (see the blue arc in later @fig-work-ex1).
-
-  When we actually do the calculation,
-  we could use $bf(r)(t) = (cos(t), sin(t))$ for $0 <= t <= pi$;
-  but we could also use $bf(r)(t) = (cos(pi t), sin(pi t))$ for $0 <= t <= 1$.
+  Thus, the comments from @sec-flex-param apply here:
+  if you're saying, parametrizing the semicircle
+  $(1,0)$ to $(-1,0)$ the blue arc in later @fig-work-ex1),
+  you should probably use $bf(r)(t) = (cos(t), sin(t))$ for $0 <= t <= pi$.
+  (You could also use $bf(r)(t) = (cos(pi t), sin(pi t))$ for $0 <= t <= 1$.
   Or if you wanted to annoy the grader,
   you could even use $bf(r)(t) = (cos(pi t^2), sin(pi t^2))$ for $0 <= t <= 1$,
   which traces out the same arc at an irregular rate.
   Since these all give the same answer, you should pick the parametrization
-  that makes the calculation easiest for you.
+  that makes the calculation easiest for you.)
 ]
 
 #tip(title: [Tip: Splicing is OK])[
@@ -163,7 +161,7 @@ if we choose to hide the parametrization $bf(r)(t)$ from the notation.)
 
   1. Pick *any* parametrization $bf(r) : RR -> RR^n$ of the curve $cal(C)$,
     including specifying the start and stop times.
-    - You have some freedom in how you set the parametrization:
+    - As described in @sec-flex-param, you have some freedom in how you set the parametrization:
       it only matters you start and end at the right place,
       and trace out the exact curve $cal(C)$.
       So you should pick a parametrization that makes your calculation easier.

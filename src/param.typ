@@ -461,7 +461,131 @@ Let's see this.
     = -4cos(pi) + 4cos(0) = 8. #qedhere $
 ]
 
+== [TEXT] Parametrizations with flexible time <sec-flex-param>
+
+Sometimes you'll be asked to parametrize some path but not required to follow an exact time.
+(This happens a lot in @sec-work, when we introduce work integrals.)
+In that case, you're welcome to pick any parametrization that traces out the requested path,
+even the start and end time.
+Usually the strategy is to pick one that makes subsequent calculation easier.
+
+#sample[
+  Let $cal(C)$ be the line segment starting at $(0,0,0)$ and ending at $(100, 200, 300)$.
+  Find any parametrization $bf(r)(t)$ for $cal(C)$.
+]
+#soln[
+  The parametrization should start at $(0,0,0)$, end at $(100, 200, 300)$
+  and pass through the segment.
+  A snapshot of some examples points on its trajectory are
+  $ (0,0,0) --> (1,2,3) --> (10, 20, 30) --> (50, 100, 150) --> (100, 200, 300) $
+  among many others (like $(8pi, 16pi, 24pi)$, etc.).
+  Anyway, all the following are acceptable parametrizations:
+
+  - $bf(r)(t) = (t, 2t, 3t)$ for $0 <= t <= 100$
+  - $bf(r)(t) = (100t, 200t, 300t)$ for $0 <= t <= 1$
+  - $bf(r)(t) = (100t^7, 200t^7, 300t^7)$ for $0 <= t <= 1$,
+    if you enjoy making life hard for yourself.
+
+  Again, this is easiest to internalize by example:
+  in the first one, try writing down the location of the point
+  at $t = 0$, $t = 1$, $t = 2$, ..., $t = 100$
+  and verify that it's tracing out the correct thing.
+
+  In practice most people would prefer to work with the first or second one.
+]
+
+#sample[
+  Let $cal(C)$ be the line segment starting at $(7,8,9)$ and ending at $(107, 208, 309)$.
+  Find any parametrization $bf(r)(t)$ for $cal(C)$.
+]
+#soln[
+  For example, the parametrization should start at $(7,8,9)$, end at $(107, 208, 309)$.
+  Some examples of points along the path:
+  $ (7,8,9) --> (8,10,12) --> (17, 28, 39) --> (57, 108, 159) --> (107, 208, 309). $
+  So all the following are examples of acceptable parametrizations:
+
+  - $bf(r)(t) = (t+7, 2t+8, 3t+9)$ for $0 <= t <= 100$
+  - $bf(r)(t) = (100t+7, 200t+8, 300t+9)$ for $0 <= t <= 1$
+  - $bf(r)(t) = (100sin(t)+7, 200sin(t)+8, 300sin(t)+9)$ for $0 <= t <= pi/2$,
+    if you enjoy making life hard for yourself.
+]
+
+#sample[
+  Let $cal(C)$ denote the arc of the parabola $y = x^2$ starting from $(-1,1)$
+  and moving right to $(1,1)$.
+]
+#soln[
+  Just to make things concrete, examples of points we expect to pass through in our path are
+  $ (-1,1) --> (-1/2, 1/4) --> (-1/3, 1/9) --> (0,0) --> (1/3, 1/9) --> (1/2, 1/4) --> (1,1). $
+  All of the following are thus examples:
+
+  - $bf(r)(t) = (t, t^2)$ for $-1 <= t <= 1$. (Yes, negative time is okay!)
+  - $bf(r)(t) = (t-1, (t-1)^2)$ for $0 <= t <= 2$
+    if you're allergic to negative times.
+  - $bf(r)(t) = (2t-1, (2t-1)^2)$ for $0 <= t <= 1$.
+  - $bf(r)(t) = (log(t), log(t)^2)$ for $1/e <= t <= e$ if you have nothing better to do with your day.
+
+  I recommend the first one.
+]
+
+#sample[
+  Let $cal(C)$ be the path traced out by following the parabola $y = x^2 / 10 + 1$
+  starting from $(-2,1.4)$ and ending at $(3,1.9)$.
+  (See @fig-param-parabola.)
+  Find any parametrization $bf(r)(t)$ for $cal(C)$.
+]
+#figure(
+  image("figures/param-parabola.png", width: auto),
+  caption: [Walking along the parabola $y = x^2 / 10 + 1$.
+    I recommend the parametrization $bf(r)(t) = (t, t^2/10+1)$ for $-2 <= t <= 3$.],
+) <fig-param-parabola>
+
+#soln[
+  Examples of points passed through in this trajectory are:
+  $ (-3,1.9) --> (-2,1.4) --> (-1, 1.1) --> (0,1) --> (1,1.1) --> (2,1.4) --> (3,1.9). $
+  In situations like this where the one coordinate just moves from one end to the other
+  along the path, one common strategy is to just use that coordinate as $t$
+  and then figure out the other coordinates from there.
+
+  All of the following are examples of acceptable parametrizations:
+
+  - $bf(r)(t) = (t, t^2 / 10 + 1)$ for $-2 <= t <= 3$.
+  - $bf(r)(t) = (t-2, (t-2)^2 / 10 + 1)$ for $0 <= t <= 5$ if you're allergic to negative times.
+  - $bf(r)(t) = (5t-2, (5t-2)^2 / 10 + 1)$ for $0 <= t <= 1$ if you really like the end time to be $1$.
+  - $bf(r)(t) = (5 dot 2^t - 9, (5 dot 2^t - 9)^2 / 10 + 1)$ for $0 <= t <= 1$ if you want to torment graders.
+
+  I think most people in practice would prefer the first one.
+]
+
+#sample[
+  Let $cal(C)$ be the $120 degree$ arc of the unit circle starting from $(0, -1)$
+  and ending at $(sqrt(3)/2, 1/2)$, going counterclockwise.
+  (See @fig-param-arc.)
+  Find any parametrization $bf(r)(t)$ for $cal(C)$.
+]
+#figure(
+  image("figures/param-circle.png", width: auto),
+  caption: [An $120 degree$ arc of the unit circle parametrized by
+    $bf(r)(t) = (cos t, sin t)$ for $-pi/2 <= t <= pi/6$.],
+) <fig-param-arc>
+
+#soln[
+  All the following are examples of acceptable parametrizations:
+  - $bf(r)(t) = (cos t, sin t)$ for $-pi/2 <= t <= pi/6$.
+  - $bf(r)(t) = (cos t, sin t)$ for $3/2 pi <= t <= 13/6 pi$,
+    if you insist on using nonnegative $t$.
+  - $bf(r)(t) = (cos(t + 3/2 pi), sin (t + 3/2 pi))$ for $0 <= t <= pi/3$.
+  - $bf(r)(t) = (sqrt(1-t^2), t)$ for $-1 <= t<= 1/2$ (not recommended).
+
+  Again, I recommend the simplest (first) one.
+]
+
 == [EXER] Exercises
+
+#exer[
+  Find the arc length of the part of the parabola $y = x^2 - x - 12$
+  between $(-3,0)$ and $(4,0)$.
+]
 
 #exer[
   At an amusement park, a teacup ride consists of teacups
