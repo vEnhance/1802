@@ -51,7 +51,8 @@
 / 4.:
   Let $cal(C)$ denote the unit circle $x^2+y^2=1$ oriented counterclockwise,
   and consider the vector field $bf(F)(x,y) = angle.l x+2y, 4x+8y angle.r$.
-  Compute the flux of $bf(F)$ through $cal(C)$.
+  Compute the line integral $int_(cal(C)) bf(F) dot dif bf(r)$
+  and the flux of $bf(F)$ through $cal(C)$.
 
 / 5.:
   Find all real $k$ for which the region defined by $0 <= k x + y <= 1$ and $0 <= x + k y <= 1$ has area $4$.
@@ -169,9 +170,17 @@ $ f(x,y) = 1/2 x^2  y + sin(x) + sin(y) + y + C. $
 
 == Solution to counterclockwise circle
 
-This is a cookie-cutter application of Green's theorem
-to transform the flux into a 2D divergence integral:
-$ int_(cal(C)) bf(F) dot dif bf(n)
+This is a cookie-cutter application of Green's theorem (both forms).
+
+For the line integral, use Green's theorem with 2D scalar curl:
+$ int_(cal(C)) bf(F) dot dif bf(r)
+  &= iint_(x^2+y^2 <= 1) ( partial/(partial y)(x+2y) -  partial/(partial x)(4x+8y) ) dif A \
+  &= iint_(x^2+y^2 <= 1) (2-4) dif A \
+  &= -2 iint_(x^2+y^2 <= 1) dif A \
+  &= -2 pi. $
+
+For the flux, use Green's theorem with divergence:
+$ int_(cal(C)) bf(F) dot bf(n) dif s
   &= iint_(x^2+y^2 <= 1) nabla dot bf(F) dif A \
   &= iint_(x^2+y^2 <= 1) ( partial/(partial x)(x+2y) +  partial/(partial y)(4x+8y) ) dif A \
   &= iint_(x^2+y^2 <= 1) (1+8) dif A \
