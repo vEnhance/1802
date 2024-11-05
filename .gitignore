@@ -3,4 +3,4 @@
 outputs/*
 !outputs/.gitkeep
 worksheets/*
-!published/
+!published/lamv.pdf
