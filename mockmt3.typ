@@ -75,20 +75,44 @@ May contain typos/errors/gaps. Still working on it.
 
 == Solution to butterfly reprise
 
-The answer is $0$ regardless of the vector field $bf(F)$.
-Two ways to see this are:
+Note the butterfly starts at $bf(r)(0) = (0,0)$ and ends at $bf(r)(2 pi) = (0,0)$ as well.
+
+=== The short solution to both parts
+
+The answer is $#boxed[$0$]$ regardless of the vector field $bf(F)$!
+Two ways to see this.
 - This follows by Green's theorem, because the trajectory $bf(r)$
   cuts a degenerate parallelogram of area zero.
 - The butterfly is tracing its own path in reverse, so the part from $0 <= t <= pi/2$
   cancels $pi/2 <= t <= pi$
-  while the part from $pi <= t <= 3 pi / 2$ cancels $3 pi / 2 <= t <= 2 pi$.
+  while the part from $pi <= t <= 3/2 pi$ cancels $3/2 pi <= t <= 2 pi$.
 
-#remark[
-  For the first integral, the vector field $bf(F) = vec(x^3, y^3)$ is conservative,
-  so the fundamental theorem of calculus also implies the answer is $0$.
-  However, the second integral is not conservative
-  so this approach does not work anymore.
-]
+=== Another short way for the first vector field
+
+The first integral is of the conservative vector field $bf(F) = vec(x^3, y^3)$,
+because its 2D scalar curl is $0 - 0 = 0$.
+So the fundamental theorem of calculus also implies the answer is $0$,
+because the path is a loop.
+(If $f$ is a potential function, then the answer should be $f(0,0) - f(0,0) = 0$.
+You could compute the potential function $f(x,y) = x^4/4+y^4/4$ if you want, but it's not needed.)
+
+=== The long way for the second non-conservative field
+
+In the second part, $bf(F) = vec(y,0)$ is not conservative.
+Let's say you didn't come up with the idea in the slick solution.
+Then you could still compute the integral manually by taking
+$ bf(r)'(t) = angle.l cos(t), cos(t) angle.r $
+so the line integral is given by
+$ int_(t=0)^(2pi) bf(F)(sin(t), sin(t)) dot bf(r)'(t) dif t
+  int_(t=0)^(2pi) sin(t) cos(t) dif t. $
+This integral is $0$; here are three ways to evaluate it.
+
+- Notice the contribution from $t$ and $2 pi - t$ cancel out.
+- Another way to evaluate the integral is via the $u$-substitution $u = sin(t)$,
+  where $dif u = cos(t) dif t$, so one gets
+  $ int_(t=0)^(2pi) sin(t) cos(t) dif t = int_(u=sin(0))^(u=sin(2pi)) u dif u = int_0^0 u dif u = 0. $
+- Another way is to use the trig substitution
+  $ int_(t=0)^(2pi) sin(t) cos(t) dif t = int_(t=0)^(2pi) sin(2t)/2 dif t = [-cos(2t)/4]_(t=0)^(2pi) = 0. $
 
 #pagebreak()
 
@@ -128,7 +152,7 @@ $ dash(x) = 1 / (op("Area")(cal(R))) iint_cal(R) x dif A , quad dash(y) = 1 / (o
     = - (- 1 / 2) + 1 / 2 = 1 . $
   Thus, $iint_cal(R) y dif A = 9 dot 1 = 9$, and so
   $ dash(y) = 1 / (op("Area")(cal(R))) iint_cal(R) y dif A = 9 / ((3 pi) / 2) = 6 / pi . $
-In conclusion, the center of mass is given by $ (dash(x),dash(y)) = (0, 6/pi). $
+In conclusion, the center of mass is given by $ (dash(x),dash(y)) = #boxed[$ (0, 6/pi) $]. $
 
 #digression(title: [Digression: the long way for area])[
   If you don't want to do geometry,
@@ -161,10 +185,10 @@ $ partial / (partial y) (x y + cos (x)) &= x \
   partial / (partial x) (h(x) + cos(y)) &= h'(x). $
 From $h'(x) = x$ we deduce $h(x) = x^2 / 2 + C$ for some constant $C$;
 from $h(0) = 1$ we get $C = 1$.
-In summary, we have $ h (x) = x^2 / 2 + 1. $
+In summary, we have $ h (x) = #boxed[$ x^2/2 + 1  $]. $
 
 The potential function is given by
-$ f(x,y) = 1/2 x^2  y + sin(x) + sin(y) + y + C. $
+$ f(x,y) = #boxed[$ 1/2 x^2  y + sin(x) + sin(y) + y + C $]. $
 
 #pagebreak()
 
@@ -177,7 +201,7 @@ $ int_(cal(C)) bf(F) dot dif bf(r)
   &= iint_(x^2+y^2 <= 1) ( partial/(partial y)(x+2y) -  partial/(partial x)(4x+8y) ) dif A \
   &= iint_(x^2+y^2 <= 1) (2-4) dif A \
   &= -2 iint_(x^2+y^2 <= 1) dif A \
-  &= -2 pi. $
+  &= #boxed[$ -2 pi $]. $
 
 For the flux, use Green's theorem with divergence:
 $ int_(cal(C)) bf(F) dot bf(n) dif s
@@ -185,7 +209,7 @@ $ int_(cal(C)) bf(F) dot bf(n) dif s
   &= iint_(x^2+y^2 <= 1) ( partial/(partial x)(x+2y) +  partial/(partial y)(4x+8y) ) dif A \
   &= iint_(x^2+y^2 <= 1) (1+8) dif A \
   &= 9 iint_(x^2+y^2 <= 1) dif A \
-  &= 9 pi. $
+  &= #boxed[$ 9 pi $]. $
 
 #pagebreak()
 
@@ -212,7 +236,7 @@ $ 4 = iint_(cal(R)) dif x dif y
 So the equation we are trying to solve is
 $ lr(|1/(1-k^2)|) = 4 <==> k^2 - 1 = pm 1/4 <==> k^2 = 3/4 " or " k^2 = 5/4. $
 
-Hence the answers are $k = pm sqrt(3) / 2$ and $k = pm sqrt(5) / 2$.
+Hence the answers are $ k = #boxed[$ pm sqrt(3) / 2 " or " pm sqrt(5) / 2 $]. $
 
 #pagebreak()
 
@@ -239,7 +263,7 @@ $ op("Area")(cal(R))
   = int_(y=0)^1 ((e-1)^2 - (e^y-1)^2) dif y \
   &= e^2-2e - int_(y=0)^1 (e^(2y) - 2e^y) dif y
   = e^2-2e - lr([e^(2y)/2 - 2e^y])_(y=0)^1 \
-  &= e^2-2e - (e^2/2 - 2e) - (1/2-2) = (e^2-3)/2. $
+  &= e^2-2e - (e^2/2 - 2e) - (1/2-2) = #boxed[$ (e^2-3)/2 $]. $
 
 #remark[
   It is also possible to calculate an antiderivative of $log(sqrt(x)+1)$ directly
