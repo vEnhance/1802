@@ -1,5 +1,5 @@
 import graph;
-size(14cm);
+size(10cm);
 draw(scale(5)*unitcircle, red+dashed);
 draw(scale(2.3)*unitcircle, red+dashed);
 xaxis("$x$", -6, 6, Ticks(Label(fontsize(9pt)), Step=2, begin=false, end=false), Arrows);

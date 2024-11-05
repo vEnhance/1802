@@ -1,5 +1,5 @@
 import graph;
-size(14cm);
+size(12cm);
 xaxis("$x$", -6, 6, Ticks(Label(fontsize(9pt)), Step=2, begin=false, end=false), Arrows);
 yaxis("$y$", -6, 6, Ticks(Label(fontsize(9pt)), Step=2, begin=false, end=false), Arrows);
 

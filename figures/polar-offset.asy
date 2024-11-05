@@ -1,6 +1,6 @@
 import graph;
 import geometry;
-size(12cm);
+size(10cm);
 xaxis("$x$", -0.5, 2.5, Ticks(Label(fontsize(9pt)), Step=1, begin=false, end=false), Arrows);
 yaxis("$y$", -1.5, 1.5, Ticks(Label(fontsize(9pt)), Step=1, begin=false, end=false), Arrows);
 

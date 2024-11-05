@@ -1,5 +1,5 @@
 import graph;
-size(8cm);
+size(6cm);
 
 real f(real x) {return 3-2/(x+2.5);}
 graph.xaxis("$x$");
