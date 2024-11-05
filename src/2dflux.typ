@@ -34,9 +34,9 @@ In any case, the 2D flux is then defined as follows.
 #typesig[
   2D flux is a scalar quantity.
   It's only defined for a vector field in $RR^2$ piercing a closed loop in $RR^2$.
-  (In principle, I can't think of a reason one couldn't define 2D flux
-  for a _path_ in addition to a loop, but I don't think I've ever seen it used.)
 ]
+(In principle, I can't think of a reason one couldn't define 2D flux
+for a _path_ rather than just a loop, but I don't think I've ever seen it used.)
 
 The "$90 degree$ clockwise rotation of $bf(r)'(t)$" is so awkward
 that you can bet people immediately made up a shorthand to sweep it under the rug.
@@ -82,7 +82,8 @@ So what we've done is put the rotation thing onto the vector field instead.
 The upshot of this is that we can actually change the flux into a work integral:
 $ oint_(cal(C)) bf(F) dot bf(n) dif s = oint_(cal(C)) bf(F)^perp dot dif bf(r). $
 This looks a bit better but we still want to get rid of $bf(F)^perp$.
-But we can, because there is a shorthand for work that uses just $p$ and $q$; we get
+But we can, because there is a shorthand for work that uses just $p$ and $q$.
+Specifically, since $bf(F)^perp = vec(q, -p)$, we have
 $ oint_(cal(C)) bf(F)^perp dot dif bf(r) = oint_(cal(C)) (-q dif x + p dif y). $
 In summary, we get the following more readable shorthand:
 
