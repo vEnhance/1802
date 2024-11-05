@@ -141,7 +141,7 @@ the length of all the little arrows is scaled exactly 30% compared to the true l
 #figure(
   image("figures/vecfield-ex.png", width: auto),
   caption: [A plot of the first vector field that's drawn in every class,
-    good old $bf(F)(x,y) = vec(x,y)$],
+    good old $bf(F)(x,y) = vec(x,y)$.],
 ) <fig-vecfield-id>
 
 Okay, here are eight more pictures to train your instincts.
@@ -150,12 +150,25 @@ and verify that the arrow starting at that point points in the way you expect.
 
 #figure(
   image("figures/vecfield-ex2.png", width: auto),
-  caption: [Four more examples of vector fields in $RR^2$.],
+  caption: [Four more examples of vector fields in $RR^2$.
+    The example $bf(F)(x,y) = vec(x,0)$ has just horizontal arrows
+    that get longer as $|x|$ grows.
+    The example $bf(F)(x,y) = vec(0,x)$ has just vertical arrows, similar story.
+    The example $bf(F)(x,y) = vec(y,-x)$ is swirly.
+    The example $bf(F)(x,y) = vec(x,y/3)$ is slanted.
+  ],
 )
 
 #figure(
-  image("figures/vecfield-ex2.png", width: auto),
-  caption: [Another four examples of vector fields in $RR^2$.],
+  image("figures/vecfield-ex3.png", width: auto),
+  caption: [Another four examples of vector fields in $RR^2$.
+    The vector field $bf(F)(x,y) = vec(1,1)$ is just constant.
+    The vector field $bf(F)(x,y) = vec((x+y)/2,(x-y)/2)$ has some tilted arrows.
+    The vector field $bf(F)(x,y) = vec(x,x)$ has all arrows at $45 degree$ angles,
+    growing in length with larger $x$.
+    And the goofy $bf(F)(x,y) = vec(sin(pi/2 x), sin(pi/2 y))$
+    has an oscillating behavior.
+],
 )
 
 == [TEXT] Preview of integration over vector fields

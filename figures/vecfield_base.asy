@@ -1,5 +1,5 @@
 import graph;
-unitsize(0.5cm);
+unitsize(0.7cm);
 usepackage("amsmath");
 
 pen arrpen = rgb(0.6, 0.6, 0.9);
