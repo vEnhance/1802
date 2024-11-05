@@ -148,7 +148,7 @@ If you really want, you could say it has _every_ direction, but this is a conven
 ]
 
 #figure(
-  image("figures/vectors-vec-3-4.png", width: auto),
+  image("figures/vectors-vec-3-4.svg", width: auto),
   caption: [The direction along $vec(3,-4)$ (blue) is $vec(3 slash 5, -4 slash 5)$ (red).
   Unit vectors always lie on the grey circle (unit circle) by definition.],
 ) <fig-vec-3-4>
@@ -185,7 +185,7 @@ then their sum $bf(v)_1 + bf(v)_2$ makes a parallelogram in the plane with $bf(0
 as shown in @fig-parallelogram.
 
 #figure(
-  image("figures/vectors-area.png", width: auto),
+  image("figures/vectors-area.svg", width: auto),
   caption: [Vector addition in $RR^2$.],
 ) <fig-parallelogram>
 
@@ -210,7 +210,7 @@ with three vectors in $RR^3$; see @fig-parallelepiped.
 ]
 
 #figure(
-  image("figures/vectors-parallelepiped.png", width: auto),
+  image("figures/vectors-parallelepiped.svg", width: auto),
   caption: [Three vectors in $RR^3$ making a parallelepiped.],
 ) <fig-parallelepiped>
 

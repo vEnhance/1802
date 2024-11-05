@@ -338,7 +338,7 @@ $
 Here's a picture of the five numbers:
 
 #figure(
-  image("figures/r06-circle.png", width: 80%),
+  image("figures/r06-circle.svg", width: 80%),
   caption: [The five answers to $z^5 = 243 i$, each of length $3$.],
 )
 

@@ -43,7 +43,7 @@ The following are just excerpts for quick reference.
 Here the region would be described as $y >= x^2$ and $y-x <= 2$.
 
 #align(center)[
-  #image("figures/ints-pararegion.png", width: 50%)
+  #image("figures/double-pararegion.svg", width: 50%)
 ]
 
 #align(center)[
@@ -51,8 +51,8 @@ Here the region would be described as $y >= x^2$ and $y-x <= 2$.
     columns: 2,
     align: left,
     stroke: none,
-    [#image("figures/ints-para-vert.png", width: 90%)],
-    [#image("figures/ints-para-horiz.png", width: 90%)],
+    [#image("figures/double-para-vert.svg", width: 90%)],
+    [#image("figures/double-para-horiz.svg", width: 90%)],
   ),
 ]
 

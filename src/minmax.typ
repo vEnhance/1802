@@ -34,7 +34,7 @@ Note there's no global minimum at all, since the function $f$ goes to $-oo$ in b
 as $x -> -oo$ or $x -> +oo$.
 
 #figure(
-  image("figures/minmax-1801graph.png", width: auto),
+  image("figures/minmax-1801graph.svg", width: auto),
   caption: [Some examples of critical points in an 18.01 graph of a single variable function.],
 ) <fig-1801-critical-points>
 
@@ -85,7 +85,7 @@ As soon as I say this I need to carry over the analogous warnings from 18.01:
 ]
 
 #figure(
-  image("figures/minmax-hyperbola-saddle.png", width: auto),
+  image("figures/minmax-hyperbola-saddle.svg", width: auto),
   caption: [Values of $f(x,y) = x^2-y^2$ at a distance of $0.1$ from the saddle point $(0,0)$.
     Green values are positive and red ones are negative.
     It's a saddle point because there are both.
@@ -150,7 +150,7 @@ and we consider walking away from it in one of two directions.
 I'll draw a blue $+$ arrow if $f$ increases, and a red $-$ arrow if $f$ decreases.
 
 #figure(
-  image("figures/minmax-whysaddle.png", width: auto),
+  image("figures/minmax-whysaddle.svg", width: auto),
   caption: [Why the 18.01 and 18.02 polynomial experiments have totally different outcomes.],
 ) <fig-whysaddle>
 

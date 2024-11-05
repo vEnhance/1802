@@ -92,7 +92,7 @@ with $angle P = 90 degree$, $O A = 2$, and $angle A O P = theta$.
 So the geometric picture matches the calculation we just did.
 
 #figure(
-  image("figures/polar-offset.png", width: auto),
+  image("figures/polar-offset.svg", width: auto),
   caption: [A sketch of $(x-1)^2 + y^2 <= 1$.
     One might expect this to be nasty when converted to polar,
     but it turns out to be $r <= 2 cos theta$ for $-pi/2 <= theta <= pi/2$, which is much better than expected.],

@@ -75,7 +75,7 @@ We give some examples.
   which indicates that all level curves will have the same basic "U" shape.
 
   #figure(
-    image("figures/level-curve1.png"),
+    image("figures/level-curve1.svg"),
     caption: [The level curves of $f(x,y) = y-x^2$.],
   )
 ]
@@ -85,7 +85,7 @@ We give some examples.
   This example is exactly like the previous one, except the roles of $x$ and $y$ are flipped.
 
   #figure(
-    image("figures/level-curve2.png"),
+    image("figures/level-curve2.svg"),
     caption: [The level curves of $f(x,y) = x-y^2$.],
   )
 ]
@@ -110,7 +110,7 @@ We give some examples.
   These concentric circles represent the level curves of the function $f(x, y) = x^2 + y^2$.
 
   #figure(
-    image("figures/level-curve3.png"),
+    image("figures/level-curve3.svg"),
     caption: [Four of the level curves for $f(x,y) = x^2+y^2$.],
   )
 ]
@@ -140,7 +140,7 @@ We give some examples.
   Each level curve is a square rotated by 45 degrees.
 
   #figure(
-    image("figures/level-curve4.png"),
+    image("figures/level-curve4.svg"),
     caption: [Four of the level curves for $f(x,y) = |x|+|y|$.],
   )
 ]

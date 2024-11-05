@@ -19,7 +19,7 @@ This should be drawn as a _$90 degree$ clockwise rotation of $bf(r)'(t)$_.
 Seriously, I can't make this up.
 
 #figure(
-  image("figures/2dflux-dot.png", width: auto),
+  image("figures/2dflux-dot.svg", width: auto),
   caption: [The 2D flux is the dot product where the tangent $bf(r)'(t)$ is replaced by its rotated version.],
 )
 

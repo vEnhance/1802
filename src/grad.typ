@@ -247,7 +247,7 @@ Note that this figure is not to scale, because $0.01$ is too small to be legibly
 so the black circle is drawn much larger than it actually is.
 
 #figure(
-  image("figures/grad-gdescent.png", width: auto),
+  image("figures/grad-gdescent.svg", width: auto),
   caption: [Starting from $P = (3,4)$, we make a step $bf(v)$ away, where $|bf(v)|=0.01$.
     Not to scale.],
 ) <fig-grad-descent>
@@ -315,7 +315,7 @@ So that means the last bullet could be rewritten as
 ]
 
 #figure(
-  image("figures/grad-gdescent2.png", width: auto),
+  image("figures/grad-gdescent2.svg", width: auto),
   caption: [Similar picture but for $f(x,y) = 1/(x^2+y^2)$.
     It looks very similar to @fig-grad-descent, but now the gradient points the other way
     and has much smaller absolute value, indicating

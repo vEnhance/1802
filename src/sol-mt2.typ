@@ -23,7 +23,7 @@ oscillations between $x = 1$ and $x = - 1$.
 Here is a sketch of the trajectory.
 
 #figure(
-  image("figures/mt2-butterfly.png", width: auto),
+  image("figures/mt2-butterfly.svg", width: auto),
   caption: [Butterfly fluttering along the plane.
   A few more examples of points in the trajectory are marked in green for illustration,
   but the blue endpoints are the important ones.
@@ -83,7 +83,7 @@ $ L = sqrt(2) (int_0^(pi) sin (t) dif t + int_(pi)^(2 pi) - sin (t) dif t) . $
 See @fig-abs-sin for an illustration of this integral.
 
 #figure(
-  image("figures/mt2-abs-sin.png", width: auto),
+  image("figures/mt2-abs-sin.svg", width: auto),
   caption: [The integral $int_0^(2pi) |sin(t)| dif t$ is two copies
   of the first hump $int_0^(pi) sin(t) dif t$ (which doesn't have an absolute value on it).],
 ) <fig-abs-sin>
@@ -169,7 +169,7 @@ and $y = -1$, $y = 0$, $y = 2$.
 See @fig-mt2-crits.
 
 #figure(
-  image("figures/mt2-crits.png", width: auto),
+  image("figures/mt2-crits.svg", width: auto),
   caption: [Plot of the critical points of the function in the $x y$-plane as red dots.],
 ) <fig-mt2-crits>
 
@@ -236,7 +236,7 @@ If you have a good conceptual understanding of saddle points, this should be obv
 It's essentially @fig-whysaddle from @sec-saddle-sim.
 
 #figure(
-  image("figures/mt2-graph.png", width: auto),
+  image("figures/mt2-graph.svg", width: auto),
   caption: [The function $f$ is just the sum of two independent functions,
   which can be optimized independently.],
 ) <fig-sol-mt2-graph>

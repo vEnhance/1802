@@ -12,7 +12,7 @@ The idea is that, to avoid having to deal with the hideous roots,
 we are going to use horizontal slicing for the region under the curve shown in the figure.
 
 #figure(
-  image("figures/practice-undergraph.png", width: auto),
+  image("figures/practice-undergraph.svg", width: auto),
   caption: [The region $0 <= y <= root(5, root(3,x) + 1)$ for $0 <= x <= N$. Not at all to scale.],
 )
 

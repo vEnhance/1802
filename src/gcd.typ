@@ -186,7 +186,7 @@ So now we prove the following.
   $ op("curl")(nabla f) = nabla times (nabla f) = bf(0). $
 ]
 #figure(
-  box(image("figures/gcd-cut-gc.png", width: auto), stroke: 1pt),
+  box(image("figures/gcd-cut-gc.svg", width: auto), stroke: 1pt),
   caption: [Cut-out of two red arrows from the poster @fig-int-chart-stokes that chain to give zero.],
 )
 
@@ -402,7 +402,7 @@ It's still true (and indeed follows from the 3D version) that:
   The curl of a conservative 2D vector field is zero.
 ]
 #figure(
-  box(image("figures/gcd-cut-gc2.png", width: auto), stroke: 1pt),
+  box(image("figures/gcd-cut-gc2.svg", width: auto), stroke: 1pt),
   caption: [These two red arrows from the poster @fig-int-chart-stokes also chain to give zero.],
 )
 

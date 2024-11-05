@@ -139,7 +139,7 @@ For the record, in this figure (and the other figures in this section),
 the length of all the little arrows is scaled exactly 30% compared to the true length.
 
 #figure(
-  image("figures/vecfield-ex.png", width: auto),
+  image("figures/vecfield-ex.svg", width: auto),
   caption: [A plot of the first vector field that's drawn in every class,
     good old $bf(F)(x,y) = vec(x,y)$.],
 ) <fig-vecfield-id>
@@ -149,7 +149,7 @@ For each one, try to pick a few points like $(2,0)$ or $(3,-1)$ and so on
 and verify that the arrow starting at that point points in the way you expect.
 
 #figure(
-  image("figures/vecfield-ex2.png", width: auto),
+  image("figures/vecfield-ex2.svg", width: auto),
   caption: [Four more examples of vector fields in $RR^2$.
     The example $bf(F)(x,y) = vec(x,0)$ has just horizontal arrows
     that get longer as $|x|$ grows.
@@ -160,7 +160,7 @@ and verify that the arrow starting at that point points in the way you expect.
 )
 
 #figure(
-  image("figures/vecfield-ex3.png", width: auto),
+  image("figures/vecfield-ex3.svg", width: auto),
   caption: [Another four examples of vector fields in $RR^2$.
     The vector field $bf(F)(x,y) = vec(1,1)$ is just constant.
     The vector field $bf(F)(x,y) = vec((x+y)/2,(x-y)/2)$ has some tilted arrows.
@@ -189,7 +189,7 @@ The new chart can also be downloaded as a
 #link("https://web.evanchen.cc/textbooks/poster-stokes.pdf")[large PDF version].
 
 #figure(
-  image("figures/integrals-stokes.png", width: 100%),
+  image("figures/integrals-stokes.svg", width: 100%),
   caption: [
     Upgraded @fig-int-chart-triangle with vector fields.
     Download at #url("https://web.evanchen.cc/textbooks/poster-stokes.pdf").
@@ -379,7 +379,7 @@ Instead, treat this as a template for all the theorem statements you are going t
 Know this going in to each of the concepts to follow.
 
 #figure(
-  image("media/all-stokes.png", width: auto),
+  image("media/all-stokes.png", width: 80%),
   caption: [It's all Stokes theorem.],
 )
 

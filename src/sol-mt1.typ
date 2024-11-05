@@ -16,7 +16,7 @@ you need to then translate by the normal vector.
 See the cartoon below, where $bf(a)$ denotes the answer.
 
 #figure(
-  image("figures/bonus1p1.png", width: 70%),
+  image("figures/bonus1p1.svg", width: 70%),
   caption: [Projection onto a plane.],
 )
 
@@ -152,7 +152,7 @@ as a basis, as shown.
 Because $bf(v) dot bf(a) = 2$ and $bf(v) dot bf(b) = 3$, this rectangle is $2$ by $3$.
 
 #figure(
-  image("figures/bonus1p4.png", width: 30%),
+  image("figures/bonus1p4.svg", width: 30%),
   caption: [Plotting $bf(v)$ in the span of $bf(a)$ and $bf(b)$.],
 )
 
@@ -254,7 +254,7 @@ for $k = 0 , 1 , 2$.
 This gives us three roots corresponding to the different values of $k$.
 
 #figure(
-  image("figures/bonus1p6.png", width: 60%),
+  image("figures/bonus1p6.svg", width: 60%),
   caption: [Three solutions to $z^3 = 5+6i$],
 )
 

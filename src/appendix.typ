@@ -101,7 +101,7 @@ As a warmup, try to show that if $bf(u) = vec(a,b)$ is any vector, then $bf(u) d
 === Main proof
 
 #figure(
-  image("figures/r02-dotproof.png", width: 75%),
+  image("figures/r02-dotproof.svg", width: 75%),
   caption: [Proof that the dot product is given by the projection],
 )
 

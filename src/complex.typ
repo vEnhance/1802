@@ -162,7 +162,7 @@ $
 Here's a picture of the five numbers:
 
 #figure(
-  image("figures/complex-circle.png", width: auto),
+  image("figures/complex-circle.svg", width: auto),
   caption: [The five answers to $z^5 = 243 i$, each of length $3$.],
 )
 

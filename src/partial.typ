@@ -14,7 +14,7 @@ $ f(p + epsilon) = f(p) + f'(p) dot epsilon. $
 See figure below.
 
 #figure(
-  image("figures/grad-slope.png", width: auto),
+  image("figures/partial-slope.svg", width: auto),
   caption: [In 18.01, the slope $f'(p)$ tells you how quickly $f$ changes near $p$.],
 )
 

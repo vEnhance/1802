@@ -19,7 +19,7 @@ Suppose you want to integrate over the region in the top half of the figure belo
 Then we can define a transition map $bf(T)$ so that $u = y/x$ ranges from $1/4$ to $4$
 while $v = x y$ ranges from $16/25$ to $16/9$, giving the bottom half of the figure.
 #figure(
-  image("figures/chvar-trans.png", width: 70%),
+  image("figures/chvar-trans.svg", width: 70%),
   caption: [We use a $(u,v)$ rectangle as a transition map to
   do cartography on the region $cal(R)$.],
 ) <fig-chvar-trans>

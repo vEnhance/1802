@@ -117,7 +117,7 @@ that pass through $P$ and $Q$: then we observe that the level curves for $f$
 that get those minimums and maximums ought to be tangent to $g(x,y) = c$ at $P$ and $Q$.
 
 #figure(
-  image("figures/minmax-lm.png", width: auto),
+  image("figures/minmax-lm.svg", width: auto),
   caption: [An example of a LM-type optimization problem, where one finds points on $g(x,y) = c$
   which optimize $f$],
 ) <fig-lm>

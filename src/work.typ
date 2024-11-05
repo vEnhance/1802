@@ -9,7 +9,7 @@ When we have a vector field $bf(F) : RR^n -> RR^n$
 as a path $bf(r) : RR -> RR^n$ through it, we can define the *work* on it.
 
 #figure(
-  box(image("figures/work-cut.png", width: auto), stroke: 1pt),
+  box(image("figures/work-cut.svg", width: auto), stroke: 1pt),
   caption: [The work integral circled from the giant poster in @fig-int-chart-stokes.],
 )
 
@@ -119,7 +119,7 @@ The line integral adds up all these numbers.
 ]
 
 #figure(
-  image("figures/work-dot.png", width: auto),
+  image("figures/work-dot.svg", width: auto),
   caption: [Cartoon of the dot products being added up by the work integral.
   Imagine adding up all the dot products $bf(r)'(t) dot bf(F)(bf(r)(t))$.],
 ) <fig-work-dot>
@@ -185,7 +185,7 @@ Let's show some examples of how to calculate this in practice.
 ]
 
 #figure(
-  image("figures/work-ex1.png", width: auto),
+  image("figures/work-ex1.svg", width: auto),
   caption: [Two example of a work integral in the vector field $bf(F)(x,y) = vec(2y, 3x)$.
     The blue path is the upper semicircle of $x^2+y^2=1$; the brown one is a straight line.],
 ) <fig-work-ex1>
@@ -292,7 +292,7 @@ along a different path.
   since you're not swimming straight east.)
 
   #figure(
-    image("figures/work-ex1b.png", width: auto),
+    image("figures/work-ex1b.svg", width: auto),
     caption: [The vector field $bf(F)(x,y) = vec(y^(2 slash 3), 0)$ (little light blue horizontal arrows)
     and an arc $cal(C)$ from the parabola $y=x^2$ in it (purple).],
   ) <fig-work-ex1b>
@@ -320,7 +320,7 @@ We now show the first Stokes result.
 It corresponds to a statement for the red arrow shown below.
 
 #figure(
-  box(image("figures/work-cut-ftc.png", width: auto), stroke: 1pt),
+  box(image("figures/work-cut-ftc.svg", width: auto), stroke: 1pt),
   caption: [The FTC for line integrals is the Stokes statement
     for the "grad" red arrows in the poster @fig-int-chart-stokes.],
 ) <fig-work-ftc-red-arrow>
@@ -372,7 +372,7 @@ Thus, now that $f$ is known, line integrals are trivial to compute:
 ]
 
 #figure(
-  image("figures/work-ex2.png", width: auto),
+  image("figures/work-ex2.svg", width: auto),
   caption: [The same brown and blue path from @fig-work-ex1,
   but this time with a different vector field, now conservative.],
 ) <fig-work-ex2>
@@ -484,7 +484,7 @@ But the equations are the same.
 We expect there should be a Stokes result as well for the red arrow
 joining the 2D work integral to an area integral.
 #figure(
-  box(image("figures/work-cut-greens.png", width: auto), stroke: 1pt),
+  box(image("figures/work-cut-greens.svg", width: auto), stroke: 1pt),
   caption: [Green's theorem is the Stokes result for the above red arrow
     from the poster @fig-int-chart-stokes.],
 )

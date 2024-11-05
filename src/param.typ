@@ -199,7 +199,7 @@ clockwise is decreasing by $omega$ per unit time instead
 See @fig-angular.
 
 #figure(
-  image("figures/param-angular.png", width: auto),
+  image("figures/param-angular.svg", width: auto),
   caption: [Rotation of a point with constant angular velocity.],
 ) <fig-angular>
 
@@ -353,7 +353,7 @@ Okay, here are some examples.
 ]
 
 #figure(
-  image("figures/param-cycloid.png", width: auto),
+  image("figures/param-cycloid.svg", width: auto),
   caption: [The cycloid formed as the wheel rolls to the right.],
 ) <fig-cycloid>
 
@@ -535,7 +535,7 @@ Usually the strategy is to pick one that makes subsequent calculation easier.
   Find any parametrization $bf(r)(t)$ for $cal(C)$.
 ]
 #figure(
-  image("figures/param-parabola.png", width: auto),
+  image("figures/param-parabola.svg", width: auto),
   caption: [Walking along the parabola $y = x^2 / 10 + 1$.
     I recommend the parametrization $bf(r)(t) = (t, t^2/10+1)$ for $-2 <= t <= 3$.],
 ) <fig-param-parabola>
@@ -564,7 +564,7 @@ Usually the strategy is to pick one that makes subsequent calculation easier.
   Find any parametrization $bf(r)(t)$ for $cal(C)$.
 ]
 #figure(
-  image("figures/param-circle.png", width: auto),
+  image("figures/param-circle.svg", width: auto),
   caption: [An $120 degree$ arc of the unit circle parametrized by
     $bf(r)(t) = (cos t, sin t)$ for $-pi/2 <= t <= pi/6$.],
 ) <fig-param-arc>
@@ -636,6 +636,6 @@ Usually the strategy is to pick one that makes subsequent calculation easier.
 ] <exer-clockblock>
 
 #figure(
-  image("figures/param-clockblock.png", width: auto),
+  image("figures/param-clockblock.svg", width: auto),
   caption: [The clock problem from the AMC 10A in 2015.],
 ) <fig-clockblock>

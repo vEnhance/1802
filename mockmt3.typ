@@ -100,7 +100,7 @@ cuts out a wedge covering the top half of the circle within the angle range
 $pi / 3 <= theta <= (2 pi) / (3)$ in polar coordinates.
 
 #figure(
-  image("figures/mt3-wedge.png", width: auto),
+  image("figures/mt3-wedge.svg", width: auto),
   caption: [It's a one-sixth slice of a pizza or something.],
 )
 
@@ -216,7 +216,7 @@ The idea is that, to avoid having to deal with log and square root,
 we are going to use horizontal slicing for the region under the curve shown in the figure.
 
 #figure(
-  image("figures/mt3-undergraph.png", width: auto),
+  image("figures/mt3-undergraph.svg", width: auto),
   caption: [The region $y <= log(sqrt(x)+1)$ for $0 <= x <= (e-1)^2$.],
 )
 

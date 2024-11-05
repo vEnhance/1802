@@ -155,7 +155,7 @@ Here's more examples.
   $ T = mat(sqrt(3)/2, -1/2; 1/2, sqrt(3)/2). #qedhere $
 ]
 #figure(
-  image("figures/matrix-rot.png", width: auto),
+  image("figures/matrix-rot.svg", width: auto),
   caption: [Rotation by $30$ degrees.],
 ) <fig-rotate-30>
 

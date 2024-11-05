@@ -32,7 +32,7 @@ but you can download a
 #link("https://web.evanchen.cc/textbooks/poster-ints.pdf")[large PDF version]).
 
 #figure(
-  image("figures/integrals-triangle.png", width: 100%),
+  image("figures/integrals-triangle.svg", width: 100%),
   caption: [
     For each $0 <= d <= n <= 3$, the kind of integral is drawn and named.
     Download at #url("https://web.evanchen.cc/textbooks/poster-ints.pdf").

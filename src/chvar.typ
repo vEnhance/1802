@@ -21,7 +21,7 @@ One quick notational thing if you haven't seen this before:
   Similarly, $[0,5] times [0,3]$ would be a rectangle of width $5$ and height $3$.
 ]
 #figure(
-  image("figures/chvar-rect.png", width: auto),
+  image("figures/chvar-rect.svg", width: auto),
   caption: [A picture of $[0,5] times [0,3]$. This is just the set of points where $x$ is in
   the interval $[0,5]$ and $y$ is in the closed interval $[0,3]$.],
 )
@@ -42,7 +42,7 @@ As I promised you, I think it's better for your thinking if you write these as i
   1/4 <= y / x <= 4. $
 ]
 #figure(
-  image("figures/chvar-region.png", width: auto),
+  image("figures/chvar-region.svg", width: auto),
   caption: [A cursed region bounded by four curves.
   Trying to do $x y$-integration in either direction will be annoying as heck.],
 ) <fig-chvar-ex>
@@ -102,7 +102,7 @@ This lets us make a portrayal of the yellow region as a sheet of paper.
 See @fig-chvar-trans, which is really important to us!
 
 #figure(
-  image("figures/chvar-trans.png", width: auto),
+  image("figures/chvar-trans.svg", width: auto),
   caption: [We use a $(u,v)$ rectangle as a transition map to
   do cartography on the region $cal(R)$.],
 ) <fig-chvar-trans>

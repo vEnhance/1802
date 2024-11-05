@@ -83,7 +83,7 @@ I won't dwell on this proof too much in the interest of moving these notes forwa
 ]
 
 #figure(
-  image("figures/dot-ex1.png", width: auto),
+  image("figures/dot-ex1.svg", width: auto),
   caption: [The dot product of  $bf(v) = vec(-5, 5 sqrt(3))$
   and $bf(w) = vec(7sqrt(3), -7)$ is $-70sqrt(3)$.]
 ) <fig-dot-ex1>
@@ -115,7 +115,7 @@ I won't dwell on this proof too much in the interest of moving these notes forwa
 ]
 
 #figure(
-  image("figures/dot-ex2.png", width: auto),
+  image("figures/dot-ex2.svg", width: auto),
   caption: [Two perpendicular dot products],
 ) <fig-dot-ex2>
 
@@ -165,7 +165,7 @@ to get the purple vector shown in @fig-dot-project1.
 This purple vector is typically written $op("proj")_(bf(w))(bf(v))$.
 
 #figure(
-  image("figures/dot-proj1.png", width: auto),
+  image("figures/dot-proj1.svg", width: auto),
   caption: [The projection of $bf(v) = vec(2,3)$ along $bf(w) = vec(4,1)$.],
 ) <fig-dot-project1>
 
@@ -215,7 +215,7 @@ and $theta > 90 degree$ behaving slightly differently.
 An example of a situation of that shape is shown in @fig-dot-project2.
 
 #figure(
-  image("figures/dot-proj2.png", width: auto),
+  image("figures/dot-proj2.svg", width: auto),
   caption: [The projection of $bf(v) = vec(-3,3)$ along $bf(w) = vec(4,1)$.],
 ) <fig-dot-project2>
 
