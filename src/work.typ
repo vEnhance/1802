@@ -284,7 +284,6 @@ along a different path.
   it's definitely helping you swim, even if it's not directly aligned
   since you're not swimming straight east.)
 
-  There are two
   The arc of the parabola we're trying to traverse needs to start at $(-1,1)$ and end at $(1,1)$.
   Just to make things concrete, examples of points we expect to pass through in our path are
   $ (-1,1) --> (-1/2, 1/4) --> (-1/3, 1/9) --> (0,0) --> (1/3, 1/9) --> (1/2, 1/4) --> (1,1). $
