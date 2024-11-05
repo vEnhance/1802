@@ -98,7 +98,7 @@ if we choose to hide the parametrization $bf(r)(t)$ from the notation.)
 == [RECIPE] Computing line integrals by hand <sec-work-manual-recipe>
 
 #recipe(title: [Recipe for computing line integrals by hand])[
-  1. Pick a parametrization $bf(r) : colon RR -> RR^n$.
+  1. Pick a parametrization $bf(r) : RR -> RR^n$.
     It doesn't matter which one we use as long as the direction is correct.
   2. Calculate the derivative $bf(r)'(t)$.
   3. Calculate the dot product $bf(F)(bf(r)(t)) dot bf(r)'(t)$.

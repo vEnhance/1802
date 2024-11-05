@@ -110,9 +110,53 @@ Let's put these examples into aquatic terms.
   caption: [A whirlpool. Round and round we go. Not a conservative vector field.],
 )
 
-== [TEXT] Drawing vector fields
+== [TEXT] How to draw a vector fields
 
-#todo[write up how to draw a vector field]
+If you're actually given a formula for $bf(F)(x,y)$,
+you can sketch the corresponding vector field by the following procedure.
+
+#recipe(title: [Recipe for sketching a vector field])[
+  To draw a cartoon of a vector field:
+  1. Pick a bunch of points $P$ that you want to draw the arrows at.
+  2. For each $P$, draw a little arrow starting at $P$ in the same direction as $bf(F)(P)$.
+    (To make the cartoon readable, you usually scale down the magnitude of the arrow.)
+]
+
+In practice, to make the pictures not look absurd,
+people will typically draw  the arrows a lot smaller than they really are.
+For example, if you get that $bf(F)(10,10) = vec(2,3)$,
+then strictly speaking the arrow starting at $(10,10)$ should reach all the way to $(12,13)$.
+But if you do this, your cartoon image looks absurd.
+So people will typically adjust the arrow sizes in the cartoon to be a _tiny_ arrow,
+still pointing the right way, but with much smaller magnitude.
+For the cartoon it's usually more important the _relative_ size of the arrows
+is correct; drawing the absolute values to scale is unnecessary.
+
+The classic easy-to-draw example is $bf(F) = vec(x,y)$,
+in which for every point $P$, one just points straight away from the origin.
+See @fig-vecfield-id for that.
+For the record, in this figure (and the other figures in this section),
+the length of all the little arrows is scaled exactly 30% compared to the true length.
+
+#figure(
+  image("figures/vecfield-ex.png", width: auto),
+  caption: [A plot of the first vector field that's drawn in every class,
+    good old $bf(F)(x,y) = vec(x,y)$],
+) <fig-vecfield-id>
+
+Okay, here are eight more pictures to train your instincts.
+For each one, try to pick a few points like $(2,0)$ or $(3,-1)$ and so on
+and verify that the arrow starting at that point points in the way you expect.
+
+#figure(
+  image("figures/vecfield-ex2.png", width: auto),
+  caption: [Four more examples of vector fields in $RR^2$.],
+)
+
+#figure(
+  image("figures/vecfield-ex2.png", width: auto),
+  caption: [Another four examples of vector fields in $RR^2$.],
+)
 
 == [TEXT] Preview of integration over vector fields
 
