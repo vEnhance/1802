@@ -156,7 +156,7 @@ $ J_(bf(T)) = mat(
 ]
 #example[
   We can also find the Jacobian matrix of the _inverse_ map too,
-  that is the transition map $bf(T) : bf(R) -> bf(S)$ defined by
+  that is, the transition map $bf(T)^(-1) : cal(R) -> cal(S)$ defined by
   $ bf(T)^(-1)(x,y) = (y/x, x y). $
   In other words, this is the map that transforms $(x,y)$ into $(u,v)$.
   This is actually less painful because you don't have to deal with the square roots everywhere.
