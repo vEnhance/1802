@@ -37,50 +37,6 @@ Mercifully, the shorthand still writes a dot product in the symbols, to remind y
 you should be evaluating a dot product when you compute this.
 I can't imagine how much confusion it would cause if the shorthand didn't have the dot product.
 
-If you want to visualize the integral,
-you can imagine walking along the path cut out by $bf(r)$.
-At each point, you draw the tangent vector $bf(r)'(t)$ to the path,
-and also look at the arrow for the vector field $bf(F)(bf(r(t)))$ at that point.
-There's a dot product of these two vectors, which is a number.
-The line integral adds up all these numbers.
-
-#figure(
-  image("figures/work-dot.png", width: auto),
-  caption: [Cartoon of the dot products being added up by the work integral.
-  Imagine adding up all the dot products $bf(r)'(t) dot bf(F)(bf(r)(t))$.],
-)
-
-In practice, if you actually want to do the integral calculation,
-you end up having to do a parametrization, so the shorthand hides how much effort will be needed.
-For example, in the following exercise, $cal(C)$ is the upper half of the circle $x^2+y^2=1$,
-directed from the point $(1,0)$ to $(-1,0)$.
-(Again, for work integrals, we always require a specification
-of which way the integral moves along $cal(C)$,
-if we choose to hide the parametrization $bf(r)(t)$ from the notation.)
-
-#tip(title: [Tip: The work integral doesn't depend on the exact parametrization])[
-  The work integral depends on which direction you walk along the path
-  (it negates if you flip the start and stop point),
-  but it doesn't depend on exactly how exactly you parametrize the path.
-  Thus, we might talk about the work integral along, say,
-  the arc upper semicircle from $(1,0)$ to $(-1,0)$, i.e. the blue arc in @fig-work-ex1.
-
-  When we actually do the calculation,
-  we could use $bf(r)(t) = (cos(t), sin(t))$ for $0 <= t <= pi$;
-  but we could also use $bf(r)(t) = (cos(pi t), sin(pi t))$ for $0 <= t <= 1$.
-  Or if you wanted to annoy the grader,
-  you could even use $bf(r)(t) = (cos(pi t^2), sin(pi t^2))$ for $0 <= t <= 1$,
-  which traces out the same arc at an irregular rate.
-  Since these all give the same answer, you should pick the parametrization
-  that makes the calculation easiest for you.
-]
-
-#tip(title: [Tip: Splicing is OK])[
-  There's no issue with cutting up the path into multiple parts.
-  For example, if $cal(C)$ is a closed loop consisting of walking along
-  the perimeter of the square, just cut it into the four line segments.
-]
-
 == [SIDENOTE] Aquatic interpretation of work
 
 Letting $bf(F)$ represent water current as always,
@@ -126,6 +82,154 @@ object’s movement along that path.
 
 #todo[might be nice to have a figure here]
 
+== [TEXT] Visualizing line integrals via dot products
+
+If you want to visualize the integral,
+you can imagine walking along the path cut out by $bf(r)$.
+At each point, you draw the tangent vector $bf(r)'(t)$ to the path,
+and also look at the arrow for the vector field $bf(F)(bf(r(t)))$ at that point.
+There's a dot product of these two vectors, which is a number.
+The line integral adds up all these numbers.
+
+#tip(title: [The light blue and purple in @fig-work-dot are totally separate])[
+  When drawing a cartoon like in @fig-work-dot,
+  it might be useful to keep in mind that there are two parts to the picture:
+
+  - the curve $cal(C)$ and its parametrization $bf(r)(t)$ (purple in @fig-work-dot)
+  - the vector field $bf(F)(x,y)$ (light blue arrows in @fig-work-dot)
+
+  Remember, *these two parts have nothing to do with each other*.
+  That is:
+  - When you're sketching the light blue arrows for $bf(F)(x,y)$,
+    you should only look at $bf(F)$ and completely ignore $cal(C)$ and $bf(r)$.
+  - Similarly, when sketching the purple path $cal(C)$, ignore $bf(F)$ completely.
+]
+
+#figure(
+  image("figures/work-dot.png", width: auto),
+  caption: [Cartoon of the dot products being added up by the work integral.
+  Imagine adding up all the dot products $bf(r)'(t) dot bf(F)(bf(r)(t))$.],
+) <fig-work-dot>
+
+In practice, if you actually want to do the integral calculation,
+you end up having to do a parametrization, so the shorthand hides how much effort will be needed.
+For example, in the following exercise, $cal(C)$ is the upper half of the circle $x^2+y^2=1$,
+directed from the point $(1,0)$ to $(-1,0)$.
+(Again, for work integrals, we always require a specification
+of which way the integral moves along $cal(C)$,
+if we choose to hide the parametrization $bf(r)(t)$ from the notation.)
+
+#tip(title: [Tip: The work integral doesn't depend on the exact parametrization])[
+  The work integral depends on which direction you walk along the path
+  (it negates if you flip the start and stop point),
+  but it doesn't depend on exactly how exactly you parametrize the path.
+
+  Thus, we might talk about the work integral along, say,
+  the arc upper semicircle from $(1,0)$ to $(-1,0)$ (see the blue arc in later @fig-work-ex1).
+
+  When we actually do the calculation,
+  we could use $bf(r)(t) = (cos(t), sin(t))$ for $0 <= t <= pi$;
+  but we could also use $bf(r)(t) = (cos(pi t), sin(pi t))$ for $0 <= t <= 1$.
+  Or if you wanted to annoy the grader,
+  you could even use $bf(r)(t) = (cos(pi t^2), sin(pi t^2))$ for $0 <= t <= 1$,
+  which traces out the same arc at an irregular rate.
+  Since these all give the same answer, you should pick the parametrization
+  that makes the calculation easiest for you.
+]
+
+#tip(title: [Tip: Splicing is OK])[
+  There's no issue with cutting up the path into multiple parts.
+  For example, if $cal(C)$ is a closed loop consisting of walking along
+  the perimeter of the square, just cut it into the four line segments.
+]
+
+== [RECIPE] Computing line integrals by hand <sec-work-manual-recipe>
+
+#recipe(title: [Recipe for computing line integrals by hand])[
+  To compute the line integral of $bf(F)$ over the curve $cal(C)$:
+
+  1. Pick *any* parametrization $bf(r) : RR -> RR^n$ of the curve $cal(C)$,
+    including specifying the start and stop times.
+    - You have some freedom in how you set the parametrization:
+      it only matters you start and end at the right place,
+      and trace out the exact curve $cal(C)$.
+      So you should pick a parametrization that makes your calculation easier.
+  2. Calculate the derivative $bf(r)'(t)$.
+  3. Calculate the dot product $bf(F)(bf(r)(t)) dot bf(r)'(t)$.
+  4. Integrate this from the start time to the stop time.
+]
+
+Let's show some examples of how to calculate this in practice.
+
+#sample[
+  Compute the line integral of the vector field
+  $bf(F) (x , y) = vec(2 y , 3 x)$ along the following two curves:
+
+  - the upper half of the circle $x^2 + y^2 = 1$, oriented counterclockwise
+    (blue in @fig-work-ex1).
+  - the line segment from $(1,0)$ to $(-1,0)$
+    (brown in @fig-work-ex1).
+]
+
+#figure(
+  image("figures/work-ex1.png", width: auto),
+  caption: [Two example of a work integral in the vector field $bf(F)(x,y) = vec(2y, 3x)$.
+    The blue path is the upper semicircle of $x^2+y^2=1$; the brown one is a straight line.],
+) <fig-work-ex1>
+
+#soln[
+  We do both parts; to prevent drowning in subscripts, we'll use $cal(C)$ and $bf(r)$
+  for the curve and parametrization for each part.
+
+  Before jumping into the calculation, look at @fig-work-ex1 to get a sense of what's going on.
+  The blue arc has mixed signs: near the start and end of the arc, the dot products we're adding
+  are positive as the small arrows line up well with the blue path.
+  But we're moving against the current near the top.
+  Since the arrows near the start on longer, you might guess the work integral is a small
+  positive number, and you'd be right.
+
+  Meanwhile, along the brown arrow, all the arrows are perpendicular to our trajectory.
+  We should expect the total work to thus be $0$, and indeed it is.
+
+  - Let's first do the problem when $cal(C)$ is the arc.
+    The upper half of the circle $x^2 + y^2 = 1$ can be parametrized by:
+    $ bf(r) (t) = vec(cos t , sin t) , quad upright("where ") t upright(" ranges from ") 0 upright(" to ") pi . $
+    Substitute the parameterization into the vector field:
+    $ bf(F) (bf(r) (t)) = bf(F) (cos t , sin t) = vec(2 sin t , 3 cos t) . $
+    Differentiate $bf(r) (t)$ with respect to $t$:
+    $ bf(r)' (t) = vec(- sin t , cos t) . $
+    The line integral of $bf(F)$ along $cal(C)$ is given by:
+    $ int_(cal(C)) bf(F) dot dif bf(r) &= int_(t=0)^pi bf(F) (bf(r) (t)) dot bf(r)' (t) dif t \
+      &= int_(t=0)^pi vec(2 sin t , 3 cos t) dot vec(- sin t , cos t) dif t \
+      &= int_(t=0)^pi [-2 sin^2 t + 3 cos^2 t] dif t. $
+    To simplify these trig expressions, we use the fact that
+    $ sin^2 t = (1 - cos 2 t) / (2) , quad cos^2 t = (1 + cos 2 t) / (2) . $
+    Substitute these into the integral:
+    $ int_(t=0)^pi [- 2 dot (1 - cos 2 t) / (2) + 3 dot (1 + cos 2 t) / (2)] dif t
+    &= int_(t=0)^pi [- (1 - cos 2 t) + 3 / 2 (1 + cos 2 t)] dif t \
+    &= int_(t=0)^pi [1 / 2 + 5 / 2 cos 2 t] dif t. $
+    The term $int_(t=0)^pi cos(2t) dif t$ is zero by symmetry, so the final integral is $pi/2$.
+
+  - Now let's suppose $cal(C)$ is the brown line segment shown.
+    Parametrize the curve $cal(C)$ as $bf(r) (t) = (1 -  2 t, 0)$, where $0 <= t <= 1$.
+    (You could also use $bf(r)(t) = (1-t, 0)$ for $0 <= t <= 2$ if you prefer,
+    or any other parametrization starting from $(1,0)$ and ending at $(-1,0)$; you'll get the same answer.)
+
+    Differentiate $bf(r) (t)$ with respect to $t$:
+    $ bf(r)' (t) = vec(- 2 , 0) . $
+    Meanwhile, the parameterization into the vector field is:
+    $ bf(F) (bf(r) (t)) = bf(F) (0, 1 - 2t) = vec(0, 3 - 6t). $
+    The dot product is identically equal to zero:
+    $ vec(-2, 0) dot vec(0, 3-6t) = 0. $
+    So the line integral is $0$ as well. #qedhere
+]
+
+In particular the work integral in general depends on which path you take:
+we got different answers for the blue and brown path above.
+It's only for the so-called *conservative* vector fields,
+which we'll talk about more in a moment,
+for which work integrals are path-independent.
+
 == [TEXT] Even more shorthand: $p dif x + q dif y$
 
 Then notation $int_(cal(C)) bf(F) dot dif bf(r)$ can _still_ be contracted further:
@@ -149,84 +253,6 @@ $ int_(cal(C)) y dif x $
 you should take this shorthand to mean
 $ int_(cal(C)) y dif x := int_(cal(C)) vec(y, 0) dot dif bf(r). $
 
-== [RECIPE] Computing line integrals by hand <sec-work-manual-recipe>
-
-#recipe(title: [Recipe for computing line integrals by hand])[
-  1. Pick a parametrization $bf(r) : RR -> RR^n$.
-    It doesn't matter which one we use as long as the direction is correct.
-  2. Calculate the derivative $bf(r)'(t)$.
-  3. Calculate the dot product $bf(F)(bf(r)(t)) dot bf(r)'(t)$.
-  4. Integrate this from the start time to the stop time.
-]
-
-Let's show some examples of how to calculate this in practice.
-
-#sample[
-  Compute the line integral of the vector field
-  $bf(F) (x , y) = vec(2 y , 3 x)$ along the following two curves:
-
-  - the upper half of the circle $x^2 + y^2 = 1$, oriented counterclockwise
-    (blue in @fig-work-ex1).
-  - the line segment from $(1,0)$ to $(-1,0)$
-    (brown in @fig-work-ex1).
-]
-
-#soln[
-  We do both parts; to prevent drowning in subscripts, we'll use $cal(C)$ and $bf(r)$
-  for the curve and parametrization for each part.
-
-  Before jumping into the calculation, look at @fig-work-ex1 to get a sense of what's going on.
-  The blue arc has mixed signs: near the start and end of the arc, the dot products we're adding
-  are positive as the small arrows line up well with the blue path.
-  But we're moving against the current near the top.
-  Since the arrows near the start on longer, you might guess the work integral is a small
-  positive number, and you'd be right.
-
-  Meanwhile, along the brown arrow, all the arrows are perpendicular to our trajectory.
-  We should expect the total work to thus be $0$, and indeed it is.
-
-  #figure(
-    image("figures/work-ex1.png", width: auto),
-    caption: [Two example of a work integral in the vector field $bf(F)(x,y) = vec(2y, 3x)$.
-      The blue path is the upper semicircle of $x^2+y^2=1$; the brown one is a straight line.],
-  ) <fig-work-ex1>
-
-  - Let's first do the problem when $cal(C)$ is the arc.
-    The upper half of the circle $x^2 + y^2 = 1$ can be parametrized by:
-    $ bf(r) (t) = vec(cos t , sin t) , quad upright("where ") t upright(" ranges from ") 0 upright(" to ") pi . $
-    Substitute the parameterization into the vector field:
-    $ bf(F) (bf(r) (t)) = bf(F) (cos t , sin t) = vec(2 sin t , 3 cos t) . $
-    Differentiate $bf(r) (t)$ with respect to $t$:
-    $ bf(r)' (t) = vec(- sin t , cos t) . $
-    The line integral of $bf(F)$ along $cal(C)$ is given by:
-    $ int_(cal(C)) bf(F) dot dif bf(r) &= int_(t=0)^pi bf(F) (bf(r) (t)) dot bf(r)' (t) dif t \
-      &= int_(t=0)^pi vec(2 sin t , 3 cos t) dot vec(- sin t , cos t) dif t \
-      &= int_(t=0)^pi [-2 sin^2 t + 3 cos^2 t] dif t. $
-    To simplify these trig expressions, we use the fact that
-    $ sin^2 t = (1 - cos 2 t) / (2) , quad cos^2 t = (1 + cos 2 t) / (2) . $
-    Substitute these into the integral:
-    $ int_(t=0)^pi [- 2 dot (1 - cos 2 t) / (2) + 3 dot (1 + cos 2 t) / (2)] dif t
-    &= int_(t=0)^pi [- (1 - cos 2 t) + 3 / 2 (1 + cos 2 t)] dif t \
-    &= int_(t=0)^pi [1 / 2 + 5 / 2 cos 2 t] dif t. $
-    The term $int_(t=0)^pi cos(2t) dif t$ is zero by symmetry, so the final integral is $pi/2$.
-
-  - Now let's suppose $cal(C)$ is the brown line segment shown.
-    Parametrize the curve $cal(C)$ as $bf(r) (t) = (1 -  2 t, 0)$, where $t in [0, 1]$.
-    Differentiate $bf(r) (t)$ with respect to $t$:
-    $ bf(r)' (t) = vec(- 2 , 0) . $
-    Meanwhile, the parameterization into the vector field is:
-    $ bf(F) (bf(r) (t)) = bf(F) (0, 1 - 2t) = vec(0, 3 - 6t). $
-    The dot product is identically equal to zero:
-    $ vec(-2, 0) dot vec(0, 3-6t) = 0. $
-    So the line integral is $0$ as well. #qedhere
-]
-
-In particular the work integral in general depends on which path you take:
-we got different answers for the blue and brown path above.
-It's only for the so-called *conservative* vector fields,
-which we'll talk about more in a moment,
-for which work integrals are path-independent.
-
 Let's do an example to practice the weird $dif x$ and $dif y$ shorthand,
 along a different path.
 #sample[
@@ -238,7 +264,7 @@ along a different path.
 #figure(
   image("figures/work-ex1b.png", width: auto),
   caption: [The vector field $bf(F)(x,y) = vec(y^(2/3), 0)$ (little light blue horizontal arrows)
-  and an arc $cal(C)$/from the parabola $y=x^2$ in it.],
+  and an arc $cal(C)$ from the parabola $y=x^2$ in it (purple).],
 ) <fig-work-ex1b>
 
 #soln[
@@ -271,7 +297,7 @@ along a different path.
   $ bf(r)'(t) = vec(1, 2t). $
   So the overall line integral becomes
   $
-    int_(t=-1)^1 vec(t^(4/3),0) dot underbrace(vec(1, 2t), =bf(r)'(t)) dif t
+    int_(t=-1)^1 underbrace(vec(t^(4/3),0), = bf(F)(bf(r)(t))) dot underbrace(vec(1, 2t), =bf(r)'(t)) dif t
     = int_(t=-1)^1 t^(4/3) dif t
     = [3/7 t^(7/3)]_(t=-1)^1 = 6/7. #qedhere
   $
@@ -391,9 +417,10 @@ Of course, we do this knowing that the two answers better be equal (to $-2$).
   can be found just by guessing or via the method in @sec-antigrad.
   Indeed, $nabla f = vec(5,0)$ as we needed.
 
-  So now that we know $f$, we can forget about parametrizing $cal(C)$
-  and just write directly
-  $ f(42, 1337) - f(1, 100) = 5 dot 42 - 5 dot 1 = 5(42-1) = 204. #qedhere $
+  So now that we know $bf(F)$ is conservative and
+  have found a potential function $f$,
+  we can forget about parametrizing $cal(C)$ and just write directly
+  $ int_(cal(C)) 5 dif x = f(42, 1337) - f(1, 100) = 5 dot 42 - 5 dot 1 = 5(42-1) = 204. #qedhere $
 ]
 
 #remark[
@@ -552,7 +579,7 @@ Here are a few.
   Substitute these into Green’s theorem:
   $ iint_(cal(R)) (2 x - (- 2 y)) dif A = iint_(cal(R)) (2 x + 2 y) dif A . $
 
-  Since $cal(R)$ is a square with side length $2$ centered at the origin,
+  Since $cal(R)$ is a square with side length $1$ centered at the origin,
   integrate over $x$ and $y$ from $0$ to $1$:
   $ iint_(cal(R)) (2 x + 2 y) dif A
     = 2 int_(y = 0)^1 int_(x = 0)^1 (x + y) dif x dif y . $
@@ -564,7 +591,7 @@ Here are a few.
   $ 2 int_(y = 0)^1 (y+1/2) dif y = 2. #qedhere $
 ]
 
-== [RECAP] Evaluating line integrals
+== [RECIPE] Evaluating line integrals, all together now
 
 While we gave a definition of line integrals with parametrization,
 we then saw right away there are a couple shortcuts,
@@ -585,7 +612,6 @@ So with this, we can present a recipe that condenses these together.
   3. If both of these fail,
     fall back the parametrization recipe described in @sec-work-manual-recipe.
 ]
-
 
 == [EXER] Exercises
 

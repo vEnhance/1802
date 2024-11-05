@@ -20,7 +20,7 @@ for (real x=-1.26; x<=1.26; x+=0.21) {
 real f(real x) {
   return x*x;
 }
-draw(graph(f, -1, 1), red+1.5, Margins);
-draw(graph(f, -1, 1), red, EndArrow, Margins);
-dot("$(-1,1)$", (-1, 1), 2*dir(90), red);
-dot("$(1,1)$", (1, 1), 2*dir(90), red);
+draw(graph(f, -1, 1), purple+1.5, Margins);
+draw(graph(f, -1, 1), purple, EndArrow, Margins);
+dot("$(-1,1)$", (-1, 1), 2*dir(90), purple);
+dot("$(1,1)$", (1, 1), 2*dir(90), purple);

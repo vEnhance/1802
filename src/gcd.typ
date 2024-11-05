@@ -395,7 +395,7 @@ Instead we take the convention that
   Given $p(x,y) = x cos y$ we have
   $ (partial p) / (partial y) = (partial) / (partial y) (x cos y) = x (- sin y) = - x sin y. $
   Hence
-  $ op("curl") bf(F)(x,y) = e^x + x sin y. $
+  $ op("curl") bf(F)(x,y) = e^x + x sin y. #qedhere $
 ]
 It's still true (and indeed follows from the 3D version) that:
 #memo[
