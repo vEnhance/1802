@@ -1,7 +1,7 @@
 // Asymptote code for plotting level curves of f(x, y) = y - x^2
 import graph;
 
-size(10cm);
+size(14cm);
 
 real fa(real x) { return x**2 - 2; }
 real fb(real x) { return x**2 - 1; }

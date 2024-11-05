@@ -1,7 +1,7 @@
 import graph;
 import math;
 
-size(8cm);
+size(12cm);
 
 // Define the function |sin(x)|
 real f(real x) {

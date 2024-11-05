@@ -1,6 +1,6 @@
 import graph;
 usepackage("amsmath");
-size(12cm);
+size(16cm);
 
 // Set up the range of the plot
 real xmin = -1.7, xmax = 1.7;

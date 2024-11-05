@@ -1,5 +1,5 @@
 // Draw axes
-size(12cm);
+size(16cm);
 import graph;
 usepackage("amsmath");
 xaxis("$x$", -2, 2, Ticks(Label(fontsize(9pt)), Step=1, begin=false, end=false), Arrows);

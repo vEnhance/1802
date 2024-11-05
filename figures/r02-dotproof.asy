@@ -3,7 +3,7 @@ usepackage("amsmath");
 usepackage("amssymb");
 pair foot(pair P, pair A, pair B) { return foot(triangle(A,B,P).VC); }
 
-size(12cm);
+size(16cm);
 pair U = (5.6,4.8);
 
 pair V = (3,5);

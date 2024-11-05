@@ -1,6 +1,6 @@
 // Asymptote code to draw a 2D representation of a parallelepiped
 
-size(9cm);
+size(13cm);
 
 // Define the vectors for the edges of the parallelepiped
 pair A = (0, 0);         // Origin

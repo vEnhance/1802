@@ -1,4 +1,4 @@
-size(8cm);
+size(12cm);
 import graph;
 xaxis(-3.9, 3.9, Ticks(Label(fontsize(9pt)), Step=1), Arrows);
 yaxis(-3.9, 3.9, Ticks(Label(fontsize(9pt)), Step=1), Arrows);

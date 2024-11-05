@@ -1,4 +1,4 @@
-size(12cm);
+size(16cm);
 
 real M = 3.9;
 for (int t=-3; t<=3; ++t) {

@@ -1,4 +1,4 @@
-size(5cm);
+size(8cm);
 defaultpen(linewidth(0.9)+fontsize(13pt));
 pair O = (0,0);
 

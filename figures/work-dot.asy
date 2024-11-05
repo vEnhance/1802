@@ -1,4 +1,4 @@
-size(7cm);
+size(11cm);
 
 usepackage("amsmath");
 import graph;

@@ -2,7 +2,7 @@ import graph;
 import math;
 usepackage("amsmath");
 
-size(10cm);
+size(14cm);
 
 // Define the parametric equations for the cycloid
 pair P(real t) {

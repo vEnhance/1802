@@ -1,5 +1,5 @@
 import graph;
-size(10cm);
+size(14cm);
 
 // Set up the range of the plot
 real xmin = -4.8, xmax = 4.8;

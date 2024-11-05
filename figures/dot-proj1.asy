@@ -1,4 +1,4 @@
-size(8cm);
+size(12cm);
 import geometry;
 pair foot(pair P, pair A, pair B) { return foot(triangle(A,B,P).VC); }
 usepackage("amsmath");

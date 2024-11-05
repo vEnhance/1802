@@ -1,7 +1,7 @@
 // Asymptote code for plotting level curves of f(x, y) = x^2 + y^2
 import graph;
 
-size(10cm);
+size(14cm);
 
 real f(real x, real y) {
   return x^2 + y^2;

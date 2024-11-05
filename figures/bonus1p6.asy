@@ -1,4 +1,4 @@
-size(8cm);
+size(12cm);
 draw(unitcircle, lightblue);
 draw((-1.3,0)--(1.3,0), Arrows);
 draw((0,-1.3)--(0,1.3), Arrows);

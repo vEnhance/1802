@@ -1,5 +1,5 @@
 import graph;
-size(12cm);
+size(16cm);
 usepackage("amsmath");
 picture left_pic;
 picture right_pic;

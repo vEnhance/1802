@@ -1,4 +1,4 @@
-size(11cm);
+size(15cm);
 
 void draw_plus(pair P, int dE, int dW, int dN, int dS, string rarity) {
   real eps = 0.35;

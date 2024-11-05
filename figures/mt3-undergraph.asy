@@ -1,4 +1,4 @@
-size(10cm);
+size(14cm);
 
 real e = exp(1);
 real k = (e-1)**2;

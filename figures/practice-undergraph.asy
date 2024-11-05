@@ -1,4 +1,4 @@
-size(10cm);
+size(14cm);
 
 import graph;
 xaxis("$x$", -0.5, 10, Arrows);

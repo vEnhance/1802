@@ -1,4 +1,4 @@
-size(8cm);
+size(12cm);
 pair v = (4,1);
 pair w = (2,3);
 pair origin = (0,0);

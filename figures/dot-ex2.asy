@@ -1,4 +1,4 @@
-size(12cm);
+size(16cm);
 usepackage("amsmath");
 import graph;
 import geometry;

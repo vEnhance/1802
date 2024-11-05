@@ -1,4 +1,4 @@
-size(6cm);
+size(10cm);
 import graph;
 
 pair O = (0,0);

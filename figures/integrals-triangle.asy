@@ -1,4 +1,4 @@
-size(16cm);
+size(18cm);
 usepackage("amsmath");
 usepackage("amssymb");
 usepackage("derivative");

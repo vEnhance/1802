@@ -1,5 +1,5 @@
 import graph;
-size(10cm);
+size(14cm);
 usepackage("amsmath");
 for (int i=-2; i<=5; ++i) {
   draw((i,-5)--(i,1), grey+dotted);

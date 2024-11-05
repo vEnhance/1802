@@ -1,4 +1,4 @@
-size(8cm);
+size(12cm);
 usepackage("amsmath");
 fill((-0.4,-2.7)--(0.4,-2.1)--(0.4,5.3)--(-0.4,4.7)--cycle, palecyan);
 label("$x+y+2z=0$", (0,5), dir(90), deepcyan);
