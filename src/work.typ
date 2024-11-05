@@ -37,19 +37,6 @@ Mercifully, the shorthand still writes a dot product in the symbols, to remind y
 you should be evaluating a dot product when you compute this.
 I can't imagine how much confusion it would cause if the shorthand didn't have the dot product.
 
-Since that's _still_ not short enough, the following shorthand is also possible
-that hides both $bf(F)$ and $bf(r)$ altogether.
-#definition(title: [Definition: More shorthand for line integrals])[
-  In $RR^2$, suppose $bf(F)(x,y) = vec(p(x,y), q(x,y))$.
-  Then the work integral can further be abbreviated as
-  $ int_(cal(C)) (p dif x + q dif y). $
-
-  Analogously, suppose we have a vector field
-  $bf(F)(x,y,z) = vec(p(x,y,z), q(x,y,z), r(x,y,z))$ for $RR^3$.
-  Then the work integral can further be abbreviated as
-  $ int_(cal(C)) (p dif x + q dif y + r dif z). $
-]
-
 If you want to visualize the integral,
 you can imagine walking along the path cut out by $bf(r)$.
 At each point, you draw the tangent vector $bf(r)'(t)$ to the path,
@@ -94,6 +81,73 @@ if we choose to hide the parametrization $bf(r)(t)$ from the notation.)
   the perimeter of the square, just cut it into the four line segments.
 ]
 
+== [SIDENOTE] Aquatic interpretation of work
+
+Letting $bf(F)$ represent water current as always,
+the "work" done along a trajectory can be thought of as:
+#idea[
+  The work tells you how much the water current helps or hinders
+  the movement of a swimmer through the water.
+]
+
+To compute this, consider a trajectory along which an object, such as a
+boat or swimmer, moves through the water. The current vector field
+$bf(F)$ at any point describes the speed and direction of the
+water flow at that location. The work done by the current as the object
+follows a path $cal(C)$ depends on the alignment of the current with the
+object’s movement along that path.
+
+1. _When the current aligns with the path_: If the direction of
+  $bf(F)$ aligns with the direction of the trajectory at a
+  point, the current contributes positively to the work along that
+  segment, effectively aiding the motion. This is experienced as a
+  "push" in the direction of travel.
+  The dot products are positive since at each point $P = bf(r)(t)$,
+  the vectors $bf(F)(P)$ and $bf(r)'(t)$ align well,
+  and the work is a sum of a lot of positive numbers.
+
+2. _When the current opposes the path_: If the current direction
+  opposes the trajectory at any point, it contributes negatively to the
+  work, effectively resisting the motion. In this case, the object has to
+  work against the current, experiencing it as a "drag" force that slows
+  its progress.
+  The dot products are negative since at each point $P = bf(r)(t)$,
+  the vectors $bf(F)(P)$ and $bf(r)'(t)$ point against each other,
+  and the work is a sum of a lot of negative numbers.
+
+3. _When the current flows perpendicularly to the path_: If
+  $bf(F)$ is perpendicular to the trajectory at a point, it
+  does no work in the direction of travel, as the current neither aids nor
+  resists the movement along the path. The effect of the current in this
+  case would primarily cause a lateral drift rather than a forward or
+  backward push along the trajectory.
+  The dot products are zero in this case: at each point $P = bf(r)(t)$,
+  the vectors $bf(F)(P)$ and $bf(r)'(t)$ are perpendicular.
+
+#todo[might be nice to have a figure here]
+
+== [TEXT] Even more shorthand: $p dif x + q dif y$
+
+Then notation $int_(cal(C)) bf(F) dot dif bf(r)$ can _still_ be contracted further:
+there is another shorthand that hides both $bf(F)$ and $bf(r)$ altogether.
+Here it is:
+
+#definition(title: [Definition: More shorthand for line integrals])[
+  In $RR^2$, suppose $bf(F)(x,y) = vec(p(x,y), q(x,y))$.
+  Then the work integral can further be abbreviated as
+  $ int_(cal(C)) (p dif x + q dif y). $
+
+  Analogously, suppose we have a vector field
+  $bf(F)(x,y,z) = vec(p(x,y,z), q(x,y,z), r(x,y,z))$ for $RR^3$.
+  Then the work integral can further be abbreviated as
+  $ int_(cal(C)) (p dif x + q dif y + r dif z). $
+]
+
+If any of $p$, $q$, $r$ are zero, that term can also be omitted entirely.
+So for example, in 2D, if you see
+$ int_(cal(C)) y dif x $
+you should take this shorthand to mean
+$ int_(cal(C)) y dif x := int_(cal(C)) vec(y, 0) dot dif bf(r). $
 
 == [RECIPE] Computing line integrals by hand <sec-work-manual-recipe>
 
@@ -120,6 +174,16 @@ Let's show some examples of how to calculate this in practice.
 #soln[
   We do both parts; to prevent drowning in subscripts, we'll use $cal(C)$ and $bf(r)$
   for the curve and parametrization for each part.
+
+  Before jumping into the calculation, look at @fig-work-ex1 to get a sense of what's going on.
+  The blue arc has mixed signs: near the start and end of the arc, the dot products we're adding
+  are positive as the small arrows line up well with the blue path.
+  But we're moving against the current near the top.
+  Since the arrows near the start on longer, you might guess the work integral is a small
+  positive number, and you'd be right.
+
+  Meanwhile, along the brown arrow, all the arrows are perpendicular to our trajectory.
+  We should expect the total work to thus be $0$, and indeed it is.
 
   #figure(
     image("figures/work-ex1.png", width: auto),
@@ -163,40 +227,55 @@ It's only for the so-called *conservative* vector fields,
 which we'll talk about more in a moment,
 for which work integrals are path-independent.
 
-== [SIDENOTE] Aquatic interpretation of work
+Let's do an example to practice the weird $dif x$ and $dif y$ shorthand,
+along a different path.
+#sample[
+  Let $cal(C)$ denote the arc of the parabola $y = x^2$ starting from $(-1,1)$
+  and moving right to $(1,1)$.
+  Compute the line integral
+  $ int_(cal(C)) y^(2/3) dif x. $
+]
+#figure(
+  image("figures/work-ex1b.png", width: auto),
+  caption: [The vector field $bf(F)(x,y) = vec(y^(2/3), 0)$ (little light blue horizontal arrows)
+  and an arc $cal(C)$/from the parabola $y=x^2$ in it.],
+) <fig-work-ex1b>
 
-Letting $bf(F)$ represent water current as always,
-the "work" done along a trajectory can be thought of as a measure of
-*how much the water current helps (or hinders) movement along that path*.
+#soln[
+  First we need to expand the shorthand with $dif x$ and $dif y$.
+  Recall that $p dif x + q dif y$ is shorthand for the vector field being $vec(p,q)$.
+  So where $y^(2/3) dif x = y^(2/3) dif x + 0 dif y$, we expand the shorthand as
+  $ int_(cal(C)) y^(2/3) dif x = int_(cal(C)) vec(y^(2/3), 0) dot dif bf(r)
+    = int_("start time")^("stop time") bf(F)(bf(r)(t)) dot bf(r)'(t) dif t $
+  where $bf(F)(x,y) := vec(y^(2/3), 0)$ refers to the vector field
+  encoded by the $y^(2/3) dif x$ shorthand.
 
-#todo[...]
+  Again, if you look at the sketch in @fig-work-ex1b, we're expecting a positive work:
+  all the arrows are pointing right,
+  and the path $cal(C)$ in red is moving right as well,
+  so all the dot products are positive.
+  (Again, if you imagine the blue arrows as a river current,
+  it's definitely helping you swim, even if it's not directly aligned
+  since you're not swimming straight east.)
 
-To compute this, consider a trajectory along which an object, such as a
-boat or swimmer, moves through the water. The current vector field
-$bf(F)$ at any point describes the speed and direction of the
-water flow at that location. The work done by the current as the object
-follows a path $cal(C)$ depends on the alignment of the current with the
-object’s movement along that path.
+  There are two
+  The arc of the parabola we're trying to traverse needs to start at $(-1,1)$ and end at $(1,1)$.
+  Just to make things concrete, examples of points we expect to pass through in our path are
+  $ (-1,1) --> (-1/2, 1/4) --> (-1/3, 1/9) --> (0,0) --> (1/3, 1/9) --> (1/2, 1/4) --> (1,1). $
+  Anyway, we choose to parametrize the time as varying in $-1 <= t <= 1$ with
+  $ bf(r)(t) = (t, t^2). $
 
-1. _When the current aligns with the path_: If the direction of
-  $bf(F)$ aligns with the direction of the trajectory at a
-  point, the current contributes positively to the work along that
-  segment, effectively aiding the motion. This is experienced as a
-  "push" in the direction of travel.
-
-2. _When the current opposes the path_: If the current direction
-  opposes the trajectory at any point, it contributes negatively to the
-  work, effectively resisting the motion. In this case, the object has to
-  work against the current, experiencing it as a "drag" force that slows
-  its progress.
-
-3. _When the current flows perpendicularly to the path_: If
-  $bf(F)$ is perpendicular to the trajectory at a point, it
-  does no work in the direction of travel, as the current neither aids nor
-  resists the movement along the path. The effect of the current in this
-  case would primarily cause a lateral drift rather than a forward or
-  backward push along the trajectory.
-
+  Now if we throw everything in, we have
+  $ bf(F)(bf(r)(t)) = bf(F)(t, t^2) = vec(t^(4/3), 0) $
+  and
+  $ bf(r)'(t) = vec(1, 2t). $
+  So the overall line integral becomes
+  $
+    int_(t=-1)^1 vec(t^(4/3),0) dot underbrace(vec(1, 2t), =bf(r)'(t)) dif t
+    = int_(t=-1)^1 t^(4/3) dif t
+    = [3/7 t^(7/3)]_(t=-1)^1 = 6/7. #qedhere
+  $
+]
 == [TEXT] The fundamental theorem of calculus for line integrals
 
 We now show the first Stokes result.
@@ -298,6 +377,31 @@ Of course, we do this knowing that the two answers better be equal (to $-2$).
   $ int_(cal(C)) bf(F) dot dif bf(r) &= int_(t=0)^1 bf(F) (bf(r) (t)) dot bf(r)' (t) dif t
     = int_(t=0)^1 -2(3-4t) dif t \
     &= int_(t=0)^1 (8t-6) dif t = (4t^2-6t)_(t=0)^1 = -2. $
+
+#sample[
+  Suppose $cal(C)$ is any path from $(1,100)$ to $(42, 1337)$.
+  Compute $ int_(cal(C)) 5 dif x. $
+]
+#soln[
+  Expanding the shorthand $5 dif x = 5 dif x + 0 dif y$,
+  the vector field we're integrating over is the constant vector field $bf(F)(x,y) = vec(5,0)$.
+  (In the cartoon, every blue arrow points directly east and has the same length $5$.)
+  This is certainly conservative: the potential function
+  $ f(x,y) = 5x $
+  can be found just by guessing or via the method in @sec-antigrad.
+  Indeed, $nabla f = vec(5,0)$ as we needed.
+
+  So now that we know $f$, we can forget about parametrizing $cal(C)$
+  and just write directly
+  $ f(42, 1337) - f(1, 100) = 5 dot 42 - 5 dot 1 = 5(42-1) = 204. #qedhere $
+]
+
+#remark[
+  In general, the vector field encoded by $c dif x$ for any constant $c$ is conservative
+  with potential function $f(x,y) = c x$.
+  Hence, $int_(cal(C)) c dif x = c int_(cal(C)) dif x$
+  will always just equal to $c$ times the total change in $x$.
+]
 
 == [TEXT] Okay, but how do you tell whether $bf(F)$ is conservative?
 
@@ -408,9 +512,6 @@ Here are a few.
   $ op("Area") (cal(R)) = pi r^2 = pi (2)^2 = 4 pi . $
   So the answer is $2 dot 4 pi = 8 pi. $
 ]
-
-#todo[example where it's just a straight line]
-#todo[example of like $5 dif x$ or something]
 
 #sample[
   Evaluate the line integral $ oint_(cal(C)) (y dif x - x dif y) $
