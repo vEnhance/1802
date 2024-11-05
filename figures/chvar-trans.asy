@@ -1,4 +1,4 @@
-unitsize(1.1cm);
+unitsize(1.4cm);
 
 import graph;
 import chvar_base;
