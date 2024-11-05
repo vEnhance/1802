@@ -33,7 +33,5 @@ answerkeys/r15s.pdf
 answerkeys/r16s.pdf
 bonus1.pdf
 lamv.pdf
-figures/integrals-triangle.pdf
-figures/integrals-stokes.pdf
 mockmt2.pdf
 mockmt3.pdf
