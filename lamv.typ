@@ -46,7 +46,7 @@ For comparison, Part Charlie (not including the review) corresponds approximatel
 
 #part[Part Delta: Parametric side-quest]
 For comparison, Part Delta corresponds approximately to §5 and §7 of #poonen.
-#include "src/parametric.typ"
+#include "src/param.typ"
 #pagebreak()
 
 #part[Part Echo: Multivariable differentiation]

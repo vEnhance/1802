@@ -199,7 +199,7 @@ clockwise is decreasing by $omega$ per unit time instead
 See @fig-angular.
 
 #figure(
-  image("figures/parametric-angular.png", width: auto),
+  image("figures/param-angular.png", width: auto),
   caption: [Rotation of a point with constant angular velocity.],
 ) <fig-angular>
 
@@ -353,7 +353,7 @@ Okay, here are some examples.
 ]
 
 #figure(
-  image("figures/parametric-cycloid.png", width: auto),
+  image("figures/param-cycloid.png", width: auto),
   caption: [The cycloid formed as the wheel rolls to the right.],
 ) <fig-cycloid>
 
@@ -512,6 +512,6 @@ Let's see this.
 ] <exer-clockblock>
 
 #figure(
-  image("figures/parametric-clockblock.png", width: auto),
+  image("figures/param-clockblock.png", width: auto),
   caption: [The clock problem from the AMC 10A in 2015.],
 ) <fig-clockblock>
