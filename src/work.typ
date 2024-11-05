@@ -132,20 +132,22 @@ directed from the point $(1,0)$ to $(-1,0)$.
 of which way the integral moves along $cal(C)$,
 if we choose to hide the parametrization $bf(r)(t)$ from the notation.)
 
-#tip(title: [Tip: The work integral doesn't depend on the exact parametrization])[
+#tip(title: [Tip: You get flexibility in parametrizations, as in @sec-flex-param])[
   The work integral depends on which direction you walk along the path
   (it negates if you flip the start and stop point),
   but it doesn't depend on exactly how exactly you parametrize the path.
+
   Thus, the comments from @sec-flex-param apply here:
   if you're saying, parametrizing the semicircle
   $(1,0)$ to $(-1,0)$ the blue arc in later @fig-work-ex1),
-  you should probably use $bf(r)(t) = (cos(t), sin(t))$ for $0 <= t <= pi$.
-  (You could also use $bf(r)(t) = (cos(pi t), sin(pi t))$ for $0 <= t <= 1$.
+  you should probably use $ bf(r)(t) = (cos(t), sin(t))$ for $0 <= t <= pi. $
+
+  You could also use $bf(r)(t) = (cos(pi t), sin(pi t))$ for $0 <= t <= 1$.
   Or if you wanted to annoy the grader,
   you could even use $bf(r)(t) = (cos(pi t^2), sin(pi t^2))$ for $0 <= t <= 1$,
   which traces out the same arc at an irregular rate.
   Since these all give the same answer, you should pick the parametrization
-  that makes the calculation easiest for you.)
+  that makes the calculation easiest for you.
 ]
 
 #tip(title: [Tip: Splicing is OK])[
@@ -262,7 +264,7 @@ If any of $p$, $q$, $r$ are zero, that term can also be omitted entirely.
 So for example, in 2D, if you see
 $ int_(cal(C)) y dif x $
 you should take this shorthand to mean
-$ int_(cal(C)) y dif x := int_(cal(C)) vec(y, 0) dot dif bf(r). $
+$ int_(cal(C)) y dif x := int_(cal(C)) (y dif x + 0 dif y) = int_(cal(C)) vec(y, 0) dot dif bf(r). $
 
 Let's do an example to practice the weird $dif x$ and $dif y$ shorthand,
 along a different path.
