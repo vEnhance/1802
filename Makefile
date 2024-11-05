@@ -3,14 +3,19 @@ SVG_OUTPUTS := $(ASY_INPUTS:.asy=.svg)
 TYP_INPUTS := $(wildcard *.typ)
 PDF_OUTPUTS := $(TYP_INPUTS:.typ=.pdf)
 
-all: $(SVG_OUTPUTS) $(PDF_OUTPUTS)
+all: $(SVG_OUTPUTS) $(PDF_OUTPUTS) posters
 
 figs: $(SVG_OUTPUTS)
 
-figures/%.pdf: figures/%.asy
-	cd figures; asy -f pdf $(notdir $<) -o $(basename $(notdir $@))
-figures/%.svg: figures/%.pdf
-	pdftocairo -svg $< $@
+figures/%.svg: figures/%.asy
+	cd figures; asy -f svg $(notdir $<) -o $(basename $(notdir $@))
+
+posters: published/poster-ints.pdf published/poster-stokes.pdf
+
+published/poster-ints.pdf: figures/integrals-triangle.asy
+	cd figures; asy -f pdf $(notdir $<) -o ../published/poster-ints
+published/poster-stokes.pdf: figures/integrals-stokes.asy
+	cd figures; asy -f pdf $(notdir $<) -o ../published/poster-stokes
 
 %.pdf: %.typ
 	typst compile $<
