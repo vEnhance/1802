@@ -325,7 +325,7 @@ in return for the short time limit.
     up uninspired exercises one after another en masse.#footnote[Which I admit
       I have too much pride to do either, as a math olympiad kid whose success story
       was built on solving many non-routine problems growing up,
-      rather than mass-generated ones.].
+      rather than mass-generated ones.]
 
   - It's pretty good at "explain things in lots of words" in a conversational way.
     For example, the aquatic descriptions of what curl or divergence or work mean

@@ -37,9 +37,8 @@ I promised you two definitions right? So here they are.
   times the cosine of the included angle.
 ]
 
-It's totally not obvious that these two definitions are the same?
+It's totally not obvious that these two definitions are the same!
 The standard proof uses the law of cosines;
-I'll say a bit more about this once I've done a few examples.
 I also found a proof without trigonometry that I typed in @appendix-dotpf.
 I won't dwell on this proof too much in the interest of moving these notes forward.
 
