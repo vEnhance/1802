@@ -221,7 +221,8 @@ Let's show some examples of how to calculate this in practice.
     $ int_(t=0)^pi [- 2 dot (1 - cos 2 t) / (2) + 3 dot (1 + cos 2 t) / (2)] dif t
     &= int_(t=0)^pi [- (1 - cos 2 t) + 3 / 2 (1 + cos 2 t)] dif t \
     &= int_(t=0)^pi [1 / 2 + 5 / 2 cos 2 t] dif t. $
-    The term $int_(t=0)^pi cos(2t) dif t$ is zero by symmetry, so the final integral is $pi/2$.
+    The term $int_(t=0)^pi cos(2t) dif t$ is zero by symmetry,
+    so the final integral is $#boxed[$pi slash 2$]$.
 
   - Now let's suppose $cal(C)$ is the brown line segment shown.
     Parametrize the curve $cal(C)$ as $bf(r) (t) = (1 -  2 t, 0)$, where $0 <= t <= 1$.
@@ -234,7 +235,7 @@ Let's show some examples of how to calculate this in practice.
     $ bf(F) (bf(r) (t)) = bf(F) (0, 1 - 2t) = vec(0, 3 - 6t). $
     The dot product is identically equal to zero:
     $ vec(-2, 0) dot vec(0, 3-6t) = 0. $
-    So the line integral is $0$ as well. #qedhere
+    So the line integral is $#boxed[$0$]$ as well. #qedhere
 ]
 
 In particular the work integral in general depends on which path you take:
@@ -382,7 +383,7 @@ Thus, now that $f$ is known, line integrals are trivial to compute:
   Because we know the potential function
   $ f(x,y) = x^2 + x + 3 / 2 y^2 $
   the answer to both parts is the same:
-  $ f(-1,0) - f(1,0) = 0 - 2 = -2. #qedhere $
+  $ f(-1,0) - f(1,0) = 0 - 2 = #boxed[$ -2 $]. #qedhere $
 ]
 
 For comparison, we show how we could have computed the line integrals "by hand"
@@ -432,7 +433,8 @@ Of course, we do this knowing that the two answers better be equal (to $-2$).
   So now that we know $bf(F)$ is conservative and
   have found a potential function $f$,
   we can forget about parametrizing $cal(C)$ and just write directly
-  $ int_(cal(C)) 5 dif x = f(42, 1337) - f(1, 100) = 5 dot 42 - 5 dot 1 = 5(42-1) = 204. #qedhere $
+  $ int_(cal(C)) 5 dif x = f(42, 1337) - f(1, 100) = 5 dot 42 - 5 dot 1 = 5(42-1)
+    = #boxed[$ 204 $]. #qedhere $
 ]
 
 #remark[
@@ -549,7 +551,7 @@ Here are a few.
   The region $cal(R)$ is the disk defined by $x^2 + y^2 <= 4$,
   which is a circle of radius $2$, hence with area
   $ op("Area") (cal(R)) = pi r^2 = pi (2)^2 = 4 pi . $
-  So the answer is $2 dot 4 pi = 8 pi. $
+  So the answer is $2 dot 4 pi = #boxed[$ 8 pi $]. $
 ]
 
 #sample[
@@ -570,7 +572,7 @@ Here are a few.
   The area of the triangle $cal(R)$ is:
   $ op("Area")(cal(R)) = 1 / 2 dot upright("base") dot upright("height")
     = 1 / 2 dot 1 dot 1 = 1 / 2 . $
-  Thus: $ iint_(cal(R)) - 2 dif A = - 2 dot 1 / 2 = - 1 . #qedhere $
+  Thus: $ iint_(cal(R)) - 2 dif A = - 2 dot 1 / 2 = #boxed[$ -1 $]. #qedhere $
 ]
 
 #sample[
@@ -600,7 +602,7 @@ Here are a few.
   $ [x^2 / 2 + y x]_(x=0)^1 = y + 1/2. $
 
   Evaluate the integral with respect to $y$:
-  $ 2 int_(y = 0)^1 (y+1/2) dif y = 2. #qedhere $
+  $ 2 int_(y = 0)^1 (y+1/2) dif y = #boxed[$ 2 $]. #qedhere $
 ]
 
 == [RECIPE] Evaluating line integrals, all together now

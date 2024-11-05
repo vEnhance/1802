@@ -81,7 +81,7 @@ I'm actually going to split it into two parts.
   In that case the condition ends up becoming $ 0 <= r <= 2 cos theta. $
 
   In conclusion, the answer is $cal(R)$ in polar coordinates
-  is exactly $-pi/2 <= theta <= pi/2$, and $r <= 2 cos theta$.
+  is exactly $ #boxed[$-pi/2 <= theta <= pi/2$ and $r <= 2 cos theta$]. #qedhere $
 ]
 In other words, the graph of $r = 2 cos theta$ is actually just an offset circle.
 This is a bit of a surprise to people who are seeing it for the first time, and even a bit to me now.
@@ -129,7 +129,7 @@ Okay, here's the famous exercise I promised you.
   $ int_(theta = -pi/2)^(pi / 2) cos^3 theta dif theta = int_(u=-1)^1 (1 - u^2) dif u = [u - u^3 / 3]_(-1)^1 = (1-1/3) - (-1+1/3) = 4/3. $
 
   Substitute this result back into the integral:
-  $ 8 / 3 int_(theta = -pi/2)^(pi / 2) cos^3 theta dif theta = 8 / 3 dot 4 / 3 = 32 / 9 . #qedhere $
+  $ 8 / 3 int_(theta = -pi/2)^(pi / 2) cos^3 theta dif theta = 8 / 3 dot 4 / 3 = #boxed[$ 32/9 $]. #qedhere $
 ]
 
 == [TEXT] Example: ugly square roots or $x^2+y^2$ everywhere
@@ -187,7 +187,7 @@ with some different artificial function involving $x^2+y^2$ in some other way:
   $ 1 / 2 int_(u = 17)^26 1 / u dif u = 1 / 2 [log u]_(u=17)^26 = 1 / 2 (log 26 - log 17) = 1 / 2 log 26 / 17 . $
 
   Now, integrate with respect to $theta$:
-  $ int_(theta = 0)^pi 1 / 2 log 26 / 17 dif theta = pi / 2 log 26 / 17 . #qedhere $
+  $ int_(theta = 0)^pi 1 / 2 log 26 / 17 dif theta = #boxed[$ pi / 2 log 26 / 17 $]. #qedhere $
 ]
 
 == [TEXT] Example: region described in circular terms
@@ -242,7 +242,7 @@ Again $x y$-coordinates are either infeasible or at least annoying.
   quarter-circle region is symmetric about the line $y = x$:
   $ dash(y) = 1 / (op("Area")(cal(R))) iint_cal(R) y dif x dif y = (4) / (3 pi) . $
   Hence, the final answer is
-  $ (dash(x) , dash(y)) = ((4) / (3 pi) , (4) / (3 pi)). #qedhere $
+  $ (dash(x) , dash(y)) = #boxed[$ ((4) / (3 pi) , (4) / (3 pi)) $]. #qedhere $
 ]
 
 == [SIDENOTE] A picture of $r dif r dif theta = (r dif theta) dif r$

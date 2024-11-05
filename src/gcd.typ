@@ -124,7 +124,7 @@ Here's the definition of curl in 3D space.
   and the third component is
   $ ((partial q) / (partial x) - (partial p) / (partial y)) = (0 - x) = - x. $
   Hence
-  $ nabla times bf(F) = vec(-y, -z, -x). #qedhere $
+  $ nabla times bf(F) = #boxed[$ vec(-y, -z, -x) $]. #qedhere $
 ]
 
 Now let's talk about aquatic intuition.
@@ -241,7 +241,8 @@ Indeed, it does:
   Compute the third component:
   $ ((partial q) / (partial x) - (partial p) / (partial y)) = 2 y - 2 y = 0. $
 
-  So the curl of the vector field $bf(F) (x , y , z)$ is $vec(0,0,0) = bf(0)$.
+  So the curl of the vector field $bf(F) (x , y , z)$
+  is $vec(0,0,0) = #boxed[$ bf(0) $] $.
 ]
 Hence this is an example of a _conservative_ vector field, which we'll talk more about later.
 
@@ -281,7 +282,7 @@ Hence this is an example of a _conservative_ vector field, which we'll talk more
     (partial r) / (partial z) &= (partial) / (partial z) (z x) = x. $
   Sum the partials to get the divergence:
   $ nabla dot bf(F) & = (partial F_1) / (partial x) + (partial F_2) / (partial y) + (partial F_3) / (partial z)\
-    & = y + z + x = x + y + z. #qedhere $
+    & = y + z + x = #boxed[$ x + y + z $]. #qedhere $
 ]
 
 Now let's talk about aquatics.
@@ -395,7 +396,7 @@ Instead we take the convention that
   Given $p(x,y) = x cos y$ we have
   $ (partial p) / (partial y) = (partial) / (partial y) (x cos y) = x (- sin y) = - x sin y. $
   Hence
-  $ op("curl") bf(F)(x,y) = e^x + x sin y. #qedhere $
+  $ op("curl") bf(F)(x,y) = #boxed[$ e^x + x sin y $]. #qedhere $
 ]
 It's still true (and indeed follows from the 3D version) that:
 #memo[
@@ -424,7 +425,7 @@ So the 2D scalar curl should be $0$, and indeed it is.
     & = 4 x + 2 y. $
   Hence
   $ op("curl") bf(F)(x,y) & = (partial q) / (partial x) - (partial p) / (partial y)\
-     & = (4 x + 2 y) - (4 x + 2 y) = 0. #qedhere $
+     & = (4 x + 2 y) - (4 x + 2 y) = #boxed[$ 0 $]. #qedhere $
 ]
 
 == [TEXT] 2D divergence
@@ -456,12 +457,12 @@ The aquatic interpretation is the same too, just in 2D bodies of water.
   $ (partial q) / (partial y) = (partial) / (partial y) (e^x + sin y) = cos y. $
   Hence
   $ nabla dot bf(F)(x,y) & = (partial p) / (partial x) + (partial q) / (partial y)\
-     & = cos y + cos y= 2 cos y. #qedhere $
+     & = cos y + cos y= #boxed[$ 2 cos y $]. #qedhere $
    ]
 
 #sample[
   Compute the divergence of
-  $ bf(F) (x , y) = vec(3 x^2 + 4 x y + y^2 , med 2 x^2 + 2 x y - 3 y^2) $
+  $ bf(F) (x , y) = vec(3 x^2 + 4 x y + y^2 , 2 x^2 + 2 x y - 3 y^2) $
 ]
 #soln[
   Given $p(x,y) = 3 x^2 + 4 x y + y^2$:
@@ -470,7 +471,7 @@ The aquatic interpretation is the same too, just in 2D bodies of water.
   $ (partial q) / (partial y) = (partial) / (partial y) (2 x^2 + 2 x y - 3 y^2) = 2 x - 6 y. $
   Hence
   $ nabla dot bf(F)(x,y) & = (partial p) / (partial x) + (partial q) / (partial y)\
-    &= (6 x + 4 y) + (2 x - 6 y)  = 8 x - 2 y. #qedhere $
+    &= (6 x + 4 y) + (2 x - 6 y)  = #boxed[$ 8 x - 2 y $]. #qedhere $
 ]
 
 == [EXER] Exercises

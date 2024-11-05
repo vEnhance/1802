@@ -55,7 +55,8 @@ It's easier to see an example before the recipe.
 
   2. Now, substitute the result of the inner integral into the outer integral:
     $ int_(y=0)^6 y^2 / 2 dif y &= 1 / 2 int_(y=0)^6 y^2 dif y  \
-    &= 1/2 int_(y=0)^6 y^2 dif y = 1/2 [y^3 / 3]_0^6 = 1/2( 6^3 / 3 - 0^3 / 3) &= 36. $
+    &= 1/2 int_(y=0)^6 y^2 dif y = 1/2 [y^3 / 3]_0^6 = 1/2( 6^3 / 3 - 0^3 / 3)
+    &= #boxed[$ 36 $]. $
 ]
 Easy, right?
 The general recipe is the same.
@@ -94,7 +95,7 @@ Here's another example.
     $ int_(x=0)^pi sin (x) dif x = [- cos (x)]_0^pi = - cos (pi) + cos (0) . $
 
     Using $cos (pi) = - 1$ and $cos (0) = 1$, we get:
-    $ - (- 1) + 1 = 1 + 1 = 2 . $
+    $ - (- 1) + 1 = 1 + 1 = #boxed[$ 2 $] . $
 ]
 
 == [RECIPE] Doing $x y$-integration without a rectangle <sec-convert-x-y-integration>
@@ -270,7 +271,7 @@ as Poonen did, and show how we would find the integral.
     12 [x^2 / 2]_(x = - 1)^(x = 2) &= 12 dot 3 / 2 = 18 \
     8 dot (2 - (- 1)) &= 8 dot 3 = 24.
     $
-    Add these to get the answer: $ -66/5 -15/2 + 12 + 18 + 24 = 333/10. $
+    Add these to get the answer: $ -66/5 -15/2 + 12 + 18 + 24 = #boxed[$ 333/10 $]. $
 ]
 
 == [SIDENOTE] What it looks like if you integrate the hard way
@@ -396,7 +397,7 @@ If you choose $f = 1$ you get area.
   So the answer is
   $ int_(x = - 1)^2 (x+2-x^2) dif x =
     lr([x^2/2 + 2x - x^3/3])_(x=-1)^(x=2)
-    = (2+4-8/3) - (1/2-2+1/3) = 9/2. #qedhere $
+    = (2+4-8/3) - (1/2-2+1/3) = #boxed[$ 9/2 $]. #qedhere $
 ]
 
 #digression(title: [Digression on "area under the curve" from 18.01])[
@@ -527,7 +528,7 @@ Put in recipe form:
   you can find the indefinite 18.01 integral
   $ int 2 y e^(y^2) dif y = e^(y^2) + C. $
   So the final answer to the problem is
-  $ int_(y=0)^1 2y e^(y^2) dif y dif x = lr([e^(y^2)])_(y=0)^(y=1) = e^1 - 1. #qedhere $
+  $ int_(y=0)^1 2y e^(y^2) dif y dif x = lr([e^(y^2)])_(y=0)^(y=1) = #boxed[$ e-1 $]. #qedhere $
 ]
 
 #sample[
@@ -570,7 +571,7 @@ Put in recipe form:
     &= 1 / 10 int_(u = 0)^(37/3 pi) sin(u) dif u \
     &= 1 / 10 (- cos (37/3 pi) + cos (0)) . $
   Using $cos (37/3 pi) = 1 / 2$ and $cos (0) = 1$, we get:
-  $ 1 / 10 (- 1 / 2 + 1) = 1 / 10 dot 1 / 2 = 1 / 20 . #qedhere $
+  $ 1 / 10 (- 1 / 2 + 1) = 1 / 10 dot 1 / 2 = #boxed[$ 1/20 $]. #qedhere $
 ]
 
 == [EXER] Exercises

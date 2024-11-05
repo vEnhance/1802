@@ -233,7 +233,7 @@ Let's see an example of how to carry out this integration.
     &= int_(u = 1 / 4)^4 int_(v = 16 / 25)^(16 / 9) 1/(2u) dif v dif u \
     &= int_(u = 1 / 4)^4 1/(2u) dot (16/9-16/25) dif u \
     &= 128/225 int_(u = 1 / 4)^4 1/(u) dif u \
-    &= 128/225 (log 4 - log (1/4)) = (512 log 2) / 225. #qedhere
+    &= 128/225 (log 4 - log (1/4)) = #boxed[$ (512 log 2) / 225 $]. #qedhere
   $
 ]
 
@@ -275,7 +275,7 @@ Let's see an example of how to carry out this integration.
     int_(r=0)^1 ( int_(theta=0)^(2 pi) r dif theta) dif r
     &= int_(r=0)^1 ( 2 pi r ) dif r \
     &= 2 pi int_(r=0)^1 ( r ) dif r \
-    &= 2 pi [r^2/2]_(r=0)^(r=1) = pi. #qedhere
+    &= 2 pi [r^2/2]_(r=0)^(r=1) = #boxed[$ pi $]. #qedhere
   $
 ]
 
@@ -304,7 +304,7 @@ For example, consider the following easy question and solution.
   $ int_(x = 0)^1 e^x dot 2 dif x = 2 int_(x = 0)^1 e^x dif x . $
   Compute the integral:
   $ int_(x = 0)^1 e^x dif x = [e^x]_(x = 0)^1 = e^1 - e^0 = e - 1 . $
-  Multiply the result by 2 to get the answer $2(e-1)$.
+  Multiply the result by 2 to get the answer $#boxed[$2(e-1)$]$.
 ]
 If you pay attention to the solution above,
 you'll notice that in fact $int_(y=0)^pi sin(y) dif y = 2$ is just a number,
