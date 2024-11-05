@@ -259,22 +259,22 @@ along a different path.
   Let $cal(C)$ denote the arc of the parabola $y = x^2$ starting from $(-1,1)$
   and moving right to $(1,1)$.
   Compute the line integral
-  $ int_(cal(C)) y^(2/3) dif x. $
+  $ int_(cal(C)) y^(2 slash 3) dif x. $
 ]
 #figure(
   image("figures/work-ex1b.png", width: auto),
-  caption: [The vector field $bf(F)(x,y) = vec(y^(2/3), 0)$ (little light blue horizontal arrows)
+  caption: [The vector field $bf(F)(x,y) = vec(y^(2 slash 3), 0)$ (little light blue horizontal arrows)
   and an arc $cal(C)$ from the parabola $y=x^2$ in it (purple).],
 ) <fig-work-ex1b>
 
 #soln[
   First we need to expand the shorthand with $dif x$ and $dif y$.
   Recall that $p dif x + q dif y$ is shorthand for the vector field being $vec(p,q)$.
-  So where $y^(2/3) dif x = y^(2/3) dif x + 0 dif y$, we expand the shorthand as
-  $ int_(cal(C)) y^(2/3) dif x = int_(cal(C)) vec(y^(2/3), 0) dot dif bf(r)
+  So where $y^(2 slash 3) dif x = y^(2 slash 3) dif x + 0 dif y$, we expand the shorthand as
+  $ int_(cal(C)) y^(2 slash 3) dif x = int_(cal(C)) vec(y^(2 slash 3), 0) dot dif bf(r)
     = int_("start time")^("stop time") bf(F)(bf(r)(t)) dot bf(r)'(t) dif t $
-  where $bf(F)(x,y) := vec(y^(2/3), 0)$ refers to the vector field
-  encoded by the $y^(2/3) dif x$ shorthand.
+  where $bf(F)(x,y) := vec(y^(2 slash 3), 0)$ refers to the vector field
+  encoded by the $y^(2 slash 3) dif x$ shorthand.
 
   Again, if you look at the sketch in @fig-work-ex1b, we're expecting a positive work:
   all the arrows are pointing right,
