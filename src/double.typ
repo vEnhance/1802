@@ -203,9 +203,9 @@ For example, let's take the region in Poonen's example 13.1:
     #figure(
       image("figures/double-para-horiz.svg", width: auto),
       caption: [Dissecting @fig-pararegion horizontally, which is less nice: there are cases.
-      Above the line $y=1$, you have a blue wall to the left and a curved arc to the right.
+      Above the line $y=1$, you have a blue wall to the left and a curved purple arc to the right.
       But below $y=1$, you instead have a red arc of the parabola to the left,
-      and a blue arc of the parabola to the right.],
+      and a purple arc of the parabola to the right.],
     ) <fig-pararegion-horiz>
 
 
