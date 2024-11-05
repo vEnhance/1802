@@ -1,7 +1,6 @@
-// Asymptote code for plotting a function with four critical points
 import graph;
 
-size(11cm);
+size(8cm);
 
 // Define the function with critical points
 real f(real x) {
