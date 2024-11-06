@@ -39,7 +39,7 @@ $ nabla f &= vec(x,y) \
 
 == [TEXT] Antiderivative method, if you're promised there is one <sec-antideriv>
 
-#recipe(title: [How to find an anti-gradient with three variables])[
+#recipe(title: [How to find an anti-gradient with two variables])[
   1. Let $f$ denote the gradient function.
   2. Integrate the given $(partial f) / (partial x)$ to get some equation of the
     form $f(x,y) = "expression"  + g(y)$ for some function $g(y)$.
@@ -83,7 +83,7 @@ Let's do a two-variable example first.
   $ - x sin y + g' (y) & = - x sin y\ ==> g' (y) & = 0. $
   Hence $ g (y) = int 0 dif y = C $ where $C$ is a constant.
   We get the final expression for $f (x , y)$ as:
-  $ f (x , y) = x cos y + C. #qedhere $
+  $ f (x , y) = #boxed($ x cos y + C $). #qedhere $
 ]
 
 
@@ -115,7 +115,7 @@ Let's do a two-variable example first.
   where $C$ is a constant of integration.
 
   Putting this together gives
-  $ f (x , y) = x^3 + 2 x^2 y + x y^2 - y^3 + C. #qedhere $
+  $ f (x , y) = #boxed($ x^3 + 2 x^2 y + x y^2 - y^3 + C $). #qedhere $
 ]
 
 Here's a three-variable version. It's admittedly a slog.
@@ -157,7 +157,7 @@ Here's a three-variable version. It's admittedly a slog.
 
   Okay, all done! Put all the work above together:
   and write the final expression for $f (x , y , z)$:
-  $ f (x , y , z) = y^2 x + cos x + 2 y^2 z + e^z + C. #qedhere $
+  $ f (x , y , z) = #boxed($ y^2 x + cos x + 2 y^2 z + e^z + C $). #qedhere $
 ]
 
 == [TEXT] Actually most of the time there might not be any function $f$
