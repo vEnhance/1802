@@ -198,10 +198,10 @@ This is a cookie-cutter application of Green's theorem (both forms).
 
 For the line integral, use Green's theorem with 2D scalar curl:
 $ int_(cal(C)) bf(F) dot dif bf(r)
-  &= iint_(x^2+y^2 <= 1) ( partial/(partial y)(x+2y) -  partial/(partial x)(4x+8y) ) dif A \
-  &= iint_(x^2+y^2 <= 1) (2-4) dif A \
-  &= -2 iint_(x^2+y^2 <= 1) dif A \
-  &= #boxed[$ -2 pi $]. $
+  &= iint_(x^2+y^2 <= 1) (partial/(partial x)(4x+8y) - partial/(partial y)(x+2y)) dif A \
+  &= iint_(x^2+y^2 <= 1) (4-2) dif A \
+  &= 2 iint_(x^2+y^2 <= 1) dif A \
+  &= #boxed[$ 2 pi $]. $
 
 For the flux, use Green's theorem with divergence:
 $ int_(cal(C)) bf(F) dot bf(n) dif s
