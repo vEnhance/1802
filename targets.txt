@@ -1,4 +1,3 @@
-tsafe-1802/tsafe-1802.pdf
 welcome-slides/welcome-slides.pdf
 r02.pdf
 r03.pdf
@@ -15,6 +14,7 @@ r13.pdf
 r14.pdf
 r15.pdf
 r16.pdf
+r17.pdf
 dotpf.pdf
 answerkeys/r02s.pdf
 answerkeys/r03s.pdf
@@ -31,7 +31,9 @@ answerkeys/r13s.pdf
 answerkeys/r14s.pdf
 answerkeys/r15s.pdf
 answerkeys/r16s.pdf
+answerkeys/r17s.pdf
 bonus1.pdf
 lamv.pdf
 mockmt2.pdf
 mockmt3.pdf
+tsafe-1802/tsafe-1802.pdf
