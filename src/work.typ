@@ -625,6 +625,14 @@ So with this, we can present a recipe that condenses these together.
       $ oint_(cal(C)) (p dif x + q dif y) = iint_(cal(R)) ((partial q)/(partial x) - (partial p)/(partial y)) dif A. $
   3. If both of these fail,
     fall back the parametrization recipe described in @sec-work-manual-recipe.
+    To repeat it here:
+      1. Pick *any* parametrization $bf(r) : RR -> RR^n$ of the curve $cal(C)$,
+        including specifying the start and stop times.
+        As described in @sec-flex-param, you have some freedom in how you set the parametrization.
+      2. Calculate the derivative $bf(r)'(t)$.
+      3. Calculate the dot product $bf(F)(bf(r)(t)) dot bf(r)'(t)$.
+      4. Integrate this from the start time to the stop time.
+
 ]
 
 == [EXER] Exercises

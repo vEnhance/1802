@@ -25,7 +25,7 @@ Seriously, I can't make this up.
 
 In any case, the 2D flux is then defined as follows.
 #definition(title: [Definition of 2D flux])[
-  The 2D flux of a vector field $bf(F)$ through the closed loop $cal(C)$
+  The 2D flux of a vector field $bf(F)$ through the closed path $cal(C)$
   parametrized by $bf(r)(t)$ is defined by
   $ int_(t="start time")^("stop time") bf(F)(bf(r)(t)) dot
     (90 degree "clockwise rotation of" bf(r)'(t)) dif t. $
@@ -33,10 +33,8 @@ In any case, the 2D flux is then defined as follows.
 
 #typesig[
   2D flux is a scalar quantity.
-  It's only defined for a vector field in $RR^2$ piercing a closed loop in $RR^2$.
+  It's only defined for a vector field in $RR^2$ piercing a closed path in $RR^2$.
 ]
-(In principle, I can't think of a reason one couldn't define 2D flux
-for a _path_ rather than just a loop, but I don't think I've ever seen it used.)
 
 The "$90 degree$ clockwise rotation of $bf(r)'(t)$" is so awkward
 that you can bet people immediately made up a shorthand to sweep it under the rug.
@@ -73,30 +71,44 @@ There is another way to write the flux with shorthand that avoids $bf(n) dif s$ 
 To see where it comes from, once again write
 $ bf(F)(x,y) = vec(p(x,y), q(x,y)). $
 Rather than rotating $bf(r)'(t)$ by $90 degree$ clockwise,
-let's imagine we instead rotated $bf(F)$ by $90 degree$ clockwise instead, and define:
-$ bf(F)^perp (x,y) := vec(q(x,y), -p(x,y)). $
-In that case, we have
-$ bf(F) dot (90 degree "clockwise rotation of " bf(r)') = bf(F)^perp dot bf(r)'. $
+let's imagine we instead rotated $bf(F)$ by $90 degree$ counterclockwise instead, and use:
+$ (90 degree " counterclockwise rotation of " bf(F) (x,y)) = vec(-q(x,y), p(x,y)). $
+The idea is the following:
+#idea[
+  $ bf(F) dot (90 degree "clockwise rotation of" bf(r)') = (90 degree "counterclockwise rotation of" bf(F)) dot bf(r)'. $
+]
 So what we've done is put the rotation thing onto the vector field instead.
+#proof(title: [Proof of the equation])[
+  To spell this out, imagine that $bf(r)'(t) = vec( f_1(t), f_2(t) )$,
+  meaning that its $90 degree$ clockwise rotation is $vec( f_2(t), -f_1(t) )$.
+  Then the two quantities
+  $ bf(F) dot (90 degree "clockwise rotation of" bf(r)') &= vec(p,q) dot vec(f_2, -f_1) \
+    (90 degree "counterclockwise rotation of" bf(F)) dot bf(r)' &= vec(-q, p) dot vec(f_1, f_2) $
+  and equal as both are $p f_2 - q f_1$
+  (strictly speaking,
+  this quantity should be written in full as $p(bf(r)(t)) f_2(t) - q(bf(r)(t)) f_1(t)$,
+  for each time $t$).
+]
 
 The upshot of this is that we can actually change the flux into a work integral:
-$ oint_(cal(C)) bf(F) dot bf(n) dif s = oint_(cal(C)) bf(F)^perp dot dif bf(r). $
+$ int_(cal(C)) bf(F) dot bf(n) dif s = int_(cal(C)) bf(F)^perp dot dif bf(r). $
 This looks a bit better but we still want to get rid of $bf(F)^perp$.
 But we can, because there is a shorthand for work that uses just $p$ and $q$.
 Specifically, since $bf(F)^perp = vec(q, -p)$, we have
-$ oint_(cal(C)) bf(F)^perp dot dif bf(r) = oint_(cal(C)) (-q dif x + p dif y). $
+$ int_(cal(C)) bf(F)^perp dot dif bf(r) = int_(cal(C)) (-q dif x + p dif y). $
 In summary, we get the following more readable shorthand:
 
 #definition(title: [Better definition of 2D flux using work shorthand])[
   Let $bf(F)(x,y) = vec(p(x,y), q(x,y))$ be a 2D vector field
-  and let $cal(C)$ be a closed loop in $RR^2$.
+  and let $cal(C)$ be a path in $RR^2$.
   Then the flux of $bf(F)$ through $cal(C)$ is defined as
-  $ oint_(cal(C)) (-q dif x + p dif y). $
+  $ int_(cal(C)) (-q dif x + p dif y). $
 ]
 
-In particular, that means we can apply Green's theorem again;
-the resulting theorem is called _Green's theorem in flux form_:
-we get that
+In particular, if $cal(C)$ is a loop (and that's usually the case if we're talking about flux at all)
+that means we can apply Green's theorem again;
+the resulting theorem is called _Green's theorem in flux form_.
+We get that
 $ oint_(cal(C)) (-q dif x + p dif y)
   = iint_(cal(R)) ((partial p) / (partial x) + (partial q) / (partial y)) dif A. $
 The right-hand side is 2D divergence, so it could be condensed even further to
@@ -119,10 +131,113 @@ so let me just put everything in one place for sanity's sake:
   However, as far as I can tell there isn't an analog of FTC that can be made this way.
   So actually one good thing about the notation $bf(n) dif s$ is that
   the presence of $dif s$ is a good reminder that there's no FTC result.
-  In other words, 2D flux is missing one red arrow compared to 2D work.
+
+  In other words, 2D flux is missing one red Stokes arrow compared to 2D work.
 ]
 
-
 == [RECIPE] Computing 2D flux
+
+#recipe(title: [Recipe for computing 2D flux])[
+  1. If $cal(C)$ is a closed loop, see if using Green's theorem gives you a shortcut.
+  2. Otherwise, do the manual recipe in @sec-work-manual-recipe
+    with $bf(F) = vec(p,q)$ replaced by its $90 degree$ counterclockwise rotation $vec(-q, p)$:
+    1. Pick *any* parametrization $bf(r) : RR -> RR^n$ of the curve $cal(C)$,
+      including specifying the start and stop times.
+      As described in @sec-flex-param, you have some freedom in how you set the parametrization.
+    2. Calculate the derivative $bf(r)'(t)$.
+    3. Calculate the dot product $vec(-q, p) dot bf(r)'(t)$.
+    4. Integrate this from the start time to the stop time.
+]
+
+Here are a few examples for documentation.
+For each example, we actually show how to do it "manually"
+(by calculating a line integral) and how to do it with Green's theorem for flux.
+
+#sample[
+  Compute the flux of the vector field
+  $bf(F) (x , y) = vec(x^2 , y^2)$ across the circle
+  $cal(C)$ defined by $x^2 + y^2 = 1$, oriented counterclockwise.
+]
+
+#soln[
+  For this one, we'll actually show how to do it both using Green and manually, for comparison.
+  - Using Green's theorem:
+    Green’s theorem for flux states:
+    $ "Flux" = iint_(cal(R)) ((partial p) / (partial x) + (partial q) / (partial y)) dif A , $
+    where $cal(R)$ is the region enclosed by $cal(C)$.
+
+    The divergence is
+    $ nabla dot bf(F) =
+      = (partial p)/(partial x) + (partial q)/(partial y) =
+      = (partial)/(partial x)(x^2) + (partial)/(partial y)(y^2) = 2 x + 2 y. $
+    Therefore,
+    $ "Flux" = iint_(cal(R)) (2 x + 2 y) dif A . $
+
+    Since the region $cal(R)$ is the unit circle centered at the origin, and
+    the integrand $2 x + 2 y$ is an odd function over this symmetric region,
+    the integral evaluates to $#boxed[$ 0 $]$.
+    (Alternatively, integrate using polar coordinates.)
+
+  - Use the definition
+    $ "Flux" = oint_(cal(C)) (p dif y - q dif x) $
+    and parametrize the curve by using
+    $ bf(r)(t) = vec(cos(t), sin(t)) quad 0 <= t <= 2pi $
+    so
+    $ bf(r)'(t) = vec(-sin(t), cos(t)) quad 0 <= t <= 2pi. $
+    So the dot product inside the integrand is
+    $ vec(-q, p) dot bf(r)('t) = vec(cos(t)^2, sin(t)^2) dot vec(-sin(t), cos(t))
+      = cos^2 t dot cos t - sin^2 t dot (- sin t) = cos^3 t + sin^3 t. $
+    Hence
+    $ "Flux" = int_(t = 0)^(t = 2 pi) (cos^3 t + sin^3 t) dif t . $
+    It's possible to observe from here again that the integral is symmetric;
+    that is, for $0 <= t <= pi$ we have $cos^3(t) + cos^3(t+pi) = 0$
+    and $sin^3(t) + sin^3(t+pi) = 0$.
+    So again the entire contribution of the integral is $#boxed[$0$]$.
+]
+
+#sample[
+  Compute the flux of the vector field
+  $bf(F) (x , y) = vec(5x, 7y)$ across the square
+  $cal(C)$ with vertices at $(1 , 1)$, $(-1 , 1)$, $(-1 , -1)$, $(1 , -1)$, oriented counterclockwise.
+]
+
+#soln[
+  If we were to do the line integral manually,
+  we would have to parametrize all four sides.
+  This would be straightforward, but it's annoying, so we'll just jump straight
+  to Green the shortcut with Green's theorem.
+
+  The divergence is
+  $ nabla dot bf(F) := (partial p)/(partial x) + (partial q)/(partial y) =
+    = (partial)/(partial x)(5x) + (partial)/(partial y)(7y) = 12. $
+  So by Green's theorem,
+  $ "Flux" = iint_(cal(R)) 12 dif A = 12 op("Area")(cal(R)) = 12 dot 2^2 = #boxed[$ 48 $]$
+  where $cal(R)$ is the region enclosed by $cal(C)$, a square of side length $2$.
+]
+
+#sample[
+  Let $a, b > 0$.
+  Compute the flux of the vector field
+  $bf(F) (x , y) = vec(x , y)$ across the ellipse
+  $cal(C)$ defined by $x^2 / a^2 + y^2 / b^2 = 1$, oriented counterclockwise.
+]
+
+#soln[
+  We don't really want to parametrize the ellipse,
+  although it could be done with $bf(r) = (a cos t, b sin t)$ for $0 <= t <= 2pi$.
+  Again, we jump straight to Green's theorem, with
+  $
+    nabla dot bf(F)
+    = (partial p) / (partial x) + (partial q) / (partial y)
+    = (partial) / (partial x) (x) + (partial) / (partial y) (y)
+    = 1 + 1 = 2.
+  $
+  So by Green's theorem,
+  $ "Flux" = iint_(cal(R)) 2 dif A = 2 op("Area")(cal(R)). $
+  In a previous section (@sec-ex-ellipse) we saw the area of this ellipse is was $a b pi$;
+  if you didn't remember this, you would go back to the change of variables and execute it.
+  In any case, this means the flux is $2 dot (a b pi) = #boxed[$ 2 a b pi $]$.
+]
+
 
 == [EXER] Exercises

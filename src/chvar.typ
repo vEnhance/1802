@@ -279,6 +279,43 @@ Let's see an example of how to carry out this integration.
   $
 ]
 
+== [TEXT] Example: the area of an ellipse <sec-ex-ellipse>
+
+Once we know the area of a circle, we can also compute the area of an ellipse
+by _reducing_ to the area of a circle, as follows.
+
+#sample[
+  Let $a,b > 0$ be positive real numbers
+  Compute that the area inside the ellipse
+  $ x^2/a^2 + y^2/b^2 = 1. $
+]
+#soln[
+  Let $cal(R)$ be the interior of the ellipse.
+  Consider the transformation $bf(T)$ defined by
+  $ x = a u \ y = b v. $
+  That is, $bf(T)(u,v) = (a u, b v)$.
+  The Jacobian of this matrix is easy to calculate:
+  $ J_(bf(T)) = mat(
+    partial/(partial u) (a u), partial/(partial v) (a u);
+    partial/(partial u) (b u), partial/(partial v) (b u))
+    = mat(a, 0; 0, b) $
+  which has determinant $a b$.
+
+  This transformation provides a mapping between the regions
+  $ bf(T) : {u^2 + v^2 <= 1} -> cal(R) = {x^2/a^2 + y^2/b^2 <= 1}. $
+
+  Hence, via change of variables the area of $cal(R)$ is related by
+  $ op("Area")(cal(R)) &= iint_(cal(R)) 1 dif x dif y \
+    &= iint_(u^2+v^2 <= 1) det J_(bf(T)) dif u dif v \
+    &= a b  iint_(u^2+v^2 <= 1) dif u dif v. \
+    &= a b  op("Area")({u^2+v^2<=1}) = a b pi. $
+]
+
+To put this example into a picture,
+the idea is that we use a change of variables to map the ellipse into a _circle_,
+where the Jacobian determinant is the constant function $a b$.
+That determinant factors out, and we get the result above.
+
 == [SIDENOTE] Tip: Factoring integrals over rectangles
 
 Especially with polar coordinates, you will often find you get an integral of the shape
