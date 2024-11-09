@@ -114,6 +114,17 @@ This integral is $0$; here are three ways to evaluate it.
 - Another way is to use the trig substitution
   $ int_(t=0)^(2pi) sin(t) cos(t) dif t = int_(t=0)^(2pi) sin(2t)/2 dif t = [-cos(2t)/4]_(t=0)^(2pi) = 0. $
 
+#remark[
+  If you are allergic to trig functions, yet another approach is to remember that
+  line integrals don't depend on the exact parametrization.
+  So rather than using $bf(r)(t) = angle.l sin(t), sin(t), angle.r$,
+  you could imagine cutting it into three constant-velocity trajectories:
+  - $bf(r)_1(t) = (t,t)$ for $0 <= t <= 1$
+  - $bf(r)_2(t) = (1-t,1-t)$ for $0 <= t <= 2$
+  - $bf(r)_3(t) = (t-1,t-1)$ for $0 <= t <= 1$.
+  If you compute the three line integrals, the sum will also be zero.
+]
+
 #pagebreak()
 
 == Solution to circular wedge
