@@ -506,14 +506,9 @@ i.e. it's required to have the same start and ending point
 (unlike the other curves we saw in earlier examples).
 In other words:
 #definition(title: [Definition of $oint$])[
-  $oint_(cal(C))$ means "$int_(cal(C))$ but with an extra reminder that $cal(C)$ is a loop".
-]
-
-#tip(title: [Tip: Always use counterclockwise orientation])[
-  Whenever $cal(C)$ is a closed loop in $RR^2$,
-  we'll basically always assume that the direction
-  we walk around it is counterclockwise.
-  It's considered extremely bad manners to break this convention and have a loop oriented clockwise.
+  $oint_(cal(C))$ means "$int_(cal(C))$ but with an extra optional reminder that $cal(C)$ is a loop".
+  (The reminder is optional, i.e. you are not obligated
+  to add the circle even when $cal(C)$ is a loop.)
 ]
 
 Note this doesn't require $bf(F)$ to be conservative!
@@ -521,11 +516,18 @@ Note this doesn't require $bf(F)$ to be conservative!
 was because we were using the red "grad" arrow in @fig-work-ftc-red-arrow.
 But we're now moving on to a new red arrow in our poster,
 and that assumption about a gradient isn't needed anymore.)
-In fact, in the event that $bf(F)$ _is_ conservative,
+In fact, in the event that $bf(F) = nabla f$ _is_ conservative,
 we know that $(partial q)/(partial x) - (partial p)/(partial y) = 0$:
 the 2D scalar curl of a conservative vector field is $0$.
 So Green's theorem is then just saying that $oint_(cal(C)) nabla f dif bf(r) = 0$
 which we already knew.
+
+#tip(title: [Tip: Always use counterclockwise orientation])[
+  Whenever $cal(C)$ is a closed loop in $RR^2$,
+  we'll basically always assume that the direction
+  we walk around it is counterclockwise.
+  It's considered bad manners to break this convention and have a loop oriented clockwise.
+]
 
 Green's theorem gives us a way to short-circuit a bunch of calculations
 that we were doing by hand earlier in the case where our loop is closed.
