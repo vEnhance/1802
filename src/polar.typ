@@ -309,7 +309,10 @@ The new feature is that the two red arrows now have their $x$ and $y$ coordinate
 
 #figure(
   image("figures/polar-dA-jacobian.svg", width: auto),
-  caption: [Showing where the polar Jacobian comes from in the change of variables formula],
+  caption: [Showing where the polar Jacobian comes from in the change of variables formula.
+    This picture has been exaggerated with a really large $dif theta$
+    to make it legible, but in reality you should imagine $dif theta$ is really tiny instead,
+    so that the shaded region is basically a rectangle.],
 ) <fig-polar-jacobian>
 
 
