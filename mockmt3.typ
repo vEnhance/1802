@@ -167,12 +167,12 @@ $ J_(bf(T)^(-1)) = mat((partial u) / (partial x), (partial u) / (partial y);
 So
 $ det J_(bf(T)) = 1 / (det mat(1, k; k, 1)) = 1/(1-k^2). $
 Now, the problem condition tells us
-$ 4 = iint_(cal(R)) dif x dif y
+$ pi = iint_(cal(R)) dif x dif y
   = iint_(u^2+v^2 <= 1) lr(|1/(1-k^2)|) dif u dif v
   = lr(|1/(1-k^2)|) iint_(u^2+v^2 <= 1) dif u dif v
   = lr(|1/(1-k^2)|) dot pi / 4. $
 So the equation we are trying to solve is
-$ lr(|1/(1-k^2)|) dot pi / 4 = pi <==> k^2 - 1 = pm 1/4 <==> k^2 = 3/4 " or " k^2 = 5/4. $
+$ pi = lr(|1/(1-k^2)|) dot pi / 4 <==> k^2 - 1 = pm 1/4 <==> k^2 = 3/4 " or " k^2 = 5/4. $
 
 Hence the answers are $ k = #boxed[$ pm sqrt(3) / 2 " or " pm sqrt(5) / 2 $]. $
 
