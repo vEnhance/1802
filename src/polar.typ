@@ -245,7 +245,7 @@ Again $x y$-coordinates are either infeasible or at least annoying.
   $ (dash(x) , dash(y)) = #boxed[$ ((4) / (3 pi) , (4) / (3 pi)) $]. #qedhere $
 ]
 
-== [SIDENOTE] A picture of $r dif r dif theta = dif r (r dif theta) $ <sec-jacobian-picture>
+== [SIDENOTE] A picture of $r dif r dif theta = (r dif theta) dif r $ <sec-jacobian-picture>
 
 Here's a bit of a pictorial explanation of why the result $(r dif theta) dif r$ makes sense.
 None of this is considered for exam, nor is it actually precise.
