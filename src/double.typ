@@ -141,7 +141,7 @@ Here's how you do it.
   One shape of exam question will to be choose $f$ such that the left-hand side
   is annoying to calculate directly but the right-hand side is easy to calculate,
   and ask for the left-hand side.
-  So this is meant to test your ability to recognize when the other order is better
+  So this is meant to test your ability to recognize when the other order is better.
 ]
 
 For example, let's take the region in Poonen's example 13.1:
@@ -174,7 +174,7 @@ For example, let's take the region in Poonen's example 13.1:
 
   / If $x$ is outer:
     First, let's imagine we let $x$ be the outer integral.
-    Then from the picture, you can see $-1 <=  x <= 2$.
+    Then from the picture, you can see $-1 <= x <= 2$.
     If we solve for $y$, we find its region is
     $ x^2 <= y <= x+2. $
     See @fig-pararegion-vert.
