@@ -44,21 +44,25 @@
   (Assume $rho=1$.)
 
 / 3.:
-  Suppose $h(x)$ is a function for which the vector field
-  $bf(F)(x,y) = angle.l x y + cos(x), h(x) + cos(y) angle.r$ is conservative.
-  Given $h(0)=1$, recover the function $h(x)$, and find a potential function for $bf(F)$.
-
-/ 4.:
   Let $cal(C)$ denote the unit circle $x^2+y^2=1$ oriented counterclockwise,
   and consider the vector field $bf(F)(x,y) = angle.l x+2y, 4x+8y angle.r$.
-  Compute the line integral $int_(cal(C)) bf(F) dot dif bf(r)$
-  and the flux of $bf(F)$ through $cal(C)$.
+  Compute $int_(cal(C)) bf(F) dot dif bf(r)$ and $int_(cal(C)) bf(F) dot bf(n) dif s$.
+
+/ 4.:
+  Find all real numbers $k$ for which the region
+  $(k x + y)^2 + (x + k y)^2 <= 1/4$ has area $pi$.
 
 / 5.:
-  Find all real $k$ for which the region defined by $0 <= k x + y <= 1$ and $0 <= x + k y <= 1$ has area $4$.
+  Let $cal(C)$ denote any path from $(0,0)$ to $(pi,pi)$.
+  Let $h(x)$ be a function for which the vector field
+  $bf(F)(x,y) = angle.l x y + cos(x), h(x) + cos(y) angle.r$ is conservative,
+  and $int_(cal(C)) bf(F) dot dif bf(r) = 0$.
+  Compute $h(10)$.
 
-/ 6.: Assume $log$ is base $e approx 2.718$. Use any method (recommended: horizontal slicing) to compute
-  $ int_(x=0)^((e-1)^2) log(sqrt(x)+1) dif x. $
+/ 6.: Assume $log$ is base $e approx 2.718$. Use any method you want#footnote[
+    Recommended approach: view the integral as the area under a curve,
+    then switch from vertical to horizontal slicing.]
+  to compute $ int_(x=0)^((e-1)^2) log(sqrt(x)+1) dif x. $
 
 
 Solutions are posted in Section 45 of #url("https://web.evanchen.cc/textbooks/lamv.pdf").
@@ -189,20 +193,6 @@ In conclusion, the center of mass is given by $ (dash(x),dash(y)) = #boxed[$ (0,
 
 #pagebreak()
 
-== Solution to vector field
-
-Because $bf(F)$ is conservative, we know the following two partial derivatives must be equal:
-$ partial / (partial y) (x y + cos (x)) &= x \
-  partial / (partial x) (h(x) + cos(y)) &= h'(x). $
-From $h'(x) = x$ we deduce $h(x) = x^2 / 2 + C$ for some constant $C$;
-from $h(0) = 1$ we get $C = 1$.
-In summary, we have $ h (x) = #boxed[$ x^2/2 + 1  $]. $
-
-The potential function is given by
-$ f(x,y) = #boxed[$ 1/2 x^2  y + sin(x) + sin(y) + y + C $]. $
-
-#pagebreak()
-
 == Solution to counterclockwise circle
 
 This is a cookie-cutter application of Green's theorem (both forms).
@@ -230,7 +220,7 @@ Let $cal(R)$ denote the region in the problem.
 This is a change of variables problem where
 $ u = x + k y \
   v = k x + y $
-changes $cal(R)$ into the unit square $0 <= u <= 1$ and $0 <= v <= 1$.
+changes $cal(R)$ into the disk $u^2 + v^2 <= 1/4$ of radius $1/2$.
 
 Let $bf(T)$ denote the corresponding map $(u,v) |-> (x,y)$.
 Compute the inverse of the Jacobian
@@ -241,13 +231,33 @@ So
 $ det J_(bf(T)) = 1 / (det mat(1, k; k, 1)) = 1/(1-k^2). $
 Now, the problem condition tells us
 $ 4 = iint_(cal(R)) dif x dif y
-  = int_(u=0)^1 int_(v=0)^1 lr(|1/(1-k^2)|) dif u dif v
-  = lr(|1/(1-k^2)|) int_(u=0)^1 int_(v=0)^1 dif u dif v
-  = lr(|1/(1-k^2)|) dot 1. $
+  = iint_(u^2+v^2 <= 1) lr(|1/(1-k^2)|) dif u dif v
+  = lr(|1/(1-k^2)|) iint_(u^2+v^2 <= 1) dif u dif v
+  = lr(|1/(1-k^2)|) dot pi / 4. $
 So the equation we are trying to solve is
-$ lr(|1/(1-k^2)|) = 4 <==> k^2 - 1 = pm 1/4 <==> k^2 = 3/4 " or " k^2 = 5/4. $
+$ lr(|1/(1-k^2)|) dot pi / 4 = pi <==> k^2 - 1 = pm 1/4 <==> k^2 = 3/4 " or " k^2 = 5/4. $
 
 Hence the answers are $ k = #boxed[$ pm sqrt(3) / 2 " or " pm sqrt(5) / 2 $]. $
+
+#pagebreak()
+
+== Solution to vector field
+
+Because $bf(F)$ is conservative, we know the following two partial derivatives must be equal:
+$ partial / (partial y) (x y + cos (x)) &= x \
+  partial / (partial x) (h(x) + cos(y)) &= h'(x). $
+From $h'(x) = x$ we deduce $ h(x) = x^2 / 2 + C $
+for some constant $C$.
+This lets us compute a potential function for $bf(F)$:
+$ f(x,y) = 1/2 x^2  y + sin(x) + sin(y) + C y + C' $
+for some constant $C$ and $C'$ (the value of $C'$ doesn't matter).
+
+So we almost know $h$, except we need to use the last piece of information to find $C$.
+Use the fundamental theorem calculus for line integrals:
+$ int_(cal(C)) bf(F) dot dif bf(r) &= f(pi, pi) - f(0,0) \
+  ==> 0 &= (pi^3/2 + C pi + C') - C' ==> C = -pi^2/2. $
+Now we can extract the final answer
+$ h(10) = 10^2/2 + C = #boxed[$ 50 - pi^2/2 $]. $
 
 #pagebreak()
 
