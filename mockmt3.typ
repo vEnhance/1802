@@ -37,20 +37,20 @@
   Another butterfly is fluttering in the $x y$ plane
   with position $bf(r)(t) = angle.l sin(t), sin(t) angle.r$.
   Let $cal(C)$ denote its trajectory between $0 <= t <= 2pi$.
-  Compute $int_(cal(C)) (x^3 dif x + y^3 dif y)$ and $int_(cal(C)) (y dif x)$.
+  Compute $int_(cal(C)) (x dif x)$ and $int_(cal(C)) (y dif x)$.
 
 / 2.:
-  Compute the center of mass of the region where $y >= 0$, $y^2 >= 3x^2$, and $x^2+y^2 <= 9$.
-  (Assume $rho=1$.)
-
-/ 3.:
   Let $cal(C)$ denote the unit circle $x^2+y^2=1$ oriented counterclockwise,
   and consider the vector field $bf(F)(x,y) = angle.l x+2y, 4x+8y angle.r$.
   Compute $int_(cal(C)) bf(F) dot dif bf(r)$ and $int_(cal(C)) bf(F) dot bf(n) dif s$.
 
-/ 4.:
-  Find all real numbers $k$ for which the region
+/ 3.:
+  Compute all real numbers $k$ for which the region
   $(k x + y)^2 + (x + k y)^2 <= 1/4$ has area $pi$.
+
+/ 4.:
+  Compute the center of mass of the region where $y >= 0$, $y^2 >= 3x^2$, and $x^2+y^2 <= 9$.
+  (Assume $rho=1$.)
 
 / 5.:
   Let $cal(C)$ denote any path from $(0,0)$ to $(pi,pi)$.
@@ -93,7 +93,7 @@ Two ways to see this.
 
 === Another short way for the first vector field
 
-The first integral is of the conservative vector field $bf(F) = vec(x^3, y^3)$,
+The first integral is of the conservative vector field $bf(F) = vec(x, 0)$,
 because its 2D scalar curl is $0 - 0 = 0$.
 So the fundamental theorem of calculus also implies the answer is $0$,
 because the path is a loop.
@@ -128,6 +128,54 @@ This integral is $0$; here are three ways to evaluate it.
   - $bf(r)_3(t) = (t-1,t-1)$ for $0 <= t <= 1$.
   If you compute the three line integrals, the sum will also be zero.
 ]
+
+#pagebreak()
+
+== Solution to counterclockwise circle
+
+This is a cookie-cutter application of Green's theorem (both forms).
+
+For the line integral, use Green's theorem with 2D scalar curl:
+$ int_(cal(C)) bf(F) dot dif bf(r)
+  &= iint_(x^2+y^2 <= 1) (partial/(partial x)(4x+8y) - partial/(partial y)(x+2y)) dif A \
+  &= iint_(x^2+y^2 <= 1) (4-2) dif A \
+  &= 2 iint_(x^2+y^2 <= 1) dif A \
+  &= #boxed[$ 2 pi $]. $
+
+For the flux, use Green's theorem with divergence:
+$ int_(cal(C)) bf(F) dot bf(n) dif s
+  &= iint_(x^2+y^2 <= 1) nabla dot bf(F) dif A \
+  &= iint_(x^2+y^2 <= 1) ( partial/(partial x)(x+2y) +  partial/(partial y)(4x+8y) ) dif A \
+  &= iint_(x^2+y^2 <= 1) (1+8) dif A \
+  &= 9 iint_(x^2+y^2 <= 1) dif A \
+  &= #boxed[$ 9 pi $]. $
+
+#pagebreak()
+
+== Solution to area
+
+Let $cal(R)$ denote the region in the problem.
+This is a change of variables problem where
+$ u = x + k y \
+  v = k x + y $
+changes $cal(R)$ into the disk $u^2 + v^2 <= 1/4$ of radius $1/2$.
+
+Let $bf(T)$ denote the corresponding map $(u,v) |-> (x,y)$.
+Compute the inverse of the Jacobian
+$ J_(bf(T)^(-1)) = mat((partial u) / (partial x), (partial u) / (partial y);
+  (partial v) / (partial x), (partial v) / (partial y))
+  = mat(1, k; k, 1). $
+So
+$ det J_(bf(T)) = 1 / (det mat(1, k; k, 1)) = 1/(1-k^2). $
+Now, the problem condition tells us
+$ 4 = iint_(cal(R)) dif x dif y
+  = iint_(u^2+v^2 <= 1) lr(|1/(1-k^2)|) dif u dif v
+  = lr(|1/(1-k^2)|) iint_(u^2+v^2 <= 1) dif u dif v
+  = lr(|1/(1-k^2)|) dot pi / 4. $
+So the equation we are trying to solve is
+$ lr(|1/(1-k^2)|) dot pi / 4 = pi <==> k^2 - 1 = pm 1/4 <==> k^2 = 3/4 " or " k^2 = 5/4. $
+
+Hence the answers are $ k = #boxed[$ pm sqrt(3) / 2 " or " pm sqrt(5) / 2 $]. $
 
 #pagebreak()
 
@@ -193,54 +241,6 @@ In conclusion, the center of mass is given by $ (dash(x),dash(y)) = #boxed[$ (0,
 
 #pagebreak()
 
-== Solution to counterclockwise circle
-
-This is a cookie-cutter application of Green's theorem (both forms).
-
-For the line integral, use Green's theorem with 2D scalar curl:
-$ int_(cal(C)) bf(F) dot dif bf(r)
-  &= iint_(x^2+y^2 <= 1) (partial/(partial x)(4x+8y) - partial/(partial y)(x+2y)) dif A \
-  &= iint_(x^2+y^2 <= 1) (4-2) dif A \
-  &= 2 iint_(x^2+y^2 <= 1) dif A \
-  &= #boxed[$ 2 pi $]. $
-
-For the flux, use Green's theorem with divergence:
-$ int_(cal(C)) bf(F) dot bf(n) dif s
-  &= iint_(x^2+y^2 <= 1) nabla dot bf(F) dif A \
-  &= iint_(x^2+y^2 <= 1) ( partial/(partial x)(x+2y) +  partial/(partial y)(4x+8y) ) dif A \
-  &= iint_(x^2+y^2 <= 1) (1+8) dif A \
-  &= 9 iint_(x^2+y^2 <= 1) dif A \
-  &= #boxed[$ 9 pi $]. $
-
-#pagebreak()
-
-== Solution to area
-
-Let $cal(R)$ denote the region in the problem.
-This is a change of variables problem where
-$ u = x + k y \
-  v = k x + y $
-changes $cal(R)$ into the disk $u^2 + v^2 <= 1/4$ of radius $1/2$.
-
-Let $bf(T)$ denote the corresponding map $(u,v) |-> (x,y)$.
-Compute the inverse of the Jacobian
-$ J_(bf(T)^(-1)) = mat((partial u) / (partial x), (partial u) / (partial y);
-  (partial v) / (partial x), (partial v) / (partial y))
-  = mat(1, k; k, 1). $
-So
-$ det J_(bf(T)) = 1 / (det mat(1, k; k, 1)) = 1/(1-k^2). $
-Now, the problem condition tells us
-$ 4 = iint_(cal(R)) dif x dif y
-  = iint_(u^2+v^2 <= 1) lr(|1/(1-k^2)|) dif u dif v
-  = lr(|1/(1-k^2)|) iint_(u^2+v^2 <= 1) dif u dif v
-  = lr(|1/(1-k^2)|) dot pi / 4. $
-So the equation we are trying to solve is
-$ lr(|1/(1-k^2)|) dot pi / 4 = pi <==> k^2 - 1 = pm 1/4 <==> k^2 = 3/4 " or " k^2 = 5/4. $
-
-Hence the answers are $ k = #boxed[$ pm sqrt(3) / 2 " or " pm sqrt(5) / 2 $]. $
-
-#pagebreak()
-
 == Solution to vector field
 
 Because $bf(F)$ is conservative, we know the following two partial derivatives must be equal:
@@ -256,6 +256,7 @@ So we almost know $h$, except we need to use the last piece of information to fi
 Use the fundamental theorem calculus for line integrals:
 $ int_(cal(C)) bf(F) dot dif bf(r) &= f(pi, pi) - f(0,0) \
   ==> 0 &= (pi^3/2 + C pi + C') - C' ==> C = -pi^2/2. $
+Thus we've completely recovered the function $h$.
 Now we can extract the final answer
 $ h(10) = 10^2/2 + C = #boxed[$ 50 - pi^2/2 $]. $
 
