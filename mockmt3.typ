@@ -72,6 +72,9 @@ Solutions are posted in Section 45 of #url("https://web.evanchen.cc/textbooks/la
 = Solutions draft
 May contain typos/errors/gaps. Still working on it.
 
+I did check my work with ChatGPT which gets all the same answers as me:
+#url("https://chatgpt.com/share/67312fb3-d7f4-8007-a50c-8eeefedc2ee5").
+
 #toc
 
 #pagebreak()
