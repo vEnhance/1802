@@ -222,7 +222,7 @@ So you can describe the general recipe as:
   z_1 &= 2 (cos 15 degree + i sin 15 degree) \
   z_2 &= 2 (cos 105 degree + i sin 105 degree) \
   z_3 &= 2 (cos 195 degree + i sin 195 degree) \
-  z_4 &= 2 (cos 285 degree + i sin 285 degree).
+  z_4 &= 2 (cos 285 degree + i sin 285 degree). #qedhere
   $
 ]
 
