@@ -81,8 +81,16 @@ I'm actually going to split it into two parts.
   In that case the condition ends up becoming $ 0 <= r <= 2 cos theta. $
 
   In conclusion, the answer is $cal(R)$ in polar coordinates
-  is exactly $ #boxed[$-pi/2 <= theta <= pi/2$ and $r <= 2 cos theta$]. #qedhere $
+  is exactly $ #boxed[$ -pi/2 <= theta <= pi/2 " and " r <= 2 cos theta $]. #qedhere $
 ]
+
+#figure(
+  image("figures/polar-offset.svg", width: auto),
+  caption: [A sketch of $(x-1)^2 + y^2 <= 1$.
+    One might expect this to be nasty when converted to polar,
+    but it turns out to be $r <= 2 cos theta$ for $-pi/2 <= theta <= pi/2$, which is much better than expected.],
+) <fig-polar-offset>
+
 In other words, the graph of $r = 2 cos theta$ is actually just an offset circle.
 This is a bit of a surprise to people who are seeing it for the first time, and even a bit to me now.
 But you can actually see it from the geometry too.
@@ -91,12 +99,6 @@ and then let $A = (2,0)$, then you do in fact get a right triangle $triangle O P
 with $angle P = 90 degree$, $O A = 2$, and $angle A O P = theta$.
 So the geometric picture matches the calculation we just did.
 
-#figure(
-  image("figures/polar-offset.svg", width: auto),
-  caption: [A sketch of $(x-1)^2 + y^2 <= 1$.
-    One might expect this to be nasty when converted to polar,
-    but it turns out to be $r <= 2 cos theta$ for $-pi/2 <= theta <= pi/2$, which is much better than expected.],
-) <fig-polar-offset>
 
 Okay, here's the famous exercise I promised you.
 #sample[
@@ -296,15 +298,14 @@ $ dif A approx dif r dot (r dif theta) $
 which is what we expected.
 
 So where does the Jacobian come in?
-Let's zoom in a lot on another random point $P$ in polar coordinates,
-in figure @fig-polar-jacobian.
+Let's zoom in a lot on another random point $P$ in polar coordinates, in @fig-polar-jacobian.
 This is similar to the last figure, but we've chosen a point $P$ for which $theta > 0$,
 so neither red arrow is parallel to the $x$-axis.
 The new feature is that the two red arrows now have their $x$ and $y$ coordinates written out:
 
-- The arrow from $P$ to $(r + dif r, theta)$ can be written with $x y$-components as
+- The first red arrow from $P$ to $(r + dif r, theta)$ can be written with $x y$-components as
   $ bf(v)_1 := vec(cos theta dif r, sin theta dif r). $
-- The arrow from $P$ to $(r, theta + dif theta)$ can be written with $x y$-components as
+- The second red arrow from $P$ to $(r, theta + dif theta)$ can be written with $x y$-components as
   $ bf(v)_2 := vec(-r sin theta dif r, r cos theta dif r). $
 
 #figure(
@@ -316,29 +317,35 @@ The new feature is that the two red arrows now have their $x$ and $y$ coordinate
 ) <fig-polar-jacobian>
 
 
-Now, if we are willing to approximate $dif A$ with the parallelogram spanned by $dif r$ and $r dif theta$
+Now, if we are willing to approximate $dif A$ with the parallelogram spanned by $bf(v)_1$ and $bf(v)_2$
 --- and we are willing to when $dif theta$ and $dif r$ are really tiny
 (in contrast to this cartoon where $dif theta$ has been drawn pretty big to make the picture legible) ---
 then the approximation is given by the determinant from all the way back in @sec-det-area-vol:
 $ dif A &approx
-  det mat(cos theta dif r, sin theta dif r; -r sin theta dif theta, r cos theta dif theta) \
-  &= det mat(cos theta, sin theta; -r sin theta, r cos theta) dif r dif theta $
+  lr(|det mat(cos theta dif r, sin theta dif r; -r sin theta dif theta, r cos theta dif theta)|) \
+  &= lr(|det mat(cos theta, sin theta; -r sin theta, r cos theta)|) dif r dif theta $
 and there's the Jacobian determinant we were waiting for! Ta-da.
 
 Any change of variables can be drawn with a similar cartoon to @fig-polar-jacobian
 to explain where the Jacobian comes from with precisely the same reasoning.
 To spell it out in the 2D case, suppose
-$bf(T)(u,v) = (p(u,v), q(u,v))$ is a transition map
+$ bf(T)(u,v) = (p(u,v), q(u,v)) $
+is any general transition map
 (so the example we just did was $bf(T)(r, theta) = (r cos theta, r sin theta)$).
 One draws red arrows $bf(T)(u, v)$ to $bf(T)(u + dif u, v)$ and $bf(T)(u, v + dif v)$
 for "small" changes $dif u$ and $dif v$.
 These vectors will correspond approximately to the two vectors
-$(partial / partial u) bf(T) = (partial p)(partial u) bf(e)_1 + (partial p)(partial u) bf(e)_2$
+$ bf(v)_1 = bf(T)(u + dif u, v) - bf(T)(u,v) approx partial / (partial u) bf(T)
+  = (partial p)/(partial u) bf(e)_1 + (partial p)/(partial u) bf(e)_2 $
 and
-$(partial / partial v) bf(T) = (partial p)(partial v) bf(e)_1 + (partial q)(partial v) bf(e)_2$
+$ bf(v)_2 = bf(T)(u, v + dif v) - bf(T)(u,v) approx partial / (partial v) bf(T)
+  = (partial p)/(partial v) bf(e)_1 + (partial q)/(partial v) bf(e)_2. $
 which each give a row of the Jacobian matrix;
-then the determinant gives the area of the parallelogram spanned by these two vectors,
-which coincides exactly with the Jacobian determinant.
+then the determinant gives the area of the parallelogram spanned by $bf(v)_1$ and $bf(v)_2$;
+that coincides exactly with the (absolute value of the) Jacobian determinant.
+
+The argument in 3D (and $n$ dimensions in general) is the same,
+where the parallelogram is replaced by a parallelepiped, etc.
 
 == [EXER] Exercises
 
