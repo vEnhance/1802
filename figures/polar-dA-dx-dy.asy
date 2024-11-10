@@ -1,0 +1,12 @@
+usepackage("derivative");
+unitsize(2cm);
+pair P = (0,0);
+pair X = (0.5, 0);
+pair Y = (0, 0.3);
+filldraw(box(X,Y), palecyan, dotted);
+label("$\odif A$", (X+Y)/2, blue);
+draw(P--X, red, EndArrow, Margins);
+draw(P--Y, red, EndArrow, Margins);
+dot("$P = (x,y)$", P, dir(225));
+dot("$(x + \odif x, y)$", X, dir(315), blue);
+dot("$(x, y + \odif y)$", Y, dir(135), blue);

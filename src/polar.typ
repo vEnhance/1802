@@ -245,9 +245,97 @@ Again $x y$-coordinates are either infeasible or at least annoying.
   $ (dash(x) , dash(y)) = #boxed[$ ((4) / (3 pi) , (4) / (3 pi)) $]. #qedhere $
 ]
 
-== [SIDENOTE] A picture of $r dif r dif theta = (r dif theta) dif r$
+== [SIDENOTE] A picture of $r dif r dif theta = dif r (r dif theta) $ <sec-jacobian-picture>
 
-#todo[copy the picture I drew in recitation]
+Here's a bit of a pictorial explanation of why the result $(r dif theta) dif r$ makes sense.
+None of this is considered for exam, nor is it actually precise.
+But it should help with some convince you that $r dif r dif theta$ is correct,
+and more generally that the Jacobian determinant is the right scaling factor.
+
+The way that people typically draw a picture of $dif x dif y$ is to take some point $P = (x,y)$
+in the plane and imagining looking at the arrow pointing from $P$ to $(x + dif x, y)$
+and $(x, y + dif y)$, where $dif x$ and $dif y$ are, loosely, "tiny displacements".
+Then $dif A$ is drawn as the area of the little rectangle you get.
+See @fig-polar-dx-dy, where the two little arrows are drawn in red,
+and one gets the shaded blue region shown.
+
+#figure(
+  image("figures/polar-dA-dx-dy.svg", width: auto),
+  caption: [$dif A = dif x dif y$, drawn as a picture with small red arrows.],
+) <fig-polar-dx-dy>
+
+In the $x y$ picture, the point $P$ itself plays little role;
+the area of the little rectangle is always just $dif x dif y$,
+no matter what point $P$ you pick.
+
+However, when you change to polar coordinates, $dif A$ does actually depend on $P$:
+or rather, it doesn't care about $theta$, but it cares about $theta$.
+If you have polar coordinates $P = (r, theta)$ for the starting point
+and draw two red arrows to $(r + dif r, theta)$ and $(r, theta + dif theta)$,
+then the first red arrow still always has length $dif r$,
+but the second red arrow really has length $r dif theta$ --- it's close to $dif theta$
+arc of a circle of radius $r$.
+You can see this in @fig-polar-dA-dr-r-dtheta for two points $P_1 = (r_1, theta_1)$,
+and $P_2 = (r_2, theta_2)$.
+The point $P_1$ is close to the origin, so both red arrows are small.
+But he point $P_2$ farther has a longer red arrow,
+because the small change $dif theta$ is magnified by the radius of the circle.
+(Some students asked me whether I should be drawing the red arrow curved or straight.
+The answer is that I don't care --- because we're thinking of all the displacements as "tiny",
+the difference between slightly curling the arrow and having it straight is considered negligible.)
+
+#figure(
+  image("figures/polar-dA-dr-r-dtheta.svg", width: auto),
+  caption: [Illustration of $dif A = dif r (r dif theta)$.
+    Note that the $r dif theta$ red arrow gets larger the farther from the origin you are.
+  ],
+) <fig-polar-dA-dr-r-dtheta>
+
+The two arrows are almost perpendicular, so the area of the "rectangle"
+$ dif A approx dif r dot (r dif theta) $
+which is what we expected.
+
+So where does the Jacobian come in?
+Let's zoom in a lot on another random point $P$ in polar coordinates,
+in figure @fig-polar-jacobian.
+This is similar to the last figure, but we've chosen a point $P$ for which $theta > 0$,
+so neither red arrow is parallel to the $x$-axis.
+The new feature is that the two red arrows now have their $x$ and $y$ coordinates written out:
+
+- The arrow from $P$ to $(r + dif r, theta)$ can be written with $x y$-components as
+  $ bf(v)_1 := vec(cos theta dif r, sin theta dif r). $
+- The arrow from $P$ to $(r, theta + dif theta)$ can be written with $x y$-components as
+  $ bf(v)_2 := vec(-r sin theta dif r, r cos theta dif r). $
+
+#figure(
+  image("figures/polar-dA-jacobian.svg", width: auto),
+  caption: [Showing where the polar Jacobian comes from in the change of variables formula],
+) <fig-polar-jacobian>
+
+
+Now, if we are willing to approximate $dif A$ with the parallelogram spanned by $dif r$ and $r dif theta$
+--- and we are willing to when $dif theta$ and $dif r$ are really tiny
+(in contrast to this cartoon where $dif theta$ has been drawn pretty big to make the picture legible) ---
+then the approximation is given by the determinant from all the way back in @sec-det-area-vol:
+$ dif A &approx
+  det mat(cos theta dif r, sin theta dif r; -r sin theta dif theta, r cos theta dif theta) \
+  &= det mat(cos theta, sin theta; -r sin theta, r cos theta) dif r dif theta $
+and there's the Jacobian determinant we were waiting for! Ta-da.
+
+Any change of variables can be drawn with a similar cartoon to @fig-polar-jacobian
+to explain where the Jacobian comes from with precisely the same reasoning.
+To spell it out in the 2D case, suppose
+$bf(T)(u,v) = (p(u,v), q(u,v))$ is a transition map
+(so the example we just did was $bf(T)(r, theta) = (r cos theta, r sin theta)$).
+One draws red arrows $bf(T)(u, v)$ to $bf(T)(u + dif u, v)$ and $bf(T)(u, v + dif v)$
+for "small" changes $dif u$ and $dif v$.
+These vectors will correspond approximately to the two vectors
+$(partial / partial u) bf(T) = (partial p)(partial u) bf(e)_1 + (partial p)(partial u) bf(e)_2$
+and
+$(partial / partial v) bf(T) = (partial p)(partial v) bf(e)_1 + (partial q)(partial v) bf(e)_2$
+which each give a row of the Jacobian matrix;
+then the determinant gives the area of the parallelogram spanned by these two vectors,
+which coincides exactly with the Jacobian determinant.
 
 == [EXER] Exercises
 

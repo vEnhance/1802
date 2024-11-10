@@ -167,6 +167,8 @@ $ J_(bf(T)) = mat(
 ]
 
 Okay, now for the result.
+We'll postpone giving a justification for this theorem until @sec-jacobian-picture,
+since I want to have done a few concrete examples before drawing the right picture.
 
 #memo(title: [Memorize: Change of variables])[
   Suppose you need to integrate $iint_(cal(R)) f(x,y) dif x dif y$
@@ -187,6 +189,7 @@ you might prefer to use that instead.
 #typesig[
   The area scaling is always a _nonnegative_ real number.
 ]
+
 #tip[
   You might find it easier to remember both formulas if you write
   $ dif u dif v = |det J_(bf(T))| dif x dif y $

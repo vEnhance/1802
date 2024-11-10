@@ -177,7 +177,7 @@ than just using the slope of the blue ray.
   See if you can figure out where the $29$ came from.
 ]
 
-== [RECIPE] Areas and volumes
+== [RECIPE] Areas and volumes <sec-det-area-vol>
 
 If $bf(v)_1 = vec(x_1, y_1)$ and $bf(v)_2 = vec(x_2, y_2)$ are vectors,
 drawn as arrows with a common starting point,
