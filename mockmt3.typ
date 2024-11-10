@@ -54,10 +54,9 @@
 
 / 5.:
   Let $cal(C)$ denote any path from $(0,0)$ to $(pi,pi)$.
-  Let $h(x)$ be a function for which the vector field
+  Find the unique function $h(x)$ for which the vector field
   $bf(F)(x,y) = angle.l x y + cos(x), h(x) + cos(y) angle.r$ is conservative,
-  and $int_(cal(C)) bf(F) dot dif bf(r) = 0$.
-  Compute $h(10)$.
+  and moreover $int_(cal(C)) bf(F) dot dif bf(r) = 0$.
 
 / 6.: Assume $log$ is base $e approx 2.718$. Use any method you want#footnote[
     Recommended approach: view the integral as the area under a curve,
@@ -98,7 +97,7 @@ because its 2D scalar curl is $0 - 0 = 0$.
 So the fundamental theorem of calculus also implies the answer is $0$,
 because the path is a loop.
 (If $f$ is a potential function, then the answer should be $f(0,0) - f(0,0) = 0$.
-You could compute the potential function $f(x,y) = x^4/4+y^4/4$ if you want, but it's not needed.)
+You could compute the potential function $f(x,y) = x^2/2+C$ if you want, but it's not needed.)
 
 === The long way for the second non-conservative field
 
@@ -108,12 +107,12 @@ Then you could still compute the integral manually by taking
 $ bf(r)'(t) = angle.l cos(t), cos(t) angle.r $
 so the line integral is given by
 $ int_(t=0)^(2pi) bf(F)(sin(t), sin(t)) dot bf(r)'(t) dif t
-  int_(t=0)^(2pi) sin(t) cos(t) dif t. $
+  = int_(t=0)^(2pi) sin(t) cos(t) dif t. $
 This integral is $0$; here are three ways to evaluate it.
 
 - Notice the contribution from $t$ and $2 pi - t$ cancel out.
 - Another way to evaluate the integral is via the $u$-substitution $u = sin(t)$,
-  where $dif u = cos(t) dif t$, so one gets
+  where $dif u = cos(t) dif t$:
   $ int_(t=0)^(2pi) sin(t) cos(t) dif t = int_(u=sin(0))^(u=sin(2pi)) u dif u = int_0^0 u dif u = 0. $
 - Another way is to use the trig substitution
   $ int_(t=0)^(2pi) sin(t) cos(t) dif t = int_(t=0)^(2pi) sin(2t)/2 dif t = [-cos(2t)/4]_(t=0)^(2pi) = 0. $
@@ -186,11 +185,7 @@ The condition $x^2 + y^2 <= 9$ represents a circle of radius $3$ centered at the
 The inequality $y >= 0$ and $y >= sqrt(3) lr(|x|)$
 cuts out a wedge covering the top half of the circle within the angle range
 $pi / 3 <= theta <= (2 pi) / (3)$ in polar coordinates.
-
-#figure(
-  image("figures/mt3-wedge.svg", width: auto),
-  caption: [It's a one-sixth slice of a pizza or something.],
-)
+See @fig-mt3-slice.
 
 Switching to polar coordinates, the region in polar coordinates is bounded by:
 - $0 <= r <= 3$ (radius of the circle),
@@ -217,6 +212,12 @@ $ dash(x) = 1 / (op("Area")(cal(R))) iint_cal(R) x dif A , quad dash(y) = 1 / (o
   $ dash(y) = 1 / (op("Area")(cal(R))) iint_cal(R) y dif A = 9 / ((3 pi) / 2) = 6 / pi . $
 In conclusion, the center of mass is given by $ (dash(x),dash(y)) = #boxed[$ (0, 6/pi) $]. $
 
+#figure(
+  image("figures/mt3-wedge.svg", width: auto),
+  caption: [It's a one-sixth slice of a pizza or something.],
+) <fig-mt3-slice>
+
+
 #digression(title: [Digression: the long way for area])[
   If you don't want to do geometry,
   you can manually compute $op("Area")(cal(R))$ by the definition
@@ -227,7 +228,7 @@ In conclusion, the center of mass is given by $ (dash(x),dash(y)) = #boxed[$ (0,
   $ A = int_(theta = pi / 3)^((2 pi) / (3)) 9 / 2 dif theta = 9 / 2 ((2 pi) / (3) - pi / 3) = 9 / 2 dot pi / 3 = (3 pi) / (2) . $
 ]
 
-#digression(title: [Digression: the long way for $dash(x)$])[
+#digression(title: [Digression: the long way for $overline(x)$])[
   For comparison, we show what happens if you didn't notice the symmetry and proceed to integrate.
   In polar coordinates, $x = r cos theta$ and $dif A = r dif r dif theta$.
   So:
@@ -256,9 +257,8 @@ So we almost know $h$, except we need to use the last piece of information to fi
 Use the fundamental theorem calculus for line integrals:
 $ int_(cal(C)) bf(F) dot dif bf(r) &= f(pi, pi) - f(0,0) \
   ==> 0 &= (pi^3/2 + C pi + C') - C' ==> C = -pi^2/2. $
-Thus we've completely recovered the function $h$.
-Now we can extract the final answer
-$ h(10) = 10^2/2 + C = #boxed[$ 50 - pi^2/2 $]. $
+Thus we've completely recovered the function $h$:
+$ h(pi) = #boxed[$ x^2/2 - pi^2/2 $]. $
 
 #pagebreak()
 
