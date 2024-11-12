@@ -49,7 +49,7 @@
   $(k x + y)^2 + (x + k y)^2 <= 1/4$ has area $pi$.
 
 / 4.:
-  Compute the center of mass of the region where $y >= 0$, $y^2 >= 3x^2$, and $x^2+y^2 <= 9$.
+  Compute the center of mass of the region where $y >= 0$ and $3x^2 <= y^2 <= 9 - x^2$.
   (Assume $rho=1$.)
 
 / 5.:
