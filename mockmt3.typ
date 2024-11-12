@@ -111,25 +111,24 @@ $ bf(r)'(t) = angle.l cos(t), cos(t) angle.r $
 so the line integral is given by
 $ int_(t=0)^(2pi) bf(F)(sin(t), sin(t)) dot bf(r)'(t) dif t
   = int_(t=0)^(2pi) sin(t) cos(t) dif t. $
-This integral is $0$; here are three ways to evaluate it.
+This integral is $0$; here are many ways to evaluate it.
 
-- Notice the contribution from $t$ and $2 pi - t$ cancel out.
-- Another way to evaluate the integral is via the $u$-substitution $u = sin(t)$,
+1. Notice this is actually the same trig integral you got if you evaluated
+  for the first line integral manually as well, so the answer should be the same, namely $0$.
+2. Notice the contribution from $t$ and $t + pi$ cancel for $0 <= t <= pi$.
+3. Another way to evaluate the integral is via the $u$-substitution $u = sin(t)$,
   where $dif u = cos(t) dif t$:
   $ int_(t=0)^(2pi) sin(t) cos(t) dif t = int_(u=sin(0))^(u=sin(2pi)) u dif u = int_0^0 u dif u = 0. $
-- Another way is to use the trig substitution
+4. Another way is to use the trig substitution
   $ int_(t=0)^(2pi) sin(t) cos(t) dif t = int_(t=0)^(2pi) sin(2t)/2 dif t = [-cos(2t)/4]_(t=0)^(2pi) = 0. $
-
-#remark[
-  If you are allergic to trig functions, yet another approach is to remember that
+5. If you are allergic to trig functions, a fifth approach is to remember that
   line integrals don't depend on the exact parametrization.
-  So rather than using $bf(r)(t) = angle.l sin(t), sin(t), angle.r$,
-  you could imagine cutting it into three constant-velocity trajectories:
+  So rather than using $bf(r)(t) = angle.l sin(t), sin(t) angle.r$,
+  you could imagine cutting the butterfly's motion into three constant-velocity trajectories:
   - $bf(r)_1(t) = (t,t)$ for $0 <= t <= 1$
   - $bf(r)_2(t) = (1-t,1-t)$ for $0 <= t <= 2$
   - $bf(r)_3(t) = (t-1,t-1)$ for $0 <= t <= 1$.
   If you compute the three line integrals, the sum will also be zero.
-]
 
 #pagebreak()
 
@@ -252,16 +251,16 @@ $ partial / (partial y) (x y + cos (x)) &= x \
   partial / (partial x) (h(x) + cos(y)) &= h'(x). $
 From $h'(x) = x$ we deduce $ h(x) = x^2 / 2 + C $
 for some constant $C$.
-This lets us compute a potential function for $bf(F)$:
-$ f(x,y) = 1/2 x^2  y + sin(x) + sin(y) + C y + C' $
-for some constant $C$ and $C'$ (the value of $C'$ doesn't matter).
 
 So we almost know $h$, except we need to use the last piece of information to find $C$.
-Use the fundamental theorem calculus for line integrals:
+First, recover a potential function for $bf(F)$ in terms of $C$:
+$ f(x,y) = 1/2 x^2  y + sin(x) + sin(y) + C y + C' $
+for some constant $C'$ (which is irrelevant).
+Then use the fundamental theorem calculus for line integrals:
 $ int_(cal(C)) bf(F) dot dif bf(r) &= f(pi, pi) - f(0,0) \
   ==> 0 &= (pi^3/2 + C pi + C') - C' ==> C = -pi^2/2. $
 Thus we've completely recovered the function $h$:
-$ h(pi) = #boxed[$ x^2/2 - pi^2/2 $]. $
+$ h(x) = #boxed[$ x^2/2 - pi^2/2 $]. $
 
 #pagebreak()
 
