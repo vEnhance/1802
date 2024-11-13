@@ -332,5 +332,5 @@ Let's also do the example in @fig-dot-project2.
   Let $bf(v) = vec(8, 9, 10)$. Suppose that
   $ op("proj")_(bf(w)) (bf(v)) = vec(3,5,t) $
   for some real number $t$.
-  Compute $t$, and find all possibilities for the vectors $bf(w)$.
+  Compute $t$, and find all possibilities for the vector $bf(w)$.
 ]
