@@ -8,6 +8,10 @@
   date: datetime.today(),
 )
 
+#rect(stroke: 2pt)[#image("lamv-cover-art.png", width: 100%)]
+
+#pagebreak()
+
 #toc
 
 #pagebreak()

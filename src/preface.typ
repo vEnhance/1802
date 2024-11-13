@@ -282,6 +282,7 @@ in return for the short time limit.
   and Karol Bacik for making so much happen behind the scenes.
   Thanks also to Sefanya Hope for coordinating many other logistics,
   and particularly for helping me book classrooms on short notice on multiple occasions.
+
 - Thank you to all the students in my recitation section
   (and those officially enrolled in other sections, but who came to my section anyway!)
   who regularly attended my class every Monday and Wednesday at 9am.
@@ -291,10 +292,17 @@ in return for the short time limit.
   - In particular, I got a lot of words of thanks and encouragements
     from my students this year, which I am indeed grateful for.
     I certainly wouldn't have had the motivation to type these notes without these kind words.
+
 - I thank Calvin Wang, Ritwin Narra and Royce Yao for multiple corrections.
   (Your name could be here too --- find me some typos.
   If you know how to open a GitHub pull request,
   the relevant repository is #url("https://github.com/vEnhance/1802").)
+
+- Thank you to Catherine Xu for the cover art.
+  You can download a full-resolution copy at
+  #url("https://web.evanchen.cc/textbooks/lamv-cover-art.png")
+  or find it in the GitHub repository.
+
 - Thanks to OpenAI for gifting me a Plus subscription to ChatGPT.
   Writing this text gave me an excuse to get a chance to use ChatGPT 4o and ChatGPT o1-preview,
   to see what kind of things it did well (and what I could still do faster by hand).
