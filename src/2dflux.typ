@@ -417,6 +417,12 @@ but for the flux integral we don't really have a choice because no other method 
 
 === Example with $bf(F) = vec(x^2+3y,5y)$ over the unit circle oriented counterclockwise (a closed loop)
 
+#sample[
+  Let $bf(F) = vec(x^2+3y, 5y)$
+  and let $cal(C)$ be the unit circle oriented counterclockwise.
+  Evaluate $int bf(F) dot dif bf(r)$ and $int bf(F) dot bf(n) dif s$.
+]
+
 #figure(
   table(
     columns: 3,
@@ -441,7 +447,7 @@ but for the flux integral we don't really have a choice because no other method 
 Green's theorem works readily here because $cal(C)$ is closed.
 For the work version, we do
 $ (partial q) / (partial x) &= (partial) / (partial x) (5 y) = 0 \
-  (partial p) / (partial y) = (partial) / (partial y) (x^2 + 3 y) = 3 . $
+  (partial p) / (partial y) &= (partial) / (partial y) (x^2 + 3 y) = 3 . $
 so the answer is $iint_(cal(R)) (0-3) dif A = -3 pi$.
 For the flux version, it's instead
 $ (partial p) / (partial x) &= (partial) / (partial x) (x^2 + 3 y) = 2 x \
@@ -471,110 +477,43 @@ and $iint_(cal(R)) 5 dif A = 5 pi$, giving the answer.
 ]
 
 You can also do parametrization, which is disgusting, but it works.
+We don't delve into the calculation here, because it's horrendous.
 
-- For work, one would write
-  $ bf(F)(cos t, sin t) = vec(cos^2 t + 3 sin t , thin 5 sin t) . $
-  Dot product:
-  $ bf(F) bf(r)'(t) &= (cos^2 t + 3 sin t) (- sin t dif t) + (5 sin t) (cos t dif t) \
-    &= - cos^2 t sin t dif t - 3 sin^2 t dif t + 5 sin t cos t dif t . $
-  The work integral becomes:
-  $ oint_(cal(C)) bf(F) dot dif bf(r) = int_(t=0)^(2 pi) (- cos^2 t sin t - 3 sin^2 t + 5 sin t cos t) dif t . $
+=== Example with $bf(F) = vec(x^2+3y,5y)$ for the
 
-/*
-Separate the integral into three parts:
-$ oint_(cal(C)) bf(F) dot dif bf(r) = - int_0^(2 pi) cos^2 t sin t dif t - 3 int_0^(2 pi) sin^2 t dif t + 5 int_0^(2 pi) sin t cos t dif t . $
+#sample[
+  Let $bf(F) = vec(x^2+3y, 5y)$
+  and let $cal(C)$ be the path from $(1,4)$ to $(3,9)$.
+  Evaluate $int bf(F) dot dif bf(r)$ and $int bf(F) dot bf(n) dif s$.
+]
 
-Compute each integral separately:
+Here in both cases we have to bite the bullet.
+As before wse the parametrization
+$ bf(r)(t) = vec(1+2t, 4+5t) quad 0 <= t <= 1 $
+with
+$ bf(r)'(t) = vec(2,5) quad 0 <= t <= 2pi. $
 
-1. $int_0^(2 pi) cos^2 t sin t dif t$:
+#figure(
+  table(
+    columns: 3,
+    align: left,
+    table.header([Method],
+      [Work $int_(cal(C)) bf(F) dot bf(r)$\ (see @sec-recipe-work)],
+      [2D Flux $int_(cal(C)) bf(F) dot bf(n) dif s$ \ (see @sec-recipe-2d-flux)]),
+    [$bf(F)$ is conservative \ $==>$ FTC],
+      [_Cannot use here_], [_Not applicable_],
+    [$cal(C)$ is a closed loop \ $==>$ Green],
+      [_Cannot use here_],
+      [_Cannot use here_],
+    [Bare-hands definition \ Use parametrization],
+      [$int_(t=0)^(1) vec((1+2t)^2+3(4+5t), 5(4+5t)) dot vec(2,5) dif t$],
+      [$int_(t=0)^(1) vec(-5(4+5t), (1+2t)^2+3(4+5t)) dot vec(2,5) dif t$],
+  ),
+  caption: [For $bf(F) = vec(x^2+3y, 5y)$ which is not conservative,
+    integrated over the unit circle.],
+  kind: table
+)
 
-Let $u = cos t$, then $dif u = - sin t dif t$.
-
-$ integral cos^2 t sin t dif t = - integral u^2 dif u = - u^3 / 3 + C = - (cos^3 t) / (3) + C . $
-
-Evaluate from $0$ to $2 pi$:
-
-$ [- (cos^3 t) / (3)]_0^(2 pi) = - frac(cos^3 (2 pi), 3) + (cos^3 0) / (3) = - 1 / 3 + 1 / 3 = 0 . $
-
-2. $int_0^(2 pi) sin^2 t dif t$:
-
-Use the identity $sin^2 t = (1 - cos 2 t) / (2)$:
-
-$ int_0^(2 pi) sin^2 t dif t = 1 / 2 int_0^(2 pi) (1 - cos 2 t) dif t = 1 / 2 [t - (sin 2 t) / (2)]_0^(2 pi) = 1 / 2 (2 pi - 0) = pi . $
-
-3. $int_0^(2 pi) sin t cos t dif t$:
-
-Use the identity $sin t cos t = (sin 2 t) / (2)$:
-
-$ int_0^(2 pi) sin t cos t dif t = 1 / 2 int_0^(2 pi) sin 2 t dif t = 0 . $
-(Since the integral of sine over its full period is zero.)
-
-Combine the results:
-$ oint_(cal(C)) bf(F) dot dif bf(r) = - 0 - 3 pi + 5 dot 0 = - 3 pi . $
-
-#strong[Answer:]
-$ oint_(cal(C)) bf(F) dot dif bf(r) = - 3 pi . $
-
-#strong[Step 1: Parametrize the Unit Circle $cal(C)$]
-
-Use the standard parametrization:
-$ x = cos t , quad y = sin t , quad t in [0 , 2 pi] . $
-Compute the differentials:
-$ dif x = - sin t dif t , quad dif y = cos t dif t . $
-
-#strong[Step 2: Determine the Outward Unit Normal Vector
-$bf(n)$]
-
-For the unit circle, the outward unit normal vector at any point
-$(x , y)$ is:
-$ bf(n) = vec(cos t , sin t) . $
-
-#strong[Step 3: Express $bf(F)$ in Terms of $t$]
-
-Substitute $x$ and $y$:
-$ bf(F) (x , y) = vec(x^2 + 3 y , thin 5 y) = vec(cos^2 t + 3 sin t , thin 5 sin t) . $
-
-#strong[Step 4: Compute $bf(F) dot bf(n)$]
-
-Dot product:
-$ bf(F) dot bf(n) = (cos^2 t + 3 sin t) cos t + (5 sin t) sin t . $
-Simplify:
-$ bf(F) dot bf(n) = cos^3 t + 3 sin t cos t + 5 sin^2 t . $
-
-#strong[Step 5: Set Up the Flux Integral]
-
-$ oint_(cal(C)) bf(F) dot bf(n) dif s = int_0^(2 pi) (cos^3 t + 3 sin t cos t + 5 sin^2 t) dif t . $
-
-#strong[Step 6: Evaluate the Integral]
-
-Separate the integral into three parts:
-$ oint_(cal(C)) bf(F) dot bf(n) dif s = int_0^(2 pi) cos^3 t dif t + 3 int_0^(2 pi) sin t cos t dif t + 5 int_0^(2 pi) sin^2 t dif t . $
-
-Compute each integral separately:
-
-1. $int_0^(2 pi) cos^3 t dif t$:
-
-Use the identity $cos^3 t = (3 cos t + cos 3 t) / (4)$:
-
-$ int_0^(2 pi) cos^3 t dif t = 3 / 4 int_0^(2 pi) cos t dif t + 1 / 4 int_0^(2 pi) cos 3 t dif t = 0 + 0 = 0 . $
-
-2. $int_0^(2 pi) sin t cos t dif t$:
-
-Use the identity $sin t cos t = (sin 2 t) / (2)$:
-
-$ int_0^(2 pi) sin t cos t dif t = 1 / 2 int_0^(2 pi) sin 2 t dif t = 0 . $
-
-3. $int_0^(2 pi) sin^2 t dif t$:
-
-Use the identity $sin^2 t = (1 - cos 2 t) / (2)$:
-
-$ int_0^(2 pi) sin^2 t dif t = 1 / 2 int_0^(2 pi) (1 - cos 2 t) dif t = 1 / 2 [2 pi - 0] = pi . $
-
-Combine the results:
-$ oint_(cal(C)) bf(F) dot bf(n) dif s = 0 + 3 dot 0 + 5 dot pi = 5 pi . $
-
-#strong[Answer:]
-$ oint_(cal(C)) bf(F) dot bf(n) dif s = 5 pi . $
-*/
+#todo[maybe actually write this]
 
 == [EXER] Exercises
