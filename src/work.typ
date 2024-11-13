@@ -607,7 +607,7 @@ Here are a few.
   $ 2 int_(y = 0)^1 (y+1/2) dif y = #boxed[$ 2 $]. #qedhere $
 ]
 
-== [RECIPE] Evaluating line integrals, all together now
+== [RECIPE] Evaluating line integrals, all together now <sec-recipe-work>
 
 While we gave a definition of line integrals with parametrization,
 we then saw right away there are a couple shortcuts,

@@ -135,7 +135,7 @@ so let me just put everything in one place for sanity's sake:
   In other words, 2D flux is missing one red Stokes arrow compared to 2D work.
 ]
 
-== [RECIPE] Computing 2D flux
+== [RECIPE] Computing 2D flux <sec-recipe-2d-flux>
 
 #recipe(title: [Recipe for computing 2D flux])[
   1. If $cal(C)$ is a closed loop, see if using Green's theorem gives you a shortcut.
@@ -238,6 +238,41 @@ For each example, we actually show how to do it "manually"
   if you didn't remember this, you would go back to the change of variables and execute it.
   In any case, this means the flux is $2 dot (a b pi) = #boxed[$ 2 a b pi $]$.
 ]
+
+== [RECAP] Work vs flux
+
+Since the recipes for flux and work look so similar,
+it might be helpful to compare them side by side.
+This comparison is shown in the table below.
+
+#figure(
+  table(
+    columns: 3,
+    align: left,
+    table.header([], [Work], [Flux]),
+    [Shorthand],
+      [$int_(cal(C)) bf(F) dot bf(r)$],
+      [$int_(cal(C)) bf(F) dot bf(n) dif s$],
+    [Recipe link],
+      [@sec-recipe-work],
+      [@sec-recipe-2d-flux],
+    table.hline(),
+    [$bf(F)$ is conservative \ $==>$ FTC],
+      [If $bf(F) = nabla f$, \ Output $f("stop") - f("start")$], [_Not applicable_],
+    [$cal(C)$ closed loop \ $==>$ Green],
+      [Output $iint_(cal(R)) underbrace(((partial q)/(partial x) - (partial p)/(partial y)), "2D scalar curl") dif A$],
+      [Output $iint_(cal(R)) underbrace((partial p)/(partial x) + (partial q)/(partial y), "Div" = nabla dot bf(F)) dif A$],
+    [Bare-hands definition \ Use parametrization],
+      [Output $int_(cal(C)) bf(F) dot bf(r)'(t) dif t$ \ $= int (p dif x + q dif y)$],
+      [Output $int_(cal(C)) bf(F) dot (bf(r)'(t) "rot" 90 degree "cw") dif t$ \ $= int (-q dif x + p dif y)$],
+  ),
+  caption: [
+    Comparison of the recipe for work and flux.
+    Methods higher in the table are less work, and preferred when they apply.
+  ],
+  kind: table
+)
+#todo[examples]
 
 
 == [EXER] Exercises
