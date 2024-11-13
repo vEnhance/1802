@@ -249,13 +249,9 @@ This comparison is shown in the table below.
   table(
     columns: 3,
     align: left,
-    table.header([], [Work], [Flux]),
-    [Shorthand],
-      [$int_(cal(C)) bf(F) dot bf(r)$],
-      [$int_(cal(C)) bf(F) dot bf(n) dif s$],
-    [Recipe link],
-      [@sec-recipe-work],
-      [@sec-recipe-2d-flux],
+    table.header([Method],
+      [Work $int_(cal(C)) bf(F) dot bf(r)$\ (see @sec-recipe-work)],
+      [2D Flux $int_(cal(C)) bf(F) dot bf(n) dif s$ \ (see @sec-recipe-2d-flux)]),
     table.hline(),
     [$bf(F)$ is conservative \ $==>$ FTC],
       [If $bf(F) = nabla f$, \ Output $f("stop") - f("start")$], [_Not applicable_],
@@ -263,15 +259,29 @@ This comparison is shown in the table below.
       [Output $iint_(cal(R)) underbrace(((partial q)/(partial x) - (partial p)/(partial y)), "2D scalar curl") dif A$],
       [Output $iint_(cal(R)) underbrace((partial p)/(partial x) + (partial q)/(partial y), "Div" = nabla dot bf(F)) dif A$],
     [Bare-hands definition \ Use parametrization],
-      [Output $int_(cal(C)) bf(F) dot bf(r)'(t) dif t$ \ $= int (p dif x + q dif y)$],
-      [Output $int_(cal(C)) bf(F) dot (bf(r)'(t) "rot" 90 degree "cw") dif t$ \ $= int (-q dif x + p dif y)$],
+      [Output $int (p dif x + q dif y)$ \ $= int_(cal(C)) bf(F) dot bf(r)'(t) dif t$ ],
+      [Output $int (-q dif x + p dif y)$ \ $= int_(cal(C)) bf(F) dot (bf(r)'(t) "rot" 90 degree "clockwise") dif t$],
   ),
   caption: [
     Comparison of the recipe for work and flux.
     Methods higher in the table are less work, and preferred when they apply.
   ],
   kind: table
-)
+) <tab-work-vs-flux>
+
+To flesh out this table with examples, we'll carry out the entire table with three situations:
+
+- The conservative field $bf(F) = vec(2x+y, x+2y)$
+  over the unit circle oriented counterclockwise (a closed loop).
+- The conservative field $bf(F) = vec(2x+y, x+2y)$
+  over the line segment from $(1,1)$ to $(4,6)$.
+- The non-conservative field $bf(F) = vec(x+2y,3)$
+  over the unit circle oriented counterclockwise (a closed loop).
+
+=== Example of
+
+
+
 #todo[examples]
 
 
