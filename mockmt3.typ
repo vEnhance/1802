@@ -20,6 +20,9 @@
   We're not grading anything, so write your solutions anywhere
   (the space below, other loose paper, notebook, iPad, etc.).
 
+  - The real midterm is only five questions, which I didn't find out until yesterday.
+    If you want, you can ignore the last question if you prefer to match the length.
+
 - Like the real exam, I suggest not referring to any notes/calculators/etc.
 
 - Solutions are posted in Section 45 of my LAMV book at #url("https://web.evanchen.cc/1802.html").
