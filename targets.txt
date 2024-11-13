@@ -33,7 +33,6 @@ answerkeys/r15s.pdf
 answerkeys/r16s.pdf
 answerkeys/r17s.pdf
 bonus1.pdf
-lamv.pdf
 mockmt2.pdf
 mockmt3.pdf
 tsafe-1802/tsafe-1802.pdf
