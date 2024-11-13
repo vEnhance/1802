@@ -241,8 +241,9 @@ If you just want to memorize the final result, here it is:
 #recipe(title: [Recipe for distance from point to plane])[
   If asked to find the distance from a point $(x_0 , y_0 , z_0)$ to the plane
   defined by the equation $a x + b y + c z = d$, output the answer
-  $ lr(|frac(a x_0 + b y_0 + c z_0 - d, sqrt(a^2 + b^2 + c^2))|) . $
+  $ frac(|a x_0 + b y_0 + c z_0 - d|, sqrt(a^2 + b^2 + c^2)) . $
 ]
+(We've moved the absolute value to the numerator, since the square root is always positive.)
 
 
 == [EXER] Exercises
