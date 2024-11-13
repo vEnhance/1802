@@ -2,6 +2,21 @@
 
 = Solutions to Part Hotel
 
+== Solution to @exer-touchgrass
+
+Here's a picture of moonlight sailing after having to grade the third midterm.
+
+#todo[picture to be added]
+
+== Solution to @exer-poster
+
+Here's a picture of a leftover poster taped up in my room.
+
+#figure(
+  image("media/room-poster.jpg", width: 60%),
+  caption: [Hanging up a poster in my room.],
+)
+
 == Solution to @exer-work-1
 
 The vector field is conservative, because

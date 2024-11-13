@@ -404,7 +404,8 @@ at a time over the rest of the semester.
 #exer[
   Take a few deep breaths, touch some grass, and have a nice drink of water, so that
   you can look at @fig-int-chart-stokes without feeling fear.
-]
+] <exer-touchgrass>
+
 #exer[
   Print out a copy of the high-resolution version of @fig-int-chart-stokes
   (which can be downloaded at #url("https://web.evanchen.cc/textbooks/poster-stokes.pdf"))
