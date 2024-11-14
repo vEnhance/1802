@@ -79,23 +79,23 @@ The idea is the following:
 ]
 So what we've done is put the rotation thing onto the vector field instead.
 #proof(title: [Proof of the equation])[
-  To spell this out, imagine that $bf(r)'(t) = vec( f_1(t), f_2(t) )$,
-  meaning that its $90 degree$ clockwise rotation is $vec( f_2(t), -f_1(t) )$.
+  To spell this out, imagine that $bf(r)'(t) = vec( r_1(t), r_2(t) )$,
+  meaning that its $90 degree$ clockwise rotation is $vec( r_2(t), -r_1(t) )$.
   Then the two quantities
-  $ bf(F) dot (90 degree "clockwise rotation of" bf(r)') &= vec(p,q) dot vec(f_2, -f_1) \
-    (90 degree "counterclockwise rotation of" bf(F)) dot bf(r)' &= vec(-q, p) dot vec(f_1, f_2) $
-  and equal as both are $p f_2 - q f_1$
+  $ bf(F) dot (90 degree "clockwise rotation of" bf(r)') &= vec(p,q) dot vec(r_2, -r_1) \
+    (90 degree "counterclockwise rotation of" bf(F)) dot bf(r)' &= vec(-q, p) dot vec(r_1, r_2) $
+  and equal as both are $p r_2 - q r_1$
   (strictly speaking,
-  this quantity should be written in full as $p(bf(r)(t)) f_2(t) - q(bf(r)(t)) f_1(t)$,
+  this quantity should be written in full as $p(bf(r)(t)) r_2(t) - q(bf(r)(t)) r_1(t)$,
   for each time $t$).
 ]
 
 The upshot of this is that we can actually change the flux into a work integral:
-$ int_(cal(C)) bf(F) dot bf(n) dif s = int_(cal(C)) bf(F)^perp dot dif bf(r). $
-This looks a bit better but we still want to get rid of $bf(F)^perp$.
+$ int_(cal(C)) bf(F) dot bf(n) dif s = int_(cal(C)) (bf(F) "rotated" 90 degree "counterclockwise") dot dif bf(r). $
+This looks a bit better but we still want to get rid of the rotation thing.
 But we can, because there is a shorthand for work that uses just $p$ and $q$.
-Specifically, since $bf(F)^perp = vec(q, -p)$, we have
-$ int_(cal(C)) bf(F)^perp dot dif bf(r) = int_(cal(C)) (-q dif x + p dif y). $
+Specifically, since $bf(F) "rotated" 90 degree "counterclockwise" = vec(q, -p)$, we have
+$ int_(cal(C)) (bf(F) "rotated" 90 degree "counterclockwise") dot dif bf(r) = int_(cal(C)) (-q dif x + p dif y). $
 In summary, we get the following more readable shorthand:
 
 #definition(title: [Better definition of 2D flux using work shorthand])[
@@ -103,6 +103,15 @@ In summary, we get the following more readable shorthand:
   and let $cal(C)$ be a path in $RR^2$.
   Then the flux of $bf(F)$ through $cal(C)$ is defined as
   $ int_(cal(C)) (-q dif x + p dif y). $
+]
+
+#tip[
+  For this reason, we usually prefer to rotate $bf(F)$ by $90 degree$ counterclockwise
+  (rather than rotate $bf(r)'$ by $90 degree$ clockwise) when doing concrete calculation,
+  though of course they give the same result.
+  I think it's easier to remember and more natural this way,
+  because it makes things more consistent with the work integral.
+  We'll use that convention in all the examples to follow.
 ]
 
 In particular, if $cal(C)$ is a loop (and that's usually the case if we're talking about flux at all)
@@ -146,6 +155,7 @@ so let me just put everything in one place for sanity's sake:
       As described in @sec-flex-param, you have some freedom in how you set the parametrization.
     2. Calculate the derivative $bf(r)'(t)$.
     3. Calculate the dot product $vec(-q, p) dot bf(r)'(t)$.
+      (The vector field $vec(-q,p)$ is the $90 degree$ counterclockwise rotation of $bf(F)$.)
     4. Integrate this from the start time to the stop time.
 ]
 
@@ -167,9 +177,7 @@ For each example, we actually show how to do it "manually"
     where $cal(R)$ is the region enclosed by $cal(C)$.
 
     The divergence is
-    $ nabla dot bf(F) =
-      = (partial p)/(partial x) + (partial q)/(partial y) =
-      = (partial)/(partial x)(x^2) + (partial)/(partial y)(y^2) = 2 x + 2 y. $
+    $ nabla dot bf(F) = (partial p)/(partial x) + (partial q)/(partial y) = (partial)/(partial x)(x^2) + (partial)/(partial y)(y^2) = 2 x + 2 y. $
     Therefore,
     $ "Flux" = iint_(cal(R)) (2 x + 2 y) dif A . $
 
@@ -185,8 +193,10 @@ For each example, we actually show how to do it "manually"
     so
     $ bf(r)'(t) = vec(-sin(t), cos(t)) quad 0 <= t <= 2pi. $
     So the dot product inside the integrand is
-    $ vec(-q, p) dot bf(r)('t) = vec(cos(t)^2, sin(t)^2) dot vec(-sin(t), cos(t))
-      = cos^2 t dot cos t - sin^2 t dot (- sin t) = cos^3 t + sin^3 t. $
+    $ (bf(F) "rotated" 90 degree "counterclockwise") dot bf(r)'(t)
+      &= vec(-q, p) dot bf(r)'(t) \
+      &= vec(cos(t)^2, sin(t)^2) dot vec(-sin(t), cos(t)) \
+      &= cos^2 t dot cos t - sin^2 t dot (- sin t) = cos^3 t + sin^3 t. $
     Hence
     $ "Flux" = int_(t = 0)^(t = 2 pi) (cos^3 t + sin^3 t) dif t . $
     It's possible to observe from here again that the integral is symmetric;
@@ -260,7 +270,7 @@ This comparison is shown in the table below.
       [Output $iint_(cal(R)) underbrace((partial p)/(partial x) + (partial q)/(partial y), "Div" = nabla dot bf(F)) dif A$],
     [Bare-hands definition \ Use parametrization],
       [Output $int (p dif x + q dif y)$ \ $= int_(cal(C)) bf(F) dot bf(r)'(t) dif t$ ],
-      [Output $int (-q dif x + p dif y)$ \ $= int_(cal(C)) bf(F) dot (bf(r)'(t) "rot" 90 degree "clockwise") dif t$],
+      [Output $int (-q dif x + p dif y)$ \ $= int_(cal(C)) (bf(F) "rot" 90 degree "ccw") dot bf(r)'(t) dif t$],
   ),
   caption: [
     Comparison of the recipe for work and flux.
