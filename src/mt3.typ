@@ -2,9 +2,6 @@
 
 = Practice midterm 3 <ch-mt3>
 
-To be posted around 6:00pm ET on Wednesday November 13, 2024.
-(Email me if you want to a copy of the problems before then.)
-
 Solutions are in @ch-sol-mt3.
 
 #exer[
@@ -38,8 +35,8 @@ Solutions are in @ch-sol-mt3.
 ] <exer-mt3-consv>
 
 #exer[
-  Assume $log$ is base $e approx 2.718$. Use any method you want#footnote[
-    Recommended approach: view the integral as the area under a curve,
-    then switch from vertical to horizontal slicing.]
+  Assume $log$ is base $e approx 2.718$. Use any method you want
   to compute $ int_(x=0)^((e-1)^2) log(sqrt(x)+1) dif x. $
+  Recommended approach: view the integral as the area under a curve,
+  then switch from vertical to horizontal slicing.
 ] <exer-mt3-log>
