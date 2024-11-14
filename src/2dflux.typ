@@ -487,8 +487,8 @@ We don't delve into the calculation here, because it's horrendous.
   Evaluate $int bf(F) dot dif bf(r)$ and $int bf(F) dot bf(n) dif s$.
 ]
 
-Here in both cases we have to bite the bullet.
-As before wse the parametrization
+Here in both cases we have to bite the bullet --- none of our shortcuts apply.
+As before we use the parametrization
 $ bf(r)(t) = vec(1+2t, 4+5t) quad 0 <= t <= 1 $
 with
 $ bf(r)'(t) = vec(2,5) quad 0 <= t <= 2pi. $
@@ -514,6 +514,27 @@ $ bf(r)'(t) = vec(2,5) quad 0 <= t <= 2pi. $
   kind: table
 )
 
-#todo[maybe actually write this]
+- For the work integral, substitute $1 + 2 t$ and $4 + 5 t$ into $bf(F)$:
+  $ bf(F) (1+2t, 4+5t) = vec((1 + 2 t)^2 + 3 (4 + 5 t) , thin 5 (4 + 5 t)) = vec(4t^2 + 19t + 13, 25t+20). $
+  Then the dot product is
+  Dot product:
+  $ vec(4t^2 + 19t + 13, 25t+20) dot vec(2,5) = 2 (4 t^2 + 19 t + 13) + 5 (25 t + 20) = 8 t^2 + 163 t + 126. $
+  Hence
+  $ int_(cal(C)) bf(F) dot dif bf(r) = int_(t=0)^1 (8t^2 + 163t + 126) dif t . $
+  Integrate term by term:
+  $ int_(t=0)^1 126 dif t &= 126, \
+    int_(t=0)^1 163 t dif t &= [163 / 2 t^2]_(t=0)^1 = 163 / 2 (1)^2 - 163 / 2 (0)^2 = 163 / 2 , \
+    int_(t=0)^1 8 t^2 dif t &= [8 / 3 t^3]_(t=0)^1 = 8 / 3 (1)^3 - 8 / 3 (0)^3 = 8 / 3 . $
+  Combine the results:
+  $ int_(cal(C)) bf(F) dot dif bf(r) = 126 + 163/2 + 8/3 = 1261 / 6. $
+
+- For the flux integral, instead do the dot product
+  $ vec(-(25t+20), 4t^2 + 19t + 13) dot vec(2,5) = -2 (25t+20) + 5(4t^2+19t+13) = 20t^2 + 45t + 25. $
+  Integrate term by term again:
+  $ int_(t=0)^1 25 dif t &= 25, \
+    int_(t=0)^1 45 t dif t &= [45 / 2 t^2]_(t=0)^1 = 45 / 2 (1)^2 - 45 / 2 (0)^2 = 45 / 2 , \
+    int_(t=0)^1 20 t^2 dif t &= [20 / 3 t^3]_(t=0)^1 = 20 / 3 (1)^3 - 20 / 3 (0)^3 = 20 / 3 . $
+  Combine the results:
+  $ int_(cal(C)) bf(F) dot bf(n) dif s = 25 + 45 / 2 + 20 / 3 = 150 / 6 + 135 / 6 + 40 / 6 = 325 / 6. $
 
 == [EXER] Exercises
