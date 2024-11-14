@@ -355,7 +355,7 @@ But it can be done.
   $ int_(t=0)^(2 pi) (2 + sin 2 t) dif t  = 4 pi + int_(t=0)^(2 pi) sin 2 t dif t = 4 pi. $
   since $int_(t=0)^(2 pi) sin 2 t$ is an integral over two full periods of the sine function.
 
-=== Example with $bf(F) = vec(2x+y, x+2y)$ and $cal(C)$ the unit circle
+=== Example with $bf(F) = vec(2x+y, x+2y)$ and $cal(C)$ a line segment
 
 #sample[
   Let $bf(F) = vec(2x+y, x+2y)$
@@ -415,7 +415,7 @@ but for the flux integral we don't really have a choice because no other method 
   $ int_(t=0)^1 (12 + 21 t) dif t = [12 t + 21/2 t^2]_(t=0)^1 = 45/2. $
 
 
-=== Example with $bf(F) = vec(x^2+3y,5y)$ over the unit circle oriented counterclockwise (a closed loop)
+=== Example with $bf(F) = vec(x^2+3y,5y)$ and $cal(C)$ the unit circle
 
 #sample[
   Let $bf(F) = vec(x^2+3y, 5y)$
@@ -479,7 +479,7 @@ and $iint_(cal(R)) 5 dif A = 5 pi$, giving the answer.
 You can also do parametrization, which is disgusting, but it works.
 We don't delve into the calculation here, because it's horrendous.
 
-=== Example with $bf(F) = vec(x^2+3y,5y)$ for the
+=== Example with $bf(F) = vec(x^2+3y,5y)$ and $cal(C)$ a line segment
 
 #sample[
   Let $bf(F) = vec(x^2+3y, 5y)$
