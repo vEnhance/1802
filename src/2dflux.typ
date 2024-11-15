@@ -303,23 +303,7 @@ $ bf(r)(t) = vec(cos(t), sin(t)) quad 0 <= t <= 2pi $
 so
 $ bf(r)'(t) = vec(-sin(t), cos(t)) quad 0 <= t <= 2pi. $
 
-The line integral is trivially zero:
-we don't even have to compute the potential function,
-because the FTC implies that we'll get $f(1,0) - f(1,0) = 0$.
-In fact the potential function is $f(x,y) = x^2 + x y + y^2$
-but we won't use this until the next example.
-
-If you missed that the vector field was conservative,
-and you use Green's theorem,
-you unsurprisingly get $0$ for the 2D scalar curl:
-conservative functions have vanishing curl.
-So actually even if you don't notice the field is conservative to start,
-when you try to apply Green's theorem you'll get a rather rude reminder when you realize
-you're just integrating the $0$ function.
-
-As for flux, we don't get a fundamental theorem of calculus anyway,
-but the divergence is $2+2=4$ everywhere, which is a constant,
-so the flux works out to $4op("Area")(cal(R))$, which is just $4pi$.
+In this case all five methods are applicable, see the table below.
 
 #figure(
   table(
@@ -342,10 +326,31 @@ so the flux works out to $4op("Area")(cal(R))$, which is just $4pi$.
   kind: table
 )
 
+- *Using FTC*: The line integral is trivially zero:
+  we don't even have to compute the potential function,
+  because the FTC implies that we'll get $f(1,0) - f(1,0) = 0$.
+  In fact the potential function is $f(x,y) = x^2 + x y + y^2$
+  but we won't use this until the next example.
+
+- *Green's theorem for work*:
+  If you missed that the vector field was conservative,
+  and you use Green's theorem,
+  you unsurprisingly get $0$ for the 2D scalar curl:
+  $ iint_(cal(R)) underbrace(1-1, "2D scalar curl") dif A = iint_(cal(R)) 0 dif A = 0. $
+  Conservative functions have vanishing curl.
+  So actually even if you don't notice the field is conservative to start,
+  when you try to apply Green's theorem you'll get a rather rude reminder when you realize
+  you're just integrating the $0$ function.
+
+- *Green's theorem for flux*:
+  For flux, we don't get a fundamental theorem of calculus anyway,
+  but the divergence is $2+2=4$ everywhere, which is a constant,
+  so the flux works out to $4op("Area")(cal(R))$, which is just $4pi$.
+
 On the other hand, the bare-hands parametrization in both cases is really not fun.
 But it can be done.
 
-- For the work integral, you compute it as follows:
+- *Bare-hands for work*: For the work integral, you compute it as follows:
   $ bf(F)(cos t, sin t) dot bf(r)'(t) &= vec(2cos(t)+sin(t), cos(t)+2sin(t)) dot vec(-sin(t), cos(t)) \
     &= (2 cos t + sin t) (- sin t) + (cos t + 2 sin t) (cos t) \
     &= - 2 cos t sin t - sin^2 t + cos^2 t + 2 cos t sin t \
@@ -354,7 +359,7 @@ But it can be done.
   $ int_0^(2 pi) cos (2 t) dif t = 0 $
   because it's an integral over two full periods of the cosine function, hence $0$.
   (Alternatively, write $[(sin 2 t) / (2)]_(t=0)^(2 pi) = (sin 4 pi) / (2) - (sin 0) / (2) = 0 - 0 = 0$.)
-- For the flux integral, rotate the vector for the vector field
+- *Bare-hands for work*: For the flux integral, rotate the vector for the vector field
   (that is, look at $-q dif x + p dif y$) to get the dot product
   $ vec(-(cos(t)+2sin(t)), 2cos(t)+sin(t)) dot vec(-sin(t), cos(t))
     &= (2 cos t + sin t) cos t + (cos t + 2 sin t) sin t \
@@ -402,23 +407,23 @@ This time, our table looks like this:
   kind: table
 )
 
-This time, we will use the potential function
-$ f(x,y) = x^2 + x y + y^2 $
-(or really $f(x,y) = x^2 + x y + y^2 + C$ for any constant $C$).
-So we can short-circuit the entire line integral by simply evaluating
-$ f(3,9)-f(1,4) = 117 - 21 = 96. $
+- *Using FTC*: This time, we will actually use the potential function
+  $ f(x,y) = x^2 + x y + y^2 $
+  (or really $f(x,y) = x^2 + x y + y^2 + C$ for any constant $C$).
+  So we can short-circuit the entire line integral by simply evaluating
+  $ f(3,9)-f(1,4) = 117 - 21 = 96. $
 
 As always, the bare-hands method is the most work,
 but for the flux integral we don't really have a choice because no other method is possible.
 
-- For the work integral, first expand
+- *Bare-hands for work*: For the work integral, first expand
   $ bf(F) (1+2t,4+5t) = vec(2(1+2t)+(4+5t), (1+2t)+2(4+5t)) = vec(2 + 4 t + 4 + 5 t , 1 + 2 t + 8 + 10 t) = vec(6 + 9 t, 9 + 12 t). $
   Hence the dot product is
   $ bf(F) (1+2t,4+5t) dot bf(r)'(t) = vec(6 + 9 t, 9 + 12 t) dot vec(2, 5) = 2(6 + 9 t) + 5(9 + 12 t) = 57 + 78 t. $
   Integrating this gives
   $ int_(t=0)^1 (57 + 78 t) dif t = [57 t + 39 t^2]_0^1 = 57 (1) + 39 (1)^2 - 0 = 57 + 39 = 96. $
 
-- For the flux integral, rotate the vector for the vector field
+- *Bare-hands for flux*: For the flux integral, rotate the vector for the vector field
   (that is, look at $-q dif x + p dif y$) to get the dot product
   $ vec(-(9 + 12 t), 6 + 9 t) dot vec(2, 5) = -2(9 + 12t) + 5(6+ 9t) = 12 + 21 t $
   Integrating this gives
@@ -455,39 +460,38 @@ but for the flux integral we don't really have a choice because no other method 
 )
 
 Green's theorem works readily here because $cal(C)$ is closed.
-For the work version, we do
-$ (partial q) / (partial x) &= (partial) / (partial x) (5 y) = 0 \
-  (partial p) / (partial y) &= (partial) / (partial y) (x^2 + 3 y) = 3 . $
-so the answer is $iint_(cal(R)) (0-3) dif A = -3 pi$.
-For the flux version, it's instead
-$ (partial p) / (partial x) &= (partial) / (partial x) (x^2 + 3 y) = 2 x \
-  (partial q) / (partial y) = (partial) / (partial y) (5 y) = 5 . $
-so the flux is
-$ oint_(cal(C)) bf(F) dot bf(n) dif s = iint_(cal(R)) (2 x + 5) dif A . $
-By symmetry, we have $iint_(cal(R)) 2 x dif A = 0$
-(or if you want, you can use polar coordinates to compute this),
-and $iint_(cal(R)) 5 dif A = 5 pi$, giving the answer.
+- *Green's theorem for work*: For the work version, we do
+  $ (partial q) / (partial x) &= (partial) / (partial x) (5 y) = 0 \
+    (partial p) / (partial y) &= (partial) / (partial y) (x^2 + 3 y) = 3 . $
+  so the answer is $iint_(cal(R)) (0-3) dif A = -3 pi$.
+- *Green's theorem for flux*:
+  For the flux version, it's instead
+  $ (partial p) / (partial x) &= (partial) / (partial x) (x^2 + 3 y) = 2 x \
+    (partial q) / (partial y) = (partial) / (partial y) (5 y) = 5 . $
+  so the flux is
+  $ oint_(cal(C)) bf(F) dot bf(n) dif s = iint_(cal(R)) (2 x + 5) dif A . $
+  By symmetry, we have
+  $ iint_(cal(R))  x dif A = 0 $
+  and we also have
+  $ iint_(cal(R)) 5 dif A &= 5 pi $
+  so we get the answer $0 + 5 pi = 5 pi$.
 
-#remark[
-  If you don't notice the symmetry trick, you can use polar coordinates
-  $ x = r cos theta , quad y = r sin theta , quad dif A = r dif r dif theta , $
-  instead where $0 <= r <= 1$ and $0 <= theta <= 2 pi$.
-  In that case
-  $ 2 x + 5 = 2 r cos theta + 5 . $
-  Thus, the flux integral becomes:
+#remark(title: [Polar coordinates is fine too for the flux one])[
+  If you don't notice the symmetry trick, you can use polar coordinates too.
+  Write $2 x + 5 = 2 r cos theta + 5$ and set up the flux integral as:
   $ oint_(cal(C)) bf(F) dot bf(n) dif s &= int_(theta=0)^(2 pi) int_(r=0)^1 (2 r cos theta + 5) r dif r dif theta \
     &= int_(theta=0)^(2 pi) int_(r=0)^1 (2 r^2 cos theta + 5 r) dif r dif theta \
     &= 2 int_(theta=0)^(2 pi) cos theta int_(r=0)^1 r^2 dif r dif theta
       + 5 int_(theta=0)^(2 pi) int_(r=0)^1 r dif r dif theta . $
-  Evaluate the inner integrals:
-  $ int_(r=0)^1 r^2 dif r = 1 / 3 , quad int_(r=0)^1 r dif r = 1 / 2 . $
-  Thus, the flux equals
+  The inner integrals are $int_(r=0)^1 r^2 dif r = 1 / 3$ and $int_(r=0)^1 r dif r = 1 / 2$,
+  so we get the same answer
   $ 2 dot 1 / 3 int_0^(2 pi) cos theta dif theta + 5 dot 1 / 2 int_0^(2 pi) dif theta
-    = 2/3 dot 0 + 5 dot 1/2 dot 2 pi = 5 pi.$
+    = 2/3 dot 0 + 5 dot 1/2 dot 2 pi = 5 pi. $
 ]
 
 You can also do parametrization, which is disgusting, but it works.
-We don't delve into the calculation here, because it's horrendous.
+- *Bare-hands for work*: Punted it to the Appendix in @appendix-painful-param-work.
+- *Bare-hands for flux*: Punted it to the Appendix in @appendix-painful-param-flux.
 
 === Example with $bf(F) = vec(x^2+3y,5y)$ and $cal(C)$ a line segment
 
@@ -524,7 +528,7 @@ $ bf(r)'(t) = vec(2,5) quad 0 <= t <= 2pi. $
   kind: table
 )
 
-- For the work integral, substitute $1 + 2 t$ and $4 + 5 t$ into $bf(F)$:
+- *Bare-hands for work*: For the work integral, substitute $1 + 2 t$ and $4 + 5 t$ into $bf(F)$:
   $ bf(F) (1+2t, 4+5t) = vec((1 + 2 t)^2 + 3 (4 + 5 t) , thin 5 (4 + 5 t)) = vec(4t^2 + 19t + 13, 25t+20). $
   Then the dot product is
   Dot product:
@@ -538,7 +542,7 @@ $ bf(r)'(t) = vec(2,5) quad 0 <= t <= 2pi. $
   Combine the results:
   $ int_(cal(C)) bf(F) dot dif bf(r) = 126 + 163/2 + 8/3 = 1261 / 6. $
 
-- For the flux integral, instead do the dot product
+- *Bare-hands for flux*: For the flux integral, instead do the dot product
   $ vec(-(25t+20), 4t^2 + 19t + 13) dot vec(2,5) = -2 (25t+20) + 5(4t^2+19t+13) = 20t^2 + 45t + 25. $
   Integrate term by term again:
   $ int_(t=0)^1 25 dif t &= 25, \

@@ -285,7 +285,53 @@ If you ever take either class, I think the thing to know about them is:
   while toil and pathology rule the reals
 ]
 
-
 == Saddle point simulation code for @sec-saddle-sim <appendix-saddle-sim>
 
 #raw(read("include/saddle-demo.py"), lang: "py")
+
+== The really annoying parametrization for work <appendix-painful-param-work>
+
+#sample[
+  Calculate $int_(t=0)^(2pi) vec(cos(t)^2+3sin(t), 5sin(t)) dot vec(-sin(t), cos(t)) dif t$.
+]
+#soln[
+  Expanding the dot product gives
+  $ int_(t=0)^(2 pi) (-cos^2 t sin t - 3 pi sin^2 t + 5 pi sin t cos t) dif t . $
+  Compute each integral separately:
+  1. $int_(t=0)^(2 pi) cos^2 t sin t dif t$:
+    Let $u = cos t$, then $dif u = - sin t dif t$.
+    $ integral cos^2 t sin t dif t = - integral u^2 dif u = - u^3 / 3 + C = - (cos^3 t) / (3) + C . $
+    Evaluate from $0$ to $2 pi$:
+    $ [- (cos^3 t) / (3)]_(t=0)^(2 pi) = - frac(cos^3 (2 pi), 3) + (cos^3 0) / (3) = - 1 / 3 + 1 / 3 = 0 . $
+  2. $int_(t=0)^(2 pi) sin^2 t dif t$:
+    Use the identity $sin^2 t = (1 - cos 2 t) / (2)$:
+    $ int_(t=0)^(2 pi) sin^2 t dif t = 1 / 2 int_(t=0)^(2 pi) (1 - cos 2 t) dif t = 1 / 2 [t - (sin 2 t) / (2)]_(t=0)^(2 pi) = 1 / 2 (2 pi - 0) = pi . $
+  3. $int_(t=0)^(2 pi) sin t cos t dif t$:
+  Use the identity $sin t cos t = (sin 2 t) / (2)$:
+  $ int_(t=0)^(2 pi) sin t cos t dif t = 1 / 2 int_(t=0)^(2 pi) sin 2 t dif t = 0 . $
+  (Since the integral of sine over its full period is zero.)
+  Combine the results to get
+  $ - 0 - 3 dot pi + 5 dot 0 = #boxed[$ -3 pi $]. #qedhere $
+]
+
+== The really annoying parametrization for flux <appendix-painful-param-flux>
+
+#sample[
+  Calculate $int_(t=0)^(2pi) vec(-5sin(t), cos(t)^2+3sin(t)) dot vec(-sin(t), cos(t)) dif t$.
+]
+#soln[
+  Expand the dot product:
+   $ int_(t=0)^(2 pi) (cos^3 t + 3 sin t cos t + 5 sin^2 t) dif t . $
+  Compute each integral separately:
+  1. $int_(t=0)^(2 pi) cos^3 t dif t$:
+    Use the identity $cos^3 t = (3 cos t + cos 3 t) / (4)$:
+    $ int_(t=0)^(2 pi) cos^3 t dif t = 3 / 4 int_(t=0)^(2 pi) cos t dif t + 1 / 4 int_(t=0)^(2 pi) cos 3 t dif t = 0 + 0 = 0 . $
+  2. $int_(t=0)^(2 pi) sin t cos t dif t$:
+    Use the identity $sin t cos t = (sin 2 t) / (2)$:
+    $ int_(t=0)^(2 pi) sin t cos t dif t = 1 / 2 int_(t=0)^(2 pi) sin 2 t dif t = 0 . $
+  3. $int_(t=0)^(2 pi) sin^2 t dif t$:
+    Use the identity $sin^2 t = (1 - cos 2 t) / (2)$:
+    $ int_(t=0)^(2 pi) sin^2 t dif t = 1 / 2 int_(t=0)^(2 pi) (1 - cos 2 t) dif t = 1 / 2 [2 pi - 0] = pi . $
+  Combine the results to get
+  $ 0 + 3 dot 0 + 5 dot pi = #boxed[$ 5 pi $]. #qedhere $
+]
