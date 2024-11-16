@@ -55,8 +55,6 @@ This integral is $0$; here are many ways to evaluate it.
   - $bf(r)_3(t) = (t-1,t-1)$ for $0 <= t <= 1$.
   If you compute the three line integrals, the sum will also be zero.
 
-#pagebreak()
-
 == Solution to @exer-mt3-green (counterclockwise circle)
 
 This is a cookie-cutter application of Green's theorem (both forms).
@@ -75,8 +73,6 @@ $ int_(cal(C)) bf(F) dot bf(n) dif s
   &= iint_(x^2+y^2 <= 1) (1+8) dif A \
   &= 9 iint_(x^2+y^2 <= 1) dif A \
   &= #boxed[$ 9 pi $]. $
-
-#pagebreak()
 
 == Solution to @exer-mt3-chvar (area)
 
@@ -102,8 +98,6 @@ So the equation we are trying to solve is
 $ pi = lr(|1/(1-k^2)|) dot pi / 4 <==> k^2 - 1 = pm 1/4 <==> k^2 = 3/4 " or " k^2 = 5/4. $
 
 Hence the answers are $ k = #boxed[$ pm sqrt(3) / 2 " or " pm sqrt(5) / 2 $]. $
-
-#pagebreak()
 
 == Solution to @exer-mt3-polar (center of mass of circle wedge)
 
@@ -167,8 +161,6 @@ In conclusion, the center of mass is given by $ (dash(x),dash(y)) = #boxed[$ (0,
   So the whole thing is $0$.
 ]
 
-#pagebreak()
-
 == Solution to @exer-mt3-consv (conservative vector field)
 
 Because $bf(F)$ is conservative, we know the following two partial derivatives must be equal:
@@ -186,8 +178,6 @@ $ int_(cal(C)) bf(F) dot dif bf(r) &= f(pi, pi) - f(0,0) \
   ==> 0 &= (pi^3/2 + C pi + C') - C' ==> C = -pi^2/2. $
 Thus we've completely recovered the function $h$:
 $ h(x) = #boxed[$ x^2/2 - pi^2/2 $]. $
-
-#pagebreak()
 
 == Solution to @exer-mt3-log (integral)
 
