@@ -6,7 +6,16 @@
 
 Here's a picture of moonlight sailing after having to grade the third midterm.
 
-#todo[picture to be added]
+#figure(
+  [
+    #image("media/moon1.jpg", width: 60%) \
+    #image("media/moon2.jpg", width: 60%)
+  ],
+  caption: [Moonlight sailing after the third midterm.],
+)
+
+If you'd like some more ideas for things to do, follow me on Instagram at
+#link("https://www.instagram.com/evanchen.cc/")[\@evanchen.cc].
 
 == Solution to @exer-poster
 
