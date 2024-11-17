@@ -1,10 +1,10 @@
 #import "@local/evan:1.0.0":*
 
 #show: evan.with(
-  title: [Notes for 18.02 Recitation 18],
+  title: [Notes for 18.02 Recitation 19],
   subtitle: [18.02 Recitation MW9],
   author: "Evan Chen",
-  date: [18 November 2024],
+  date: [20 November 2024],
 )
 
 
