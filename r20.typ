@@ -14,3 +14,7 @@
 
 This handout (and any other DLC's I write) are posted at
 #url("https://web.evanchen.cc/1802.html").
+
+#warning[
+  Nothing here yet! To be written.
+]
