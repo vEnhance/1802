@@ -67,6 +67,7 @@ to "take a picture and write it directly in polar coordinates".
   (meaning you use $1/(|det J|)$, it might help to know
   that the polar transformation is forwards.
 ]
+#todo[side by side compare these]
 
 == [TEXT] Example: the offset circle
 
