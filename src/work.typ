@@ -261,6 +261,21 @@ Here it is:
   $ int_(cal(C)) (p dif x + q dif y + r dif z). $
 ]
 
+#remark[
+  Here's the reason the shorthand is written like so.
+  For simplicity, let's say we're in the 2D case and $bf(r)(t) = vec(x(t), y(t))$.
+  Then
+  $vec(p,q) dot bf(r)' = vec(p,q) dot vec(x', y') = p dot x' + q dot y'
+    = p dot (dif x) / (dif t) + q dot (dif y) / (dif t). $
+  Hence, if we are integrating $int_(t="start")^("stop") vec(p,q) dot bf(r)' dif t$,
+  we could imagine "cancelling" the $dif t$ out,
+  the expression we'd get looks like $p dif x + q dif y$.
+
+  For 18.02 purposes, all of this is only for mnemonic purposes;
+  we don't actually define what any of the $dif$ symbols mean,
+  so we can't make a more precise statement than that.
+]
+
 If any of $p$, $q$, $r$ are zero, that term can also be omitted entirely.
 So for example, in 2D, if you see
 $ int_(cal(C)) y dif x $
