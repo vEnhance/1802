@@ -7,12 +7,12 @@
   date: [18 November 2024],
 )
 
-
-#quote(attribution: [Sneakers (1992)])[
-  Mary: Wait a second. You can have anything you want, and you're asking for my phone number? \
-  Carl: Yes. \
-  Mary: 273-9164. Area code 415.
-  ]
+#quote(attribution: [Terence Fletcher in Whiplash])[
+  Now, this one really upsets me.
+  We have an out-of-tune player here ...
+  Either you're deliberately out of tune and sabotaging my band,
+  or you don't know you're out of tune, which, I'm afraid, is even worse.
+]
 
 This handout (and any other DLC's I write) are posted at
 #url("https://web.evanchen.cc/1802.html").
