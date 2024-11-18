@@ -1,0 +1,489 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[colorlinks]{hyperref}
+\usepackage{tikz, pgfplots}
+\pgfplotsset{compat=1.17}
+
+\begin{document}
+\title{Quick answer key to Recitation 18}
+\author{ChatGPT 4o}
+\date{November 17, 2024}
+\maketitle
+
+Use the table of contents below to skip to a specific part
+without seeing spoilers to the other parts.
+
+I just used ChatGPT to write this one quickly.
+ChatGPT can make mistakes, so if you spot anything that's wrong, flag me to ask.
+
+\tableofcontents
+
+
+\newpage
+
+\section{Solution}
+
+We are tasked with finding the volume of the region \( T \) bounded by the surface \( x = y^2 \), the plane \( z = 0 \), and the plane \( x + z = 1 \). Additionally, we will sketch \( T \) and describe its projections onto the \( xy \)-plane, \( xz \)-plane, and \( yz \)-plane.
+
+\newpage
+
+\subsection{Step 1: Understanding the Region \( T \)}
+
+\subsubsection{Description of \( T \)}
+
+- The surface \( x = y^2 \) is a parabolic cylinder that opens along the positive \( x \)-axis.
+- The plane \( z = 0 \) is the \( xy \)-plane.
+- The plane \( x + z = 1 \) can be rewritten as \( z = 1 - x \), which slopes downward from \( z = 1 \) at \( x = 0 \) to \( z = 0 \) at \( x = 1 \).
+
+The region \( T \) is thus the set of points \((x, y, z)\) such that:
+\[
+y^2 \leq x \leq 1 \quad \text{and} \quad 0 \leq z \leq 1 - x
+\]
+
+\newpage
+
+\subsection{Step 2: Describing the Projections of \( T \)}
+
+\subsubsection{Projection onto the \( xy \)-Plane}
+
+The projection onto the \( xy \)-plane involves ignoring the \( z \)-coordinate. The bounds are:
+\[
+y^2 \leq x \leq 1 \quad \text{for} \quad y \in [-1, 1]
+\]
+This projection is the region between the parabola \( x = y^2 \) and the vertical line \( x = 1 \).
+
+\subsubsection{Projection onto the \( xz \)-Plane}
+
+The projection onto the \( xz \)-plane involves ignoring the \( y \)-coordinate. The bounds are:
+\[
+0 \leq x \leq 1 \quad \text{and} \quad 0 \leq z \leq 1 - x
+\]
+This projection is a right triangle with vertices at \((0,0)\), \((1,0)\), and \((1,1)\).
+
+\subsubsection{Projection onto the \( yz \)-Plane}
+
+The projection onto the \( yz \)-plane involves ignoring the \( x \)-coordinate. Since \( x \geq y^2 \) and \( x \leq 1 \), the bounds are:
+\[
+y^2 \leq 1 \implies y \in [-1, 1] \quad \text{and} \quad 0 \leq z \leq 1
+\]
+This projection is a rectangle with \( y \in [-1, 1] \) and \( z \in [0, 1] \).
+
+\subsection{Step 3: Calculating the Volume Using Vertical Slicing}
+
+We will use the projection onto the \( xy \)-plane to set up the double integral for the volume.
+
+\subsubsection{Setting Up the Integral}
+
+The volume \( V \) can be expressed as:
+\[
+V = \iint_{R} \left( z_{\text{upper}} - z_{\text{lower}} \right) \, dA
+\]
+where:
+\[
+z_{\text{upper}} = 1 - x \quad \text{and} \quad z_{\text{lower}} = 0
+\]
+Thus:
+\[
+V = \iint_{R} (1 - x) \, dA
+\]
+The region \( R \) in the \( xy \)-plane is bounded by \( y^2 \leq x \leq 1 \) and \( y \in [-1, 1] \).
+
+\subsubsection{Expressing the Integral in Terms of \( y \) and \( x \)}
+
+The integral becomes:
+\[
+V = \int_{y=-1}^{1} \int_{x=y^2}^{1} (1 - x) \, dx \, dy
+\]
+
+\subsubsection{Evaluating the Inner Integral}
+
+First, integrate with respect to \( x \):
+\[
+\int_{x=y^2}^{1} (1 - x) \, dx = \left[ x - \frac{x^2}{2} \right]_{y^2}^{1} = \left( 1 - \frac{1}{2} \right) - \left( y^2 - \frac{y^4}{2} \right) = \frac{1}{2} - y^2 + \frac{y^4}{2}
+\]
+
+\subsubsection{Evaluating the Outer Integral}
+
+Now, integrate with respect to \( y \):
+\[
+V = \int_{y=-1}^{1} \left( \frac{1}{2} - y^2 + \frac{y^4}{2} \right) dy
+\]
+Since the integrand is an even function (symmetric about the \( y \)-axis), we can simplify the computation:
+\[
+V = 2 \int_{y=0}^{1} \left( \frac{1}{2} - y^2 + \frac{y^4}{2} \right) dy
+\]
+Compute the integral:
+\[
+\begin{aligned}
+V &= 2 \left[ \frac{1}{2} y - \frac{y^3}{3} + \frac{y^5}{10} \right]_{0}^{1} \\
+&= 2 \left( \frac{1}{2} (1) - \frac{1}{3} (1) + \frac{1}{10} (1) - 0 \right) \\
+&= 2 \left( \frac{1}{2} - \frac{1}{3} + \frac{1}{10} \right) \\
+&= 2 \left( \frac{15}{30} - \frac{10}{30} + \frac{3}{30} \right) \\
+&= 2 \left( \frac{8}{30} \right) \\
+&= \frac{16}{30} \\
+&= \frac{8}{15}
+\end{aligned}
+\]
+
+\subsection{Conclusion}
+
+The volume of the region \( T \) bounded by the surface \( x = y^2 \), the plane \( z = 0 \), and the plane \( x + z = 1 \) is:
+\[
+V = \frac{8}{15}
+\]
+
+\newpage
+
+\section{Solution}
+
+We are tasked with evaluating the triple integral
+\[
+\iiint_{R} (2 - 2z) \, dV
+\]
+where \( R \) is the pyramid with a square base defined by \( -1 \leq x \leq 1 \) and \( -1 \leq y \leq 1 \) in the \( xy \)-plane, and a vertex at \( (0, 0, 1) \).
+
+\newpage
+
+\subsection{Step 1: Sketching the Region \( R \)}
+
+- **Base:** Square in the \( xy \)-plane with vertices at \( (-1, -1, 0) \), \( (-1, 1, 0) \), \( (1, 1, 0) \), and \( (1, -1, 0) \).
+- **Vertex:** Point at \( (0, 0, 1) \).
+- **Faces:** Four triangular faces connecting each edge of the base to the vertex.
+
+\newpage
+
+\subsection{Step 2: Describing the Cross Sections for Fixed \( z \)}
+
+For a fixed value of \( z \) between \( 0 \) and \( 1 \), the cross section of the pyramid \( R \) at height \( z \) is a square that shrinks linearly as \( z \) increases from \( 0 \) to \( 1 \).
+
+\subsubsection{Cross Section at Height \( z \)}
+- **Side Length:** At height \( z \), the side length of the square cross section is \( 2(1 - z) \).
+- **Limits for \( x \) and \( y \):**
+  \[
+  - (1 - z) \leq x \leq 1 - z \quad \text{and} \quad - (1 - z) \leq y \leq 1 - z
+  \]
+
+\newpage
+
+\subsection{Step 3: Setting Up the Triple Integral}
+
+Using the description of the cross sections, we can express the volume integral in Cartesian coordinates by integrating with respect to \( x \), then \( y \), and finally \( z \).
+
+\subsubsection{Limits of Integration}
+\[
+\begin{cases}
+0 \leq z \leq 1 \\
+- (1 - z) \leq x \leq 1 - z \\
+- (1 - z) \leq y \leq 1 - z
+\end{cases}
+\]
+
+\subsubsection{Expressing the Integral}
+\[
+\iiint_{R} (2 - 2z) \, dV = \int_{z=0}^{1} \int_{x=-(1 - z)}^{1 - z} \int_{y=-(1 - z)}^{1 - z} (2 - 2z) \, dy \, dx \, dz
+\]
+
+\newpage
+
+\subsection{Step 4: Evaluating the Integral}
+
+\subsubsection{Integrate with Respect to \( y \)}
+\[
+\int_{y=-(1 - z)}^{1 - z} (2 - 2z) \, dy = (2 - 2z) \left[ y \right]_{-(1 - z)}^{1 - z} = (2 - 2z) \left( (1 - z) - (-(1 - z)) \right) = (2 - 2z)(2(1 - z)) = 4(1 - z)(1 - z) = 4(1 - z)^2
+\]
+
+\subsubsection{Integrate with Respect to \( x \)}
+\[
+\int_{x=-(1 - z)}^{1 - z} 4(1 - z)^2 \, dx = 4(1 - z)^2 \left[ x \right]_{-(1 - z)}^{1 - z} = 4(1 - z)^2 \left( (1 - z) - (-(1 - z)) \right) = 4(1 - z)^2 \cdot 2(1 - z) = 8(1 - z)^3
+\]
+
+\subsubsection{Integrate with Respect to \( z \)}
+\[
+\int_{z=0}^{1} 8(1 - z)^3 \, dz
+\]
+Let \( u = 1 - z \), then \( du = -dz \). Changing the limits:
+\[
+z = 0 \Rightarrow u = 1 \\
+z = 1 \Rightarrow u = 0
+\]
+Thus,
+\[
+\int_{u=1}^{0} 8u^3 (-du) = \int_{u=0}^{1} 8u^3 \, du = 8 \left[ \frac{u^4}{4} \right]_0^1 = 8 \left( \frac{1}{4} - 0 \right) = 2
+\]
+
+\subsection{Conclusion}
+
+The value of the triple integral is:
+\[
+\iiint_{R} (2 - 2z) \, dV = 2
+\]
+
+
+
+
+\newpage
+
+\section{Solution}
+
+We are tasked with evaluating the triple integral
+\[
+\iiint_{D} y^2 \, dV,
+\]
+where \( D \) is the region defined by:
+\[
+x^2 + y^2 \leq 1, \quad z \geq 0, \quad \text{and} \quad z^2 \leq 4x^2 + 4y^2.
+\]
+
+\newpage
+
+\subsection{Step 1: Understanding the Region \( D \)}
+
+\subsubsection{Description of \( D \)}
+- **Base:** The inequality \( x^2 + y^2 \leq 1 \) represents a cylinder of radius 1 centered along the \( z \)-axis.
+- **Lower Bound:** \( z \geq 0 \) confines the region to above the \( xy \)-plane.
+- **Upper Bound:** \( z^2 \leq 4x^2 + 4y^2 \) can be rewritten as \( z \leq 2\sqrt{x^2 + y^2} \), representing a double cone opening upwards and downwards. However, since \( z \geq 0 \), only the upper half-cone is relevant.
+
+\newpage
+
+\subsection{Step 2: Converting to Cylindrical Coordinates}
+
+Cylindrical coordinates \((r, \theta, z)\) are defined by:
+\[
+x = r\cos\theta, \quad y = r\sin\theta, \quad z = z,
+\]
+where \( r \geq 0 \) and \( \theta \in [0, 2\pi) \).
+
+\subsubsection{Expressing the Bounds in Cylindrical Coordinates}
+- **Cylinder \( x^2 + y^2 \leq 1 \):**
+  \[
+  r^2 \leq 1 \implies r \leq 1.
+  \]
+- **Cone \( z = 2\sqrt{x^2 + y^2} \):**
+  \[
+  z = 2r.
+  \]
+- **Lower Bound \( z = 0 \):**
+  \[
+  z \geq 0.
+  \]
+
+\subsubsection{Region \( D \) in Cylindrical Coordinates}
+\[
+0 \leq r \leq 1, \quad 0 \leq \theta \leq 2\pi, \quad 0 \leq z \leq 2r.
+\]
+
+\subsection{Step 3: Setting Up the Triple Integral}
+
+The triple integral in cylindrical coordinates is:
+\[
+\iiint_{D} y^2 \, dV = \int_{0}^{2\pi} \int_{0}^{1} \int_{0}^{2r} (r\sin\theta)^2 \cdot r \, dz \, dr \, d\theta.
+\]
+Here, \( y = r\sin\theta \) and \( dV = r \, dz \, dr \, d\theta \).
+
+\newpage
+
+\subsection{Step 4: Evaluating the Integral}
+
+\subsubsection{Simplifying the Integrand}
+\[
+y^2 = (r\sin\theta)^2 = r^2\sin^2\theta.
+\]
+Thus, the integrand becomes:
+\[
+y^2 \cdot r = r^2\sin^2\theta \cdot r = r^3\sin^2\theta.
+\]
+The integral simplifies to:
+\[
+\iiint_{D} y^2 \, dV = \int_{0}^{2\pi} \int_{0}^{1} \int_{0}^{2r} r^3\sin^2\theta \, dz \, dr \, d\theta.
+\]
+
+\subsubsection{Integrating with Respect to \( z \)}
+\[
+\int_{0}^{2r} r^3\sin^2\theta \, dz = r^3\sin^2\theta \cdot \left[ z \right]_{0}^{2r} = r^3\sin^2\theta \cdot 2r = 2r^4\sin^2\theta.
+\]
+The integral becomes:
+\[
+\iiint_{D} y^2 \, dV = 2 \int_{0}^{2\pi} \int_{0}^{1} r^4\sin^2\theta \, dr \, d\theta.
+\]
+
+\subsubsection{Integrating with Respect to \( r \)}
+\[
+\int_{0}^{1} r^4 \, dr = \left[ \frac{r^5}{5} \right]_{0}^{1} = \frac{1}{5}.
+\]
+Thus, the integral simplifies to:
+\[
+\iiint_{D} y^2 \, dV = 2 \cdot \frac{1}{5} \int_{0}^{2\pi} \sin^2\theta \, d\theta = \frac{2}{5} \int_{0}^{2\pi} \sin^2\theta \, d\theta.
+\]
+
+\subsubsection{Integrating with Respect to \( \theta \)}
+Recall that:
+\[
+\sin^2\theta = \frac{1 - \cos(2\theta)}{2}.
+\]
+Thus,
+\[
+\int_{0}^{2\pi} \sin^2\theta \, d\theta = \int_{0}^{2\pi} \frac{1 - \cos(2\theta)}{2} \, d\theta = \frac{1}{2} \left[ \int_{0}^{2\pi} 1 \, d\theta - \int_{0}^{2\pi} \cos(2\theta) \, d\theta \right].
+\]
+Evaluate the integrals:
+\[
+\int_{0}^{2\pi} 1 \, d\theta = 2\pi,
+\]
+\[
+\int_{0}^{2\pi} \cos(2\theta) \, d\theta = 0.
+\]
+Therefore,
+\[
+\int_{0}^{2\pi} \sin^2\theta \, d\theta = \frac{1}{2} (2\pi - 0) = \pi.
+\]
+Substituting back:
+\[
+\iiint_{D} y^2 \, dV = \frac{2}{5} \cdot \pi = \frac{2\pi}{5}.
+\]
+
+\subsection{Conclusion}
+
+The value of the triple integral is:
+\[
+\iiint_{D} y^2 \, dV = \frac{2\pi}{5}.
+\]
+
+
+
+
+\newpage
+
+\section{Solution}
+
+We are tasked with evaluating the triple integral
+\[
+\iiint_{D} y^2 \, dV,
+\]
+where \( D \) is the region defined by:
+\[
+x^2 + y^2 \leq 1, \quad z \geq 0, \quad \text{and} \quad z^2 \leq 4x^2 + 4y^2.
+\]
+
+\newpage
+
+\subsection{Step 1: Understanding the Region \( D \)}
+
+\subsubsection{Description of \( D \)}
+- **Base:** The inequality \( x^2 + y^2 \leq 1 \) represents a cylinder of radius 1 centered along the \( z \)-axis.
+- **Lower Bound:** \( z \geq 0 \) confines the region to above the \( xy \)-plane.
+- **Upper Bound:** \( z^2 \leq 4x^2 + 4y^2 \) can be rewritten as \( z \leq 2\sqrt{x^2 + y^2} \), representing a double cone opening upwards and downwards. However, since \( z \geq 0 \), only the upper half-cone is relevant.
+
+\subsubsection{Visualization of \( D \)}
+The region \( D \) is a finite solid bounded below by the \( xy \)-plane and above by the cone \( z = 2\sqrt{x^2 + y^2} \), within the cylinder \( x^2 + y^2 \leq 1 \).
+
+\newpage
+
+\subsection{Step 2: Converting to Cylindrical Coordinates}
+
+Cylindrical coordinates \((r, \theta, z)\) are defined by:
+\[
+x = r\cos\theta, \quad y = r\sin\theta, \quad z = z,
+\]
+where \( r \geq 0 \) and \( \theta \in [0, 2\pi) \).
+
+\newpage
+
+\subsubsection{Expressing the Bounds in Cylindrical Coordinates}
+- **Cylinder \( x^2 + y^2 \leq 1 \):**
+  \[
+  r^2 \leq 1 \implies r \leq 1.
+  \]
+- **Cone \( z = 2\sqrt{x^2 + y^2} \):**
+  \[
+  z = 2r.
+  \]
+- **Lower Bound \( z = 0 \):**
+  \[
+  z \geq 0.
+  \]
+
+\newpage
+
+\subsubsection{Region \( D \) in Cylindrical Coordinates}
+\[
+0 \leq r \leq 1, \quad 0 \leq \theta \leq 2\pi, \quad 0 \leq z \leq 2r.
+\]
+
+\newpage
+
+\subsection{Step 3: Setting Up the Triple Integral}
+
+The triple integral in cylindrical coordinates is:
+\[
+\iiint_{D} y^2 \, dV = \int_{0}^{2\pi} \int_{0}^{1} \int_{0}^{2r} (r\sin\theta)^2 \cdot r \, dz \, dr \, d\theta.
+\]
+Here, \( y = r\sin\theta \) and \( dV = r \, dz \, dr \, d\theta \).
+
+\newpage
+
+\subsection{Step 4: Evaluating the Integral}
+
+\subsubsection{Simplifying the Integrand}
+\[
+y^2 = (r\sin\theta)^2 = r^2\sin^2\theta.
+\]
+Thus, the integrand becomes:
+\[
+y^2 \cdot r = r^2\sin^2\theta \cdot r = r^3\sin^2\theta.
+\]
+The integral simplifies to:
+\[
+\iiint_{D} y^2 \, dV = \int_{0}^{2\pi} \int_{0}^{1} \int_{0}^{2r} r^3\sin^2\theta \, dz \, dr \, d\theta.
+\]
+
+\subsubsection{Integrating with Respect to \( z \)}
+\[
+\int_{0}^{2r} r^3\sin^2\theta \, dz = r^3\sin^2\theta \cdot \left[ z \right]_{0}^{2r} = r^3\sin^2\theta \cdot 2r = 2r^4\sin^2\theta.
+\]
+The integral becomes:
+\[
+\iiint_{D} y^2 \, dV = 2 \int_{0}^{2\pi} \int_{0}^{1} r^4\sin^2\theta \, dr \, d\theta.
+\]
+
+\subsubsection{Integrating with Respect to \( r \)}
+\[
+\int_{0}^{1} r^4 \, dr = \left[ \frac{r^5}{5} \right]_{0}^{1} = \frac{1}{5}.
+\]
+Thus, the integral simplifies to:
+\[
+\iiint_{D} y^2 \, dV = 2 \cdot \frac{1}{5} \int_{0}^{2\pi} \sin^2\theta \, d\theta = \frac{2}{5} \int_{0}^{2\pi} \sin^2\theta \, d\theta.
+\]
+
+\subsubsection{Integrating with Respect to \( \theta \)}
+Recall that:
+\[
+\sin^2\theta = \frac{1 - \cos(2\theta)}{2}.
+\]
+Thus,
+\[
+\int_{0}^{2\pi} \sin^2\theta \, d\theta = \int_{0}^{2\pi} \frac{1 - \cos(2\theta)}{2} \, d\theta = \frac{1}{2} \left[ \int_{0}^{2\pi} 1 \, d\theta - \int_{0}^{2\pi} \cos(2\theta) \, d\theta \right].
+\]
+Evaluate the integrals:
+\[
+\int_{0}^{2\pi} 1 \, d\theta = 2\pi,
+\]
+\[
+\int_{0}^{2\pi} \cos(2\theta) \, d\theta = 0.
+\]
+Therefore,
+\[
+\int_{0}^{2\pi} \sin^2\theta \, d\theta = \frac{1}{2} (2\pi - 0) = \pi.
+\]
+Substituting back:
+\[
+\iiint_{D} y^2 \, dV = \frac{2}{5} \cdot \pi = \frac{2\pi}{5}.
+\]
+
+\subsection{Conclusion}
+
+The value of the triple integral is:
+\[
+\iiint_{D} y^2 \, dV = \frac{2\pi}{5}.
+\]
+
+
+\end{document}
