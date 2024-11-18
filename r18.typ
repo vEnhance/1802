@@ -73,8 +73,10 @@ $
 The idea is that the projection of your point $P$ onto the $x y$-plane
 will have polar coordinates $(r cos theta, r sin theta)$.
 But then rather than using $z$ to lift the point straight up,
-you rotate via some angle $phi$, getting a new distance $rho$ such that
-$r = rho sin phi$.
+you rotate via some angle $phi$, getting a new distance $rho$ such that $r = rho sin phi$.
+(Greek letter names: rho, phi, theta.
+And $phi$, which is `\varphi` in LaTeX, can also be written as $phi.alt$,
+which is `\phi` in LaTeX.)
 #figure(
   image("media/poonen-spherical.png", width: 50%),
   caption: [Spherical coordinates diagram from Poonen's notes.],
