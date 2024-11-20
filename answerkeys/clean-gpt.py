@@ -12,7 +12,7 @@ for line in sys.stdin:
         continue
     if line.startswith(r"\end{document}"):
         continue
-    if line.startswith(r"\s") and r"section*{" in line:
+    if line.startswith(r"\s") and r"section*{" in line and r"subsubsection" not in line:
         line = line.replace("section*", "section")
         if r"\subsection{Part 1" not in line:
             content += r"\newpage" + "\n" * 2
