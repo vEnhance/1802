@@ -57,6 +57,41 @@ except with two variables rather than three.
   Compute the volume of the region bounded by $x^2 + y^2 <= 1$ and $x^2 + z^2 <= 1$.
 ]
 
+#soln[
+  Both inequalities must be satisfied simultaneously. Notice that for a
+  fixed $x$, both $y$ and $z$ are bounded by:
+  $ y^2 <= 1 - x^2 ==> - sqrt(1 - x^2) <= y <= sqrt(1 - x^2) , $
+  $ z^2 <= 1 - x^2 ==> - sqrt(1 - x^2) <= z <= sqrt(1 - x^2) . $
+  The variable $x$ ranges from $- 1$ to $1$.
+
+  Hence, we will write this as a triple integral
+  $ op("Vol")(cal(R))
+    &= int_(x=-1)^1
+      int_(y=-sqrt(1-x^2))^(sqrt(1-x^2))
+      int_(z=-sqrt(1-x^2))^(sqrt(1-x^2)) 1 dif z dif y dif x \
+    &= int_(x=-1)^1
+      int_(y=-sqrt(1-x^2))^(sqrt(1-x^2))
+      2sqrt(1-x^2) dif y dif x \
+    &= int_(x=-1)^1
+      2sqrt(1-x^2)
+      int_(y=-sqrt(1-x^2))^(sqrt(1-x^2)) 1 dif y dif x \
+    &= int_(x=-1)^1
+      2sqrt(1-x^2) dot 2sqrt(1-x^2) dif x \
+    &= int_(x=-1)^1 4(1-x^2) dif x \
+    &= 4[x - x^3 / 3]_(x=-1)^1 = 4[(1 - 1 / 3) - (-1 + 1/3)] = #boxed[$ 16 /3 $]. $
+]
+#digression(title: [Digression on picture])[
+  If you draw a picture of the region,
+  you get the intersection of these two cylinders
+  which forms something apparently called a _Steinmetz solid_.
+
+  Surprisingly, you actually _don't_ want to use polar (or cylindrical) coordinates
+  on this example.
+  If you try to do so, I think you'll actually get stuck.
+  Straight $x y z$-integration turns out to work because of the magical
+]
+
+
 #sample[
   Compute the volume of the region bounded by the surfaces
   $z = 3(x^2+y^2)$ and $z = 72 - 5(x^2+y^2)$.
@@ -70,7 +105,14 @@ except with two variables rather than three.
 
 == [TEXT] Cylindrical coordinates
 
-There's actually nothing new happening here --- it's just polar coordinates with $z$ tacked on.
+There's actually nothing new happening here ---
+it's just polar coordinates with $z$ tacked on.#footnote[
+  Technically, we maybe should use a different letter for the new $z$,
+  but since they're equal we just use the same letter in both places.
+  Also, in principle, I could also introduce a notation $(r, theta, z)_"cyl"$
+  analogous to $(r, theta)_"pol"$,
+  but I don't think I'll have a need to do so.
+]
 The transition map
 $ (r, theta, z) |-> (x, y, z)$ is given by
 $
@@ -78,11 +120,7 @@ $
   y &= r sin theta \
   z &= z.
 $
-Technically, we maybe should use a different letter for the new $z$,
-but since they're equal we just use the same letter in both places.
-In principle, I could also introduce a notation $(r, theta, z)_"cyl"$
-analogous to $(r, theta)_"pol"$,
-but I don't think I'll have a need to do so.
+This is illustrated in @fig-triple-cylinder.
 
 #figure(
   image("figures/triple-cylinder.svg", width: auto),
@@ -90,7 +128,7 @@ but I don't think I'll have a need to do so.
     The $x y$-plane (now drawn as "flat" is just polar coordinates,
     as suggested by the blue circle.
     And then we tack on a height $z$.],
-)
+) <fig-triple-cylinder>
 
 The volume scaling factor is unsurprisingly the same as the one for 2D polar coordinates,
 and you may have used it implicitly on some previous problem sets already:
@@ -113,92 +151,6 @@ $
   = det mat(cos theta, - r sin theta; sin theta, r cos theta) \
   &= r.
 $
-
-== [TEXT] Spherical coordinates
-
-#warning(title: [Warning: There are competing standards, check your book])[
-  Note that mathematicians and physicists use different notations;
-  check the book you're using for your class.
-  For us, the letter names are going to mean
-  $
-    rho &:= "distance to" (0,0,0) \
-    phi &:= "angle down" z" axis" \
-    theta &:= "same as in polar coordinates".
-  $
-  Greek letter names: rho, phi, theta.
-  Also note that the Greek letter $phi$ may be written as $phi.alt$ in different fonts.
-  (If you use LaTeX, these are `\varphi` and `\phi`.
-]
-
-The idea behind spherical coordinates is that the projection of your point $P$ onto the $x y$-plane
-will have polar coordinates $(r cos theta, r sin theta)$.
-But then rather than using $z$ to lift the point straight up,
-you rotate via some angle $phi$, getting a new distance $rho$ such that $r = rho sin phi$.
-See the figure below.
-#figure(
-  image("figures/triple-sphere.svg", width: auto),
-  caption: [Spherical coordinates],
-)
-
-Because of the right triangle with angle $phi$, hypotenuse $rho$,
-and legs $r$ and $z$, we have
-$ r &= rho sin phi \
-  z &= rho cos phi. $
-So unwinding everything, the transition map $(rho, phi, theta) |-> (x,y,z)$
-is given by
-$
-  x &= rho sin phi cos theta \
-  y &= rho sin phi sin theta \
-  z &= rho cos phi.
-$
-Just like how I wrote $(r, theta)_"pol"$ for polar if I needed to be more concise,
-we'll have the analogous shorthand here:
-#definition(title: [Definition of spherical coordinates])[
-  We define spherical coordinates by
-  $ (rho, phi, theta)_"sph" := (rho sin phi cos theta, rho sin phi sin theta, rho cos phi). $
-]
-Now, in order to integrate over this, there's supposed to be a change of variables
-with some Jacobian.
-To get the area scaling factor, we would compute the Jacobian
-$
-  det J_("spherical") = det mat(
-    (partial x) / (partial rho), (partial x) / (partial phi), (partial x) / (partial theta);
-    (partial y) / (partial rho), (partial y) / (partial phi), (partial y) / (partial theta);
-    (partial z) / (partial rho), (partial z) / (partial phi), (partial z) / (partial theta);
-  ).
-$
-This takes some effort,
-so you probably should only do this once in your life and then remember the result.
-It works out to
-$
-  det J_("spherical")
-  &=
-  det mat(
-    sin phi cos theta, rho cos phi cos theta, - rho sin phi sin theta;
-    sin phi sin theta, rho cos phi sin theta, rho sin phi cos theta;
-    cos phi, - rho sin phi, 0
-  ) \
-  &=
-  cos phi
-  det mat( rho cos phi cos theta, - rho sin phi sin theta;
-    rho cos phi sin theta, rho sin phi cos theta;)
-  + rho sin phi
-  det mat(
-    sin phi cos theta, - rho sin phi sin theta;
-    sin phi sin theta, rho sin phi cos theta;
-  ) \
-  &=
-  cos phi (rho^2 cos phi sin phi) (cos^2 theta + sin^2 theta)
-  + rho sin phi (sin^2 phi) (cos^2 theta + sin^2 theta) \
-  &= rho^2 sin phi (cos^2 phi + sin^2 phi) \
-  &= rho^2 sin phi.
-$
-I tried to do this calculation during recitation and got stuck at the board;
-not the kind of thing I'm good at.
-You really don't want to redo this calculation on an exam, so just remember the result.
-#memo(title: [Memorize: Scaling factor for spherical coordinates])[
-  $ dif V := dif x dif y dif z = rho^2 sin phi dif rho dif phi dif theta. $
-]
 
 == [TEXT] Gravity
 
@@ -260,11 +212,8 @@ To do this, I'll rewrite @eqn-gravity as follows:
 Now $G_1$, $G_2$, $G_3$ are integrals of numbers again, so we're fine.
 
 Because the $(x^2+y^2+z^2)^(3/2)$ is so awkward to work with,
-you will commonly switch to spherical coordinates
-so that $ (x^2 + y^2 + z^2)^(3/2) = rho^3. $
-For example, the integrand for $G_3$ would be
-$ (z delta(x,y,z))/((x^2+y^2+z^2)^(3/2)) dif x dif y dif z
-  &= ((rho cos phi) delta(x,y,z))/(rho^3) (rho^2 sin phi dif rho dif phi dif theta) \
-  &= delta(x,y,z) sin phi cos phi  dif rho dif phi dif theta. $
+you will commonly do a certain change-of-variables called _spherical coordinates_.
+We'll explain this in the next section, @sec-sph.
+
 
 == [EXER] Exercises
