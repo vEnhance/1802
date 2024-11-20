@@ -40,14 +40,16 @@ except with two variables rather than three.
     ). $
 - Volume is $ op("Vol")(cal(R)) := iiint_(cal(R)) dif x dif y dif z. $
   You can take this as a _definition_ of volume for this class.
-- If $rho : cal(R) -> RR$ is a density function for a 3D space, then
-  $ op("Mass")(cal(R)) := iiint_(cal(R)) rho(x,y,z) dif x dif y dif z $ is the total mass.
-- The center of mass is given by three coordinates now:
+- If $delta : cal(R) -> RR$ is a density function for a 3D space, then
+  $ op("Mass")(cal(R)) := iiint_(cal(R)) delta(x,y,z) dif x dif y dif z $ is the total mass.
+  The center of mass is given by three coordinates now:
   $ (
-    (iiint_(cal(R)) x dot rho(x,y,z) dif x dif y dif z) / (op("Mass")(cal(R))),
-    (iiint_(cal(R)) y dot rho(x,y,z) dif x dif y dif z) / (op("Mass")(cal(R))),
-    (iiint_(cal(R)) z dot rho(x,y,z) dif x dif y dif z) / (op("Mass")(cal(R)))
+    (iiint_(cal(R)) x dot delta(x,y,z) dif x dif y dif z) / (op("Mass")(cal(R))),
+    (iiint_(cal(R)) y dot delta(x,y,z) dif x dif y dif z) / (op("Mass")(cal(R))),
+    (iiint_(cal(R)) z dot delta(x,y,z) dif x dif y dif z) / (op("Mass")(cal(R)))
   ). $
+  (We use $delta$ instead of $rho$ for 3D typically,
+  because $rho$ gets used in spherical coordinates.)
 
 == [TEXT] Examples of triple integrals
 
@@ -119,7 +121,7 @@ The idea is that the projection of your point $P$ onto the $x y$-plane
 will have polar coordinates $(r cos theta, r sin theta)$.
 But then rather than using $z$ to lift the point straight up,
 you rotate via some angle $phi$, getting a new distance $rho$ such that $r = rho sin phi$.
-See the figure #todo[figure]
+See the figure #todo[draw the figure for this]
 
 Because of the right triangle with angle $phi$, hypotenuse $rho$,
 and legs $r$ and $z$, we have
@@ -171,3 +173,37 @@ You really don't want to redo this calculation on an exam, so just remember the 
 #memo(title: [Memorize: Scaling factor for spherical coordinates])[
   $ dif V := dif x dif y dif z = rho^2 sin phi dif rho dif phi dif theta. $
 ]
+
+== [TEXT] Gravity
+
+Suppose a mass of point $m$ is located at the origin $O = (0,0,0)$,
+In general, given a mass $m$ at a point $O$ and a point of mass $M$ at a point $P$,
+Newton's law says the gravitational force exerted by $P$ on $O$ is
+$ bf(F)_("gravity") = (G m M) / (|O P|^2) dot underbrace(arrow(O P) / (|O P|), "unit vector from" O "to" P) $
+where $G approx 6.67408 dot 10^(-11) dot upright("N") dot upright("m")^2 dot "kg"^(-2)$ is the gravitational constant.
+
+But in real life, we usually want our mass $M$ to be take up a whole region $cal(R)$,
+with some density $delta$.
+(Point masses don't occur in real life unless you count black holes.)
+So let's suppose we have a solid mass occupying region $cal(R)$.
+In that case, each individual point $P=(x,y,z)$ in $cal(R)$ can be thought of as contributing
+$ (G m dot (delta(x,y,z) dif V))/(x^2+y^2+z^2) dot
+  underbrace((angle.l x,y,z angle.r) / (sqrt(x^2+y^2+z^2)), "unit vector from" O "to" P). $
+Integrating over all of $cal(R)$ gives
+a gravitational vector $bf(G) = angle.l G_1, G_2, G_3 angle.r$ defined by
+$
+  G_1 &:= G m iiint_(cal(R)) (x delta(x,y,z))/((x^2+y^2+z^2)^(3/2)) dif x dif y dif z \
+  G_2 &:= G m iiint_(cal(R)) (y delta(x,y,z))/((x^2+y^2+z^2)^(3/2)) dif x dif y dif z \
+  G_3 &:= G m iiint_(cal(R)) (z delta(x,y,z))/((x^2+y^2+z^2)^(3/2)) dif x dif y dif z.
+$
+That is, $bf(G) = G_1 bf(e)_1 + G_2 bf(e)_2 + G_3 bf(e)_3$.
+
+Because the $(x^2+y^2+z^2)^(3/2)$ is so awkward to work with,
+you will commonly switch to spherical coordinates
+so that $ (x^2 + y^2 + z^2)^(3/2) = rho^3. $
+For example, the integrand for $G_3$ would be
+$ (z delta(x,y,z))/((x^2+y^2+z^2)^(3/2)) dif x dif y dif z
+  &= ((rho cos phi) delta(x,y,z))/(rho^3) (rho^2 sin phi dif rho dif phi dif theta) \
+  &= delta(x,y,z) sin phi cos phi  dif rho dif phi dif theta. $
+
+#todo[write some examples here]

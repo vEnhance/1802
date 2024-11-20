@@ -55,13 +55,13 @@ Suppose a mass of point $m$ is located at the origin $O = (0,0,0)$,
 In general, given a mass $m$ at a point $O$ and a point of mass $M$ at a point $P$,
 Newton's law says the gravitational force exerted by $P$ on $O$ is
 $ bf(F)_("gravity") = (G m M) / (|O P|^2) dot underbrace(arrow(O P) / (|O P|), "unit vector from" O "to" P) $
-where $G approx 6.6743 10^(-11) "N" "m"^2 "kg"^(-2)$ is the gravitational constant.
+where $G approx 6.67408 dot 10^(-11) dot upright("N") dot upright("m")^2 dot "kg"^(-2)$ is the gravitational constant.
 
 But in real life, we usually want our mass $M$ to be take up a whole region $cal(R)$,
 with some density $delta$.
 (Point masses don't occur in real life unless you count black holes.)
-So let's suppose we have a solid mass taking up the region $cal(R)$.
-In that case, each individual point $P=(x,y,z)$ can be thought of as contributing
+So let's suppose we have a solid mass occupying region $cal(R)$.
+In that case, each individual point $P=(x,y,z)$ in $cal(R)$ can be thought of as contributing
 $ (G m dot (delta(x,y,z) dif V))/(x^2+y^2+z^2) dot
   underbrace((angle.l x,y,z angle.r) / (sqrt(x^2+y^2+z^2)), "unit vector from" O "to" P). $
 Integrating over all of $cal(R)$ gives
