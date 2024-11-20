@@ -231,7 +231,7 @@ This is summarized in @table-purples.
     [*Line integral*], [🔵 Only for arc length], [✅ Used all the time (work)],
     [*Double/Area integral*], [✅ Used all the time], [❌ Never used in 18.02],
     [*Surface integral*], [🔵 Only for surface area], [✅ Used all the time (flux)],
-    [*Triple/Volume integral*], [✅ Used all the time], [❌ Never used in 18.02],
+    [*Triple/Volume integral*], [✅ Used all the time], [❌ Never used (except in @eqn-gravity)],
   ),
   caption: [What the various kinds of integrals are used for.
     The integrals with ❌ markers never appear in 18.02,

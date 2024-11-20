@@ -12,7 +12,7 @@ and *scalar-field surface integral*.
 The reason for this naming is that later we'll meet
 vector-field variants of the line and surface integral
 that play a much bigger role in 18.02.
-Indeed we mentioned in @sec-warning-trio that these scalar-field integrlas
+Indeed we mentioned in @sec-warning-trio that these scalar-field integrals
 are only used for a few specific cases.
 
 == [TEXT] Arc length, and its generalization to the scalar-field line integral
@@ -26,7 +26,13 @@ I'll restate it again here for convenience, but this is a repeat:
   $ L = int_(t="start time")^("stop time") lr(|bf(r)'(t)|) dif t. $
 ]
 
-In other words, the arc length is the integral of the function $1$ over the whole curve.
+More generally,
+if the parametrization $bf(r)(t) : RR -> RR^n$ traces out a path in $RR^n$,
+and $f : RR^n -> RR$ is a function,
+then the *scalar-field line integral* of $f$ is defined by
+$ int_(t="start time")^("stop time") f(bf(r)(t)) lr(|bf(r)'(t)|) dif t. $
+However, we won't use this definition in this class,
+except for the special case $f = 1$ for arc length.
 
 #warning(title: [Warning: There are no red arrows for these integrals])[
   *We don't like these scalar-field line and surface integrals as much*;
@@ -51,13 +57,6 @@ In other words, the arc length is the integral of the function $1$ over the whol
   how long of a route you took.)
 ]
 
-On the rare occasions when you need it, you get a scalar-field line integral as:
-#memo(title: [Memorize: Scalar-field line integral])[
-  If the parametrization $bf(r)(t) : RR -> RR^n$ traces out a path in $RR^n$,
-  and $f : RR^n -> RR$ is a function,
-  then the *scalar-field line integral* of $f$ is defined by
-  $ int_(t="start time")^("stop time") f(bf(r)(t)) lr(|bf(r)'(t)|) dif t. $
-]
 #typesig[
   The scalar-field line integral (and hence arc length as well) outputs a scalar.
 ]
@@ -112,11 +111,12 @@ Okay, so in analogy to here are surface area and the scalar-field surface integr
   the *surface area* is given by
   $ op("Area")(cal(S)) := iint_(cal(R))
     lr(|(partial bf(r))/(partial u) times (partial bf(r))/(partial v)|) dif u dif v. $
-  More generally if we have a function $f : RR^3 -> RR$ we define the
-  *scalar-field surface integral* of $f$ over $cal(S)$ as
-  $ iint_(cal(R)) f(bf(r)(u,v)) lr(|(partial bf(r))/(partial u) times (partial bf(r))/(partial v)|) dif u dif v. $
 ]
-So like before, surface area is the integral of the constant function $1$.
+More generally if we have a function $f : RR^3 -> RR$ we could define the
+*scalar-field surface integral* of $f$ over $cal(S)$ as
+$iint_(cal(R)) f(bf(r)(u,v)) lr(|(partial bf(r))/(partial u) times (partial bf(r))/(partial v)|) dif u dif v$;
+however this definition will not be used in this class
+except for the special case $f = 1$ (arc length).
 
 #typesig[
   The scalar-field surface integral (and hence surface area as well) outputs a scalar.

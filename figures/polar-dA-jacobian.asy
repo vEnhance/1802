@@ -1,5 +1,6 @@
 size(16cm);
 import geometry;
+usepackage("amsmath");
 usepackage("derivative");
 real dtheta = 30;
 
@@ -13,13 +14,13 @@ draw(P--O--Y, deepgreen);
 markangle("$\odif \theta$", P, O, Y, deepgreen);
 draw(P--X, red, EndArrow, Margins);
 draw(arc(O,P,Y), red, EndArrow, Margins);
-dot("$P = (r, \theta)$", P, 2*dir(-90));
+dot("$P = (r, \theta)_{\text{pol}}$", P, 2*dir(-90));
 draw("$\odif r$", midpoint(P--X), dir(Y), red);
 draw("$r \odif \theta$", rotate(dtheta/2, O) * P, dir(dtheta/2)*dir(P-O), red);
 label("$\odif A$", 1.3*(X+Y)/2-0.3*P, blue);
 
-dot("$(r + \odif r, \theta)$", X, dir(30), blue);
-dot("$(r, \theta + \odif \theta)$", Y, dir(150), blue);
+dot("$(r + \odif r, \theta)_{\text{pol}}$", X, dir(30), blue);
+dot("$(r, \theta + \odif \theta)_{\text{pol}}$", Y, dir(150), blue);
 draw(P--(X.x,P.y)--X, purple);
 draw(P--(Y.x,P.y)--Y, purple);
 label("$\cos \theta \odif r$", (0.7*X.x+0.3*P.x,P.y), dir(270), purple);

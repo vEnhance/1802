@@ -78,8 +78,19 @@ $
   y &= r sin theta \
   z &= z.
 $
-(Technically, we maybe should use a different letter for the new $z$,
-but since they're equal we just use the same letter in both places.)
+Technically, we maybe should use a different letter for the new $z$,
+but since they're equal we just use the same letter in both places.
+In principle, I could also introduce a notation $(r, theta, z)_"cyl"$
+analogous to $(r, theta)_"pol"$,
+but I don't think I'll have a need to do so.
+
+#figure(
+  image("figures/triple-cylinder.svg", width: auto),
+  caption: [Picture of cylindrical coordinates.
+    The $x y$-plane (now drawn as "flat" is just polar coordinates,
+    as suggested by the blue circle.
+    And then we tack on a height $z$.],
+)
 
 The volume scaling factor is unsurprisingly the same as the one for 2D polar coordinates,
 and you may have used it implicitly on some previous problem sets already:
@@ -105,34 +116,49 @@ $
 
 == [TEXT] Spherical coordinates
 
-Note that mathematicians and physicists use different notations;
-check the book you're using for your class.
-For us,
-$
-  rho &:= "distance to" (0,0,0) \
-  phi &:= "angle down" z" axis" \
-  theta &:= "same as in polar coordinates".
-$
-Greek letter names: rho, phi, theta.
-And $phi$, which is `\varphi` in LaTeX, can also be written as $phi.alt$,
-which is `\phi` in LaTeX.
+#warning(title: [Warning: There are competing standards, check your book])[
+  Note that mathematicians and physicists use different notations;
+  check the book you're using for your class.
+  For us, the letter names are going to mean
+  $
+    rho &:= "distance to" (0,0,0) \
+    phi &:= "angle down" z" axis" \
+    theta &:= "same as in polar coordinates".
+  $
+  Greek letter names: rho, phi, theta.
+  Also note that the Greek letter $phi$ may be written as $phi.alt$ in different fonts.
+  (If you use LaTeX, these are `\varphi` and `\phi`.
+]
 
-The idea is that the projection of your point $P$ onto the $x y$-plane
+The idea behind spherical coordinates is that the projection of your point $P$ onto the $x y$-plane
 will have polar coordinates $(r cos theta, r sin theta)$.
 But then rather than using $z$ to lift the point straight up,
 you rotate via some angle $phi$, getting a new distance $rho$ such that $r = rho sin phi$.
-See the figure #todo[draw the figure for this]
+See the figure below.
+#figure(
+  image("figures/triple-sphere.svg", width: auto),
+  caption: [Spherical coordinates],
+)
 
 Because of the right triangle with angle $phi$, hypotenuse $rho$,
 and legs $r$ and $z$, we have
 $ r &= rho sin phi \
   z &= rho cos phi. $
-So unwinding everything, the transition map $(rho, phi, theta) |-> (x,y,z)$ is defined by
+So unwinding everything, the transition map $(rho, phi, theta) |-> (x,y,z)$
+is given by
 $
   x &= rho sin phi cos theta \
   y &= rho sin phi sin theta \
   z &= rho cos phi.
 $
+Just like how I wrote $(r, theta)_"pol"$ for polar if I needed to be more concise,
+we'll have the analogous shorthand here:
+#definition(title: [Definition of spherical coordinates])[
+  We define spherical coordinates by
+  $ (rho, phi, theta)_"sph" := (rho sin phi cos theta, rho sin phi sin theta, rho cos phi). $
+]
+Now, in order to integrate over this, there's supposed to be a change of variables
+with some Jacobian.
 To get the area scaling factor, we would compute the Jacobian
 $
   det J_("spherical") = det mat(
@@ -176,27 +202,62 @@ You really don't want to redo this calculation on an exam, so just remember the 
 
 == [TEXT] Gravity
 
+#typesig[
+  Gravitational force is a vector.
+]
+
 Suppose a mass of point $m$ is located at the origin $O = (0,0,0)$,
 In general, given a mass $m$ at a point $O$ and a point of mass $M$ at a point $P$,
 Newton's law says the gravitational force exerted by $P$ on $O$ is
-$ bf(F)_("gravity") = (G m M) / (|O P|^2) dot underbrace(arrow(O P) / (|O P|), "unit vector from" O "to" P) $
+$ bf(F)_("gravity") = (G dot m dot M)
+  / (|O P|^2) dot underbrace(arrow(O P) / (|O P|), "unit vector from" O "to" P) $
 where $G approx 6.67408 dot 10^(-11) dot upright("N") dot upright("m")^2 dot "kg"^(-2)$ is the gravitational constant.
 
 But in real life, we usually want our mass $M$ to be take up a whole region $cal(R)$,
 with some density $delta$.
 (Point masses don't occur in real life unless you count black holes.)
 So let's suppose we have a solid mass occupying region $cal(R)$.
-In that case, each individual point $P=(x,y,z)$ in $cal(R)$ can be thought of as contributing
-$ (G m dot (delta(x,y,z) dif V))/(x^2+y^2+z^2) dot
+In that case, each individual point $P=(x,y,z)$ in $cal(R)$ can be thought of a _vector_
+$ "Gravity exerted by" (x,y,z) "on" (0,0,0) = (G m dot (delta(x,y,z) dif V))/(x^2+y^2+z^2) dot
   underbrace((angle.l x,y,z angle.r) / (sqrt(x^2+y^2+z^2)), "unit vector from" O "to" P). $
-Integrating over all of $cal(R)$ gives
-a gravitational vector $bf(G) = angle.l G_1, G_2, G_3 angle.r$ defined by
-$
-  G_1 &:= G m iiint_(cal(R)) (x delta(x,y,z))/((x^2+y^2+z^2)^(3/2)) dif x dif y dif z \
-  G_2 &:= G m iiint_(cal(R)) (y delta(x,y,z))/((x^2+y^2+z^2)^(3/2)) dif x dif y dif z \
-  G_3 &:= G m iiint_(cal(R)) (z delta(x,y,z))/((x^2+y^2+z^2)^(3/2)) dif x dif y dif z.
-$
-That is, $bf(G) = G_1 bf(e)_1 + G_2 bf(e)_2 + G_3 bf(e)_3$.
+The total gravitational force is then the integral of this over the entire mass $cal(R)$.
+#figure(
+  image("figures/triple-gravity.svg", width: auto),
+  caption: [
+    The force of gravity exerted by a large mass $cal(R)$ such as the sun on a point mass of mass $m$.
+    Each individual point like $P$ or $Q$ in the region $cal(R)$ exerts a tiny force on the point mass of mass $m$.
+    The total gravitational force is the sum (integral) across the whole region $cal(R)$.
+  ],
+)
+
+So the total gravitational force is nominally
+#eqn[
+  $ bf(G) = int_(cal(R)) (G m dot (delta(x,y,z) dif V))/(x^2+y^2+z^2) dot (angle.l x,y,z angle.r) / (sqrt(x^2+y^2+z^2)). $
+  <eqn-gravity>
+]
+
+Now, if you have been following my advice to always audit type safety,
+then you should stop me right here.
+This is the first time in the entire notes that I've had an integral
+where the integrand is a _vector_ rather than the number.
+What's going on?
+
+The general answer is that you should just do everything component wise.
+But to keep things simple for the course, I will never use @eqn-gravity in that form,
+so that our integrands always have type number rather than type vector.
+To do this, I'll rewrite @eqn-gravity as follows:
+#memo(title: [Memorize: Gravitational attraction of a region on the origin])[
+  Suppose $cal(R)$ is a region with density function $delta$.
+  The gravitational vector $bf(G) = angle.l G_1, G_2, G_3 angle.r$
+  on the origin is defined by
+  $
+    G_1 &:= G m iiint_(cal(R)) (x delta(x,y,z))/((x^2+y^2+z^2)^(3/2)) dif x dif y dif z \
+    G_2 &:= G m iiint_(cal(R)) (y delta(x,y,z))/((x^2+y^2+z^2)^(3/2)) dif x dif y dif z \
+    G_3 &:= G m iiint_(cal(R)) (z delta(x,y,z))/((x^2+y^2+z^2)^(3/2)) dif x dif y dif z.
+  $
+  That is, $bf(G) = G_1 bf(e)_1 + G_2 bf(e)_2 + G_3 bf(e)_3$.
+]
+Now $G_1$, $G_2$, $G_3$ are integrals of numbers again, so we're fine.
 
 Because the $(x^2+y^2+z^2)^(3/2)$ is so awkward to work with,
 you will commonly switch to spherical coordinates
@@ -206,4 +267,4 @@ $ (z delta(x,y,z))/((x^2+y^2+z^2)^(3/2)) dif x dif y dif z
   &= ((rho cos phi) delta(x,y,z))/(rho^3) (rho^2 sin phi dif rho dif phi dif theta) \
   &= delta(x,y,z) sin phi cos phi  dif rho dif phi dif theta. $
 
-#todo[write some examples here]
+== [EXER] Exercises

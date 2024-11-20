@@ -1,5 +1,6 @@
 import geometry;
 
+usepackage("amsmath");
 usepackage("derivative");
 unitsize(2cm);
 real dtheta = 7;
@@ -20,16 +21,16 @@ label("$\odif A$", (X1+Y1)/2, blue);
 draw(P1--X1, red, EndArrow, Margins);
 draw(arc(O, P1, Y1), red, EndArrow, Margins);
 dot("$P_1$", P1, dir(225));
-dot("$(r_1 + \odif r, \theta_1)$", X1, 2*dir(310), blue);
-dot("$(r_1, \theta_1 + \odif \theta)$", Y1, dir(105), blue);
+dot("$(r_1 + \odif r, \theta_1)_{\text{pol}}$", X1, 2*dir(310), blue);
+dot("$(r_1, \theta_1 + \odif \theta)_{\text{pol}}$", Y1, dir(105), blue);
 
 filldraw(arc(O,P2,Y2)--arc(O,(rotate(dtheta)*X2), X2, false)--cycle, palecyan, dotted);
 label("$\odif A$", (X2+Y2)/2, blue);
 draw(P2--X2, red, EndArrow, Margins);
 draw(arc(O, P2, Y2), red, EndArrow, Margins);
 dot("$P_2$", P2, dir(225));
-dot("$(r_2 + \odif r, \theta_2)$", X2, 2*dir(310), blue);
-dot("$(r_2, \theta_2 + \odif \theta)$", Y2, dir(105), blue);
+dot("$(r_2 + \odif r, \theta_2)_{\text{pol}}$", X2, 2*dir(310), blue);
+dot("$(r_2, \theta_2 + \odif \theta)_{\text{pol}}$", Y2, dir(105), blue);
 
 markangle(X1, O, Y1, deepgreen);
 label("$\odif \theta$", O, 7*dir(-10), deepgreen);

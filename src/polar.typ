@@ -2,11 +2,11 @@
 
 = Polar coordinates
 
-== [TEXT] Polar coordinate is a special case of change of variables
+== [TEXT] Polar coordinates are a special case of change of variables
 
 Last section one of the transition maps we used was
 $ bf(T)_"polar" (r, theta) = (r cos theta, r sin theta). $
-This particular  is so common that you should actually memorize its Jacobian determinant
+This particular change is so common that you should actually memorize its Jacobian determinant
 and area scaling factor.
 Remember from last section we computed
 $ J_(bf(T)) &= mat(
@@ -42,6 +42,14 @@ As training wheels, I'm still going to avoid writing $dif A$ for one more sectio
 so that when you see $dif x dif y$ or $dif y dif x$ you know you're _supposed_
 to make a change of variables
 (and won't accidentally write $dif r dif theta$ with the factor of $r$ missing).
+
+== [TEXT] Polar coordinates can be thought of as a coordinate system
+
+In what follows, true to the name "polar _coordinates_", I'll write just
+$ (r, theta)_"pol" := (r cos theta, r sin theta) $
+so I don't have to keep dragging the $bf(T)_"polar"$ everywhere.
+(However, other places will just write $(r, theta)$ everywhere,
+since it's unlikely to be confused with $x y$-coordinates due to the letter change.)
 
 The upshot is that in practice:
 #idea[
@@ -281,15 +289,15 @@ no matter what point $P$ you pick.
 
 However, when you change to polar coordinates, $dif A$ does actually depend on $P$:
 or rather, it doesn't care about $theta$, but it cares about $theta$.
-If you have polar coordinates $P = (r, theta)$ for the starting point
-and draw two red arrows to $(r + dif r, theta)$ and $(r, theta + dif theta)$,
+If you have polar coordinates $P = (r, theta)_"pol"$ for the starting point
+and draw two red arrows to $(r + dif r, theta)_"pol"$ and $(r, theta + dif theta)_"pol"$,
 then the first red arrow still always has length $dif r$,
 but the second red arrow really has length $r dif theta$ --- it's close to $dif theta$
 arc of a circle of radius $r$.
-You can see this in @fig-polar-dA-dr-r-dtheta for two points $P_1 = (r_1, theta_1)$,
-and $P_2 = (r_2, theta_2)$.
+You can see this in @fig-polar-dA-dr-r-dtheta for two points $P_1 = (r_1, theta_1)_"pol"$,
+and $P_2 = (r_2, theta_2_"pol")$.
 The point $P_1$ is close to the origin, so both red arrows are small.
-But he point $P_2$ farther has a longer red arrow,
+But the point $P_2$ farther has a longer red arrow,
 because the small change $dif theta$ is magnified by the radius of the circle.
 (Some students asked me whether I should be drawing the red arrow curved or straight.
 The answer is that I don't care --- because we're thinking of all the displacements as "tiny",
@@ -312,9 +320,9 @@ This is similar to the last figure, but we've chosen a point $P$ for which $thet
 so neither red arrow is parallel to the $x$-axis.
 The new feature is that the two red arrows now have their $x$ and $y$ coordinates written out:
 
-- The first red arrow from $P$ to $(r + dif r, theta)$ can be written with $x y$-components as
+- The first red arrow from $P$ to $(r + dif r, theta)_"pol"$ can be written with $x y$-components as
   $ bf(v)_1 := vec(cos theta dif r, sin theta dif r). $
-- The second red arrow from $P$ to $(r, theta + dif theta)$ can be written with $x y$-components as
+- The second red arrow from $P$ to $(r, theta + dif theta)_"pol"$ can be written with $x y$-components as
   $ bf(v)_2 := vec(-r sin theta dif r, r cos theta dif r). $
 
 #figure(
