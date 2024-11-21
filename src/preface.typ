@@ -175,10 +175,10 @@ Here is a brief overview of what happens in these parts
   which gets airtime in virtually every kind of question you'll see.
   This is the first serious multivariable calculus usage.
 
-/ Golf: *Integrals of multivariable functions* $f : RR^n -> RR$.
+/ Golf: This section covers *integrals of multivariable functions* $f : RR^n -> RR$.
   The double and triple integrals make their first appearances here.
 
-/ Hotel: *Integrals of vector fields* $bf(F) : RR^n -> RR^n$;
+/ Hotel: This section covers *integrals of vector fields* $bf(F) : RR^n -> RR^n$;
   that is, work and flux.
   The famous grad, div, and curl are introduced here,
   together with the generalized Stokes' theorem that ties them all together.
@@ -240,7 +240,7 @@ I think the term "treatment" for the way a course is taught is apt,
 because it reflects a reality about education:
 like medicine, there is no one treatment that works for everyone.
 In theory, there might be some people who only read this book and that's all they need.
-In practice, a lot of you would benefit from having friends ask to explain things differently
+In practice, a lot of you would benefit from asking friends to explain things differently
 for the sections of the book that don't work from you,
 or consulting another text when things here don't suit you.
 You should not feel under any obligation to treat this book as the one true bible of 18.02.
