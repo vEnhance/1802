@@ -33,13 +33,13 @@ draw(K1--(K1+K2-K)--K2, grey);
 pair P = K + 5.3 * dir(90);
 draw("$+z$", K--P, dir(0), lightred+dashed, EndArrow, EndMargin);
 
-draw("$\rho$", O--P, dir(70), red, EndArrow, EndMargin);
+draw("$\rho$", O--P, dir(110), red, EndArrow, EndMargin);
 markangle(radius=15,n=2,"$\varphi$", P, O, (0,1), deepgreen);
 markangle(radius=15,n=2,"$\varphi$", O, P, K, deepgreen);
 
 pair L = -K;
 pair Q = 2*L+P - (0,2*L.y);
-draw("$\rho$", O--Q, dir(-90), brown, EndArrow, EndMargin);
+draw("$\rho$", O--Q, dir(40), brown, EndArrow, EndMargin);
 draw(O--L, brown, EndArrow, EndMargin);
 draw(L--Q, brown, EndArrow, EndMargin);
 label("$r$", O--L, dir(90), brown);
@@ -49,4 +49,4 @@ dot("$P = (r, \varphi, \theta)_{\text{sph}}$", P, dir(40), black);
 dot("$O$", O, dir(135));
 dot(L, brown);
 dot("$(r \cos (\theta \pm \pi), r \sin (\theta \pm \pi), 0)$", L, 3*dir(140), brown);
-dot("$(r, -\varphi, \theta)_{\text{sph}} = (r, \theta \pm \pi, \pi-\varphi)_{\text{sph}}$", Q, dir(90), brown);
+dot("$(r, -\varphi, \theta)_{\text{sph}} = (r, \varphi, \theta \pm \pi)_{\text{sph}}$", Q, dir(90), brown);

@@ -49,4 +49,4 @@ dot("$P = (r, \varphi, \theta)_{\text{sph}}$", P, dir(40), black);
 dot("$O$", O, dir(135));
 dot(L, brown);
 dot("$(r \cos (\theta \pm \pi), r \sin (\theta \pm \pi), 0)$", L, 3*dir(110), brown);
-dot("$(r, \varphi+\pi, \theta)_{\text{sph}} = (r, \theta \pm \pi, \pi-\varphi)_{\text{sph}}$", Q, dir(-90), brown);
+dot("$(r, \varphi+\pi, \theta)_{\text{sph}} = (r, \pi - \varphi, \theta \pm \pi)_{\text{sph}}$", Q, dir(-90), brown);
