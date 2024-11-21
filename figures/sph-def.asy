@@ -40,7 +40,7 @@ markangle(radius=15,n=2,"$\varphi$", O, P, K, deepgreen);
 dot("$(r \cos \theta, r \sin \theta, 0)$", K, dir(310), lightblue);
 
 label("$\begin{aligned}
-P &= (\rho, \theta, \varphi)_{\text{sph}} \\
+P &= (\rho, \varphi, \theta)_{\text{sph}} \\
 &= (r \cos \theta, r \sin \theta, \rho \cos \varphi) \\
 &= (\rho \sin \varphi \cos \theta, \rho \sin \varphi \sin \theta, \rho \cos \varphi)
 \end{aligned}

@@ -11,14 +11,14 @@ This section defines them and shows how to use them.
   For us, the letter names are going to mean
   $
     rho &:= "distance to" (0,0,0) \
-    theta &:= "same as in polar coordinates" \
-    phi &:= "angle down" z" axis".
+    phi &:= "angle down" z" axis" \
+    theta &:= "same as in polar coordinates"
   $
   and we write them in that order.
   However, some books write the letters in a different order,
   some books flip the meaning of $phi$ of $theta$,
   and some books _both_ change the meaning _and_ flip the order.
-  If you don't know the Greek letter names, they are "rho", "theta", and "phi".
+  If you don't know the Greek letter names, they are "rho", "phi", "theta".
 
   Also note that the Greek letter $phi$ may be written as $phi.alt$ in different fonts.
   (If you use LaTeX, these are `\varphi` and `\phi`.)
@@ -43,7 +43,7 @@ and legs $r$ and $z$, we have
 $ r &= rho sin phi \
   z &= rho cos phi. $
 Unwinding everything to kill all the $r$'s,
-the transition map $(rho, theta, phi) |-> (x,y,z)$ is given by
+the transition map $(rho, phi, theta) |-> (x,y,z)$ is given by
 $
   x &= underbrace(rho sin phi, =r) cos theta \
   y &= underbrace(rho sin phi, =r) sin theta \
@@ -53,7 +53,7 @@ Just like how I wrote $(r, theta)_"pol"$ for polar if I needed to be more concis
 we'll have the analogous shorthand here:
 #definition(title: [Definition of spherical coordinates])[
   We define spherical coordinates by
-  $ (rho, theta, phi)_"sph" := (rho sin phi cos theta, rho sin phi sin theta, rho cos phi). $
+  $ (rho, phi, theta)_"sph" := (rho sin phi cos theta, rho sin phi sin theta, rho cos phi). $
 ]
 Now, in order to integrate over this, there's supposed to be a change of variables
 with some Jacobian.
@@ -143,8 +143,8 @@ as does any interval of length $2 pi$.
 === The bounds for spherical coordinates
 
 Let's go back to spherical coordinates
-$ (rho, theta, phi)_"sph" := (rho sin phi cos theta, rho sin phi sin theta, rho cos phi). $
-We want to choose a convention for values of $(rho, theta, phi)$ such that
+$ (rho, phi, theta)_"sph" := (rho sin phi cos theta, rho sin phi sin theta, rho cos phi). $
+We want to choose a convention for values of $(rho, phi, theta)$ such that
 (except for a few degenerate cases that we'll ignore),
 every point has exactly one set of coordinates.
 The choice that we're going to use is the following.
@@ -154,14 +154,14 @@ The choice that we're going to use is the following.
   #eqn[
     $
       rho &>= 0 \
+      0 &<= phi < pi \
       0 &<= theta < 2 pi \
-      0 &<= phi < pi.
     $
     <eqn-sph-ranges>
   ]
 ]
 That is, I claim that this choice of values @eqn-sph-ranges
-will ensure every point is represented exactly once by $(rho, theta, phi)_"sph"$,
+will ensure every point is represented exactly once by $(rho, phi, theta)_"sph"$,
 with a small number of exceptions#footnote[
   If you want to know, the exceptions are exactly the $z$-axis,
   where $theta$ can be arbitrary.
@@ -187,15 +187,15 @@ So we'll illustrate two cases in full to show how to convert the illegal value i
 #digression(title: [Digression: Other conventions])[
   Remember, all of these are conventions; you should choose one and stick with it,
   so long as it represents every point (not on the $z$-axis) exactly once.
-  For example, if you wanted to instead require $rho >= 0$, $0 <= theta < pi$,
-  and $0 <= phi < 2 pi$, I think that would also work.
+  For example, if you wanted to instead require $rho >= 0$,
+  $0 <= phi < 2 pi$, $0 <= theta < pi$, I think that would also work.
 ]
 
 === First case: Illegal angle greater than $pi$
 
 In this case, I assert the following equation is true:
 #eqn[
-  $ (rho, theta, phi + pi)_"sph" = (rho, theta pm pi, pi - phi)_"sph". $
+  $ (rho, phi + pi, theta)_"sph" = (rho, pi - phi, theta pm phi)_"sph". $
   <eqn-sph-phi-too-big>
 ]
 Here the sign for $theta pm pi$ is arbitrary,
@@ -213,9 +213,9 @@ Here are two ways to verify @eqn-sph-phi-too-big is true.
 / Algebraic proof (easier):
   We need to verify that the $x$, $y$, $z$ coordinates on both sides are the same:
   $
-    rho sin (phi+pi) cos theta = rho sin (pi-phi) cos (theta pm pi) \
-    rho sin (phi+pi) sin theta = rho sin (pi-phi) sin (theta pm pi) \
-    rho cos (phi+pi) = rho cos (pi-phi).
+    rho sin (phi+pi) cos theta &= rho sin (pi-phi) cos (theta pm pi) \
+    rho sin (phi+pi) sin theta &= rho sin (pi-phi) sin (theta pm pi) \
+    rho cos (phi+pi) &= rho cos (pi-phi).
   $
   But $sin(phi+pi) = -sin(pi-phi)$, $cos(theta pm pi) = -cos theta$,
   $sin(theta pm pi) = -sin(theta)$, and $cos(phi+pi) = cos(pi-phi)$,
@@ -235,7 +235,7 @@ Here are two ways to verify @eqn-sph-phi-too-big is true.
 
 This time, I assert the following equation instead:
 #eqn[
-  $ (rho, theta, -phi)_"sph" = (rho, theta pm pi, phi)_"sph". $
+  $ (rho, -phi, theta)_"sph" = (rho, phi, theta pm pi)_"sph". $
   <eqn-sph-phi-neg>
 ]
 This is actually a bit easier to see than the last case.
@@ -250,9 +250,9 @@ This is actually a bit easier to see than the last case.
 / Algebraic proof (easier):
   We need to verify that the $x$, $y$, $z$ coordinates on both sides are the same:
   $
-    rho sin(-phi) cos theta = rho sin phi cos (theta pm phi) \
-    rho sin(-phi) sin theta = rho sin phi sin (theta pm phi) \
-    rho cos (-phi) = rho cos phi.
+    rho sin(-phi) cos theta &= rho sin phi cos (theta pm phi) \
+    rho sin(-phi) sin theta &= rho sin phi sin (theta pm phi) \
+    rho cos (-phi) &= rho cos phi.
   $
   But $sin(-phi) = -sin(phi)$, $cos(theta pm pi) = -cos theta$,
   $sin(theta pm pi) = -sin(theta)$, and $cos(-phi) = cos phi$,
