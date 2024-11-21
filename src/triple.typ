@@ -78,32 +78,77 @@ except with two variables rather than three.
     &= int_(x=-1)^1
       2sqrt(1-x^2) dot 2sqrt(1-x^2) dif x \
     &= int_(x=-1)^1 4(1-x^2) dif x \
-    &= 4[x - x^3 / 3]_(x=-1)^1 = 4[(1 - 1 / 3) - (-1 + 1/3)] = #boxed[$ 16 /3 $]. $
+    &= 4[x - x^3 / 3]_(x=-1)^1 = 4[(1 - 1 / 3) - (-1 + 1/3)] = #boxed[$ 16 /3 $]. #qedhere $
 ]
 #digression(title: [Digression on picture])[
   If you draw a picture of the region,
   you get the intersection of these two cylinders
   which forms something apparently called a _Steinmetz solid_.
+  (I say "apparently" because ChatGPT told me this name;
+  I didn't know this had a name before either.)
 
   Surprisingly, you actually _don't_ want to use polar (or cylindrical) coordinates
   on this example.
   If you try to do so, I think you'll actually get stuck.
-  Straight $x y z$-integration turns out to work because of the magical
+  Straight $x y z$-integration turns out to work because of the
+  unexpectedly convenient fact that you get two square roots that miraculously cancel.
 ]
-
 
 #sample[
   Compute the volume of the region bounded by the surfaces
   $z = 3(x^2+y^2)$ and $z = 72 - 5(x^2+y^2)$.
 ]
 
-#sample[
-  Compute the volume and center of mass of the cone
-  defined by $z^2 <= 9(x^2 + y^2)$ and $0 <= z <= 5$,
-  assuming uniform density distribution.
+#soln[
+  The given surfaces are both paraboloids:
+
+  1. $z = 3 (x^2 + y^2)$ is an upward-opening paraboloid.
+  2. $z = 72 - 5 (x^2 + y^2)$ is a downward-opening paraboloid.
+
+  Before diving in, let's figure out where these two intersect.
+  If we set these equal we get
+  $ 3 (x^2 + y^2) = 72 - 5 (x^2 + y^2) ==> x^2 + y^2 = 9. $
+
+  With that in mind, we can convert the region $cal(R)$ to an inequality format: we write
+  $ 3(x^2+y^2) <= z <= 72-5(x^2+y^2) $
+  for the constraint on $z$ and then
+  $ x^2+y^2 <= 9 $
+  for the constraint on $x$ and $y$.
+
+  Hence, the volume can be written as
+  $
+    op("Vol")(cal(R))
+    = iiint_(x^2 + y^2 <= 9 \ 3(x^2+y^2) <= z <= 72-5(x^2+y^2)) dif x dif y dif z.
+  $
+  We'll separate the integral into an integral over the circle $x^2 + y^2 <= 9$
+  and then a single integral over the resulting $z$:
+  $
+    op("Vol")(cal(R))
+    &= iint_(x^2 + y^2 <= 9) (int_(z=3(x^2+y^2))^(72-5(x^2+y^2)) dif z) dif x dif y \
+    &= iint_(x^2 + y^2 <= 9) (72 - 8(x^2+y^2)) dif x dif y.
+  $
+  At _this_ point we'll use polar coordinates:
+  writing $x = r cos theta$, and $y = r sin theta$ as always, we have
+  $
+    op("Vol")(cal(R))
+    &= iint_(x^2 + y^2 <= 9) (72 - 8(x^2+y^2)) dif x dif y \
+    &= iint_(x^2 + y^2 <= 9) (72 - 8(x^2+y^2)) dif x dif y \
+    &= int_(theta=0)^(2 pi) int_(r=0)^3 (72 - 8 r^2) dot (r dif r dif theta) \
+    &= (int_(theta=0)^(2 pi) 1 dif theta)(int_(r=0)^3 (72 r - 8 r^3) dif r) \
+    &= 2 pi dot [36r^2 - 2r^4]_(r=0)^3 = #boxed[$ 324 pi $]. #qedhere
+  $
 ]
 
-== [TEXT] Cylindrical coordinates
+This previous example shows how, because of the way the problem was set,
+it was natural to do the integral for $z$ separately
+but do $x$ and $y$ with polar coordinates.
+This technique is called _cylindrical coordinates_,
+a name that doesn't need to exist because it's just polar coordinates with $z$ tacked on.
+
+(Actually, I think the most surprising thing is the example we need with the Steinmetz solid
+earlier is _not_ good to do with cylindrical coordinates, despite appearances.)
+
+== [TEXT] Cylindrical coordinates (i.e. polar with $z$ tacked on)
 
 There's actually nothing new happening here ---
 it's just polar coordinates with $z$ tacked on.#footnote[
@@ -113,15 +158,17 @@ it's just polar coordinates with $z$ tacked on.#footnote[
   analogous to $(r, theta)_"pol"$,
   but I don't think I'll have a need to do so.
 ]
-The transition map
-$ (r, theta, z) |-> (x, y, z)$ is given by
+If you were able to do the earlier example with
+$z = 3(x^2+y^2)$ and $z = 72-5(x^2+y^2)$ by yourself without reading the solution,
+then you can safely skip this entire section!
+
+The transition map $ (r, theta, z) |-> (x, y, z)$ is given by
 $
   x &= r cos theta \
   y &= r sin theta \
   z &= z.
 $
 This is illustrated in @fig-triple-cylinder.
-
 #figure(
   image("figures/triple-cylinder.svg", width: auto),
   caption: [Picture of cylindrical coordinates.
@@ -151,6 +198,50 @@ $
   = det mat(cos theta, - r sin theta; sin theta, r cos theta) \
   &= r.
 $
+
+OK, let's run the example.
+Note that, as I said, we could have given this example _before_ this section.
+
+#sample[
+  Compute the volume and center of mass of the cone
+  defined by $9(x^2 + y^2) <= z^2$ and $0 <= z <= 5$,
+  assuming uniform density distribution $delta = 1$.
+]
+#soln[
+  The given inequalities describe a single cone with its apex at the
+  origin, extending upwards to $z = 5$.
+  To solve for both the volume and the center of mass,
+  we’ll employ cylindrical coordinates due to the symmetry of the cone.
+  As always, $cal(R)$ denotes the region (cone).
+
+  The values of $z$ that appear at all are $z = 0$ to $5$,
+  and within them we have only the requirement that
+  $ 9(x^2+y^2) <= z^2 ==> sqrt(x^2+y^2) <= z/3. $
+  In other words, we can write
+  $ op("Vol")(cal(R))
+    = int_(z=0)^5 iint_(sqrt(x^2+y^2) <= z/3) 1 dif x dif y dif z. $
+  However, of course we should just change to cylindrical coordinates right away:
+  $ op("Vol")(cal(R))
+    &= int_(z=0)^5 int_(r=0)^(z/3) int_(theta=0)^(2pi) r dif theta dif r dif z \
+    &= 2 pi int_(z=0)^5 int_(r=0)^(z/3) r dif r dif z \
+    &= 2 pi int_(z=0)^5 [r^2/2]_(r=0)^(z/3) dif z \
+    &= 2 pi int_(z=0)^5 z^2/18 dif z = pi/9 int_(z=0)^5 z^2 dif z = pi/9 [z^3/3]_(z=0)^5
+    = #boxed[$ (125 pi) / 27 $]. $
+  This gives us the volume of the cone.
+
+  As for the center of mass, nominally there are three integrals,
+  but again we can shortcut the calculation by noting that by symmetry the center of mass
+  $(dash(x), dash(y), dash(z))$ should lie on the $z$-axis, meaning $dash(x)=dash(y)=0$.
+  Hence the only one we need to bother with is
+  $ dash(z)
+    &= 1/(op("Vol")(cal(R))) int_(z=0)^5 iint_(sqrt(x^2+y^2) <= z/3) z dif x dif y dif z \
+    &= 1/(op("Vol")(cal(R))) int_(z=0)^5 int_(r=0)^(z/3) int_(theta=0)^(2pi) r z dif theta dif r dif z \
+    &= 1/(op("Vol")(cal(R))) int_(z=0)^5 z int_(r=0)^(z/3) int_(theta=0)^(2pi) r dif theta dif r dif z \
+    &= (2 pi)/(op("Vol")(cal(R))) int_(z=0)^5 z dot z^2/18 dif z quad "(repeating from earlier)" \
+    &= (2 pi)/(op("Vol")(cal(R))) [z^4/72]_(z=0)^5
+    = (5^4 dot pi / 36)/(op("Vol")(cal(R))) = (5^4 dot pi / 36)/(5^3 dot pi / 27) = 15/4. $
+  Hence the center of mass is $#boxed[$ (0, 0, 15/4) $]$.
+]
 
 == [TEXT] Gravity
 
