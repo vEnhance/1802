@@ -228,18 +228,21 @@ Note that, as I said, we could have given this example _before_ this section.
     &= 2 pi int_(z=0)^5 z^2/18 dif z = pi/9 int_(z=0)^5 z^2 dif z = pi/9 [z^3/3]_(z=0)^5
     = #boxed[$ (125 pi) / 27 $]. $
   This gives us the volume of the cone.
+  And since the density was constant, we also have
+  $op("Mass")(cal(R)) = op("Vol")(cal(R)) = (125 pi) / 27$.
+
 
   As for the center of mass, nominally there are three integrals,
   but again we can shortcut the calculation by noting that by symmetry the center of mass
   $(dash(x), dash(y), dash(z))$ should lie on the $z$-axis, meaning $dash(x)=dash(y)=0$.
   Hence the only one we need to bother with is
   $ dash(z)
-    &= 1/(op("Vol")(cal(R))) int_(z=0)^5 iint_(sqrt(x^2+y^2) <= z/3) z dif x dif y dif z \
-    &= 1/(op("Vol")(cal(R))) int_(z=0)^5 int_(r=0)^(z/3) int_(theta=0)^(2pi) r z dif theta dif r dif z \
-    &= 1/(op("Vol")(cal(R))) int_(z=0)^5 z int_(r=0)^(z/3) int_(theta=0)^(2pi) r dif theta dif r dif z \
-    &= (2 pi)/(op("Vol")(cal(R))) int_(z=0)^5 z dot z^2/18 dif z quad "(repeating from earlier)" \
-    &= (2 pi)/(op("Vol")(cal(R))) [z^4/72]_(z=0)^5
-    = (5^4 dot pi / 36)/(op("Vol")(cal(R))) = (5^4 dot pi / 36)/(5^3 dot pi / 27) = 15/4. $
+    &= 1/(op("Mass")(cal(R))) int_(z=0)^5 iint_(sqrt(x^2+y^2) <= z/3) z dif x dif y dif z \
+    &= 1/(op("Mass")(cal(R))) int_(z=0)^5 int_(r=0)^(z/3) int_(theta=0)^(2pi) r z dif theta dif r dif z \
+    &= 1/(op("Mass")(cal(R))) int_(z=0)^5 z int_(r=0)^(z/3) int_(theta=0)^(2pi) r dif theta dif r dif z \
+    &= (2 pi)/(op("Mass")(cal(R))) int_(z=0)^5 z dot z^2/18 dif z quad "(repeating from earlier)" \
+    &= (2 pi)/(op("Mass")(cal(R))) [z^4/72]_(z=0)^5
+    = (5^4 dot pi / 36)/(op("Mass")(cal(R))) = (5^4 dot pi / 36)/(5^3 dot pi / 27) = 15/4. $
   Hence the center of mass is $#boxed[$ (0, 0, 15/4) $]$.
 ]
 
