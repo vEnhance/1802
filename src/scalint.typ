@@ -89,7 +89,6 @@ Maybe it's best if I give an example of a parametrization.
 
 #example(title: [Example of a parametrization])[
   Consider the surface of a sphere, say $x^2 + y^2 + z^2 = 1$.
-  #todo[finish the example]
 ]
 
 If this feels familiar, it's because we used more or less
@@ -106,17 +105,19 @@ but here we make a $2$-dimensional map of a surface living in $RR^3$.)
 Okay, so in analogy to here are surface area and the scalar-field surface integral.
 
 #memo(title: [Memorize: Surface area and scalar-field surface integral])[
-  Suppose $cal(R)$ is a region in $RR^2$.
   If the parametrization $bf(r)(t) : cal(R) -> RR^3$ cuts out a surface $cal(S)$ in $RR^3$,
   the *surface area* is given by
-  $ op("Area")(cal(S)) := iint_(cal(R))
+  $ op("SurfArea")(cal(S)) := iint_(cal(R))
     lr(|(partial bf(r))/(partial u) times (partial bf(r))/(partial v)|) dif u dif v. $
 ]
+(Here $cal(R)$ is a region in $RR^2$ used for the parametrization, often a rectangle.
+It is _not_ the region whose surface area is being calculated.)
+
 More generally if we have a function $f : RR^3 -> RR$ we could define the
 *scalar-field surface integral* of $f$ over $cal(S)$ as
 $iint_(cal(R)) f(bf(r)(u,v)) lr(|(partial bf(r))/(partial u) times (partial bf(r))/(partial v)|) dif u dif v$;
 however this definition will not be used in this class
-except for the special case $f = 1$ (arc length).
+except for the special case $f = 1$ for surface area.
 
 #typesig[
   The scalar-field surface integral (and hence surface area as well) outputs a scalar.
@@ -126,14 +127,73 @@ Yes, there's a cross product. Yes, it sucks (see @sec-cross-sucks).
 This is one case where you probably would prefer to use the shorthand
 $ dif S := lr(|(partial bf(r))/(partial u) times (partial bf(r))/(partial v)|) dif u dif v $
 so that one can swallow surface area into just
-$ op("Area")(cal(S)) &:= iint_(cal(S)) dif S $
+$ op("SurfArea")(cal(S)) &:= iint_(cal(S)) dif S $
 where we also cut out the region $cal(R)$ on our cartographer's map from the notation;
 instead we write $cal(S)$ directly.
 Similarly we have an abbreviation $iint_(cal(S)) f dif S$.
 
 #example(title: [Example: Surface area of a sphere])[
-  Show that the surface area of the sphere $x^2+y^2+z^2=1$ is $4 pi$.
-  #todo[write this example]
+  Find the surface area of the unit sphere $x^2+y^2+z^2=1$.
+]
+#soln[
+  We will bludgeon our way through this task with sheer brute force using the formula above.
+  The parametrization $bf(r)$ is given from the spherical coordinate system by
+  $ bf(r) (phi, theta) = (sin phi cos theta , phi sin theta , cos phi) , $
+  across the range
+  $ 0 <= theta <= 2 pi quad "and" quad 0 <= phi <= pi $
+  for our region $cal(R)$.
+  The partial derivatives are thus
+  $ frac(partial bf(r), partial phi) &= (cos phi cos theta , cos phi sin theta , - sin phi) \
+    frac(partial bf(r), partial theta) &= (- sin phi sin theta , sin phi cos theta , 0). $
+  We brute force our way through the entire cross product.
+  We have
+  $ frac(partial bf(r), partial phi) times frac(partial bf(r), partial theta)
+    &= (0 dot cos phi sin theta - sin phi cos theta dot (- sin phi)) bf(e_1)  \
+    &quad - (0 dot cos phi cos theta - (- sin phi sin theta) dot (- sin phi) ) bf(e)_2 \
+    &quad + (sin phi cos theta dot cos phi cos theta + sin phi sin theta dot cos phi sin theta) bf(e)_3 \
+    &= (sin^2 phi cos theta) bf(e)_1  + (sin^2 phi sin theta) bf(e)_2
+    + (sin phi cos phi sin^2 theta + sin phi cos phi cos^2 theta) bf(e)_3 \
+    &= (sin^2 phi cos theta) bf(e)_1  + (sin^2 phi sin theta) bf(e)_2
+    + (sin phi cos phi) bf(e)_3. $
+  since $cos^2 theta + sin^2 theta = 1$.
+  If we take the magnitude ,we get
+  $ lr(|frac(partial bf(r), partial phi) times frac(partial bf(r), partial theta)|)
+    &= sqrt((sin^2 phi cos theta)^2 + (sin^2 phi sin theta)^2 + (sin phi cos phi)^2) \
+    &= sqrt(sin^4 phi cos^2 theta + sin^4 phi sin^2 theta + sin^2 phi cos^2 phi) \
+    &= sqrt(sin^2 phi (sin^2 phi cos^2 theta + sin^2 phi sin^2 theta) + sin^2 phi cos^2 phi) \
+    &= sqrt(sin^2 phi (sin^2 phi (cos^2 theta + sin^2 theta)) + sin^2 phi cos^2 phi) \
+    &= sqrt(sin^2 phi (sin^2 phi) + sin^2 phi cos^2 phi) \
+    &= sqrt(sin^4 phi + sin^2 phi cos^2 phi) \
+    &= sqrt(sin^2 phi (sin^2 phi + cos^2 phi)) \
+    &= sqrt(sin^2 phi dot 1) = lr(|sin phi|). $
+  Thank the lord it's a simple answer.
+  Great, now we can calculate the surface area of the sphere:
+  $ op("SurfArea")("sphere")
+    &= int_(theta=0)^(2 pi) int_(phi=0)^pi
+      lr(|frac(partial bf(r), partial theta) times frac(partial bf(r), partial phi)|)
+      dif phi dif theta \
+    &= int_(theta=0)^(2 pi) int_(phi=0)^pi |sin phi| dif phi dif theta \
+    &= (int_(phi=0)^(pi) |sin phi| dif phi) (int_(theta=0)^(2pi) dif theta) \
+    &= (int_(phi=0)^(pi) sin phi dif phi) (int_(theta=0)^(2pi) dif theta) \
+    &= [-cos phi]_(phi=0)^(pi) dot 2 pi \
+    &= #boxed[$ 4 pi $]. #qedhere $
+]
+
+#digression(title: [Digression on the direction of the cross product])[
+  We'll mention this more later, but it's worth noting know that
+  in general if you parametrize a surface $cal(S)$ by $bf(r)(u,v)$,
+  then $frac(partial bf(r), partial phi) times frac(partial bf(r), partial theta)$
+  is a vector which is normal to both
+  $frac(partial bf(r), partial phi)$ and $frac(partial bf(r), partial theta)$.
+  Hence, the direction of this cross product turns out to be described by
+  "normal vector to the tangent plane of the surface $cal(S)$ at $bf(r)(u,v)$".
+
+  Of course, since we took an absolute value, the direction gets discarded for surface area.
+  But if you are really observant you might have noticed that computed cross product is
+  $ (sin^2 phi cos theta) bf(e)_1  + (sin^2 phi sin theta) bf(e)_2
+    + (sin phi cos phi) bf(e)_3
+    = sin phi dot bf(r)(theta, phi) $
+  happened to be a multiple of the corresponding point on the sphere, and this is why.
 ]
 
 == [EXER] Exercises
