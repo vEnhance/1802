@@ -199,7 +199,8 @@ Similarly we have an abbreviation $iint_(cal(S)) f dif S$.
   $ (sin^2 phi cos theta) bf(e)_1  + (sin^2 phi sin theta) bf(e)_2
     + (sin phi cos phi) bf(e)_3
     = sin phi dot bf(r)(theta, phi) $
-  happened to be a multiple of the corresponding point on the sphere, and this is why.
+  which happened to be a multiple of the corresponding point on the sphere; and this is why,
+  because for a sphere, $bf(r)(theta, phi)$ happens to be perpendicular to the tangent plane.
 ]
 
 == [EXER] Exercises
