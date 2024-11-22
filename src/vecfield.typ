@@ -62,7 +62,7 @@ Sounds a lot like the gradient, right?
 Indeed, conservative vector fields are a big family of vector fields,
 and so we should expect they fit this picture pretty neatly.
 But the thing about conservative vector fields is this: $nabla f$,
-as a vector field, is always rushing _towards_ whatever makes the value of $F$ bigger.
+as a vector field, is always rushing _towards_ whatever makes the value of $f$ bigger.
 Whereas generic vector fields might, for example, go in loops.
 Let's put these examples into aquatic terms.
 

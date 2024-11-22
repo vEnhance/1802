@@ -288,7 +288,7 @@ the area of the little rectangle is always just $dif x dif y$,
 no matter what point $P$ you pick.
 
 However, when you change to polar coordinates, $dif A$ does actually depend on $P$:
-or rather, it doesn't care about $theta$, but it cares about $theta$.
+or rather, it doesn't care about $theta$, but it cares about $r$.
 If you have polar coordinates $P = (r, theta)_"pol"$ for the starting point
 and draw two red arrows to $(r + dif r, theta)_"pol"$ and $(r, theta + dif theta)_"pol"$,
 then the first red arrow still always has length $dif r$,

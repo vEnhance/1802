@@ -280,12 +280,12 @@ To repeat the story:
   2. There are two cases:
     - For $lambda = 5$, solve
       $(A - 5 I) bf(v) = 0$:
-      $ A - 5 I = mat(- 1, 1; 2, - 2) , ==> mat(- 1, 1; 2, - 2) vec(x, y) = vec(0, 0) . $
+      $ A - 5 I = mat(- 1, 1; 2, - 2) ==> mat(- 1, 1; 2, - 2) vec(x, y) = vec(0, 0) . $
       This gives the equation $- x + y = 0$,
       so the eigenvector is $bf(v)_1 = vec(1, 1)$ as well as any multiple of it.
 
     - For $lambda = 2$, solve $(A - 2 I) bf(v) = 0$:
-      $ A - 2 I = mat(2, 1; 2, 1) , ==> mat(2, 1; 2, 1) vec(x, y) = vec(0, 0) . $
+      $ A - 2 I = mat(2, 1; 2, 1) ==> mat(2, 1; 2, 1) vec(x, y) = vec(0, 0) . $
       This gives the equation $2 x + y = 0$, so the eigenvector is
       $bf(v)_2 = vec(1, - 2)$ or any multiple of it.
 
@@ -394,7 +394,7 @@ To repeat the story:
       In other words $2y = 0$, $2y = 0$ and $y + 3z = 0$.
       From the first and second rows, we have $2 y = 0$, so $y = 0$. From
       the third row, we have $z = 0$.
-      There are no constraints on $x$ at all
+      There are no constraints on $x$ at all.
       Thus, the eigenvector corresponding to $lambda = 1$ is $ vec(1, 0, 0) $
       and all its multiples, i.e. those vectors for which the second and third component are zero.
 

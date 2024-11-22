@@ -552,14 +552,14 @@ Usually the strategy is to pick one that makes subsequent calculation easier.
   - $bf(r)(t) = (t, t^2 / 10 + 1)$ for $-2 <= t <= 3$.
   - $bf(r)(t) = (t-2, (t-2)^2 / 10 + 1)$ for $0 <= t <= 5$ if you're allergic to negative times.
   - $bf(r)(t) = (5t-2, (5t-2)^2 / 10 + 1)$ for $0 <= t <= 1$ if you really like the end time to be $1$.
-  - $bf(r)(t) = (5 dot 2^t - 9, (5 dot 2^t - 9)^2 / 10 + 1)$ for $0 <= t <= 1$ if you want to torment graders.
+  - $bf(r)(t) = (5 dot 2^t - 7, (5 dot 2^t - 7)^2 / 10 + 1)$ for $0 <= t <= 1$ if you want to torment graders.
 
   I think most people in practice would prefer the first one.
 ]
 
 #sample[
   Let $cal(C)$ be the $120 degree$ arc of the unit circle starting from $(0, -1)$
-  and ending at $(sqrt(3)/2, 1/2)$, going counterclockwise.
+  and ending at $(1/2, sqrt(3)/2)$, going counterclockwise.
   (See @fig-param-arc.)
   Find any parametrization $bf(r)(t)$ for $cal(C)$.
 ]
@@ -574,8 +574,8 @@ Usually the strategy is to pick one that makes subsequent calculation easier.
   - $bf(r)(t) = (cos t, sin t)$ for $-pi/2 <= t <= pi/6$.
   - $bf(r)(t) = (cos t, sin t)$ for $3/2 pi <= t <= 13/6 pi$,
     if you insist on using nonnegative $t$.
-  - $bf(r)(t) = (cos(t + 3/2 pi), sin (t + 3/2 pi))$ for $0 <= t <= pi/3$.
-  - $bf(r)(t) = (sqrt(1-t^2), t)$ for $-1 <= t<= 1/2$ (not recommended).
+  - $bf(r)(t) = (cos(t + 3/2 pi), sin (t + 3/2 pi))$ for $0 <= t <= 2/3 pi$.
+  - $bf(r)(t) = (sqrt(1-t^2), t)$ for $-1 <= t<= sqrt(3)/2$ (not recommended).
 
   Again, I recommend the simplest (first) one.
 ]

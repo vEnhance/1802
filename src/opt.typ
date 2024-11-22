@@ -803,7 +803,7 @@ Here's some examples of how this theorem can help you:
   Although we didn't give a proper definition, we explain rules of thumb that work in 18.02.
 - For optimization problems with no $=$ constraints,
   we check the critical points, limit cases, and boundaries.
-- For optimization problems with one $=$ constraints,
+- For optimization problems with one $=$ constraint,
   we check the LM-critical points, limit cases, and boundaries.
 - Finding either critical points or LM-critical points involves solving systems of equations.
   There is no fixed recipe for this, but we gave some possible strategies
