@@ -198,7 +198,7 @@ Let's show some examples of how to calculate this in practice.
   The blue arc has mixed signs: near the start and end of the arc, the dot products we're adding
   are positive as the small arrows line up well with the blue path.
   But we're moving against the current near the top.
-  Since the arrows near the start on longer, you might guess the work integral is a small
+  Since the arrows near the start are longer, you might guess the work integral is a small
   positive number, and you'd be right.
 
   Meanwhile, along the brown arrow, all the arrows are perpendicular to our trajectory.

@@ -206,12 +206,12 @@ Here are a bunch more examples that you can try to follow along:
   is differentiated by the "power rule" to get $y x^(y-1)$.
   However, if we view $x$ as constant and $y$ as a variable, then
   $ y |-> x^y = e^(log x dot y) $
-  ends up with derivative $log x dot e^(ln x dot y) = log x dot e^y$.
+  ends up with derivative $log x dot e^(log x dot y) = log x dot x^y$.
   (Remember, in this book $log$ denotes the _natural log_.)
   Hence
   $
     f_x (x,y) &= y x^(y-1) \
-    f_y (x,y) &= ln x dot e^y. #qedhere
+    f_y (x,y) &= log x dot x^y. #qedhere
   $
 ]
 

@@ -48,7 +48,7 @@ Some vectors in $RR^3$ are special enough to get their own shorthand.
 #definition[
   When working in $RR^2$, we define
   $ bf(e)_1 := vec(1,0), #h(1em) bf(e)_2 := vec(0,1) $
-  and $ bf(0) = vec(0,0). $
+  and $ bf(0) := vec(0,0). $
 ]
 #definition[
   When working in $RR^3$, we define
@@ -132,8 +132,10 @@ If you really want, you could say it has _every_ direction, but this is a conven
 
   - The direction along the vectors $vec(1,0)$, $vec(5,0)$ or $vec(1337,0)$
     are all $vec(1,0)$, thought of as _due east_.
+
   - But the direction along the vectors $vec(-1,0)$ or $vec(-9,0)$
     are both $vec(-1,0)$, thought of as _due west_.
+
   - The direction along the vectors $vec(0,-2)$, $vec(0,-17)$
     are all $vec(0,-1)$, thought of as _due south_.
 ]

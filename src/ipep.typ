@@ -52,7 +52,7 @@ Here's a rundown of the things in the chart.
 - After that, the conceptually simplest cases are actually $d = n = 2$ and $d = n = 3$
   --- the ones on the diagonal.
   In general, these might be called *double/area integrals* for $n=2$
-  and *triple/surface integrals* for $n = 3$.
+  and *triple/volume integrals* for $n = 3$.
   We'll say a bit in a moment about how to compute these in practice,
   but the good news is that often you can just chain together old 18.01 integrals;
   you don't even need a parametrization some of the time.
@@ -112,7 +112,7 @@ In this book, this will happen in @sec-scalar-field-ints, and then
 after that the line and surface integrals will
 always be the *vector field* variant instead (in Part Hotel).
 If you want to flip ahead,
-take a glance at @fig-int-chart-stokes at @table-purples.
+take a glance at @fig-int-chart-stokes and @table-purples.
 
 == [TEXT] Idea of how these are computed when $d = n$ and $n >= 2$
 

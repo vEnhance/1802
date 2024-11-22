@@ -35,7 +35,7 @@ dot("$(r_2, \theta_2 + \odif \theta)_{\text{pol}}$", Y2, dir(105), blue);
 markangle(X1, O, Y1, deepgreen);
 label("$\odif \theta$", O, 7*dir(-10), deepgreen);
 
-label("$\odif \theta$", midpoint(P1--X1), dir(-90), red);
-label("$\odif \theta$", midpoint(P2--X2), dir(-90), red);
+label("$\odif r$", midpoint(P1--X1), dir(-90), red);
+label("$\odif r$", midpoint(P2--X2), dir(-90), red);
 label("$r_1 \odif \theta$", midpoint(P1--Y1), -dir(dtheta/2), red);
 label("$r_2 \odif \theta$", midpoint(P2--Y2), -dir(dtheta/2), red);

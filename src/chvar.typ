@@ -368,7 +368,7 @@ or the limits of integration aren't just numbers
 As another example of a use case, in the polar integration we just did, we have
 $ int_(r=0)^1 int_(theta=0)^(2 pi) r dif theta dif r
   = (int_(r=0)^1 r dif r)(int_(theta=0)^(2 pi) theta dif theta)
-  = (r^2/2) dot (2 pi) = pi r^2. $
+  = [r^2/2]_(r=0)^(r=1) dot (2 pi) = pi. $
 Polar coordinates in particular have this particular pattern a lot.
 
 == [EXER] Exercises
