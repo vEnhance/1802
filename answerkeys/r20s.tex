@@ -18,4 +18,499 @@ ChatGPT can make mistakes, so if you spot anything that's wrong, flag me to ask.
 
 \tableofcontents
 
+\section{Solution}
+Consider the surface defined by \( F(x,y,z) = 2 \), where \( F(x,y,z) = xyz \). We will address each part of the problem step by step.
+
+\newpage
+
+\subsection{Part (a): Finding a Parametrization}
+
+We aim to find a parametrization of the surface in the form:
+\[
+\mathbf{r}(u, v) = (u, v, z(u, v))
+\]
+such that \( F(x,y,z) = 2 \).
+
+Given:
+\[
+F(x,y,z) = xyz = 2
+\]
+Substituting \( \mathbf{r}(u, v) \) into the equation:
+\[
+u \cdot v \cdot z(u, v) = 2 \implies z(u, v) = \frac{2}{uv}
+\]
+Thus, the parametrization is:
+\[
+\boxed{ \mathbf{r}(u, v) = \left( u,\ v,\ \frac{2}{uv} \right ) }
+\]
+**Domain Considerations:**
+- \( u \neq 0 \) and \( v \neq 0 \) to avoid division by zero.
+- \( uv > 0 \) to ensure \( z(u, v) \) is real and positive (since \( F(x,y,z) = 2 \) is positive).
+
+\newpage
+
+\subsection{Part (b): Computing the Tangent Vectors \( \mathbf{r}_u \) and \( \mathbf{r}_v \)}
+
+Given the parametrization:
+\[
+\mathbf{r}(u, v) = \left( u,\ v,\ \frac{2}{uv} \right )
+\]
+we compute the partial derivatives with respect to \( u \) and \( v \).
+
+\paragraph{Tangent Vector \( \mathbf{r}_u \):}
+\[
+\mathbf{r}_u = \frac{\partial \mathbf{r}}{\partial u} = \left( \frac{\partial u}{\partial u},\ \frac{\partial v}{\partial u},\ \frac{\partial}{\partial u} \left( \frac{2}{uv} \right ) \right ) = \left( 1,\ 0,\ -\frac{2}{u^2 v} \right )
+\]
+
+\paragraph{Tangent Vector \( \mathbf{r}_v \):}
+\[
+\mathbf{r}_v = \frac{\partial \mathbf{r}}{\partial v} = \left( \frac{\partial u}{\partial v},\ \frac{\partial v}{\partial v},\ \frac{\partial}{\partial v} \left( \frac{2}{uv} \right ) \right ) = \left( 0,\ 1,\ -\frac{2}{u v^2} \right )
+\]
+
+Thus, the tangent vectors are:
+\[
+\boxed{ \mathbf{r}_u = \left( 1,\ 0,\ -\frac{2}{u^2 v} \right ) \quad \text{and} \quad \mathbf{r}_v = \left( 0,\ 1,\ -\frac{2}{u v^2} \right ) }
+\]
+
+\newpage
+
+\subsection{Part (c): Equation of the Tangent Plane at \( (2, 1, 1) \)}
+
+To find the equation of the tangent plane at the point \( (2, 1, 1) \), we can use the gradient of \( F(x,y,z) \) since the surface is implicitly defined by \( F(x,y,z) = 2 \).
+
+\paragraph{Gradient of \( F(x,y,z) \):}
+\[
+\nabla F = \left( \frac{\partial F}{\partial x},\ \frac{\partial F}{\partial y},\ \frac{\partial F}{\partial z} \right ) = (yz,\ xz,\ xy)
+\]
+At the point \( (2, 1, 1) \):
+\[
+\nabla F(2,1,1) = (1 \cdot 1,\ 2 \cdot 1,\ 2 \cdot 1) = (1,\ 2,\ 2)
+\]
+\paragraph{Equation of the Tangent Plane:}
+
+The equation of the tangent plane at \( (x_0, y_0, z_0) \) is given by:
+\[
+\nabla F(x_0, y_0, z_0) \cdot \left( (x - x_0),\ (y - y_0),\ (z - z_0) \right ) = 0
+\]
+Substituting the known values:
+\[
+(1,\ 2,\ 2) \cdot (x - 2,\ y - 1,\ z - 1) = 0 \implies 1(x - 2) + 2(y - 1) + 2(z - 1) = 0
+\]
+Simplifying:
+\[
+x - 2 + 2y - 2 + 2z - 2 = 0 \implies x + 2y + 2z - 6 = 0
+\]
+Thus, the equation of the tangent plane is:
+\[
+\boxed{ x + 2y + 2z = 6 }
+\]
+
+\newpage
+
+\subsection{Alternative Method for Part (c): Using Tangent Vectors}
+
+Alternatively, we can find the tangent plane using the tangent vectors \( \mathbf{r}_u \) and \( \mathbf{r}_v \).
+
+\paragraph{Tangent Vectors at \( (2, 1, 1) \):}
+
+First, determine the corresponding parameters \( u \) and \( v \) for the point \( (2, 1, 1) \):
+\[
+x = u = 2, \quad y = v = 1, \quad z = \frac{2}{uv} = \frac{2}{2 \cdot 1} = 1
+\]
+Thus, \( u = 2 \) and \( v = 1 \).
+
+Substitute \( u = 2 \) and \( v = 1 \) into \( \mathbf{r}_u \) and \( \mathbf{r}_v \):
+\[
+\mathbf{r}_u = \left( 1,\ 0,\ -\frac{2}{(2)^2 \cdot 1} \right ) = \left( 1,\ 0,\ -\frac{1}{2} \right )
+\]
+\[
+\mathbf{r}_v = \left( 0,\ 1,\ -\frac{2}{2 \cdot (1)^2} \right ) = \left( 0,\ 1,\ -1 \right )
+\]
+\paragraph{Normal Vector to the Tangent Plane:}
+
+The normal vector \( \mathbf{n} \) is given by the cross product \( \mathbf{r}_u \times \mathbf{r}_v \):
+\[
+\mathbf{n} = \mathbf{r}_u \times \mathbf{r}_v =
+\begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+1 & 0 & -\frac{1}{2} \\
+0 & 1 & -1 \\
+\end{vmatrix}
+= \mathbf{i} \left( 0 \cdot (-1) - (-\frac{1}{2}) \cdot 1 \right )
+- \mathbf{j} \left( 1 \cdot (-1) - (-\frac{1}{2}) \cdot 0 \right )
++ \mathbf{k} \left( 1 \cdot 1 - 0 \cdot 0 \right )
+\]
+\[
+= \mathbf{i} \left( 0 + \frac{1}{2} \right )
+- \mathbf{j} \left( -1 - 0 \right )
++ \mathbf{k} \left( 1 - 0 \right )
+\]
+\[
+= \frac{1}{2} \mathbf{i} + \mathbf{j} + \mathbf{k}
+\]
+To eliminate the fraction, multiply by 2:
+\[
+\mathbf{n} = (1, 2, 2)
+\]
+\paragraph{Equation of the Tangent Plane:}
+
+Using the point-normal form of the plane equation:
+\[
+\mathbf{n} \cdot ( \mathbf{r} - \mathbf{r}_0 ) = 0
+\]
+where \( \mathbf{r}_0 = (2, 1, 1) \), we have:
+\[
+1(x - 2) + 2(y - 1) + 2(z - 1) = 0
+\]
+Simplifying:
+\[
+x - 2 + 2y - 2 + 2z - 2 = 0 \implies x + 2y + 2z - 6 = 0
+\]
+Thus, the equation of the tangent plane is:
+\[
+\boxed{ x + 2y + 2z = 6 }
+\]
+Both methods yield the same result, confirming the correctness of the tangent plane equation.
+
+\newpage
+
+\section{Problem: Surface of Revolution}
+
+Consider the surface \( S \) obtained by rotating the graph of \( y = \sqrt{x} \), where \( 0 \leq x \leq 4 \), around the \( x \)-axis.
+
+\begin{enumerate}
+    \item[(a)] Parametrize this surface using \( x \) and \( \theta \), by writing \( \mathbf{r}(x, \theta) = (x, y(x,\theta), z(x,\theta)) \). Here, \( \theta \) will be the angle of rotation.
+
+    \item[(b)] Find the cross product \( \mathbf{r}_x \times \mathbf{r}_\theta \).
+
+    \item[(c)] Find the surface area of \( S \).
+\end{enumerate}
+
+\newpage
+
+\subsection{Part (a): Parametrization of the Surface}
+
+To parametrize the surface obtained by rotating \( y = \sqrt{x} \) around the \( x \)-axis, we introduce an angle \( \theta \) representing the rotation around the \( x \)-axis.
+
+For a fixed \( x \) in the interval \( [0, 4] \), the corresponding \( y \)-coordinate on the curve is \( y = \sqrt{x} \). When rotated by an angle \( \theta \), the point \( (\sqrt{x}, 0) \) in the \( yz \)-plane traces a circle of radius \( \sqrt{x} \).
+
+Thus, the parametrization in terms of \( x \) and \( \theta \) is:
+\[
+\mathbf{r}(x, \theta) = \left( x,\ \sqrt{x} \cos\theta,\ \sqrt{x} \sin\theta \right )
+\]
+where:
+\[
+0 \leq x \leq 4, \quad 0 \leq \theta < 2\pi
+\]
+
+\newpage
+
+\subsection{Part (b): Computing the Cross Product \( \mathbf{r}_x \times \mathbf{r}_\theta \)}
+
+First, we compute the partial derivatives of \( \mathbf{r}(x, \theta) \) with respect to \( x \) and \( \theta \):
+
+\paragraph{Partial Derivative with respect to \( x \):}
+\[
+\mathbf{r}_x = \frac{\partial \mathbf{r}}{\partial x} = \left( \frac{\partial x}{\partial x},\ \frac{\partial}{\partial x} \left( \sqrt{x} \cos\theta \right ),\ \frac{\partial}{\partial x} \left( \sqrt{x} \sin\theta \right ) \right ) = \left( 1,\ \frac{1}{2\sqrt{x}} \cos\theta,\ \frac{1}{2\sqrt{x}} \sin\theta \right )
+\]
+
+\paragraph{Partial Derivative with respect to \( \theta \):}
+\[
+\mathbf{r}_\theta = \frac{\partial \mathbf{r}}{\partial \theta} = \left( \frac{\partial x}{\partial \theta},\ \frac{\partial}{\partial \theta} \left( \sqrt{x} \cos\theta \right ),\ \frac{\partial}{\partial \theta} \left( \sqrt{x} \sin\theta \right ) \right ) = \left( 0,\ -\sqrt{x} \sin\theta,\ \sqrt{x} \cos\theta \right )
+\]
+
+\paragraph{Cross Product \( \mathbf{r}_x \times \mathbf{r}_\theta \):}
+
+Using the determinant formula for the cross product:
+\[
+\mathbf{r}_x \times \mathbf{r}_\theta =
+\begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+1 & \frac{1}{2\sqrt{x}} \cos\theta & \frac{1}{2\sqrt{x}} \sin\theta \\
+0 & -\sqrt{x} \sin\theta & \sqrt{x} \cos\theta \\
+\end{vmatrix}
+\]
+
+Calculating the determinant:
+\[
+\mathbf{r}_x \times \mathbf{r}_\theta = \mathbf{i} \left( \frac{1}{2\sqrt{x}} \cos\theta \cdot \sqrt{x} \cos\theta - \frac{1}{2\sqrt{x}} \sin\theta \cdot (-\sqrt{x} \sin\theta) \right ) - \mathbf{j} \left( 1 \cdot \sqrt{x} \cos\theta - \frac{1}{2\sqrt{x}} \sin\theta \cdot 0 \right ) + \mathbf{k} \left( 1 \cdot (-\sqrt{x} \sin\theta) - \frac{1}{2\sqrt{x}} \cos\theta \cdot 0 \right )
+\]
+\[
+= \mathbf{i} \left( \frac{\cos^2\theta}{2} + \frac{\sin^2\theta}{2} \right ) - \mathbf{j} \left( \sqrt{x} \cos\theta \right ) + \mathbf{k} \left( -\sqrt{x} \sin\theta \right )
+\]
+\[
+= \mathbf{i} \left( \frac{\cos^2\theta + \sin^2\theta}{2} \right ) - \mathbf{j} \left( \sqrt{x} \cos\theta \right ) - \mathbf{k} \left( \sqrt{x} \sin\theta \right )
+\]
+\[
+= \frac{1}{2} \mathbf{i} - \sqrt{x} \cos\theta \, \mathbf{j} - \sqrt{x} \sin\theta \, \mathbf{k}
+\]
+
+Thus, the cross product is:
+\[
+\boxed{ \mathbf{r}_x \times \mathbf{r}_\theta = \frac{1}{2} \mathbf{i} - \sqrt{x} \cos\theta \, \mathbf{j} - \sqrt{x} \sin\theta \, \mathbf{k} }
+\]
+
+\newpage
+
+\subsection{Part (c): Finding the Surface Area of \( S \)}
+
+The surface area \( A \) of \( S \) can be computed using the surface integral:
+\[
+A = \iint_{S} dS = \iint_{D} \left| \mathbf{r}_x \times \mathbf{r}_\theta \right| \, dx \, d\theta
+\]
+where \( D \) is the domain of the parameters \( x \) and \( \theta \).
+
+\paragraph{Magnitude of the Cross Product:}
+\[
+\left| \mathbf{r}_x \times \mathbf{r}_\theta \right| = \sqrt{ \left( \frac{1}{2} \right )^2 + \left( \sqrt{x} \cos\theta \right )^2 + \left( \sqrt{x} \sin\theta \right )^2 } = \sqrt{ \frac{1}{4} + x \cos^2\theta + x \sin^2\theta }
+\]
+\[
+= \sqrt{ \frac{1}{4} + x (\cos^2\theta + \sin^2\theta) } = \sqrt{ \frac{1}{4} + x } = \sqrt{ x + \frac{1}{4} }
+\]
+
+\paragraph{Setting Up the Integral:}
+\[
+A = \int_{\theta=0}^{2\pi} \int_{x=0}^{4} \sqrt{ x + \frac{1}{4} } \, dx \, d\theta
+\]
+
+\paragraph{Evaluating the Integral:}
+
+First, integrate with respect to \( x \):
+\[
+\int_{0}^{4} \sqrt{ x + \frac{1}{4} } \, dx
+\]
+Let \( u = x + \frac{1}{4} \), then \( du = dx \) and the limits become \( u = \frac{1}{4} \) to \( u = 4 + \frac{1}{4} = \frac{17}{4} \).
+
+Thus,
+\[
+\int_{0}^{4} \sqrt{ x + \frac{1}{4} } \, dx = \int_{\frac{1}{4}}^{\frac{17}{4}} u^{1/2} \, du = \left[ \frac{2}{3} u^{3/2} \right ]_{\frac{1}{4}}^{\frac{17}{4}} = \frac{2}{3} \left( \left( \frac{17}{4} \right )^{3/2} - \left( \frac{1}{4} \right )^{3/2} \right )
+\]
+\[
+= \frac{2}{3} \left( \frac{17^{3/2}}{8} - \frac{1^{3/2}}{8} \right ) = \frac{2}{3} \cdot \frac{17^{3/2} - 1}{8} = \frac{17^{3/2} - 1}{12}
+\]
+
+Next, integrate with respect to \( \theta \):
+\[
+A = \int_{0}^{2\pi} \frac{17^{3/2} - 1}{12} \, d\theta = \frac{17^{3/2} - 1}{12} \cdot 2\pi = \frac{(17^{3/2} - 1)\pi}{6}
+\]
+
+Simplify \( 17^{3/2} \):
+\[
+17^{3/2} = \sqrt{17}^3 = 17 \sqrt{17}
+\]
+Thus,
+\[
+A = \frac{(17 \sqrt{17} - 1)\pi}{6}
+\]
+
+\paragraph{Final Answer:}
+
+The surface area of \( S \) is:
+\[
+\boxed{ A = \frac{(17 \sqrt{17} - 1)\pi}{6} }
+\]
+
+\newpage
+
+\section{Flux of the Vector Field over the Unit Disk}
+
+We are tasked with calculating the flux of the vector field \( \mathbf{V}(x, y, z) = \langle 1 + z, \, 1, \, z^2 \rangle \) over the surface \( S \), which is the unit disk on the \( xy \)-plane. The disk is oriented upward with the unit normal vector \( \mathbf{n} = \mathbf{k} = \langle 0, \, 0, \, 1 \rangle \).
+
+\newpage
+
+\subsection{Understanding the Surface and the Vector Field}
+
+- **Surface \( S \):**
+  - Defined by \( z = 0 \) (since it lies on the \( xy \)-plane).
+  - Bounded by \( x^2 + y^2 \leq 1 \) (unit disk).
+  - Oriented upward with normal vector \( \mathbf{n} = \mathbf{k} \).
+
+- **Vector Field \( \mathbf{V} \):**
+  - Given by \( \mathbf{V}(x, y, z) = \langle 1 + z, \, 1, \, z^2 \rangle \).
+  - Components:
+    - \( V_x = 1 + z \)
+    - \( V_y = 1 \)
+    - \( V_z = z^2 \)
+
+\newpage
+
+\subsection{Calculating the Flux}
+
+The flux \( \Phi \) of the vector field \( \mathbf{V} \) across the surface \( S \) is given by the surface integral:
+\[
+\Phi = \iint_{S} \mathbf{V} \cdot \mathbf{n} \, dS
+\]
+where:
+- \( \mathbf{n} \) is the unit normal vector to the surface \( S \).
+- \( dS \) is the differential element of the surface area.
+
+\subsubsection*{Evaluating \( \mathbf{V} \cdot \mathbf{n} \)}
+
+Given \( \mathbf{n} = \mathbf{k} = \langle 0, \, 0, \, 1 \rangle \), the dot product \( \mathbf{V} \cdot \mathbf{n} \) simplifies to:
+\[
+\mathbf{V} \cdot \mathbf{n} = V_x \cdot 0 + V_y \cdot 0 + V_z \cdot 1 = V_z
+\]
+Substituting \( V_z = z^2 \):
+\[
+\mathbf{V} \cdot \mathbf{n} = z^2
+\]
+
+\subsubsection*{Simplifying on Surface \( S \)}
+
+On the surface \( S \) (the unit disk on the \( xy \)-plane), the \( z \)-coordinate is zero:
+\[
+z = 0
+\]
+Therefore:
+\[
+\mathbf{V} \cdot \mathbf{n} = z^2 = 0^2 = 0
+\]
+
+\newpage
+
+\subsection{Conclusion}
+
+Since \( \mathbf{V} \cdot \mathbf{n} = 0 \) everywhere on the surface \( S \), the flux \( \Phi \) is zero:
+\[
+\Phi = \iint_{S} \mathbf{V} \cdot \mathbf{n} \, dS = \iint_{S} 0 \, dS = 0
+\]
+
+\newpage
+
+\subsection{Final Answer}
+
+The flux of \( \mathbf{V} \) across the unit disk \( S \) is:
+\[
+\boxed{0}
+\]
+
+\newpage
+
+\section{Center of Mass and Flux Calculations}
+
+\newpage
+
+\subsection{Problem Statement}
+
+Let \( S \) be the sphere of radius \( 2 \) centered at \( (0,0,0) \).
+
+\begin{enumerate}
+    \item[(a)] Show that the outward unit normal vector \( \mathbf{n} \) at the point \( (x,y,z) \in S \) is given by \( \frac{1}{2}\langle x, y, z \rangle \) using the description of \( S \) as a level surface.
+
+    \item[(b)] Calculate (without doing any integration) the outward flux \( \iint_{S} \mathbf{V} \cdot \mathbf{n} \, dS \) of the vector field \( \mathbf{V}(x,y,z) = \langle x, y, z \rangle \).
+\end{enumerate}
+
+\newpage
+
+\subsection{Part (a): Determining the Outward Unit Normal Vector}
+
+To find the outward unit normal vector \( \mathbf{n} \) at a point \( (x,y,z) \) on the sphere \( S \), we can utilize the concept of level surfaces and gradients.
+
+\subsubsection*{Step 1: Expressing the Sphere as a Level Surface}
+
+The sphere \( S \) of radius \( 2 \) centered at the origin can be described by the equation:
+\[
+F(x, y, z) = x^2 + y^2 + z^2 = 4
+\]
+This represents a level surface where \( F(x, y, z) = 4 \).
+
+\subsubsection*{Step 2: Calculating the Gradient of \( F \)}
+
+The gradient of \( F \), denoted \( \nabla F \), points in the direction of the greatest rate of increase of \( F \) and is normal to the surface \( S \):
+\[
+\nabla F = \left\langle \frac{\partial F}{\partial x}, \frac{\partial F}{\partial y}, \frac{\partial F}{\partial z} \right\rangle = \langle 2x, 2y, 2z \rangle
+\]
+
+\subsubsection*{Step 3: Determining the Unit Normal Vector}
+
+The unit normal vector \( \mathbf{n} \) is obtained by normalizing the gradient:
+\[
+\mathbf{n} = \frac{\nabla F}{\|\nabla F\|} = \frac{\langle 2x, 2y, 2z \rangle}{\sqrt{(2x)^2 + (2y)^2 + (2z)^2}} = \frac{\langle 2x, 2y, 2z \rangle}{2\sqrt{x^2 + y^2 + z^2}}
+\]
+Since \( (x, y, z) \) lies on the sphere \( S \), \( x^2 + y^2 + z^2 = 4 \), hence:
+\[
+\mathbf{n} = \frac{\langle 2x, 2y, 2z \rangle}{2 \cdot 2} = \frac{1}{2} \langle x, y, z \rangle
+\]
+Thus, the outward unit normal vector at any point \( (x,y,z) \) on \( S \) is:
+\[
+\boxed{ \mathbf{n} = \frac{1}{2} \langle x, y, z \rangle }
+\]
+
+\newpage
+
+\subsection{Part (b): Calculating the Outward Flux}
+
+We are to compute the outward flux of the vector field \( \mathbf{V}(x,y,z) = \langle x, y, z \rangle \) across the sphere \( S \). The flux is given by:
+\[
+\Phi = \iint_{S} \mathbf{V} \cdot \mathbf{n} \, dS
+\]
+where \( \mathbf{n} \) is the outward unit normal vector obtained in Part (a).
+
+\subsubsection*{Step 1: Computing \( \mathbf{V} \cdot \mathbf{n} \)}
+
+Substitute \( \mathbf{n} = \frac{1}{2} \langle x, y, z \rangle \) into the dot product:
+\[
+\mathbf{V} \cdot \mathbf{n} = \langle x, y, z \rangle \cdot \frac{1}{2} \langle x, y, z \rangle = \frac{1}{2}(x^2 + y^2 + z^2)
+\]
+On the sphere \( S \), \( x^2 + y^2 + z^2 = 4 \), so:
+\[
+\mathbf{V} \cdot \mathbf{n} = \frac{1}{2} \times 4 = 2
+\]
+Thus, the integrand is a constant:
+\[
+\mathbf{V} \cdot \mathbf{n} = 2
+\]
+
+\subsubsection*{Step 2: Evaluating the Flux Integral}
+
+Since the integrand is constant, the flux simplifies to:
+\[
+\Phi = \iint_{S} 2 \, dS = 2 \iint_{S} dS = 2 \cdot \text{Surface Area of } S
+\]
+The surface area \( A \) of a sphere with radius \( 2 \) is:
+\[
+A = 4\pi (2)^2 = 16\pi
+\]
+Therefore, the flux is:
+\[
+\Phi = 2 \times 16\pi = 32\pi
+\]
+Thus, the outward flux of \( \mathbf{V} \) across \( S \) is:
+\[
+\boxed{ \Phi = 32\pi }
+\]
+
+\subsubsection*{Alternative Approach: Using the Divergence Theorem}
+
+For verification, we can also apply the Divergence Theorem, which states:
+\[
+\iint_{S} \mathbf{V} \cdot \mathbf{n} \, dS = \iiint_{V} \nabla \cdot \mathbf{V} \, dV
+\]
+where \( V \) is the volume enclosed by \( S \).
+
+\paragraph{Calculating the Divergence of \( \mathbf{V} \):}
+\[
+\nabla \cdot \mathbf{V} = \frac{\partial V_x}{\partial x} + \frac{\partial V_y}{\partial y} + \frac{\partial V_z}{\partial z} = 1 + 1 + 1 = 3
+\]
+
+\paragraph{Calculating the Volume of \( V \):}
+The volume \( V \) of the sphere with radius \( 2 \) is:
+\[
+V = \frac{4}{3} \pi (2)^3 = \frac{32}{3} \pi
+\]
+
+\paragraph{Applying the Divergence Theorem:}
+\[
+\Phi = \iiint_{V} 3 \, dV = 3 \times \frac{32}{3} \pi = 32\pi
+\]
+This confirms our previous result:
+\[
+\boxed{ \Phi = 32\pi }
+\]
+
+
+
+
+\newpage
+
 \end{document}
