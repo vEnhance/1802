@@ -17,7 +17,9 @@ r16.pdf
 r17.pdf
 r18.pdf
 r19.pdf
-r20.pdf
+r21.pdf
+r22.pdf
+r23.pdf
 dotpf.pdf
 answerkeys/r02s.pdf
 answerkeys/r03s.pdf
@@ -38,6 +40,9 @@ answerkeys/r17s.pdf
 answerkeys/r18s.pdf
 answerkeys/r19s.pdf
 answerkeys/r20s.pdf
+answerkeys/r21s.pdf
+answerkeys/r22s.pdf
+answerkeys/r23s.pdf
 bonus1.pdf
 mockmt2.pdf
 mockmt3.pdf

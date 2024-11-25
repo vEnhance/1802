@@ -4,7 +4,7 @@
   title: [Notes for 18.02 Recitation 20],
   subtitle: [18.02 Recitation MW9],
   author: "Evan Chen",
-  date: [25 November 2024],
+  date: [4 December 2024],
 )
 
 

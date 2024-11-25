@@ -4,7 +4,7 @@
   title: [Notes for 18.02 Recitation 21],
   subtitle: [18.02 Recitation MW9],
   author: "Evan Chen",
-  date: [27 November 2024],
+  date: [2 December 2024],
 )
 
 #quote(attribution: [Sneakers (1992)])[
