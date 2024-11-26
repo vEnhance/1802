@@ -7,18 +7,15 @@ This is the final cell in the poster @fig-int-chart-stokes that we haven't met y
 
 This section will be pretty reminiscent of @sec-work.
 We'll start by giving a "bare-hands" definition of the flux through a parametrized surface.
-It will be usable, but pretty cumbersome, so we'll immediately try to find ways to shortcut it.
+It will be usable, but pretty cumbersome, so in the next section @sec-divthm
+we'll immediately try to find ways to shortcut it.
 For 18.02, the methods available to you will be
 
-- Bare-hands parametrization
-- Shortcut: Transforming to a surface area integral
-- Shortcut: The divergence theorem (converting to a 3D volume integral)
-- Shortcut: Stokes' theorem, if the vector field happens to be a curl.
-
-We'll discuss the next three in the next section @sec-divstokes.
-
-In general, bare-hands parametrization can be cumbersome,
-so the shortcuts will matter even more than they did for work.
+- Bare-hands parametrization (covered here)
+- Shortcut: Transforming to a surface area integral (covered in @sec-divthm)
+- Shortcut when the surface is a level surface (covered in @sec-divthm)
+- Shortcut: The divergence theorem, by converting to a 3D volume integral (covered in @sec-divthm)
+- Shortcut: Stokes' theorem, if the vector field happens to be a curl (covered in @sec-badstokes)
 
 == [TEXT] The definition of flux using bare-hands parametrization
 
@@ -68,7 +65,6 @@ it will negate the entire cross product:
 $ ((partial bf(r))/(partial u) times (partial bf(r))/(partial v))
   = - ((partial bf(r))/(partial u) times (partial bf(r))/(partial v)). $
 Hence the flux will get negated too.
-
 This sign issue is super disorienting because it wasn't present for work,
 where "start to stop" was pretty easy to think about.
 

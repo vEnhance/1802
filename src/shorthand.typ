@@ -79,7 +79,7 @@ I can't imagine how annoying this is to someone learning the subject for the fir
   ),
   caption: [A bunch of shorthands you'll meet later.
     Note that pretty much there is one shorthand for each kind of integral in @fig-int-chart-triangle.
-    In Part Hotel when the upgraded poster @fig-int-chart-stokes is introduced,
+    In Part India when the upgraded poster @fig-int-chart-stokes is introduced,
     each of the new kinds of integrals (the purple pictures) also has a new shorthand.],
   kind: table
 ) <table-shorthand>

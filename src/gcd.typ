@@ -1,6 +1,6 @@
 #import "@local/evan:1.0.0":*
 
-= Grad, curl, and div, individually <sec-gcd>
+= Grad, curl, and div <sec-gcd>
 
 The goal of this section is to _define_ each individual red arrow in the poster.
 For each red arrow, we'll show you

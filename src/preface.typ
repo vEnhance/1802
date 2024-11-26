@@ -175,21 +175,30 @@ Here is a brief overview of what happens in these parts
   which gets airtime in virtually every kind of question you'll see.
   This is the first serious multivariable calculus usage.
 
-/ Golf: This section covers *integrals of multivariable functions* $f : RR^n -> RR$.
-  The double and triple integrals make their first appearances here.
+/ Golf: This section covers *double integrals of functions* $f : RR^2 -> RR$,
+  the first of the parts on integration.
+  We define the double integral and cover techniques for computing them.
 
-/ Hotel: This section covers *integrals of vector fields* $bf(F) : RR^n -> RR^n$;
-  that is, work and flux.
-  The famous grad, div, and curl are introduced here,
+/ Hotel: This section covers *integrals of scalar functions in space* $f : RR^3 -> RR$.
+  It introduces the triple integral (which isn't any different from double integral)
+  as well as a side detour on arc length and surface area.
+
+/ India: This section covers *line integrals of vector fields* $bf(F) : RR^n -> RR^n$ over a *curve*;
+  that is, work and 2D flux.
+  The famous grad, div, and curl are first mentioned here,
   together with the generalized Stokes' theorem that ties them all together.
   This is the iconic part of multivariable calculus
   (kind of like how France is associated with the Eiffel tower, say).
 
-/ India: Exercises covering all the earlier parts.
+/ Juliett: This section covers *surface integrals of vector fields* $bf(F) : RR^3 -> RR^3$
+  over a *surface*; that is, the flux integral.
+  More versions of Stokes' theorem are given.
 
-/ Juliett: Solutions to exercises from the text.
+/ Kilo: Exercises covering all the earlier parts.
 
-/ Kilo: Appendix of odds and ends such as excessively long digressions.
+/ Lima: Solutions to exercises from the text.
+
+/ Mike: Appendix of odds and ends such as excessively long digressions.
 
 (The words Alfa, Bravo, Charlie, etc.~are from the
 #link("https://w.wiki/4ur")[NATO phonetic alphabet]

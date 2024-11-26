@@ -5,7 +5,7 @@
 == [TEXT] Vector fields
 
 In Part Golf, we only considered integrals of scalar-valued functions.
-However, in Part Hotel we will meet a *vector field*,
+However, in Part India and Juliett we will meet a *vector field*,
 which is another name for a function that inputs points and outputs vectors.
 #definition[
   A *vector field* for $RR^n$ is a function $bf(F) : RR^n -> RR^n$
@@ -24,7 +24,7 @@ This case is so important that there's a word for it:
   A vector field for $RR^n$ is called *conservative*
   if it happens to equal $nabla f$ for some function $f : RR^n -> RR$.
 ]
-In Part Hotel we'll meet vector fields that aren't conservative too.
+In Part India and Juliett we'll meet vector fields that aren't conservative too.
 #typesig[
   For standalone vector fields, we'll always use capital bold letters like $bf(F)$ to denote them.
   That said, remember $nabla f$ is _also_ a vector field.
@@ -202,13 +202,14 @@ We'll define them all over the next few sections, so just a few words now.
 
 === The three purple pictures
 
-There are *three new pictures in purple*: they are *work* (for 1D case) and *flux* (2D case).
+There are *three new pictures in purple*: they are *work* (covered in Part India)
+and *flux* (covered in Part Juliett).
 Basically, these are the only two situations in which we'll be integrating over a vector field:
 
-- either we have a path along a vector field and want to measure the _work_
-  of the vector field _along_ that path (in the physics sense),
-- or we have a surface in a 3D vector field and want to measure the _flux_
-  of the vector field _through_ the surface.
+- We have a path along a vector field and want to measure the _work_
+  of the vector field _along_ that path (in the physics sense); this is the focus of Part India.
+- We have a surface in a 3D vector field and want to measure the _flux_
+  of the vector field _through_ the surface; this is the focus of Part Juliett.
 
 These terms will be defined next section.
 #typesig[

@@ -2,7 +2,7 @@
 
 = Anti-gradients <sec-antigrad>
 
-This section is actually usually not taught until much later in 18.02, in Part Hotel.
+This section is actually usually not taught until much later in 18.02, in Part India.
 However, I'm going to stick it in here,
 while your brain hasn't been infested with integrals yet, since it's a standalone question.
 However, if you prefer to follow 18.02 more strictly,
@@ -315,7 +315,7 @@ Specifically, the following theorem is true.
   $ (partial p) / (partial y) = (partial q) / (partial x). $
 ]
 You should think of this as $f_(x y) = f_(y x)$.
-We'll see this again much later in Part Hotel, but in different language:
+We'll see this again much later in Part India, but in different language:
 "the 2D scalar curl of $f$ is zero".
 
 The 3D version tests all the possible pairs:
@@ -329,7 +329,7 @@ The 3D version tests all the possible pairs:
 ]
 The above three equations should be remembered as
 $f_(x y) = f_(y x)$, $f_(y z) = f_(z y)$, $f_(z y) = f_(x y)$.
-We'll see this also in Part Hotel again hidden in a different name:
+We'll see this also in Part India again hidden in a different name:
 "the 3D scalar curl of $f$ is zero".
 In that section, the given right-hand side will be called called a *vector field*
 and the function $f$ will be called a *potential function* for it.

@@ -41,7 +41,7 @@ that you can bet people immediately made up a shorthand to sweep it under the ru
 I think the usual notation is
 $ bf(n) dif s := (90 degree "clockwise rotation of" bf(r)'(t)) dif t $
 so that the above thing will usually be condensed to
-$ oint_(cal(C)) bf(F) dot bf(n) dif s. $
+$ int_(cal(C)) bf(F) dot bf(n) dif s. $
 #digression(title: [Digression on why $bf(n) dif s$ is the shorthand])[
   I think the reason this shorthand is used is:
   $bf(n)$ is supposed to be the "outward unit normal vector",
@@ -49,7 +49,10 @@ $ oint_(cal(C)) bf(F) dot bf(n) dif s. $
   So then it needs to be scaled by the magnitude $|bf(r)'(t)|$,
   and so we copy the old $dif s$ from arc length.
 
-  I _promise_ that none of this was my idea.
+  So this notation is consistent with the notation used for scalar-field line integrals
+  (if you consider the scalar field $f = bf(F) dot bf(n)$).
+  But I don't like to mention this because I want to avoid scalar-field line integrals
+  in 18.02 for anything that isn't arc length to keep things simple.
 ]
 
 #warning[
@@ -67,7 +70,8 @@ the 2D flux is positive if water is (net) moving out of $cal(C)$; it's negative 
 
 == [TEXT] 2D flux is a rotation of 2D work
 
-There is another way to write the flux with shorthand that avoids $bf(n) dif s$ notation.
+We don't like the $bf(n) dif s$ notation because we don't like scalar-field line integrals.
+Fortunately, there is another way to write the flux with shorthand that avoids $bf(n) dif s$ notation.
 To see where it comes from, once again write
 $ bf(F)(x,y) = vec(p(x,y), q(x,y)). $
 Rather than rotating $bf(r)'(t)$ by $90 degree$ clockwise,
@@ -79,14 +83,14 @@ The idea is the following:
 ]
 So what we've done is put the rotation thing onto the vector field instead.
 #proof(title: [Proof of the equation])[
-  To spell this out, imagine that $bf(r)'(t) = vec( r_1(t), r_2(t) )$,
-  meaning that its $90 degree$ clockwise rotation is $vec( r_2(t), -r_1(t) )$.
+  To spell this out, imagine that $bf(r)'(t) = vec( r'_1(t), r'_2(t) )$,
+  meaning that its $90 degree$ clockwise rotation is $vec( r'_2(t), -r'_1(t) )$.
   Then the two quantities
-  $ bf(F) dot (90 degree "clockwise rotation of" bf(r)') &= vec(p,q) dot vec(r_2, -r_1) \
-    (90 degree "counterclockwise rotation of" bf(F)) dot bf(r)' &= vec(-q, p) dot vec(r_1, r_2) $
-  and equal as both are $p r_2 - q r_1$
+  $ bf(F) dot (90 degree "clockwise rotation of" bf(r)') &= vec(p,q) dot vec(r'_2, -r'_1) \
+    (90 degree "counterclockwise rotation of" bf(F)) dot bf(r)' &= vec(-q, p) dot vec(r'_1, r'_2) $
+  and equal as both are $p r'_2 - q r'_1$
   (strictly speaking,
-  this quantity should be written in full as $p(bf(r)(t)) r_2(t) - q(bf(r)(t)) r_1(t)$,
+  this quantity should be written in full as $p(bf(r)(t)) r'_2(t) - q(bf(r)(t)) r'_1(t)$,
   for each time $t$).
 ]
 
@@ -141,7 +145,11 @@ so let me just put everything in one place for sanity's sake:
   So actually one good thing about the notation $bf(n) dif s$ is that
   the presence of $dif s$ is a good reminder that there's no FTC result.
 
-  In other words, 2D flux is missing one red Stokes arrow compared to 2D work.
+  In other words, 2D flux is conceptually missing one red Stokes arrow compared to 2D work.
+  (I suppose if you really missed it, you could try to force it by asking
+  whether $vec(-q,p)$ is conservative, but I haven't seen this done.
+  One possible reason is that 2D flux is mostly used for closed loops $cal(C)$,
+  and Green's theorem can handle that case anyway.)
 ]
 
 == [RECIPE] Computing 2D flux <sec-recipe-2d-flux>

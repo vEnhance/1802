@@ -75,8 +75,8 @@ For comparison, Part Foxtrot corresponds approximately to §9 and §12.4-§12.6 
 #include "src/mt2.typ"
 #pagebreak()
 
-#part[Part Golf: Multivariate integrals]
-For comparison, Part Golf corresponds to §13 and §17 of #poonen.
+#part[Part Golf: 2D integrals of scalar functions]
+For comparison, Part Golf corresponds to §13.1-§13.5 of #poonen.
 #include "src/ipep.typ"
 #pagebreak()
 #include "src/double.typ"
@@ -87,6 +87,9 @@ For comparison, Part Golf corresponds to §13 and §17 of #poonen.
 #pagebreak()
 #include "src/shorthand.typ"
 #pagebreak()
+
+#part[Part Hotel: 3D integrals of scalar functions]
+For comparison, Part Hotel corresponds to §13.6-13.9 and §17.1-§17.6 of #poonen.
 #include "src/triple.typ"
 #pagebreak()
 #include "src/sph.typ"
@@ -94,8 +97,8 @@ For comparison, Part Golf corresponds to §13 and §17 of #poonen.
 #include "src/scalint.typ"
 #pagebreak()
 
-#part[Part Hotel: Grad, curl, and div]
-For comparison, Part Hotel corresponds to §14, §15, §18, §19, §20, §21 of #poonen.
+#part[Part India: Line integrals of vector fields over a curve]
+For comparison, Part India corresponds to §14, §15, §20, §21 of #poonen.
 #include "src/vecfield.typ"
 #pagebreak()
 #include "src/gcd.typ"
@@ -108,6 +111,9 @@ For comparison, Part Hotel corresponds to §14, §15, §18, §19, §20, §21 of 
 #pagebreak()
 #include "src/mt3.typ"
 #pagebreak()
+
+#part[Part Juliett: Flux integrals of vector fields over a surface]
+For comparison, Part Juliett corresponds to §17.7, §18, §19, §21 of #poonen.
 #include "src/flux.typ"
 #pagebreak()
 #include "src/divthm.typ"
@@ -115,11 +121,11 @@ For comparison, Part Hotel corresponds to §14, §15, §18, §19, §20, §21 of 
 #include "src/badstokes.typ"
 #pagebreak()
 
-#part[Part India: Practice questions]
+#part[Part Kilo: Practice questions]
 #include "src/practice.typ"
 #pagebreak()
 
-#part[Part Juliett: Solutions]
+#part[Part Lima: Solutions]
 #include "src/sol-alpha.typ"
 #pagebreak()
 #include "src/sol-bravo.typ"
@@ -140,10 +146,12 @@ For comparison, Part Hotel corresponds to §14, §15, §18, §19, §20, §21 of 
 #pagebreak()
 #include "src/sol-hotel.typ"
 #pagebreak()
-#include "src/sol-mt3.typ"
-#pagebreak()
 #include "src/sol-india.typ"
 #pagebreak()
+#include "src/sol-mt3.typ"
+#pagebreak()
+#include "src/sol-kilo.typ"
+#pagebreak()
 
-#part[Part Kilo: Appendix]
+#part[Part Mike: Appendix]
 #include "src/appendix.typ"

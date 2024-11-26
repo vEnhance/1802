@@ -110,7 +110,7 @@ In 18.02 the only cases where we use these are:
 
 In this book, this will happen in @sec-scalar-field-ints, and then
 after that the line and surface integrals will
-always be the *vector field* variant instead (in Part Hotel).
+always be the *vector field* variant instead (in Part India and Juliett).
 If you want to flip ahead,
 take a glance at @fig-int-chart-stokes and @table-purples.
 
