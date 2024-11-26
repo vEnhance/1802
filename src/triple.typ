@@ -14,6 +14,12 @@ I'm cheekily calling this section a "recap" to emphasize that there's nothing ne
 Everything in the below list corresponds to a double integral thing you learned
 except with two variables rather than three.
 
+One notational change: for 3D solids,
+I'll prefer to use the letter $cal(T)$ instead of $cal(R)$ for a 3D region moving forward.
+The reason is that much later on when we discuss the divergence theorem,
+we'll sometimes have both a 2D region and 3D region at the same time,
+so one needs different letters.
+
 - Over a rectangular prism,
   we still integrate $int_(x = a_1)^(b_1) int_(y = a_2)^(b_2) int_(z = a_3)^(b_3) f(x,y,z) dif z dif y dif x$
   one variable at a time.
@@ -31,22 +37,22 @@ except with two variables rather than three.
   The idea is the same if you have a region that isn't a rectangular prism:
   write your region as inequalities.
 - The change of variables formula is exactly the same, where the Jacobian is now a $3 times 3$ matrix:
-  if $bf(T) : cal(S) -> cal(R)$ is a transition map of 3D regions, sending $(u,v,w)$ to $(x,y,z)$,
+  if $bf(T) : cal(T)_"new" -> cal(T)$ is a transition map of 3D regions, sending $(u,v,w)$ to $(x,y,z)$,
   then the Jacobian is
   $ J_(bf(T)) = mat(
       (partial u) / (partial x), (partial v) / (partial x), (partial w) / (partial x);
       (partial u) / (partial y), (partial v) / (partial y), (partial w) / (partial y);
       (partial u) / (partial z), (partial v) / (partial z), (partial w) / (partial z);
     ). $
-- Volume is $ op("Vol")(cal(R)) := iiint_(cal(R)) dif x dif y dif z. $
+- Volume is $ op("Vol")(cal(T)) := iiint_(cal(T)) dif x dif y dif z. $
   You can take this as a _definition_ of volume for this class.
-- If $delta : cal(R) -> RR$ is a density function for a 3D space, then
-  $ op("Mass")(cal(R)) := iiint_(cal(R)) delta(x,y,z) dif x dif y dif z $ is the total mass.
+- If $delta : cal(T) -> RR$ is a density function for a 3D space, then
+  $ op("Mass")(cal(T)) := iiint_(cal(T)) delta(x,y,z) dif x dif y dif z $ is the total mass.
   The center of mass is given by three coordinates now:
   $ (
-    (iiint_(cal(R)) x dot delta(x,y,z) dif x dif y dif z) / (op("Mass")(cal(R))),
-    (iiint_(cal(R)) y dot delta(x,y,z) dif x dif y dif z) / (op("Mass")(cal(R))),
-    (iiint_(cal(R)) z dot delta(x,y,z) dif x dif y dif z) / (op("Mass")(cal(R)))
+    (iiint_(cal(T)) x dot delta(x,y,z) dif x dif y dif z) / (op("Mass")(cal(T))),
+    (iiint_(cal(T)) y dot delta(x,y,z) dif x dif y dif z) / (op("Mass")(cal(T))),
+    (iiint_(cal(T)) z dot delta(x,y,z) dif x dif y dif z) / (op("Mass")(cal(T)))
   ). $
   (We use $delta$ instead of $rho$ for 3D typically,
   because $rho$ gets used in spherical coordinates.)
@@ -65,7 +71,7 @@ except with two variables rather than three.
   The variable $x$ ranges from $- 1$ to $1$.
 
   Hence, we will write this as a triple integral
-  $ op("Vol")(cal(R))
+  $ op("Vol")(cal(T))
     &= int_(x=-1)^1
       int_(y=-sqrt(1-x^2))^(sqrt(1-x^2))
       int_(z=-sqrt(1-x^2))^(sqrt(1-x^2)) 1 dif z dif y dif x \
@@ -109,7 +115,7 @@ except with two variables rather than three.
   If we set these equal we get
   $ 3 (x^2 + y^2) = 72 - 5 (x^2 + y^2) ==> x^2 + y^2 = 9. $
 
-  With that in mind, we can convert the region $cal(R)$ to an inequality format: we write
+  With that in mind, we can convert the region $cal(T)$ to an inequality format: we write
   $ 3(x^2+y^2) <= z <= 72-5(x^2+y^2) $
   for the constraint on $z$ and then
   $ x^2+y^2 <= 9 $
@@ -117,20 +123,20 @@ except with two variables rather than three.
 
   Hence, the volume can be written as
   $
-    op("Vol")(cal(R))
+    op("Vol")(cal(T))
     = iiint_(x^2 + y^2 <= 9 \ 3(x^2+y^2) <= z <= 72-5(x^2+y^2)) dif x dif y dif z.
   $
   We'll separate the integral into an integral over the circle $x^2 + y^2 <= 9$
   and then a single integral over the resulting $z$:
   $
-    op("Vol")(cal(R))
+    op("Vol")(cal(T))
     &= iint_(x^2 + y^2 <= 9) (int_(z=3(x^2+y^2))^(72-5(x^2+y^2)) dif z) dif x dif y \
     &= iint_(x^2 + y^2 <= 9) (72 - 8(x^2+y^2)) dif x dif y.
   $
   At _this_ point we'll use polar coordinates:
   writing $x = r cos theta$, and $y = r sin theta$ as always, we have
   $
-    op("Vol")(cal(R))
+    op("Vol")(cal(T))
     &= iint_(x^2 + y^2 <= 9) (72 - 8(x^2+y^2)) dif x dif y \
     &= iint_(x^2 + y^2 <= 9) (72 - 8(x^2+y^2)) dif x dif y \
     &= int_(theta=0)^(2 pi) int_(r=0)^3 (72 - 8 r^2) dot (r dif r dif theta) \
@@ -212,16 +218,16 @@ Note that, as I said, we could have given this example _before_ this section.
   origin, extending upwards to $z = 5$.
   To solve for both the volume and the center of mass,
   we’ll employ cylindrical coordinates due to the symmetry of the cone.
-  As always, $cal(R)$ denotes the region (cone).
+  As always, $cal(T)$ denotes the region (cone).
 
   The values of $z$ that appear at all are $z = 0$ to $5$,
   and within them we have only the requirement that
   $ 9(x^2+y^2) <= z^2 ==> sqrt(x^2+y^2) <= z/3. $
   In other words, we can write
-  $ op("Vol")(cal(R))
+  $ op("Vol")(cal(T))
     = int_(z=0)^5 iint_(sqrt(x^2+y^2) <= z/3) 1 dif x dif y dif z. $
   However, of course we should just change to cylindrical coordinates right away:
-  $ op("Vol")(cal(R))
+  $ op("Vol")(cal(T))
     &= int_(z=0)^5 int_(r=0)^(z/3) int_(theta=0)^(2pi) r dif theta dif r dif z \
     &= 2 pi int_(z=0)^5 int_(r=0)^(z/3) r dif r dif z \
     &= 2 pi int_(z=0)^5 [r^2/2]_(r=0)^(z/3) dif z \
@@ -229,7 +235,7 @@ Note that, as I said, we could have given this example _before_ this section.
     = #boxed[$ (125 pi) / 27 $]. $
   This gives us the volume of the cone.
   And since the density was constant, we also have
-  $op("Mass")(cal(R)) = op("Vol")(cal(R)) = (125 pi) / 27$.
+  $op("Mass")(cal(T)) = op("Vol")(cal(T)) = (125 pi) / 27$.
 
 
   As for the center of mass, nominally there are three integrals,
@@ -237,12 +243,12 @@ Note that, as I said, we could have given this example _before_ this section.
   $(dash(x), dash(y), dash(z))$ should lie on the $z$-axis, meaning $dash(x)=dash(y)=0$.
   Hence the only one we need to bother with is
   $ dash(z)
-    &= 1/(op("Mass")(cal(R))) int_(z=0)^5 iint_(sqrt(x^2+y^2) <= z/3) z dif x dif y dif z \
-    &= 1/(op("Mass")(cal(R))) int_(z=0)^5 int_(r=0)^(z/3) int_(theta=0)^(2pi) r z dif theta dif r dif z \
-    &= 1/(op("Mass")(cal(R))) int_(z=0)^5 z int_(r=0)^(z/3) int_(theta=0)^(2pi) r dif theta dif r dif z \
-    &= (2 pi)/(op("Mass")(cal(R))) int_(z=0)^5 z dot z^2/18 dif z quad "(repeating from earlier)" \
-    &= (2 pi)/(op("Mass")(cal(R))) [z^4/72]_(z=0)^5
-    = (5^4 dot pi / 36)/(op("Mass")(cal(R))) = (5^4 dot pi / 36)/(5^3 dot pi / 27) = 15/4. $
+    &= 1/(op("Mass")(cal(T))) int_(z=0)^5 iint_(sqrt(x^2+y^2) <= z/3) z dif x dif y dif z \
+    &= 1/(op("Mass")(cal(T))) int_(z=0)^5 int_(r=0)^(z/3) int_(theta=0)^(2pi) r z dif theta dif r dif z \
+    &= 1/(op("Mass")(cal(T))) int_(z=0)^5 z int_(r=0)^(z/3) int_(theta=0)^(2pi) r dif theta dif r dif z \
+    &= (2 pi)/(op("Mass")(cal(T))) int_(z=0)^5 z dot z^2/18 dif z quad "(repeating from earlier)" \
+    &= (2 pi)/(op("Mass")(cal(T))) [z^4/72]_(z=0)^5
+    = (5^4 dot pi / 36)/(op("Mass")(cal(T))) = (5^4 dot pi / 36)/(5^3 dot pi / 27) = 15/4. $
   Hence the center of mass is $#boxed[$ (0, 0, 15/4) $]$.
 ]
 
@@ -259,26 +265,26 @@ $ bf(F)_("gravity") = (G dot m dot M)
   / (|O P|^2) dot underbrace(arrow(O P) / (|O P|), "unit vector from" O "to" P) $
 where $G approx 6.67408 dot 10^(-11) dot upright("N") dot upright("m")^2 dot "kg"^(-2)$ is the gravitational constant.
 
-But in real life, we usually want our mass $M$ to be take up a whole region $cal(R)$,
+But in real life, we usually want our mass $M$ to be take up a whole region $cal(T)$,
 with some density $delta$.
 (Point masses don't occur in real life unless you count black holes.)
-So let's suppose we have a solid mass occupying region $cal(R)$.
-In that case, each individual point $P=(x,y,z)$ in $cal(R)$ can be thought of a _vector_
+So let's suppose we have a solid mass occupying region $cal(T)$.
+In that case, each individual point $P=(x,y,z)$ in $cal(T)$ can be thought of a _vector_
 $ "Gravity exerted by" (x,y,z) "on" (0,0,0) = (G m dot (delta(x,y,z) dif V))/(x^2+y^2+z^2) dot
   underbrace((angle.l x,y,z angle.r) / (sqrt(x^2+y^2+z^2)), "unit vector from" O "to" P). $
-The total gravitational force is then the integral of this over the entire mass $cal(R)$.
+The total gravitational force is then the integral of this over the entire mass $cal(T)$.
 #figure(
   image("figures/triple-gravity.svg", width: auto),
   caption: [
-    The force of gravity exerted by a large mass $cal(R)$ such as the sun on a point mass of mass $m$.
-    Each individual point like $P$ or $Q$ in the region $cal(R)$ exerts a tiny force on the point mass of mass $m$.
-    The total gravitational force is the sum (integral) across the whole region $cal(R)$.
+    The force of gravity exerted by a large mass $cal(T)$ such as the sun on a point mass of mass $m$.
+    Each individual point like $P$ or $Q$ in the region $cal(T)$ exerts a tiny force on the point mass of mass $m$.
+    The total gravitational force is the sum (integral) across the whole region $cal(T)$.
   ],
 )
 
 So the total gravitational force is nominally
 #eqn[
-  $ bf(G) = int_(cal(R)) (G m dot (delta(x,y,z) dif V))/(x^2+y^2+z^2) dot (angle.l x,y,z angle.r) / (sqrt(x^2+y^2+z^2)). $
+  $ bf(G) = int_(cal(T)) (G m dot (delta(x,y,z) dif V))/(x^2+y^2+z^2) dot (angle.l x,y,z angle.r) / (sqrt(x^2+y^2+z^2)). $
   <eqn-gravity>
 ]
 
@@ -293,13 +299,13 @@ But to keep things simple for the course, I will never use @eqn-gravity in that 
 so that our integrands always have type number rather than type vector.
 To do this, I'll rewrite @eqn-gravity as follows:
 #memo(title: [Memorize: Gravitational attraction of a region on the origin])[
-  Suppose $cal(R)$ is a region with density function $delta$.
+  Suppose $cal(T)$ is a region with density function $delta$.
   The gravitational vector $bf(G) = angle.l G_1, G_2, G_3 angle.r$
   on the origin is defined by
   $
-    G_1 &:= G m iiint_(cal(R)) (x delta(x,y,z))/((x^2+y^2+z^2)^(3/2)) dif x dif y dif z \
-    G_2 &:= G m iiint_(cal(R)) (y delta(x,y,z))/((x^2+y^2+z^2)^(3/2)) dif x dif y dif z \
-    G_3 &:= G m iiint_(cal(R)) (z delta(x,y,z))/((x^2+y^2+z^2)^(3/2)) dif x dif y dif z.
+    G_1 &:= G m iiint_(cal(T)) (x delta(x,y,z))/((x^2+y^2+z^2)^(3/2)) dif x dif y dif z \
+    G_2 &:= G m iiint_(cal(T)) (y delta(x,y,z))/((x^2+y^2+z^2)^(3/2)) dif x dif y dif z \
+    G_3 &:= G m iiint_(cal(T)) (z delta(x,y,z))/((x^2+y^2+z^2)^(3/2)) dif x dif y dif z.
   $
   That is, $bf(G) = G_1 bf(e)_1 + G_2 bf(e)_2 + G_3 bf(e)_3$.
 ]

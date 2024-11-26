@@ -358,15 +358,15 @@ in vague non-precise terms (we'll make precise later), for each of these six red
 
 / Surface integral $->$ triple/volume integral:
   Suppose now $bf(F) : RR^3 -> RR^3$ is a vector field.
-  Let $cal(R)$ be some three-dimensional region (e.g. metal ball).
+  Let $cal(T)$ be some three-dimensional solid (e.g. metal ball).
   Suppose further the boundary of $cal(R)$ is parametrized
   by some two-dimensional surface $bf(r)(u,v)$ (e.g. metal sphere), which we call $cal(S)$.
   Then the _divergence theorem_ says that
   $ iint_(cal(S)) bf(F)(bf(r)(u,v)) dot lr(((partial bf(r))/(partial u)
     times (partial bf(r))/(partial v))) dif u dif v
-    =  iiint_(cal(R)) (nabla dot bf(F))(x,y,z) dif x dif y dif z. $
+    =  iiint_(cal(T)) (nabla dot bf(F))(x,y,z) dif x dif y dif z. $
   If we adopt shorthand again, this reads just
-  $ iint_(cal(S)) bf(F) dot dif bf(S) = iiint_(cal(R)) (nabla dot bf(F)) dif V. $
+  $ iint_(cal(S)) bf(F) dot dif bf(S) = iiint_(cal(T)) (nabla dot bf(F)) dif V. $
 
   The nonsense expression $nabla dot bf(F)$ is called the divergence, but we haven't defined this term yet.
 

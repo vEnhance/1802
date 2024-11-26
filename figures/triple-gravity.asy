@@ -14,7 +14,7 @@ for (int i=0; i<N; ++i) {
 pair P = O + 0.6*dir(160);
 pair Q = O + 0.8*dir(260);
 
-label("Mass $\mathcal{R}$ (e.g., sun)", O+2*dir(90), dir(90), orange);
+label("Mass $\mathcal{T}$ (e.g., sun)", O+2*dir(90), dir(90), orange);
 draw("Gravity exerted by $P$", E--P, dir(140), grey, EndArrow, Margins);
 draw("Gravity exerted by $Q$", E--Q, dir(-40), grey, EndArrow, Margins);
 dot("$P$", P, dir(90));

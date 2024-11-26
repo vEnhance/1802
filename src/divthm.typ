@@ -93,11 +93,12 @@ Here are two examples of this with spheres.
 Note that the answer is independent of the radius! The $17$ cancels out.
 #remark[
   The previous example _cannot_ be done by the divergence theorem.
-  (Indeed, if you try to use the divergence theorem, since $nabla dot bf(G) = 0)$,
-  you'd get an answer of $0$ is not correct).
-  The issue is that $bf(F)$ is undefined at the origin.
+  Indeed $nabla dot bf(G) = 0$ at every point where $bf(G)$ is defined,
+  but $bf(G)$ is _not_ defined at the origin.
 ]
 
 == [TEXT] Another trick: level surfaces
 
 == [RECAP] All the methods so far for flux
+
+== [EXER] Exercises

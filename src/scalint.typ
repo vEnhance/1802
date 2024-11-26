@@ -116,8 +116,12 @@ Okay, so in analogy to here are surface area and the scalar-field surface integr
   $ op("SurfArea")(cal(S)) := iint_(cal(R))
     lr(|(partial bf(r))/(partial u) times (partial bf(r))/(partial v)|) dif u dif v. $
 ]
-(Here $cal(R)$ is a region in $RR^2$ used for the parametrization, often a rectangle.
-It is _not_ the region whose surface area is being calculated.)
+#warning[
+  Here $cal(R)$ is a region in $RR^2$ used for the parametrization, often a rectangle.
+  It is _not_ the surface $cal(S)$ whose surface area is being calculated;
+  (and for 2D surfaces in 3D space we'll usually prefer the letter $cal(S)$
+  so that it doesn't look like a region).
+]
 
 Yes, there's a cross product. Yes, it sucks (see @sec-cross-sucks).
 This is one case where you probably would prefer to use the shorthand
@@ -238,7 +242,7 @@ And here is an example that looks more like what you expect.
   $ lr(|frac(partial bf(r), partial x) times frac(partial bf(r), partial y)|) &= sqrt((- x / sqrt(x^2 + y^2))^2 + (- y / sqrt(x^2 + y^2))^2 + 1^2) \
     &= sqrt((x^2) / (x^2 + y^2) + (y^2) / (x^2 + y^2) + 1) = sqrt(2). $
   That's really convenient: we got a constant! Hence
-  $ op("SurfArea")("cone") = iint_(x^2+y^2 <= 1) sqrt(2) dif A = sqrt(2) op("Area")(x^2+y^2 <= 1) = #boxed[$sqrt(2) pi $]. $
+  $ op("SurfArea")("cone") = iint_(x^2+y^2 <= 1) sqrt(2) dif A = sqrt(2) op("Area")(x^2+y^2 <= 1) = #boxed[$sqrt(2) pi $]. #qedhere $
 ]
 
 == [EXER] Exercises

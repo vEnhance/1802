@@ -54,15 +54,15 @@ To do this, I need to tell you a new term:
 
 #definition(title: [Definition of transition map])[
   Suppose $cal(R)$ is a region.
-  Let $cal(S)$ be another region, often a rectangle.
-  A *transition map* for $cal(R)$ is a function $bf(T) : cal(S) -> cal(R)$ that transforms $cal(S)$ to $cal(R)$.
+  Let $cal(R)_"new"$ be another region, often a rectangle.
+  A *transition map* for $cal(R)$ is a function $bf(T) : cal(R)_"new" -> cal(R)$ that transforms $cal(R)_"new"$ to $cal(R)$.
 
-  In 18.02 we always require that all the points except possibly the boundaries of $cal(S)$
+  In 18.02 we always require that all the points except possibly the boundaries of $cal(R)_"new"$
   get mapped to different points in $cal(R)$.
   Thus, writing the inverse $bf(T)^(-1)$ usually also makes sense.
 ]
 
-If $cal(S)$ is a rectangle --- and again, that's quite common ---
+If $cal(R)_"new"$ is a rectangle --- and again, that's quite common ---
 then sometimes $bf(T)$ is also called a cell
 (e.g. my Napkin does this when discussing differential forms).
 
@@ -71,9 +71,10 @@ then sometimes $bf(T)$ is also called a cell
   If you print a world map on an $8.5 times 11$ or A4 sheet of paper,
   it gives you a coordinate system for the world with longitude and latitude.
   So $cal(R)$ can be thought of as the surface of the Earth,
-  while $cal(S)$ is the rectangular sheet of paper.
+  while $cal(R)_"new"$ is the rectangular sheet of paper.
+  (I'm lying a little bit because the Earth lives in 3D space but not 2D space, but bear with me.)
 
-  The map is always distorted in some places, because the Earth is not flat:
+  The map is always distorted in some places, because the Earth is bent:
   the north and south pole will often get stretched a ton, for example.
   But that's okay --- *as long as each longitude and latitude gives you a different point on
   Earth, we're satisfied*. Technically there are exceptions at the north and south poles,
@@ -103,8 +104,8 @@ See @fig-chvar-trans, which is really important to us!
 
 #figure(
   image("figures/chvar-trans.svg", width: auto),
-  caption: [We use a $(u,v)$ rectangle as a transition map to
-  do cartography on the region $cal(R)$.],
+  caption: [We use a rectangle with $(u,v)$ as our new region $cal(R)_"new"$.
+  The transition map lets us do cartography on the region $cal(R)$.],
 ) <fig-chvar-trans>
 
 How do we actually express the transition map of $bf(T)$?
@@ -156,7 +157,7 @@ $ J_(bf(T)) = mat(
 ]
 #example[
   We can also find the Jacobian matrix of the _inverse_ map too,
-  that is, the transition map $bf(T)^(-1) : cal(R) -> cal(S)$ defined by
+  that is, the transition map $bf(T)^(-1) : cal(R) -> cal(R)_"new"$ defined by
   $ bf(T)^(-1)(x,y) = (y/x, x y). $
   In other words, this is the map that transforms $(x,y)$ into $(u,v)$.
   This is actually less painful because you don't have to deal with the square roots everywhere.
@@ -172,11 +173,11 @@ since I want to have done a few concrete examples before drawing the right pictu
 
 #memo(title: [Memorize: Change of variables])[
   Suppose you need to integrate $iint_(cal(R)) f(x,y) dif x dif y$
-  and you have a transition map $bf(T)(u,v) : cal(S) -> cal(R)$.
+  and you have a transition map $bf(T)(u,v) : cal(R)_"new" -> cal(R)$.
   Then the transition map lets you change the integral as follows:
-  $ iint_(cal(R)) f(x,y) dif x dif y = iint_(cal(S)) f(u,v) lr(|det J_(bf(T))|) dif u dif v $
+  $ iint_(cal(R)) f(x,y) dif x dif y = iint_(cal(R)_"new") f(u,v) lr(|det J_(bf(T))|) dif u dif v $
   Alternatively, if it's easier to compute $J_(bf(T)^(-1))$, the following formula also works:
-  $ iint_(cal(R)) f(x,y) dif x dif y = iint_(cal(S)) f(u,v) / (lr(|det J_(bf(T)^(-1))|)) dif u dif v $
+  $ iint_(cal(R)) f(x,y) dif x dif y = iint_(cal(R)_"new") f(u,v) / (lr(|det J_(bf(T)^(-1))|)) dif u dif v $
   However, in the latter case your Jacobian determinant will have $x$ and $y$
   in it that you need to translate back into $u$ and $v$.
 ]
@@ -204,6 +205,7 @@ you might prefer to use that instead.
   It can be made into a precise statement using something called a _differential form_.
   This is out of scope for 18.02, which has the unfortunate consequence
   that I can't give a formal explanation why the change-of-variable formula works.
+  That said, see @sec-jacobian-picture later for an informal explanation.
 ]
 
 This is the analog in 18.01 when you did change of variables from $x$ to $u$
@@ -218,9 +220,9 @@ Let's see an example of how to carry out this integration.
 ]
 #soln[
   In the previous sections we introduced variables $u = y/x$ and $v = x y$,
-  and considered the region $ cal(S) = [1/4, 4] times [16/25, 16/9] $
+  and considered the region $ cal(R)_"new" = [1/4, 4] times [16/25, 16/9] $
   which were the pairs of points $(u,v)$ in that rectangle we described earlier.
-  We made a transition map $bf(T) : cal(S) -> cal(R)$ written as either
+  We made a transition map $bf(T) : cal(R)_"new" -> cal(R)$ written as either
   $ bf(T)(u,v) &= (sqrt(v/u), sqrt(u v)) \
     bf(T)^(-1)(x,y) &= (y/x, x y). $
   We don't like square roots, so we'll the determinant of the Jacobian matrix for $bf(T)^(-1)$, which is
@@ -311,7 +313,7 @@ by _reducing_ to the area of a circle, as follows.
   $ op("Area")(cal(R)) &= iint_(cal(R)) 1 dif x dif y \
     &= iint_(u^2+v^2 <= 1) det J_(bf(T)) dif u dif v \
     &= a b  iint_(u^2+v^2 <= 1) dif u dif v. \
-    &= a b  op("Area")({u^2+v^2<=1}) = a b pi. $
+    &= a b  op("Area")({u^2+v^2<=1}) = a b pi. #qedhere $
 ]
 
 To put this example into a picture,
@@ -341,10 +343,8 @@ For example, consider the following easy question and solution.
   The inner integral is
   $ int_(y = 0)^pi sin (y) dif y = [- cos (y)]_(y = 0)^pi = (- cos (pi)) - (- cos (0)) = (- (- 1)) - (- 1) = 1 + 1 = 2 . $
   Substitute the result back into the integral:
-  $ int_(x = 0)^1 e^x dot 2 dif x = 2 int_(x = 0)^1 e^x dif x . $
-  Compute the integral:
-  $ int_(x = 0)^1 e^x dif x = [e^x]_(x = 0)^1 = e^1 - e^0 = e - 1 . $
-  Multiply the result by 2 to get the answer $#boxed[$2(e-1)$]$.
+  $ int_(x = 0)^1 e^x dot 2 dif x = 2 int_(x = 0)^1 e^x dif x
+    = 2 [e^x]_(x = 0)^1 = 2(e^1 - e^0) = #boxed[$ 2e-2 $]. #qedhere $
 ]
 If you pay attention to the solution above,
 you'll notice that in fact $int_(y=0)^pi sin(y) dif y = 2$ is just a number,
@@ -369,7 +369,8 @@ As another example of a use case, in the polar integration we just did, we have
 $ int_(r=0)^1 int_(theta=0)^(2 pi) r dif theta dif r
   = (int_(r=0)^1 r dif r)(int_(theta=0)^(2 pi) theta dif theta)
   = [r^2/2]_(r=0)^(r=1) dot (2 pi) = pi. $
-Polar coordinates in particular have this particular pattern a lot.
+(Polar coordinates, covered next section, in particular have this particular pattern a lot.
+Often the thing you're integrating has no $theta$ dependence at all.)
 
 == [EXER] Exercises
 
