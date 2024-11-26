@@ -293,7 +293,7 @@ in return for the short time limit.
     from my students this year, which I am indeed grateful for.
     I certainly wouldn't have had the motivation to type these notes without these kind words.
 
-- I thank Calvin Wang, Ritwin Narra and Royce Yao for multiple corrections.
+- I thank Alan Cheng, Calvin Wang, Ritwin Narra and Royce Yao for multiple corrections.
   (Your name could be here too --- find me some typos.
   If you know how to open a GitHub pull request,
   the relevant repository is #url("https://github.com/vEnhance/1802").)
