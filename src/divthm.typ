@@ -58,7 +58,7 @@ Here are two examples of this with spheres.
   Conveniently, the force vector $bf(F)$ is a vector of magnitude $17$ in the same direction!
   That is, $ bf(F) dot bf(n) = (10bf(n)) dot (bf(n)) = 17. $
   Consequently,
-  $ iint_(cal(S)) bf(F) dot dif bf S = 17 op("SurfArea")(cal(S)) = 17 dot (4 dot 289)pi = #boxed[$ 4 dot 17^3 pi $]. $
+  $ iint_(cal(S)) bf(F) dot dif bf(S) = 17 op("SurfArea")(cal(S)) = 17 dot (4 dot 289)pi = #boxed[$ 4 dot 17^3 pi $]. $
   (In general, we know a sphere of radius $R$ has surface area $4 R^2 pi$.)
 ]
 #remark[
@@ -82,11 +82,11 @@ Here are two examples of this with spheres.
   (Orient $bf(S)$ outwards.)
 ]
 #soln[
-  This is just like the previous example except that the gravity
-  $bf(G)$ has magnitude $G m / 17^2$ and points in the _opposite_ direction as $bf(n)$.
-  That is, $ bf(F) dot bf(n) = (-(G m / (17^2)) bf(n)) dot (bf(n)) = -(G m) / 170. $
+  This is just like the previous example except that the gravity exerted
+  $bf(G)$ has magnitude $(G m) / 17^2$ and points in the _opposite_ direction as $bf(n)$.
+  That is, $ bf(F) dot bf(n) = (-((G m) / (17^2)) bf(n)) dot (bf(n)) = -(G m) / 289. $
   Consequently,
-  $ iint_(cal(S)) bf(F) dot dif bf S = -(G m) / 289 dot op("SurfArea")(cal(S))
+  $ iint_(cal(S)) bf(F) dot dif bf(S) = -(G m) / 289 dot op("SurfArea")(cal(S))
     = (-G m)/(17^2) dot (4 dot 17^2 pi) = #boxed[$ -4 pi G m $]. $
   (In general, we know a sphere of radius $R$ has surface area $R^2 pi$.)
 ]
@@ -94,7 +94,7 @@ Note that the answer is independent of the radius! The $17$ cancels out.
 #remark[
   The previous example _cannot_ be done by the divergence theorem.
   Indeed $nabla dot bf(G) = 0$ at every point where $bf(G)$ is defined,
-  but $bf(G)$ is _not_ defined at the origin.
+  but $bf(G)$ is _not_ defined at the origin and this causes the result to fail.
 ]
 
 == [TEXT] Another trick: level surfaces

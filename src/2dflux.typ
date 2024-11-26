@@ -155,7 +155,8 @@ so let me just put everything in one place for sanity's sake:
 == [RECIPE] Computing 2D flux <sec-recipe-2d-flux>
 
 #recipe(title: [Recipe for computing 2D flux])[
-  1. If $cal(C)$ is a closed loop, see if using Green's theorem gives you a shortcut.
+  1. If $cal(C)$ is a closed loop, use Green's theorem as a shortcut:
+    $ oint_(cal(C)) (-q dif x + p dif y) = iint_(cal(R)) ((partial p)/(partial x) + (partial q)/(partial y)) dif A. $
   2. Otherwise, do the manual recipe in @sec-work-manual-recipe
     with $bf(F) = vec(p,q)$ replaced by its $90 degree$ counterclockwise rotation $vec(-q, p)$:
     1. Pick *any* parametrization $bf(r) : RR -> RR^n$ of the curve $cal(C)$,
