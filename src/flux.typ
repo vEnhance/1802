@@ -12,8 +12,8 @@ we'll immediately try to find ways to shortcut it.
 For 18.02, the methods available to you will be
 
 - Bare-hands parametrization (covered here)
+  - Even here, the magic formula in @sec-magic-cross-prod can still be  used.
 - Shortcut: Transforming to a surface area integral (covered in @sec-divthm)
-- Shortcut when the surface is a level surface (covered in @sec-divthm)
 - Shortcut: The divergence theorem, by converting to a 3D volume integral (covered in @sec-divthm)
 - Shortcut: Stokes' theorem, if the vector field happens to be a curl (covered in @sec-badstokes)
 
@@ -27,6 +27,8 @@ For 18.02, the methods available to you will be
 ]
 Yes, there's that hideous cross product again.
 But at least the absolute value is gone --- that's a big improvement.
+And remember, if the surface $cal(S)$ comes from a level surface,
+you can use the magic formula from @sec-magic-cross-prod to bypass the cross product step.
 
 Naturally, people have shorthand to make this easier to swallow: this time either
 $ iint_(cal(S)) bf(F) dot dif bf(S) = iint_(cal(S)) bf(F) dot bf(n) dif S $
@@ -97,22 +99,32 @@ are now replaced by normal vectors to the surface.
 We go back to recipe format now.
 
 #recipe(title: [Recipe for computing flux integrals with bare-hands parametrization])[
-  To compute the line integral of $bf(F)$ over the curve $cal(C)$:
+  To compute the flux of $bf(F)$ over a surface $cal(S)$:
 
-  1. Pick a parametrization $bf(r)(u,v) : cal(R) -> RR^3$ of the curve $cal(S)$.
-    - Sort of like in @sec-flex-param, you have some freedom in how you set the parametrization.
-      But this time you need to pay attention to the order of $u$ and $v$.
-    - In 18.02, the parametrization might be given to you in the question to save time.
-  2. Compute the partial derivatives
-    $(partial bf(r))/(partial u)$ and $(partial bf(r))/(partial v)$
-    (both are three-dimensional vectors at each point).
-  3. Compute the cross product $(partial bf(r))/(partial u) times (partial bf(r))/(partial v)$.
-  4. Look at which way the cross product points (via right-hand rule).
+  1. Figure out how to get the cross product
+    $(partial bf(r))/(partial u) times (partial bf(r))/(partial v)$
+    for a parametrization $bf(r)$ using the following checklist.
+    - If $cal(S)$ is given by $z = f(x,y)$
+      use the magic cross product formula @sec-magic-cross-prod to skip directly to
+      $ (partial bf(r))/(partial u) times (partial bf(r))/(partial v)
+      = lr(angle.l -(partial f) / (partial x), - (partial f) / (partial y), 1 angle.r). $
+    - For appropriate level surfaces $g(x,y,z) = c$,
+      use the magic cross product formula @sec-magic-cross-prod to skip directly to
+      $ (partial bf(r))/(partial u) times (partial bf(r))/(partial v)
+      = (nabla g) / (partial g slash partial z). $
+    - Otherwise, use the long way:
+      - Pick a parametrization $bf(r)(u,v) : cal(R) -> RR^3$ of the surface $cal(S)$.
+        Sort of like in @sec-flex-param, you have some freedom in how you set the parametrization.
+      - Compute the partial derivatives
+        $(partial bf(r))/(partial u)$ and $(partial bf(r))/(partial v)$
+        (both are three-dimensional vectors at each point).
+      - Compute the cross product $(partial bf(r))/(partial u) times (partial bf(r))/(partial v)$.
+  2. Look at which way the cross product points (via right-hand rule).
     Does it point "outward"?
     If not, negate the cross product (equivalently, swap the order of $u$ and $v$) before going on.
-  5. Compute the dot product $ bf(F) dot ((partial bf(r))/(partial u) times (partial bf(r))/(partial v)). $
+  3. Compute the dot product $ bf(F) dot ((partial bf(r))/(partial u) times (partial bf(r))/(partial v)). $
     This gives you a number at every point on the parametrizing region $cal(R)$.
-  6. Integrate the entire thing over $cal(R)$ using any of the methods for double integrals
+  4. Integrate the entire thing over $cal(R)$ using any of the methods for double integrals
     (such as horizontal/vertical slicing, polar coordinates, change of variables, etc.).
 ]
 

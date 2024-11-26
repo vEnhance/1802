@@ -161,7 +161,9 @@ Here is a really ugly example to start, to give you some practice with spherical
   Find the surface area of the unit sphere $x^2+y^2+z^2=1$.
 ]
 #soln[
-  We will bludgeon our way through this task with sheer brute force using the formula above.
+  We will bludgeon our way through this task with sheer brute force using the formula above
+  via spherical coordinates. (We'll show a more elegant solution later.)
+
   The parametrization $bf(r)$ is given from the spherical coordinate system by
   $ bf(r) (phi, theta) = (sin phi cos theta , phi sin theta , cos phi) , $
   across the range
@@ -244,6 +246,212 @@ And here is an example that looks more like what you expect.
   That's really convenient: we got a constant! Hence
   $ op("SurfArea")("cone") = iint_(x^2+y^2 <= 1) sqrt(2) dif A = sqrt(2) op("Area")(x^2+y^2 <= 1) = #boxed[$sqrt(2) pi $]. #qedhere $
 ]
+
+== [TEXT] The magic cross product formula for level surfaces <sec-magic-cross-prod>
+
+We now discuss a particular common kinds of surfaces: $z=f(x,y)$ and level surfaces.
+In fact the cone we just did is a good example.
+What we're going to do is try to capture the boilerplate work of the cross product
+into a single formula that we can just remember.
+
+=== For a surface of the form $z = f(x,y)$
+
+So imagine your surface is given by $z = f(x,y)$ for some $f$
+(e.g. the cone we just did was $f(x,y) = sqrt(x^2+y^2)$)
+over some region $cal(R)$ (e.g. the cone had $cal(R) = {x^2+y^2<=1}$).
+Then the parametrization we expect to use is
+$ bf(r)(x,y) = vec(x, y, f(x,y)). $
+The partial derivatives are
+$ frac(partial bf(r), partial x) &= vec((partial x) / (partial x) , (partial z) / (partial x) , (partial z) / (partial x)) = vec(1 , 0 , (partial z) / (partial x) ) \
+  frac(partial bf(r), partial y) &= vec((partial x) / (partial y) , (partial y) / (partial y) , (partial z) / (partial y)) = vec(0 , 1 , (partial z) / (partial y)). $
+Hence, in this case we arrive at
+$ frac(partial bf(r), partial x) times frac(partial bf(r), partial y)
+  &= (0 dot (partial z) / (partial y) - 1 dot (partial z) / (partial x)) bf(e)_1
+    - (1 dot ((partial z) / (partial y)) - 0 dot (partial z) / (partial x)) bf(e)_2
+    + (1 dot 1 - 0 dot 0) bf(e)_3 \
+  &= - (partial z) / (partial x) bf(e)_1  - (partial z) / (partial y) bf(e)_2 + bf(e)_3 \
+  &= - (partial f) / (partial x) bf(e)_1  - (partial f) / (partial y) bf(e)_2 + bf(e)_3. $
+
+Let's write this down now.
+
+#memo(title: [Memorize: Magic cross product formula for $z = f(x,y)$])[
+  Consider a surface given by $z = f(x,y)$ with $f$ differentiable.
+  Then for the obvious parametrization $bf(r)(x,y) = (x,y,f(x,y))$ we have
+  $ frac(partial bf(r), partial x) times frac(partial bf(r), partial y)
+  = lr(angle.l - (partial f) / (partial x), - (partial f) / (partial y), 1 angle.r). $
+]
+
+In particular, the surface area becomes
+$ op("SurfArea")(cal(S)) = iint_(cal(R)) sqrt(1 + ((partial f) / (partial x))^2 + ((partial f) / (partial y))^2) dif x dif y. $
+You'll find this formula written in a lot of other textbooks and it's worth knowing
+(I would say you should memorize the magic cross product formula,
+and then just remember this one is the magnitude).
+Let's see how it can captures the boilerplate in the cone example.
+
+#sample[
+  Find the surface area of the cone defined by $z = sqrt(x^2+y^2) <= 1$.
+]
+#soln[
+  Letting $f(x,y) = sqrt(x^2+y^2)$, this time we skip straight to
+  $ (partial f) / (partial x) &= x/(sqrt(x^2+y^2)) \
+    (partial f) / (partial y) &= y/(sqrt(x^2+y^2)). $
+  Hence we got a shortcut to the vector $angle.l -x/(sqrt(x^2+y^2)), -y/(sqrt(x^2+y^2)), 1 angle.r$ we found before.
+  We find its magnitude in the same way:
+  $ sqrt(1 + ((partial f) / (partial x))^2 + ((partial f) / (partial y))^2)
+  = sqrt(1 + (x^2) / (x^2 + y^2) + (y^2) / (x^2 + y^2) + 1) = sqrt(2). $
+  Now
+  $ op("SurfArea")("cone") = iint_(x^2+y^2 <= 1) sqrt(2) dif A = sqrt(2) op("Area")(x^2+y^2 <= 1) = #boxed[$sqrt(2) pi $]. #qedhere $
+]
+
+=== For a level surface $g(x,y,z) = c$
+
+However, we can get an even better formula in a lot of cases using implicit differentiation.
+The basic idea is that we would prefer to think of the cone as $x^2+y^2-z^2 = 0$,
+so that we don't need to think about square roots.
+And that's exactly a level surface.
+
+So imagining a _level surface_ $g(x,y,z) = c$ instead,
+where each $(x,y)$ in our region $cal(R)$ has exactly one $z = z(x,y)$ value.
+On paper, you imagine solving for $z$ in terms of $x$ and $y$, and then using
+$ frac(partial bf(r), partial x) times frac(partial bf(r), partial y)
+  = - (partial z) / (partial x) bf(e)_1  - (partial z) / (partial y) bf(e)_2 + bf(e)_3 $
+but we'd like to not have to solve for $z$ in such a brute way.
+
+The trick is to consider the gradient of $g$ and use the chain rule.
+You might remember that
+$ nabla g = lr(angle.l (partial g) / (partial x), (partial g) / (partial y), (partial g) / (partial z) angle.r) $
+is pretty easy to calculate, usually.
+However, if we take the partial derivative of
+$ g(x,y,z) = c $
+with respect to $x$ and $y$, the derivative of $c$ vanishes while the chain rule gives
+$ 0 = (partial g) / (partial x) + (partial g) / (partial z) dot (partial z) / (partial x)
+  ==> (partial g) / (partial x) = - (partial g) / (partial z) dot (partial z) / (partial x). $
+Similarly
+$(partial g) / (partial y) = - (partial g) / (partial z) dot (partial z) / (partial y)$.
+Hence
+$ nabla g = lr(angle.l -(partial g) / (partial z) dot (partial z) / (partial x),
+  -(partial g) / (partial z) dot (partial z) / (partial y), (partial g) / (partial z)  angle.r)
+  = (partial g) / (partial z) dot lr(angle.l -(partial z) / (partial x), -(partial z) / (partial y), 1 angle.r). $
+
+#digression(title: [Digression on the chain rule])[
+  You might be spooked by the minus sign here,
+  as I was, since if you just look at the fractions the expression seems wrong.
+  This is why I don't like people who try to remember the chain rule as just "cancel the fractions",
+  because in some contexts you'll get equations like this that don't seem correct.
+
+  The context to remember here is that $z = z(x,y)$ is itself a function of $x$ and $y$
+  that holds on to the requirement $g(x,y,z(x,y)) = c$;
+  that is, if $x$ changes a little, $z = z(x,y)$ should change in an "opposite" way to ensure $g = c$ is still true.
+
+  How much should the change be?
+  It might be easiest to reason through two applications of linear approximation.
+  If $epsilon$ is some small displacement, then linear approximation is saying that
+  $ g(x + epsilon, y, z(x + epsilon, y))
+    &approx g(x + epsilon, y, z(x, y) + (partial z) / (partial x) dot epsilon) \
+    &approx g(x,y,z(x,y)) + nabla g dot vec(epsilon, 0, (partial z) / (partial x) dot epsilon) \
+    &= g(x,y,z(x,y))
+      + [(partial g) / (partial x) + (partial g) / (partial z) dot (partial z) / (partial x)] epsilon. $
+  Hence we want the bracketed coefficient of $epsilon$ to be zero,
+  which is the equation we got before.
+]
+
+Something really good is happening here, because the cross product we wanted just sits on the right-hand side!
+Because of this, we have managed to derive the following miraculous identity.
+#memo(title: [Memorize: Magic cross product formula for a level surface])[
+  Let $g$ be differentiable and consider the level surface $g(x,y,z) = c$.
+  Let $cal(S)$ be a part of this level surface described implicitly by some function $z=f(x,y)$,
+  and suppose also that $partial g / partial z != 0$ over $cal(R)$.
+  Then for the obvious parametrization $bf(r)(x,y) = (x,y,z)$ we have
+    $ frac(partial bf(r), partial x) times frac(partial bf(r), partial y)
+  = (nabla g) / (partial g slash partial z). $
+]
+The reason this magic identity is even better is that there is no need to differentiate $f$
+or even to determine it.
+Let's see it in action by redoing our example with a cone.
+#sample[
+  Find the surface area of the cone defined by $z = sqrt(x^2+y^2) <= 1$.
+]
+#soln[
+  The cone is the part of the level surface of $g(x,y,z) = x^2+y^2-z^2$ with $z >= 0$.
+  (We know in fact $f(x,y) = sqrt(x^2+y^2)$, but we won't use this.)
+  Now we can jump straight to
+  $ (nabla g) / (partial g / partial z) = lr(angle.l 2x, 2y, -2z angle.r) / (-2z)
+    = lr(angle.l -x/z, -y/z, 1 angle.r). $
+  The magnitude of this vector is
+  $ sqrt((-x/z)^2 + (-y/z)^2 + 1) = sqrt((x^2+y^2)/z^2 + 1) = sqrt(2) $
+  so we get
+  $ op("SurfArea")("cone") = iint_(x^2+y^2 <= 1) sqrt(2) dif A
+    = sqrt(2) op("Area")({x^2+y^2 <= 1}) = #boxed[$sqrt(2) pi $]. #qedhere $
+]
+If you compare this carefully with $z = sqrt(x^2+y^2)$,
+you'll see this is _still_ the same solution as the first magic formula,
+which is in turn _still_ the same solution as when we really used bare hands.
+But the shortcuts are nice because it means you don't have to think about the cross product at all.
+
+Now as we promised, let's show how to find surface area for a sphere
+without having to slog through the pain of spherical coordinates.
+#sample[
+  Find the surface area of the sphere $x^2+y^2+z^2 = 1$.
+]
+#soln[
+  We'll find the surface area for the hemisphere with $z >= 0$ and then double it.
+  We could view the hemisphere as $z = f(x,y) = sqrt(1 - (x^2+y^2))$,
+  but to avoid square roots we're much happier by letting
+  $ g(x,y,z) = x^2+y^2+z^2 $
+  and considering the hemisphere as the chunk of the level surface with $z >= 0$ and $x^2+y^2 <= 1$.
+  In that case,
+  $ (nabla g) / (partial g slash partial z) = lr(angle.l 2x, 2y, 2z angle.r) / (2z)
+    = lr(angle.l x/z, y/z, 1 angle.r). $
+  This time the magnitude of the vector is
+  $ sqrt((x/z)^2 + (y/z)^2 + 1) = sqrt((x^2+y^2+z^2) / z^2) = 1/z. $
+  Hence, we need to integrate
+  $ op("SurfArea")("hemisphere") = iint_(x^2+y^2<=1) 1/sqrt(1-(x^2+y^2)) dif x dif y. $
+  To nobody's surprise, we use polar coordinates to change this to
+  $ op("SurfArea")("hemisphere")
+    &= int_(theta=0)^(2pi) int_(r=0)^1 1/(sqrt(1-r^2)) (r dif r dif theta) \
+    &= (int_(theta=0)^(2pi) dif theta) (int_(r=0)^1 r/(sqrt(1-r^2)) dif r). $
+  The left integral is $2pi$.
+  For the inner integral, use the $u$-substitution $u=1-r^2 ==> (dif u) / (dif r) = -2r$ to get
+  $ int_(r=0)^1 r/(sqrt(1-r^2)) dif r
+    = int_(u=1)^0 -1/2 u^(-1/2) dif u
+    = int_(u=0)^1 1/2 u^(-1/2) dif u
+    = [u^(1/2)]_(u=0)^1 = 1. $
+  Hence
+  $ op("SurfArea")("hemisphere") = 2 pi dot 1 = 2 pi $
+  and the surface area of the sphere is thus $2 pi dot 2 = #boxed[$ 4 pi $]$.
+]
+
+== [RECIPE] Recap of surface area
+
+Let's summarize the surface area procedure we just saw.
+
+#recipe(title: [Recipe for computing surface area])[
+  To compute the surface area of a surface $cal(S)$:
+
+  1. Figure out how to get the cross product
+    $(partial bf(r))/(partial u) times (partial bf(r))/(partial v)$
+    for a parametrization $bf(r)$ using the following checklist.
+    - If $cal(S)$ is given by $z = f(x,y)$
+      use the magic cross product formula @sec-magic-cross-prod to skip directly to
+      $ (partial bf(r))/(partial u) times (partial bf(r))/(partial v)
+      = lr(angle.l -(partial f) / (partial x), - (partial f) / (partial y), 1 angle.r). $
+    - For appropriate level surfaces $g(x,y,z) = c$,
+      use the magic cross product formula @sec-magic-cross-prod to skip directly to
+      $ (partial bf(r))/(partial u) times (partial bf(r))/(partial v)
+      = (nabla g) / (partial g slash partial z). $
+    - Otherwise, use the long way:
+      - Pick a parametrization $bf(r)(u,v) : cal(R) -> RR^3$ of the surface $cal(S)$.
+        Sort of like in @sec-flex-param, you have some freedom in how you set the parametrization.
+      - Compute the partial derivatives
+        $(partial bf(r))/(partial u)$ and $(partial bf(r))/(partial v)$
+        (both are three-dimensional vectors at each point),
+      - Compute the cross product $(partial bf(r))/(partial u) times (partial bf(r))/(partial v)$.
+  2. Take the magnitude of the cross product to get a number for each point on the surface.
+  3. Integrate it over $cal(R)$ using any of the methods for double integrals
+    (such as horizontal/vertical slicing, polar coordinates, change of variables, etc.).
+]
+
+
 
 == [EXER] Exercises
 
