@@ -263,6 +263,10 @@ This is actually a bit easier to see than the last case.
   This time, all that happens is we take the mirror image through the
   plane formed by the $z$-axis and the line $O P$.
 
+== [TEXT] Examples of using spherical coordinates
+
+== [TEXT] Another example: offset sphere
+
 == [TEXT] Spherical coordinates for gravity
 
 Let's go back to the equation for gravity where the components were given by
@@ -277,5 +281,7 @@ Let's make good on this promise for $G_3$ and do the change of variables:
 $ (z delta(x,y,z))/((x^2+y^2+z^2)^(3/2)) dif x dif y dif z
   &= ((rho cos phi) delta(x,y,z))/(rho^3) (rho^2 sin phi dif rho dif phi dif theta) \
   &= delta(x,y,z) sin phi cos phi  dif rho dif phi dif theta. $
+
+#todo[do some applications of this]
 
 == [EXER] Exercises

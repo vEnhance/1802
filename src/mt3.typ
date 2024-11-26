@@ -3,6 +3,7 @@
 = Practice midterm 3 <ch-mt3>
 
 Solutions are in @ch-sol-mt3.
+Note that this midterm only covers 2D topics.
 
 #exer[
   Another butterfly is fluttering in the $x y$ plane

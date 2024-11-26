@@ -102,11 +102,17 @@ For comparison, Part Hotel corresponds to §14, §15, §18, §19, §20, §21 of 
 #pagebreak()
 #include "src/work.typ"
 #pagebreak()
+#include "src/ftcgreen.typ"
+#pagebreak()
 #include "src/2dflux.typ"
+#pagebreak()
+#include "src/mt3.typ"
 #pagebreak()
 #include "src/flux.typ"
 #pagebreak()
-#include "src/mt3.typ"
+#include "src/divthm.typ"
+#pagebreak()
+#include "src/badstokes.typ"
 #pagebreak()
 
 #part[Part India: Practice questions]
