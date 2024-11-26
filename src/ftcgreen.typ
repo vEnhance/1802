@@ -351,3 +351,5 @@ We'll give several examples of this in @sec-recipe-2d-flux.
   $ bf(F)(x,y) = vec(sin(e^x) + cos(e^x), arctan(y)) $
   conservative?
 ]
+
+#todo[piecewise green example]

@@ -63,7 +63,7 @@ and points all the normal vectors one way.
 In particular, _the order of $u$ and $v$ matter_; if you flip the order of the two parameters
 it will negate the entire cross product:
 $ ((partial bf(r))/(partial u) times (partial bf(r))/(partial v))
-  = - ((partial bf(r))/(partial u) times (partial bf(r))/(partial v)). $
+  = - ((partial bf(r))/(partial v) times (partial bf(r))/(partial u)). $
 Hence the flux will get negated too.
 This sign issue is super disorienting because it wasn't present for work,
 where "start to stop" was pretty easy to think about.
@@ -109,8 +109,9 @@ We go back to recipe format now.
   3. Compute the cross product $(partial bf(r))/(partial u) times (partial bf(r))/(partial v)$.
   4. Look at which way the cross product points (via right-hand rule).
     Does it point "outward"?
-    If not, switch the order of $u$ and $v$ before continuing.
-  5. Compute the dot product $bf(F) dot ((partial bf(r))/(partial u) times (partial bf(r))/(partial v))$.
+    If not, negate the cross product (equivalently, swap the order of $u$ and $v$) before going on.
+  5. Compute the dot product $ bf(F) dot ((partial bf(r))/(partial u) times (partial bf(r))/(partial v)). $
+    This gives you a number at every point on the parametrizing region $cal(R)$.
   6. Integrate the entire thing over $cal(R)$ using any of the methods for double integrals
     (such as horizontal/vertical slicing, polar coordinates, change of variables, etc.).
 ]
