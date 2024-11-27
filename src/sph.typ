@@ -6,22 +6,21 @@ In addition to cylindrical coordinates, there's one more system we'll use,
 called spherical coordinates.
 This section defines them and shows how to use them.
 
-#warning(title: [Warning: There are _four_ competing standards, check your book])[
+#warning(title: [Warning: There are _eight_ competing standards, check your book])[
   Note that there are competing conventions!
   For us, the letter names are going to mean
   $
-    rho &:= "distance to" (0,0,0) \
-    phi &:= "angle down" z" axis" \
-    theta &:= "same as in polar coordinates"
+    rho &:= "distance to" (0,0,0) &quad& "(spelled rho, pronounced like row)" \
+    phi &:= "angle down" z" axis" &quad& "(spelled phi, pronounced like fee)" \
+    theta &:= "same as in polar coordinates" quad&& "(spelled theta, prounced like thay-tah)"
   $
   and we write them in that order.
-  However, some books write the letters in a different order,
-  some books flip the meaning of $phi$ of $theta$,
-  and some books _both_ change the meaning _and_ flip the order.
-  If you don't know the Greek letter names, they are "rho", "phi", "theta".
-
-  Also note that the Greek letter $phi$ may be written as $phi.alt$ in different fonts.
-  (If you use LaTeX, these are `\varphi` and `\phi`.)
+  However, depending on your book:
+  - The names of $theta$ and $phi$ might be swapped.
+    (Also note that the Greek letter $phi$ may be written as $phi.alt$ in different fonts.
+    If you use LaTeX, these are `\varphi` and `\phi`.)
+  - The order of $theta$ and $phi$ might be swapped (regardless of whether the names change too).
+  - $rho$ might be replaced by $r$ instead.
 ]
 
 == [TEXT] The definition of spherical coordinates
