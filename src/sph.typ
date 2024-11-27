@@ -224,7 +224,7 @@ Here are two ways to verify @eqn-sph-phi-too-big is true.
 / Geometric proof (more informative):
   Look at @fig-sph-phi-too-big.
   When the "illegal" value $phi + pi$ is picked for the angle,
-  the red arrow end sup going all the way through $O$.
+  the red arrow ends up going all the way through $O$.
   Hence, the projection of the new point onto the polar circle in blue
   ends up being the antipode $(r, theta pm pi)_"pol"$ rather than $(r, theta)_"pol"$.
   If we then think about the angle from the $+z$ axis to the brown radius $rho$,
