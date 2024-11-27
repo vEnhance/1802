@@ -165,7 +165,7 @@ Here is a really ugly example to start, to give you some practice with spherical
   via spherical coordinates. (We'll show a more elegant solution later.)
 
   The parametrization $bf(r)$ is given from the spherical coordinate system by
-  $ bf(r) (phi, theta) = (sin phi cos theta , phi sin theta , cos phi) , $
+  $ bf(r) (phi, theta) = (sin phi cos theta , sin phi sin theta , cos phi) , $
   across the range
   $ 0 <= theta <= 2 pi quad "and" quad 0 <= phi <= pi $
   for our region $cal(R)$.
