@@ -132,6 +132,8 @@ instead, and replace the parallelogram with a parallelepiped,
 in which case one now has $3$ easy cases.
 And so on in $n$ dimensions.
 
+== Proof that the algebraic definition of cross product matches the geometric one <appendix-crosspf>
+
 == What does $i^i$ mean? <appendix-i-to-the-i>
 
 When learning mathematics, I believe definitions are actually more important than theorems.

@@ -20,9 +20,14 @@ This definition is terrible, so bear with me.
   Suppose $bf(v) = vec(a_1, a_2, a_3)$ and $bf(w) = vec(b_1, b_2, b_3)$ are two vectors in $RR^n$.
 
   The _algebraic definition_ of the cross product is:
-  $ bf(v) times bf(w) := det mat(a_2, a_3; b_2, b_3) bf(e)_1
-    - det mat(a_1, a_3; b_1, b_3) bf(e)_2 + det mat(a_1, a_2; b_1, b_2) bf(e)_3
-    = vec(a_2 b_3 - a_3 b_2, a_3 b_1 - a_1 b_3, a_1 b_2 - a_2 b_1). $
+  #eqn[
+    $ bf(v) times bf(w) := det mat(a_2, a_3; b_2, b_3) bf(e)_1
+      - det mat(a_1, a_3; b_1, b_3) bf(e)_2 + det mat(a_1, a_2; b_1, b_2) bf(e)_3
+      = vec(a_2 b_3 - a_3 b_2, a_3 b_1 - a_1 b_3, a_1 b_2 - a_2 b_1). $
+    <eqn-cross-raw-alg>
+  ]
+
+  (See the tip below for a way to remember this formula more easily.)
 
   The _geometric definition_ of the cross product is based on
   specifying both the direction and magnitude.
@@ -33,6 +38,14 @@ This definition is terrible, so bear with me.
   - The *direction* is given by requiring $bf(v) times bf(w)$ to be perpendicular
     to _both_ $bf(v)$ and $bf(w)$, and also satisfying the *right-hand rule*.
 ]
+
+Like with the dot product, it's not obvious at all why these definitions are compatible!
+@eqn-cross-raw-alg is probably also really mysterious and seems to come from nowhere.
+In this case, I think the idea is that you should start with the geometric definition,
+then grind through some calculation to get a system of equations.
+If you solve the system of equations, you wind up with @eqn-cross-raw-alg as the result.
+If you want to see this derivation done in full, check @appendix-crosspf.
+
 #typesig[
   The cross product *only* accepts two vectors *both of length $3$*.
   And it outputs a single *vector of length $3$*.
@@ -57,18 +70,31 @@ This definition is terrible, so bear with me.
     bf(e)_3 times bf(e)_1 &= bf(e)_3 = -bf(e)_1 times bf(e)_3. $
 ]
 
-#tip(title: [How to remember the algebraic cross product definition])[
+It may not be that easy to remember @eqn-cross-raw-alg.
+In practice, I think almost everyone uses the following mnemonic for it.
+
+#tip(title: [Tip: How to remember the algebraic cross product definition])[
   The algebraic definition is usually remembered using the following mnemonic:
-  $ bf(v) times bf(w) =
-    det mat(
-      bf(e)_1, bf(e)_2, bf(e)_3;
-      a_1, a_2, a_3;
-      b_1, b_2, b_3
-    ). $
+  #eqn[
+    $ bf(v) times bf(w) =
+      det mat(
+        bf(e)_1, bf(e)_2, bf(e)_3;
+        a_1, a_2, a_3;
+        b_1, b_2, b_3
+      ). $
+    <eqn-cross-det>
+  ]
   Mathematically speaking, the right-hand side doesn't make sense and is a type-error,
   because one can't have a matrix where some things in it are numbers
   and other things in it are vectors.
   However, if you ignore that and multiply anyway, you'll get the algebraic definition above.
+
+  In these notes *I will always use @eqn-cross-det rather than @eqn-cross-raw-alg*
+  because that's what people actually do in practice.
+  (I do so quite grudgingly, because @eqn-cross-det is officially a type-error,
+  and in theory it is nonsense.
+  But in the words of Linus Torvalds:
+  "Theory and practice sometimes clash. And when that happens, theory loses. Every single time.")
 ]
 
 #warning(title: [Warning: Cross product is anti-commutative])[
@@ -76,7 +102,7 @@ This definition is terrible, so bear with me.
   $ bf(v) times bf(w) = - bf(w) times bf(v) $
   in contrast to the dot product.
   Note the minus sign.
-  (The right rule means that you can't swap your index and middle finger.)
+  (The right hand rule means that you can't swap your index and middle finger.)
 
   Also, note that $bf(v) times bf(v) = 0$
   (or indeed $bf(v) times bf(w) = 0$ whenever $bf(v)$ and $bf(w)$ are parallel).
@@ -98,6 +124,8 @@ As a sanity check you can verify that, indeed,
 this vector is perpendicular to both $bf(v)$ and $bf(w)$ using the dot product
 $ vec(-3,6,3) dot vec(1,2,3) &= (-3)(1) + (6)(2) + (3)(3) = 0 \
   vec(-3,6,3) dot vec(4,5,6) &= (-3)(4) + (6)(5) + (3)(6) = 0. $
+(Indeed, our proof in the appendix (@appendix-crosspf) shows the cross product is
+really designed so that this dot product is $0$.)
 
 == [RECIPE] What to use the cross product for
 
@@ -244,8 +272,6 @@ we've seen in applications.
 ) <table-vector-objects>
 
 == [EXER] Exercises
-
-#todo[idk what's good to test with cross products]
 
 #exer[
   Let $bf(v)$ and $bf(w)$ be vectors in $RR^3$
