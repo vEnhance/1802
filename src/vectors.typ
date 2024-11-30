@@ -71,8 +71,8 @@ Some vectors in $RR^3$ are special enough to get their own shorthand.
   - If three dimensions:
     $ bf(v) = vec(x,y,z) ==> |bf(v)| := sqrt(x^2+y^2+z^2). $
 
-  In $n$ dimensions, if $bf(v) = angle.l x_1, ..., x_n angle.r$,
-  the length is $|bf(v)| := sqrt(x_1^2 + ... + x_n^2)$.
+  In $n$ dimensions, if $bf(v) = angle.l a_1, ..., a_n angle.r$,
+  the length is $|bf(v)| := sqrt(a_1^2 + ... + a_n^2)$.
 ]
 
 #typesig[

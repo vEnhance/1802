@@ -32,8 +32,8 @@ Honestly, you shouldn't think of dot product as a "product"; the name sucks.)
 
 Of course, the classic newbie mistake (which you better not make on your midterm)
 is to define a product on vectors component-wise:
-why can't $vec(x_1, dots.v, x_n)$ and $vec(y_1, dots.v, y_n)$ have "product"
-$vec(x_1 y_1, dots.v, x_n y_n)$?
+why can't $vec(a_1, dots.v, a_n)$ and $vec(b_1, dots.v, b_n)$ have "product"
+$vec(a_1 b_1, dots.v, a_n b_n)$?
 Well, in 18.02, every vector definition needed a corresponding geometric picture
 for us to consider it worthy of attention.
 This definition has no geometric meaning.
