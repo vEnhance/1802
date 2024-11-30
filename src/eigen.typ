@@ -569,7 +569,7 @@ The answer is that you just get some complex numbers instead.
 
 #sample[
   Find the eigenvalues and eigenvectors of the matrix
-  $A = mat(1 / 2, - sqrt(3) / 2; sqrt(3) / 2, 1 / 2)$.
+  $ A = mat(1 / 2, - sqrt(3) / 2; sqrt(3) / 2, 1 / 2). $
 ]
 
 #soln[
