@@ -38,8 +38,13 @@ I promised you two definitions right? So here they are.
 ]
 
 It's totally not obvious that these two definitions are the same!
-The standard proof uses the law of cosines;
-I also found a proof without trigonometry that I typed in @appendix-dotpf.
+I know two reasonable proofs, both of which I've typed in the appendix:
+
+- The standard proof uses the law of cosines; it's documented in @appendix-dotpf-alg.
+  It's short but seems somewhat magical.
+- I came up with a geometric proof without trigonometry; it's documented in @appendix-dotpf-geo.
+  It's longer but easier to come up with.
+
 I won't dwell on this proof too much in the interest of moving these notes forward.
 
 #typesig[

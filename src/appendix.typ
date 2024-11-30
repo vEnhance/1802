@@ -82,10 +82,24 @@ These notes are still in the first stage.
 The introduction-to-proofs class at your school
 will essentially be the beginning of the second stage.
 
-== Proof that the algebraic definition of dot product matches the geometric one <appendix-dotpf>
+== Deriving the geometric definition of dot product from the algebraic one (short but comes out of nowhere) <appendix-dotpf-alg>
 
 We have two definitions in play and we want to show they coincide, which makes notation awkward.
 So in what follows, our notation $bf(u) dot bf(v)$ will always refer to the
+_algebraic_ definition; and we will _prove_ that $bf(u) dot bf(v) = |bf(u)| |bf(v)| cos theta$.
+
+== Deriving the algebraic definition of dot product from the geometric one (longer but easier to come up with) <appendix-dotpf-geo>
+
+The proof in @appendix-dotpf-alg might seem magical.
+Indeed, it's so short because it's cheating in some way:
+it starts with the algebraic definition.
+But if you've never seen the dot product before, that algebraic definition is unnatural;
+you wouldn't have any idea to write the expression $a_1 b_1 + ... + a_n b_n$.
+So in this section we give a proof that _starts_ from the geometric formula
+and shows how you would come up with $a_1 b_1 + ... + a_n b_n$.
+
+So this time our convention is flipped from @appendix-dotpf-alg:
+in what follows, our notation $bf(u) dot bf(v)$ will always refer to the
 _geometric_ definition; that is $bf(u) dot bf(v) := |bf(u)| |bf(v)| cos theta$.
 And our goal is to show that it matches the algebraic definition.
 
