@@ -17,10 +17,10 @@ rather than just using one or two isolated recipes.)
   In $RR^3$, compute the projection of the vector $vec(4,5,6)$ onto the plane $x+y+2z=0$.
 ] <exer-mt1p1>
 
-#exer[
+#exerstar[
   Suppose $A$, $B$, $C$, $D$ are points in $RR^3$.
   Give a geometric interpretation for this expression:
-  $ |arrow(D A) dot (arrow(D B) times arrow(D C))|. $
+  $ 1/6 |arrow(D A) dot (arrow(D B) times arrow(D C))|. $
 ] <exer-mt1p2>
 
 #exerstar[

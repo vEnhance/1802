@@ -52,8 +52,13 @@ $ bf(a) = vec(4-7/2, 5-7/2, 6-2(7/2)) = vec(1/2, 3/2, -1). $
 
 == Solution to @exer-mt1p2
 
-*Answer*: This equals the volume of the parallelepiped formed by $arrow(D A)$, $arrow(D B)$, $arrow(D C)$.
+*Answer*: This equals the volume of the tetrahedron $A B C D$.
 
+In general, the volume of the tetrahedron is $1/6$ the area of the
+parallelepiped formed by $arrow(D A)$, $arrow(D B)$, $arrow(D C)$.
+Se we will prove that
+$ |arrow(D A) dot (arrow(D B) times arrow(D C))| $
+gives the volume of that parallelepiped.
 Here are two approaches for proving it.
 
 === First approach using coordinates
