@@ -2,9 +2,9 @@
 
 = Solutions to practice midterm 2 <ch-sol-mt2>
 
-The problem statements are given in @ch-mt1.
+The problem statements are given in @ch-mt2.
 
-== Solution to the butterfly (@prob-mt2p1)
+== Solution to the butterfly (@exer-mt2p1)
 
 The butterfly’s position in the $x y$-plane is given by:
 $ bf(r) (t) = angle.l cos (t) , cos (t) angle.r . $
@@ -95,7 +95,7 @@ $ L = sqrt(2) dot 2 dot 2 = 4 sqrt(2) . $
 
 #pagebreak()
 
-== Solution to the level curve (@prob-mt2p2)
+== Solution to the level curve (@exer-mt2p2)
 
 The first task is to recover the value of $k$ which wasn't given in the statement.
 First, substitute the point $(1 , 2)$ into the function $f (x , y)$:
@@ -119,7 +119,7 @@ $ 3 x + 20 y = 43. $
 
 #pagebreak()
 
-== Solution to the linear approximation (@prob-mt2p3)
+== Solution to the linear approximation (@exer-mt2p3)
 
 We are given the function: $ f (x , y) = x^(5 y) $ and are asked to
 estimate $f (1.001 , 3.001)$ using linear approximation, starting from the point $(1 , 3)$,
@@ -142,7 +142,7 @@ $ f (1.001 , 3.001) &approx f (1 , 3) + nabla f (1 , 3) dot vec(0.001, 0.001)
 
 #pagebreak()
 
-== Solution to the two-variable function (@prob-mt2p4)
+== Solution to the two-variable function (@exer-mt2p4)
 
 Although this is stated as an 18.02 problem,
 it can actually be solved basically only using 18.01 methods.
@@ -317,7 +317,7 @@ this approach is not going to fly.
 
 #pagebreak()
 
-== Solution to the constrained optimization (@prob-mt2p5)
+== Solution to the constrained optimization (@exer-mt2p5)
 
 Let $f(x,y,z) = x+2y+2z$.
 Let $cal(R)$ denote the region $x^2 + y^2 + z^2 <= 100$ (a ball of radius $10$)
@@ -383,7 +383,7 @@ We follow the steps we described in the recipe in LAMV.
 
 #pagebreak()
 
-== Solution to the tangent plane (@prob-mt2p6)
+== Solution to the tangent plane (@exer-mt2p6)
 
 The gradient of the function $f$
 $ nabla f = vec(2(x-1), 3(y-1)^2, 4(z-1)^3) $

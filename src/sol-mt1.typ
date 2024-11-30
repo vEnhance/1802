@@ -4,7 +4,7 @@
 
 The problem statements are given in @ch-mt1.
 
-== Solution to @prob-mt1p1
+== Solution to @exer-mt1p1
 
 *Answer*: $vec(1/2, 3/2, -1)$.
 
@@ -50,9 +50,7 @@ $ (4-t) + (5-t) + 2(6-2t) = 0 ==> 21 - 6t = 0 ==> t = 7/2. $
 Hence the answer
 $ bf(a) = vec(4-7/2, 5-7/2, 6-2(7/2)) = vec(1/2, 3/2, -1). $
 
-#pagebreak()
-
-== Solution to @prob-mt1p2
+== Solution to @exer-mt1p2
 
 *Answer*: This equals the volume of the parallelepiped formed by $arrow(D A)$, $arrow(D B)$, $arrow(D C)$.
 
@@ -86,9 +84,7 @@ See the following picture from #url("https://en.wikipedia.org/wiki/Triple_produc
   caption: [Triple product image taken from Wikipedia.],
 )
 
-#pagebreak()
-
-== Solution to @prob-mt1p3
+== Solution to @exer-mt1p3
 
 *Answer*: 0, no matter which plane $cal(P)$ is picked.
 
@@ -139,9 +135,7 @@ which has determinant $0$.
   no matter which plane $cal(P)$ is picked.
 ]
 
-#pagebreak()
-
-== Solution to @prob-mt1p4
+== Solution to @exer-mt1p4
 
 *Answer*: $|bf(a) times bf(v)| = 3$ and $|bf(b) times bf(v)| = 2$.
 
@@ -161,9 +155,7 @@ the area of the parallelogram formed by $bf(a)$ and $bf(v)$, which is $3$
 (because this parallelogram has base $|bf(a)|=1$ and height $|bf(v) dot bf(b)|=3$).
 Similarly, $bf(b) times bf(v)$ has magnitude $2$.
 
-#pagebreak()
-
-== Solution to @prob-mt1p5
+== Solution to @exer-mt1p5
 
 *Answer*: $0$.
 
@@ -235,9 +227,7 @@ If we wrote $M$ as a matrix _in this new basis_ $angle.l bf(b)_1, bf(b)_2 angle.
 $ M = mat(0,1;1,0) $
 which has trace $0+0=0$.
 
-#pagebreak()
-
-== Solution to @prob-mt1p6
+== Solution to @exer-mt1p6
 
 *Answer*: $(3 sqrt(3))/4 root(3, 61)$.
 
