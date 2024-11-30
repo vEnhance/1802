@@ -194,8 +194,8 @@ as shown in @fig-parallelogram.
 The following theorem is true, but we won't be able to prove it in 18.02.
 
 #recipe(title: [Recipe for area of a parallelogram])[
-  The area of the parallelogram formed by $bf(v)_1 = vec(x_1, y_1)$ and $bf(v)_2 = vec(x_2, y_2)$ is equal to
-  the absolute value of the determinant
+  The signed area of the parallelogram formed by
+  $bf(v)_1 = vec(x_1, y_1)$ and $bf(v)_2 = vec(x_2, y_2)$ is equal to
   $ det mat(x_1, x_2; y_1, y_2) = x_1 y_2 - x_2 y_1. $
 ]
 
@@ -203,11 +203,11 @@ A similar theorem is true for the parallelepiped#footnote[I hate trying to spell
 with three vectors in $RR^3$; see @fig-parallelepiped.
 
 #recipe(title: [Recipe for volume of a parallelepiped])[
-  The volume of the parallelepiped formed by
+  The signed volume of the parallelepiped formed by
   $bf(v)_1 = vec(x_1, y_1, z_1)$,
   $bf(v)_2 = vec(x_2, y_2, z_2)$,
   $bf(v)_3 = vec(x_3, y_3, z_3)$
-  is equal to the absolute value of the determinant
+  is equal to
   $ det mat(x_1, x_2, x_3; y_1, y_2, y_3; z_1, z_2, z_3). $
 ]
 
@@ -215,6 +215,14 @@ with three vectors in $RR^3$; see @fig-parallelepiped.
   image("figures/vectors-parallelepiped.svg", width: auto),
   caption: [Three vectors in $RR^3$ making a parallelepiped.],
 ) <fig-parallelepiped>
+
+You might noticed that the word "signed" has slipped in before "area" and "volume".
+What does that mean?
+Well, if you only care about the area of the volume itself,
+it doesn't matter for you; you should just take the absolute value of the determinant.
+But the sign carries a bit more information.
+
+#todo[describe 2d and right hand rule]
 
 #digression[
   If you're interested in the proof of these results
