@@ -57,7 +57,7 @@ Here are two examples of this with spheres.
   The normal vector $bf(n)$ at any point $(x,y,z)$ on the surface of the sphere
   is a unit vector pointing in the direction of $angle.l x,y,z angle.r$.
   Conveniently, the force vector $bf(F)$ is a vector of magnitude $17$ in the same direction!
-  That is, $ bf(F) dot bf(n) = (10bf(n)) dot (bf(n)) = 17. $
+  That is, $ bf(F) dot bf(n) = (17 bf(n)) dot (bf(n)) = 17. $
   Consequently,
   $ iint_(cal(S)) bf(F) dot dif bf(S) = 17 op("SurfArea")(cal(S)) = 17 dot (4 dot 289)pi = #boxed[$ 4 dot 17^3 pi $]. $
   (In general, we know a sphere of radius $R$ has surface area $4 R^2 pi$.)
