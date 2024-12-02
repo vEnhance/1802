@@ -138,7 +138,7 @@ solve to $x = y = 0$ like the examples we tried with $100$ and $1000$.
 But we learned how to do this in the last section:
 in order to get a degenerate system you need to make sure that
 $
-  0 = det mat(5-lambda, -2; 3, 10-lambda).
+  0 = detmat(5-lambda, -2; 3, 10-lambda).
 $
 
 #remark[
@@ -151,7 +151,7 @@ $
 
 Expanding the determinant on the left-hand side gives
 $
-  0 = det mat(5-lambda, -2; 3, 10-lambda)
+  0 = detmat(5-lambda, -2; 3, 10-lambda)
   = (5-lambda)(10-lambda) + 6 = lambda^2 - 15 lambda + 56 = (lambda - 7)(lambda - 8).
 $
 Great! So we expect that if we choose either $lambda = 7$ and $lambda = 8$,
@@ -350,7 +350,7 @@ To repeat the story:
 
     To find the eigenvalues, we set the determinant of $A - lambda I$ equal
     to zero:
-    $ det (A - lambda I) &= det mat(2 - lambda, 9; - 1, 8 - lambda) \
+    $ det (A - lambda I) &= detmat(2 - lambda, 9; - 1, 8 - lambda) \
       &= (2 - lambda) (8 - lambda) - 9 dot (-1) = (2 - lambda) (8 - lambda) + 9 \
       &= lambda^2 - 10 lambda + 25 = (lambda - 5)^2. $
     This gives $lambda = 5$. So we only have one case!
@@ -379,7 +379,7 @@ To repeat the story:
     matrix. First, we compute $A - lambda I$:
     $ A - lambda I = mat(1, 2, 0; 0, 3, 0; 0, 1, 4) - lambda mat(1, 0, 0; 0, 1, 0; 0, 0, 1) = mat(1 - lambda, 2, 0; 0, 3 - lambda, 0; 0, 1, 4 - lambda) . $
     To find the eigenvalues, we set the determinant of $A - lambda I$ equal to zero:
-    $ det (A - lambda I) &= det mat(1 - lambda, 2, 0; 0, 3 - lambda, 0; 0, 1, 4 - lambda) \
+    $ det (A - lambda I) &= detmat(1 - lambda, 2, 0; 0, 3 - lambda, 0; 0, 1, 4 - lambda) \
       &= (1 - lambda) upright("det") mat(3 - lambda, 0; 1, 4 - lambda)
       &= (1 - lambda)(3 - lambda)(4 - lambda). $
     Setting this equal to $0$ and solving gives $lambda = 1$, $lambda = 3$, $lambda = 4$.
@@ -443,7 +443,7 @@ Most of the time it's not like that though.
     matrix. First, we compute $A - lambda I$:
     $ A - lambda I = mat(1, 2; 4, 7) - lambda mat(1, 0; 0, 1) = mat(1 - lambda, 2; 4, 7 - lambda) . $
     To find the eigenvalues, we set the determinant of $A - lambda I$ equal to zero:
-    $ det (A - lambda I) = det mat(1 - lambda, 2; 4, 7 - lambda)
+    $ det (A - lambda I) = detmat(1 - lambda, 2; 4, 7 - lambda)
       = (1 - lambda) (7 - lambda) - (4 times 2) = (1 - lambda) (7 - lambda) - 8 . $
     Expanding this expression:
     $ (1 - lambda) (7 - lambda) = 7 - 8 lambda + lambda^2 , $
@@ -528,7 +528,7 @@ $
 $
 which doesn't look stupid.
 But again, if you check the determinant, you find out
-$ det mat(1,10,-9;3,1,10;4,11,1) = 0. $
+$ detmat(1,10,-9;3,1,10;4,11,1) = 0. $
 So you know _a priori_ that there will be solutions besides $x=y=z=0$.
 
 I think 18.02 won't have too many situations where you need to solve a degenerate
@@ -579,7 +579,7 @@ The answer is that you just get some complex numbers instead.
     $ A - lambda I = mat(1 / 2, - sqrt(3) / 2; sqrt(3) / 2, 1 / 2) - lambda mat(1, 0; 0, 1) = mat(1 / 2 - lambda, - sqrt(3) / 2; sqrt(3) / 2, 1 / 2 - lambda) . $
 
     To find the eigenvalues, we set the determinant of $A - lambda I$ equal to zero:
-    $ det (A - lambda I) &= det mat(1 / 2 - lambda, - sqrt(3) / 2; sqrt(3) / 2, 1 / 2 - lambda) \
+    $ det (A - lambda I) &= detmat(1 / 2 - lambda, - sqrt(3) / 2; sqrt(3) / 2, 1 / 2 - lambda) \
       &= (1 / 2 - lambda) (1 / 2 - lambda) - (- sqrt(3) / 2 times sqrt(3) / 2) \
       &= (1 / 2 - lambda)^2 + 3 / 4 . $
     Setting this equal to zero and solving, we get

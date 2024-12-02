@@ -191,17 +191,17 @@ and you may have used it implicitly on some previous problem sets already:
 If you want to see this fully explicitly, you could compute the Jacobian
 $
   det J_("polar") &=
-  det mat(
+  detmat(
     (partial x) / (partial r), (partial x) / (partial theta), (partial x) / (partial z);
     (partial y) / (partial r), (partial y) / (partial theta), (partial y) / (partial z);
     (partial z) / (partial r), (partial z) / (partial theta), (partial z) / (partial z);
   ) \
-  &= det mat(
+  &= detmat(
     cos theta, - r sin theta, 0;
     sin theta, r cos theta, 0;
     0, 0, 1
   )
-  = det mat(cos theta, - r sin theta; sin theta, r cos theta) \
+  = detmat(cos theta, - r sin theta; sin theta, r cos theta) \
   &= r.
 $
 

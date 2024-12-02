@@ -226,7 +226,7 @@ Let's see an example of how to carry out this integration.
   $ bf(T)(u,v) &= (sqrt(v/u), sqrt(u v)) \
     bf(T)^(-1)(x,y) &= (y/x, x y). $
   We don't like square roots, so we'll the determinant of the Jacobian matrix for $bf(T)^(-1)$, which is
-  $ det (J_(bf(T)^(-1))) = det mat(-y/x^2, 1/x; y, x)
+  $ det (J_(bf(T)^(-1))) = detmat(-y/x^2, 1/x; y, x)
     = (- y / x^2) dot x - 1 / x dot y = - y / x - y / x = - (2 y) / (x) . $
   Since we used the upside-down version of the formula, we need to translate
   this back into $u$ and $v$ through the given formula.
@@ -270,7 +270,7 @@ Let's see an example of how to carry out this integration.
     = mat(cos theta, sin theta; -r sin theta, r cos theta). $
   The area scaling factor is then
   $ |det J_(bf(T))| =
-    det mat(cos theta, sin theta; -r sin theta, r cos theta)
+    detmat(cos theta, sin theta; -r sin theta, r cos theta)
     = r cos^2 theta - (-r sin^2 theta) = r(cos^2 theta + sin^2 theta) = r. $
   Hence, the transition map gives us the following change of variables:
   $ iint_(x^2+y^2=1) 1 dif x dif y

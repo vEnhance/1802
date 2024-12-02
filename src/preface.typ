@@ -110,15 +110,17 @@ and calculus as taught in United States high schools is assumed.
     So we'll assume you have memorized this strange rule, but don't know what it means.
 
   - We'll assume you know the formula for the determinant of a $2 times 2$ and $3 times 3$ matrix; that is
-    $ det mat(a,b;c,d) = a d - b c $
+    $ detmat(a,b;c,d) = det mat(a,b;c,d) = a d - b c $
     and
-    $ det mat(a_1, a_2, a_3; b_1, b_2, b_3; c_1, c_2, c_3)
-    = a_1 det mat(b_2, b_3; c_2, c_3)
-    - a_2 det mat(b_1, b_3; c_1, c_3)
-    + a_3 det mat(b_1, b_2; c_1, c_2). $
+    $ detmat(a_1, a_2, a_3; b_1, b_2, b_3; c_1, c_2, c_3)
+      = det mat(a_1, a_2, a_3; b_1, b_2, b_3; c_1, c_2, c_3)
+      = a_1 detmat(b_2, b_3; c_2, c_3)
+      - a_2 detmat(b_1, b_3; c_1, c_3)
+      + a_3 detmat(b_1, b_2; c_1, c_2). $
+    (The bars are a shorthand for the $det$ symbol; they're not absolute value bars.)
 
     For example, you should be able to verify the correctness of the following equation:
-    $ det mat(0, 1, 5; 2, 0, 13; 1, 4, 1) = 51. $
+    $ detmat(0, 1, 5; 2, 0, 13; 1, 4, 1) = 51. $
 
     We won't assume you know where this formula comes from,
     and in fact we won't be able to explain that within these notes.

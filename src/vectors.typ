@@ -196,7 +196,7 @@ The following theorem is true, but we won't be able to prove it in 18.02.
 #recipe(title: [Recipe for area of a parallelogram])[
   The signed area of the parallelogram formed by
   $bf(v)_1 = vec(x_1, y_1)$ and $bf(v)_2 = vec(x_2, y_2)$ is equal to
-  $ det mat(x_1, x_2; y_1, y_2) = x_1 y_2 - x_2 y_1. $
+  $ detmat(x_1, x_2; y_1, y_2) = x_1 y_2 - x_2 y_1. $
 ]
 
 A similar theorem is true for the parallelepiped#footnote[I hate trying to spell this word.]
@@ -208,7 +208,7 @@ with three vectors in $RR^3$; see @fig-parallelepiped.
   $bf(v)_2 = vec(x_2, y_2, z_2)$,
   $bf(v)_3 = vec(x_3, y_3, z_3)$
   is equal to
-  $ det mat(x_1, x_2, x_3; y_1, y_2, y_3; z_1, z_2, z_3). $
+  $ detmat(x_1, x_2, x_3; y_1, y_2, y_3; z_1, z_2, z_3). $
 ]
 
 #figure(

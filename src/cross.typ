@@ -21,8 +21,8 @@ This definition is terrible, so bear with me.
 
   The _algebraic definition_ of the cross product is:
   #eqn[
-    $ bf(v) times bf(w) := det mat(a_2, a_3; b_2, b_3) bf(e)_1
-      - det mat(a_1, a_3; b_1, b_3) bf(e)_2 + det mat(a_1, a_2; b_1, b_2) bf(e)_3
+    $ bf(v) times bf(w) := detmat(a_2, a_3; b_2, b_3) bf(e)_1
+      - detmat(a_1, a_3; b_1, b_3) bf(e)_2 + detmat(a_1, a_2; b_1, b_2) bf(e)_3
       = vec(a_2 b_3 - a_3 b_2, a_3 b_1 - a_1 b_3, a_1 b_2 - a_2 b_1). $
     <eqn-cross-raw-alg>
   ]
@@ -77,7 +77,7 @@ In practice, I think almost everyone uses the following mnemonic for it.
   The algebraic definition is usually remembered using the following mnemonic:
   #eqn[
     $ bf(v) times bf(w) =
-      det mat(
+      detmat(
         bf(e)_1, bf(e)_2, bf(e)_3;
         a_1, a_2, a_3;
         b_1, b_2, b_3
@@ -116,8 +116,8 @@ and not even talk about the corresponding geometry.
 ]
 #soln[
   Write
-  $ bf(v) times bf(w) := det mat(2, 3; 5, 6) bf(e)_1
-    - det mat(1, 3; 4, 6) bf(e)_2 + det mat(1, 2; 4, 5) bf(e)_3
+  $ bf(v) times bf(w) := detmat(2, 3; 5, 6) bf(e)_1
+    - detmat(1, 3; 4, 6) bf(e)_2 + detmat(1, 2; 4, 5) bf(e)_3
     = -3 bf(e)_1 + 6bf(e)_2 - 3bf(e)_3 = vec(-3,6,3). #qedhere $
 ]
 As a sanity check you can verify that, indeed,

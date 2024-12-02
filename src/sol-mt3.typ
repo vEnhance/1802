@@ -88,7 +88,7 @@ $ J_(bf(T)^(-1)) = mat((partial u) / (partial x), (partial u) / (partial y);
   (partial v) / (partial x), (partial v) / (partial y))
   = mat(1, k; k, 1). $
 So
-$ det J_(bf(T)) = 1 / (det mat(1, k; k, 1)) = 1/(1-k^2). $
+$ det J_(bf(T)) = 1 / (detmat(1, k; k, 1)) = 1/(1-k^2). $
 Now, the problem condition tells us
 $ pi = iint_(cal(R)) dif x dif y
   = iint_(u^2+v^2 <= 1/4) lr(|1/(1-k^2)|) dif u dif v

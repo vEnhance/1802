@@ -58,7 +58,7 @@ Now, in order to integrate over this, there's supposed to be a change of variabl
 with some Jacobian.
 To get the area scaling factor, we would compute the Jacobian
 $
-  det J_("spherical") = det mat(
+  det J_("spherical") = detmat(
     (partial x) / (partial rho), (partial x) / (partial phi), (partial x) / (partial theta);
     (partial y) / (partial rho), (partial y) / (partial phi), (partial y) / (partial theta);
     (partial z) / (partial rho), (partial z) / (partial phi), (partial z) / (partial theta);
@@ -70,17 +70,17 @@ It works out to
 $
   det J_("spherical")
   &=
-  det mat(
+  detmat(
     sin phi cos theta, rho cos phi cos theta, - rho sin phi sin theta;
     sin phi sin theta, rho cos phi sin theta, rho sin phi cos theta;
     cos phi, - rho sin phi, 0
   ) \
   &=
   cos phi
-  det mat( rho cos phi cos theta, - rho sin phi sin theta;
+  detmat( rho cos phi cos theta, - rho sin phi sin theta;
     rho cos phi sin theta, rho sin phi cos theta;)
   + rho sin phi
-  det mat(
+  detmat(
     sin phi cos theta, - rho sin phi sin theta;
     sin phi sin theta, rho sin phi cos theta;
   ) \

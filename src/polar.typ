@@ -16,7 +16,7 @@ $ J_(bf(T)) &= mat(
     partial / (partial theta) (r sin theta))
   = mat(cos theta, sin theta; -r sin theta, r cos theta). \
   |det J_(bf(T))| &=
-    det mat(cos theta, sin theta; -r sin theta, r cos theta)
+    detmat(cos theta, sin theta; -r sin theta, r cos theta)
     = r cos^2 theta - (-r sin^2 theta) = r(cos^2 theta + sin^2 theta) = r. $
 You should actually just remember the final result of this calculation
 so you don't have to work it out again.
