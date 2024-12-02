@@ -444,7 +444,7 @@ Most of the time it's not like that though.
     $ A - lambda I = mat(1, 2; 4, 7) - lambda mat(1, 0; 0, 1) = mat(1 - lambda, 2; 4, 7 - lambda) . $
     To find the eigenvalues, we set the determinant of $A - lambda I$ equal to zero:
     $ det (A - lambda I) = detmat(1 - lambda, 2; 4, 7 - lambda)
-      = (1 - lambda) (7 - lambda) - (4 times 2) = (1 - lambda) (7 - lambda) - 8 . $
+      = (1 - lambda) (7 - lambda) - (4 dot 2) = (1 - lambda) (7 - lambda) - 8 . $
     Expanding this expression:
     $ (1 - lambda) (7 - lambda) = 7 - 8 lambda + lambda^2 , $
     so the equation becomes:
@@ -580,7 +580,7 @@ The answer is that you just get some complex numbers instead.
 
     To find the eigenvalues, we set the determinant of $A - lambda I$ equal to zero:
     $ det (A - lambda I) &= detmat(1 / 2 - lambda, - sqrt(3) / 2; sqrt(3) / 2, 1 / 2 - lambda) \
-      &= (1 / 2 - lambda) (1 / 2 - lambda) - (- sqrt(3) / 2 times sqrt(3) / 2) \
+      &= (1 / 2 - lambda) (1 / 2 - lambda) - (- sqrt(3) / 2 dot sqrt(3) / 2) \
       &= (1 / 2 - lambda)^2 + 3 / 4 . $
     Setting this equal to zero and solving, we get
     $ lambda = (1 pm sqrt(3) i) / 2 $

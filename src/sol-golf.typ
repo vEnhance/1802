@@ -21,7 +21,7 @@ Substituting the limits of integration:
 $ 1 / 3 (x^3 - (x^5)^3) = 1 / 3 (x^3 - x^15) $
 
 Now substitute this result into the outer integral:
-$ int_(x = 0)^1 (x) / (1 - x^12) times 1 / 3 (x^3 - x^15) dif x $
+$ int_(x = 0)^1 (x) / (1 - x^12) dot 1 / 3 (x^3 - x^15) dif x $
 Simplifying:
 
 $ 1 / 3 int_(x = 0)^1 (x) / (1 - x^12) (x^3 - x^15) dif x \

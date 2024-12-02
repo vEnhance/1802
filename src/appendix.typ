@@ -166,7 +166,7 @@ the definitions of objects they're discussing.
 With that in mind, let's fix $a > 0$ a positive real number and think about what $a^r$ should mean.
 
 #defn[18.100 definition][
-- When $n > 0$ is an integer, then $a^n := a times ... times a$, where $a$ is repeated $n$ times.
+- When $n > 0$ is an integer, then $a^n := a dot ... dot a$, where $a$ is repeated $n$ times.
 - Then we let $a^(-n) := 1 / a^n$ for each integer $n > 0$.
 - When $m/n$ is a rational number, $a^(m/n)$ means the unique $b > 0$ such that $a^m = b^n$.
   (In 18.100, one proves this $b$ is unique and does exist.)
