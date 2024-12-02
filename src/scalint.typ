@@ -253,6 +253,8 @@ And here is an example that looks more like what you expect.
 
 == [TEXT] Formulas for the cross product <sec-magic-cross-prod>
 
+_TL;DR_: cross products are too annoying, so we pre-compute them all.
+
 As the examples above show, it's actually really annoying to compute the cross product by hand.
 Consequently, we can make our lives a lot easier if we pre-compute
 what the cross product works out to for some common situations,

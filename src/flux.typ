@@ -98,6 +98,8 @@ are now replaced by normal vectors to the surface.
 
 == [TEXT] Magic formulas for the cross product (reprise)
 
+_TL;DR_: cross products are too annoying, so we pre-compute them all.
+
 In @sec-magic-cross-prod I gave you @table-magic-cross-prod-scalint which let you bypass
 the cross product step when calculating surface area, and it still works here.
 But I'm actually going to rewrite the table to connect it to the shorthand $bf(n) dif S$.
