@@ -175,6 +175,9 @@ Here is a really ugly example to start, to give you some practice with spherical
   We brute force our way through the entire cross product.
   We have
   $ frac(partial bf(r), partial phi) times frac(partial bf(r), partial theta)
+    &= detmat(bf(e)_1, bf(e)_2, bf(e)_3;
+      cos phi cos theta , cos phi sin theta , - sin phi;
+      - sin phi sin theta , sin phi cos theta , 0) \
     &= (0 dot cos phi sin theta - sin phi cos theta dot (- sin phi)) bf(e_1)  \
     &quad - (0 dot cos phi cos theta - (- sin phi sin theta) dot (- sin phi) ) bf(e)_2 \
     &quad + (sin phi cos theta dot cos phi cos theta + sin phi sin theta dot cos phi sin theta) bf(e)_3 \
@@ -237,6 +240,10 @@ And here is an example that looks more like what you expect.
     frac(partial bf(r), partial y) &= vec((partial x) / (partial y) , (partial y) / (partial y) , (partial z) / (partial y)) = vec(0 , 1 , y / sqrt(x^2 + y^2)). $
   Hence the cross product is
   $ frac(partial bf(r), partial x) times frac(partial bf(r), partial y)
+    &= detmat(
+      bf(e)_1, bf(e)_2, bf(e)_3;
+      1 , 0 , x / sqrt(x^2 + y^2);
+      0 , 1 , y / sqrt(x^2 + y^2)) \
     &= (0 dot y / sqrt(x^2 + y^2) - 1 dot x / sqrt(x^2 + y^2)) bf(e)_1 - (1 dot y / sqrt(x^2 + y^2) - 0 dot x / sqrt(x^2 + y^2)) bf(e)_2 \
     &#h(6em) + (1 dot 1 - 0 dot 0) bf(e)_3 \
     &= vec(- x / sqrt(x^2 + y^2) , - y / sqrt(x^2 + y^2) , 1) $
@@ -351,9 +358,9 @@ $ frac(partial bf(r), partial x)
   = vec(0 , 1 , (partial z) / (partial y)). $
 Hence, in this case we arrive at
 $ frac(partial bf(r), partial x) times frac(partial bf(r), partial y)
-  &= (0 dot (partial z) / (partial y) - 1 dot (partial z) / (partial x)) bf(e)_1
-    - (1 dot ((partial z) / (partial y)) - 0 dot (partial z) / (partial x)) bf(e)_2
-    + (1 dot 1 - 0 dot 0) bf(e)_3 \
+  &= detmat(bf(e)_1, bf(e)_2, bf(e)_3;
+    1 , 0 , (partial z) / (partial x);
+    0 , 1 , (partial z) / (partial y)) \
   &= - (partial z) / (partial x) bf(e)_1  - (partial z) / (partial y) bf(e)_2 + bf(e)_3 \
   &= - (partial f) / (partial x) bf(e)_1  - (partial f) / (partial y) bf(e)_2 + bf(e)_3. $
 

@@ -116,9 +116,11 @@ and not even talk about the corresponding geometry.
 ]
 #soln[
   Write
-  $ bf(v) times bf(w) := detmat(2, 3; 5, 6) bf(e)_1
-    - detmat(1, 3; 4, 6) bf(e)_2 + detmat(1, 2; 4, 5) bf(e)_3
-    = -3 bf(e)_1 + 6bf(e)_2 - 3bf(e)_3 = vec(-3,6,3). #qedhere $
+  $ bf(v) times bf(w) &:=
+  detmat(bf(e)_1, bf(e)_2, bf(e)_3; 1, 2, 3; 4, 5, 6) \
+  &= detmat(2, 3; 5, 6) bf(e)_1
+    - detmat(1, 3; 4, 6) bf(e)_2 + detmat(1, 2; 4, 5) bf(e)_3 \
+  &= -3 bf(e)_1 + 6bf(e)_2 - 3bf(e)_3 = vec(-3,6,3). #qedhere $
 ]
 As a sanity check you can verify that, indeed,
 this vector is perpendicular to both $bf(v)$ and $bf(w)$ using the dot product
@@ -171,6 +173,7 @@ in the second recipe, we ignore the direction.
   So if we compute the cross product, we'll get a normal vector we wanted!
   That is,
   $ arrow(A B) times arrow(A C)
+    &= detmat(bf(e)_1, bf(e)_2, bf(e)_3; -1,2,0; -1,0,3) \
     &= (2 dot 3 - 0 dot 0) bf(e)_1  - (- 1 dot 3 - 0 dot - 1) bf(e)_2
       + (- 1 dot 0 - 2 dot - 1) bf(e)_3 \
     &= (6 - 0) bf(e)_1 - (- 3 - 0) bf(e)_2 + (0 - (- 2)) bf(e)_3 = vec(6,3,2). $
