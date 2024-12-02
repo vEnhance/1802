@@ -25,7 +25,8 @@ This handout (and any other DLC's I write) are posted at
     ((partial bf(r))/(partial u) times (partial bf(r))/(partial v)) dif u dif v. $
 ]
 
-We abbreviate $bf(n) dif S := ((partial bf(r))/(partial u) times (partial bf(r))/(partial v)) dif u dif v$.
+We abbreviate $bf(n) dif S := ((partial bf(r))/(partial u) times (partial bf(r))/(partial v)) dif u dif v$,
+so the flux integral becomes just $iint_(cal(S)) bf(F) dot bf(n) dif S$.
 In fact, people often split the shorthand $bf(n) dif S$ into two parts:
 $ bf(n) := frac((partial bf(r))/(partial u) times (partial bf(r))/(partial v),
   lr(|(partial bf(r))/(partial u) times (partial bf(r))/(partial v)|))
@@ -33,7 +34,7 @@ $ bf(n) := frac((partial bf(r))/(partial u) times (partial bf(r))/(partial v),
   dif S := lr(|(partial bf(r))/(partial u) times (partial bf(r))/(partial v)|) dif u dif v. $
 (So that $bf(n) dif S$ is indeed the full cross product, as the two absolute value things cancel.)
 That is, $bf(n)$ is the unit vector in the _direction_ of the cross product,
-while $dif S$ represents the absolute value with $dif u dif v$ tacked on.
+while $dif S$ represents the _absolute value_ of the cross product with $dif u dif v$ tacked on.
 
 = Cross products are annoying, so we pre-compute them all
 
@@ -45,7 +46,7 @@ Derivations are written in Section 28.4 of my notes.
 Notice that you _only need the fifth column_ for calculation.
 (And the third and fourth column can be deduced from the fifth one easily.)
 I think the only purpose of the third and fourth column is that
-for sphere and cylinder it might be easier to remember
+for cylinder and sphere, it might be easier to remember
 both the third and fourth column and multiply them together.
 
 #figure(
