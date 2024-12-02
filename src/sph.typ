@@ -264,7 +264,11 @@ This is actually a bit easier to see than the last case.
 
 == [TEXT] Examples of using spherical coordinates
 
+#todo[write this]
+
 == [TEXT] Another example: offset sphere
+
+#todo[write this]
 
 == [TEXT] Spherical coordinates for gravity
 
