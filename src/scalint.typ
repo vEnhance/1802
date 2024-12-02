@@ -181,7 +181,7 @@ Here is a really ugly example to start, to give you some practice with spherical
     &= (sin^2 phi cos theta) bf(e)_1  + (sin^2 phi sin theta) bf(e)_2
     + (sin phi cos phi sin^2 theta + sin phi cos phi cos^2 theta) bf(e)_3 \
     &= (sin^2 phi cos theta) bf(e)_1  + (sin^2 phi sin theta) bf(e)_2
-    + (sin phi cos phi) bf(e)_3. $
+    + (sin phi cos phi) bf(e)_3 $
   since $cos^2 theta + sin^2 theta = 1$.
   If we take the magnitude ,we get
   $ lr(|frac(partial bf(r), partial phi) times frac(partial bf(r), partial theta)|)
@@ -207,7 +207,7 @@ Here is a really ugly example to start, to give you some practice with spherical
 ]
 
 #digression(title: [Digression on the direction of the cross product])[
-  We'll mention this more later, but it's worth noting know that
+  We'll mention this more later, but it's worth noting now that
   in general if you parametrize a surface $cal(S)$ by $bf(r)(u,v)$,
   then $frac(partial bf(r), partial u) times frac(partial bf(r), partial v)$
   is a vector which is normal to both
@@ -247,23 +247,106 @@ And here is an example that looks more like what you expect.
   $ op("SurfArea")("cone") = iint_(x^2+y^2 <= 1) sqrt(2) dif A = sqrt(2) op("Area")(x^2+y^2 <= 1) = #boxed[$sqrt(2) pi $]. #qedhere $
 ]
 
-== [TEXT] The magic cross product formula for level surfaces <sec-magic-cross-prod>
+== [SIDENOTE] Justification for the surface area formula
 
-We now discuss a particular common kinds of surfaces: $z=f(x,y)$ and level surfaces.
-In fact the cone we just did is a good example.
-What we're going to do is try to capture the boilerplate work of the cross product
-into a single formula that we can just remember.
+#todo[to be written]
+
+== [TEXT] Formulas for the cross product <sec-magic-cross-prod>
+
+As the examples above show, it's actually really annoying to compute the cross product by hand.
+Consequently, we can make our lives a lot easier if we pre-compute
+what the cross product works out to for some common situations,
+so we don't have to work it out by hand.
+
+In these notes we will pre-compute four different cross products:
+
+- Any graph $z = f(x,y)$ (the cone we discussed is a good example)
+- Any level surface $g(x,y,z) = c$, over some $x y$-region
+- The curved part of a cylinder of radius $R$ centered along the $z$-axis,
+  where the parameters are $theta$ and $z$
+- The surface of a sphere of radius $R$ centered at the origin,
+  where the parameters are $phi$ and $theta$
+
+(As it turns out, in 18.02 it's likely these are the _only_ four situations you will see.)
+
+The table showing the results in @table-magic-cross-prod-scalint.
+Note that for surface area, you only need the _absolute value_ of the cross product (fourth column).
+But I'm going to include the entire vector too, because we'll later need to reuse this table
+in @sec-flux, and later there we will actually need to
+know the direction the vector points in too, not just the absolute value.
+
+#figure(
+  table(
+    columns: 4,
+    align: center + horizon,
+    table.header([Surface], [Param's],
+      [$ frac(partial bf(r), partial u) times frac(partial bf(r), partial v) $],
+      [$ lr(|frac(partial bf(r), partial u) times frac(partial bf(r), partial v)|) dif u dif v $],
+    ),
+    [$z = f(x,y)$],
+      [$(x,y)$],
+      [$ lr(angle.l - (partial f) / (partial x), - (partial f) / (partial y), 1 angle.r) $],
+      [$sqrt(1 + ((partial f) / (partial x))^2 + ((partial f) / (partial y))^2) dif x dif y$],
+    [Level surface $g(x,y,z) = c$ \ over an $x y$-region ],
+      [$(x,y)$],
+      [$ (nabla g) / (|partial g slash partial z|) $],
+      [$ (|nabla g|) / (|partial g slash partial z|) dif x dif y $],
+    [Cylindrical coords with fixed $R$ \ $bf(r)(theta, z) = (R cos theta, R sin theta, z)$],
+      [$(theta, z)$],
+      [$ angle.l R cos theta, R sin theta, 0 angle.r $],
+      [$R dif theta dif z$],
+    [Spherical coords with fixed $R$ \
+      $bf(r)(phi, theta) = (R sin phi cos theta, \ quad R sin phi sin theta, R cos phi)$],
+      [$(phi, theta)$],
+      [$ R sin phi dot bf(r)(phi, theta) $],
+      [$R^2 sin (phi) dif phi dif theta$],
+  ),
+  caption: [Pre-computed formulas for the cross product in four most common situations,
+    which are likely to be all you need.],
+  kind: table
+) <table-magic-cross-prod-scalint>
+
+Something that can be really helpful right now for remembering the third column
+of @table-magic-cross-prod-scalint is the following geometric idea:
+#idea[
+  The vector $frac(partial bf(r), partial u) times frac(partial bf(r), partial v)$
+  is normal to the tangent plane to the surface at each point.
+]
+For example:
+
+- For the level surface $g(x,y,z) = c$,
+  you should remember from @sec-gradient that $nabla g$ is normal to the tangent plane
+  of the level surface, hence the cross product is a multiple of $nabla g$ as needed.
+- The normal vector to (the curved part of) a cylinder points straight away from the $z$-axis
+  away from the origin, which $angle.l R cos theta, R sin theta, 0 angle.r$ indeed does.
+- For the sphere, the normal vector should point straight away from the center of the sphere,
+  and indeed $sin(phi) dot bf(r)(phi, theta)$ is a multiple of the direction.
+
+Again, for surface area you actually only need the fourth column, but
+(1) I think the third column is actually easier to remember than the fourth column,
+and (2) by @sec-flux you will need the third column anyway.
+
+The first and second rows of @table-magic-cross-prod-scalint above are quite versatile,
+whereas the third and fourth rows are really for specific specialized situations.
+So in these notes I'll call these "magic" formulas because they save us so much work.
 
 === For a surface of the form $z = f(x,y)$
 
 So imagine your surface is given by $z = f(x,y)$ for some $f$
+over some region $cal(R)$ in the $x y$ plane (e.g. the cone had $cal(R) = {x^2+y^2<=1}$).
 (e.g. the cone we just did was $f(x,y) = sqrt(x^2+y^2)$)
-over some region $cal(R)$ (e.g. the cone had $cal(R) = {x^2+y^2<=1}$).
-Then the parametrization we expect to use is
+What we're going to do is try to capture the boilerplate work of the cross product
+into a single formula that we can just remember, so we don't have to redo the cross product again.
+
+The parametrization we expect to use is
 $ bf(r)(x,y) = vec(x, y, f(x,y)). $
 The partial derivatives are
-$ frac(partial bf(r), partial x) &= vec((partial x) / (partial x) , (partial z) / (partial x) , (partial z) / (partial x)) = vec(1 , 0 , (partial z) / (partial x) ) \
-  frac(partial bf(r), partial y) &= vec((partial x) / (partial y) , (partial y) / (partial y) , (partial z) / (partial y)) = vec(0 , 1 , (partial z) / (partial y)). $
+$ frac(partial bf(r), partial x)
+  &= vec((partial x) / (partial x) , (partial z) / (partial x) , (partial z) / (partial x))
+  = vec(1 , 0 , (partial z) / (partial x) ) \
+  frac(partial bf(r), partial y)
+  &= vec((partial x) / (partial y) , (partial y) / (partial y) , (partial z) / (partial y))
+  = vec(0 , 1 , (partial z) / (partial y)). $
 Hence, in this case we arrive at
 $ frac(partial bf(r), partial x) times frac(partial bf(r), partial y)
   &= (0 dot (partial z) / (partial y) - 1 dot (partial z) / (partial x)) bf(e)_1
@@ -284,8 +367,8 @@ Let's write this down now.
 In particular, the surface area becomes
 $ op("SurfArea")(cal(S)) = iint_(cal(R)) sqrt(1 + ((partial f) / (partial x))^2 + ((partial f) / (partial y))^2) dif x dif y. $
 You'll find this formula written in a lot of other textbooks and it's worth knowing
-(I would say you should memorize the magic cross product formula,
-and then just remember this one is the magnitude).
+(I would say you should memorize the full magic cross product formula,
+since it's trivial to get the magnitude from it.)
 Let's see how it can captures the boilerplate in the cone example.
 
 #sample[
@@ -363,7 +446,7 @@ Because of this, we have managed to derive the following miraculous identity.
   and suppose also that $partial g / partial z != 0$ over $cal(R)$.
   Then for the obvious parametrization $bf(r)(x,y) = (x,y,z)$ we have
     $ frac(partial bf(r), partial x) times frac(partial bf(r), partial y)
-  = (nabla g) / (partial g slash partial z). $
+    = (nabla g) / (partial g slash partial z). $
 ]
 The reason this magic identity is even better is that there is no need to differentiate $f$
 or even to determine it.
@@ -421,6 +504,57 @@ without having to slog through the pain of spherical coordinates.
   and the surface area of the sphere is thus $2 pi dot 2 = #boxed[$ 4 pi $]$.
 ]
 
+=== For the curved part of the cylinder in cylindrical coordinates
+
+If you have a cylinder aligned with the $z$-axis,
+then you don't want to be using $x y$-plane as parameters,
+because most pairs $(x,y)$ do not get used at all.
+Thus, we'll instead use cylindrical coordinates as
+$ bf(r)(theta, z) = (R cos theta, R sin theta, z). $
+Compute the partial derivatives:
+$ frac(partial bf(r), partial theta) &= angle.l - R sin theta, R cos theta, 0 angle.r \
+  frac(partial bf(r), partial z) &= angle.l 0,0,1 angle.r. $
+
+#todo[to be written]
+
+#tip(title: [Tip: $dif S$ for the sphere can be remembered geometrically])[
+  The way to remember this is that "$dif S approx (dif V) / (dif rho)$":
+  if you multiply a bit of surface by a bit of the radial component,
+  you get a chunk of volume of the sphere.
+  And since we saw in @sec-sph that $dif V = rho^2 sin phi dif rho dif phi dif theta$,
+  the formula for $dif S$ is what you get when you divide out $dif rho$ and set $rho = R$.
+  ...
+]
+
+=== For the curved part of the sphere, in spherical coordinates
+
+We already saw the sphere is actually handled by our magic formula for level surfaces,
+so if you're fine using $x y$-coordinates you are good to go.
+Nonetheless, in the event you need spherical coordinates, here is the result.
+
+We actually computed this already while working out the sphere's surface area by brute force:
+if we take the parametrization
+$ bf(r) (phi, theta) = (R sin phi cos theta , R sin phi sin theta , R cos phi) , $
+then if we repeat the brutal calculation from last section with an extra $R$ tacked on, we get
+$ frac(partial bf(r), partial phi) times frac(partial bf(r), partial theta)
+  &= (R^2 sin^2 phi cos theta) bf(e)_1  + (R^2 sin^2 phi sin theta) bf(e)_2
+  + (R^2 sin phi cos phi) bf(e)_3. $
+This formula might look ugly until you realize that it's actually just
+$ frac(partial bf(r), partial phi) times frac(partial bf(r), partial theta)
+  = R sin phi dot bf(r)(phi, theta). $
+Since $|bf(r)(phi, theta)| = R$, we get
+$ dif S := lr(|frac(partial bf(r), partial phi) times frac(partial bf(r), partial theta)|) d phi d theta
+  = R^2 sin phi dif phi dif theta. $
+
+#tip(title: [Tip: $dif S$ for the sphere can be remembered geometrically])[
+  The way to remember this is that "$dif S approx (dif V) / (dif rho)$":
+  if you multiply a bit of surface by a bit of the radial component,
+  you get a chunk of volume of the sphere.
+  And since we saw in @sec-sph that $dif V = rho^2 sin phi dif rho dif phi dif theta$,
+  the formula for $dif S$ is what you get when you divide out $dif rho$ and set $rho = R$.
+]
+
+
 == [RECIPE] Recap of surface area
 
 Let's summarize the surface area procedure we just saw.
@@ -431,14 +565,11 @@ Let's summarize the surface area procedure we just saw.
   1. Figure out how to get the cross product
     $(partial bf(r))/(partial u) times (partial bf(r))/(partial v)$
     for a parametrization $bf(r)$ using the following checklist.
-    - If $cal(S)$ is given by $z = f(x,y)$
-      use the magic cross product formula @sec-magic-cross-prod to skip directly to
-      $ (partial bf(r))/(partial u) times (partial bf(r))/(partial v)
-      = lr(angle.l -(partial f) / (partial x), - (partial f) / (partial y), 1 angle.r). $
-    - For appropriate level surfaces $g(x,y,z) = c$,
-      use the magic cross product formula @sec-magic-cross-prod to skip directly to
-      $ (partial bf(r))/(partial u) times (partial bf(r))/(partial v)
-      = (nabla g) / (partial g slash partial z). $
+    - If you are using $(x,y)$-coordinates to parametrize
+      (meaning $cal(S)$ is $z=f(x,y)$ or a level surface),
+      use the magic formulas in rows 1 and 2 of @table-magic-cross-prod-scalint.
+    - If $cal(S)$ is specifically a cylinder or sphere in cylindrical/spherical coordinates,
+      use the magic formulas in rows 3 and 4 of @table-magic-cross-prod-scalint.
     - Otherwise, use the long way:
       - Pick a parametrization $bf(r)(u,v) : cal(R) -> RR^3$ of the surface $cal(S)$.
         Sort of like in @sec-flex-param, you have some freedom in how you set the parametrization.
@@ -451,19 +582,11 @@ Let's summarize the surface area procedure we just saw.
     (such as horizontal/vertical slicing, polar coordinates, change of variables, etc.).
 ]
 
-
-
 == [EXER] Exercises
 
 #exer[
   Find the surface area of the surface defined by $z = x^2+y^2 <= 1$.
 ] <exer-surface-area-paraboloid>
 
-#exer[
-  Let $f(x,y)$ be any differentiable function and consider the surface $z = f(x,y)$
-  above some region $cal(R)$ in the $x y$-plane.
-  Many other textbooks state the formula for surface area in this special case as
-  $ iint_(cal(R)) sqrt(1 + ((partial f) / (partial x))^2 + ((partial f) / (partial y))^2) dif y dif x. $
-  Derive this formula from our existing recipe.
-]
+
 #todo[write exercises]

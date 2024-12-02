@@ -9,26 +9,26 @@
 == [TEXT] Another trick: writing as surface area if $bf(F) dot bf(n)$ is constant
 
 Let $cal(S)$ be a surface parametrized by $bf(r) : cal(R) -> RR^3$,
-and let $bf(n)$ (really $bf(n)(u,v)$, but every drops the $u$ and $v$)
-be the unit vector in the direction of $((partial r)/(partial u) times (partial r)/(partial v))$
-at the point $bf(r)(u,v)$.
+and as always let $bf(n)$ be shorthand for
+the unit vector in the direction of $((partial r)/(partial u) times (partial r)/(partial v))$.
 
-Let's compare the expressions for flux and surface area through a surface $cal(S)$ side by side:
-$ op("SurfArea")(cal(S)) &= iint_(cal(R)) lr(|(partial r)/(partial u) times (partial r)/(partial v)|) dif u dif v \
-  "Flux" &= iint_(cal(R)) bf(F) dot ((partial r)/(partial u) times (partial r)/(partial v)) dif u dif v
-  = iint_(cal(R)) (bf(F) dot bf(n)) lr(|(partial r)/(partial u) times (partial r)/(partial v)|)  dif u dif v. $
-(Keep type safety in mind here: the absolute value is a number,
-and the $dot$ is dot product of vectors in $RR^3$.)
-What we've done for the flux is decompose the cross product
-$((partial r)/(partial u) times (partial r)/(partial v))$ into $bf(n)$ times its magnitude,
-which we can do (in general, _any_ vector $bf(w)$ equals $|bf(w)|$ multiplied by its direction unit vector).
+Let's compare the flux and surface area in both longhand and shorthand.
 
-In this way you can make flux look a little more like surface area.
-(If you write this in shorthand then it reads
-$op("SurfArea")(cal(S)) = iint_(cal(S)) dif S$ and $"Flux" = iint_(cal(S)) (bf(F) dot bf(n)) dif S$,
-which makes the resemblance even a bit more obvious.)
+- In longhand, we have
+  $ op("SurfArea")(cal(S)) &= iint_(cal(R)) lr(|(partial r)/(partial u) times (partial r)/(partial v)|) dif u dif v \
+    "Flux" &= iint_(cal(R)) bf(F) dot ((partial r)/(partial u) times (partial r)/(partial v)) dif u dif v
+    = iint_(cal(R)) (bf(F) dot bf(n)) lr(|(partial r)/(partial u) times (partial r)/(partial v)|)  dif u dif v. $
+  (Keep type safety in mind here: the absolute value is a number,
+  and the $dot$ is dot product of vectors in $RR^3$.)
+  What we've done for the flux is decompose the cross product
+  $((partial r)/(partial u) times (partial r)/(partial v))$ into $bf(n)$ times its magnitude,
+  which we can do (in general, _any_ vector $bf(w)$ equals $|bf(w)|$ multiplied by its direction unit vector).
+  In this way you can make flux look a little more like surface area.
+- In shorthand, it's even more obvious:
+  $ "Flux" &= iint_(cal(S)) (bf(F) dot bf(n)) dif S quad " and " quad
+    op("SurfArea")(cal(S)) &= iint_(cal(S)) dif S. $
 
-However, this resemblance is basically completely useless _except_ in one really particular circumstance:
+However, this resemblance is mostly useless, _except_ in one really particular circumstance:
 the case where it happens $bf(F) dot bf(n)$ is always equal to the same constant $c$
 for every point on the surface.
 If you are that lucky, then the resemblance can actually be put to use:
@@ -41,7 +41,8 @@ You just multiply the surface area by $c$.
 Again, this particular trick is extremely specific.
 It will only happen if $bf(F)$ and $cal(S)$
 have been cherry-picked so that $bf(F) dot bf(n)$ is constant,
-and if you write down a "random" vector field $bf(F)$ there is absolutely no chance this occurs by chance.
+and if you write down a "random" vector field $bf(F)$
+there is absolutely no chance this occurs by luck.
 However, despite the brittleness of the technique,
 this trick is still popular for some homework and exam questions because no calculation is needed.
 Here are two examples of this with spheres.
@@ -96,8 +97,6 @@ Note that the answer is independent of the radius! The $17$ cancels out.
   Indeed $nabla dot bf(G) = 0$ at every point where $bf(G)$ is defined,
   but $bf(G)$ is _not_ defined at the origin and this causes the result to fail.
 ]
-
-== [TEXT] Another trick: level surfaces
 
 == [RECAP] All the methods so far for flux
 

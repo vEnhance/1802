@@ -1,6 +1,6 @@
 #import "@local/evan:1.0.0":*
 
-= The cross product
+= The cross product <sec-cross>
 
 The cross product is the last major linear algebra tool we'll need to introduce
 (together with determinants and the dot product).
@@ -8,7 +8,7 @@ Like the dot product, the cross product also has two definitions,
 one algebraic and one geometric.
 
 However, unlike the dot product, the cross product is really stilted and unnatural,
-and not used as much.
+and not used as much --- in fact they won't show up again to @sec-scalar-field-ints.
 (More on that in @sec-cross-sucks.)
 I'll try to keep this section brief.
 
