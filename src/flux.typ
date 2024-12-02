@@ -12,7 +12,7 @@ we'll immediately try to find ways to shortcut it.
 For 18.02, the methods available to you will be
 
 - Bare-hands parametrization (covered here)
-  - Even here, magic formulas can save you a lot of work.
+  - Even here, magic formulas can save you a lot of work --- see @table-magic-cross-prod-n-dS.
 - Shortcut: The divergence theorem, by converting to a 3D volume integral (covered in @sec-divthm)
 - Shortcut: Transforming to a surface area integral (covered in @sec-divthm)
 - Shortcut: Stokes' theorem, if the vector field happens to be a curl (covered in @sec-badstokes)
@@ -121,8 +121,8 @@ here's a version of @table-magic-cross-prod-scalint that separates the component
 I think this separation only really helps with the third and fourth rows,
 because back in @sec-magic-cross-prod we described ways to remember $dif S$ geometrically
 for the cylinder and the sphere.
-(For the cylinder, $dif S approx dif V / dif r$;
-for the sphere, $dif S approx dif V / dif rho$.)
+(For the cylinder, $dif S approx (dif V) / (dif r)$;
+for the sphere, $dif S approx (dif V) / (dif rho)$.)
 For the first and second rows, you should just remember the fifth column.
 
 #figure(
@@ -180,21 +180,20 @@ We go back to recipe format now.
 #recipe(title: [Recipe for computing flux integrals with bare-hands parametrization])[
   To compute the flux of $bf(F)$ over a surface $cal(S)$:
 
-  1. Figure out how to get the cross product
+  1. Get the cross product
     $(partial bf(r))/(partial u) times (partial bf(r))/(partial v)$
     for a parametrization $bf(r)$ using the following checklist.
     - If you are using $(x,y)$-coordinates to parametrize
       (meaning $cal(S)$ is $z=f(x,y)$ or a level surface),
-      use the magic formulas in rows 1 and 2 of @table-magic-cross-prod-n-dS.
-    - If $cal(S)$ is specifically a cylinder or sphere in cylindrical/spherical coordinates,
-      use the magic formulas in rows 3 and 4 of @table-magic-cross-prod-n-dS.
-    - Otherwise, use the long way:
+      use the magic formulas in rows 1 or 2 of @table-magic-cross-prod-n-dS.
+    - If $cal(S)$ is specifically given by cylindrical/spherical coordinates with fixed radius,
+      use rows 3 or 4 of @table-magic-cross-prod-n-dS.
+    - Otherwise, evaluate the cross product manually:
       - Pick a parametrization $bf(r)(u,v) : cal(R) -> RR^3$ of the surface $cal(S)$.
         Sort of like in @sec-flex-param, you have some freedom in how you set the parametrization.
-      - Compute the partial derivatives
-        $(partial bf(r))/(partial u)$ and $(partial bf(r))/(partial v)$
+      - Compute $(partial bf(r))/(partial u)$ and $(partial bf(r))/(partial v)$
         (both are three-dimensional vectors at each point).
-      - Compute the cross product $(partial bf(r))/(partial u) times (partial bf(r))/(partial v)$.
+      - Compute the cross product $(partial bf(r))/(partial u) times (partial bf(r))/(partial v)$ as in @sec-cross.
   2. Look at which way the cross product points (via right-hand rule).
     Does it point "outward"?
     If not, negate the cross product (equivalently, swap the order of $u$ and $v$) before going on.

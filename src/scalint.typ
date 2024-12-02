@@ -514,16 +514,27 @@ $ bf(r)(theta, z) = (R cos theta, R sin theta, z). $
 Compute the partial derivatives:
 $ frac(partial bf(r), partial theta) &= angle.l - R sin theta, R cos theta, 0 angle.r \
   frac(partial bf(r), partial z) &= angle.l 0,0,1 angle.r. $
-
-#todo[to be written]
+The cross product is pretty easy to evaluate in this case:
+$ frac(partial bf(r), partial theta) times frac(partial bf(r), partial z)
+  &= detmat(
+    bf(e)_1, bf(e)_2, bf(e)_3;
+    -R sin theta, R cos theta, 0;
+    0, 0, 1
+  ) \
+  &= R cos theta bf(e)_1 + R sin theta bf(e)_2 \
+  &= angle.l R cos theta, R sin theta, 0 angle.r. $
+That's not too bad!
+We can take the absolute value of this: $ dif S = R dif theta dif z. $
 
 #tip(title: [Tip: $dif S$ for the sphere can be remembered geometrically])[
-  The way to remember this is that "$dif S approx (dif V) / (dif rho)$":
+  The way to remember this is that "$dif S approx (dif V) / (dif r)$":
   if you multiply a bit of surface by a bit of the radial component,
   you get a chunk of volume of the sphere.
-  And since we saw in @sec-sph that $dif V = rho^2 sin phi dif rho dif phi dif theta$,
-  the formula for $dif S$ is what you get when you divide out $dif rho$ and set $rho = R$.
-  ...
+  And since we saw in @sec-triple that $dif V = r dif r dif theta dif z$,
+  the formula for $dif S$ is what you get when you divide out $dif r$ and set $r = R$.
+
+  Alternatively, each patch on the cylinder can be thought of as
+  a little rectangle of height $dif z$ and width $R dif theta$.
 ]
 
 === For the curved part of the sphere, in spherical coordinates
@@ -562,21 +573,20 @@ Let's summarize the surface area procedure we just saw.
 #recipe(title: [Recipe for computing surface area])[
   To compute the surface area of a surface $cal(S)$:
 
-  1. Figure out how to get the cross product
+  1. Get the cross product
     $(partial bf(r))/(partial u) times (partial bf(r))/(partial v)$
     for a parametrization $bf(r)$ using the following checklist.
     - If you are using $(x,y)$-coordinates to parametrize
       (meaning $cal(S)$ is $z=f(x,y)$ or a level surface),
-      use the magic formulas in rows 1 and 2 of @table-magic-cross-prod-scalint.
-    - If $cal(S)$ is specifically a cylinder or sphere in cylindrical/spherical coordinates,
-      use the magic formulas in rows 3 and 4 of @table-magic-cross-prod-scalint.
-    - Otherwise, use the long way:
+      use the magic formulas in rows 1 or 2 of @table-magic-cross-prod-scalint.
+    - If $cal(S)$ is specifically given by cylindrical/spherical coordinates with fixed radius,
+      use rows 3 or 4 of @table-magic-cross-prod-n-dS.
+    - Otherwise, evaluate the cross product manually:
       - Pick a parametrization $bf(r)(u,v) : cal(R) -> RR^3$ of the surface $cal(S)$.
         Sort of like in @sec-flex-param, you have some freedom in how you set the parametrization.
-      - Compute the partial derivatives
-        $(partial bf(r))/(partial u)$ and $(partial bf(r))/(partial v)$
+      - Compute $(partial bf(r))/(partial u)$ and $(partial bf(r))/(partial v)$
         (both are three-dimensional vectors at each point),
-      - Compute the cross product $(partial bf(r))/(partial u) times (partial bf(r))/(partial v)$.
+      - Compute the cross product $(partial bf(r))/(partial u) times (partial bf(r))/(partial v)$ as in @sec-cross.
   2. Take the magnitude of the cross product to get a number for each point on the surface.
   3. Integrate it over $cal(R)$ using any of the methods for double integrals
     (such as horizontal/vertical slicing, polar coordinates, change of variables, etc.).
