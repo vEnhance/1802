@@ -78,8 +78,8 @@ both the third and fourth column and multiply them together.
       [$angle.l R cos theta, R sin theta, 0 angle.r \ dif theta dif z$],
     [Spherical coords with fixed $R$],
       [$(phi, theta)$],
-      [$1/R dot bf(r)(phi, theta)$],
-      [$|R^2 sin (phi)| dif phi dif theta$],
+      [$1/R dot bf(r)(phi, theta)$\ (if $0 <= phi <= pi$)],
+      [$R^2 sin phi dif phi dif theta$ \ (if $0 <= phi <= pi$)],
       [$R sin phi dot bf(r)(phi, theta) \ dif phi dif theta$],
   ),
   kind: table

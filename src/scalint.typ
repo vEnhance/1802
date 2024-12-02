@@ -308,7 +308,7 @@ know the direction the vector points in too, not just the absolute value.
       $bf(r)(phi, theta) = (R sin phi cos theta, \ quad R sin phi sin theta, R cos phi)$],
       [$(phi, theta)$],
       [$ R sin phi dot bf(r)(phi, theta) $],
-      [$R^2 |sin (phi)| dif phi dif theta$],
+      [$R^2 sin phi dif phi dif theta$ \ (if $0 <= phi <= pi$)],
   ),
   caption: [Pre-computed formulas for the cross product in four most common situations,
     which are likely to be all you need.],
@@ -565,6 +565,8 @@ $ frac(partial bf(r), partial phi) times frac(partial bf(r), partial theta)
 Since $|bf(r)(phi, theta)| = R$, we get
 $ dif S := lr(|frac(partial bf(r), partial phi) times frac(partial bf(r), partial theta)|) d phi d theta
   = R^2 sin phi dif phi dif theta. $
+Here I'm dropping the absolute value bars around $|sin phi|$ because
+our spherical coordinate convention requires $0 < phi < pi$.
 
 #tip(title: [Tip: $dif S$ for the sphere can be remembered geometrically])[
   The way to remember this is that "$dif S approx (dif V) / (dif rho)$":
@@ -573,7 +575,6 @@ $ dif S := lr(|frac(partial bf(r), partial phi) times frac(partial bf(r), partia
   And since we saw in @sec-sph that $dif V = rho^2 sin phi dif rho dif phi dif theta$,
   the formula for $dif S$ is what you get when you divide out $dif rho$ and set $rho = R$.
 ]
-
 
 == [RECIPE] Recap of surface area
 
