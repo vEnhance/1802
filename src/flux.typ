@@ -148,7 +148,7 @@ For the first and second rows, you should just remember the fifth column.
       [$(x,y)$],
       [$ (nabla g) / (|nabla g|) $],
       [$ (|nabla g|) / (|partial g slash partial z|) dif x dif y $],
-      [$ (nabla g) / (|partial g slash partial z|) dif x dif y $],
+      [$ (nabla g) / (partial g slash partial z) dif x dif y $],
     [Cylindrical coords with fixed $R$ \ $bf(r)(theta, z) = (R cos theta, R sin theta, z)$],
       [$(theta, z)$],
       [$angle.l cos theta, sin theta, 0 angle.r$],
@@ -157,7 +157,7 @@ For the first and second rows, you should just remember the fifth column.
     [Spherical coords with fixed $R$ \ $bf(r)(phi, theta) = (R sin phi cos theta, \ quad R sin phi sin theta, R cos phi)$],
       [$(phi, theta)$],
       [$1/R dot bf(r)(phi, theta)$],
-      [$R^2 sin (phi) dif phi dif theta$],
+      [$|R^2 sin (phi)| dif phi dif theta$],
       [$R sin phi dot bf(r)(phi, theta) \ dif phi dif theta$],
   ),
   caption: [An alternate version of @table-magic-cross-prod-scalint

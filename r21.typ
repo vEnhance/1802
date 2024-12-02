@@ -69,7 +69,7 @@ both the third and fourth column and multiply them together.
       [$(x,y)$],
       [$ (nabla g) / (|nabla g|) $],
       [$ (|nabla g|) / (|partial g slash partial z|) dif x dif y $],
-      [$ (nabla g) / (|partial g slash partial z|) dif x dif y $],
+      [$ (nabla g) / (partial g slash partial z) dif x dif y $],
     [Cylindrical coords with fixed $R$],
       [$(theta, z)$],
       [$angle.l cos theta, sin theta, 0 angle.r$],
@@ -78,7 +78,7 @@ both the third and fourth column and multiply them together.
     [Spherical coords with fixed $R$],
       [$(phi, theta)$],
       [$1/R dot bf(r)(phi, theta)$],
-      [$R^2 sin (phi) dif phi dif theta$],
+      [$|R^2 sin (phi)| dif phi dif theta$],
       [$R sin phi dot bf(r)(phi, theta) \ dif phi dif theta$],
   ),
   kind: table
