@@ -175,16 +175,16 @@ Here is a really ugly example to start, to give you some practice with spherical
   We brute force our way through the entire cross product.
   We have
   $ frac(partial bf(r), partial phi) times frac(partial bf(r), partial theta)
-    &= detmat(bf(e)_1, bf(e)_2, bf(e)_3;
+    &= detmat(ee_1, ee_2, ee_3;
       cos phi cos theta , cos phi sin theta , - sin phi;
       - sin phi sin theta , sin phi cos theta , 0) \
     &= (0 dot cos phi sin theta - sin phi cos theta dot (- sin phi)) bf(e_1)  \
-    &quad - (0 dot cos phi cos theta - (- sin phi sin theta) dot (- sin phi) ) bf(e)_2 \
-    &quad + (sin phi cos theta dot cos phi cos theta + sin phi sin theta dot cos phi sin theta) bf(e)_3 \
-    &= (sin^2 phi cos theta) bf(e)_1  + (sin^2 phi sin theta) bf(e)_2
-    + (sin phi cos phi sin^2 theta + sin phi cos phi cos^2 theta) bf(e)_3 \
-    &= (sin^2 phi cos theta) bf(e)_1  + (sin^2 phi sin theta) bf(e)_2
-    + (sin phi cos phi) bf(e)_3 $
+    &quad - (0 dot cos phi cos theta - (- sin phi sin theta) dot (- sin phi) ) ee_2 \
+    &quad + (sin phi cos theta dot cos phi cos theta + sin phi sin theta dot cos phi sin theta) ee_3 \
+    &= (sin^2 phi cos theta) ee_1  + (sin^2 phi sin theta) ee_2
+    + (sin phi cos phi sin^2 theta + sin phi cos phi cos^2 theta) ee_3 \
+    &= (sin^2 phi cos theta) ee_1  + (sin^2 phi sin theta) ee_2
+    + (sin phi cos phi) ee_3 $
   since $cos^2 theta + sin^2 theta = 1$.
   If we take the magnitude ,we get
   $ lr(|frac(partial bf(r), partial phi) times frac(partial bf(r), partial theta)|)
@@ -220,8 +220,8 @@ Here is a really ugly example to start, to give you some practice with spherical
 
   Of course, since we took an absolute value, the direction gets discarded for surface area.
   But if you are really observant you might have noticed that computed cross product is
-  $ (sin^2 phi cos theta) bf(e)_1  + (sin^2 phi sin theta) bf(e)_2
-    + (sin phi cos phi) bf(e)_3 = sin phi dot bf(r)(theta, phi) $
+  $ (sin^2 phi cos theta) ee_1  + (sin^2 phi sin theta) ee_2
+    + (sin phi cos phi) ee_3 = sin phi dot bf(r)(theta, phi) $
   which happened to be a multiple of the corresponding point on the sphere; and this is why,
   because for a sphere, $bf(r)(theta, phi)$ happens to be perpendicular to the tangent plane.
 ]
@@ -241,11 +241,11 @@ And here is an example that looks more like what you expect.
   Hence the cross product is
   $ frac(partial bf(r), partial x) times frac(partial bf(r), partial y)
     &= detmat(
-      bf(e)_1, bf(e)_2, bf(e)_3;
+      ee_1, ee_2, ee_3;
       1 , 0 , x / sqrt(x^2 + y^2);
       0 , 1 , y / sqrt(x^2 + y^2)) \
-    &= (0 dot y / sqrt(x^2 + y^2) - 1 dot x / sqrt(x^2 + y^2)) bf(e)_1 - (1 dot y / sqrt(x^2 + y^2) - 0 dot x / sqrt(x^2 + y^2)) bf(e)_2 \
-    &#h(6em) + (1 dot 1 - 0 dot 0) bf(e)_3 \
+    &= (0 dot y / sqrt(x^2 + y^2) - 1 dot x / sqrt(x^2 + y^2)) ee_1 - (1 dot y / sqrt(x^2 + y^2) - 0 dot x / sqrt(x^2 + y^2)) ee_2 \
+    &#h(6em) + (1 dot 1 - 0 dot 0) ee_3 \
     &= vec(- x / sqrt(x^2 + y^2) , - y / sqrt(x^2 + y^2) , 1) $
   Now, compute the magnitude of this cross product:
   $ lr(|frac(partial bf(r), partial x) times frac(partial bf(r), partial y)|) &= sqrt((- x / sqrt(x^2 + y^2))^2 + (- y / sqrt(x^2 + y^2))^2 + 1^2) \
@@ -358,11 +358,11 @@ $ frac(partial bf(r), partial x)
   = vec(0 , 1 , (partial z) / (partial y)). $
 Hence, in this case we arrive at
 $ frac(partial bf(r), partial x) times frac(partial bf(r), partial y)
-  &= detmat(bf(e)_1, bf(e)_2, bf(e)_3;
+  &= detmat(ee_1, ee_2, ee_3;
     1 , 0 , (partial z) / (partial x);
     0 , 1 , (partial z) / (partial y)) \
-  &= - (partial z) / (partial x) bf(e)_1  - (partial z) / (partial y) bf(e)_2 + bf(e)_3 \
-  &= - (partial f) / (partial x) bf(e)_1  - (partial f) / (partial y) bf(e)_2 + bf(e)_3. $
+  &= - (partial z) / (partial x) ee_1  - (partial z) / (partial y) ee_2 + ee_3 \
+  &= - (partial f) / (partial x) ee_1  - (partial f) / (partial y) ee_2 + ee_3. $
 
 Let's write this down now.
 
@@ -406,7 +406,7 @@ So imagining a _level surface_ $g(x,y,z) = c$ instead,
 where each $(x,y)$ in our region $cal(R)$ has exactly one $z = z(x,y)$ value.
 On paper, you imagine solving for $z$ in terms of $x$ and $y$, and then using
 $ frac(partial bf(r), partial x) times frac(partial bf(r), partial y)
-  = - (partial z) / (partial x) bf(e)_1  - (partial z) / (partial y) bf(e)_2 + bf(e)_3 $
+  = - (partial z) / (partial x) ee_1  - (partial z) / (partial y) ee_2 + ee_3 $
 but we'd like to not have to solve for $z$ in such a brute way.
 
 The trick is to consider the gradient of $g$ and use the chain rule.
@@ -526,11 +526,11 @@ $ frac(partial bf(r), partial theta) &= angle.l - R sin theta, R cos theta, 0 an
 The cross product is pretty easy to evaluate in this case:
 $ frac(partial bf(r), partial theta) times frac(partial bf(r), partial z)
   &= detmat(
-    bf(e)_1, bf(e)_2, bf(e)_3;
+    ee_1, ee_2, ee_3;
     -R sin theta, R cos theta, 0;
     0, 0, 1
   ) \
-  &= R cos theta bf(e)_1 + R sin theta bf(e)_2 \
+  &= R cos theta ee_1 + R sin theta ee_2 \
   &= angle.l R cos theta, R sin theta, 0 angle.r. $
 That's not too bad!
 We can take the absolute value of this: $ dif S = R dif theta dif z. $
@@ -557,8 +557,8 @@ if we take the parametrization
 $ bf(r) (phi, theta) = (R sin phi cos theta , R sin phi sin theta , R cos phi) , $
 then if we repeat the brutal calculation from last section with an extra $R$ tacked on, we get
 $ frac(partial bf(r), partial phi) times frac(partial bf(r), partial theta)
-  &= (R^2 sin^2 phi cos theta) bf(e)_1  + (R^2 sin^2 phi sin theta) bf(e)_2
-  + (R^2 sin phi cos phi) bf(e)_3. $
+  &= (R^2 sin^2 phi cos theta) ee_1  + (R^2 sin^2 phi sin theta) ee_2
+  + (R^2 sin phi cos phi) ee_3. $
 This formula might look ugly until you realize that it's actually just
 $ frac(partial bf(r), partial phi) times frac(partial bf(r), partial theta)
   = R sin phi dot bf(r)(phi, theta). $

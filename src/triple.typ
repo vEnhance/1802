@@ -307,7 +307,7 @@ To do this, I'll rewrite @eqn-gravity as follows:
     G_2 &:= G m iiint_(cal(T)) (y delta(x,y,z))/((x^2+y^2+z^2)^(3/2)) dif x dif y dif z \
     G_3 &:= G m iiint_(cal(T)) (z delta(x,y,z))/((x^2+y^2+z^2)^(3/2)) dif x dif y dif z.
   $
-  That is, $bf(G) = G_1 bf(e)_1 + G_2 bf(e)_2 + G_3 bf(e)_3$.
+  That is, $bf(G) = G_1 ee_1 + G_2 ee_2 + G_3 ee_3$.
 ]
 Now $G_1$, $G_2$, $G_3$ are integrals of numbers again, so we're fine.
 

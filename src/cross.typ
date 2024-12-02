@@ -21,8 +21,8 @@ This definition is terrible, so bear with me.
 
   The _algebraic definition_ of the cross product is:
   #eqn[
-    $ bf(v) times bf(w) := detmat(a_2, a_3; b_2, b_3) bf(e)_1
-      - detmat(a_1, a_3; b_1, b_3) bf(e)_2 + detmat(a_1, a_2; b_1, b_2) bf(e)_3
+    $ bf(v) times bf(w) := detmat(a_2, a_3; b_2, b_3) ee_1
+      - detmat(a_1, a_3; b_1, b_3) ee_2 + detmat(a_1, a_2; b_1, b_2) ee_3
       = vec(a_2 b_3 - a_3 b_2, a_3 b_1 - a_1 b_3, a_1 b_2 - a_2 b_1). $
     <eqn-cross-raw-alg>
   ]
@@ -56,8 +56,8 @@ If you want to see this derivation done in full, check @appendix-crosspf.
   because if I tell you only the length of a vector in $RR^3$
   and that it is normal to two other vectors in $RR^3$,
   there are actually two vectors.
-  (For example, there are two vectors of length $5$ perpendicular to $bf(e)_1$ and $bf(e)_2$:
-  namely $pm 5 bf(e)_3$.)
+  (For example, there are two vectors of length $5$ perpendicular to $ee_1$ and $ee_2$:
+  namely $pm 5 ee_3$.)
 
   So we need to pick one, and the right-hand rule
   says that if you point your right index finger along $bf(v)$
@@ -65,9 +65,9 @@ If you want to see this derivation done in full, check @appendix-crosspf.
   and stick out your right thumb, then $bf(v) times bf(w)$ points along your thumb.
 
   Another way to describe the right-hand rule is to require the following table to be true:
-  $ bf(e)_1 times bf(e)_2 &= bf(e)_3 = -bf(e)_2 times bf(e)_1 \
-    bf(e)_2 times bf(e)_3 &= bf(e)_3 = -bf(e)_3 times bf(e)_2 \
-    bf(e)_3 times bf(e)_1 &= bf(e)_3 = -bf(e)_1 times bf(e)_3. $
+  $ ee_1 times ee_2 &= ee_3 = -ee_2 times ee_1 \
+    ee_2 times ee_3 &= ee_3 = -ee_3 times ee_2 \
+    ee_3 times ee_1 &= ee_3 = -ee_1 times ee_3. $
 ]
 
 It may not be that easy to remember @eqn-cross-raw-alg.
@@ -78,7 +78,7 @@ In practice, I think almost everyone uses the following mnemonic for it.
   #eqn[
     $ bf(v) times bf(w) =
       detmat(
-        bf(e)_1, bf(e)_2, bf(e)_3;
+        ee_1, ee_2, ee_3;
         a_1, a_2, a_3;
         b_1, b_2, b_3
       ). $
@@ -117,10 +117,10 @@ and not even talk about the corresponding geometry.
 #soln[
   Write
   $ bf(v) times bf(w) &:=
-  detmat(bf(e)_1, bf(e)_2, bf(e)_3; 1, 2, 3; 4, 5, 6) \
-  &= detmat(2, 3; 5, 6) bf(e)_1
-    - detmat(1, 3; 4, 6) bf(e)_2 + detmat(1, 2; 4, 5) bf(e)_3 \
-  &= -3 bf(e)_1 + 6bf(e)_2 - 3bf(e)_3 = vec(-3,6,3). #qedhere $
+  detmat(ee_1, ee_2, ee_3; 1, 2, 3; 4, 5, 6) \
+  &= detmat(2, 3; 5, 6) ee_1
+    - detmat(1, 3; 4, 6) ee_2 + detmat(1, 2; 4, 5) ee_3 \
+  &= -3 ee_1 + 6ee_2 - 3ee_3 = vec(-3,6,3). #qedhere $
 ]
 As a sanity check you can verify that, indeed,
 this vector is perpendicular to both $bf(v)$ and $bf(w)$ using the dot product
@@ -173,10 +173,10 @@ in the second recipe, we ignore the direction.
   So if we compute the cross product, we'll get a normal vector we wanted!
   That is,
   $ arrow(A B) times arrow(A C)
-    &= detmat(bf(e)_1, bf(e)_2, bf(e)_3; -1,2,0; -1,0,3) \
-    &= (2 dot 3 - 0 dot 0) bf(e)_1  - (- 1 dot 3 - 0 dot - 1) bf(e)_2
-      + (- 1 dot 0 - 2 dot - 1) bf(e)_3 \
-    &= (6 - 0) bf(e)_1 - (- 3 - 0) bf(e)_2 + (0 - (- 2)) bf(e)_3 = vec(6,3,2). $
+    &= detmat(ee_1, ee_2, ee_3; -1,2,0; -1,0,3) \
+    &= (2 dot 3 - 0 dot 0) ee_1  - (- 1 dot 3 - 0 dot - 1) ee_2
+      + (- 1 dot 0 - 2 dot - 1) ee_3 \
+    &= (6 - 0) ee_1 - (- 3 - 0) ee_2 + (0 - (- 2)) ee_3 = vec(6,3,2). $
 
   That's the normal vector. To find the equation of the plane, we know that we should have
   $ 6 x + 3 y + 2 z = d $

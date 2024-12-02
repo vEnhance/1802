@@ -109,8 +109,8 @@ This is OK to assume because in the general case one just scales everything by $
 
 === Easy special case
 
-As a warmup, try to show that if $bf(u) = vec(a,b)$ is any vector, then $bf(u) dot bf(e)_1 = a$.
-(This is easy. The projection of $bf(u)$ onto $bf(e)_1$ is literally $a$.)
+As a warmup, try to show that if $bf(u) = vec(a,b)$ is any vector, then $bf(u) dot ee_1 = a$.
+(This is easy. The projection of $bf(u)$ onto $ee_1$ is literally $a$.)
 
 === Main proof
 
@@ -124,24 +124,24 @@ where $bf(u) =  vec(a,b)$ is a unit vector (i.e. $bf(u) = 1$),
 and $bf(v) = vec(x,y)$ is any vector in $RR^2$.
 Then we want to show that the projection of $bf(v)$ onto $bf(u)$ has length $x a + y b$.
 
-The basic idea is to decompose $bf(v) = x bf(e)_1 + y bf(e)_2$.
+The basic idea is to decompose $bf(v) = x ee_1 + y ee_2$.
 The length of projection of $bf(v)$ onto $bf(u)$
-can be decomposed then into the lengths of projections of $x bf(e)_1$ and $y bf(e)_2$.
+can be decomposed then into the lengths of projections of $x ee_1$ and $y ee_2$.
 (To see this, tilt your head so the green line is horizontal;
 recall that the black quadrilateral is a rectangle, hence also a parallelogram).
 In other words,
-$ bf(u) dot bf(v) = bf(u) dot (x bf(e)_1 + y bf(e)_2)
-  = x (bf(u) dot bf(e)_1) + y (bf(u) dot bf(e)_2). $
+$ bf(u) dot bf(v) = bf(u) dot (x ee_1 + y ee_2)
+  = x (bf(u) dot ee_1) + y (bf(u) dot ee_2). $
 But we already did the special cases before:
-$ bf(u) dot bf(e)_1 &= a \
-  bf(u) dot bf(e)_2 &= b. $
+$ bf(u) dot ee_1 &= a \
+  bf(u) dot ee_2 &= b. $
 Hence, we get the right-hand side is
 $ bf(u) dot bf(v) = x a + y b, $
 as advertised.
 In summary, by using the black parallelogram, we were able to split $bf(u) dot bf(v)$
 into two easy cases we already know how to do.
 
-The same idea will work in $RR^3$ if you use $bf(v) = x bf(e)_1 + y bf(e)_2 + z bf(e)_3$
+The same idea will work in $RR^3$ if you use $bf(v) = x ee_1 + y ee_2 + z ee_3$
 instead, and replace the parallelogram with a parallelepiped,
 in which case one now has $3$ easy cases.
 And so on in $n$ dimensions.

@@ -14,7 +14,7 @@ $ frac(partial bf(r), partial x) &= vec((partial x) / (partial x) ,(partial y) /
 Hence, the cross product is given by
 $frac(partial bf(r), partial x) times frac(partial bf(r), partial y)$:
 $ frac(partial bf(r), partial x) times frac(partial bf(r), partial y)
-  &= (0 dot 2 y - 1 dot 2 x) bf(e)_1 - (1 dot 2 y - 0 dot 2 x) bf(e)_2 + (1 dot 1 - 0 dot 0) bf(e)_3 \
+  &= (0 dot 2 y - 1 dot 2 x) ee_1 - (1 dot 2 y - 0 dot 2 x) ee_2 + (1 dot 1 - 0 dot 0) ee_3 \
   &= vec(-2x, 2y, 1). $
 Hence the magnitude of this cross product is:
 $ lr(|frac(partial bf(r), partial x) times frac(partial bf(r), partial y)|) = sqrt((- 2 x)^2 + (- 2 y)^2 + (1)^2) = sqrt(4 x^2 + 4 y^2 + 1). $

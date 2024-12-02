@@ -353,10 +353,10 @@ One draws red arrows $bf(T)(u, v)$ to $bf(T)(u + dif u, v)$ and $bf(T)(u, v + di
 for "small" changes $dif u$ and $dif v$.
 These vectors will correspond approximately to the two vectors
 $ bf(v)_1 = bf(T)(u + dif u, v) - bf(T)(u,v) approx partial / (partial u) bf(T)
-  = (partial p)/(partial u) bf(e)_1 + (partial p)/(partial u) bf(e)_2 $
+  = (partial p)/(partial u) ee_1 + (partial p)/(partial u) ee_2 $
 and
 $ bf(v)_2 = bf(T)(u, v + dif v) - bf(T)(u,v) approx partial / (partial v) bf(T)
-  = (partial p)/(partial v) bf(e)_1 + (partial q)/(partial v) bf(e)_2. $
+  = (partial p)/(partial v) ee_1 + (partial q)/(partial v) ee_2. $
 which each give a row of the Jacobian matrix;
 then the determinant gives the area of the parallelogram spanned by $bf(v)_1$ and $bf(v)_2$;
 that coincides exactly with the (absolute value of the) Jacobian determinant.

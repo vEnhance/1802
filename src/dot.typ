@@ -330,7 +330,7 @@ Let's also do the example in @fig-dot-project2.
 ]
 
 #exer[
-  Find the projection of $vec(123,456,789)$ in the direction of $bf(e)_1$.
+  Find the projection of $vec(123,456,789)$ in the direction of $ee_1$.
 ]
 
 #exerstar[

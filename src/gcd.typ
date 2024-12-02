@@ -86,7 +86,7 @@ Here's the definition of curl in 3D space.
 
 #tip(title: [Tip: How to memorize curl])[
   In practice, everyone remembers this formula using the following mnemonic:
-  $ nabla times bf(F) = detmat(bf(e)_1, bf(e)_2, bf(e)_3;
+  $ nabla times bf(F) = detmat(ee_1, ee_2, ee_3;
     (partial)/(partial x), (partial)/(partial y), (partial)/(partial z);
     p, q, r). $
   This equation does not pass type-safety, because it's a "matrix" whose entries
@@ -374,14 +374,14 @@ Instead we take the convention that
   That is, given $bf(F) = vec(p(x,y), q(x,y))$, consider the mnemonic
   $ nabla times vec(p(x,y), q(x,y), 0). $
   If you follow through, you will find you get
-  $ detmat(bf(e)_1, bf(e)_2, bf(e)_3;
+  $ detmat(ee_1, ee_2, ee_3;
       partial / (partial x), partial / (partial y), partial / (partial z);
       p(x,y), q(x,y), 0). $
   All the terms involving $partial / (partial z)$ disappear, because there's no $z$ anywhere.
-  So only the terms in front of $bf(e)_3$ survive, and you get
-  $ detmat(partial / (partial x), partial / (partial y); p(x,y), q(x,y)) bf(e)_3
-      = ((partial q) / (partial x) - (partial p) / (partial y)) bf(e)_3. $
-  And there's the 2D scalar curl, the coefficient of $bf(e)_3$.
+  So only the terms in front of $ee_3$ survive, and you get
+  $ detmat(partial / (partial x), partial / (partial y); p(x,y), q(x,y)) ee_3
+      = ((partial q) / (partial x) - (partial p) / (partial y)) ee_3. $
+  And there's the 2D scalar curl, the coefficient of $ee_3$.
 ]
 
 #sample[

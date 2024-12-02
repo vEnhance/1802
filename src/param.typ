@@ -67,7 +67,7 @@ Because there's pretty much only one thing you need to ever do:
 ]
 That is, if $bf(r) : RR -> RR^3$ (say), basically 90%+ of the time what you do is write
 $ bf(r)(t) = angle.l x(t), y(t), z(t) angle.r
-  = x(t) bf(e)_1 + y(t) bf(e)_2 + z(t) bf(e)_3 $
+  = x(t) ee_1 + y(t) ee_2 + z(t) ee_3 $
 and then just do single-variable calculus or calculations on each $f_i$.
 
 - Need to differentiate $bf(r)$? Differentiate each component.

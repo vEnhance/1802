@@ -679,7 +679,7 @@ But I'll show you how to do it with eigenvectors.
   $ M^(100) vec(1,1) = 3^(100) vec(1,1). $
   So now we know the outputs of $M^(100)$ at two linearly independent vectors.
   It would be sufficient, then, to use this information to
-  extract $M^(100) (bf(e)_1)$ and $M^100 (bf(e)_2)$.
+  extract $M^(100) (ee_1)$ and $M^100 (ee_2)$.
   We can now rewrite this as
   $
     M^(100) vec(1,0) = vec(2^(100), 0); #h(2em)

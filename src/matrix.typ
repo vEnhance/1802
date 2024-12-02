@@ -87,7 +87,7 @@ you should understand the following important statement that we'll use over and 
   then you can deduce the value of $T$ at any other input.
 ]
 
-For now "basis" refers to just the $n$ vectors $bf(e)_1$, ..., $bf(e)_n$.
+For now "basis" refers to just the $n$ vectors $ee_1$, ..., $ee_n$.
 But later on we will generalize this notion to some other settings too.
 
 == [RECIPE] Matrix encoding
@@ -97,7 +97,7 @@ That is:
 
 #definition[
   A matrix *encodes all outputs* of a linear transformation $T$
-  by *writing the outputs* of $T(bf(e)_1)$, ..., $T(bf(e)_n)$ as a list of *column vectors*.
+  by *writing the outputs* of $T(ee_1)$, ..., $T(ee_n)$ as a list of *column vectors*.
 ]
 
 For example, if you had $T : RR^2 -> RR^2$ with
@@ -108,7 +108,7 @@ To put this into recipe form:
 #recipe(title: [Recipe for encoding a transformation])[
   Given a transformation $T : RR^n -> RR^m$, to encode it as a matrix:
 
-  1. Compute $T(bf(e)_1)$ through $T(bf(e)_n)$ and write them as column vectors..
+  1. Compute $T(ee_1)$ through $T(ee_n)$ and write them as column vectors..
   2. Glue them together to get an $n times m$ array of numbers.
 ]
 
@@ -149,7 +149,7 @@ Here's more examples.
   See @fig-rotate-30.
   By looking at the unit circle, we see that
   $ T(bf(e_1)) = vec(cos 30 degree, sin 30 degree) = (sqrt(3)/2, 1/2). $
-  The vector $bf(e)_2$ is $90 degree$ further along
+  The vector $ee_2$ is $90 degree$ further along
   $ T(bf(e_2)) = vec(cos 120 degree, sin 120 degree) = (-1/2, sqrt(3)/2). $
   Glue these together and output $T$ as the matrix
   $ T = mat(sqrt(3)/2, -1/2; 1/2, sqrt(3)/2). #qedhere $
@@ -172,13 +172,13 @@ Here's more examples.
 Another example is the identity function:
 #example(title: [Example: The identity matrix deserves its name])[
   Let $I : RR^3 -> RR^3$ denote the 3D identity function, meaning $I(bf(v)) = bf(v)$.
-  To encode it, we look at its values at $bf(e)_1$, $bf(e)_2$, $bf(e)_3$:
+  To encode it, we look at its values at $ee_1$, $ee_2$, $ee_3$:
   $
-    I(bf(e)_1) = bf(e)_1 = vec(1,0,0),
+    I(ee_1) = ee_1 = vec(1,0,0),
     #h(1em)
-    I(bf(e)_2) = bf(e)_2 = vec(0,1,0),
+    I(ee_2) = ee_2 = vec(0,1,0),
     #h(1em)
-    I(bf(e)_3) = bf(e)_3 = vec(0,0,1).
+    I(ee_3) = ee_3 = vec(0,0,1).
   $
   We encode it as a matrix by writing the columns side by side, getting what you expect:
   $ I " encoded as " mat(1,0,0;0,1,0;0,0,1). $
@@ -211,7 +211,7 @@ We will see two results:
 === One matrix
 
 Recall from @pop2 that if $T$ was the linear transformation for which
-$ T(bf(e)_1) = vec(1,3) " and " T(bf(e)_2) = vec(2,4) $
+$ T(ee_1) = vec(1,3) " and " T(ee_2) = vec(2,4) $
 then $ T( vec(50,70) ) = vec(190, 430). $
 We just now also saw that to encode $T$ as a matrix, we have
 $ T = mat(1,2;3,4). $

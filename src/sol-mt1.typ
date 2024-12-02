@@ -66,8 +66,8 @@ Here are two approaches for proving it.
 Let $D = (0,0,0)$, $A = (x_A, y_A, b_A)$, $B = (x_B, y_B, z_B)$, $C = (x_C, y_C, z_C)$.
 Then expanding the cross product gives
 
-$ (x_A bf(e)_1 + y_A bf(e)_2 + z_A bf(e_3)) dot
-  det(mat(bf(e)_1, bf(e)_2, bf(e)_3; x_B, y_B, z_B; x_C, y_C, z_C)). $
+$ (x_A ee_1 + y_A ee_2 + z_A bf(e_3)) dot
+  det(mat(ee_1, ee_2, ee_3; x_B, y_B, z_B; x_C, y_C, z_C)). $
 
 If you think about what evaluating the determinant using the formula
 together with the dot product would give, you should find it's actually just
@@ -95,10 +95,10 @@ See the following picture from #url("https://en.wikipedia.org/wiki/Triple_produc
 
 === First approach using basis vectors
 
-Let $bf(e)_1$, $bf(e)_2$, $bf(e)_3$ be the three basis vectors. Then:
+Let $ee_1$, $ee_2$, $ee_3$ be the three basis vectors. Then:
 
-- The matrix $M$ is formed by gluing $f(bf(e)_1)$, $f(bf(e)_2)$, $f(bf(e)_3)$ together.
-- I claim the vectors $f(bf(e)_1)$, $f(bf(e)_2)$, $f(bf(e)_3)$ are linearly dependent.
+- The matrix $M$ is formed by gluing $f(ee_1)$, $f(ee_2)$, $f(ee_3)$ together.
+- I claim the vectors $f(ee_1)$, $f(ee_2)$, $f(ee_3)$ are linearly dependent.
   After all, they are all contained in the two-dimensional plane $cal(P)$ by definition,
   and so three vectors in a plane can't be linearly independent.
 - So the determinant is equal to zero (this theorem is one of the criteria we use
