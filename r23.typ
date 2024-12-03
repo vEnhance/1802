@@ -8,8 +8,9 @@
 )
 
 
-#quote(attribution: [])[
-
+#quote(attribution: [Edsger W. Dijkstra, EWD 1036])[
+  My point today is that, if we wish to count lines of code,
+  we should not regard them as "lines produced" but as "lines spent".
 ]
 
 This handout (and any other DLC's I write) are posted at
