@@ -40,6 +40,8 @@ answerkeys/r17s.pdf
 answerkeys/r18s.pdf
 answerkeys/r19s.pdf
 answerkeys/r20s.pdf
+answerkeys/r21s.pdf
+answerkeys/r22s.pdf
 bonus1.pdf
 mockmt2.pdf
 mockmt3.pdf
