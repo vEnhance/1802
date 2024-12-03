@@ -4,7 +4,7 @@
 
 == [TEXT] The divergence theorem
 
-== [TEXT] Physicists rejoice: divergence for gravity and electricity
+== [SIDENOTE] A rough explanation for why the divergence theorem is true
 
 == [TEXT] Another trick: writing as surface area if $bf(F) dot bf(n)$ is constant
 
@@ -99,5 +99,7 @@ Note that the answer is independent of the radius! The $17$ cancels out.
 ]
 
 == [RECAP] All the methods so far for flux
+
+== [SIDENOTE] Physicists rejoice: divergence for gravity and electricity
 
 == [EXER] Exercises

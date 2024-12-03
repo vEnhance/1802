@@ -311,6 +311,10 @@ Here are a few.
   $ 2 int_(y = 0)^1 (y+1/2) dif y = #boxed[$ 2 $]. #qedhere $
 ]
 
+== [SIDENOTE] A rough explanation for why Green's Theorem is true
+
+#todo[write this]
+
 == [RECIPE] Evaluating line integrals, all together now <sec-recipe-work>
 
 While we gave a definition of line integrals with parametrization,

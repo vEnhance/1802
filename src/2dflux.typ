@@ -152,6 +152,10 @@ so let me just put everything in one place for sanity's sake:
   and Green's theorem can handle that case anyway.)
 ]
 
+== [SIDENOTE] A rough explanation for why Green's Theorem is still true
+
+#todo[write this]
+
 == [RECIPE] Computing 2D flux <sec-recipe-2d-flux>
 
 #recipe(title: [Recipe for computing 2D flux])[
