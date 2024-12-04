@@ -1,10 +1,8 @@
 #import "@local/evan:1.0.0":*
 
-= Appendix
-
 This entire section is not for exam, obviously.
 
-== If you are thinking of majoring in math... <appendix-math-major>
+= If you are thinking of majoring in math... <appendix-math-major>
 
 During the course, one of the students asked me about academic advice
 saying they wanted to become a math major at MIT.
@@ -12,7 +10,7 @@ If that also describes you, here's what I told them.
 The course numbers here are with respect to MIT,
 but this advice should hold equally well at other universities.
 
-=== The two starter topics are algebra and analysis, not calculus
+== The two starter topics are algebra and analysis, not calculus
 
 It may come as a surprise to you that 18.02 isn't a prerequisite, even indirectly,
 for most upper-division math classes ($18.x y z$ for $x >= 1$).
@@ -28,7 +26,7 @@ with the "correct" ones. You've seen me do this already.
 Similarly, you will have new rigorous definitions of derivatives and integrals.
 In some sense, 18.100 is really _redoing_ all of 18.01 and 18.02 with actual proofs.
 
-=== Proof-writing
+== Proof-writing
 
 A prerequisite to both 18.100 (real analysis) and 18.701--18.702 (algebra)
 isn't any particular theory, but *proof experience*,
@@ -53,7 +51,7 @@ available at #url("https://store.doverpublications.com/products/9780486453064");
 it worked well for me.
 I'm sure there are other suitable books as well.
 
-=== The three phases of math education (from Tao's blog)
+== The three phases of math education (from Tao's blog)
 
 Let me put proof-writing into the bigger framework.
 Terence Tao, on his #link("https://terrytao.wordpress.com/career-advice/theres-more-to-mathematics-than-rigour-and-proofs/")[blog],
@@ -82,7 +80,9 @@ These notes are still in the first stage.
 The introduction-to-proofs class at your school
 will essentially be the beginning of the second stage.
 
-== Deriving the geometric definition of dot product from the algebraic one (short but comes out of nowhere) <appendix-dotpf-alg>
+#pagebreak()
+
+= Deriving the geometric definition of dot product from the algebraic one (short but comes out of nowhere) <appendix-dotpf-alg>
 
 We have two definitions in play and we want to show they coincide, which makes notation awkward.
 So in what follows, our notation $bf(u) dot bf(v)$ will always refer to the
@@ -90,7 +90,9 @@ _algebraic_ definition; and we will _prove_ that $bf(u) dot bf(v) = |bf(u)| |bf(
 
 #todo[write this section]
 
-== Deriving the algebraic definition of dot product from the geometric one (longer but easier to come up with) <appendix-dotpf-geo>
+#pagebreak()
+
+= Deriving the algebraic definition of dot product from the geometric one (longer but easier to come up with) <appendix-dotpf-geo>
 
 The proof in @appendix-dotpf-alg might seem magical.
 Indeed, it's so short because it's cheating in some way:
@@ -109,12 +111,12 @@ We will assume that $|bf(u)| = 1$ (i.e. $bf(u)$ is a unit vector)
 so that $bf(u) dot bf(v)$ is the length of the projection of $bf(v)$ onto $bf(u)$.
 This is OK to assume because in the general case one just scales everything by $|bf(u)|$.
 
-=== Easy special case
+== Easy special case
 
 As a warmup, try to show that if $bf(u) = vec(a,b)$ is any vector, then $bf(u) dot ee_1 = a$.
 (This is easy. The projection of $bf(u)$ onto $ee_1$ is literally $a$.)
 
-=== Main proof
+== Main proof
 
 #figure(
   image("figures/r02-dotproof.svg", width: 75%),
@@ -148,7 +150,9 @@ instead, and replace the parallelogram with a parallelepiped,
 in which case one now has $3$ easy cases.
 And so on in $n$ dimensions.
 
-== What does $i^i$ mean? <appendix-i-to-the-i>
+#pagebreak()
+
+= What does $i^i$ mean? <appendix-i-to-the-i>
 
 When learning mathematics, I believe definitions are actually more important than theorems.
 A lot of confusion comes from not having been given careful definitions of the objects.
@@ -161,7 +165,7 @@ The endless Internet debates on whether $0$ is even or whether $0.999... = 1$ or
 a continuous function (hint: yes) are all examples of people who don't know
 the definitions of objects they're discussing.
 
-=== Real exponents, real base
+== Real exponents, real base
 
 With that in mind, let's fix $a > 0$ a positive real number and think about what $a^r$ should mean.
 
@@ -176,7 +180,7 @@ With that in mind, let's fix $a > 0$ a positive real number and think about what
   (In 18.100, one proves this limit does in fact exist.)
 ] <def18100>
 
-=== Complex exponents, real base
+== Complex exponents, real base
 
 But when $z in CC$, what does $a^z$ mean? There's no good way to do this.
 
@@ -226,7 +230,7 @@ $
   &= e^(i theta).
 $
 
-=== Complex exponents, complex base
+== Complex exponents, complex base
 
 But what about $i^i$?
 Our @def18112 above only worked for positive real numbers $a > 0$.
@@ -243,7 +247,7 @@ $ i &= e^(i pi slash 2) ==> i^i = e^(- pi slash 2) \
   i &= e^(5 i pi slash 2) ==> i^i = e^(-5 pi slash 2). $
 Yeah, trouble.
 
-=== Trig functions with complex arguments
+== Trig functions with complex arguments
 
 On the other hand, $cos(i)$ can be defined:
 use the Taylor series @trig, like we did for $e^z$.
@@ -276,7 +280,7 @@ So for example, from @reimtrig, we conclude for example that
 $ cos(i) = (e + 1/e) / 2. $
 Strange but true.
 
-=== The future: what are 18.100 and 18.112 anyway?
+== The future: what are 18.100 and 18.112 anyway?
 
 First I need to tell you what analysis is.
 When students in USA ask me what analysis is,
@@ -301,6 +305,8 @@ If you ever take either class, I think the thing to know about them is:
   while toil and pathology rule the reals
 ]
 
-== Saddle point simulation code for @sec-saddle-sim <appendix-saddle-sim>
+#pagebreak()
+
+= Saddle point simulation code for @sec-saddle-sim <appendix-saddle-sim>
 
 #raw(read("include/saddle-demo.py"), lang: "py")
