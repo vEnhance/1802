@@ -125,7 +125,7 @@ to $bf(n)$ and $dif S$ respectively.
 
 So by popular request,
 here's a version of @table-magic-cross-prod-scalint that separates the components.
-I think this separation only really helps with the third and fourth rows,
+I think this separation only really helps with the fourth and fifth rows,
 because back in @sec-magic-cross-prod we described ways to remember $dif S$ geometrically
 for the cylinder and the sphere.
 (For the cylinder, $dif S approx (dif V) / (dif r)$;
@@ -154,6 +154,11 @@ For the first and second rows, you should just remember the fifth column.
       [$ pm (nabla g) / (|nabla g|) $],
       [$ (|nabla g|) / (|partial g slash partial z|) dif x dif y $],
       [$ (nabla g) / (partial g slash partial z) dif x dif y $],
+    [Flat surface $z = c$],
+      [$(x,y)$],
+      [$ angle.l 0,0,1 angle.r $],
+      [$ dif x dif y $],
+      [$ angle.l 0,0,1 angle.r dif x dif y $],
     [Cylindrical coords with fixed $R$ \ $bf(r)(theta, z) = (R cos theta, R sin theta, z)$],
       [$(theta, z)$],
       [$angle.l cos theta, sin theta, 0 angle.r$],

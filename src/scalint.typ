@@ -258,7 +258,7 @@ And here is an example that looks more like what you expect.
 
 #todo[to be written]
 
-== [TEXT] Formulas for the cross product <sec-magic-cross-prod>
+== [TEXT] Pre-computed formulas for the cross product <sec-magic-cross-prod>
 
 _TL;DR_: cross products are too annoying, so we pre-compute them all.
 
@@ -267,10 +267,11 @@ Consequently, we can make our lives a lot easier if we pre-compute
 what the cross product works out to for some common situations,
 so we don't have to work it out by hand.
 
-In these notes we will pre-compute four different cross products:
+In these notes we will pre-compute five different cross products:
 
 - Any graph $z = f(x,y)$ (the cone we discussed is a good example)
 - Any level surface $g(x,y,z) = c$, over some $x y$-region
+- A flat surface in the $x y$-plane (which could also be $y z$ or $z x$ parallel).
 - The curved part of a cylinder of radius $R$ centered along the $z$-axis,
   where the parameters are $theta$ and $z$
 - The surface of a sphere of radius $R$ centered at the origin,
@@ -300,6 +301,10 @@ know the direction the vector points in too, not just the absolute value.
       [$(x,y)$],
       [$ (nabla g) / (partial g slash partial z) $],
       [$ (|nabla g|) / (|partial g slash partial z|) dif x dif y $],
+    [Flat surface $z=c$],
+      [$(x,y)$],
+      [$ lr(angle.l 0, 0, 1 angle.r) $],
+      [$dif x dif y$],
     [Cylindrical coords with fixed $R$ \ $bf(r)(theta, z) = (R cos theta, R sin theta, z)$],
       [$(theta, z)$],
       [$ angle.l R cos theta, R sin theta, 0 angle.r $],
@@ -512,6 +517,21 @@ without having to slog through the pain of spherical coordinates.
   $ op("SurfArea")("hemisphere") = 2 pi dot 1 = 2 pi $
   and the surface area of the sphere is thus $2 pi dot 2 = #boxed[$ 4 pi $]$.
 ]
+
+=== For a flat surface
+
+This is the really easy special case of $z = f(x,y)$ when $f(x,y) = c$ is constant.
+Your parametrization is just $ bf(r)(x,y) = angle.l x,y,c angle.r. $
+
+I hesitated to include this row because it's so easy and is a special case of the first row,
+but it's common enough I decided I might as well toss it in.
+However, you should have no problem deriving this yourself even in your sleep; it's literally
+$ (partial bf(r)) / (partial x) &= angle.l 1, 0, 0 angle.r \
+  (partial bf(r)) / (partial y) &= angle.l 0, 1, 0 angle.r $
+and the cross product of these is $angle.l 0,0,1 angle.r$, so there you go.
+
+Note that you might encounter flat surfaces parallel to the $x z$ or $y z$ planes instead.
+In which case you should just swap the roles of the variables.
 
 === For the curved part of the cylinder in cylindrical coordinates
 
