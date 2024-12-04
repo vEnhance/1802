@@ -150,6 +150,8 @@ For comparison, Part Juliett corresponds to §17.7, §18, §19, §21 of #poonen.
 #pagebreak()
 #include "src/sol-mt3.typ"
 #pagebreak()
+#include "src/sol-juliett.typ"
+#pagebreak()
 #include "src/sol-kilo.typ"
 #pagebreak()
 

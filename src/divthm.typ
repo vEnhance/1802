@@ -1,6 +1,6 @@
 #import "@local/evan:1.0.0":*
 
-= Shortcuts for flux: divergence theorem and more <sec-divthm>
+= Shortcut for flux: the divergence theorem <sec-divthm>
 
 == [TEXT] The divergence theorem
 
@@ -38,9 +38,12 @@ Here's the result:
     = iiint_(cal(T)) ((partial p) / (partial x) + (partial q) / (partial y) + (partial r) / (partial z)) dif V). $
 ]
 
-I've snuck in a new symbol $oiint_(cal(S))$, but the extra circle is analogous to before:
-it's an optional reminder you can put in order to remind someone the surface is _closed_.
-Just like how $oint_(cal(C))$ was a reminder that $cal(C)$ was a closed loop.
+I've snuck in a new symbol $oiint_(cal(S))$, but the extra circle is analogous to before.
+Just like how $oint_(cal(C))$ was a reminder that $cal(C)$ was a closed loop:
+#definition(title: [Definition of $oiint$])[
+  $oiint_(cal(S))$ means "$iint_(cal(S))$ but with an extra optional reminder that $cal(S)$ is a closed surface".
+  (The reminder is optional, i.e. you are not obligated to add it even if $cal(S)$ is closed.)
+]
 Also, note there's a fine-print requirement that $cal(T)$ should be compact,
 i.e. it should not extend infinitely in any direction.
 
@@ -64,108 +67,157 @@ i.e. it should not extend infinitely in any direction.
 
 And that's pretty much it!
 
-#todo[write a bunch of typical examples]
+#sample[
+  Let $R > 0$ be given.
+  Compute the flux of the vector field
+  $bf(F) (x , y , z) = vec(x , y , z)$ through the
+  closed surface of the sphere $cal(S)$ defined by $x^2 + y^2 + z^2 = R^2$
+  oriented outward, using the Divergence Theorem.
+]
+
+#soln[
+  The sphere $cal(S)$ encloses a ball $cal(T)$ of radius $R$.
+  The divergence is given by
+  $ nabla dot bf(F) = (partial p) / (partial x) + (partial q) / (partial y) + (partial r) / (partial z) = 1 + 1 + 1 = 3 $
+  Then the answer is
+  $ iiint_(cal(T)) nabla dot bf(F) dif V = iiint_(cal(T)) 3 dif V = 3 op("Vol")(cal(S)) = 3 dot 4/3 pi R^3 =
+    #boxed[$ 4 pi R^3 $]. #qedhere $
+]
+
+#remark(title: [Remark: Connection to surface area of sphere])[
+  This was also the first example we did with the surface area trick,
+  where we found that the answer was $R dot op("SurfArea")(cal(S))$ which is also $4 pi R^3$.
+
+  Actually, put another way:
+  if you know the volume of the sphere is $4/3 pi R^3$ and the divergence theorem,
+  then the surface area trick lets you derive the surface area formula of $4 pi R^2$.
+]
+
+#warning(title: [Warning: beware of undefined points of $bf(F)$])[
+  You need to be careful to only apply the divergence theorem if the force is actually defined
+  on the entire solid $cal(T)$!
+  Here's an example of what can go wrong.
+
+  Let $cal(S)$ denote the sphere $x^2+y^2+z^2=R^2$ of radius $R$ again.
+  Let $bf(G)$ be the force of gravity exerted by a point mass $m$ at the origin.
+  In the last section we computed
+  $ iint_(cal(S)) bf(G) dot dif bf(S) = - 4 pi G m $
+  using the surface area trick.
+
+  However, if you compute the divergence $nabla dot bf(G)$,
+  you'll actually find it's _zero_ at every point --- except the origin,
+  where $bf(G)$ is undefined because the gravity causes division-by-zero.
+  (See @exer-gravity-div1.)
+  If you blindly apply the divergence theorem and don't notice the issue with the origin,
+  you would instead get the wrong answer $iiint_(cal(T)) 0 dif V = 0$,
+  rather than the correct answer $-4 pi G m$.
+  (That said, see @exer-gravity-div2 for a safe usage.)
+]
+
+#sample[
+  Let $a > 0$ be given.
+  Calculate the flux of the vector field
+  $bf(F) (x , y , z) = vec(x^2 , y^2 , z^2)$ through
+  the closed surface of the cube $cal(S)$ bounded by
+  $0 <= x , y , z <= a$ using the Divergence Theorem.
+]
+#soln[
+  The divergence is
+  $ nabla dot bf(F) = (partial) / (partial x) (x^2) + (partial) / (partial y) (y^2) + (partial) / (partial z) (z^2) = 2 x + 2 y + 2 z. $
+  Hence the flux turns into
+  $ iiint_(cal(T)) (2 x + 2 y + 2 z) dif V
+    = 2 iiint_(cal(T)) x dif V + 2 iiint_(cal(T)) y dif V + 2 iiint_(cal(T)) z dif V. $
+  Due to the symmetry of the cube:
+  $ iiint_(cal(T)) x dif V = iiint_(cal(T)) y dif V = iiint_(cal(T)) z dif V = a^3 / 2. $
+  If you can't see it symmetry, you could also just explicitly calculate
+  $ iiint_(cal(T)) x dif V
+    = (int_(x=0)^a x dif x) (int_(y=0)^a dif y) (int_(z=0)^a dif z)
+    = a/2 dot a dot a = a^3/2. $
+  In any case, we get an answer of
+  $ 2 dot a^3/2 + 2 dot a^3/2 + 2 dot a^3 /2 = #boxed[$ 3a^3 $] #qedhere. $
+]
+
+#sample[
+  Find the flux of the vector field
+  $bf(F) (x , y , z) = vec(y z , x z , x y)$
+  through the closed surface $cal(S)$ defined by $x^4 + (y-5)^6 + z^8 = 2025$.
+]
+#soln[
+  The surface $cal(S)$ is hard to describe, but it encloses _some_ solid $cal(T)$.
+  However, if you compute the divergence, it is
+  $ nabla dot bf(F) = (partial) / (partial x) (y z) + (partial) / (partial y) (x z) + (partial) / (partial z) (x y)
+    = 0 + 0 + 0 = 0. $
+  So it doesn't even matter what the solid $cal(T)$ is; the answer is just
+  $ iiint_(cal(T)) 0 dif V = #boxed[$ 0 $]. #qedhere $
+]
+
+
+#sample[
+  Compute the flux of the vector field
+  $bf(F) (x , y , z) = vec(x y , y z , z x)$ through
+  the closed surface $cal(S)$ formed by the paraboloid $z = x^2 + y^2$ and its
+  circular base $z = 0$, where $x^2 + y^2 <= 1$, using the Divergence Theorem.
+]
+
+#soln[
+  Let $cal(T)$ denote the region enclosed by $cal(S)$.
+  The divergence is given by
+  $ nabla dot bf(F) = (partial) / (partial x) (x y) + (partial) / (partial y) (y z) + (partial) / (partial z) (z x) = y + z + x $
+
+  The region $cal(T)$ is bounded by $z = x^2 + y^2$ and $z = 0$, within $x^2 + y^2 <= 1$.
+  So the divergence theorem means we need to calculate
+  $ iint_(x^2+y^2 <= 1) int_(z=0)^(x^2+y^2) (x+y+z) dif z dif x dif y. $
+  Naturally, this is best done using cylindrical coordinates.
+  Writing $x = r cos theta$ and $y = r sin theta$, and remembering that
+  $ dif x dif y dif z = dif V = r dif r dif theta dif z $
+  then this becomes
+  $ int_(r=0)^1 int_(theta=0)^(2 pi) int_(z=0)^(r^2) r (r cos theta + r sin theta + z) dif z dif theta dif r. $
+
+  But the integrals with $theta$ in them are going to be zero by symmetry.
+  For example, the first term is
+  $ int_(r=0)^1 int_(theta=0)^(2 pi) int_(z=0)^(r^2) r^2 cos theta dif z dif r dif theta
+    = (int_(r=0)^1 int_(z=0)^(r^2) r^2 dif z dif r) underbrace((int_(theta=0)^(2 pi) cos theta dif theta), =0)
+    = 0. $
+  Similarly, the contribution of $r sin theta$ is just zero as well.
+  So we are just left with
+  $ int_(r=0)^1 int_(theta=0)^(2 pi) int_(z=0)^(r^2) r z dif z dif theta dif r
+    = (int_(r=0)^1 int_(z=0)^(r^2) r z dif z dif r) (int_(theta=0)^(2pi) dif theta). $
+  Obviously $int_(theta=0)^(2pi) dif theta = 2pi$.
+  The double integral can be evaluated as
+  $ int_(r=0)^1 r int_(z=0)^(r^2) z dif z dif r
+    &= int_(r=0)^1 r dot [z^2/2]_(z=0)^(r^2) dif r \
+    &= int_(r=0)^1 r^5/2 dif r \
+    &= [r^6/12]_(r=0)^1 = 1/12. $
+  Hence the final answer is
+  $  1/12 dot 2 pi = #boxed[$ pi / 6 $]. #qedhere $
+]
 
 == [SIDENOTE] A rough explanation for why the divergence theorem is true
 
 #todo[write this]
 
-== [TEXT] Another trick: writing as surface area if $bf(F) dot bf(n)$ is constant
-
-Let $cal(S)$ be a surface parametrized by $bf(r) : cal(R) -> RR^3$,
-and as always let $bf(n)$ be shorthand for
-the unit vector in the direction of $((partial r)/(partial u) times (partial r)/(partial v))$.
-
-Let's compare the flux and surface area in both longhand and shorthand.
-
-- In longhand, we have
-  $ op("SurfArea")(cal(S)) &= iint_(cal(R)) lr(|(partial r)/(partial u) times (partial r)/(partial v)|) dif u dif v \
-    "Flux" &= iint_(cal(R)) bf(F) dot ((partial r)/(partial u) times (partial r)/(partial v)) dif u dif v
-    = iint_(cal(R)) (bf(F) dot bf(n)) lr(|(partial r)/(partial u) times (partial r)/(partial v)|)  dif u dif v. $
-  (Keep type safety in mind here: the absolute value is a number,
-  and the $dot$ is dot product of vectors in $RR^3$.)
-  What we've done for the flux is decompose the cross product
-  $((partial r)/(partial u) times (partial r)/(partial v))$ into $bf(n)$ times its magnitude,
-  which we can do (in general, _any_ vector $bf(w)$ equals $|bf(w)|$ multiplied by its direction unit vector).
-  In this way you can make flux look a little more like surface area.
-- In shorthand, it's even more obvious:
-  $ "Flux" &= iint_(cal(S)) (bf(F) dot bf(n)) dif S quad " and " quad
-    op("SurfArea")(cal(S)) &= iint_(cal(S)) dif S. $
-
-However, this resemblance is mostly useless, _except_ in one really particular circumstance:
-the case where it happens $bf(F) dot bf(n)$ is always equal to the same constant $c$
-for every point on the surface.
-If you are that lucky, then the resemblance can actually be put to use:
-$ "Flux" = iint_(cal(R)) c dot lr(|(partial r)/(partial u) times (partial r)/(partial v)|) dif u dif v
-  = c iint_(cal(R)) lr(|(partial r)/(partial u) times (partial r)/(partial v)|) dif u dif v
-  = c dot op("SurfArea")(cal(S)). $
-Then if you know the surface are of $cal(S)$, you don't have to do _any_ integration.
-You just multiply the surface area by $c$.
-
-Again, this particular trick is extremely specific.
-It will only happen if $bf(F)$ and $cal(S)$
-have been cherry-picked so that $bf(F) dot bf(n)$ is constant,
-and if you write down a "random" vector field $bf(F)$
-there is absolutely no chance this occurs by luck.
-However, despite the brittleness of the technique,
-this trick is still popular for some homework and exam questions because no calculation is needed.
-Here are two examples of this with spheres.
-
-#sample[
-  Let $cal(S)$ denote the sphere $x^2+y^2+z^2=17^2=289$ of radius $17$.
-  Let $bf(F) = vec(x,y,z)$.
-  Compute the flux $ iint_(cal(S)) bf(F) dot dif bf(S). $
-  (Orient $bf(S)$ outwards.)
-]
-#soln[
-  The normal vector $bf(n)$ at any point $(x,y,z)$ on the surface of the sphere
-  is a unit vector pointing in the direction of $angle.l x,y,z angle.r$.
-  Conveniently, the force vector $bf(F)$ is a vector of magnitude $17$ in the same direction!
-  That is, $ bf(F) dot bf(n) = (17 bf(n)) dot (bf(n)) = 17. $
-  Consequently,
-  $ iint_(cal(S)) bf(F) dot dif bf(S) = 17 op("SurfArea")(cal(S)) = 17 dot (4 dot 289)pi = #boxed[$ 4 dot 17^3 pi $]. $
-  (In general, we know a sphere of radius $R$ has surface area $4 R^2 pi$.)
-]
-#remark[
-  The previous example could also have been done by the divergence theorem.
-  For $bf(F) = vec(x,y,z)$ the divergence is given by
-  $ nabla dot bf(F) = 1 + 1 + 1 = 3. $
-  And the volume of the sphere is $4/3 pi dot 17^3$.
-  So
-  $ iint_(cal(S)) bf(F) dot dif bf(S)
-    = iiint_(cal(T)) (nabla dot bf(F)) dif V
-    = 3 dot (4/3 pi dot 17^3) = 4 pi dot 17^3. $
-  Actually, put another way: if you know the volume of the sphere is $4/3 pi R^3$
-  and the divergence theorem, then the surface area trick
-  lets you derive the surface area formula of $4 pi R^2$.
-]
-
-#sample[
-  Let $cal(S)$ denote the sphere $x^2+y^2+z^2=17^2=289$ of radius $17$.
-  Let $bf(G)$ be the force of gravity exerted by a point mass $m$ at the origin.
-  Compute the flux $ iint_(cal(S)) bf(G) dot dif bf(S). $
-  (Orient $bf(S)$ outwards.)
-]
-#soln[
-  This is just like the previous example except that the gravity exerted
-  $bf(G)$ has magnitude $(G m) / 17^2$ and points in the _opposite_ direction as $bf(n)$.
-  That is, $ bf(F) dot bf(n) = (-((G m) / (17^2)) bf(n)) dot (bf(n)) = -(G m) / 289. $
-  Consequently,
-  $ iint_(cal(S)) bf(F) dot dif bf(S) = -(G m) / 289 dot op("SurfArea")(cal(S))
-    = (-G m)/(17^2) dot (4 dot 17^2 pi) = #boxed[$ -4 pi G m $]. $
-  (In general, we know a sphere of radius $R$ has surface area $R^2 pi$.)
-]
-Note that the answer is independent of the radius! The $17$ cancels out.
-#remark[
-  The previous example _cannot_ be done by the divergence theorem.
-  Indeed $nabla dot bf(G) = 0$ at every point where $bf(G)$ is defined,
-  but $bf(G)$ is _not_ defined at the origin and this causes the result to fail.
-]
-
 == [RECAP] All the methods for flux
 
-== [SIDENOTE] Physicists rejoice: divergence for gravity and electricity
-
-#todo[write this]
-
 == [EXER] Exercises
+
+#exer[
+  Calculate the flux of the vector field
+  $bf(F) (x , y , z) = vec(x^2 y , y z^2 , e^x)$
+  through the closed surface $S$ consisting of the upper hemisphere
+  $z = sqrt(1 - x^2 - y^2)$ and the circular base $z = 0$, where
+  $x^2 + y^2 <= 1$, using the Divergence Theorem.
+] <exer-divthm-1>
+
+#exer[
+  Consider the force of gravity $bf(G)$ exerted by a point mass of mass $m$ at a point $O$.
+  Show that $ nabla dot bf(G) = 0 $ at every point _except_ $O$.
+] <exer-gravity-div1>
+
+#exer[
+  Suppose $cal(S)_1$ and $cal(S)_2$ are two closed surfaces that don't intersect
+  and such that $cal(S)_2$ is contained inside $cal(S)_1$.
+  Let $O$ be a point contained inside $cal(S)_2$.
+  Consider the force of gravity $bf(G)$ exerted by a point mass of mass $m$ at $O$.
+  Show that
+  $ oiint_(cal(S)_1) bf(G) dot dif bf(S) = oiint_(cal(S)_2) bf(G) dot dif bf(S). $
+] <exer-gravity-div2>
