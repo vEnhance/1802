@@ -108,19 +108,17 @@ and $vec(1/sqrt(2), 1/sqrt(2))$ is "northeast".
   $ bf(v) / (|bf(v)|) $
   which is the unit vector that points the same way that $bf(v)$ does.
 ]
+(Depending on what book you're following,
+more pedantic authors might write "the unit vector in the direction of $bf(v)$"
+or even "the unit vector in the same direction as $bf(v)$"
+rather than "direction along $bf(v)$".
+This is too long to type, so I adopted the shorter phrasing.
+I think everyone will know what you mean.)
+
 We will avoid referring to the direction of the zero-vector $bf(0)$, which doesn't make sense.
 (If you try to apply the formula here, you get division by $0$,
 since $bf(0)$ is the only vector with length $0$.)
-If you really want, you could say it has _every_ direction, but this is a convention.
-
-#warning[
-  Depending on what book you're following,
-  more pedantic authors might write "the unit vector in the direction of $bf(v)$"
-  or even "the unit vector in the same direction as $bf(v)$"
-  rather than "direction along $bf(v)$".
-  This is too long to type, so I adopted the shorter phrasing.
-  I think everyone will know what you mean.
-]
+If you need it, The convention is that it has _every_ direction.
 
 #typesig[
   If $bf(v)$ is a nonzero vector of length $n$,

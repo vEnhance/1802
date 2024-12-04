@@ -88,6 +88,8 @@ We have two definitions in play and we want to show they coincide, which makes n
 So in what follows, our notation $bf(u) dot bf(v)$ will always refer to the
 _algebraic_ definition; and we will _prove_ that $bf(u) dot bf(v) = |bf(u)| |bf(v)| cos theta$.
 
+#todo[write this section]
+
 == Deriving the algebraic definition of dot product from the geometric one (longer but easier to come up with) <appendix-dotpf-geo>
 
 The proof in @appendix-dotpf-alg might seem magical.

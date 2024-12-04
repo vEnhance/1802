@@ -138,7 +138,6 @@ so one needs different letters.
   $
     op("Vol")(cal(T))
     &= iint_(x^2 + y^2 <= 9) (72 - 8(x^2+y^2)) dif x dif y \
-    &= iint_(x^2 + y^2 <= 9) (72 - 8(x^2+y^2)) dif x dif y \
     &= int_(theta=0)^(2 pi) int_(r=0)^3 (72 - 8 r^2) dot (r dif r dif theta) \
     &= (int_(theta=0)^(2 pi) 1 dif theta)(int_(r=0)^3 (72 r - 8 r^3) dif r) \
     &= 2 pi dot [36r^2 - 2r^4]_(r=0)^3 = #boxed[$ 324 pi $]. #qedhere

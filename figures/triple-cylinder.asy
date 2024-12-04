@@ -1,5 +1,5 @@
 import geometry;
-size(12cm);
+size(10cm);
 draw((-5,0)--(5,0), grey, Arrows);
 draw(5*dir(30)--5*dir(210), grey, Arrows);
 draw((0,-4)--(0,4), grey, Arrows);
