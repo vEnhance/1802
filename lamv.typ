@@ -109,6 +109,8 @@ For comparison, Part India corresponds to §14, §15, §20, §21 of #poonen.
 #pagebreak()
 #include "src/2dflux.typ"
 #pagebreak()
+#include "src/lineex.typ"
+#pagebreak()
 #include "src/mt3.typ"
 #pagebreak()
 

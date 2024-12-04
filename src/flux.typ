@@ -287,3 +287,5 @@ Here are two examples of this with spheres.
   (In general, we know a sphere of radius $R$ has surface area $R^2 pi$.)
 ]
 Note that the answer is independent of the radius! The $17$ cancels out.
+
+== [EXER] Exercises

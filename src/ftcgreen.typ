@@ -346,7 +346,12 @@ So with this, we can present a recipe that condenses these together.
       4. Integrate this from the start time to the stop time.
 ]
 
-We'll give several examples of this in @sec-recipe-2d-flux.
+We'll give several more examples of this in @sec-recipe-2d-flux,
+where we contrast it to another type of line integral, the "2D flux".
+
+== [TEXT] Piecing things together
+
+#todo[write this]
 
 == [EXER] Exercises
 
@@ -355,5 +360,3 @@ We'll give several examples of this in @sec-recipe-2d-flux.
   $ bf(F)(x,y) = vec(sin(e^x) + cos(e^x), arctan(y)) $
   conservative?
 ]
-
-#todo[piecewise green example]

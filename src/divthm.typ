@@ -93,7 +93,7 @@ And that's pretty much it!
   then the surface area trick lets you derive the surface area formula of $4 pi R^2$.
 ]
 
-#warning(title: [Warning: beware of undefined points of $bf(F)$])[
+#warning(title: [Warning: Beware of undefined points of $bf(F)$])[
   You need to be careful to only apply the divergence theorem if the force is actually defined
   on the entire solid $cal(T)$!
   Here's an example of what can go wrong.
@@ -197,6 +197,8 @@ And that's pretty much it!
 #todo[write this]
 
 == [RECAP] All the methods for flux
+
+== [TEXT] Piecing things together
 
 == [EXER] Exercises
 
