@@ -595,7 +595,7 @@ Let's summarize the surface area procedure we just saw.
       - Pick a parametrization $bf(r)(u,v) : cal(R) -> RR^3$ of the surface $cal(S)$.
         Sort of like in @sec-flex-param, you have some freedom in how you set the parametrization.
       - Compute $(partial bf(r))/(partial u)$ and $(partial bf(r))/(partial v)$
-        (both are three-dimensional vectors at each point),
+        (both are three-dimensional vectors at each point).
       - Compute the cross product $(partial bf(r))/(partial u) times (partial bf(r))/(partial v)$ as in @sec-cross.
   2. Take the magnitude of the cross product to get a number for each point on the surface.
   3. Integrate it over $cal(R)$ using any of the methods for double integrals

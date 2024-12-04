@@ -5,6 +5,11 @@
 We now discuss (3D) flux, the final type of vector field integral that we haven't seen yet.
 This is the final cell in the poster @fig-int-chart-stokes that we haven't met yet.
 
+#figure(
+  box(image("figures/flux-cut.svg", width: auto), stroke: 1pt),
+  caption: [The flux integral for a surface circled in our poster @fig-int-chart-stokes.],
+)
+
 This section will be pretty reminiscent of @sec-work.
 We'll start by giving a "bare-hands" definition of the flux through a parametrized surface.
 It will be usable, but pretty cumbersome, so in the next section @sec-divthm
