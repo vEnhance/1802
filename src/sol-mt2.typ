@@ -6,21 +6,20 @@ The problem statements are given in @ch-mt2.
 
 == Solution to the butterfly (@exer-mt2p1)
 
-The butterfly’s position in the $x y$-plane is given by:
-$ bf(r) (t) = angle.l cos (t) , cos (t) angle.r . $
+The butterfly’s position in the $x y$-plane is given by
+$bf(r) (t) = angle.l cos (t) , cos (t) angle.r$.
 
 === Sketch of the trajectory
 
 We start actually by sketching the trajectory first (even though this was the last part),
 since that will make it easier to see what's going on in future parts.
+See @fig-mt2-butterfly.
 The trajectory described by
 $bf(r) (t) = angle.l cos (t) , cos (t) angle.r$ traces out a
 straight line in the $x y$-plane because both the $x$- and
 $y$-coordinates are equal for all $t$. Specifically, the butterfly’s
 motion follows the line $y = x$, with $t in [0 , 2 pi]$ producing
 oscillations between $x = 1$ and $x = - 1$.
-
-Here is a sketch of the trajectory.
 
 #figure(
   image("figures/mt2-butterfly.svg", width: auto),
@@ -29,7 +28,7 @@ Here is a sketch of the trajectory.
   but the blue endpoints are the important ones.
   The green points are a little offset to show both parts of the trajectory,
   e.g. $bf(r)(pi/2) = (0,0)$ is drawn a little bit left of where it should be.],
-)
+) <fig-mt2-butterfly>
 
 The trajectory is a straight line from $(1,1)$ to $(- 1 , - 1)$ and back
 following the line $y = x$.
@@ -93,8 +92,6 @@ $ int_0^pi sin (t) dif t = [- cos (t)]_0^pi = - cos (pi) + cos (0) = 1 + 1 = 2 .
 Thus, the total arc length is:
 $ L = sqrt(2) dot 2 dot 2 = 4 sqrt(2) . $
 
-#pagebreak()
-
 == Solution to the level curve (@exer-mt2p2)
 
 The first task is to recover the value of $k$ which wasn't given in the statement.
@@ -117,8 +114,6 @@ $ t = 3 dot 1 + 20 dot 2 = 43. $
 Hence the line requested is
 $ 3 x + 20 y = 43. $
 
-#pagebreak()
-
 == Solution to the linear approximation (@exer-mt2p3)
 
 We are given the function: $ f (x , y) = x^(5 y) $ and are asked to
@@ -139,8 +134,6 @@ The linear approximation of $f (1.001 , y)$ near the point $(1 , 3)$ can be
 expressed in terms of the gradient dot the displacement:
 $ f (1.001 , 3.001) &approx f (1 , 3) + nabla f (1 , 3) dot vec(0.001, 0.001)
   &= 1 + vec(15,0) dot vec(0.001, 0.001) = 1.015. $
-
-#pagebreak()
 
 == Solution to the two-variable function (@exer-mt2p4)
 
@@ -315,8 +308,6 @@ into a function in $x$ plus a function in $y$.
 For most functions $f(x,y)$ like $x y$ or $e^x sin(y)$,
 this approach is not going to fly.
 
-#pagebreak()
-
 == Solution to the constrained optimization (@exer-mt2p5)
 
 Let $f(x,y,z) = x+2y+2z$.
@@ -380,8 +371,6 @@ We follow the steps we described in the recipe in LAMV.
   So if one is observant enough they can skip straight to the LM on $cal(S)$,
   ignoring the region $cal(R)$ entirely.
 ]
-
-#pagebreak()
 
 == Solution to the tangent plane (@exer-mt2p6)
 
