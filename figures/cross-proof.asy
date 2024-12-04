@@ -1,0 +1,26 @@
+size(10cm);
+pair O = (0,0);
+pair v = (3,0);
+pair w = (1.3,0.7);
+fill(O--v--(v+w)--w--cycle, palegreen);
+label("Area $A$", (v+w)/2, deepgreen);
+draw(O--v, blue, EndArrow, BeginMargin);
+draw(O--w, blue, EndArrow, BeginMargin);
+label("$\mathbf{v}$", v, dir(v), blue);
+label("$\mathbf{w}$", w, dir(w), blue);
+pair vxw = (0,4);
+draw(O--vxw, red, EndArrow, BeginMargin);
+label("$\mathbf{v} \times \mathbf{w}$", vxw, dir(90), red);
+label("Length $|\mathbf{v} \times \mathbf{w}| = A$", 0.8*vxw, dir(0), red);
+dot("$\mathbf{0}$", O, dir(225));
+transform t = shift(-0.1,0);
+pair n = vxw/3;
+label("$\mathbf{n}$", t*n, dir(135), purple);
+draw(t*(O--n), purple, EndArrow, BeginMargin);
+label("$|\mathbf{n}| = 1$", t*(n/2), dir(180), purple);
+
+draw(n--(v+n)--(v+n+w)--(n+w)--cycle, grey);
+draw(w--(n+w), grey);
+draw(v--(n+v), grey);
+draw((v+w)--(n+v+w), grey);
+label("Volume $A$", midpoint((v+w)--(n+v+w)), dir(0), grey);

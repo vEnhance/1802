@@ -1,0 +1,15 @@
+size(6cm);
+pair O = (0,0);
+pair v = (3,0);
+pair w = (1.3,0.7);
+fill(O--v--(v+w)--w--cycle, palegreen);
+label("Area $A$", (v+w)/2, deepgreen);
+draw(O--v, blue, EndArrow, BeginMargin);
+draw(O--w, blue, EndArrow, BeginMargin);
+label("$\mathbf{v}$", v, dir(v), blue);
+label("$\mathbf{w}$", w, dir(w), blue);
+pair vxw = (0,4);
+draw(O--vxw, red, EndArrow, BeginMargin);
+label("$\mathbf{v} \times \mathbf{w}$", vxw, dir(90), red);
+label("Length $|\mathbf{v} \times \mathbf{w}| = A$", vxw/2, dir(0), red);
+dot("$\mathbf{0}$", O, dir(225));

@@ -39,12 +39,18 @@ This definition is terrible, so bear with me.
     to _both_ $bf(v)$ and $bf(w)$, and also satisfying the *right-hand rule*.
 ]
 
+The geometric definition is illustrated in @fig-cross-def below.
+#figure(
+  image("figures/cross-def.svg", width: auto),
+  caption: [Illustration of the geometric definition of the cross product.],
+) <fig-cross-def>
+
 Like with the dot product, it's not obvious at all why these definitions are compatible!
 @eqn-cross-raw-alg is probably also really mysterious and seems to come from nowhere.
 In this case, I think the idea is that you should start with the geometric definition,
 then grind through some calculation to get a system of equations.
 If you solve the system of equations, you wind up with @eqn-cross-raw-alg as the result.
-If you want to see this derivation done in full, check @appendix-crosspf.
+We do this in the next section as an optional sidenote.
 
 #typesig[
   The cross product *only* accepts two vectors *both of length $3$*.
@@ -66,8 +72,8 @@ If you want to see this derivation done in full, check @appendix-crosspf.
 
   Another way to describe the right-hand rule is to require the following table to be true:
   $ ee_1 times ee_2 &= ee_3 = -ee_2 times ee_1 \
-    ee_2 times ee_3 &= ee_3 = -ee_3 times ee_2 \
-    ee_3 times ee_1 &= ee_3 = -ee_1 times ee_3. $
+    ee_2 times ee_3 &= ee_1 = -ee_3 times ee_2 \
+    ee_3 times ee_1 &= ee_2 = -ee_1 times ee_3. $
 ]
 
 It may not be that easy to remember @eqn-cross-raw-alg.
@@ -122,12 +128,107 @@ and not even talk about the corresponding geometry.
     - detmat(1, 3; 4, 6) ee_2 + detmat(1, 2; 4, 5) ee_3 \
   &= -3 ee_1 + 6ee_2 - 3ee_3 = vec(-3,6,3). #qedhere $
 ]
-As a sanity check you can verify that, indeed,
-this vector is perpendicular to both $bf(v)$ and $bf(w)$ using the dot product
+As a sanity check for the geometry definition, you can verify that indeed
+this vector is perpendicular to both $bf(v)$ and $bf(w)$ using the dot product:
 $ vec(-3,6,3) dot vec(1,2,3) &= (-3)(1) + (6)(2) + (3)(3) = 0 \
   vec(-3,6,3) dot vec(4,5,6) &= (-3)(4) + (6)(5) + (3)(6) = 0. $
-(Indeed, our proof in the appendix (@appendix-crosspf) shows the cross product is
-really designed so that this dot product is $0$.)
+
+== [SIDENOTE] Outline of derivation of the cross product formula
+
+In this sidenote, we outline how the algebraic definition of the cross product
+can be derived from the geometric one.
+This proof is too hard to be on an 18.02 exam,
+but I decided to include it here instead of the appendix
+because it is actually good practice with using dot products and determinants.
+For simplicity, I won't worry at all about division-by-zero issues.
+
+So let's say we have two given vectors
+$ bf(v) &= a_1 ee_1 + a_2 ee_2 + a_3 ee_3 \
+  bf(w) &= b_1 ee_1 + b_2 ee_2 + b_3 ee_3. $
+Let's denote the cross product by
+$ bf(v) times bf(w) &= x ee_1 + y ee_2 + z ee_3. $
+We need to solve for $x$, $y$, $z$ in terms of $a_1$, $a_2$, $a_3$, $b_1$, $b_2$, $b_3$.
+
+So what are the givens?
+Well, first we have the requirement that $bf(v) times bf(w)$ should be perpendicular to $bf(v)$ and $bf(w)$.
+So we get two equations from the dot product:
+$ 0 = bf(v) dot (bf(v) times bf(w)) &= a_1 x + a_2 y + a_3 z \
+  0 = bf(w) dot (bf(v) times bf(w)) &= b_1 x + b_2 y + b_3 z. $
+This is a system of two equations in three variables, but it's good enough to get the ratio $x:y:z$.
+For example, if you multiply the first equation by $b_3$ and the second by $a_3$,
+then subtract, you will get that
+$ 0 = b_3(a_1 x + a_2 y) - a_3(b_1 x + b_2 y)
+  ==> x / y = (a_2 b_3 - a_3 b_2) / (a_3 b_1 - a_1 b_3). $
+In a similar way, you can get the ratio $y / z$ as
+$ y / z = (a_3 b_1 - a_1 b_3) / (a_1 b_2 - a_2 b_1). $
+Geometrically, this means we've already recovered the _direction_ of $bf(v) times bf(w)$.
+Algebraically, it means we know the ratio $x:y:z$; there should be some scalar constant $k$ such that
+$ x &= k (a_2 b_3 - a_3 b_2) \
+  y &= k (a_3 b_1 - a_1 b_3) \
+  z &= k (a_1 b_2 - a_2 b_1). $
+So all we need to do now is find $k$.
+For brevity, we'll let
+$ x_0 := a_2 b_3 - a_3 b_2 \
+  y_0 := a_3 b_1 - a_1 b_3 \
+  z_0 := a_1 b_2 - a_2 b_1 $
+so $x = k x_0$, $y = k y_0$, $z = k z_0$, and we need to solve for $k$.
+
+We have one more condition to use, which is that we want the magnitude
+$sqrt(x^2+y^2+z^2)$ to be equal to to the area $A$ of the parallelogram spanned by $bf(v)$ and $bf(w)$,
+and also point in the way specified by the right-hand rule.
+How can we encode that in an equation?
+At face value, none of the weapons in our toolkit so far let you access the area of a parallelogram in 3D space.
+We only have a determinant for parallelograms in 2D space.
+
+But here's a clever trick to get around it.
+The trick to get the area is to consider the parallelepiped formed by three vectors:
+the two given vectors $bf(v)$ and $bf(w)$ and the _unit_ vector in the direction of $bf(v) times bf(w)$.
+That is, consider the vector
+$ bf(n) = (angle.l x_0, y_0, z_0 angle.r) / sqrt(x_0^2 + y_0^2 + z_0^2). $
+We've just seen $bf(n)$ is perpendicular to both $bf(v)$ and $bf(w)$,
+and we've scaled $bf(n)$ so that $|bf(n)| = 1$.
+
+#figure(
+  image("figures/cross-proof.svg", width: auto),
+  caption: [The additional vector $bf(n)$ introduced.
+    It's a unit vector in the direction we want, and it doesn't depend on $k$.],
+)
+
+For simplicity let's assume that $bf(n)$ points the correct way for the right-hand rule.
+(If $bf(n)$ points the other way, the calculation below will need a bunch of extra minus signs;
+we won't dwell on it here, again to keep things simple.)
+So if we consider the parallelepiped formed by $bf(n)$, $bf(v)$, $bf(w)$,
+its volume will just be the height times the base parallelogram, i.e. it is $1 dot A = A$.
+And the volume of a parallelepiped _is_ something we can access: it's a $3 times 3$ determinant.
+So our trick has managed to let us get our hands on $A$:
+$ A = detmat(
+    x_0 / sqrt(x_0^2 + y_0^2 + z_0^2), y_0 / sqrt(x_0^2 + y_0^2 + z_0^2), z_0 / sqrt(x_0^2 + y_0^2 + z_0^2);
+    a_1, a_2, a_3;
+    b_1, b_2, b_3;
+  ). $
+Here, the determinant is indeed $+A$ (rather than $-A$) because $bf(n)$ was assumed
+to be pointing the correct direction, so the determinant yields a plus sign.
+This trick of introducing $bf(n)$ is what lets us get a formula for $A$
+which would otherwise be inaccessible with only the determinant at face value.
+
+Now we solve for $k$.
+Because we're in the case that $bf(n)$ is pointing the right way, we know we should have $k > 0$.
+Now we have to set the magnitude of
+$ |bf(v) times bf(w)| = k sqrt(x_0^2 + y_0^2 + z_0^2) $
+equal to $A$ above; that is, we get the equation
+$ k sqrt(x_0^2 + y_0^2 + z_0^2) = A = detmat(
+    x_0 / sqrt(x_0^2 + y_0^2 + z_0^2), y_0 / sqrt(x_0^2 + y_0^2 + z_0^2), z_0 / sqrt(x_0^2 + y_0^2 + z_0^2);
+    a_1, a_2, a_3;
+    b_1, b_2, b_3;
+  ). $
+Multiplying both sides by $sqrt(x_0^2 + y_0^2 + z_0^2)$ and expanding the determinant gives
+$ k (x_0^2 + y_0^2 + z_0^2) =
+  x_0 detmat(a_2, a_3; b_2, b_3) - y_0 detmat(a_1, a_3; b_1, b_3) + z_0 detmat(a_1, a_2; b_1, b_2). $
+If you now look at the definition of $x_0$, $y_0$, $z_0$,
+you will see that the determinants on the right-hand side are conveniently equal to
+$x_0$, $-y_0$, and $z_0$, respectively.
+So suddenly the whole thing cancels and we just get $k = 1$.
+So $x = x_0$, $y = y_0$, $z = z_0$ and this gives the algebraic formula we wanted.
 
 == [RECIPE] What to use the cross product for
 
@@ -139,6 +240,7 @@ So it has more information in it --- both a direction and a magnitude.
 
 However in practice, when we use the cross product,
 we'll often _only use one piece of information_.
+(It's not until @sec-flux that we really start using both parts at once.)
 
 Hence the following two recipes below.
 
@@ -206,11 +308,7 @@ in the second recipe, we ignore the direction.
 Compared to dot products and determinants,
 the cross product might feel the most unnatural, for good reason ---
 it's used much less frequently by serious mathematicians than the other tools you see.
-
-#figure(
-  image("media/cross-products.jpg", width: 80%),
-  caption: [How to think of cross products.],
-)
+See @fig-cross-meme.
 
 The reason that the cross product isn't popular with mathematicians is
 the definition of the cross product is *really quite brittle*.
@@ -239,6 +337,11 @@ But for $n=4$, a bivector in $RR^4$ has six numbers,
 which is too much information to store in a vector in $RR^4$.
 Similarly, for $n > 4$, this translation can't be done.
 That's why the cross product is so brittle and can't work past $RR^3$.
+
+#figure(
+  image("media/cross-products.jpg", width: 80%),
+  caption: [How to think of cross products.],
+) <fig-cross-meme>
 
 == [RECAP] Recap of vector stuff up to here
 
@@ -289,7 +392,7 @@ we've seen in applications.
 ]
 
 #exerstar[
-  Suppose $bf(v)$ is a vector in $RR^3$ such that
+  Suppose $bf(v)$ is a vector in $RR^3$ and $k$ is a real number such that
   $ vec(1,2,3) times bf(v) = vec(4,5,k). $
   Compute $k$.
 ]
