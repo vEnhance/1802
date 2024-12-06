@@ -277,7 +277,7 @@ In these notes we will pre-compute five different cross products:
 - The surface of a sphere of radius $R$ centered at the origin,
   where the parameters are $phi$ and $theta$
 
-(As it turns out, in 18.02 it's likely these are the _only_ four situations you will see.)
+(As it turns out, in 18.02 it's likely these are the _only_ five situations you will see.)
 
 The table showing the results in @table-magic-cross-prod-scalint.
 Note that for surface area, you only need the _absolute value_ of the cross product (fourth column).
@@ -315,7 +315,7 @@ know the direction the vector points in too, not just the absolute value.
       [$ R sin phi dot bf(r)(phi, theta) $],
       [$R^2 sin phi dif phi dif theta$ \ (if $0 <= phi <= pi$)],
   ),
-  caption: [Pre-computed formulas for the cross product in four most common situations,
+  caption: [Pre-computed formulas for the cross product in five most common situations,
     which are likely to be all you need.],
   kind: table
 ) <table-magic-cross-prod-scalint>
