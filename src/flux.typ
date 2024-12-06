@@ -178,12 +178,12 @@ For the first and second rows, you should just remember the fifth column.
   kind: table
 ) <table-magic-cross-prod-n-dS>
 
-Again, when actually doing flux calculation with bare hands, you only need the fifth column.
+Again, when actually doing flux calculation with bare hands, *you only need the fifth column*.
 And if you ever _do_ need the third and fourth column for some other reason,
 they can be derived instantly from the fifth column anyways.
 So the third and fourth column are only helpful insomuch as they might make the
-formula for the cylinder and sphere easier to remember.
-Otherwise they are pretty useless.
+formula for the cylinder and sphere easier to remember or more conceptually intuitive.
+But for practical calculation they are redundant and hence useless.
 
 == [RECIPE] Recipe for flux integrals with bare-hands parametrization
 
@@ -198,8 +198,9 @@ We go back to recipe format now.
     - If you are using $(x,y)$-coordinates to parametrize
       (meaning $cal(S)$ is $z=f(x,y)$ or a level surface),
       use the magic formulas in rows 1 or 2 of @table-magic-cross-prod-n-dS.
+    - For a flat surface, it's easy (row 3 of @table-magic-cross-prod-n-dS).
     - If $cal(S)$ is specifically given by cylindrical/spherical coordinates with fixed radius,
-      use rows 3 or 4 of @table-magic-cross-prod-n-dS.
+      use rows 4 or 5 of @table-magic-cross-prod-n-dS.
     - Otherwise, evaluate the cross product manually:
       - Pick a parametrization $bf(r)(u,v) : cal(R) -> RR^3$ of the surface $cal(S)$.
         Sort of like in @sec-flex-param, you have some freedom in how you set the parametrization.

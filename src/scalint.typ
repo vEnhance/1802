@@ -609,8 +609,9 @@ Let's summarize the surface area procedure we just saw.
     - If you are using $(x,y)$-coordinates to parametrize
       (meaning $cal(S)$ is $z=f(x,y)$ or a level surface),
       use the magic formulas in rows 1 or 2 of @table-magic-cross-prod-scalint.
+    - For a flat surface, it's easy (row 3 of @table-magic-cross-prod-scalint).
     - If $cal(S)$ is specifically given by cylindrical/spherical coordinates with fixed radius,
-      use rows 3 or 4 of @table-magic-cross-prod-n-dS.
+      use rows 4 or 5 of @table-magic-cross-prod-scalint.
     - Otherwise, evaluate the cross product manually:
       - Pick a parametrization $bf(r)(u,v) : cal(R) -> RR^3$ of the surface $cal(S)$.
         Sort of like in @sec-flex-param, you have some freedom in how you set the parametrization.
