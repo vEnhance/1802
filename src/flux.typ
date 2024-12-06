@@ -18,34 +18,40 @@ For 18.02, the methods available to you will be
 
 - Bare-hands parametrization (covered here)
   - Even here, magic formulas can save you a lot of work --- see @table-magic-cross-prod-n-dS.
-- Shortcut: The divergence theorem, by converting to a 3D volume integral (covered in @sec-divthm)
-- Shortcut: Transforming to a surface area integral (covered in @sec-divthm)
-- Shortcut: Stokes' theorem, if the vector field happens to be a curl (covered in @sec-badstokes)
+- Shortcut: Transforming to a surface area integral (covered in @sec-flux-to-surf)
+- Shortcut: The divergence theorem, by converting to a 3D volume integral (covered in the next section @sec-divthm)
+- Shortcut: Crummy Stokes' theorem, if the vector field happens to be a curl (covered in @sec-badstokes)
 
 == [TEXT] The definition of flux using bare-hands parametrization
 
 #definition(title: [Definition of flux])[
-  Let $bf(r)(u,v) : cal(R) -> RR^3$ parametrize a surface $cal(S)$ in $RR^3$.
+  Let $bf(r)(u,v) : cal(R) -> RR^3$ parametrize an oriented surface $cal(S)$ in $RR^3$.
   The flux of a vector field $bf(F) : RR^3 -> RR^3$ through $cal(S)$ is defined by
   $ iint_(cal(R)) bf(F)(bf(r)(u,v)) dot
     ((partial bf(r))/(partial u) times (partial bf(r))/(partial v)) dif u dif v. $
 ]
+(We'll explain what "oriented" means in the next section.)
 #typesig[
-  Flux accepts a _parametrized surface_ and a _vector field_ and outputs a _number_.
+  Flux requires two inputs: an _oriented surface_ $cal(S)$
+  and a _vector field_ $bf(F)$
 ]
 
 Yes, there's that hideous cross product again.
 Naturally, people have shorthand to make this easier to swallow: this time either
 $ iint_(cal(S)) bf(F) dot dif bf(S) = iint_(cal(S)) bf(F) dot bf(n) dif S $
 is used to sweep everything under the carpet.
+That is, $dif bf(S)$ and $bf(n) dif S$ are both shorthands for the longer
+$(partial bf(r))/(partial u) times (partial bf(r))/(partial v) dif u dif v$.
+We'll usually prefer $bf(n) dif S$ in this book.
 
-I promised you back in the surface area chapter that at some point
+I promised you back in the surface area section (@sec-scalar-field-ints) that at some point
 you'd need the whole cross product and not just its magnitude, and here we are!
 In fact, the absolute value being gone is in some sense an _improvement_: I would argue
 $lr(angle.l - (partial f) / (partial x), - (partial f) / (partial y), 1 angle.r)$
 is less messy than $sqrt(1 + ((partial f) / (partial x))^2 + ((partial f) / (partial y))^2)$.
 
-We'll do example calculations in a moment, but let me first talk about how to think about this.
+We'll do example calculations in a moment, but let me first talk about how to think about this,
+and also explain what the adjective "oriented".
 
 == [TEXT] Aquatic interpretation of flux
 
@@ -53,31 +59,75 @@ The interpretation here is similar to 2D flux.
 You should imagine the surface $cal(S)$ as some membrane in the water;
 then the flux measures the rate at which water moves through it.
 
-The thing that you have to pay attention for flux is the notion of "direction".
+To make this picture complete, I need to tell you about orientation.
 Remember, back when we had work integrals,
-we distinguished between a "start" point and a "stop" point for the curve $cal(C)$,
-which made sense.
-For surface $cal(S)$, the usual way this is discussed is in terms of a _normal_ vector:
-one chooses a direction to distinguish inside vs outside,
-and points all the normal vectors one way.
+a curve $cal(C)$ wasn't just a bunch of points;
+we also had to tell you which point was the "start" and which one was the "stop".
+In other words, work integrals operate on a curve with a _direction_.
 
-#todo[draw a figure]
-
-#digression[
-  In 2D flux, we had a notion of "outside" vs "inside" even for curves $cal(C)$ that weren't closed,
-  because we had a notion of $90 degree$ clockwise vs $90 degree$ counterclockwise.
-  We don't have this in 3D space, sadly, which is why normal vectors keep showing up.
+Something similar happens with flux integrals over surfaces:
+in addition to the actual points,
+we need to specify an _orientation_.
+To be more precise, at every point $P$ of the surface $cal(S)$,
+the cross product from our parametrization could point in one of two opposite directions.
+#definition(title: [Definition of orienting a surface])[
+  To _orient_ the surface $cal(S)$ is to specify, at each point,
+  which way you want the cross product of your parametrization to point.
 ]
 
-In particular, _the order of $u$ and $v$ matter_; if you flip the order of the two parameters
-it will negate the entire cross product:
+Algebraically, this corresponds to choosing the _order of $u$ and $v$_;
+as if you flip the order of the two parameters it will negate the entire cross product:
 $ ((partial bf(r))/(partial u) times (partial bf(r))/(partial v))
   = - ((partial bf(r))/(partial v) times (partial bf(r))/(partial u)). $
 Hence the flux will get negated too.
 This sign issue is super disorienting because it wasn't present for work,
 where "start to stop" was pretty easy to think about.
 
-#todo[draw a picture]
+#todo[this really needs a picture]
+
+I should probably give an example so this isn't so abstract.
+#example(title: [Example: Orienting a sphere])[
+  Let's consider the sphere $x^2 + y^2 + z^2 = 1$ with $z > 0$.
+  For each point $P$ on the sphere, the normal vector to the sphere at $P$
+  either points straight towards the center of from $P$, or away from the center of $P$.
+
+  What does this correspond to algebraically?
+  We consider two possible ways to parametrize the sphere that differ only in the order.
+
+  - Let's imagine we used a spherical parametrization of the hemisphere as
+    $ bf(r)(phi, theta) = (sin phi cos theta, sin phi sin theta, cos phi) $
+    where $0 <= phi <= pi$ and $0 <= theta <= 2 pi$.
+    If we grinded out the cross product, you would find that
+    (see @sec-magic-cross-prod to see this written out)
+    $ (partial bf(r)) / (partial phi) times (partial bf(r)) / (partial theta)
+      = sin phi dot (sin phi cos theta, sin phi sin theta, cos phi)
+      = sin phi dot bf(r)(phi, theta). $
+    At each point $P = bf(r)(phi, theta) = (sin phi cos theta, sin phi sin theta, cos phi)$
+    of the sphere, this points outwards (since $sin phi >= 0$),
+    so this would be a parametrization of the sphere with all the cross products pointing out.
+
+  - But what if we had flipped the order of $phi$ and $theta$?
+    That is, suppose we used
+    $ bf(r)(theta, phi) = (sin phi cos theta, sin phi sin theta, cos phi) $
+    where $0 <= phi <= pi$ and $0 <= theta <= 2 pi$ instead.
+    Then the cross product will get negated:
+    $ (partial bf(r)) / (partial theta) times (partial bf(r)) / (partial phi)
+      = -sin phi dot (sin phi cos theta, sin phi sin theta, cos phi)
+      = -sin phi dot bf(r)(phi, theta). $
+    And now at every point, the cross product points inside the sphere instead!
+
+  So which one of these orientations is "correct"? Well, that's why a convention is needed.
+  It's just like when we computed work or flux integrals of circles in 2D,
+  we had to say "counterclockwise" or "clockwise".
+  For this sphere we have to say "outwards" or "inwards" or something like that
+  so that whoever is computing the flux integral knows which way to take the cross product.
+]
+
+#digression(title: [Digression: Comparison to 2D flux])[
+  In 2D flux, we had a notion of "outside" vs "inside" even for curves $cal(C)$ that weren't closed,
+  because we had a notion of $90 degree$ clockwise vs $90 degree$ counterclockwise.
+  We don't have this in 3D space, sadly, which is why we resort to normal vectors instead.
+]
 
 == [TEXT] Visualizing flux integrals via dot products
 
@@ -123,6 +173,9 @@ a _direction_ (meant to give two right angles) and a _magnitude_ (meant to inter
 The point of separating the shorthand is to make these correspond
 to $bf(n)$ and $dif S$ respectively.
 
+Personally, I don't see the point of decomposing the information like this,
+since you need the entire cross product when you do calculation anyway.
+But a lot of people do it.
 So by popular request,
 here's a version of @table-magic-cross-prod-scalint that separates the components.
 I think this separation only really helps with the fourth and fifth rows,
@@ -207,18 +260,199 @@ We go back to recipe format now.
       - Compute $(partial bf(r))/(partial u)$ and $(partial bf(r))/(partial v)$
         (both are three-dimensional vectors at each point).
       - Compute the cross product $(partial bf(r))/(partial u) times (partial bf(r))/(partial v)$ as in @sec-cross.
-  2. Look at which way the cross product points (via right-hand rule).
+  2. Look at which way the cross product points.
     Does it point the direction you want?
-    If not, negate the entire cross product (equivalently, swap the order of $u$ and $v$) before going on.
+    If not, negate the entire cross product
+    (equivalently, swap the order of $u$ and $v$) before going on.
   3. Compute the dot product $ bf(F) dot ((partial bf(r))/(partial u) times (partial bf(r))/(partial v)). $
     This gives you a number at every point on the parametrizing region $cal(R)$.
   4. Integrate the entire thing over $cal(R)$ using any of the methods for double integrals
     (such as horizontal/vertical slicing, polar coordinates, change of variables, etc.).
 ]
 
-#todo[write examples]
+Let's give one example corresponding to each row of @table-magic-cross-prod-n-dS.
 
-== [TEXT] Another trick: writing as surface area if $bf(F) dot bf(n)$ is constant
+#sample[
+  Consider the surface $cal(S)$ defined by $z = x^3 + y^3$ for
+  $0 <= x <= 1$ and $0 <= y <= 1$, with the normal vector oriented upwards
+  (i.e. with positive $z$-component).
+  Let $bf(F)(x,y,z) = vec(1 , 1 , z)$.
+  Find the flux of $bf(F)$ through $cal(S)$.
+]
+#soln[
+  Our parametrization of the surface $cal(S)$ is by definition
+  $ bf(r)(x,y) = (x, y, x^3+y^3) $
+  for $0 <= x <= 1$ and $0 <= y <= 1$.
+  Accordingly, we use the first row of @table-magic-cross-prod-n-dS with $f(x,y) = x^3+y^3$.
+  Compute the partial derivatives
+  $ (partial f) / (partial x) = 3 x^2, quad (partial f) / (partial y) = 3 y^2. $
+  Then by using the first row of @table-magic-cross-prod-n-dS, if we
+  we get that the cross product at each point is given by
+  $ (partial bf(r)) / (partial x) times (partial bf(r)) / (partial y)
+    = vec(- 3 x^2 , - 3 y^2 , 1). $
+
+  At this point we have to check whether this cross product points the direction
+  specified in the problem, or if we need to negate everything and consider
+  $(partial bf(r)) / (partial y) times (partial bf(r)) / (partial x) = vec(3 x^2 , 3 y^2 , -1)$
+  instead.
+  The question wanted the normal vector to be oriented upwards, and since $1$ is positive,
+  the original we had is okay; we use
+  $ bf(n) dif S = vec(3 x^2, 3 y^2, -1) = vec(- 3 x^2 , - 3 y^2, 1) dif x dif y. $
+
+  Now, the vector field is given at each point $(x,y)$ by
+  $ bf(F)(bf(r)(x,y)) = vec(1 , 1 , x^3 + y^3). $
+  So we can compute the dot product
+  $ bf(F) dot ((partial bf(r)) / (partial x) times (partial bf(r)) / (partial y))
+    &= (1) (- 3 x^2) + (1) (- 3 y^2) + (x^3 + y^3) (1) \
+    &= - 3 x^2 - 3 y^2 + x^3 + y^3. $
+  Hence the flux requested is given by
+  $ iint_(cal(S)) bf(F) dot bf(n) dif S
+    = int_(x=0)^1 int_(y=0)^1 (- 3 x^2 - 3 y^2 + x^3 + y^3) dif y dif x $
+  which is straightforward to evaluate:
+  $ iint_(cal(S)) bf(F) dot bf(n) dif S
+    &= int_(x=0)^1 int_(y=0)^1 (x^3 - 3 x^2 + y^3 - 3 y^2) dif y dif x \
+    &= int_(x=0)^1 (int_(y=0)^1 (x^3 - 3 x^2) dif x) dif y + int_(y=0)^1 (int_(x=0)^1 (y^3 - 3 y^2) dif y) dif x \
+    &= int_(x=0)^1 (x^3 - 3 x^2 dif x) + int_(y=0)^1 (y^3 - 3 y^2 dif y) \
+    &= [x^4 / 4 - x^3]_(x=0)^1 + [y^4 / 4 - y^3]_(y=0)^1 \
+    &= - 3/4 - 3/4 = #boxed[$ -3/2 $]. #qedhere $
+]
+
+#sample[
+  Consider the upper hemisphere of the sphere defined by
+  $x^2 + y^2 + z^2 = 25$ with the unit normal vector oriented _downwards_ towards the $x y$-plane.
+  Calculate the flux of the vector field
+  $bf(F) = vec(y z , x z , 0)$ through this surface.
+]
+
+#soln[
+  Our parametrization of $cal(S)$ is going to be
+  $ bf(r)(x,y) = angle.l x^2, y^2, sqrt(25-(x^2+y^2)) angle.r $
+  across $x^2 + y^2 <= 25$.
+  If we wanted to use the first row of the table @table-magic-cross-prod-n-dS,
+  we would use $f(x,y) = sqrt(25 - (x^2+y^2))$.
+  However, square roots are annoying and we'll use the second row instead
+  by viewing this hemisphere as a chunk of the level surface
+  $ g(x,y,z) = x^2+y^2+z^2 $ for the value $25$.
+  Since $nabla g = angle.l 2x, 2y, 2z angle.r$ and $(partial g) / (partial z) = 2z$, our table gives
+  $ (partial bf(r)) / (partial x) times (partial bf(r)) / (partial y)
+    = (nabla g) / ((partial g) / (partial z))
+    = (angle.l 2x, 2y, 2z angle.r)/(2z)
+    = vec( x/z, y/z, 1 ). $
+  Here $z = sqrt(25-(x^2+y^2))$.
+
+  At this point we have to check whether this cross product points the direction
+  specified in the problem, or if we need to negate everything and consider
+  $(partial bf(r)) / (partial y) times (partial bf(r)) / (partial x) = vec( -x/z, -y/z, -1 )$ instead.
+  This time, the question specified the normal vector should point _downwards_,
+  towards the $x y$-plane.
+  So we had better use the negative one:
+  $ bf(n) dif S = (partial bf(r)) / (partial y) times (partial bf(r)) / (partial x) = vec( -x/z, -y/z, -1 ) dif x dif y. $
+
+  Meanwhile, the force at each point of the parametrization is given by
+  $ bf(F)(bf(r))(x,y) = vec(y z, x z, 0). $
+  So the dot product is given by
+  $ bf(F) dot ((partial bf(r)) / (partial y) times (partial bf(r)) / (partial x)) =
+    y z dot (-x/z) + x z dot (-y/z) + 0 dot (-1) = - 2 x y. $
+  Hence the flux we seek is
+  $ iint_(cal(S)) bf(F) dot bf(n) dif S = iint_(x^2+y^2 <= 25) - 2 x y dif x dif y. $
+
+  But notice that the integrand $- 2 x y$ is an odd function in both $x$ and $y$.
+  Since the region $x^2+y^2 <= 25$ is symmetric with respect to both axes,
+  we don't even have to bother changing to polar coordinates;
+  we can just deduce directly that $ iint_(x^2+y^2 <= 25) - 2 x y dif x dif y = #boxed[$ 0 $]. #qedhere $
+]
+
+#sample[
+  Consider the plane $x = 3$ with the normal vector oriented in the $-x$ direction,
+  and the vector field $bf(F) = angle.l e^x, e^y, e^z angle.r$.
+  Compute the flux of $bf(F)$ through the portion of the plane with $y^2 + z^2 <= 25$.
+]
+
+#soln[
+  Let $cal(S)$ be the surface of the plane mentioned.
+  We parametrize with the variables $y$ and $z$;
+  $ bf(r)(y,z) = (3, y, z) $
+  across $y^2 + z^2 <= 25$.
+
+  This cross product is the third (easiest) row of @table-magic-cross-prod-n-dS; you just get
+  $ (partial bf(r)) / (partial y) times (partial bf(r)) / (partial z) = vec(1, 0, 0). $
+
+  Before going on, we again have to check whether the normal vector points the correct way,
+  or we should negate it and use
+  $(partial bf(r)) / (partial z) times (partial bf(r)) / (partial y) = vec(-1, 0, 0)$ instead.
+  The problem wants the $-x$ direction, so indeed, we take the negated one here:
+  $ bf(n) dif S = (partial bf(r)) / (partial z) times (partial bf(r)) / (partial y) = vec(-1, 0, 0). $
+
+  Meanwhile, the force vector at each point is just
+  $ bf(F)(bf(r)(y,z)) = vec(e^3, e^y, e^z). $
+
+  The force dot product of force with this is
+  $ bf(F) dot ((partial bf(r)) / (partial z) times (partial bf(r)) / (partial y))
+    = vec(e^3, e^y, e^z) dot vec(-1, 0, 0) = -e^3. $
+
+  Hence, the flux we seek is
+  $ iint_(cal(S)) bf(F) dot bf(n) dif S
+    &= iint_(y^2 + z^2 <= 25) -e^3 dif y dif z \
+    &= -e^3 dot op("Area")(y^2 + z^2 <= 25) = #boxed[$ -25 pi e^3 $]. #qedhere $
+]
+
+#sample[
+  Let $cal(S)$ be the portion of the cylinder $x^2 + y^2 = 49$ where $0 <= z <= 10$,
+  with normal vector oriented outwards.
+  Calculate the flux of $bf(F) = vec(3x, 5y, e^z)$ through $cal(S)$.
+]
+
+#soln[
+  It's natural to parametrize this with cylindrical coordinates as
+  $ bf(r)(theta, z) = angle.l 7 cos theta, 7 sin theta, z angle.r $
+  for $0 <= theta <= 2pi$ and $0 <= z <= 10$.
+  As this is a cylinder, we use the fourth row of @table-magic-cross-prod-n-dS to get
+  $ (partial bf(r)) / (partial theta) times (partial bf(r)) / (partial z)
+    = vec(7 cos theta, 7 sin theta, 0). $
+
+  As before we pause to see whether this points the right way or whether we need to instead use
+  $(partial bf(r)) / (partial z) times (partial bf(r)) / (partial theta)
+    = vec(-7 cos theta, -7 sin theta, 0)$.
+  The question specifies to orient the normal vector outwards,
+  so we use the former one:
+  $ bf(n) dif S = (partial bf(r)) / (partial theta) times (partial bf(r)) / (partial z)
+    = vec(7 cos theta, 7 sin theta, 0) dif theta dif z. $
+
+  Meanwhile, the force at each point is given by
+  $ bf(F)(bf(r)(theta, z)) = vec(7 dot 3 cos theta, 7 dot 5 sin theta, e^z). $
+  Thus, the dot product $bf(F) dot bf(n)$ is:
+  $ bf(F) dot ((partial bf(r)) / (partial theta) times (partial bf(r)) / (partial z))
+    &= vec(7 dot 3 cos theta , 7 dot 5 sin theta , e^z) dot vec(7 cos theta , 7 sin theta , 0) \
+    &= 49(3 cos^2 theta + 5 sin^2 theta). $
+  Hence, the flux we seek is
+  $ iint_(cal(S)) bf(F) dot bf(n) dif S
+    &=  int_(theta=0)^(2 pi) int_(z=0)^(10) (21 cos^2 theta + 35 sin^2 theta) dot 7 dif z dif theta \
+    &= int_(theta=0)^(2 pi) 490 (3 cos^2 theta + 5 sin^2 theta) dif theta \
+    &= 490 int_(theta=0)^(2 pi) (3 cos^2 theta + 5 sin^2 theta) dif theta. $
+  Recall that:
+  $ int_(theta=0)^(2 pi) cos^2 theta dif theta = int_(theta=0)^(2 pi) sin^2 theta dif theta = pi $
+  by using $cos^2 theta = (1 + cos(2 theta)) / 2$ and $sin^2 theta = (1 - cos(2 theta)) / 2$.
+  Hence,
+  $ 490 int_(theta=0)^(2 pi) (3 cos^2 theta + 5 sin^2 theta) dif theta
+    = 490 dot (3 pi + 8 pi) = #boxed[$ 3920 pi $]. #qedhere $
+]
+
+For the final example, we actually use the same hemisphere again,
+but this time we use spherical coordinates, so you can compare the methods.
+(In my opinion, this is uglier, but some people prefer spherical coordinates anyway.)
+#sample[
+  Consider the upper hemisphere of the sphere defined by
+  $x^2 + y^2 + z^2 = 25$ with the unit normal vector oriented _downwards_ towards the $x y$-plane.
+  Calculate the flux of the vector field
+  $bf(F) = vec(y z , x z , 0)$ through this surface.
+]
+
+#soln[
+  We parametrize with spherical coordinates by writing
+  $ bf(r)(phi, theta) = (R sin phi cos theta, R sin phi sin theta, R cos phi) $
+]
+
+== [TEXT] Another trick: writing as surface area if $bf(F) dot bf(n)$ is constant <sec-flux-to-surf>
 
 We give one more trick for avoiding the cross product that only works in certain situations,
 but when it does, it makes your life a lot easier.

@@ -380,6 +380,11 @@ we've seen in applications.
 == [EXER] Exercises
 
 #exer[
+  Find real numbers $a$ and $b$ such that
+  $ vec(1, 2, 3) times vec(100, a, b) = 0. $
+]
+
+#exer[
   Let $bf(v)$ and $bf(w)$ be vectors in $RR^3$
   for which $bf(v) times bf(w) = vec(1,2,3)$.
   Compute $5bf(w) times 4bf(v)$.
