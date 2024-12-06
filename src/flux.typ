@@ -207,8 +207,8 @@ We go back to recipe format now.
         (both are three-dimensional vectors at each point).
       - Compute the cross product $(partial bf(r))/(partial u) times (partial bf(r))/(partial v)$ as in @sec-cross.
   2. Look at which way the cross product points (via right-hand rule).
-    Does it point "outward"?
-    If not, negate the cross product (equivalently, swap the order of $u$ and $v$) before going on.
+    Does it point the direction you want?
+    If not, negate the entire cross product (equivalently, swap the order of $u$ and $v$) before going on.
   3. Compute the dot product $ bf(F) dot ((partial bf(r))/(partial u) times (partial bf(r))/(partial v)). $
     This gives you a number at every point on the parametrizing region $cal(R)$.
   4. Integrate the entire thing over $cal(R)$ using any of the methods for double integrals
