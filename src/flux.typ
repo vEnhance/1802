@@ -109,7 +109,7 @@ I should probably give an example so this isn't so abstract.
   - But what if we had flipped the order of $phi$ and $theta$?
     That is, suppose we used
     $ bf(r)(theta, phi) = (sin phi cos theta, sin phi sin theta, cos phi) $
-    where $0 <= phi <= pi$ and $0 <= theta <= 2 pi$ instead.
+    where $0 <= theta <= 2 pi$  and $0 <= phi <= pi$ instead.
     Then the cross product will get negated:
     $ (partial bf(r)) / (partial theta) times (partial bf(r)) / (partial phi)
       = -sin phi dot (sin phi cos theta, sin phi sin theta, cos phi)
@@ -449,7 +449,32 @@ but this time we use spherical coordinates, so you can compare the methods.
 
 #soln[
   We parametrize with spherical coordinates by writing
-  $ bf(r)(phi, theta) = (R sin phi cos theta, R sin phi sin theta, R cos phi) $
+  $ bf(r)(phi, theta) = (5 sin phi cos theta, 5 sin phi sin theta, 5 cos phi) $
+  for $0 <= phi <= pi/2$ and $0 <= theta <= 2 pi$.
+  In that case, the cross product according to @table-magic-cross-prod-n-dS is
+  $ ((partial bf(r))/(partial phi)) times ((partial bf(r))/(partial theta))
+    = 5 sin phi dot bf(r)(phi, theta). $
+  This points away from the sphere since $sin phi >= 0$, so we flip the order:
+  $ ((partial bf(r))/(partial theta)) times ((partial bf(r))/(partial phi))
+    = -5 sin phi dot bf(r)(phi, theta). $
+  Meanwhile, we have
+  $ bf(F)(bf(r)(phi, theta))
+    = vec(25 sin phi cos phi sin theta, 25 sin phi cos phi cos theta, 0) $
+  If we expand the entire dot product we now get
+  $ bf(F) dot (((partial bf(r))/(partial theta)) times ((partial bf(r))/(partial phi)))
+      &= (25 sin phi cos phi sin theta) dot (-5 sin phi) dot (5 sin phi cos theta) \
+      &quad + (25 sin phi cos phi cos theta) dot (-5 sin phi) dot (5 sin phi sin theta) \
+      &= -1250 (sin^3 phi cos phi sin theta cos theta). $
+  In other words, we have
+  $ iint_(cal(S)) bf(F) dot bf(n) dif S
+    &= -1250 int_(theta=0)^(2 pi) int_(phi=0)^(pi / 2) sin^3 phi cos theta sin theta dif phi dif theta \
+    &= -1250
+      (int_(theta=0)^(2 pi) sin theta cos theta dif theta)
+      (int_(phi=0)^(pi/2) sin^3 phi cos phi dif phi.) $
+  The latter integral is super annoying to evaluate,
+  but the former integral is zero because $sin theta cos theta = 1/2 sin(2theta)$,
+  so we don't have to worry about the $dif phi$ integral at all; we just get $#boxed[$ 0 $]$
+  as the answer.
 ]
 
 == [TEXT] Another trick: writing as surface area if $bf(F) dot bf(n)$ is constant <sec-flux-to-surf>
@@ -518,9 +543,9 @@ Here are two examples of this with spheres.
   (Orient $bf(S)$ outwards.)
 ]
 #soln[
-  This is just like the previous example except that the gravity exerted
-  $bf(G)$ has magnitude $(G m) / 17^2$ and points in the _opposite_ direction as $bf(n)$.
-  That is, $ bf(F) dot bf(n) = (-((G m) / (17^2)) bf(n)) dot (bf(n)) = -(G m) / 289. $
+  This is just like the previous example except that the gravity
+  $bf(G)$ exerted has magnitude $(G m) / 17^2$ and points in the _opposite_ direction as $bf(n)$.
+  That is, $ bf(G) dot bf(n) = (-((G m) / (17^2)) bf(n)) dot (bf(n)) = -(G m) / 289. $
   Consequently,
   $ iint_(cal(S)) bf(F) dot dif bf(S) = -(G m) / 289 dot op("SurfArea")(cal(S))
     = (-G m)/(17^2) dot (4 dot 17^2 pi) = #boxed[$ -4 pi G m $]. $
