@@ -42,7 +42,7 @@ For comparison, Part Bravo corresponds approximately to §3, §4, §6 of #poonen
 #pagebreak()
 
 #part[Part Charlie: Review of complex numbers]
-For comparison, Part Charlie (not including the review) corresponds approximately to §11 of #poonen.
+For comparison, Part Charlie corresponds approximately to §11 of #poonen.
 #include "src/complex.typ"
 #pagebreak()
 #include "src/mt1.typ"
