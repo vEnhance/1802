@@ -14,7 +14,7 @@ and then talk about matrices as an encoding of linear transformations.
 I feel quite strongly this way is better, but if you are in an actual course,
 their presentation is likely to be different (and worse).
 
-== [TEXT] Linear transformation
+== [TEXT] Linear transformation <sec-lintransf-def>
 
 The definition I'm about to give is the 18.700/18.701 definition of linear transform,
 but the hill I will die on is that this definition is better than the one in 18.02.
@@ -47,11 +47,11 @@ at enough points, you can recover the rest.
 
 Here's an easy example to start:
 
-#ques[
+#sample[
   If $T : RR^2 -> RR^2$ is a linear transform and it's given that
   $ T( vec(3,4) ) = vec(pi, 9) " and " T( vec(100, 100) ) = vec(0, 12) $
   what are the vectors for $T( vec(103,104) )$ and $T( vec(203, 204) )$?
-] <pop1>
+]
 #soln[
   $
   T( vec(103,104) ) = vec(pi, 9) + vec(0, 12) = vec(pi, 21) \
@@ -60,11 +60,11 @@ Here's an easy example to start:
 ]
 
 Here's another example.
-#ques[
+#sample[
   If $T : RR^2 -> RR^2$ is a linear transform and it's given that
   $ T( vec(1,0) ) = vec(1, 3) " and " T( vec(0,1) ) = vec(2, 4) $
   what is $T( vec(50, 70) )$?
-] <pop2>
+]
 #soln[
   $ T( vec(50, 70) ) = 50 vec(1,3) + 70 vec(2,4) = vec(190, 430). #qedhere $
 ]
@@ -210,7 +210,7 @@ We will see two results:
 
 === One matrix
 
-Recall from @pop2 that if $T$ was the linear transformation for which
+Recall from the example in @sec-lintransf-def that if $T$ was the linear transformation for which
 $ T(ee_1) = vec(1,3) " and " T(ee_2) = vec(2,4) $
 then $ T( vec(50,70) ) = vec(190, 430). $
 We just now also saw that to encode $T$ as a matrix, we have
