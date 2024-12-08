@@ -67,11 +67,11 @@ Let $D = (0,0,0)$, $A = (x_A, y_A, b_A)$, $B = (x_B, y_B, z_B)$, $C = (x_C, y_C,
 Then expanding the cross product gives
 
 $ (x_A ee_1 + y_A ee_2 + z_A bf(e_3)) dot
-  det(mat(ee_1, ee_2, ee_3; x_B, y_B, z_B; x_C, y_C, z_C)). $
+  detmat(ee_1, ee_2, ee_3; x_B, y_B, z_B; x_C, y_C, z_C). $
 
 If you think about what evaluating the determinant using the formula
 together with the dot product would give, you should find it's actually just
-$ det(mat(x_A, y_A, z_A; x_B, y_B, z_B; x_C, y_C, z_C)) $
+$ detmat(x_A, y_A, z_A; x_B, y_B, z_B; x_C, y_C, z_C) $
 which is the volume of the parallelepiped.
 
 === Second approach using geometric picture
