@@ -139,7 +139,7 @@ so let me just put everything in one place for sanity's sake:
 
 #warning(title: [Warning: There's no FTC for flux])[
   2D flux is conspicuously missing from our poster in @fig-int-chart-stokes.
-  Through this section, we were able to complete an analogy to get one Stokes result
+  Through this chapter, we were able to complete an analogy to get one Stokes result
   by translating 2D flux into 2D work and then quoting Green's theorem.
   However, as far as I can tell there isn't an analog of FTC that can be made this way.
   So actually one good thing about the notation $bf(n) dif s$ is that

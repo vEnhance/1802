@@ -47,7 +47,7 @@ As I promised you, I think it's better for your thinking if you write these as i
   Trying to do $x y$-integration in either direction will be annoying as heck.],
 ) <fig-chvar-ex>
 
-This section introduces a technique called "change of variables" that will
+This chapter introduces a technique called "change of variables" that will
 allow us to handle this annoying-looking yellow region for when we don't want to do $x y$-integration.
 The idea is to make a new map of the yellow region with a different coordinate system.
 To do this, I need to tell you a new term:
@@ -369,7 +369,7 @@ As another example of a use case, in the polar integration we just did, we have
 $ int_(r=0)^1 int_(theta=0)^(2 pi) r dif theta dif r
   = (int_(r=0)^1 r dif r)(int_(theta=0)^(2 pi) theta dif theta)
   = [r^2/2]_(r=0)^(r=1) dot (2 pi) = pi. $
-(Polar coordinates, covered next section, in particular have this particular pattern a lot.
+(Polar coordinates, covered next chapter, in particular have this particular pattern a lot.
 Often the thing you're integrating has no $theta$ dependence at all.)
 
 == [EXER] Exercises

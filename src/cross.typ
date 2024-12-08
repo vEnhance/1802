@@ -10,7 +10,7 @@ one algebraic and one geometric.
 However, unlike the dot product, the cross product is really stilted and unnatural,
 and not used as much --- in fact they won't show up again to @sec-scalar-field-ints.
 (More on that in @sec-cross-sucks.)
-I'll try to keep this section brief.
+I'll try to keep this chapter brief.
 
 == [TEXT] The two definitions of the cross product
 

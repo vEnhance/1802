@@ -2,10 +2,10 @@
 
 = Eigenvalues and eigenvectors
 
-In this section, we'll define an eigenvalue and eigenvector.
-The main goal of this section is that:
+In this chapter, we'll define an eigenvalue and eigenvector.
+The main goal of this chapter is that:
 #goal[
-  Given a $2 times 2$ or $3 times 3$ matrix, by the end of this section,
+  Given a $2 times 2$ or $3 times 3$ matrix, by the end of this chapter,
   you should be able to find all the eigenvalues and eigenvectors by hand.
 ]
 
@@ -40,7 +40,7 @@ Let's define the relevant term first:
   so we will pretty much ignore it and focus only on finding nonzero eigenvectors.
 ]
 
-The goal of this section is to show:
+The goal of this chapter is to show:
 #question[
   Given a matrix $T$, how can we find its eigenvectors (besides $bf(0)$)?
 ]
@@ -109,7 +109,7 @@ $
 
 which... isn't any better. We still don't get any solutions besides $x = y = 0$.
 
-At this point, you should be remembering something I told you last section:
+At this point, you should be remembering something I told you last chapter:
 a "random" system of equations and variables usually only has a unique solution.
 So if I keep picking numbers out of a hat like $100$, $1000$, etc.,
 then I'm unlikely to find anything interesting.
@@ -135,7 +135,7 @@ $
 
 We need to cherry-pick $lambda$ to make sure that the system doesn't just
 solve to $x = y = 0$ like the examples we tried with $100$ and $1000$.
-But we learned how to do this in the last section:
+But we learned how to do this in the last chapter:
 in order to get a degenerate system you need to make sure that
 $
   0 = detmat(5-lambda, -2; 3, 10-lambda).

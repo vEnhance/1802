@@ -5,7 +5,7 @@
 Think back to @fig-int-chart-triangle.
 So far we've talked about everything except the three entries
 labeled "line integral" and "surface integral".
-This section will talk about them.
+This chapter will talk about them.
 For clarity, I will actually call these *scalar-field line integral*
 and *scalar-field surface integral*.
 
@@ -38,7 +38,7 @@ except for the special case $f = 1$ for arc length.
   *We don't like these scalar-field line and surface integrals as much*;
   they just don't behave that well, in part because of the awkward absolute value.
   For example, Stokes' theorem --- the biggest theorem in the 18.02 course ---
-  doesn't work for arc length (or anything else in this section).
+  doesn't work for arc length (or anything else in this chapter).
 
   In particular: *you don't get Fundamental Theorem of Calculus for arc length*.
   To make that warning explicit, note two common "wrong guesses":

@@ -35,7 +35,7 @@ and we use $bf(r)$ for the function name to remind that the output is a vector.
   but this is so entrenched that it will cause confusion with other sources
   if I'm too pedantic.
 
-  So, don't worry too much about the difference between dot and arrow in this section.
+  So, don't worry too much about the difference between dot and arrow in this chapter.
   Throughout all of Part Delta we will not treat $(3,5)$ and $vec(3,5)$ as different.
 ]
 
@@ -60,7 +60,7 @@ and every axis is an input variable we treat with equal respect.)
 
 == [TEXT] Just always use components
 
-Why is $bf(r) : RR -> RR^n$ so easy that Part Delta is one section?
+Why is $bf(r) : RR -> RR^n$ so easy that Part Delta is one chapter?
 Because there's pretty much only one thing you need to ever do:
 #memo[
   TLDR Just always use components.

@@ -2,10 +2,10 @@
 
 = Shortcuts for work: conservative vector fields and Green's theorem <sec-ftcgreen>
 
-In the last section we showed the definition of work and how to compute
+In the last chapter we showed the definition of work and how to compute
 $int_(cal(C)) bf(F) dot dif bf(r)$ with bare-hands by using parametrization.
 However, parametrization can be a lot of work.
-So the purpose of this section is to show you under what conditions you can get away
+So the purpose of this chapter is to show you under what conditions you can get away
 with _not_ having to do a parametrization.
 There will be two such categories:
 

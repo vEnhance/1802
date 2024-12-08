@@ -29,7 +29,7 @@ You could equally well even ignore $P$ together, imagine drawing $bf(v)$ as an a
 starting from some random point not necessarily on the plane --- like the origin ---
 and requiring that $bf(v)$ punctures the plane at a right angle.)
 
-The main goal of this section is to prove the following result:
+The main goal of this chapter is to prove the following result:
 #memo(title: [Memorize: Normal vectors of plane])[
   Given a plane $a x + b y + c z = d$, the normal vectors to it
   are the multiples of $vec(a,b,c)$.

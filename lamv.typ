@@ -1,11 +1,11 @@
 #import "@local/evan:1.0.0":*
 #let poonen = link("https://math.mit.edu/~poonen/notes02.pdf")[Poonen's notes]
-
 #show: evan.with(
   title: [Linear Algebra and Multivariable Calculus],
   subtitle: [Notes from MIT's 18.02 course in fall 2024],
   author: "Evan Chen",
   date: datetime.today(),
+  report-style: true,
 )
 
 #rect(stroke: 2pt)[#image("lamv-cover-art.png", width: 100%)]

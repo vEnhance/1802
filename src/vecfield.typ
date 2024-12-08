@@ -211,7 +211,7 @@ Basically, these are the only two situations in which we'll be integrating over 
 - We have a surface in a 3D vector field and want to measure the _flux_
   of the vector field _through_ the surface; this is the focus of Part Juliett.
 
-These terms will be defined next section.
+These terms will be defined next chapter.
 #typesig[
   The new purple things are _still_ all scalar quantities,
   i.e. work and flux are both numbers, not vectors.
@@ -393,7 +393,7 @@ Don't worry, we'll take @fig-int-chart-stokes apart one piece
 at a time over the rest of the semester.
 
 - In @sec-gcd, I'll tell you how to compute each of grad, curl, div.
-  This section has no integration in it, so if you hate integration, you'll like this section.
+  This chapter has no integration in it, so if you hate integration, you'll like this chapter.
 - I'll start talking about work in @sec-work.
   I'll define it, and then I'll show you how it ties in to the fundamental theorem of calculus
   (which are some of the cases of generalized Stokes' theorem).

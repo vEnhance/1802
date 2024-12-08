@@ -154,7 +154,7 @@ No proof-based background is expected.
 
 == [TEXT] Topics covered
 
-Here is a brief overview of what happens in these parts
+Here is a brief overview of what happens in these parts.
 
 / Alfa and Bravo: This part is dedicated to *linear algebra* (vectors and matrices).
   This is intentional, because some working knowledge of linear algebra is important.
@@ -163,12 +163,12 @@ Here is a brief overview of what happens in these parts
 
 / Charlie: This short part is review of the *complex numbers* $CC$.
   I actually don't know why this is part of 18.02, to be honest,
-  but since it happened I included a short section on it.
+  but since it happened I included a short chapter on it.
 
 / Delta: Covers the calculus of functions $bf(r) : RR -> RR^n$,
   which is usually thought of as a *parametric* function $bf(r)(t)$
   (a time-indexed trajectory through the vector space $RR^n$).
-  This section turns out to be easy because it's pretty much all 18.01 material.
+  This part turns out to be easy because it's pretty much all 18.01 material.
   This part is therefore also only a few pages long.
 
 / Echo and Foxtrot: Cover the *differentiation of multivariable functions* $f : RR^n -> RR$,
@@ -177,22 +177,22 @@ Here is a brief overview of what happens in these parts
   which gets airtime in virtually every kind of question you'll see.
   This is the first serious multivariable calculus usage.
 
-/ Golf: This section covers *double integrals of functions* $f : RR^2 -> RR$,
+/ Golf: This part covers *double integrals of functions* $f : RR^2 -> RR$,
   the first of the parts on integration.
   We define the double integral and cover techniques for computing them.
 
-/ Hotel: This section covers *integrals of scalar functions in space* $f : RR^3 -> RR$.
+/ Hotel: This part covers *integrals of scalar functions in space* $f : RR^3 -> RR$.
   It introduces the triple integral (which isn't any different from double integral)
   as well as a side detour on arc length and surface area.
 
-/ India: This section covers *line integrals of vector fields* $bf(F) : RR^n -> RR^n$ over a *curve*;
+/ India: This part covers *line integrals of vector fields* $bf(F) : RR^n -> RR^n$ over a *curve*;
   that is, work and 2D flux.
   The famous grad, div, and curl are first mentioned here,
   together with the generalized Stokes' theorem that ties them all together.
   This is the iconic part of multivariable calculus
   (kind of like how France is associated with the Eiffel tower, say).
 
-/ Juliett: This section covers *surface integrals of vector fields* $bf(F) : RR^3 -> RR^3$
+/ Juliett: This part covers *surface integrals of vector fields* $bf(F) : RR^3 -> RR^3$
   over a *surface*; that is, the flux integral.
   More versions of Stokes' theorem are given.
 
@@ -209,7 +209,7 @@ which the author of this book has memorized from overexposure to
 
 == [TEXT] The structure of this book
 
-You will quickly notice that all the subsections are labeled with different headings.
+You will quickly notice that all the sections are labeled with different headings.
 Here's an explanation of what they mean.
 
 / TEXT: Good old prose.
@@ -235,7 +235,7 @@ available at
 ]
 Poonen is a really great writer of mathematical exposition in general,
 and I highly recommend these notes as a result.
-In fact, I will even tell you, for each section,
+In fact, I will even tell you, for each part,
 what the corresponding sections of Poonen are if you decide something I write
 doesn't make sense and you want to reference the corresponding text.
 (That said, this text is meant to stand alone.)
@@ -294,8 +294,8 @@ in return for the short time limit.
   Thanks also to Sefanya Hope for coordinating many other logistics,
   and particularly for helping me book classrooms on short notice on multiple occasions.
 
-- Thank you to all the students in my recitation section
-  (and those officially enrolled in other sections, but who came to my section anyway!)
+- Thank you to all the students in my recitation session
+  (and those officially enrolled in other sessions, but who came to my session anyway!)
   who regularly attended my class every Monday and Wednesday at 9am.
   That's some real early-morning dedication.
   There's a saying that the enthusiasm of an instructor can be contagious,

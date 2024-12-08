@@ -7,7 +7,7 @@ is the single most important concept in the entire "Multivariable differentiatio
 Although its definition is actually quite easy to compute,
 I want to give a proper explanation for where it comes from.
 
-Throughout this section, remember two important ideas:
+Throughout this chapter, remember two important ideas:
 
 - The goal of the derivative is to approximate a function by a linear one.
 - Everything you used slopes for before, you should use normal vectors instead.
@@ -64,7 +64,7 @@ Bear with me for just one second:
 
 The reason for defining this gradient is that it lets us do
 linear approximation with a *dot product*,
-and consequently dot products are going to be super important throughout this section.
+and consequently dot products are going to be super important throughout this chapter.
 Let me show you how.
 Let's go back to our protagonist
 $ f(x,y) = x^2+y^2 $

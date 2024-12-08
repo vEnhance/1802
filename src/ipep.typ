@@ -2,7 +2,7 @@
 
 = A zoomed out pep talk of Part Golf
 
-This whole section is a pep talk.
+This whole chapter is a pep talk.
 We'll get to recipes and details in subsequent sections.
 
 == [TEXT] The big table of integrals

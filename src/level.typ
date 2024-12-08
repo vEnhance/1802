@@ -147,7 +147,7 @@ We give some examples.
 
 == [RECIPE] Drawing level curves
 
-Despite the fact this section is labeled "recipe", there isn't an
+Despite the fact this chapter is labeled "recipe", there isn't an
 easy method that works for every function.
 *You have to do it in an ad-hoc way depending on the exact function you're given*.
 For many functions you'll see on an exam, it'll be pretty easy.

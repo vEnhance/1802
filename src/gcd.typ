@@ -2,13 +2,13 @@
 
 = Grad, curl, and div <sec-gcd>
 
-The goal of this section is to _define_ each individual red arrow in the poster.
+The goal of this chapter is to _define_ each individual red arrow in the poster.
 For each red arrow, we'll show you
 
 - How to compute it, and
 - How to visualize it in an aquatic setting.
 
-There is no integration in this section, and so it's actually pretty straightforward.
+There is no integration in this chapter, and so it's actually pretty straightforward.
 
 #figure(
   table(
@@ -42,7 +42,7 @@ because the function $f$ is completely artificial and would never appear in real
 The question was really testing whether you can apply a recipe
 with the chain rule to get $f'(x) = 2e^x sin(e^x) cos(e^x)$.
 
-The same is true in this section.
+The same is true in this chapter.
 Exam questions about grad, curl, div tend to use artificial functions.
 So the aquatic intuition is not going to be directly helpful
 and you just need to be good at following the recipe.
@@ -81,7 +81,8 @@ Here's the definition of curl in 3D space.
 
 #typesig[
   The curl takes in only a 3D vector field.
-  The curl at each point is a 3D vector (i.e. is a 3D vector field).
+  The curl at each point is a 3D vector
+  (i.e. the curl of a 3D vector field is itself a 3D vector field).
 ]
 
 #tip(title: [Tip: How to memorize curl])[

@@ -4,7 +4,7 @@
 
 In addition to cylindrical coordinates, there's one more system we'll use,
 called spherical coordinates.
-This section defines them and shows how to use them.
+This chapter defines them and shows how to use them.
 
 #warning(title: [Warning: There are _eight_ competing standards, check your book])[
   Note that there are competing conventions!

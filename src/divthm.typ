@@ -100,7 +100,7 @@ And that's pretty much it!
 
   Let $cal(S)$ denote the sphere $x^2+y^2+z^2=R^2$ of radius $R$ again.
   Let $bf(G)$ be the force of gravity exerted by a point mass $m$ at the origin.
-  In the last section we computed
+  In the last chapter we computed
   $ iint_(cal(S)) bf(G) dot dif bf(S) = - 4 pi G m $
   using the surface area trick.
 

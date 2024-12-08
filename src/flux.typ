@@ -10,16 +10,16 @@ This is the final cell in the poster @fig-int-chart-stokes that we haven't met y
   caption: [The flux integral for a surface circled in our poster @fig-int-chart-stokes.],
 )
 
-This section will be pretty reminiscent of @sec-work.
+This chapter will be pretty reminiscent of @sec-work.
 We'll start by giving a "bare-hands" definition of the flux through a parametrized surface.
-It will be usable, but pretty cumbersome, so in the next section @sec-divthm
+It will be usable, but pretty cumbersome, so in the next chapter @sec-divthm
 we'll immediately try to find ways to shortcut it.
 For 18.02, the methods available to you will be
 
 - Bare-hands parametrization (covered here)
   - Even here, magic formulas can save you a lot of work --- see @table-magic-cross-prod-n-dS.
 - Shortcut: Transforming to a surface area integral (covered in @sec-flux-to-surf)
-- Shortcut: The divergence theorem, by converting to a 3D volume integral (covered in the next section @sec-divthm)
+- Shortcut: The divergence theorem, by converting to a 3D volume integral (covered in the next chapter @sec-divthm)
 - Shortcut: Crummy Stokes' theorem, if the vector field happens to be a curl (covered in @sec-badstokes)
 
 == [TEXT] The definition of flux using bare-hands parametrization
@@ -44,7 +44,7 @@ That is, $dif bf(S)$ and $bf(n) dif S$ are both shorthands for the longer
 $(partial bf(r))/(partial u) times (partial bf(r))/(partial v) dif u dif v$.
 We'll usually prefer $bf(n) dif S$ in this book.
 
-I promised you back in the surface area section (@sec-scalar-field-ints) that at some point
+I promised you back in the surface area chapter (@sec-scalar-field-ints) that at some point
 you'd need the whole cross product and not just its magnitude, and here we are!
 In fact, the absolute value being gone is in some sense an _improvement_: I would argue
 $lr(angle.l - (partial f) / (partial x), - (partial f) / (partial y), 1 angle.r)$

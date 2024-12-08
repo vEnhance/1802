@@ -312,7 +312,7 @@ Now $G_1$, $G_2$, $G_3$ are integrals of numbers again, so we're fine.
 
 Because the $(x^2+y^2+z^2)^(3/2)$ is so awkward to work with,
 you will commonly do a certain change-of-variables called _spherical coordinates_.
-We'll explain this in the next section, @sec-sph.
+We'll explain this in the next chapter, @sec-sph.
 
 
 == [EXER] Exercises

@@ -21,7 +21,7 @@ because the regions you got were always intervals, and that made things easy.
 But in 18.02, you will need to pay much more attention.
 
 #warning(title: [Warning: if you are proof-capable, read the grown-up version])[
-  This entire section is going to be a lot of wishy-washy terms
+  This entire chapter is going to be a lot of wishy-washy terms
   that I don't actually give definitions for.
   If you are a high-school student preparing for a math olympiad,
   or you are someone who can read proofs,

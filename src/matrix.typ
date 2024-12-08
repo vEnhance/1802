@@ -2,13 +2,13 @@
 
 = Linear transformations and matrices
 
-The goal of this section is to tell you how to take a linear transformation
+The goal of this chapter is to tell you how to take a linear transformation
 and encode it as a matrix.
 In other words, there is only one recipe covered.
 However, one upshot of this presentation is that I'll finally be able to explain
 why matrix multiplication is defined in this way you learned.
 
-This section will be presented a bit differently than you'll see in many other places;
+This chapter will be presented a bit differently than you'll see in many other places;
 I talk about linear transformations first,
 and then talk about matrices as an encoding of linear transformations.
 I feel quite strongly this way is better, but if you are in an actual course,

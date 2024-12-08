@@ -90,7 +90,7 @@ Table @operations lists some common examples with vectors you've seen from preca
 
 == [TEXT] Why you should care
 
-There are two action items to take away from this section.
+There are two action items to take away from this chapter.
 
 === When learning a new object, examine its types first
 

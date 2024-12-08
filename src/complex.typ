@@ -66,7 +66,7 @@ i.e. a way to remember the following result:
 ]
 This is in my opinion the biggest miracle in all of precalculus.
 Really, I want to stress: @eqn-miracle is supposed to be _astonishing_.
-My goal by the end of this section is to convince you that
+My goal by the end of this chapter is to convince you that
 something really powerful is happening in @eqn-miracle
 allowing you to do things that you absolutely should not expect to be able to do.
 

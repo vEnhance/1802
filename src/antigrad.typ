@@ -2,14 +2,14 @@
 
 = Anti-gradients <sec-antigrad>
 
-This section is actually usually not taught until much later in 18.02, in Part India.
+This chapter is actually usually not taught until much later in 18.02, in Part India.
 However, I'm going to stick it in here,
 while your brain hasn't been infested with integrals yet, since it's a standalone question.
 However, if you prefer to follow 18.02 more strictly,
 you could skip this chapter for now and come back a month or two later
 once you actually need to know how to do it.
 
-The goal of this section is to do $nabla$ backwards:
+The goal of this chapter is to do $nabla$ backwards:
 #goal[
   If you know $nabla f$, can you go back and find $f$?
 ]
@@ -331,7 +331,7 @@ The above three equations should be remembered as
 $f_(x y) = f_(y x)$, $f_(y z) = f_(z y)$, $f_(z y) = f_(x y)$.
 We'll see this also in Part India again hidden in a different name:
 "the 3D scalar curl of $f$ is zero".
-In that section, the given right-hand side will be called called a *vector field*
+In that part, the given right-hand side will be called called a *vector field*
 and the function $f$ will be called a *potential function* for it.
 But ignore those names for now.
 

@@ -4,11 +4,11 @@
 
 == [TEXT] Polar coordinates are a special case of change of variables
 
-Last section one of the transition maps we used was
+Last chapter one of the transition maps we used was
 $ bf(T)_"polar" (r, theta) = (r cos theta, r sin theta). $
 This particular change is so common that you should actually memorize its Jacobian determinant
 and area scaling factor.
-Remember from last section we computed
+Remember from last chapter we computed
 $ J_(bf(T)) &= mat(
     partial / (partial r) (r cos theta),
     partial / (partial r) (r sin theta);
@@ -38,7 +38,7 @@ to a new object called a _differential form_,
 but for now just treat it as a mnemonic for one really common change of variables,
 rather than a formal statement.
 
-As training wheels, I'm still going to avoid writing $dif A$ for one more section,
+As training wheels, I'm still going to avoid writing $dif A$ for one more chapter,
 so that when you see $dif x dif y$ or $dif y dif x$ you know you're _supposed_
 to make a change of variables
 (and won't accidentally write $dif r dif theta$ with the factor of $r$ missing).

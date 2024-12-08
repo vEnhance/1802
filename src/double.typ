@@ -5,7 +5,7 @@
 One common theme from 18.02 that you might have noticed in part Foxtrot is that,
 unlike in 18.01 where you were hyper-focused on the function $f$ you were optimizing,
 in 18.02 the _region_ you're working with deserves a lot of attention.
-This will be true for the material in this section too ---
+This will be true for the material in this chapter too ---
 you ought to paying most attention to the region
 before you even look at the function $f$ that's being integrated.
 
