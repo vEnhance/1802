@@ -272,7 +272,7 @@ So a couple tips specific to Lagrange Multiplier systems:
   - It might make sense to try to get rid of $lambda$ ASAP, if that's easy to do.
     After all, we don't actually care what $lambda$ is.
   - Alternatively, you can try to kill every variable _except_ $lambda$!
-    This is commonly used if your equations only involve one non-$lambda$ variable.
+    This is commonly used if each equations involves only one non-$lambda$ variable.
     That is, solve for $x$ in terms of $lambda$; do the same for $y$ and $z$.
     Then plug these in the original constraint equation to solve for $lambda$,
     and hence extract $(x,y,z)$.
@@ -287,8 +287,7 @@ So a couple tips specific to Lagrange Multiplier systems:
   as part of a step in a standard Lagrange multipliers question.
   Something like 50%-80% of students who got this equation would forget one of the two cases
   (which one they forgot about varied).
-  Don't let this be you!
-  Whenever you try to cancel, check if it could be zero!
+  Don't let this be you! Whenever you try to cancel, check for division by zero!
 ]
 
 Note the second advice bullet is the opposite of the first advice bullet!
@@ -334,8 +333,8 @@ Here's an example where a good idea is to kill $lambda$ ASAP:
   3. If any of the variables goes to $+oo$ (and hence the other goes to $-oo$),
     the value of $f$ will become large too.#footnote[This is actually a bit tricky to see,
       because in this limit case
-      you have two positive terms $x^2$ and $y^2$ and one negative term $x y$
-      one idea is to write
+      you have two positive terms $x^2$ and $y^2$ and one negative term $x y$.
+      One idea is to write
       $ f(x,y) approx 3 x^2 / 4 + (x / 2 + y)^2 = 3 y^2 / 4 + (x + y / 2)^2 $
       for large $x$ and $y$.
       The first expression shows that if $x$ is big, then so is $f$;
@@ -407,7 +406,7 @@ And here's an example where we kill every variable _except_ $lambda$:
   it will directly tell you the minimum value.
   Don't try this on an exam unless you really know what you're doing.
 
-  Let if $P := (x,y,z)$ be a point. Let $cal(H)$ denote the plane $x+2y+3z=4$.
+  Let $P := (x,y,z)$ be a point. Let $cal(H)$ denote the plane $x+2y+3z=4$.
   The magic trick is to rewrite
   $ f = x^2 + y^2 + z^2 + y - z = x^2 + (y+1/2)^2 + (z-1/2)^2 - 1/2 = P Q^2 - 1/2 $
   where $Q := (0, -1/2, 1/2)$.
@@ -750,8 +749,7 @@ look for shortcuts like this when you can.
 == [SIDENOTE] Compactness as a way to check your work
 
 This is an optional section containing a nice theorem from
-18.100 that could help you check your work,
-but isn't necessary in theory if you never make mistakes.
+18.100 that could help you check your work, but isn't necessary in theory if you never make mistakes.
 (But in practice...)
 
 I need a new word called "compact", and like before,
@@ -762,6 +760,8 @@ That is,
 
 - All the constraints are $=$, $<=$, or $>=$; no $<$ or $>$,
 - None of the variables can go to $pm oo$.
+
+Then the theorem I promised you is:
 
 #tip(title: [Tip: Compact optimization theorem])[
   If $cal(R)$ is a compact region,
