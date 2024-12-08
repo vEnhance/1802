@@ -307,7 +307,7 @@ along a different path.
   Recall that $p dif x + q dif y$ is shorthand for the vector field being $vec(p,q)$.
   So where $y^(2 slash 3) dif x = y^(2 slash 3) dif x + 0 dif y$, we expand the shorthand as
   $ int_(cal(C)) y^(2 slash 3) dif x = int_(cal(C)) vec(y^(2 slash 3), 0) dot dif bf(r)
-    = int_("start time")^("stop time") bf(F)(bf(r)(t)) dot bf(r)'(t) dif t $
+    = int_(t="start time")^("stop time") bf(F)(bf(r)(t)) dot bf(r)'(t) dif t $
   where $bf(F)(x,y) := vec(y^(2 slash 3), 0)$ refers to the vector field
   encoded by the $y^(2 slash 3) dif x$ shorthand.
 
