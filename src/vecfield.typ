@@ -348,11 +348,11 @@ in vague non-precise terms (we'll make precise later), for each of these six red
   The nonsense expression $nabla times bf(F)$ is called the curl, but we haven't defined this term yet.
 
   The shorthand version following @table-shorthand is much easier to read,
-  because the shorthand $dif bf(S)$ stands for the entire hunk
+  because the shorthand $bf(n) dif S$ stands for the entire hunk
   $lr(((partial bf(r)_2)/(partial u) times (partial bf(r)_2)/(partial v))) dif u dif v$.
   Suppose the curve for $bf(r)_1$ is denoted $cal(C)$.
   Then the above equation compresses all the way down to
-  $ int_(cal(C)) bf(F) dot dif bf(r)_1 = iint_(cal(S)) (nabla times bf(F)) dot dif bf(S). $
+  $ int_(cal(C)) bf(F) dot dif bf(r)_1 = iint_(cal(S)) (nabla times bf(F)) dot bf(n) dif S. $
   so yes, that does save a lot of characters.
 
 
@@ -366,7 +366,7 @@ in vague non-precise terms (we'll make precise later), for each of these six red
     times (partial bf(r))/(partial v))) dif u dif v
     =  iiint_(cal(T)) (nabla dot bf(F))(x,y,z) dif x dif y dif z. $
   If we adopt shorthand again, this reads just
-  $ iint_(cal(S)) bf(F) dot dif bf(S) = iiint_(cal(T)) (nabla dot bf(F)) dif V. $
+  $ iint_(cal(S)) bf(F) dot bf(n) dif S = iiint_(cal(T)) (nabla dot bf(F)) dif V. $
 
   The nonsense expression $nabla dot bf(F)$ is called the divergence, but we haven't defined this term yet.
 

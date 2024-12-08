@@ -523,7 +523,7 @@ Here are two examples of this with spheres.
 #sample[
   Let $cal(S)$ denote the sphere $x^2+y^2+z^2=17^2=289$ of radius $17$.
   Let $bf(F) = vec(x,y,z)$.
-  Compute the flux $ iint_(cal(S)) bf(F) dot dif bf(S). $
+  Compute the flux $ iint_(cal(S)) bf(F) dot bf(n) dif S. $
   (Orient $bf(S)$ outwards.)
 ]
 #soln[
@@ -532,14 +532,14 @@ Here are two examples of this with spheres.
   Conveniently, the force vector $bf(F)$ is a vector of magnitude $17$ in the same direction!
   That is, $ bf(F) dot bf(n) = (17 bf(n)) dot (bf(n)) = 17. $
   Consequently,
-  $ iint_(cal(S)) bf(F) dot dif bf(S) = 17 op("SurfArea")(cal(S)) = 17 dot (4 dot 289)pi = #boxed[$ 4 dot 17^3 pi $]. $
+  $ iint_(cal(S)) bf(F) dot bf(n) dif S = 17 op("SurfArea")(cal(S)) = 17 dot (4 dot 289)pi = #boxed[$ 4 dot 17^3 pi $]. $
   (In general, we know a sphere of radius $R$ has surface area $4 R^2 pi$.)
 ]
 
 #sample[
   Let $cal(S)$ denote the sphere $x^2+y^2+z^2=17^2=289$ of radius $17$.
   Let $bf(G)$ be the force of gravity exerted by a point mass $m$ at the origin.
-  Compute the flux $ iint_(cal(S)) bf(G) dot dif bf(S). $
+  Compute the flux $ iint_(cal(S)) bf(G) dot bf(n) dif S. $
   (Orient $bf(S)$ outwards.)
 ]
 #soln[
@@ -547,7 +547,7 @@ Here are two examples of this with spheres.
   $bf(G)$ exerted has magnitude $(G m) / 17^2$ and points in the _opposite_ direction as $bf(n)$.
   That is, $ bf(G) dot bf(n) = (-((G m) / (17^2)) bf(n)) dot (bf(n)) = -(G m) / 289. $
   Consequently,
-  $ iint_(cal(S)) bf(F) dot dif bf(S) = -(G m) / 289 dot op("SurfArea")(cal(S))
+  $ iint_(cal(S)) bf(F) dot bf(n) dif S = -(G m) / 289 dot op("SurfArea")(cal(S))
     = (-G m)/(17^2) dot (4 dot 17^2 pi) = #boxed[$ -4 pi G m $]. $
   (In general, we know a sphere of radius $R$ has surface area $R^2 pi$.)
 ]

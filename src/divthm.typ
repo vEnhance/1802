@@ -101,7 +101,7 @@ And that's pretty much it!
   Let $cal(S)$ denote the sphere $x^2+y^2+z^2=R^2$ of radius $R$ again.
   Let $bf(G)$ be the force of gravity exerted by a point mass $m$ at the origin.
   In the last chapter we computed
-  $ iint_(cal(S)) bf(G) dot dif bf(S) = - 4 pi G m $
+  $ iint_(cal(S)) bf(G) dot bf(n) dif S = - 4 pi G m $
   using the surface area trick.
 
   However, if you compute the divergence $nabla dot bf(G)$,
@@ -221,5 +221,5 @@ And that's pretty much it!
   Let $O$ be a point contained inside $cal(S)_2$.
   Consider the force of gravity $bf(G)$ exerted by a point mass of mass $m$ at $O$.
   Show that
-  $ oiint_(cal(S)_1) bf(G) dot dif bf(S) = oiint_(cal(S)_2) bf(G) dot dif bf(S). $
+  $ oiint_(cal(S)_1) bf(G) dot bf(n) dif S = oiint_(cal(S)_2) bf(G) dot bf(n) dif S. $
 ] <exer-gravity-div2>
