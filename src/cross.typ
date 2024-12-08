@@ -230,7 +230,7 @@ $x_0$, $-y_0$, and $z_0$, respectively.
 So suddenly the whole thing cancels and we just get $k = 1$.
 So $x = x_0$, $y = y_0$, $z = z_0$ and this gives the algebraic formula we wanted.
 
-== [RECIPE] What to use the cross product for
+== [RECIPE] What to use the cross product for <recipe-cross>
 
 Unlike the dot product, which is just a number, the cross product is a vector.
 So it has more information in it --- both a direction and a magnitude.

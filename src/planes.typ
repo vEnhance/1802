@@ -1,6 +1,6 @@
 #import "@local/evan:1.0.0":*
 
-= Planes and their normal vectors
+= Planes and their normal vectors <sec-planes>
 
 In general, the equation of a plane in $RR^3$ takes the shape
 $ a x + b y + c z = d $

@@ -66,7 +66,8 @@ With the examples illustrated here, let me give the relevant terms:
     other than $c_1 = ... = c_k = 0$;
   - *spanning in $RR^n$* if every other vector $bf(w)$ in $RR^n$ can be written
     as some linear combination;
-  - a *basis of $RR^n$* if both of the above are true.
+  - a *basis of $RR^n$* if both of the above are true;
+    in other words, every vector in $RR^n$ can be made in _exactly_ one way.
 ]
 
 The punch line is that these concepts correspond to the behaviors in the questions above;
@@ -179,7 +180,7 @@ $ bf(v)_1 = vec(1,3,4), quad bf(v)_2 = vec(10,1,11), quad bf(v)_3 = vec(-9,10,1)
 might look like unrelated small numbers, but surprisingly it turns out that
 #eqn[
   $ 109 vec(1,3,4) - 37 vec(10,1,11) - 29 vec(-9,10,1) = bf(0). $
-  <big-coeff>
+  <eqn-big-coeff>
 ]
 Without "slope", you cannot notice these dependences by sight for $n >= 3$, so use the determinant.
 
@@ -193,10 +194,10 @@ Without "slope", you cannot notice these dependences by sight for $n >= 3$, so u
 ]
 
 #sample[
-  Is $vec(13, 37)$, $vec(42, 69)$ a basis for $RR^2$?
+  Is $vec(13, 37)$, $vec(42, 88)$ a basis for $RR^2$?
 ]
 #soln[
-  Yes because $detmat(13, 37; 42, 69) = 13 dot 64 - 37 dot 42 != 0$.
+  Yes because $detmat(13, 37; 42, 88) = 13 dot 88 - 37 dot 42 != 0$.
 ]
 
 #sample[
@@ -315,19 +316,25 @@ we saw an example of
 - a 2-dimensional span, the plane $x + y = z$.
 - a 3-dimensional span if you have a full basis.
 
-This is true in general: a span of vectors in $RR^n$ will be some $d$-dimensional "subspace",
-so there are always $d+1$ possibilities, namely $d = 0, 1, ..., n$.
+This is worth knowing:
+#tip[
+  Remember, in $RR^n$, the span of a bunch of vectors is
+
+  - always $d$-dimensional for some $d = 0, ..., n$ (so there are $n+1$ kinds of answers);
+  - always contains the origin $bf(0)$.
+]
+
 
 == [RECIPE] Describing the span of several vectors
 
 In 18.02 you might be asked to describe the span of some vectors in $RR^2$ and $RR^3$.
-From the examples above, you might be able to extrapolate the recipe:
+From the examples above, you should be able to extrapolate the recipe.
 
 #recipe(title: [Recipe for describing the span of vectors in $RR^2$])[
 - *0-D case*: Are all the vectors the zero vector $vec(0,0)$? If so the span is just a single *point*.
 - *1-D case*: Are all the vectors pointing the same direction (i.e. multiples of each other)?
   If so, and there is at least one nonzero vector,
-  the span is a *line* in the common direction of the vectors.
+  the span is a *line* through the origin in the common direction of the vectors.
 - *2D case*: Are there two (nonzero) vectors not pointing in the same direction
   (equivalently, are linearly independent)? If so, the span is *all of $RR^2$*.
 ]
@@ -345,7 +352,8 @@ From the examples above, you might be able to extrapolate the recipe:
 ]
 #soln[
   Because the two vectors are not multiples of each other, they are linearly independent.
-  (The determinant lets you see this too: $det(mat(420, 666; 321, 5)) = 420 dot 5 - 321 dot 666 = -211686 != 0$.)
+  (The determinant lets you see this too:
+  $detmat(420, 666; 321, 5) = 420 dot 5 - 321 dot 666 = -211686 != 0$.)
   Hence they are a basis of $RR^2$ and the span is all of $RR^2$.
 ]
 
@@ -353,44 +361,72 @@ From the examples above, you might be able to extrapolate the recipe:
   - *0-D case:* Are all the vectors the zero vector $vec(0,0,0)$? If so the span is just a single *point*.
   - *1-D case*: Are all the vectors pointing the same direction (i.e. multiples of each other)?
     If so, and there is at least one nonzero vector,
-    the span is a *line* in the common direction of the vectors.
+    the span is a *line* through the origin in the common direction of the vectors.
   - *2D case*: Is there more than one direction present,
     but you can't find three vectors which are linearly independent?
-    If so, the span is a *plane* (by process of elimination: rule out 0D, 1D, 3D).
+    If so, the span is a *plane* through the origin.
+    - If you want the equation of the plane, use the cross product.
   - *3D case*: Are there three vectors among them which are linearly independent from each other?
     If so, the span is *all of $RR^3$*.
 ]
+(In 18.02 the reason for the 2D case is really by process of elimination:
+you can think of the 2D bullet as what's left over if you rule out 0D, 1D, 3D.)
 
 #sample[
   What is the span of the vectors $vec(3,6,9)$, $vec(10,20,30)$ and $vec(100,200,300)$ in $RR^3$?
 ]
 #soln[
-  All the vectors are multiples of $vec(1,2,3)$, so
+  All the vectors are multiples of $vec(1,2,3)$, so it's a line: the multiples of $vec(1,2,3)$.
 ]
 
 #sample[
   What is the span of $vec(1,3,4)$, $vec(10,1,11)$ and $vec(-9,10,1)$ in $RR^3$?
 ]
 #soln[
+  It should be a two-dimensional plane.
   This follows by process of elimination: we know $d = 0$ and $d = 1$ don't apply here
   (none of these vectors are zero or are multiples of each other)
   and we can rule out $d = 3$ because we can calculate the determinant
   $ detmat(1,10,-9;3,1,10;4,11,1) = 0 $
   to see that our three vectors are _not_ linearly independent.
+
+  How do we actually find the equation of the plane?
+  Well, really what we're asking is to find a plane through the origin passing
+  through all of $(1,3,4)$, $(10,1,11)$, $(-9,10,1)$
+  (we're promised it exists from the determinant being zero:
+  again, that's what it means to not be spanning).
+  We just want a normal vector to the plane,
+  which we can get by taking the cross product of any two of the vectors.
+  Arbitrarily, we use the first two:
+  $ vec(1,3,4) times vec(10,1,11)
+    = detmat(ee_1, ee_2, ee_3; 1, 3, 4; 10, 1, 11)
+    = 29 ee_1 + 29 ee_2 - 29 ee_3. $
+  That's the normal vector we wanted,
+  so we now know $29 x + 29 y - 29 z = 0$ is the plane needed.
+  This simplifies to just $#boxed[$ x+y-z=0 $].$
 ]
+#digression[
+  Just for comparison, if you had used the second and third vector instead, you'd get
+  $ vec(1,3,4) times vec(-9,10,1)
+    = detmat(ee_1, ee_2, ee_3; 1, 3, 4; -9, 10, 1)
+    = 37 ee_1 + 37 ee_2 - 37 ee_3 $
+  while the second and third vectors would give
+  $ vec(10, 1, 11) times vec(-9,10,1)
+    = detmat(ee_1, ee_2, ee_3; 10, 1, 11; -9, 10, 1)
+    = - 109 ee_1 - 109 ee_2 + 109 ee_3 $
+  which are all still multiples of $ee_1 + ee_2 - ee_3$,
+  so the plane is still $x+y-z=0$.
 
-(Again, I want to emphasize that actually finding an explicit dependence ---
-that is, extracting @big-coeff --- is annoying.
-You should take the determinant instead,
-since you only care _whether or not_ there is a dependence,
-not what the coefficients actually are.)
-
+  It's not a coincidence that the magic numbers $29$, $37$, $109$ from @eqn-big-coeff
+  are reappearing in the normal vectors, but this time I won't explain why this is happening,
+  and let you ruminate on it yourself if you want to figure out.
+]
 
 #sample[
-  what is the span of $vec(3,42,18)$, $vec(1, 53, 17)$, $vec(71,91,13)$ in $RR^3$?
+  What is the span of $vec(3,42,18)$, $vec(1, 53, 17)$, $vec(71,91,13)$ in $RR^3$?
 ]
 #soln[
-  As we mentioned above (@big-coeff), you shouldn't eyeball three or more dimensions;
+  As we mentioned above (@eqn-big-coeff), you shouldn't eyeball three or more dimensions;
   if you get three vectors in $RR^3$ and want to know if they are linearly independent or not,
   you should always take the determinant:
   $ detmat(3,1,71; 42,53,91; 18,17,13) = "ugly arithmetic" = -18522 != 0. $
@@ -399,7 +435,141 @@ not what the coefficients actually are.)
 
 == [TEXT] Systems of equations
 
+As we commented earlier, a randomly chosen set of $n$ vectors is "usually" a basis for $RR^n$.
+I want to now connect this to something else you've seen in high school:
+a "random" linear system of $n$ equations and $n$ variables "usually" has only one solution.
+
+For example, in high school algebra, you probably were asked to solve systems of equations like
+$ x_1 + 2 x_2 = 14 \
+  3 x_1 + 4 x_2 = 38. $
+you can do this using whatever method you're used to;
+you should find $(x_1,x_2) = (10, 2)$ as the only solution.
+And you can probably already tell that $14$ and $38$ could have been any numbers,
+and you'd still always get exactly solution.
+
+Why is this relevant to the stuff about basis?
+Well, the point is you can view the variables above as coefficients in a linear combination
+and consider the previous system of equations as saying
+$ x_1 vec(1,3) + x_2 vec(2,4) = vec(14, 38). $
+That means our observations can be rephrased in terms of our linear algebra language:
+#idea[
+  $vec(1,3)$ and $vec(2,4)$ are a basis of $RR^2$,
+  so any vector like $vec(14, 38)$ can be made in exactly one way.
+]
+In other words, as long as the column vectors made bx_2 the left-hand side on a basis,
+there's always in fact one solution.
+
+So what goes wrong when it's _not_ a basis?
+Let's bring back the example we had in @eqn-big-coeff.
+- Consider a system like
+  $
+    x_1 + 10x_2 - 9x_3 &= 0 \
+    3 x_1 + x_2 + 10 x_3 &= 0 \
+    4 x_1 + 11 x_2 + x_3 &= 0.
+  $
+  This equation obviously has at least one solution: $x_1 = x_2 = x_3 = 0$.
+  We saw that $vec(1,3,4)$, $vec(10,1,11)$, $vec(-9, 10, 1)$ is not a basis of $RR^3$,
+  and what that translates is to saying there are other solutions too:
+  reading off @eqn-big-coeff, note that $x_1 = 109k$, $x_2 = -37k$, $x_3 = -29k$
+  is a solution for any $k$.
+
+- What if we consider something like
+  $
+    x_1 + 10 x_2 - 9 x_3 &= 17 \
+    3 x_1 + x_2 + 10 x_3 &= 42 \
+    4 x_1 + 11 x_2 + x_3 &= 1337
+  $
+  instead?
+  We still know the coefficients on the left-hand side have a dependency,
+  so we expect something to "go wrong".
+
+  In this case, the kind of failure is different: $vec(17, 42, 1337)$
+  turns out to _not_ be in the span of our three vectors.
+  In fact, we earlier saw that the span of the vectors was the plane $x+y=z$,
+  which doesn't contain $vec(17, 42, 1337)$.
+
+  So for this system, satisfying these three equations simultaneously should be impossible
+  (that is, there are _no solutions_ rather than _too many solutions_).
+  And in fact you might be able to see this directly:
+  if you add the first two equations
+  and subtract the last one you can see the contradiction:
+  $
+    + [x_1 + 10 x_2 - 9 x_3] &= + 17 \
+    + [3 x_1 + x_2 + 10 x_3] &= + 42 \
+    - [4 x_1 + 11 x_2 + x_3] &= - 1337 \
+    ==> 0 &= 17 + 42 - 1337 " which is absurd."
+  $
+
+- On the other hand, if we have
+  $
+    x_1 + 10 x_2 - 9 x_3 &= 100 \
+    3 x_1 + x_2 + 10 x_3 &= 200 \
+    4 x_1 + 11 x_2 + x_3 &= 300
+  $
+  then the span does contain $vec(100, 200, 300)$,
+  so we expect to be back in the "too many solutions" case.
+  I won't show you how to come up with these numbers (though it's actually not that hard),
+  but you can find one example of a solution is $(x_1, x_2, x_3) = (58, 6, 2)$.
+  If you put that together with @eqn-big-coeff you can come up with a lot of solutions now:
+  $ x_1 &= 58 + 109 k \
+    x_2 &= 6 - 37 k \
+    x_3 &= 2 - 29 k. $
+
+In summary, what we've seen in this section is that
+for a system of $n$ equations in $n$ variables,
+we should look at the $n$ column vectors made by the coefficients.
+Then
+
+- If those vectors form a basis of $RR^n$ (usual case),
+  the system of equations always has one solution.
+- Otherwise, the system of equations is defective:
+  either it has no solutions at all (is self-contradictory),
+  or there are actually infinitely many solutions.
+
 == [RECIPE] Number of solutions to a square system of linear equations
+
+Now, remember that _in practice_ the way we see whether or not $n$ vectors form a basis
+is by considering a determinant.
+So we can rephrase our findings from the previous section into the following recipe
+using the word "determinant" in place of "basis".
+
+#recipe(title: [Recipe for computing the number of solutions to a system of equations])[
+  Suppose you are asked to find the number of solutions to a square system
+  $
+    a_11 x_1 + a_12 x_2 + ... + a_1n x_n &= b_1 \
+    a_21 x_1 + a_22 x_2 + ... + a_2n x_n &= b_2 \
+    &dots.v \
+    a_(n 1) x_1 + a_(n 2) x_2 + ... + a_(n n) x_n &= b_n.
+  $
+  Let $A$ be the $n times n$ matrix formed by the $a_(i j)$.
+
+  1. If $det A != 0$, you don't even have to look at $b_i$; just *output "exactly 1 solution"*.
+  2. If $det A = 0$, you should *output either "zero solutions" or "infinitely many solutions"*,
+    depending on whether there is at least one solution.
+    To see which case you're in:
+
+    - There's a common case $b_1 = b_2 = ... = b_n = 0$,
+      where the system has an obvious solution $x_1 = ... = x_n = 0$.
+      Thus output "infinitely many solutions".
+
+    - When $n = 2$, you can usually tell by looking whether the two equations are redundant or not.
+      Output "infinitely many solutions" if the two equations are multiples of each other;
+      output "zero solutions" if the two equations are multiples of each other.
+
+    - Otherwise, for $n >= 3$, if you can't guess a solution,
+      you should eliminate variables one by one.
+      However, this case doesn't occur in 18.02.
+]
+
+Examples of what I mean when I say "tell by looking" for $n=2$:
+
+- The system $x + 3y = 8$ and $10x + 30y = 80$ is obviously "infinitely many",
+  because the two equations are the same. In a case like this, *output "infinitely many"*.
+
+- The system $x + 3y = 8$ and $10x + 30y = 42$ is obviously "no solutions",
+  because it would imply $80 = 10 dot 8 = 10 dot (x+3y) = 10x + 30y = 42$,
+  which is self-contradictory.
+  In a case like this, *output 0*.
 
 == [EXER] Exercises
 
