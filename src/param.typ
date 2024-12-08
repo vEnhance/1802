@@ -507,7 +507,9 @@ Usually the strategy is to pick one that makes subsequent calculation easier.
   - $bf(r)(t) = (t+7, 2t+8, 3t+9)$ for $0 <= t <= 100$
   - $bf(r)(t) = (100t+7, 200t+8, 300t+9)$ for $0 <= t <= 1$
   - $bf(r)(t) = (100sin(t)+7, 200sin(t)+8, 300sin(t)+9)$ for $0 <= t <= pi/2$,
-    if you enjoy making life hard for yourself.
+    if you really like trig functions.
+
+  I recommend the first one.
 ]
 
 #sample[
