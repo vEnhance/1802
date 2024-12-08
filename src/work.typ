@@ -1,6 +1,6 @@
 #import "@local/evan:1.0.0":*
 
-= Work (aka line integrals), and how to compute them with bare hands <sec-work>
+= Work (aka line integrals), and how to compute them with bare hands <ch-work>
 
 This chapter defines a so-called _line integral_,
 the first of the two purple pictures in our poster @fig-int-chart-stokes.
@@ -10,7 +10,7 @@ so we'll give you the definition and show you how to use it with bare-hands.
 However, it's worth saying now: *there will be shortcuts*
 to computing line integrals that bypass the work of parametrization.
 Those shortcuts are given by the _red arrows_ in the @fig-int-chart-stokes.
-In fact, the entire next chapter, @sec-ftcgreen, is dedicated to these shortcuts.
+In fact, the entire next chapter, @ch-ftcgreen, is dedicated to these shortcuts.
 
 == [TEXT] Work <sec-work-def>
 

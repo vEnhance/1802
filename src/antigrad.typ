@@ -1,6 +1,6 @@
 #import "@local/evan:1.0.0":*
 
-= Anti-gradients <sec-antigrad>
+= Anti-gradients <ch-antigrad>
 
 This chapter is actually usually not taught until much later in 18.02, in Part India.
 However, I'm going to stick it in here,

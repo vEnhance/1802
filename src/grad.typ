@@ -1,6 +1,6 @@
 #import "@local/evan:1.0.0":*
 
-= The gradient <sec-gradient>
+= The gradient <ch-grad>
 
 The gradient of $f : RR^n -> RR$, denoted $nabla f$,
 is the single most important concept in the entire "Multivariable differentiation" part.
@@ -370,12 +370,12 @@ To spell it out:
 Let's summarize the last few sections.
 
 - We replaced the old graphs we used in 18.01 with level curve and level surface pictures
-  in @sec-level-curve.
+  in @ch-level.
   These new pictures differed from 18.01 pictures because all the variables on the axes
   are inputs now, and we treat them all with equal respect.
-- We explained in @sec-partial-derivative how to take a partial derivative
+- We explained in @ch-partial how to take a partial derivative
   of $f(x,y)$ or $f(x,y,z)$, which measures the change in just one of the variables.
-- We used these partial derivatives to define the gradient $nabla f$ in @sec-gradient.
+- We used these partial derivatives to define the gradient $nabla f$ in @ch-grad.
   This made linear approximation into a dot product,
   where $f(P + bf(v)) approx f(P) + nabla f(P) dot bf(v)$ for a small displacement $bf(v)$.
 - Using the geometric interpretation of a dot product, $nabla f (P)$ was a normal vector

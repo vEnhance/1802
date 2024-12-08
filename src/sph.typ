@@ -1,6 +1,6 @@
 #import "@local/evan:1.0.0":*
 
-= Spherical coordinates <sec-sph>
+= Spherical coordinates <ch-sph>
 
 In addition to cylindrical coordinates, there's one more system we'll use,
 called spherical coordinates.

@@ -108,7 +108,7 @@ In 18.02 the only cases where we use these are:
 - Questions related to mass, or center of mass, of objects like wires
   (for $d=1$) or metal plates (for $d=2$).
 
-In this book, this will happen in @sec-scalar-field-ints, and then
+In this book, this will happen in @ch-scalint, and then
 after that the line and surface integrals will
 always be the *vector field* variant instead (in Part India and Juliett).
 If you want to flip ahead,
@@ -144,7 +144,7 @@ or you are trying to do a *volume integral* over the ball $x^2+y^2+z^2 <= 1$ for
 
 - If rewriting as a double or triple integral fails,
   then the strategy is instead to *change variables*.
-  This method will be covered extensively in @sec-chvar.
+  This method will be covered extensively in @ch-chvar.
 
 So to summarize
 #idea[

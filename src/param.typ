@@ -464,7 +464,7 @@ Let's see this.
 == [TEXT] Parametrizations with flexible time <sec-flex-param>
 
 Sometimes you'll be asked to parametrize some path but not required to follow an exact time.
-(This happens a lot in @sec-work, when we introduce work integrals.)
+(This happens a lot in @ch-work, when we introduce work integrals.)
 In that case, you're welcome to pick any parametrization that traces out the requested path,
 even the start and end time.
 Usually the strategy is to pick one that makes subsequent calculation easier.

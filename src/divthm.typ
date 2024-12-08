@@ -1,6 +1,6 @@
 #import "@local/evan:1.0.0":*
 
-= Shortcut for flux: the divergence theorem <sec-divthm>
+= Shortcut for flux: the divergence theorem <ch-divthm>
 
 == [TEXT] The divergence theorem
 

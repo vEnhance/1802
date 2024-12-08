@@ -1,6 +1,6 @@
 #import "@local/evan:1.0.0":*
 
-= Change of variables <sec-chvar>
+= Change of variables <ch-chvar>
 
 We'll do just two variables for now;
 the 3D situation is exactly the same and we cover it later.

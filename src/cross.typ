@@ -1,6 +1,6 @@
 #import "@local/evan:1.0.0":*
 
-= The cross product <sec-cross>
+= The cross product <ch-cross>
 
 The cross product is the last major linear algebra tool we'll need to introduce
 (together with determinants and the dot product).
@@ -8,7 +8,7 @@ Like the dot product, the cross product also has two definitions,
 one algebraic and one geometric.
 
 However, unlike the dot product, the cross product is really stilted and unnatural,
-and not used as much --- in fact they won't show up again to @sec-scalar-field-ints.
+and not used as much --- in fact they won't show up again to @ch-scalint.
 (More on that in @sec-cross-sucks.)
 I'll try to keep this chapter brief.
 
@@ -240,7 +240,7 @@ So it has more information in it --- both a direction and a magnitude.
 
 However in practice, when we use the cross product,
 we'll often _only use one piece of information_.
-(It's not until @sec-flux that we really start using both parts at once.)
+(It's not until @ch-flux that we really start using both parts at once.)
 
 Hence the following two recipes below.
 

@@ -1,6 +1,6 @@
 #import "@local/evan:1.0.0":*
 
-= Partial derivatives <sec-partial-derivative>
+= Partial derivatives <ch-partial>
 
 == [TEXT] The point of differentiation is linear approximation
 

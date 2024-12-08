@@ -1,6 +1,6 @@
 #import "@local/evan:1.0.0":*
 
-= Level curves (aka contour plots) <sec-level-curve>
+= Level curves (aka contour plots) <ch-level>
 
 == [TEXT] Level curves replace $x y$-graphs
 

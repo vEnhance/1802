@@ -392,12 +392,12 @@ because there's so much information in it.
 Don't worry, we'll take @fig-int-chart-stokes apart one piece
 at a time over the rest of the semester.
 
-- In @sec-gcd, I'll tell you how to compute each of grad, curl, div.
+- In @ch-gcd, I'll tell you how to compute each of grad, curl, div.
   This chapter has no integration in it, so if you hate integration, you'll like this chapter.
-- I'll start talking about work in @sec-work.
+- I'll start talking about work in @ch-work.
   I'll define it, and then I'll show you how it ties in to the fundamental theorem of calculus
   (which are some of the cases of generalized Stokes' theorem).
-- Then @sec-flux will define flux.
+- Then @ch-flux will define flux.
   This will let us talk about the rest of the cases of generalized Stokes' theorem.
 
 == [EXER] Exercises

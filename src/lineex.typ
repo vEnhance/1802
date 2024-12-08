@@ -1,6 +1,6 @@
 #import "@local/evan:1.0.0":*
 
-= Way too many examples of work and 2D flux <sec-lineex>
+= Way too many examples of work and 2D flux <ch-lineex>
 
 This entire section is *review and examples only* and *can be skipped* if you know what you're doing.
 

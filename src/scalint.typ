@@ -1,6 +1,6 @@
 #import "@local/evan:1.0.0":*
 
-= Scalar-field line and surface integrals <sec-scalar-field-ints>
+= Scalar-field line and surface integrals <ch-scalint>
 
 Think back to @fig-int-chart-triangle.
 So far we've talked about everything except the three entries
@@ -282,7 +282,7 @@ In these notes we will pre-compute five different cross products:
 The table showing the results in @table-magic-cross-prod-scalint.
 Note that for surface area, you only need the _absolute value_ of the cross product (fourth column).
 But I'm going to include the entire vector too, because we'll later need to reuse this table
-in @sec-flux, and later there we will actually need to
+in @ch-flux, and later there we will actually need to
 know the direction the vector points in too, not just the absolute value.
 
 #figure(
@@ -329,7 +329,7 @@ of @table-magic-cross-prod-scalint is the following geometric idea:
 For example:
 
 - For the level surface $g(x,y,z) = c$,
-  you should remember from @sec-gradient that $nabla g$ is normal to the tangent plane
+  you should remember from @ch-grad that $nabla g$ is normal to the tangent plane
   of the level surface, hence the cross product is a multiple of $nabla g$ as needed.
 - The normal vector to (the curved part of) a cylinder points straight away from the $z$-axis
   away from the origin, which $angle.l R cos theta, R sin theta, 0 angle.r$ indeed does.
@@ -338,7 +338,7 @@ For example:
 
 Again, for surface area you actually only need the fourth column, but
 (1) I think the third column is actually easier to remember than the fourth column,
-and (2) by @sec-flux you will need the third column anyway.
+and (2) by @ch-flux you will need the third column anyway.
 
 The first and second rows of @table-magic-cross-prod-scalint above are quite versatile,
 whereas the third and fourth rows are really for specific specialized situations.
@@ -559,7 +559,7 @@ We can take the absolute value of this: $ dif S = R dif theta dif z. $
   The way to remember this is that "$dif S approx (dif V) / (dif r)$":
   if you multiply a bit of surface by a bit of the radial component,
   you get a chunk of volume of the sphere.
-  And since we saw in @sec-triple that $dif V = r dif r dif theta dif z$,
+  And since we saw in @ch-triple that $dif V = r dif r dif theta dif z$,
   the formula for $dif S$ is what you get when you divide out $dif r$ and set $r = R$.
 
   Alternatively, each patch on the cylinder can be thought of as
@@ -592,7 +592,7 @@ our spherical coordinate convention requires $0 < phi < pi$.
   The way to remember this is that "$dif S approx (dif V) / (dif rho)$":
   if you multiply a bit of surface by a bit of the radial component,
   you get a chunk of volume of the sphere.
-  And since we saw in @sec-sph that $dif V = rho^2 sin phi dif rho dif phi dif theta$,
+  And since we saw in @ch-sph that $dif V = rho^2 sin phi dif rho dif phi dif theta$,
   the formula for $dif S$ is what you get when you divide out $dif rho$ and set $rho = R$.
 ]
 
@@ -617,7 +617,7 @@ Let's summarize the surface area procedure we just saw.
         Sort of like in @sec-flex-param, you have some freedom in how you set the parametrization.
       - Compute $(partial bf(r))/(partial u)$ and $(partial bf(r))/(partial v)$
         (both are three-dimensional vectors at each point).
-      - Compute the cross product $(partial bf(r))/(partial u) times (partial bf(r))/(partial v)$ as in @sec-cross.
+      - Compute the cross product $(partial bf(r))/(partial u) times (partial bf(r))/(partial v)$ as in @ch-cross.
   2. Take the magnitude of the cross product to get a number for each point on the surface.
   3. Integrate it over $cal(R)$ using any of the methods for double integrals
     (such as horizontal/vertical slicing, polar coordinates, change of variables, etc.).

@@ -1,6 +1,6 @@
 #import "@local/evan:1.0.0":*
 
-= Shortcuts for work: conservative vector fields and Green's theorem <sec-ftcgreen>
+= Shortcuts for work: conservative vector fields and Green's theorem <ch-ftcgreen>
 
 In the last chapter we showed the definition of work and how to compute
 $int_(cal(C)) bf(F) dot dif bf(r)$ with bare-hands by using parametrization.
@@ -51,14 +51,14 @@ In other words:
     then work integrals are extremely easy to calculate:
     just compute $f("ending point")-f("starting point")$.
   - If you don't know the potential function $f$,
-    use the methods in @sec-antigrad to find it.
+    use the methods in @ch-antigrad to find it.
   - If the starting point and ending point are the same you don't even need to find $f$.
     The work integral is always $0$.
 ]
 
 Let's see this concretely with a conservative vector field.
 We'll use $ bf(F) (x , y) = vec(2 x + 1, 3 y) $
-which, if we follow the recipe from @sec-antigrad,
+which, if we follow the recipe from @ch-antigrad,
 we can recover the $f$ such that $bf(F) = nabla f$:
 $ f(x,y) = x^2 + x + 3 / 2 y^2. $
 Thus, now that $f$ is known, line integrals are trivial to compute:
@@ -128,7 +128,7 @@ Of course, we do this knowing that the two answers better be equal (to $-2$).
   (In the cartoon, every blue arrow points directly east and has the same length $5$.)
   This is certainly conservative: the potential function
   $ f(x,y) = 5x $
-  can be found just by guessing or via the method in @sec-antigrad.
+  can be found just by guessing or via the method in @ch-antigrad.
   Indeed, $nabla f = vec(5,0)$ as we needed.
 
   So now that we know $bf(F)$ is conservative and

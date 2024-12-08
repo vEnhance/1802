@@ -1,6 +1,6 @@
 #import "@local/evan:1.0.0":*
 
-= Triple integrals <sec-triple>
+= Triple integrals <ch-triple>
 
 We're going to now consider integrals with three variables, rather than two.
 If you understood double integrals, then triple integrals is more of the same:
@@ -312,7 +312,7 @@ Now $G_1$, $G_2$, $G_3$ are integrals of numbers again, so we're fine.
 
 Because the $(x^2+y^2+z^2)^(3/2)$ is so awkward to work with,
 you will commonly do a certain change-of-variables called _spherical coordinates_.
-We'll explain this in the next chapter, @sec-sph.
+We'll explain this in the next chapter, @ch-sph.
 
 
 == [EXER] Exercises

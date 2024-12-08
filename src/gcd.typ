@@ -1,6 +1,6 @@
 #import "@local/evan:1.0.0":*
 
-= Grad, curl, and div <sec-gcd>
+= Grad, curl, and div <ch-gcd>
 
 The goal of this chapter is to _define_ each individual red arrow in the poster.
 For each red arrow, we'll show you
@@ -56,7 +56,7 @@ where the top comment is "My advice: at this level, stick _strictly_ to the text
 
 == [TEXT] Gradient
 
-You already know how to do this from @sec-gradient.
+You already know how to do this from @ch-grad.
 The function $f$ assigns some number to every point in $RR^n$,
 and then $nabla f$ points in the direction that $f$ increases most rapidly.
 In our aquatic examples, you could imagine you have a waterfall,

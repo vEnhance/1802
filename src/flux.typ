@@ -1,6 +1,6 @@
 #import "@local/evan:1.0.0":*
 
-= Flux <sec-flux>
+= Flux <ch-flux>
 
 We now discuss (3D) flux, the final type of vector field integral that we haven't seen yet.
 This is the final cell in the poster @fig-int-chart-stokes that we haven't met yet.
@@ -10,17 +10,17 @@ This is the final cell in the poster @fig-int-chart-stokes that we haven't met y
   caption: [The flux integral for a surface circled in our poster @fig-int-chart-stokes.],
 )
 
-This chapter will be pretty reminiscent of @sec-work.
+This chapter will be pretty reminiscent of @ch-work.
 We'll start by giving a "bare-hands" definition of the flux through a parametrized surface.
-It will be usable, but pretty cumbersome, so in the next chapter @sec-divthm
+It will be usable, but pretty cumbersome, so in the next chapter @ch-divthm
 we'll immediately try to find ways to shortcut it.
 For 18.02, the methods available to you will be
 
 - Bare-hands parametrization (covered here)
   - Even here, magic formulas can save you a lot of work --- see @table-magic-cross-prod-n-dS.
 - Shortcut: Transforming to a surface area integral (covered in @sec-flux-to-surf)
-- Shortcut: The divergence theorem, by converting to a 3D volume integral (covered in the next chapter @sec-divthm)
-- Shortcut: Crummy Stokes' theorem, if the vector field happens to be a curl (covered in @sec-badstokes)
+- Shortcut: The divergence theorem, by converting to a 3D volume integral (covered in the next chapter @ch-divthm)
+- Shortcut: Crummy Stokes' theorem, if the vector field happens to be a curl (covered in @ch-badstokes)
 
 == [TEXT] The definition of flux using bare-hands parametrization
 
@@ -44,7 +44,7 @@ That is, $dif bf(S)$ and $bf(n) dif S$ are both shorthands for the longer
 $(partial bf(r))/(partial u) times (partial bf(r))/(partial v) dif u dif v$.
 We'll usually prefer $bf(n) dif S$ in this book.
 
-I promised you back in the surface area chapter (@sec-scalar-field-ints) that at some point
+I promised you back in the surface area chapter (@ch-scalint) that at some point
 you'd need the whole cross product and not just its magnitude, and here we are!
 In fact, the absolute value being gone is in some sense an _improvement_: I would argue
 $lr(angle.l - (partial f) / (partial x), - (partial f) / (partial y), 1 angle.r)$
@@ -168,7 +168,7 @@ That is, $bf(n)$ is the unit vector in the _direction_ of the cross product,
 while $dif S$ represents the absolute value with $dif u dif v$ tacked on.
 
 The reason people will separate it like this is to make the geometry a bit easier to think about.
-Remember from back in @sec-cross that a cross product has two pieces of information:
+Remember from back in @ch-cross that a cross product has two pieces of information:
 a _direction_ (meant to give two right angles) and a _magnitude_ (meant to interpret area).
 The point of separating the shorthand is to make these correspond
 to $bf(n)$ and $dif S$ respectively.
@@ -259,7 +259,7 @@ We go back to recipe format now.
         Sort of like in @sec-flex-param, you have some freedom in how you set the parametrization.
       - Compute $(partial bf(r))/(partial u)$ and $(partial bf(r))/(partial v)$
         (both are three-dimensional vectors at each point).
-      - Compute the cross product $(partial bf(r))/(partial u) times (partial bf(r))/(partial v)$ as in @sec-cross.
+      - Compute the cross product $(partial bf(r))/(partial u) times (partial bf(r))/(partial v)$ as in @ch-cross.
   2. Look at which way the cross product points.
     Does it point the direction you want?
     If not, negate the entire cross product

@@ -1,6 +1,6 @@
 #import "@local/evan:1.0.0":*
 
-= 2D flux <sec-2d-flux>
+= 2D flux <ch-2dflux>
 
 == [TEXT] Definition of 2D flux
 
@@ -292,7 +292,7 @@ This comparison is shown in the table below.
   kind: table
 ) <tab-work-vs-flux>
 
-If you want to see examples of this written out, see @sec-lineex.
+If you want to see examples of this written out, see @ch-lineex.
 There I do four examples in full, using every applicable cell of @tab-work-vs-flux.
 Since it's so long, I broke it out into a separate skippable chapter.
 
