@@ -44,7 +44,8 @@ To repeat that in table format:
     [$x$ is input], [Both variables are inputs],
     [$y$ is output], [No variable name for output],
   ),
-  kind: table
+  kind: table,
+  caption: [Comparison between 18.01 $x y$-graphs and 18.02 level curve pictures.],
 )
 
 We give some examples.
