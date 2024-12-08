@@ -40,10 +40,8 @@ Let's define the relevant term first:
   so we will pretty much ignore it and focus only on finding nonzero eigenvectors.
 ]
 
-The goal of this chapter is to show:
-#question[
-  Given a matrix $T$, how can we find its eigenvectors (besides $bf(0)$)?
-]
+The goal of this chapter is to show, given
+a matrix $T$, how we can find its eigenvectors (besides $bf(0)$).
 
 == [TEXT] How to come up with the recipe for eigenvalues
 
