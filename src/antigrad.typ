@@ -176,8 +176,8 @@ That's actually a major difference.
   and then do some logic and reasoning to reach an impossible conclusion,
   then the starting assumption was wrong.
   Here, the starting assumption that there was _some_ function $f$ such that $nabla f = vec(2y, x)$.
-  Starting from this assumption we found that there was a function $g : RR -> RR$
-  such that $g'(y) = x$ for every real number $x$, which is ridiculous.
+  Starting from this assumption we found that there were functions
+  $C_1(y)$ and $C_2(x)$ such that $C_2(x) - C_1(y) = x y$ holds for all real numbers $x$ and $y$.
   So our assumption was wrong: there can't be such function $f$.
   Not like 18.01 where "$f$ exists but is hard to write down";
   the function $f$ literally cannot exist.
