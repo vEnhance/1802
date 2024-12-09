@@ -16,6 +16,11 @@
 This handout (and any other DLC's I write) are posted at
 #url("https://web.evanchen.cc/1802.html").
 
+- Course evaluations are available at #url("https://registrar.mit.edu/subjectevaluation")
+  and will be open until Monday, December 16 at 9AM.
+- Tue/Wed will be review for final; Wed is the last day of class.
+  Practice problems out soon™.
+
 = Curl
 
 This is the final red arrow in the poster #url("https://web.evanchen.cc/textbooks/poster-stokes.pdf").
@@ -30,11 +35,8 @@ This is the final red arrow in the poster #url("https://web.evanchen.cc/textbook
       (partial p)/(partial z) - (partial r)/(partial x),
       (partial p)/(partial x) - (partial q)/(partial y) ). $
 ]
-
-#typesig[
-  The curl takes in only a 3D vector field.
-  The curl at each point is a 3D vector (i.e. the curl of a 3D vector field is itself a 3D vector field).
-]
+Type signature: The curl takes in only a 3D vector field.
+The curl at each point is a 3D vector (i.e. the curl of a 3D vector field is itself a 3D vector field).
 
 #tip(title: [Tip: How to memorize curl])[
   In practice, everyone remembers this formula using the following mnemonic:
@@ -67,7 +69,7 @@ This is the final red arrow in the poster #url("https://web.evanchen.cc/textbook
     The contrast is because 2D scalar curl was a number but curl is a vector in $RR^3$.
 - Assuming the vector field is conservative,
   the anti-gradient procedure for potential function is the same as before.
-  See section 16 of my notes.
+  See Chapter 16 of my LAMV notes.
 - Once you have a potential function, FTC still works fine.
 
 = Crummy Stokes' theorem (apparently not on final)
@@ -92,11 +94,11 @@ This is the final red arrow in the poster #url("https://web.evanchen.cc/textbook
 
 Reasons to not be excited about the non-generalized Stokes theorem (hence the name "crummy"):
 
-- They both require parametrization, so it's not as slick as FTC, Green, or divergence theorem,
+- Both sides require parametrization, so it's not as slick as FTC, Green, or divergence theorem,
   which were powerful because they let you skip the parametrization step.
 - Surface integrals are more painful than line integrals,
   but there's no "anti-curl" procedure analogous to anti-gradient,
-  so for a "random" vector field $bf(F)$ it doesn't help.
+  so it doesn't help with surface integrals of a "random" vector field.
 
 = Recitation questions from official course
 
