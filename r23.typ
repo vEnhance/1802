@@ -19,7 +19,7 @@ This handout (and any other DLC's I write) are posted at
 - Course evaluations are available at #url("https://registrar.mit.edu/subjectevaluation")
   and will be open until Monday, December 16 at 9AM.
 - Tue/Wed will be review for final; Wed is the last day of class.
-  Practice problems out soon™.
+  Practice problems out now.
 
 = Curl
 
@@ -72,7 +72,7 @@ The curl at each point is a 3D vector (i.e. the curl of a 3D vector field is its
   See Chapter 16 of my LAMV notes.
 - Once you have a potential function, FTC still works fine.
 
-= Crummy Stokes' theorem (apparently not on final)
+= Crummy Stokes' theorem (not on final)
 
 #definition(title: [Definition of compatible orientations])[
   Suppose $cal(C)$ is a closed loop in $RR^3$ which is the boundary of an oriented surface $cal(S)$.
