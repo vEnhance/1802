@@ -76,7 +76,7 @@ Here's the definition of curl in 3D space.
     := vec(
       (partial r)/(partial y) - (partial q)/(partial z),
       (partial p)/(partial z) - (partial r)/(partial x),
-      (partial p)/(partial x) - (partial q)/(partial y) ). $
+      (partial q)/(partial x) - (partial p)/(partial y) ). $
 ]
 
 #typesig[

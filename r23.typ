@@ -33,7 +33,7 @@ This is the final red arrow in the poster #url("https://web.evanchen.cc/textbook
     := vec(
       (partial r)/(partial y) - (partial q)/(partial z),
       (partial p)/(partial z) - (partial r)/(partial x),
-      (partial p)/(partial x) - (partial q)/(partial y) ). $
+      (partial q)/(partial x) - (partial p)/(partial y) ). $
 ]
 Type signature: The curl takes in only a 3D vector field.
 The curl at each point is a 3D vector (i.e. the curl of a 3D vector field is itself a 3D vector field).
@@ -59,9 +59,9 @@ The curl at each point is a 3D vector (i.e. the curl of a 3D vector field is its
   (i.e. $bf(F) = nabla f$ for some potential function $f$)
   if and only if $nabla times bf(F) = bf(0)$.
   - This time there are three equations, one for each component:
-    $ (partial p) / (partial y) = (partial q) / (partial x), quad
+    $ (partial r) / (partial y) = (partial q) / (partial z), quad
       (partial p) / (partial z) = (partial r) / (partial x), quad
-      (partial q) / (partial z) = (partial r) / (partial y). $
+      (partial q) / (partial x) = (partial p) / (partial y). $
     The above three equations should be remembered as
     $f_(x y) = f_(y x)$, $f_(y z) = f_(z y)$, $f_(z y) = f_(x y)$.
   - In contrast, for the 2D case, there was only one equation
