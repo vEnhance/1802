@@ -114,7 +114,7 @@ Here's a three-variable version. It's admittedly a slog.
   $ f (x , y , z) = #boxed($ y^2 x + cos x + 2 y^2 z + e^z + C $). #qedhere $
 ]
 
-== [TEXT] Actually most of the time there might not be any function $f$
+== [TEXT] Actually most of the time no potential function $f$ exists
 
 So far this might feel like 18.01 integration beefed up to many variables.
 But something is actually different.
@@ -122,7 +122,7 @@ Up until now I've picked gradients for which there was an answer.
 
 But most of the time that's not true:
 *the thing that's different in 18.02 is that
-it's easy to set questions for which this task is _really_ impossible*.
+for a randomly written question this task is _really_ impossible*.
 That's actually a major difference.
 
 #digression(title: [Digression: There's a huge difference
