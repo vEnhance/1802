@@ -269,7 +269,7 @@ If you do this, then @def18112 implies the following identities are kosher:
 #proof[
   If you write out $e^(i z) = sum (i z)^k / k!$
   and $e^(-i z) = sum (-i z)^k / k!$ and add them,
-  the odd $k$'s cancel out and the even $k$'s don't, which gives you
+  the odd $k$'s cancel and the even $k$'s don't, which gives you
   $ e^(i z) + e^(-i z) = 2  - 2 dot z^2/2! + 2 dot z^4/4! - 2 dot z^6/6! + ... . $
   So dividing by $2$, we see $cos(z)$ on the right-hand side, as needed.
   The argument with $sin$ is similar, but this time the even $k$'s cancel

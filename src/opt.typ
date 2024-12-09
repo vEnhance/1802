@@ -319,7 +319,7 @@ Here's an example where a good idea is to kill $lambda$ ASAP:
       x + 2 y + 1 &= 2 lambda . $
     Combining these two equations gives us an easy way to get rid of $lambda$:
     $ x + 2y + 1 = 2 dot underbrace((2 x + y), = lambda) = 4x + 2y. $
-    Cancel out $2 y$ on both sides gives us $x$: $ x + 1 = 4 x ==> x = 1/3 $
+    Cancel $2 y$ on both sides gives us $x$: $ x + 1 = 4 x ==> x = 1/3 $
 
     Now substitute $x = 1 / 3$ into the constraint $x + 2 y = 3$ to get:
     $ 2 y = 3 - 1 / 3 = 8 / 3 ==> y = 4 / 3. $

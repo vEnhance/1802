@@ -335,7 +335,7 @@ can be thought of as the "sum of the green swirls" (whatever that means).
     "if you add up the green swirls, then only the work along the purple boundary is left".],
 ) <fig-ftcgreen-explain>
 
-However, in @fig-ftcgreen-explain you should realize: *all the swirls on the inside cancel out*.
+However, in @fig-ftcgreen-explain you should realize: *all the swirls on the inside cancel*.
 Imagine one of the vertical grey walls between two grey cells:
 you can imagine the direction and magnitude of $bf(F)$ along the wall
 contributes to the "swirliness" of the two adjacent cells,
