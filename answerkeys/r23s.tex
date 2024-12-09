@@ -1,0 +1,457 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[colorlinks]{hyperref}
+\usepackage{tikz, pgfplots}
+\pgfplotsset{compat=1.17}
+
+\begin{document}
+\title{Quick answer key to Recitation 23}
+\author{ChatGPT 4o}
+\date{9 December 2024}
+\maketitle
+
+Use the table of contents below to skip to a specific part
+without seeing spoilers to the other parts.
+
+I just used ChatGPT to write this one quickly.
+ChatGPT can make mistakes, so if you spot anything that's wrong, flag me to ask.
+
+\tableofcontents
+
+
+
+\newpage
+
+\section{Computing the Curl of a Vector Field}
+
+We are tasked with finding the curl of the vector field:
+\[
+\mathbf{V}(x, y, z) = \langle x^2 y, \ yz, \ x y z^2 \rangle
+\]
+
+\newpage
+
+\subsection{Definition of Curl}
+
+The curl of a vector field \( \mathbf{V} = \langle P, Q, R \rangle \) is given by:
+\[
+\nabla \times \mathbf{V} = \left( \frac{\partial R}{\partial y} - \frac{\partial Q}{\partial z} \right) \mathbf{i} - \left( \frac{\partial R}{\partial x} - \frac{\partial P}{\partial z} \right) \mathbf{j} + \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right) \mathbf{k}
+\]
+Alternatively, using the determinant form:
+\[
+\nabla \times \mathbf{V} = 
+\begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
+P & Q & R \\
+\end{vmatrix}
+\]
+
+\newpage
+
+\subsection{Components of the Vector Field}
+
+Given:
+\[
+P = x^2 y, \quad Q = y z, \quad R = x y z^2
+\]
+
+\newpage
+
+\subsection{Calculating the Partial Derivatives}
+
+\paragraph{Component \( \mathbf{i} \):}
+\[
+\frac{\partial R}{\partial y} = \frac{\partial}{\partial y} (x y z^2) = x z^2
+\]
+\[
+\frac{\partial Q}{\partial z} = \frac{\partial}{\partial z} (y z) = y
+\]
+\[
+\left( \frac{\partial R}{\partial y} - \frac{\partial Q}{\partial z} \right) = x z^2 - y
+\]
+
+\paragraph{Component \( \mathbf{j} \):}
+\[
+\frac{\partial R}{\partial x} = \frac{\partial}{\partial x} (x y z^2) = y z^2
+\]
+\[
+\frac{\partial P}{\partial z} = \frac{\partial}{\partial z} (x^2 y) = 0
+\]
+\[
+\left( \frac{\partial R}{\partial x} - \frac{\partial P}{\partial z} \right) = y z^2 - 0 = y z^2
+\]
+\[
+- \left( \frac{\partial R}{\partial x} - \frac{\partial P}{\partial z} \right) = - y z^2
+\]
+
+\paragraph{Component \( \mathbf{k} \):}
+\[
+\frac{\partial Q}{\partial x} = \frac{\partial}{\partial x} (y z) = 0
+\]
+\[
+\frac{\partial P}{\partial y} = \frac{\partial}{\partial y} (x^2 y) = x^2
+\]
+\[
+\left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right) = 0 - x^2 = -x^2
+\]
+
+\newpage
+
+\subsection{Assembling the Curl}
+
+Combining the components, we obtain:
+\[
+\nabla \times \mathbf{V} = \langle x z^2 - y, \ - y z^2, \ -x^2 \rangle
+\]
+
+\newpage
+
+\subsection{Final Answer}
+
+The curl of the vector field \( \mathbf{V}(x, y, z) = \langle x^2 y, \ yz, \ x y z^2 \rangle \) is:
+\[
+\boxed{ \nabla \times \mathbf{V} = \langle x z^2 - y,\ - y z^2,\ -x^2 \rangle }
+\]
+
+
+
+
+\newpage
+
+\section{Conservative Vector Fields and Line Integrals}
+
+We are given the vector field:
+\[
+\mathbf{F}(x, y, z) = \langle y z^2, \ x z^2 + a y z, \ b x y z + y^2 \rangle
+\]
+and a parametrized curve:
+\[
+\mathbf{C}(t) = \left( e^{t^2 - t} - 1, \ t^4, \ \sin(\pi t) \right), \quad 0 \leq t \leq 1
+\]
+We aim to determine the values of \( a \) and \( b \) for which \( \mathbf{F} \) is a conservative vector field, find a corresponding potential function \( f(x, y, z) \), and compute the line integral \( \int_{C} \mathbf{F} \cdot d\mathbf{r} \) using the fundamental theorem of calculus for line integrals.
+
+\newpage
+
+\subsection{Part (a): Determining Values of \( a \) and \( b \) for Conservativity}
+
+A vector field \( \mathbf{F} \) is conservative if there exists a scalar potential function \( f \) such that \( \mathbf{F} = \nabla f \). A necessary condition for conservativity in simply connected domains is that the curl of \( \mathbf{F} \) is zero everywhere:
+\[
+\nabla \times \mathbf{F} = \mathbf{0}
+\]
+
+\subsubsection*{Computing the Curl of \( \mathbf{F} \)}
+
+Given:
+\[
+\mathbf{F} = \langle y z^2, \ x z^2 + a y z, \ b x y z + y^2 \rangle
+\]
+The curl of \( \mathbf{F} \) is:
+\[
+\nabla \times \mathbf{F} = \left( \frac{\partial R}{\partial y} - \frac{\partial Q}{\partial z} \right) \mathbf{i} - \left( \frac{\partial R}{\partial x} - \frac{\partial P}{\partial z} \right) \mathbf{j} + \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right) \mathbf{k}
+\]
+Where:
+\[
+P = y z^2, \quad Q = x z^2 + a y z, \quad R = b x y z + y^2
+\]
+
+Calculating each component:
+
+\paragraph{Component \( \mathbf{i} \):}
+\[
+\frac{\partial R}{\partial y} = \frac{\partial}{\partial y} (b x y z + y^2) = b x z + 2y
+\]
+\[
+\frac{\partial Q}{\partial z} = \frac{\partial}{\partial z} (x z^2 + a y z) = 2x z + a y
+\]
+\[
+\text{Curl}_x = \frac{\partial R}{\partial y} - \frac{\partial Q}{\partial z} = (b x z + 2y) - (2x z + a y) = (b - 2)x z + (2 - a) y
+\]
+
+\paragraph{Component \( \mathbf{j} \):}
+\[
+\frac{\partial R}{\partial x} = \frac{\partial}{\partial x} (b x y z + y^2) = b y z
+\]
+\[
+\frac{\partial P}{\partial z} = \frac{\partial}{\partial z} (y z^2) = 2 y z
+\]
+\[
+\text{Curl}_y = -\left( \frac{\partial R}{\partial x} - \frac{\partial P}{\partial z} \right) = - (b y z - 2 y z) = - (b - 2) y z
+\]
+
+\paragraph{Component \( \mathbf{k} \):}
+\[
+\frac{\partial Q}{\partial x} = \frac{\partial}{\partial x} (x z^2 + a y z) = z^2
+\]
+\[
+\frac{\partial P}{\partial y} = \frac{\partial}{\partial y} (y z^2) = z^2
+\]
+\[
+\text{Curl}_z = \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} = z^2 - z^2 = 0
+\]
+
+Thus, the curl of \( \mathbf{F} \) is:
+\[
+\nabla \times \mathbf{F} = \left[ (b - 2)x z + (2 - a) y \right] \mathbf{i} - (b - 2) y z \mathbf{j} + 0 \mathbf{k}
+\]
+
+\subsubsection*{Setting the Curl to Zero}
+
+For \( \mathbf{F} \) to be conservative, \( \nabla \times \mathbf{F} = \mathbf{0} \) for all \( x, y, z \). Therefore:
+\[
+(b - 2)x z + (2 - a) y = 0 \quad \text{and} \quad - (b - 2) y z = 0
+\]
+for all \( x, y, z \).
+
+From the second equation:
+\[
+- (b - 2) y z = 0
+\]
+Since this must hold for all \( y \) and \( z \), we must have:
+\[
+b - 2 = 0 \quad \Rightarrow \quad b = 2
+\]
+
+Substituting \( b = 2 \) into the first equation:
+\[
+(2 - 2) x z + (2 - a) y = 0 \quad \Rightarrow \quad (2 - a) y = 0
+\]
+For this to hold for all \( y \), we must have:
+\[
+2 - a = 0 \quad \Rightarrow \quad a = 2
+\]
+
+\newpage
+
+\subsection{Part (a) Answer}
+
+The vector field \( \mathbf{F} = \langle y z^2, \ x z^2 + a y z, \ b x y z + y^2 \rangle \) is conservative if and only if:
+\[
+\boxed{ a = 2 \quad \text{and} \quad b = 2 }
+\]
+
+\newpage
+
+\subsection{Part (b): Finding the Potential Function \( f(x, y, z) \)}
+
+Given \( a = 2 \) and \( b = 2 \), the vector field becomes:
+\[
+\mathbf{F} = \langle y z^2, \ x z^2 + 2 y z, \ 2 x y z + y^2 \rangle
+\]
+We seek a scalar function \( f(x, y, z) \) such that:
+\[
+\mathbf{F} = \nabla f = \left\langle \frac{\partial f}{\partial x}, \ \frac{\partial f}{\partial y}, \ \frac{\partial f}{\partial z} \right\rangle
+\]
+
+\subsubsection*{Integrating \( \frac{\partial f}{\partial x} = y z^2 \) with respect to \( x \)}
+\[
+f(x, y, z) = \int y z^2 \, dx + g(y, z) = y z^2 x + g(y, z)
+\]
+
+\subsubsection*{Determining \( g(y, z) \) by Differentiating with Respect to \( y \)}
+\[
+\frac{\partial f}{\partial y} = z^2 x + \frac{\partial g}{\partial y} = x z^2 + 2 y z
+\]
+\[
+\Rightarrow \frac{\partial g}{\partial y} = 2 y z
+\]
+\[
+\Rightarrow g(y, z) = \int 2 y z \, dy + h(z) = y^2 z + h(z)
+\]
+
+\subsubsection*{Updating \( f(x, y, z) \)}
+\[
+f(x, y, z) = y z^2 x + y^2 z + h(z)
+\]
+
+\subsubsection*{Determining \( h(z) \) by Differentiating with Respect to \( z \)}
+\[
+\frac{\partial f}{\partial z} = 2 y z x + y^2 + \frac{dh}{dz} = 2 x y z + y^2
+\]
+\[
+\Rightarrow 2 x y z + y^2 + \frac{dh}{dz} = 2 x y z + y^2
+\]
+\[
+\Rightarrow \frac{dh}{dz} = 0
+\]
+\[
+\Rightarrow h(z) = \text{constant} = C
+\]
+For simplicity, set \( C = 0 \).
+
+\subsubsection*{Final Potential Function}
+\[
+\boxed{ f(x, y, z) = x y z^2 + y^2 z }
+\]
+
+\newpage
+
+\subsection{Part (c): Calculating the Line Integral Using the Potential Function}
+
+Given the parametrized curve:
+\[
+\mathbf{C}(t) = \left( e^{t^2 - t} - 1, \ t^4, \ \sin(\pi t) \right), \quad 0 \leq t \leq 1
+\]
+Since \( \mathbf{F} \) is conservative and \( \mathbf{F} = \nabla f \), the fundamental theorem for line integrals states:
+\[
+\int_{C} \mathbf{F} \cdot d\mathbf{r} = f(\mathbf{C}(1)) - f(\mathbf{C}(0))
+\]
+
+\subsubsection*{Determining the Endpoints}
+\[
+\mathbf{C}(0) = \left( e^{0 - 0} - 1, \ 0^4, \ \sin(0) \right) = (1 - 1, \ 0, \ 0) = (0, 0, 0)
+\]
+\[
+\mathbf{C}(1) = \left( e^{1 - 1} - 1, \ 1^4, \ \sin(\pi \cdot 1) \right) = (1 - 1, \ 1, \ 0) = (0, 1, 0)
+\]
+
+\subsubsection*{Evaluating the Potential Function at the Endpoints}
+\[
+f(0, 0, 0) = 0 \cdot 0 \cdot 0^2 + 0^2 \cdot 0 = 0 + 0 = 0
+\]
+\[
+f(0, 1, 0) = 0 \cdot 1 \cdot 0^2 + 1^2 \cdot 0 = 0 + 0 = 0
+\]
+
+\subsubsection*{Calculating the Line Integral}
+\[
+\int_{C} \mathbf{F} \cdot d\mathbf{r} = f(0, 1, 0) - f(0, 0, 0) = 0 - 0 = 0
+\]
+
+\newpage
+
+\subsection{Final Answer}
+
+\begin{enumerate}
+    \item[(a)] The vector field \( \mathbf{F} = \langle y z^2, \ x z^2 + a y z, \ b x y z + y^2 \rangle \) is conservative if and only if:
+    \[
+    \boxed{ a = 2 \quad \text{and} \quad b = 2 }
+    \]
+    
+    \item[(b)] For \( a = 2 \) and \( b = 2 \), a corresponding potential function is:
+    \[
+    \boxed{ f(x, y, z) = x y z^2 + y^2 z }
+    \]
+    
+    \item[(c)] The line integral of \( \mathbf{F} \) along the curve \( C \) is:
+    \[
+    \boxed{ \int_{C} \mathbf{F} \cdot d\mathbf{r} = 0 }
+    \]
+\end{enumerate}
+
+
+
+
+\newpage
+
+\section{Verification of Stokes' Theorem}
+
+We aim to verify Stokes' Theorem for the following scenario:
+
+\begin{itemize}
+    \item \textbf{Surface \( S \):} The upper hemisphere of the unit sphere centered at the origin, defined by \( x^2 + y^2 + z^2 = 1 \) and \( z \geq 0 \).
+    \item \textbf{Curve \( C \):} The boundary of \( S \), which is the unit circle in the \( xy \)-plane, defined by \( x^2 + y^2 = 1 \) and \( z = 0 \).
+    \item \textbf{Vector Field \( \mathbf{F} \):} \( \mathbf{F}(x, y, z) = \langle x, y, z \rangle \).
+\end{itemize}
+
+Stokes' Theorem states that:
+\[
+\iint_{S} (\nabla \times \mathbf{F}) \cdot \mathbf{n} \, dS = \oint_{C} \mathbf{F} \cdot d\mathbf{r}
+\]
+where:
+\begin{itemize}
+    \item \( \nabla \times \mathbf{F} \) is the curl of \( \mathbf{F} \).
+    \item \( \mathbf{n} \) is the unit normal vector to the surface \( S \).
+    \item \( dS \) is the differential element of the surface area.
+    \item \( d\mathbf{r} \) is the differential element of the curve \( C \).
+\end{itemize}
+
+Our goal is to compute both the surface integral of the curl of \( \mathbf{F} \) over \( S \) and the line integral of \( \mathbf{F} \) around \( C \), and verify that they are equal.
+
+\newpage
+
+\subsection{Step 1: Compute the Curl of \( \mathbf{F} \)}
+
+Given the vector field:
+\[
+\mathbf{F}(x, y, z) = \langle x, y, z \rangle
+\]
+The curl of \( \mathbf{F} \) is computed as:
+\[
+\nabla \times \mathbf{F} = \left\langle \frac{\partial F_z}{\partial y} - \frac{\partial F_y}{\partial z}, \frac{\partial F_x}{\partial z} - \frac{\partial F_z}{\partial x}, \frac{\partial F_y}{\partial x} - \frac{\partial F_x}{\partial y} \right\rangle
+\]
+Substituting the components of \( \mathbf{F} \):
+\[
+\frac{\partial F_z}{\partial y} = \frac{\partial z}{\partial y} = 0, \quad \frac{\partial F_y}{\partial z} = \frac{\partial y}{\partial z} = 0
+\]
+\[
+\frac{\partial F_x}{\partial z} = \frac{\partial x}{\partial z} = 0, \quad \frac{\partial F_z}{\partial x} = \frac{\partial z}{\partial x} = 0
+\]
+\[
+\frac{\partial F_y}{\partial x} = \frac{\partial y}{\partial x} = 0, \quad \frac{\partial F_x}{\partial y} = \frac{\partial x}{\partial y} = 0
+\]
+Thus, the curl simplifies to:
+\[
+\nabla \times \mathbf{F} = \langle 0 - 0, \ 0 - 0, \ 0 - 0 \rangle = \langle 0, 0, 0 \rangle
+\]
+\[
+\boxed{ \nabla \times \mathbf{F} = \mathbf{0} }
+\]
+
+\newpage
+
+\subsection{Step 2: Compute the Surface Integral of the Curl}
+
+Given that \( \nabla \times \mathbf{F} = \mathbf{0} \), the surface integral becomes:
+\[
+\iint_{S} (\nabla \times \mathbf{F}) \cdot \mathbf{n} \, dS = \iint_{S} \mathbf{0} \cdot \mathbf{n} \, dS = 0
+\]
+\[
+\boxed{ \iint_{S} (\nabla \times \mathbf{F}) \cdot \mathbf{n} \, dS = 0 }
+\]
+
+\newpage
+
+\subsection{Step 3: Compute the Line Integral}
+
+To compute the line integral \( \oint_{C} \mathbf{F} \cdot d\mathbf{r} \), we parametrize the curve \( C \).
+
+\paragraph{Parametrization of \( C \):}
+Since \( C \) is the unit circle in the \( xy \)-plane, we can parametrize it using the parameter \( t \) as follows:
+\[
+\mathbf{r}(t) = \langle \cos t, \sin t, 0 \rangle, \quad 0 \leq t \leq 2\pi
+\]
+\[
+\mathbf{r}'(t) = \langle -\sin t, \cos t, 0 \rangle
+\]
+
+\paragraph{Evaluating \( \mathbf{F} \) Along \( C \):}
+\[
+\mathbf{F}(\mathbf{r}(t)) = \langle \cos t, \sin t, 0 \rangle
+\]
+
+\paragraph{Dot Product \( \mathbf{F} \cdot \mathbf{r}'(t) \):}
+\[
+\mathbf{F}(\mathbf{r}(t)) \cdot \mathbf{r}'(t) = \langle \cos t, \sin t, 0 \rangle \cdot \langle -\sin t, \cos t, 0 \rangle = -\cos t \sin t + \sin t \cos t + 0 = 0
+\]
+
+\paragraph{Line Integral:}
+\[
+\oint_{C} \mathbf{F} \cdot d\mathbf{r} = \int_{0}^{2\pi} 0 \, dt = 0
+\]
+\[
+\boxed{ \oint_{C} \mathbf{F} \cdot d\mathbf{r} = 0 }
+\]
+
+\newpage
+
+\subsection{Conclusion}
+
+Both the surface integral of the curl of \( \mathbf{F} \) over \( S \) and the line integral of \( \mathbf{F} \) around \( C \) are zero. Therefore, Stokes' Theorem holds for this vector field and surface.
+
+\[
+\boxed{ \iint_{S} (\nabla \times \mathbf{F}) \cdot \mathbf{n} \, dS = \oint_{C} \mathbf{F} \cdot d\mathbf{r} = 0 }
+\]
+
+
+\end{document}
