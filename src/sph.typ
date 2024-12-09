@@ -194,7 +194,7 @@ So we'll illustrate two cases in full to show how to convert the illegal value i
 
 In this case, I assert the following equation is true:
 #eqn[
-  $ (rho, phi + pi, theta)_"sph" = (rho, pi - phi, theta pm phi)_"sph". $
+  $ (rho, phi + pi, theta)_"sph" = (rho, pi - phi, theta pm pi)_"sph". $
   <eqn-sph-phi-too-big>
 ]
 Here the sign for $theta pm pi$ is arbitrary,
