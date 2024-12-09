@@ -20,6 +20,7 @@ r19.pdf
 r21.pdf
 r22.pdf
 r23.pdf
+r24.pdf
 dotpf.pdf
 answerkeys/r02s.pdf
 answerkeys/r03s.pdf
