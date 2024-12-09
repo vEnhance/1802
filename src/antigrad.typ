@@ -309,7 +309,8 @@ it will catch all impossible questions.
 Specifically, the following theorem is true.
 
 #memo(title: [Memorize: Criteria for 2D anti-gradient to exist])[
-  Consider $vec(p(x,y), q(x,y))$, where $p$ and $q$ are continuously differentiable.
+  Consider two functions $vec(p(x,y), q(x,y))$ defined on all of $RR^2$,
+  where $p$ and $q$ are continuously differentiable.
   Then there exists $f$ such that $ nabla f = vec(p(x,y), q(x,y)) $
   if and only if
   $ (partial p) / (partial y) = (partial q) / (partial x). $
@@ -320,7 +321,8 @@ We'll see this again much later in Part India, but in different language:
 
 The 3D version tests all the possible pairs:
 #memo(title: [Memorize: Criteria for 3D anti-gradient to exist])[
-  Consider $vec(p(x,y,z), q(x,y,z), r(x,y,z))$, where $p$, $q$, $r$ are continuously differentiable.
+  Consider three functions $vec(p(x,y,z), q(x,y,z), r(x,y,z))$ defined on all of $RR^3$,
+  where $p$, $q$, $r$ are continuously differentiable.
   Then there exists $f$ such that $ nabla f = vec(p(x,y,z), q(x,y,z), r(x,y,z)) $
   if and only if all three of the following equations hold:
   $ (partial p) / (partial y) = (partial q) / (partial x), quad

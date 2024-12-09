@@ -152,9 +152,29 @@ so let me just put everything in one place for sanity's sake:
   and Green's theorem can handle that case anyway.)
 ]
 
-== [SIDENOTE] A rough explanation for why Green's Theorem is still true
+== [SIDENOTE] A picture explaining why Green's Theorem for flux should be true (not a formal proof) <sec-2dflux-explain>
 
-#todo[write this]
+We can draw a figure much like the earlier @fig-ftcgreen-explain (from @sec-ftcgreen-explain)
+for Green's Theorem for flux.
+Remember that the quantity
+$ (partial p) / (partial x) + (partial q) / (partial y) = nabla dot bf(F) $
+is the divergence and interprets how much $bf(F)$ is moving away from the point.
+So instead of _spirals_, we draw little green _explosions_ corresponding to how fast $bf(F)$
+is moving out of each individual grey cell.
+The picture now turns into @fig-2dflux-explain, and
+$ iint_(cal(R)) nabla dot bf(F) dif A) $
+is drawn as the sum of the green explosions.
+
+Like before, everything on the inside just cancels out.
+So what's left over is now the measure of $bf(F)$ _against_ the purple walls:
+the dark green arrows in @fig-2dflux-explain.
+And this corresponds to the 2D flux of $bf(F)$ against the purple walls, as desired.
+
+#figure(
+  image("figures/2dflux-explain.svg", width: auto),
+  caption: [Roughly what Green's Theorem for flux is trying to say:
+    summing the green explosions gives just the force of $bf(F)$ against the walls.],
+) <fig-2dflux-explain>
 
 == [RECIPE] Computing 2D flux <sec-recipe-2d-flux>
 

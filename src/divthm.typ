@@ -192,9 +192,21 @@ And that's pretty much it!
   $  1/12 dot 2 pi = #boxed[$ pi / 6 $]. #qedhere $
 ]
 
-== [SIDENOTE] A rough explanation for why the divergence theorem is true
+== [SIDENOTE] A picture for why the divergence theorem is true
 
-#todo[write this]
+The picture is actually exactly the same as @fig-2dflux-explain from @sec-2dflux-explain,
+our picture of Green's theorem for 2D flux!
+The divergence is still drawn as green explosions.
+The only change is in the dimensions:
+
+- For Green's theorem for flux, we have a 1D path (purple square) enclosing a 2D region
+  broken up into little grey squares.
+- For divergence theorem, we have a 2D surface (purple box) enclosing a 3D regions
+  broken up into little grey cubes.
+
+And the rest of the analogy carries over:
+all the interior green arrows cancel except for those pushing directly
+against the purple faces of the cube, so there's the flux integral we wanted.
 
 == [RECAP] All the methods for flux
 

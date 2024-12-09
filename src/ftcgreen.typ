@@ -311,9 +311,44 @@ Here are a few.
   $ 2 int_(y = 0)^1 (y+1/2) dif y = #boxed[$ 2 $]. #qedhere $
 ]
 
-== [SIDENOTE] A rough explanation for why Green's Theorem is true
+== [SIDENOTE] A picture explaining why Green's Theorem for work should be true (not a formal proof) <sec-ftcgreen-explain>
 
-#todo[write this]
+Here is an extremely informal explanation of what Green's Theorem is trying to say pictorially.
+We won't make it precise or go into the details.
+
+Remember that the _2D scalar curl_ of a 2D vector field $bf(F)$ at a point $P$ is a number that describes
+the counterclockwise swirl of the field $bf(F)$ near $P$.
+So to draw a picture (@fig-ftcgreen-explain):
+
+- Let's $cal(C)$ be a counterclockwise loop oriented counterclockwise.
+  For the picture, we'll draw $cal(C)$ as a purple square, which encloses a region $cal(R)$.
+- Then we imagine breaking $cal(R)$ into a bunch of tiny little squares.
+  At each little square, we draw a little green swirl inside it that corresponds roughly
+  to the 2D scalar curl of $bf(F)$ at the center of the tiny square.
+
+Then the integral
+$ iint_(cal(R)) ((partial q)/(partial x) - (partial p)/(partial y)) dif A $
+can be thought of as the "sum of the green swirls" (whatever that means).
+#figure(
+  image("figures/ftcgreen-explain.svg", width: auto),
+  caption: [A rough picture of what Green's Theorem for work is trying to say:
+    "if you add up the green swirls, then only the work along the purple boundary is left".],
+) <fig-ftcgreen-explain>
+
+However, in @fig-ftcgreen-explain you should realize: *all the swirls on the inside cancel out*.
+Imagine one of the vertical grey walls between two grey cells:
+you can imagine the direction and magnitude of $bf(F)$ along the wall
+contributes to the "swirliness" of the two adjacent cells,
+but whatever it contributes positively to one cell, it contributes negatively to the other one.
+(Again, this is all an informal picture, so I won't make this precise.)
+
+So if we add all the green stuff, the only thing that's left is the green stuff that's
+just along the purple curve (drawn darker above).
+For example, the dark green arrows on the left correspond to how much $bf(F)$
+points downwards against the nearby grey walls:
+which exactly matches the description of the work integral of $bf(F)$ along that western wall.
+And when you sum all four dark green currents,
+you just get the total work done by $bf(F)$ along the purple curve $cal(C)$, as desired.
 
 == [RECIPE] Evaluating line integrals, all together now <sec-recipe-work>
 
