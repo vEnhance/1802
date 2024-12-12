@@ -14,10 +14,9 @@
 
 = 18.02 Mock Half-Final
 
-- Since 3-hour exams constitute cruel an unusual punishment,
-  this will only be 90 minutes long.
-  There will be eight questions.
-  It will cover all post-midterm 3 topics and a random subset of earlier topics.
+- Since 3-hour exams constitute cruel and unusual punishment,
+  this is only 90 minutes long. There will be eight questions.
+  We cover all post-midterm 3 topics and a random subset of earlier topics.
 
 - Like the real exam, I suggest not referring to any notes/calculators/etc.
 
@@ -46,18 +45,15 @@
   The four points $(b,0,0)$, $(0,b,0)$, $(0,0,b)$, and $(2,3,6)$ lie on a plane $cal(P)$.
   Compute $b$, and compute the distance from the origin to $cal(P)$.
 
-/ 4.: Find a saddle point of the function $f(x,y) = x^2 + 6 y - y^2$.
+/ 4.:
+  Give an example of a saddle point of the function $f(x,y) = cos(x) + sin(y)$.
 
 / 5.:
-  Let $cal(S)$ denote the level surface of $f(x,y) = x^2 + (y-1)^2 + (z-2)^2$
-  passing through the origin.
-
-  - Compute the equation of the tangent plane to $cal(S)$ at the origin.
-  - Give an example of a set of vectors whose span in $RR^2$ is this tangent plane.
+  Compute the maximum and minimum value of $x^2+2y^2+4x$ over the region $x^2+y^2 <= 9$.
 
 / 6.:
-  By changing the order of integration,
-  compute $int_(0)^1 int_(x)^1 int_(y)^1 e^(z^3) dif z dif y dif x$.
+  Compute $int_(0)^1 int_(x)^1 int_(y)^1 e^(z^3) dif z dif y dif x$.
+  (Recommended approach: change the order of integration.)
 
 / 7.:
   Compute the real number $c$ for which
@@ -67,16 +63,13 @@
   $int_(cal(C)) bf(F) dot dif bf(r)$ across all possible choices of some curve $cal(C)$ in $RR^3$.
 
 / 8.:
-  Define the vector field $bf(F)(x,y,z) = angle.l x + e^y + z^3, thin e^x + y + z^3, thin z angle.r$.
-
-  - Compute the divergence of $bf(F)$.
-  - Let $cal(S)$ be the surface of the cube of side length $2$ whose eight vertices
-    are $(pm 1, pm 1, pm 1)$, with normal vector oriented outwards.
-    Compute the flux of $bf(F)$ through $cal(S)$.
-  - Let $cal(S)$ be the part of the cylinder $x^2+y^2=100$ with $1 <= z <= 2$,
-    with normal vector oriented outwards.
-    Compute the flux of $bf(F)$ through $cal(S)$.
-    (Recommended approach: add two "lids" to $cal(S)$.)
+  Let $bf(F)(x,y,z) = angle.l x + e^y + z^3, thin e^x + y + z^3, thin z angle.r$.
+  Let $cal(S)$ be the surface defined by $x^2+y^2=100$ and $1 <= z <= 2$,
+  with normal vector oriented outwards (thus $cal(S)$ is the curved part of a cylinder).
+  Compute the divergence of $bf(F)$.
+  Then compute the flux of $bf(F)$ through $cal(S)$.
+  (Recommended approach: add two "lids" to $cal(S)$, calculate flux through the lids by hand,
+  then use the divergence theorem.)
 
 Solutions are posted in Chapter N of #url("https://web.evanchen.cc/textbooks/lamv.pdf").
 ]
