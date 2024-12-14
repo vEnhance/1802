@@ -37,16 +37,18 @@
   Write your answer in rectangular form.
 
 / 2.:
-  There is a unique real number $a$ for which the matrix
+  Compute the unique real number $a$ for which the matrix
   $M = mat(1,1;a,6)$ has an eigenvalue of $2$.
-  Compute $a$, and compute the other eigenvalue of $M$.
+  For this value of $a$, compute the other eigenvalue of $M$ and its corresponding eigenvector.
 
 / 3.:
   The four points $(b,0,0)$, $(0,b,0)$, $(0,0,b)$, and $(2,3,6)$ lie on a plane $cal(P)$.
   Compute $b$, and compute the distance from $(1,2,3)$ to $cal(P)$.
 
 / 4.:
-  Give an example of a saddle point of the function $f(x,y) = cos(x) + sin(y)$.
+  Give an example of a saddle point of the function $f(x,y) = cos(x) + sin(y)$
+  and sketch the level curve of $f$ through passing that saddle point.
+  Do the same for an example of a local maximum.
 
 / 5.:
   Compute the maximum and minimum value of $x^2+2y^2+4x$ over the region $x^2+y^2 <= 9$.
