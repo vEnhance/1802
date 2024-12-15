@@ -539,7 +539,10 @@ it's the determinant of the matrix $mat(A, B; B, C)$.
 
 == [EXER] Exercises
 
-#todo[Give examples where second derivative test actually works]
+#exer[
+  Find the critical points of $f(x,y,z) = x^3 + 2 y^3 - 3 x y$ and classify them
+  as local minimums, local maximums, or saddle points.
+]
 
 #exer[
   Find the critical points of $f(x,y,z) = x^2 + y^3 + z^4$ and classify them
@@ -558,9 +561,4 @@ it's the determinant of the matrix $mat(A, B; B, C)$.
   is a saddle point, and there are no other saddle points.
   For example, $(2, -7)$, $(100, 100)$, and $(-42, -13)$ should be saddle points,
   but $(1/2, 0)$, $(pi, -sqrt(2))$, and $(sqrt(7), sqrt(11))$ should not be.
-]
-
-#exerstar[
-  Does there exist a differentiable function $f : RR^2 -> RR$
-  such that _every_ point in $RR^2$ is a saddle point?
 ]

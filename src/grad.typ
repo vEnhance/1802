@@ -355,15 +355,29 @@ To spell it out:
 #soln[
   Let $f(x,y) = x^2 + y^2$, so we are looking at the level curve for $25$ of $f$.
   We have seen already that
-  $ nabla f = vec(6, 8). $
+  $ nabla f = vec(2x, 2y) ==> nabla f(3,4) = vec(6, 8). $
   Hence, the tangent line should take the form
   $ 6x + 8y = d $
   for some $d$.
   To pass through $P = (3,4)$, we need $d = 6 dot 3 + 8 dot 4$, so the answer is
-  $ 6 x + 8 y = 50. #qedhere $
+  $ #boxed[$ 6 x + 8 y = 50 $]. #qedhere $
 ]
 
-#todo[A couple more examples here would be nice...]
+#sample[
+  Find the tangent line to $y = x^2 + 5$ at the point $(3,14)$.
+]
+#soln[
+  Isn't this an 18.01 question?
+  Yes, but the level curves work fine here to.
+  We think of this parabola as the level curve of $f(x,y) = y - x^2$ for the value $5$.
+  The gradient is then
+  $ nabla f = vec(-2x, 1) ==> nabla f(3,14) = (-6, 1). $
+  Hence the tangent line should take the line $-6x+y=d$ for some $d$.
+  We need to pass through $(3,14)$, so we take $d = (-6) dot 3 + 14 = -4$ to get the answer
+  $ #boxed[$ -6 x + y = -4 $]. $
+  (Written in 18.01 form this would be $y = 6 x - 4$, which shouldn't be a surprise,
+  because we know the derivation of $x^2+5$ at $x=3$ is $6$.)
+]
 
 == [RECAP] A recap of Part Echo on Multivariable Differentation
 

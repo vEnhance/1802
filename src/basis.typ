@@ -331,8 +331,8 @@ In 18.02 you might be asked to describe the span of some vectors in $RR^2$ and $
 From the examples above, you should be able to extrapolate the recipe.
 
 #recipe(title: [Recipe for describing the span of vectors in $RR^2$])[
-- *0-D case*: Are all the vectors the zero vector $vec(0,0)$? If so the span is just a single *point*.
-- *1-D case*: Are all the vectors pointing the same direction (i.e. multiples of each other)?
+- *0D case*: Are all the vectors the zero vector $vec(0,0)$? If so the span is just a single *point*.
+- *1D case*: Are all the vectors pointing the same direction (i.e. multiples of each other)?
   If so, and there is at least one nonzero vector,
   the span is a *line* through the origin in the common direction of the vectors.
 - *2D case*: Are there two (nonzero) vectors not pointing in the same direction
@@ -358,8 +358,8 @@ From the examples above, you should be able to extrapolate the recipe.
 ]
 
 #recipe(title: [Recipe for describing the span of vectors in $RR^3$])[
-  - *0-D case:* Are all the vectors the zero vector $vec(0,0,0)$? If so the span is just a single *point*.
-  - *1-D case*: Are all the vectors pointing the same direction (i.e. multiples of each other)?
+  - *0D case:* Are all the vectors the zero vector $vec(0,0,0)$? If so the span is just a single *point*.
+  - *1D case*: Are all the vectors pointing the same direction (i.e. multiples of each other)?
     If so, and there is at least one nonzero vector,
     the span is a *line* through the origin in the common direction of the vectors.
   - *2D case*: Is there more than one direction present,

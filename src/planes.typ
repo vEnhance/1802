@@ -22,7 +22,10 @@ if you pick any point $P$ on the plane, then the arrow joining $P$ to $P + bf(v)
 --- that is, the arrow $bf(v)$ when you draw the starting point as $P$ ---
 is perpendicular to that plane.
 
-#todo[figure]
+#figure(
+  image("figures/planes-normalvector.svg", width: auto),
+  caption: [Normal vector to a plane.],
+)
 
 (Note that it doesn't matter which point $P$ you pick.
 You could equally well even ignore $P$ together, imagine drawing $bf(v)$ as an arrow
@@ -51,11 +54,12 @@ grade algebra.
 Here's a question: which vectors in $RR^2$ are perpendicular to $vec(1,2)$?
 They're the vectors lying on a line of slope $-1/2$ through the origin, namely
 $ 0 = vec(x,y) dot vec(1, 2) <==> 0 = x + 2 y. $
+See @fig-planes-x-2y.
 
 #figure(
-  image("figures/r02-x-plus-2y.svg", width: 12cm),
+  image("figures/planes-x-2y.svg"),
   caption: [Plots of $x+2y=0$ and $x+2y=pi$.],
-)
+) <fig-planes-x-2y>
 
 Okay, in that case what does the line
 $ x + 2 y = pi $
@@ -103,9 +107,13 @@ Analogous to last section different ways to write it are:
 
 But again, like last time, the base point doesn't really matter.
 The end story is the same: the coefficients control the direction of the plane
-via the normal vector.
+via the normal vector (see @fig-planes-x-2y-3z-6).
 
-#todo[figure]
+#figure(
+  image("figures/planes-x-2y-3z-6.svg", width: auto),
+  caption: [Normal vectors to the plane $x + 2 y + 3 z = 6$.],
+) <fig-planes-x-2y-3z-6>
+
 
 == [RECIPE] Finding a plane through a point with a direction <recipe-plane-known-dir>
 
@@ -139,31 +147,39 @@ There's a classical exercise that's used to test understanding of normal vectors
 and projections, which is to find the distance from a point to a plane.
 
 #sample[
-  Find the distance from the point $(7, 8, 9)$ to the plane $x + 2 y + 3 z = 0$.
+  Find the distance from the point $(7, 8, 5)$ to the plane $x + 2 y + 3 z = 0$.
 ]
 #soln[
   The plane $x + 2 y + 3 z = 0$ has a normal vector $bf(n)$
   given by the coefficients of $x$, $y$, and $z$:
   $ bf(n) = (1 , 2 , 3) . $
 
-  Now consider the vector $bf(v) = vec(7,8,9)$
-  pointing from the origin (which lies on the plane) to the given point $(7,8,9)$.
+  Now consider the vector $bf(v) = vec(7,8,5)$
+  pointing from the origin (which lies on the plane) to the given point $(7,8,5)$.
   The main insight is that the scalar component of $bf(v)$ to the vector $bf(n)$
   coincides with the distance we're trying to compute;
-  look at the figure TODO to see why this is true.
-  #todo[draw fig]
+  look at the figure @fig-planes-789 to see why this is true.
+  The point is that there's a rectangle formed by the origin, the endpoint of $bf(v)$,
+  and the projections of $bf(v)$ onto $bf(n)$ and the plane, respectively.
+
+  #figure(
+    image("figures/planes-dist789.svg", width: auto),
+    caption: [The two projections from $bf(v)$ onto $bf(n)$ and the plane (in purple)
+      form a rectangle, so that the distance from $bf(v)$ to the plane
+      is given exactly by $op("comp")_(bf(n)) (bf(v))$.],
+  ) <fig-planes-789>
 
   Calculate the dot product:
-  $ bf(v) dot bf(n) = (7) (1) + (8) (2) + (9) (3) = 7 + 16 + 27 = 50 . $
+  $ bf(v) dot bf(n) = (7) (1) + (8) (2) + (5) (3) = 7 + 16 + 15 = 38 . $
   Calculate the magnitude:
   $ |bf(n)| = sqrt((1)^2 + (2)^2 + (3)^2) = sqrt(1 + 4 + 9) = sqrt(14) . $
   Hence, the scalar component is:
-  $ op("comp")_(bf(n)) bf(v) = frac(bf(v) dot bf(n), |bf(n)|) = 50 / sqrt(14) . $
+  $ op("comp")_(bf(n)) bf(v) = frac(bf(v) dot bf(n), |bf(n)|) = 38 / sqrt(14) . $
   This is the answer.
 ]
 
 Here's the same exercise with one change: we change to $x + 2 y + 3 z = 60$.
-This means we'll have to pick a point on the plane.
+This means we'll have to pick a point on the plane besides the origin.
 #sample[
   Find the distance from the point $(7, 8, 9)$ to the plane $x + 2 y + 3 z = 60$.
 ]
@@ -177,15 +193,15 @@ This means we'll have to pick a point on the plane.
   (You could do the problem with $(60,0,0)$ or $(0,30,0)$ or even $(-77,13,37)$ if you prefer;
   they all give the same answer.)
 
-  The vector $bf(v)$ from $(0 , 0 , 20)$ to $(7 , 8 , 9)$ is:
-  $ bf(v) = (7 - 0 , thin 8 - 0 , thin 9 - 20) = (7 , thin 8 , thin - 11) . $
+  The vector $bf(v)$ from $(0 , 0 , 20)$ to $(7 , 8 , 5)$ is:
+  $ bf(v) = (7 - 0 , thin 8 - 0 , thin 5 - 20) = (7 , thin 8 , thin - 15) . $
 
   Now we can just repeat the steps from before, where
-  $ bf(v) dot bf(n) &= (7) (1) + (8) (2) + (- 11) (3) = 7 + 16 - 33 = - 10 \
+  $ bf(v) dot bf(n) &= (7) (1) + (8) (2) + (- 15) (3) = - 22 \
     |bf(n)| &= sqrt((1)^2 + (2)^2 + (3)^2) = sqrt(1 + 4 + 9) = sqrt(14) . $
   Hence
-  $ op("comp")_(bf(n)) bf(v) = frac(bf(v) dot bf(n), |bf(n)|) = frac(- 10, sqrt(14)) . $
-  The distance is the absolute value $10/sqrt(14)$.
+  $ op("comp")_(bf(n)) bf(v) = frac(bf(v) dot bf(n), |bf(n)|) = frac(- 22, sqrt(14)) . $
+  The distance is the absolute value $22 / sqrt(14)$.
 ]
 #remark[
   It's fine that you get a negative number for the scalar component.
@@ -193,8 +209,19 @@ This means we'll have to pick a point on the plane.
   between the two planes $x+2y+3z=0$ and $x+2y+3z=60$.
   Depending on which way you choose to point $bf(n)$,
   one of the components will be positive and the other negative.
+  See @fig-planes-sandwich.
 ]
-#todo[figure]
+#figure(
+  image("figures/planes-sandwich.svg", width: auto),
+  caption: [A 2D cartoon of the point $(7,8,9)$ sandwiched between the
+    planes $x+2y+3z=0$ and $x+2y+3z=60$.
+    If we choose $bf(n) = angle.l 1,2,3 angle.r$
+    then we get $+38/sqrt(14)$ and $-22/sqrt(14)$ for the
+    lengths of the projections as shown in purple.
+  ],
+) <fig-planes-sandwich>
+
+
 
 The thing about this exercise is that you can just do it with symbols instead of
 numbers and get a general formula, which means that doing it with specific numbers
@@ -241,7 +268,7 @@ If you just want to memorize the final result, here it is:
 #recipe(title: [Recipe for distance from point to plane])[
   If asked to find the distance from a point $(x_0 , y_0 , z_0)$ to the plane
   defined by the equation $a x + b y + c z = d$, output the answer
-  $ frac(|a x_0 + b y_0 + c z_0 - d|, sqrt(a^2 + b^2 + c^2)) . $
+  $ frac(lr(|a x_0 + b y_0 + c z_0 - d|), sqrt(a^2 + b^2 + c^2)) . $
 ]
 (We've moved the absolute value to the numerator, since the square root is always positive.)
 

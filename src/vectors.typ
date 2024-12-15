@@ -220,7 +220,19 @@ Well, if you only care about the area of the volume itself,
 it doesn't matter for you; you should just take the absolute value of the determinant.
 But the sign carries a bit more information.
 
-#todo[describe 2d and right hand rule]
+- In 2D, consider the angle between $bf(v)_1$ and $bf(v)_2$,
+  between $0 degree$ and $180 degree$.
+  Then we consider the sign to be $+$ if the angle goes counterclockwise
+  (like the example in @fig-parallelogram), and negative otherwise.
+  So in @fig-parallelogram, we would have
+  $ detmat(x_1, x_2; y_1, y_2) = +"area", #h(1em)
+    detmat(x_2, x_1; y_2, y_1) = -"area". $
+
+- In 3D, the convention follows the right-hand rule:
+  suppose vectors $bf(v)_1$, $bf(v)_2$, $bf(v)_3$ are given it that order.
+  Curl the fingers of your right hand from $bf(v)_1$ to $bf(v)_2$;
+  then the signed volume is positive if your thumb points in the direction of $bf(v)_3$
+  (as in @fig-parallelepiped, for example) and negative otherwise.
 
 #digression[
   If you're interested in the proof of these results

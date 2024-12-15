@@ -374,5 +374,3 @@ in return for the short time limit.
     Thanks to the couple packages that were already used in `evan.typ`:
     - The v2 version of #url("https://github.com/sahasatvik/typst-theorems").
     - The v1 version of #url("https://github.com/jomaway/typst-gentle-clues").
-
-#todo[more to come]

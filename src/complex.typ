@@ -162,8 +162,8 @@ Then
 $ z_1 z_2 = (a + b i)(c + d i) = (a c - b d) + (a d + b c) i $
 doesn't look anything right.
 If @eqn-magnitudes is really true, it's promising that
-$ sqrt(a^2+b^2) dot sqrt(c^2+d^2) = sqrt((a c - b d)^2 + (a d + b c)^2) $
-or equivalently
+$ sqrt(a^2+b^2) dot sqrt(c^2+d^2) = sqrt((a c - b d)^2 + (a d + b c)^2). $
+In other words, the equation
 #eqn[
   $ (a^2+b^2)(c^2+d^2) = (a c - b d)^2 + (a d + b c)^2 $
   <eqn-br-fib>
@@ -182,7 +182,7 @@ They really are equal! The $2 a b c d$ has apparently cancelled out magically.
 #link("https://w.wiki/CLMJ")[Brahmagupta-Fibonacci identity],
 if you want a name, but we won't use this name again later.)
 
-=== Application 2: @eqn-miracle gives the trig addition formula and the double-angle formula
+=== Application 2: @eqn-miracle gives trig addition and double-angle formulas
 
 Let's say you still don't trust your teacher (again, good!)
 and even though you have grudgingly admitted @eqn-magnitudes is true,

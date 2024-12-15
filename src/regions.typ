@@ -134,6 +134,8 @@ The table below summarizes how each constraint affects each of the three words a
 
 Let's use some examples.
 #example(title: [Example: the circle, open disk, and closed disk])[
+  See @fig-regions-circles.
+
   - The circle $x^2 + y^2 = 1$ is a *one-dimensional* shape.
     Again, we consider this region to be _one-dimensional_
     even though the points live in $RR^2$.
@@ -157,7 +159,11 @@ Let's use some examples.
     But there is a *boundary of $x^2 + y^2 = 1$*.
 ]
 
-#todo[Draw a figure for this]
+#figure(
+  image("figures/regions-circles.svg", width: auto),
+  caption: [Pictures of $x^2+y^2 = 1$, $x^2+y^2 < 1$, and $x^2+y^2 <= 1$.],
+) <fig-regions-circles>
+
 
 In compensation for the fact that I'm not giving you true definitions,
 I will instead give you a pile of examples, their dimensions, boundaries, and limit cases.
@@ -168,9 +174,9 @@ See @table-1d-regions, @table-2d-regions, @table-3d-regions.
     columns: 4,
     align: center + horizon,
     table.header([Region], [Dim.], [Boundary], [Limit cases]),
-    [All of $RR$], [1-D], [No boundary], [$x -> pm oo$],
-    [$-1 < x < 1$], [1-D], [No boundary], [$x -> pm 1$],
-    [$-1 <= x <= 1$], [1-D], [$x = pm 1$], [No limit cases],
+    [All of $RR$], [1D], [No boundary], [$x -> pm oo$],
+    [$-1 < x < 1$], [1D], [No boundary], [$x -> pm 1$],
+    [$-1 <= x <= 1$], [1D], [$x = pm 1$], [No limit cases],
   ),
   kind: table,
   caption: [Examples of regions inside $RR$ and their properties.]
@@ -188,12 +194,12 @@ See @table-1d-regions, @table-2d-regions, @table-3d-regions.
     [$-1 <= x <= 1 \ -1 <= y <= 1$], [2D], [$x=pm 1$ or $y=pm 1$], [No limit cases],
     [$x^2 + y^2 < 1$], [2D], [No boundary], [$x^2+y^2 -> 1^-$],
     [$x^2 + y^2 <= 1$], [2D], [$x^2 + y^2 = 1$], [No limit cases],
-    [$x^2 + y^2 = 1$], [1-D], [No boundary], [No limit cases],
-    [$x^2 + y^2 = 1 \ x,y > 0$], [1-D], [No boundary], [$x -> 0^+$ or $y -> 0^+$],
-    [$x^2 + y^2 = 1 \ x,y >= 0$], [1-D], [$(1,0)$ and $(0,1)$], [No limit cases],
-    [$x + y = 1$], [1-D], [No boundary], [$x -> pm oo$ or $y -> pm oo$],
-    [$x + y = 1 \ x, y > 0$], [1-D], [No boundary], [$x -> 0^+$ or $y -> 0^+$],
-    [$x + y = 1 \ x, y >= 0$], [1-D], [$(1,0)$ and $(0,1)$], [No limit cases]
+    [$x^2 + y^2 = 1$], [1D], [No boundary], [No limit cases],
+    [$x^2 + y^2 = 1 \ x,y > 0$], [1D], [No boundary], [$x -> 0^+$ or $y -> 0^+$],
+    [$x^2 + y^2 = 1 \ x,y >= 0$], [1D], [$(1,0)$ and $(0,1)$], [No limit cases],
+    [$x + y = 1$], [1D], [No boundary], [$x -> pm oo$ or $y -> pm oo$],
+    [$x + y = 1 \ x, y > 0$], [1D], [No boundary], [$x -> 0^+$ or $y -> 0^+$],
+    [$x + y = 1 \ x, y >= 0$], [1D], [$(1,0)$ and $(0,1)$], [No limit cases]
   ),
   kind: table,
   caption: [Examples of regions inside $RR^2$ and their properties],
@@ -251,11 +257,7 @@ But again, for 18.02, the rules of thumb should work on all the exam questions.
     and considering when any of the variables can go to $pm oo$.
   - The boundary is obtained when any $<=$ and $>=$ becomes $=$.
 
-  See @table-rule-thumb.
 ]
 
-#todo[Add some more examples here]
-
-== [TEXT] Examples of regions described in words rather than equations
-
-#todo[Add examples that aren't triangles]
+See @table-rule-thumb for a summary of these rules of thumbs,
+and again consult @table-1d-regions, @table-2d-regions, @table-3d-regions for a lot of examples.

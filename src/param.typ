@@ -258,6 +258,11 @@ I write $bf(P)(t)$ for the corresponding parametric curve.
 
 Okay, here are some examples.
 
+#figure(
+  image("figures/param-frisbee.svg", width: auto),
+  caption: [Spinning frisbee.],
+) <fig-param-frisbee>
+
 #sample[
   A frisbee has the shape of a circle of radius $r$, and one point $P$
   on the edge of the frisbee is marked.
@@ -269,6 +274,7 @@ Okay, here are some examples.
 
   Parametrize the position of the marked point $bf(P)(t)$
   on the edge of the frisbee as a function of time.
+  (See @fig-param-frisbee.)
 ]
 
 #soln[
@@ -302,7 +308,6 @@ Okay, here are some examples.
   Simplifying, we have:
   $ bf(P) (t) = vec(v_x t - r sin (omega t) , v_y t + r cos (omega t)) . #qedhere $
 ]
-#todo[draw a figure]
 
 #sample[
   A planet orbits the sun in a circular path with radius $R_s$ and _counterclockwise_ angular velocity $omega_s$.
@@ -310,7 +315,15 @@ Okay, here are some examples.
   Parametrize the motion $bf(M)(t)$ of the moon relative to the sun,
   assuming the sun is at the origin, the planet starts at $(R_s , 0)$,
   and the moon starts at $(R_s , -R_m)$.
+  (See @fig-param-planet.)
 ]
+
+#figure(
+  image("figures/param-planet.svg", width: auto),
+  caption: [A planet orbits a moon in circular motion.
+    (In real life, I think they're probably ellipses and not circles.)],
+) <fig-param-planet>
+
 #soln[
   1. The planet moves in a counterclockwise orbit around the sun with radius
     $R_s$ and angular velocity $omega_s$. The position of the planet as a
@@ -370,18 +383,26 @@ Okay, here are some examples.
 
   2. The tricky part of the problem is determining the angular velocity of the wheel.
     The key idea is to look at the length of the tire track made on the ground.
+    See @fig-param-tire-track-cycloid.
 
     - On the one hand, after time $t$, the length of the tire track is
       $ L_("tire track") = v t $
       because the wheel covers that much distance on the ground.
+      This is drawn in brown on @fig-param-tire-track-cycloid.
+
     - On the other hand, after time $t$ the length of the tire track should also be
       $ L_("tire track") = omega t dot r. $
       (It might be more natural for some of you if I write this as
       $((omega t) / (2 pi)) dot (2 pi r)$ instead.
       Because $(omega t) / (2 pi)$ is the number of full rotations made;
       while $2 pi r$ is the total circumference of the wheel.)
+      This is drawn in dark blue in @fig-param-tire-track-cycloid.
 
-    #todo[Draw the tire track figure]
+    #figure(
+      image("figures/param-tire-track-cycloid.svg", width: auto),
+      caption: [Calculating the length of the tire track on the ground
+      in order to determine the angular velocity $omega$.],
+    ) <fig-param-tire-track-cycloid>
 
     Setting $L_("tire track")$ equal in the two expressions gives
     $ v t = omega t dot r ==> omega = v / r. $

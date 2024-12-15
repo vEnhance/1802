@@ -288,8 +288,6 @@ it's what happens if you generalize @pop3 to eight variables
 
 == [EXER] Exercises
 
-#todo[write a bunch of boring exercises]
-
 #exer[
   If $A$ is a $3 times 3$ matrix with determinant $2$, what values could $det(10 A)$ take?
 ]

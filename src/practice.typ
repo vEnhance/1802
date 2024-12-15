@@ -23,6 +23,11 @@ Some practice questions from topics through the entire course.
   is tangent to $cal(S)$ at the origin.
 ]
 
+#exerstar[
+  Does there exist a differentiable function $f : RR^2 -> RR$
+  such that _every_ point in $RR^2$ is a saddle point?
+]
+
 #exer[
   Let $cal(R)$ denote the region in the $x y$-plane cut out by
   $y = x + 2$, $y = x + 20$, and $y = x^2$.

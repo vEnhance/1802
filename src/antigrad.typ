@@ -286,5 +286,3 @@ and the function $f$ will be called a *potential function* for it.
 But ignore those names for now.
 
 == [EXER] Exercises
-
-#todo[make something up]
