@@ -39,7 +39,7 @@
 / 2.:
   Compute the unique real number $a$ for which the matrix
   $M = mat(1,1;a,6)$ has an eigenvalue of $2$.
-  For this value of $a$, compute the other eigenvalue of $M$ and its corresponding eigenvector.
+  For this value of $a$, compute the other eigenvalue of $M$ and a corresponding eigenvector.
 
 / 3.:
   The four points $(b,0,0)$, $(0,b,0)$, $(0,0,b)$, and $(2,3,6)$ lie on a plane $cal(P)$.
