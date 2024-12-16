@@ -28,10 +28,10 @@ draw((1.5,1)--(3.5,1), blue, EndArrow);
 filldraw(circle((5,1), 1), opacity(0.3)+lightcyan, blue);
 
 dotfactor *= 1.5;
-draw((0,0)--(5,0), brown+1.5);
-label("$L_{\text{tire track}}$ based on ground", (2.5,0), dir(-90), brown);
-draw(arc((5,1),P(5),(5,0)), deepblue+1.5);
-label("$L_{\text{tire track}}$ based on wheel", (5,2), dir(90), deepblue);
+draw((0,-0.1)--(5,-0.1), brown+1.5);
+label("$L_{\text{tire track}}$ based on ground", (2.5,-0.1), dir(-90), brown);
+draw(shift(5,1)*scale(1.1)*shift(-5,-1)*arc((5,1),P(5),(5,0)), deepblue+1.5);
+label("$L_{\text{tire track}}$ based on wheel", (5,2.1), dir(90), deepblue);
 
 dot(P(0), red);
 dot(P(5), red);
