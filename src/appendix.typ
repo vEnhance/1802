@@ -82,7 +82,9 @@ will essentially be the beginning of the second stage.
 
 #pagebreak()
 
-= Deriving the geometric definition of dot product from the algebraic one (short but comes out of nowhere) <appendix-dotpf-alg>
+= Proofs of the dot product property
+
+== Deriving the geometric definition of dot product from the algebraic one (short but comes out of nowhere) <appendix-dotpf-alg>
 
 We have two definitions in play and we want to show they coincide, which makes notation awkward.
 So in what follows, our notation $bf(u) dot bf(v)$ will always refer to the
@@ -90,9 +92,7 @@ _algebraic_ definition; and we will _prove_ that $bf(u) dot bf(v) = |bf(u)| |bf(
 
 #todo[write this section]
 
-#pagebreak()
-
-= Deriving the algebraic definition of dot product from the geometric one (longer but easier to come up with) <appendix-dotpf-geo>
+== Deriving the algebraic definition of dot product from the geometric one (longer but easier to come up with) <appendix-dotpf-geo>
 
 The proof in @appendix-dotpf-alg might seem magical.
 Indeed, it's so short because it's cheating in some way:
@@ -111,12 +111,12 @@ We will assume that $|bf(u)| = 1$ (i.e. $bf(u)$ is a unit vector)
 so that $bf(u) dot bf(v)$ is the length of the projection of $bf(v)$ onto $bf(u)$.
 This is OK to assume because in the general case one just scales everything by $|bf(u)|$.
 
-== Easy special case
+=== Easy special case
 
 As a warmup, try to show that if $bf(u) = vec(a,b)$ is any vector, then $bf(u) dot ee_1 = a$.
 (This is easy. The projection of $bf(u)$ onto $ee_1$ is literally $a$.)
 
-== Main proof
+=== Main proof
 
 #figure(
   image("figures/r02-dotproof.svg", width: 75%),
