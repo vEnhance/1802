@@ -39,7 +39,8 @@
 / 2.:
   Compute the unique real number $a$ for which the matrix
   $M = mat(1,1;a,6)$ has an eigenvalue of $2$.
-  For this value of $a$, compute the other eigenvalue of $M$ and a corresponding eigenvector.
+  For this value of $a$, compute the other eigenvalue of $M$,
+  and a (nonzero) eigenvector for that eigenvalue.
 
 / 3.:
   The four points $(b,0,0)$, $(0,b,0)$, $(0,0,b)$, and $(2,3,6)$ lie on a plane $cal(P)$.
@@ -119,6 +120,11 @@ $ 0 = detmat(1 - lambda, 1; -4, 6 - lambda)
 We know that $lambda = 2$ is one root of the quadratic;
 the other one is $#boxed[$ lambda = 5 $]$.
 
+To get the eigenvector, write $vec(x,y)$ so that we need
+$ M vec(x,y) = 5vec(x,y) ==>
+  cases((1-5)x + y = 0, -4+(6-5)y=0) ==> y=4x. $
+So an eigenvector for $5$ is $#boxed[$ vec(4,1) $]$ (or any nonzero multiple of it).
+
 === Solution using trace and determinant shortcut
 
 Let $lambda_2$ be the other eigenvalue.
@@ -129,6 +135,7 @@ then this question can be done even more quickly:
 $ lambda_2 + 2 = op("Trace") M &= 1 + 6 \
   lambda_2 dot 2 = det M &= detmat(1, 1; a, 6) = 6 - a. $
 The first equation implies $lambda_2 = 5$; then the second implies $a = -4$.
+The eigenvector is then recovered in the same way as the first solution.
 
 == Solution to Q3 (plane)
 
@@ -169,6 +176,7 @@ Let $f(x,y) = cos(x) + sin(y)$.
 The gradient is given by
 $ nabla f = angle.l -sin(x), cos(y) angle.r. $
 So a critical point occurs at any point for which $sin(x) = cos(y) = 0$.
+(These are the points where $cos(x) = pm 1$ and $sin(y) = pm 1$.)
 
 To identify a saddle point, we compute the double derivatives:
 $ f_(x x) &= -cos(x) \
@@ -176,12 +184,41 @@ $ f_(x x) &= -cos(x) \
   f_(y y) &= -sin(y). $
 It's enough to pick any $(x,y)$ for which $f_(x x)$ and $f_(y y)$ have opposite sign.
 One example would be $(x,y) = #boxed[$ (0, (3pi)/2) $]$, among many others.
+At this value we get $f(0, (3pi)/2) = 0$.
 
-In fact, the complete list of saddle points is given as follows:
-whenever $m$ and $n$ are integers where $m+n$ is odd, the point
-$ (x,y) = (m pi, (n + 1/2) pi) $
-is a saddle point, and these are all saddle points.
-The previous example was the special case$m = 0$ and $n = 1$.
+The level curve of $f$ is the set of points $(x,y)$ with $cos(x) + sin(y) = 0$,
+and in fact every saddle point lies on this level curve.
+In @fig-practice-level-saddle, we draw the level curve below in blue, and the saddle points in red.
+Since $cos(x) = sin(y)$ whenever $x pm y + pi/2$ is a multiple of $2 pi$,
+the level curves are a mesh of lines running through the plane at diagonals.
+
+#figure(
+  image("figures/practice-level-saddle.svg", width: auto),
+  caption: [The level curve of $f = cos(x) + sin(y) =  0$.
+    Saddle points are marked in red, and these are all the saddle points],
+) <fig-practice-level-saddle>
+
+
+#remark[
+  In fact, the complete list of saddle points is given as follows:
+  whenever $m$ and $n$ are integers where $m+n$ is odd, the point
+  $ (x,y) = (m pi, (n + 1/2) pi) $
+  is a saddle point, and these are all saddle points.
+  The previous example was the special case $m = 0$ and $n = 1$.
+]
+
+An example of a local maximum would be $(0, pi/2)$, at which $f(0, pi/2) = cos 0 + sin (pi/2) = 2$.
+In fact, the level curve of $f(x,y) = 2$ passes through all the local maximums,
+which occur only when $cos x = sin y = 1$, meaning $x$ and $y-pi/2$ are integer multiples of $2pi$.
+So the level curve of $f$ for the value $2$ contains _only_ a disjointed set of points,
+as shown in @fig-practice-level-max.
+
+#figure(
+  image("figures/practice-level-max.svg", width: auto),
+  caption: [The level curve of $f = cos(x) + sin(y) = 2$, in green.
+    Each green point is a maximum of $f$.],
+) <fig-practice-level-max>
+
 
 == Solution to Q5
 
