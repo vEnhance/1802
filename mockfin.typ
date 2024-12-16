@@ -47,9 +47,9 @@
   Compute $b$, and compute the distance from $(1,2,3)$ to $cal(P)$.
 
 / 4.:
-  Give an example of a saddle point of the function $f(x,y) = cos(x) + sin(y)$
-  and sketch the level curve of $f$ through passing that saddle point.
-  Do the same for an example of a local maximum.
+  Let $f(x,y) = cos(x) + sin(y)$.
+  Sketch a level curve of $f$ passing through at least one saddle point of $f$.
+  Do the same for a local maximum.
 
 / 5.:
   Compute the maximum and minimum value of $x^2+2y^2+4x$ over the region $x^2+y^2 <= 9$.
@@ -207,7 +207,8 @@ the level curves are a mesh of lines running through the plane at diagonals.
   The previous example was the special case $m = 0$ and $n = 1$.
 ]
 
-An example of a local maximum would be $(0, pi/2)$, at which $f(0, pi/2) = cos 0 + sin (pi/2) = 2$.
+An example of a local maximum would be $#boxed[$ 0, pi/2 $]$,
+at which $f(0, pi/2) = cos 0 + sin (pi/2) = 2$.
 In fact, the level curve of $f(x,y) = 2$ passes through all the local maximums,
 which occur only when $cos x = sin y = 1$, meaning $x$ and $y-pi/2$ are integer multiples of $2pi$.
 So the level curve of $f$ for the value $2$ contains _only_ a disjointed set of points,
@@ -216,7 +217,7 @@ as shown in @fig-practice-level-max.
 #figure(
   image("figures/practice-level-max.svg", width: auto),
   caption: [The level curve of $f = cos(x) + sin(y) = 2$, in green.
-    Each green point is a maximum of $f$.],
+    Each green point is a local maximum of $f$ (and these are the only local maximums).],
 ) <fig-practice-level-max>
 
 
