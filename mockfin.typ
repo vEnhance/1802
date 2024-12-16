@@ -222,6 +222,51 @@ as shown in @fig-practice-level-max.
 
 == Solution to Q5
 
+Let $f(x,y) = x^2 + 2y^2 + 4x$.
+Let $cal(R)$ denote the region $x^2 + y^2 <= 9$,
+which is 2D, has no limit cases, and boundary $x^2 + y^2 = 9$.
+We carry out our optimization recipe.
+
+
+0. There are no limit cases, but a boundary $x^2 + y^2 = 9$, a circle of radius $3$.
+
+1. First let's find the critical points of $f(x,y,z) = x^2 + 2y^2 + 4x$.
+  Write $ nabla f = vec(2x+4, 4y). $
+  The only point at which $nabla f = 0$ is $(-2,0)$, at which $ f(-2,0) = -4. $
+
+2. The boundary of $cal(R)$ is $x^2 + y^2 = 9$.
+  We use Lagrange multipliers on the boundary, which we denote $cal(S)$,
+  with constraint $g(x,y) = x^2+y^2 = 9$.
+
+  0. The new region $cal(S)$ has no boundary and no limit cases.
+  1. Let's find the LM-critical points for $f$ on $cal(S)$.
+    Take the gradient of $g$ to get
+    $ nabla g = vec(2x, 2y). $
+    The only point at which $nabla g = bf(0)$ is $x=y=0$ which isn't on $cal(S)$,
+    so we don't have to worry about $nabla g = bf(0)$ the case.
+    Now we instead solve
+    $ vec(2x+4,4y) = lambda vec(2x, 2y). $
+    The second equation says
+    $ 4y = lambda 2y ==> lambda = 2 " or " y = 0. $
+    If $y = 0$, we get the points $(3,0)$ and $(-3,0)$ which we need to check.
+    We have
+    $ f(3,0) = 21 \
+      f(-3,0) = -3. $
+    Now suppose instead $lambda = 2$.
+    Then $2x+4 = 4x ==> x = 2$, and hence $y = pm sqrt(5)$.
+    We check those points
+    $ f(2, sqrt(5)) &= 22 \
+      f(2, -sqrt(5)) &= 22. $
+
+
+  2. $cal(S)$ has no boundary to consider.
+  3. $cal(S)$ has no limit cases to consider.
+
+3. $cal(R)$ has no limit cases to consider.
+
+Of the five points we've checked, $#boxed[$ f(-2,0) = -4 $]$
+and $#boxed[$ f(2, pm sqrt(5)) = 22 $]$ give the optimal values.
+
 == Solution to Q6
 
 == Solution to Q7
