@@ -55,7 +55,7 @@
   Compute the maximum and minimum value of $x^2+2y^2+4x$ over the region $x^2+y^2 <= 9$.
 
 / 6.:
-  Compute $int_(0)^1 int_(x)^1 int_(y)^1 e^(z^3) dif z dif y dif x$.
+  Compute $int_(x=0)^1 int_(y=x)^1 int_(z=y)^1 e^(z^3) dif z dif y dif x$.
   (Recommended approach: change the order of integration.)
 
 / 7.:
@@ -67,7 +67,7 @@
 
 / 8.:
   Let $bf(F)(x,y,z) = angle.l x + e^y + z^3, thin e^x + y + z^3, thin z angle.r$.
-  Let $cal(S)$ be the surface defined by $x^2+y^2=100$ and $1 <= z <= 2$,
+  Let $cal(S)$ be the surface defined by $x^2+y^2=100$ and $7 <= z <= 9$,
   with normal vector oriented outwards (thus $cal(S)$ is the curved part of a cylinder).
   Compute the divergence of $bf(F)$.
   Then compute the flux of $bf(F)$ through $cal(S)$.
@@ -269,6 +269,80 @@ and $#boxed[$ f(2, pm sqrt(5)) = 22 $]$ give the optimal values.
 
 == Solution to Q6
 
+The region being integrated over can be succinctly described as
+$ cal(R) = { 0 <= x <= y <= z <= 1 }. $
+Swap the order of integration so that $z$ is outermost:
+$ int_(x=0)^1 int_(y=x)^1 int_(z=y)^1 e^(z^3) dif z dif y dif x
+  &= int_(z=0)^1 int_(y=0)^z int_(x=0)^y e^(z^3) dif x dif y dif z \
+  &= int_(z=0)^1 e^(z^3) int_(y=0)^z int_(x=0)^y 1 dif x dif y dif z \
+  &= int_(z=0)^1 e^(z^3) int_(y=0)^z y dif y dif z \
+  &= int_(z=0)^1 e^(z^3) z^2/2 dif y dif z \
+  &= 1/6 int_(z=0)^1 e^(z^3) 3z^2 dif y dif z \
+  &= 1/6 [e^(z^3)]_(z=0)^1 = #boxed[$ (e-1)/6 $]. $
+
 == Solution to Q7
 
+The curl of $bf(F)$ can be computed as
+$ nabla times bf(F)
+  = detmat(
+    ee_1, ee_2, ee_3;
+    partial/(partial x), partial/(partial y), partial/(partial z);
+    7 cos(x), cos(y) cos(2z), c sin(y) sin(2z)
+  ) = vec(c cos(y) sin(2z) - cos(y) dot (-2sin(2z)), 0, 0) $
+which is identically zero only for $#boxed[$ c = -2 $]$.
+For that value of $c$, we can recover a potential function $f$ by writing
+$ (partial f) / (partial x) &= 7 cos(x) ==> f = 7 sin(x) + C_1(y,z) \
+  (partial f) / (partial y) &= cos(y) cos(2z) ==> f = sin(y) cos(2z) + C_2(z,x) \
+  (partial f) / (partial z) &= -2 sin(y) sin(2z) ==> f = sin(y) cos(2z) + C_3(x,y). $
+Hence, the potential function can be extracted:
+$ f(x,y,z) = 7 sin(x) + sin(y) cos(2z). $
+For a curve $cal(C)$ starting at $P$ and ending at $Q$, we have
+$ int_(cal(C)) f dot dif bf(r) = f(Q) - f(P). $
+However, since both the trig functions $sin$ and $cos$ take values in $[-1,1]$,
+it's easy to see that $max f = 8$ (for example $f(pi/2, pi/2, 0) = 8$)
+while $min f = -8$ (for example $f(-pi/2, -pi/2, 0) = -8$).
+Hence the largest possible value of the line integral is $8 - (-8) = #boxed[$ 16 $]$.
+
 == Solution to Q8
+
+The divergence is
+$nabla dot bf(F) =
+  partial / (partial x)(x + e^y + z^3)
+  + partial / (partial y)(e^x + y + z^3)
+  + partial / (partial z) z = 1 + 1 + 1 = 3. $
+
+Given $cal(S)$, we add two lids, $cal(S)_"top"$ and $cal(S)_"bottom"$.
+The top lid is the flat surface given by $z = 9$ and $x^2+y^2 <= 100$,
+with normal vector oriented upwards.
+The bottom lid is the flat surface given by $z = 7$ and $x^2+y^2 <= 100$,
+with normal vector oriented outwards.
+Finally, let $cal(T)$ denote the cylinder $1 <= z <= 2$ and $x^2 + y^2 <= 100$,
+which is enclosed by $cal(S)$, $cal(S)_"top"$, $cal(S)_"bottom"$.
+Then the divergence theorem states that
+$ iiint_(cal(T)) nabla dot bf(F) dif V
+  = iint_(cal(S)_("top")) bf(F) dot bf(n) dif S
+  + iint_(cal(S)_("bottom")) bf(F) dot bf(n) dif S
+  + iint_(cal(S)) bf(F) dot bf(n) dif S. $
+The fourth quantity is the flux we want,
+so our strategy is to calculate the first three quantities.
+
+The divergence is straightforward because its constant:
+$ iiint_(cal(T)) nabla dot bf(F) dif V
+  = iiint_(cal(T)) 3 dif V = 3 op("Vol")(cal(T)) = 3 dot 100pi dot 2 = 600 pi $
+(the volume of a cylinder with height $2$ and base of area $100pi$).
+
+For the top lid, we recall that for a flat surface parallel to the $x y$-plane,
+we have $bf(n) dif S = pm angle.l 0,0,1 angle.r dif x dif y$.
+For the top lid, we thus have
+$ iint_(cal(S)_("top")) bf(F) dot bf(n) dif S
+  &= iint_(cal(S)_("top")) angle.l x+e^y+729, e^x+y+729, 9 angle.r dot angle.l 0,0,1 angle.r dif x dif y \
+  &= iint_(cal(S)_("top")) 9 dif x dif y \
+  &= 9 op("Area")(cal(S)_("top")) = 900 pi. $
+For the bottom lid, we instead have
+$ iint_(cal(S)_("bottom")) bf(F) dot bf(n) dif S
+  &= iint_(cal(S)_("bottom")) angle.l x+e^y+343, e^x+y+343, 7 angle.r dot angle.l 0,0,-1 angle.r dif x dif y \
+  &= iint_(cal(S)_("bottom")) (-7) dif x dif y \
+  &= - 7 op("Area")(cal(S)_("bottom")) = - 700 pi. $
+Hence, the quantities in the divergence theorem become
+$ 600pi = 900pi - 700pi + iint_(cal(S)) bf(F) dot bf(n) dif S $
+so $iint_(cal(S)) bf(F) dot bf(n) dif S = #boxed[$ 400 pi $]$.
