@@ -68,7 +68,7 @@ it's just a shift in mindset where you go from
 "take an $x y$-picture and translate into polar coordinates"
 to "take a picture and write it directly in polar coordinates".
 
-== [TEXT] Example: the offset circle
+== [TEXT] Famous example: the offset circle <sec-offset-circle>
 
 There's one particularly famous exercise that's often used when teaching this stuff.
 I'm actually going to split it into two parts.

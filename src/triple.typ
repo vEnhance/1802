@@ -12,7 +12,7 @@ If you understood double integrals, then triple integrals is more of the same:
 
 I'm cheekily calling this section a "recap" to emphasize that there's nothing new to learn here.
 Everything in the below list corresponds to a double integral thing you learned
-except with two variables rather than three.
+except with three variables rather than two.
 
 One notational change: for 3D solids,
 I'll prefer to use the letter $cal(T)$ instead of $cal(R)$ for a 3D region moving forward.
@@ -314,5 +314,11 @@ Because the $(x^2+y^2+z^2)^(3/2)$ is so awkward to work with,
 you will commonly do a certain change-of-variables called _spherical coordinates_.
 We'll explain this in the next chapter, @ch-sph.
 
-
 == [EXER] Exercises
+
+#exer[
+  A ball of radius $R$ is given.
+  A cylindrical hole of radius $a$ (where $0 < a < R$)
+  is drilled through it to get a bead.
+  Compute the volume of the bead in terms of $a$ and $R$.
+]

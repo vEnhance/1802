@@ -264,9 +264,53 @@ This is actually a bit easier to see than the last case.
 
 == [TEXT] Examples of using spherical coordinates
 
-#todo[write this]
+Here are two cookie-cutter uses where we have a sphere centered at the origin
+and we just integrate over the entire sphere
+(so taking $0 <= rho <= R$, $0 <= phi <= pi$ and $0 <= theta <= 2 pi$).
 
-== [TEXT] Another example: offset sphere
+#sample[
+  Consider a solid ball of radius $R$. Compute its volume.
+]
+#soln[
+  Placing the ball $cal(T)$ with its center at the origin:
+  $ op("Vol")(cal(T)) &= iiint_(cal(T)) 1 dif V \
+  &= iiint_(cal(T)) rho^2 sin phi dif rho dif phi dif theta  \
+  &= int_(rho=0)^R int_(phi=0)^(pi) int_(theta=0)^(2 pi) rho^2 sin phi dif theta dif phi dif rho \
+  &= (int_(rho=0)^R rho^2 dif rho) (int_(phi=0)^(pi) sin phi dif phi) (int_(theta=0)^(2 pi) theta dif theta) \
+  &= R^3/3 dot 2 dot (2 pi) = #boxed[$ 4/3 pi R^3 $]. #qedhere $
+]
+
+#sample[
+  Consider a solid ball of radius $1$.
+  Across all points $P$ inside the ball,
+  compute the average value of the distance from $P$ to the center.
+]
+Here, the "average" value of a function $f$ over a solid region $cal(T)$
+is defined as $1/(op("Vol")(cal(T))) iiint_(cal(T)) f dif V$.
+
+#soln[
+  The sphere has volume $4/3 pi$ as we just saw.
+  The only change to what we did before is that rather than integrating $1 dif V$,
+  we replace $1$ with the distance:
+  $ iiint_(cal(T)) ("distance to" (0,0,0)) dif V
+    &= iiint_(cal(T)) rho dif V \
+    &= iiint_(cal(T)) rho dot (rho^2 sin phi dif rho dif phi dif theta)  \
+    &= int_(rho=0)^1 int_(phi=0)^(pi) int_(theta=0)^(2 pi) rho^3 sin phi dif theta dif phi dif rho \
+    &= (int_(rho=0)^1 rho^3 dif rho) (int_(phi=0)^(pi) sin phi dif phi) (int_(theta=0)^(2 pi) theta dif theta) \
+    &= 1/4 dot 2 dot (2 pi) = pi. $
+  So the average value is
+  $ (iiint_(cal(T)) ("distance to" (0,0,0)) dif V) / (op("Vol")(cal(T)))
+  = (pi) / (4/3 pi) = #boxed[$ 3/4 $]. #qedhere $
+]
+
+== [TEXT] Famous example: offset sphere
+
+Remember the famous example in @sec-offset-circle where
+we showed that in polar coordinates, we could draw a circle passing through the origin;
+we called it an "offset circle".
+There's a 3D analog of this with an offset sphere
+where you have a sphere that's sitting on the $x y$-plane.
+It's actually pretty much exactly the same.
 
 #todo[write this]
 
@@ -288,3 +332,9 @@ $ (z delta(x,y,z))/((x^2+y^2+z^2)^(3/2)) dif x dif y dif z
 #todo[do some applications of this]
 
 == [EXER] Exercises
+
+#sample[
+  Consider a solid ball of radius $1$ and a line $ell$ through its center.
+  Across all points $P$ inside the ball,
+  compute the average value of the distance from $P$ to $ell$.
+]

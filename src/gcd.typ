@@ -476,5 +476,3 @@ The aquatic interpretation is the same too, just in 2D bodies of water.
 ]
 
 == [EXER] Exercises
-
-#todo[...]
