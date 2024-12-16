@@ -17,7 +17,7 @@ we'll immediately try to find ways to shortcut it.
 For 18.02, the methods available to you will be
 
 - Bare-hands parametrization (covered here)
-  - Even here, magic formulas can save you a lot of work --- see @table-magic-cross-prod-n-dS.
+  - Even here, magic formulas can save you a lot of work --- see @table-surfcross-2.
 - Shortcut: Transforming to a surface area integral (covered in @sec-flux-to-surf)
 - Shortcut: The divergence theorem, by converting to a 3D volume integral (covered in the next chapter @ch-divthm)
 - Shortcut: Crummy Stokes' theorem, if the vector field happens to be a curl (covered in @ch-badstokes)
@@ -98,7 +98,7 @@ I should probably give an example so this isn't so abstract.
     $ bf(r)(phi, theta) = (sin phi cos theta, sin phi sin theta, cos phi) $
     where $0 <= phi <= pi$ and $0 <= theta <= 2 pi$.
     If we grinded out the cross product, you would find that
-    (see @sec-magic-cross-prod to see this written out)
+    (see @ch-surfcross to see this written out)
     $ (partial bf(r)) / (partial phi) times (partial bf(r)) / (partial theta)
       = sin phi dot (sin phi cos theta, sin phi sin theta, cos phi)
       = sin phi dot bf(r)(phi, theta). $
@@ -155,7 +155,7 @@ are now replaced by normal vectors to the surface.
 
 _TL;DR_: cross products are too annoying, so we pre-compute them all.
 
-In @sec-magic-cross-prod I gave you @table-magic-cross-prod-scalint which let you bypass
+In @ch-surfcross I gave you @table-surfcross-1 which let you bypass
 the cross product step when calculating surface area, and it still works here.
 But I'm actually going to rewrite the table to connect it to the shorthand $bf(n) dif S$.
 In fact, people often split the shorthand $bf(n) dif S$ into two parts:
@@ -177,9 +177,9 @@ Personally, I don't see the point of decomposing the information like this,
 since you need the entire cross product when you do calculation anyway.
 But a lot of people do it.
 So by popular request,
-here's a version of @table-magic-cross-prod-scalint that separates the components.
+here's a version of @table-surfcross-1 that separates the components.
 I think this separation only really helps with the fourth and fifth rows,
-because back in @sec-magic-cross-prod we described ways to remember $dif S$ geometrically
+because back in @ch-surfcross we described ways to remember $dif S$ geometrically
 for the cylinder and the sphere.
 (For the cylinder, $dif S approx (dif V) / (dif r)$;
 for the sphere, $dif S approx (dif V) / (dif rho)$.)
@@ -223,13 +223,13 @@ For the first and second rows, you should just remember the fifth column.
       [$R^2 sin phi dif phi dif theta$ \ (if $0 <= phi <= pi$)],
       [$R sin phi dot bf(r)(phi, theta) \ dif phi dif theta$],
   ),
-  caption: [An alternate version of @table-magic-cross-prod-scalint
+  caption: [An alternate version of @table-surfcross-1
     written in $bf(n)$ and $dif S$ notation.
     I think it's less elegant and you should just use the original
-    @table-magic-cross-prod-scalint, personally,
+    @table-surfcross-1, personally,
     but the tables are the same, so it doesn't matter which one you use.],
   kind: table
-) <table-magic-cross-prod-n-dS>
+) <table-surfcross-2>
 
 Again, when actually doing flux calculation with bare hands, *you only need the fifth column*.
 And if you ever _do_ need the third and fourth column for some other reason,
@@ -250,10 +250,10 @@ We go back to recipe format now.
     for a parametrization $bf(r)$ using the following checklist.
     - If you are using $(x,y)$-coordinates to parametrize
       (meaning $cal(S)$ is $z=f(x,y)$ or a level surface),
-      use the magic formulas in rows 1 or 2 of @table-magic-cross-prod-n-dS.
-    - For a flat surface, it's easy (row 3 of @table-magic-cross-prod-n-dS).
+      use the magic formulas in rows 1 or 2 of @table-surfcross-2.
+    - For a flat surface, it's easy (row 3 of @table-surfcross-2).
     - If $cal(S)$ is specifically given by cylindrical/spherical coordinates with fixed radius,
-      use rows 4 or 5 of @table-magic-cross-prod-n-dS.
+      use rows 4 or 5 of @table-surfcross-2.
     - Otherwise, evaluate the cross product manually:
       - Pick a parametrization $bf(r)(u,v) : cal(R) -> RR^3$ of the surface $cal(S)$.
         Sort of like in @sec-flex-param, you have some freedom in how you set the parametrization.
@@ -270,7 +270,7 @@ We go back to recipe format now.
     (such as horizontal/vertical slicing, polar coordinates, change of variables, etc.).
 ]
 
-Let's give one example corresponding to each row of @table-magic-cross-prod-n-dS.
+Let's give one example corresponding to each row of @table-surfcross-2.
 
 #sample[
   Consider the surface $cal(S)$ defined by $z = x^3 + y^3$ for
@@ -283,10 +283,10 @@ Let's give one example corresponding to each row of @table-magic-cross-prod-n-dS
   Our parametrization of the surface $cal(S)$ is by definition
   $ bf(r)(x,y) = (x, y, x^3+y^3) $
   for $0 <= x <= 1$ and $0 <= y <= 1$.
-  Accordingly, we use the first row of @table-magic-cross-prod-n-dS with $f(x,y) = x^3+y^3$.
+  Accordingly, we use the first row of @table-surfcross-2 with $f(x,y) = x^3+y^3$.
   Compute the partial derivatives
   $ (partial f) / (partial x) = 3 x^2, quad (partial f) / (partial y) = 3 y^2. $
-  Then by using the first row of @table-magic-cross-prod-n-dS, if we
+  Then by using the first row of @table-surfcross-2, if we
   we get that the cross product at each point is given by
   $ (partial bf(r)) / (partial x) times (partial bf(r)) / (partial y)
     = vec(- 3 x^2 , - 3 y^2 , 1). $
@@ -328,7 +328,7 @@ Let's give one example corresponding to each row of @table-magic-cross-prod-n-dS
   Our parametrization of $cal(S)$ is going to be
   $ bf(r)(x,y) = angle.l x^2, y^2, sqrt(25-(x^2+y^2)) angle.r $
   across $x^2 + y^2 <= 25$.
-  If we wanted to use the first row of the table @table-magic-cross-prod-n-dS,
+  If we wanted to use the first row of the table @table-surfcross-2,
   we would use $f(x,y) = sqrt(25 - (x^2+y^2))$.
   However, square roots are annoying and we'll use the second row instead
   by viewing this hemisphere as a chunk of the level surface
@@ -374,7 +374,7 @@ Let's give one example corresponding to each row of @table-magic-cross-prod-n-dS
   $ bf(r)(y,z) = (3, y, z) $
   across $y^2 + z^2 <= 25$.
 
-  This cross product is the third (easiest) row of @table-magic-cross-prod-n-dS; you just get
+  This cross product is the third (easiest) row of @table-surfcross-2; you just get
   $ (partial bf(r)) / (partial y) times (partial bf(r)) / (partial z) = vec(1, 0, 0). $
 
   Before going on, we again have to check whether the normal vector points the correct way,
@@ -406,7 +406,7 @@ Let's give one example corresponding to each row of @table-magic-cross-prod-n-dS
   It's natural to parametrize this with cylindrical coordinates as
   $ bf(r)(theta, z) = angle.l 7 cos theta, 7 sin theta, z angle.r $
   for $0 <= theta <= 2pi$ and $0 <= z <= 10$.
-  As this is a cylinder, we use the fourth row of @table-magic-cross-prod-n-dS to get
+  As this is a cylinder, we use the fourth row of @table-surfcross-2 to get
   $ (partial bf(r)) / (partial theta) times (partial bf(r)) / (partial z)
     = vec(7 cos theta, 7 sin theta, 0). $
 
@@ -451,7 +451,7 @@ but this time we use spherical coordinates, so you can compare the methods.
   We parametrize with spherical coordinates by writing
   $ bf(r)(phi, theta) = (5 sin phi cos theta, 5 sin phi sin theta, 5 cos phi) $
   for $0 <= phi <= pi/2$ and $0 <= theta <= 2 pi$.
-  In that case, the cross product according to @table-magic-cross-prod-n-dS is
+  In that case, the cross product according to @table-surfcross-2 is
   $ ((partial bf(r))/(partial phi)) times ((partial bf(r))/(partial theta))
     = 5 sin phi dot bf(r)(phi, theta). $
   This points away from the sphere since $sin phi >= 0$, so we flip the order:

@@ -96,6 +96,8 @@ For comparison, Part Hotel corresponds to §13.6-13.9 and §17.1-§17.6 of #poon
 #pagebreak()
 #include "src/scalint.typ"
 #pagebreak()
+#include "src/surfcross.typ"
+#pagebreak()
 
 #part[Part India: Line integrals of vector fields over a curve]
 For comparison, Part India corresponds to §14, §15, §20, §21 of #poonen.

@@ -20,7 +20,7 @@
 
 - Like the real exam, I suggest not referring to any notes/calculators/etc.
 
-- Solutions are posted in Chapter 53 of my LAMV book at #url("https://web.evanchen.cc/1802.html").
+- Solutions are posted in Chapter 54 of my LAMV book at #url("https://web.evanchen.cc/1802.html").
 ]
 
 #pagebreak()
@@ -73,7 +73,7 @@
   (Recommended approach: add two "lids" to $cal(S)$, calculate flux through the lids by hand,
   then use the divergence theorem.)
 
-Solutions are posted in Chapter 53 of #url("https://web.evanchen.cc/textbooks/lamv.pdf").
+Solutions are posted in Chapter 54 of #url("https://web.evanchen.cc/textbooks/lamv.pdf").
 ]
 
 
