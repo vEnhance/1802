@@ -285,7 +285,7 @@ Strange but true.
 First I need to tell you what analysis is.
 When students in USA ask me what analysis is,
 I sometimes say "calculus but you actually prove things".
-But that's actually a bit backwards; it turns out that in much parts of the world,
+But that's actually a bit backwards; it turns out that in many parts of the world,
 there is no topic called "calculus".#footnote[See #url("https://web.evanchen.cc/faq-school.html#S-10").]
 It would be more accurate to say calculus is analysis with proofs, theorems,
 and coherent theorem statements deleted,
@@ -302,7 +302,7 @@ If you ever take either class, I think the thing to know about them is:
 #quote(attribution: [Charles Pugh, in _Real Mathematical Analysis_])[
   Complex analysis is the good twin and real analysis is the evil one:
   beautiful formulas and elegant theorems seem to blossom spontaneously in the complex domain,
-  while toil and pathology rule the reals
+  while toil and pathology rule the reals.
 ]
 
 #pagebreak()
