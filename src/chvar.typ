@@ -256,7 +256,11 @@ Let's see an example of how to carry out this integration.
     bf(T)(r, theta) &:= (r cos theta, r sin theta). $
   You might recognize this as polar coordinates.
   This gives us a way to plot the unit disk as a rectangular map; see the figure.
-  #todo[figure]
+  #figure(
+    image("figures/chvar-polar.svg", width: auto),
+    caption: [The map $bf(T) : [0,1] times [0,2pi] -> RR^2$ whose image is the unit disk.],
+  ) <fig-chvar-polar>
+
   (Careful students might notice that the points on the line segment from $(0,0)$ to $(1,0)$
   are repeated more than once under the transition map;
   again, in 18.02 we allow this repetition on the boundary.)
@@ -283,6 +287,39 @@ Let's see an example of how to carry out this integration.
     &= 2 pi [r^2/2]_(r=0)^(r=1) = #boxed[$ pi $]. #qedhere
   $
 ]
+
+#tip(title: [Tip: remembering forwards vs backwards])[
+  If you have trouble remembering which way is "forwards"
+  (meaning you use $|det J|$) versus which way is "backwards"
+  (meaning you use $1/(|det J|)$, it might help to
+  look at @table-chvar-side-by-side to see these side by side.
+  Just remember: the _polar_ one is forwards, so we get $dif x dif y = r dif r dif theta$.
+]
+#figure(
+  table(
+    columns: 3,
+    align: (left, center, center),
+    table.header([Example], [Forwards], [Backwards]),
+    [Example setup],
+      [$ x = r cos theta \ y = r sin theta $],
+      [$ u = y slash x \ v = x y $],
+    [Example Jacobian matrix],
+      [$ mat(cos theta, sin theta; - r sin theta, r cos theta) $],
+      [$ mat(-y slash x^2, 1 slash x; y, x) $],
+    [Example Jacobian determinant],
+      [$ r $],
+      [$ -2 y slash x = -2u $],
+    [Example change of variables],
+      [$ dif x dif y = r dif r dif theta $],
+      [$ dif u dif v = 2u dif x dif y \ dif x dif y = 1/(2u) dif u dif v $],
+  ),
+  caption: [
+    Side-by-side comparison of forwards and backwards changes of variables
+    for the two examples we just did.
+  ],
+  kind: table
+) <table-chvar-side-by-side>
+
 
 == [TEXT] Example: the area of an ellipse <sec-ex-ellipse>
 

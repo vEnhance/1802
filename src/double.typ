@@ -400,11 +400,31 @@ If you choose $f = 1$ you get area.
     = (2+4-8/3) - (1/2-2+1/3) = #boxed[$ 9/2 $]. #qedhere $
 ]
 
-#digression(title: [Digression on "area under the curve" from 18.01])[
-  Here's an example that can convince you the new definition of area
-  matches the definition of "area under the curve" that you learned in 18.01.
-  #todo[write this]
+
+#sample[
+  Compute the area of the region $cal(R)$ where $0 <= x <= 10$ and $0 <= y <= x^2$.
 ]
+#soln[
+  Write
+  $ int_(x=0)^(10) int_(y=0)^(x^2) 1 dif y dif x
+  = int_(x=0)^(10) x^2 dif x = [x^3/3]_(x=0)^(10) = #boxed[$ 1000/3 $]. #qedhere $
+
+]
+Actually this is just a rephrasing of the "area under the curve" you learned in 18.01,
+when you would write
+$int_(x=0)^(10) x^2 dif x = [x^3/3]_(x=0)^(10) = 1000/3$
+and were told "this is the area under the curve $y=x^2$", as in @fig-double-under-curve-area.
+But the 18.02 definition is more versatile, because it lets us
+give a definition of area for _any_ integrable region in the $x y$-plane,
+not just those under a curve of the form $y = f(x)$.
+
+#figure(
+  image("figures/double-under-curve-area.svg", width: auto),
+  caption: [
+    The area $int_(x=0)^(10) int_(y=0)^(x^2) 1 dif y dif x$ in 18.02 language
+    matches what you expect from the 18.01 integral $int_(x=0)^(10) x^2 dif x$.
+  ],
+) <fig-double-under-curve-area>
 
 === Mass and center of mass
 
@@ -444,14 +464,58 @@ Let's repeat this in recipe form.
   - The center of mass is also a _point_ inside $cal(R)$. (Draw this as a dot, not an arrow.)
 ]
 
-#todo[Write some example]
+#sample[
+  Compute the center of mass of the square with vertices $(5,5)$, $(5,9)$, $(9,9)$ and $(9,5)$,
+  assuming a constant density $rho = 1$.
+]
+#soln[
+  Of course, by symmetry for the first part we expect the answer should be $#boxed[$ (7,7) $]$.
+  Let's see this in full.
+  The mass of $cal(R)$ is given by
+  $ op("mass")(cal(R)) = iint_(cal(R)) 1 dif x dif y = int_(x=5)^9 int_(y=5)^9 1 dif y dif x
+    = (9 - 5) dot (9 - 5) = 16 . $
+  The $x$-coordinate of the center of mass is
+  $ dash(x) &= 1 / (op("mass")(cal(R))) iint_(cal(R)) x dot 1 dif x dif y
+    = 1 / 16 int_(x=5)^9 int_(y=5)^9 x dif y dif x \
+    &= 1 / 16 int_(y=5)^9 [x dot (9 - 5)] dif x = 1 / 16 dot 4 int_(x=5)^9 x dif x = 1 / 4 [x^2 / 2]_(x=5)^9
+    = 1 / 4 (81 / 2 - 25 / 2) = 7. $
+  The calculation for $dash(y)$ is exactly the same, and we get $(7,7)$ as we hoped.
+]
 
 #remark[
   Unsurprisingly if $rho = 1$ is constant (imagine 1 gram per square meter),
   then the mass of the region $cal(R)$ is just $iint_(cal(R)) dif x dif y$, i.e. the area.
-  (So a region whose area is $17$ square meters and where the density is
-  1 gram per square meter in the whole substance should be $17$ grams.)
+  (So a region whose area is $16$ square meters and where the density is
+  1 gram per square meter in the whole substance should be $16$ grams.)
 ]
+
+#sample[
+  Compute the center of mass of the square with vertices $(5,5)$, $(5,9)$, $(9,9)$ and $(9,5)$,
+  assuming a density function of $rho(x,y) = x+y$.
+]
+#soln[
+  First compute the mass:
+  $ op("mass")(cal(R)) &= iint_(cal(R)) (x + y) dif x dif y = int_(x=5)^9 int_(y=5)^9 (x + y) dif y dif x \
+   &= int_(x=5)^9 [x y + y^2 / 2]_(y=5)^9 dif x
+   = int_(x=5)^9 (x (9 - 5) + 81 / 2 - 25 / 2) dif x
+   = int_(x=5)^9 (4 x + 28) dif x \
+   &= 4 [x^2 / 2]_(x=5)^9 + 28 [x]_(x=5)^9 = 2 (81 - 25) + 28 dot 4 = 224. $
+  Then the $x$-coordinate of the center of mass is
+  $ dash(x) &= 1 / (op("mass")(cal(R))) iint_(cal(R)) x (x + y) dif x dif y
+    = 1 / 224 int_(x=5)^9 int_(y=5)^9 (x^2 + x y) dif y dif x \
+    &= 1 / 224 int_(x=5)^9 [x^2 y + (x y^2) / (2)]_(y=5)^9 dif x
+    = 1 / 224 int_(x=5)^9 (x^2 (9 - 5) + frac(x (81 - 25), 2)) dif x \
+    &= 1 / 224 int_(x=5)^9 (4 x^2 + 28 x) dif x
+    = 1 / 224 [(4 x^3) / (3) + 14 x^2]_(x=5)^9 \
+    &= 1 / 224 (frac(4 (729) - 4 (125), 3) + 14 (81 - 25)) = 149 / 21. $
+  And $dash(y) = 149/21$ in exactly the same way.
+  Hence the answer $#boxed[$ (149/21, 149/21) approx (7.095, 7.095) $]$.
+
+  (This passes a sanity check: our new square is a bit denser near $(9,9)$ than $(5,5)$.
+  So we expect the center of mass to move in that direction slightly.
+  We still have symmetry across the line $y=x$.)
+]
+
 
 
 == [SIDENOTE] What's the analogy to "area under the curve" from 18.01?
@@ -506,6 +570,15 @@ Put in recipe form:
   First convert this back into region format:
   $ cal(R) = cases(0 <= x <= 2, x/2 <= y <= 1). $
   We see that $y$ goes in the range $0 <= y <= 1$.
+  The region being integrated is drawn in @fig-double-rect-swap.
+
+  #figure(
+    image("figures/double-rect-swap.svg", width: auto),
+    caption: [The region $0 <= x <= 2$ and $x/2 <= y <= 1$.
+    Note that the function you are integrating, in this case $e^(y^2)$,
+    is irrelevant to the region being integrated over!],
+  ) <fig-double-rect-swap>
+
   Solving for $x$ in terms of $y$ gives three conditions:
   in addition to $0 <= x <= 2$ we need $x <= 2y$.
   Since $y <= 1$, we can ignore the condition $x <= 2$,
@@ -514,16 +587,14 @@ Put in recipe form:
   Turning this _back_ into a double integral gives
   $ int_(y=0)^1 int_(x=0)^(2y) e^(y^2) dif y dif x. $
 
-  #todo[figure]
-
   The inner integral is with respect to $x$,
   but the integrand $e^(y^2)$ is independent of $x$.
   Therefore, the inner integral becomes:
-  $ int_(x = 0)^(2 y) e^(y^2) dif x = 2 y e^(y^2) . $
+  $ int_(x = 0)^(2 y) e^(y^2) dif x = 2 y dot e^(y^2) . $
   Thus, it remains to calculate
-  $ int_(y=0)^1 2y e^(y^2) dif y dif x. $
+  $ int_(y=0)^1 (2 y dot e^(y^2)) dif y dif x. $
 
-  And now things are different: $2 y e^(y^2)$ _does_ have a valid anti-derivative.
+  And now things are different: $2 y dot e^(y^2)$ _does_ have a valid anti-derivative.
   If you use the 18.01 method or even just are good at guessing,
   you can find the indefinite 18.01 integral
   $ int 2 y e^(y^2) dif y = e^(y^2) + C. $
@@ -541,6 +612,13 @@ Put in recipe form:
   The region being integrated is
   $ cal(R) = cases(0 <= y <= k^2, sqrt(y) <= x <= k). $
   The values of $x$ range all the way from $0$ to $k$.
+  We draw the region in @fig-double-rect-swap2.
+
+  #figure(
+    image("figures/double-rect-swap2.svg", width: auto),
+    caption: [The region $0 <= y <= k^2$ and $sqrt(y) <= x <= k$.],
+  ) <fig-double-rect-swap2>
+
   Solving for $y$, we see that we have three constraints,
   $0 <= y$, $y <= x^2$ and $y <= k^2$.
   But since $x <= k$, the condition $y <= k^2$ is redundant.
@@ -586,6 +664,7 @@ Put in recipe form:
   Assume $cal(R)$ has constant density.
   Calculate its center of mass.
 ]
+
 #exer[
   Evaluate the double integral:
   $ int_(y=0)^1 int_(x=y)^(root(5, y)) (x y^2) / (1-x^(12)) dif x dif y. $

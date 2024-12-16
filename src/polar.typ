@@ -68,15 +68,6 @@ it's just a shift in mindset where you go from
 "take an $x y$-picture and translate into polar coordinates"
 to "take a picture and write it directly in polar coordinates".
 
-#tip[
-  Going back to change of variables:
-  if you have trouble remembering which way is "forwards"
-  (meaning you use $|det J|$) versus which way is "backwards"
-  (meaning you use $1/(|det J|)$, it might help to know
-  that the polar transformation is forwards.
-]
-#todo[side by side compare these]
-
 == [TEXT] Example: the offset circle
 
 There's one particularly famous exercise that's often used when teaching this stuff.
