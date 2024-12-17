@@ -48,8 +48,8 @@
 
 / 4.:
   Let $f(x,y) = cos(x) + sin(y)$.
-  Sketch a level curve of $f$ passing through at least one saddle point of $f$.
-  Do the same for a local maximum.
+  Give an example of a saddle point of $f$, and an example of a local maximum of $f$.
+  Pick either of these two points and sketch the level curve of $f$ passing through it.
 
 / 5.:
   Compute the maximum and minimum value of $x^2+2y^2+4x$ over the region $x^2+y^2 <= 9$.
@@ -178,6 +178,8 @@ $ nabla f = angle.l -sin(x), cos(y) angle.r. $
 So a critical point occurs at any point for which $sin(x) = cos(y) = 0$.
 (These are the points where $cos(x) = pm 1$ and $sin(y) = pm 1$.)
 
+=== Saddle point
+
 To identify a saddle point, we compute the double derivatives:
 $ f_(x x) &= -cos(x) \
   f_(x y) &= 0 \
@@ -186,8 +188,14 @@ It's enough to pick any $(x,y)$ for which $f_(x x)$ and $f_(y y)$ have opposite 
 One example would be $(x,y) = #boxed[$ (0, (3pi)/2) $]$, among many others.
 At this value we get $f(0, (3pi)/2) = 0$.
 
+In fact, the complete list of saddle points is given as follows:
+whenever $m$ and $n$ are integers where $m+n$ is odd, the point
+$ (x,y) = (m pi, (n + 1/2) pi) $
+is a saddle point, and these are all saddle points.
+The previous example was the special case $m = 0$ and $n = 1$.
+
 The level curve of $f$ is the set of points $(x,y)$ with $cos(x) + sin(y) = 0$,
-and in fact every saddle point lies on this level curve.
+so in fact every saddle point lies on this level curve.
 In @fig-practice-level-saddle, we draw the level curve below in blue, and the saddle points in red.
 Since $cos(x) = sin(y)$ whenever $x pm y + pi/2$ is a multiple of $2 pi$,
 the level curves are a mesh of lines running through the plane at diagonals.
@@ -195,17 +203,11 @@ the level curves are a mesh of lines running through the plane at diagonals.
 #figure(
   image("figures/practice-level-saddle.svg", width: auto),
   caption: [The level curve of $f = cos(x) + sin(y) =  0$.
-    Saddle points are marked in red, and these are all the saddle points],
+    Saddle points are marked in red, and these are all the saddle points.],
 ) <fig-practice-level-saddle>
 
 
-#remark[
-  In fact, the complete list of saddle points is given as follows:
-  whenever $m$ and $n$ are integers where $m+n$ is odd, the point
-  $ (x,y) = (m pi, (n + 1/2) pi) $
-  is a saddle point, and these are all saddle points.
-  The previous example was the special case $m = 0$ and $n = 1$.
-]
+=== Local maximum
 
 An example of a local maximum would be $#boxed[$ 0, pi/2 $]$,
 at which $f(0, pi/2) = cos 0 + sin (pi/2) = 2$.
