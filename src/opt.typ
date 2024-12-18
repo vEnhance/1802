@@ -1,6 +1,6 @@
 #import "@local/evan:1.0.0":*
 
-= Optimization problems
+= Optimization problems <ch-opt>
 
 Now that we understand both critical points of $f$ and regions $cal(R)$,
 we turn our attention to the problem of finding global minimums and maximums.

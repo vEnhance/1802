@@ -1,8 +1,66 @@
 #import "@local/evan:1.0.0":*
 
-= Practice questions
+= Practice questions <ch-practice>
 
 Some practice questions from topics through the entire course.
+Solutions are in @ch-sol-kilo.
+
+== Practice half-final (December 18, 2024)
+
+#exer[
+  Give an example of a complex number $z$ whose
+  real and imaginary part are both negative such that $z^3 = - 1000 i$.
+  Write your answer in rectangular form.
+] <exer-mf-1>
+
+#exer[
+  Compute the unique real number $a$ for which the matrix
+  $M = mat(1,1;a,6)$ has an eigenvalue of $2$.
+  For this value of $a$, compute the other eigenvalue of $M$,
+  and a (nonzero) eigenvector for that eigenvalue.
+] <exer-mf-2>
+
+#exer[
+  The four points $(b,0,0)$, $(0,b,0)$, $(0,0,b)$, and $(2,3,6)$ lie on a plane $cal(P)$.
+  Compute $b$, and compute the distance from $(1,2,3)$ to $cal(P)$.
+] <exer-mf-3>
+
+#exer[
+  Let $f(x,y) = cos(x) + sin(y)$.
+  Give an example of a saddle point of $f$, and an example of a local maximum of $f$.
+  Pick either of these two points and sketch the level curve of $f$ passing through it.
+] <exer-mf-4>
+
+#exer[
+  Compute the maximum and minimum value of $x^2+2y^2+4x$ over the region $x^2+y^2 <= 9$.
+] <exer-mf-5>
+
+#exer[
+  Compute $int_(x=0)^1 int_(y=x)^1 int_(z=y)^1 e^(z^3) dif z dif y dif x$.
+  (Recommended approach: change the order of integration.)
+] <exer-mf-6>
+
+#exer[
+  Compute the real number $c$ for which
+  $bf(F)(x,y,z) = angle.l 7 cos(x), thin cos(y) cos(2z), thin c sin(y) sin(2z) angle.r$
+  is conservative.
+  For that $c$, compute the maximum possible value of a line integral
+  $int_(cal(C)) bf(F) dot dif bf(r)$ across all possible choices of some curve $cal(C)$ in $RR^3$.
+] <exer-mf-7>
+
+#exer[
+  Let $bf(F)(x,y,z) = angle.l x + e^y + z^3, thin e^x + y + z^3, thin z angle.r$.
+  Let $cal(S)$ be the surface defined by $x^2+y^2=100$ and $7 <= z <= 9$,
+  with normal vector oriented outwards (thus $cal(S)$ is the curved part of a cylinder).
+  Compute the divergence of $bf(F)$.
+  Then compute the flux of $bf(F)$ through $cal(S)$.
+  (Recommended approach: add two "lids" to $cal(S)$, calculate flux through the lids by hand,
+  then use the divergence theorem.)
+] <exer-mf-8>
+
+
+
+== More practice questions
 
 #exerstar[
   Find all possible values of $a x + b y + c z$

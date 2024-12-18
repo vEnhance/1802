@@ -609,7 +609,7 @@ The answer is that you just get some complex numbers instead.
   $ bf(v)_1 = vec(i, 1) , quad bf(v)_2 = vec(- i, 1). #qedhere $
 ]
 
-== [TEXT] Trace and determinant
+== [TEXT] Trace and determinant <sec-trace-det>
 
 In 18.02 the following definition is briefly mentioned, but we won't do much with it:
 
