@@ -36,7 +36,7 @@ Solutions are in @ch-sol-kilo.
 ] <exer-mf-5>
 
 #exer[
-  Compute $int_(x=0)^1 int_(y=x)^1 int_(z=y)^1 e^(z^3) dif z dif y dif x$.
+  Compute $ int_(x=0)^1 int_(y=x)^1 int_(z=y)^1 e^(z^3) dif z dif y dif x. $
   (Recommended approach: change the order of integration.)
 ] <exer-mf-6>
 
