@@ -42,18 +42,19 @@ Solutions are in @ch-sol-kilo.
 
 #exer[
   Compute the real number $c$ for which
-  $bf(F)(x,y,z) = angle.l 7 cos(x), thin cos(y) cos(2z), thin c sin(y) sin(2z) angle.r$
+  $ bf(F)(x,y,z) = angle.l 7 cos(x), thin cos(y) cos(2z), thin c sin(y) sin(2z) angle.r $
   is conservative.
   For that $c$, compute the maximum possible value of a line integral
   $int_(cal(C)) bf(F) dot dif bf(r)$ across all possible choices of some curve $cal(C)$ in $RR^3$.
 ] <exer-mf-7>
 
 #exer[
-  Let $bf(F)(x,y,z) = angle.l x + e^y + z^3, thin e^x + y + z^3, thin z angle.r$.
+  Let $ bf(F)(x,y,z) = angle.l x + e^y + z^3, thin e^x + y + z^3, thin z angle.r. $
   Let $cal(S)$ be the surface defined by $x^2+y^2=100$ and $7 <= z <= 9$,
   with normal vector oriented outwards (thus $cal(S)$ is the curved part of a cylinder).
   Compute the divergence of $bf(F)$.
   Then compute the flux of $bf(F)$ through $cal(S)$.
+
   (Recommended approach: add two "lids" to $cal(S)$, calculate flux through the lids by hand,
   then use the divergence theorem.)
 ] <exer-mf-8>
