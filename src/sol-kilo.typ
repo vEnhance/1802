@@ -45,7 +45,7 @@ the other one is $#boxed[$ lambda = 5 $]$.
 To get the eigenvector, write $vec(x,y)$ so that we need
 $ M vec(x,y) = 5vec(x,y) ==>
   cases((1-5)x + y = 0, -4+(6-5)y=0) ==> y=4x. $
-So an eigenvector for $5$ is $#boxed[$ vec(4,1) $]$ (or any nonzero multiple of it).
+So an eigenvector for $5$ is $#boxed[$ vec(1,4) $]$ (or any nonzero multiple of it).
 
 === Solution using trace and determinant shortcut
 
