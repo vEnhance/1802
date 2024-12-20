@@ -1,6 +1,6 @@
 #import "@local/evan:1.0.0":*
 
-= Parametric equations
+= Parametric equations <ch-param>
 
 == [TEXT] Multivariate domains vs multivariate codomains
 
@@ -20,6 +20,7 @@ $ bf(r) : RR &-> RR^n \
   bf(r)(t) &= vec("function in " t, dots.v, "function in " t). $
 The choice of letter $t$ for the input variable usually means "time";
 and we use $bf(r)$ for the function name to remind that the output is a vector.
+A cartoon of this is shown in @fig-param-timeline.
 
 #typesig[
   When you see $bf(r)(t)$ or similar notation,
@@ -27,6 +28,14 @@ and we use $bf(r)$ for the function name to remind that the output is a vector.
   The output is in $RR^n$, and depending on context,
   you can think of it as either a point or a vector.
 ]
+
+#figure(
+  image("figures/param-timeline.svg", width: auto),
+  caption: [We think of $bf(r)(t)$ as using a timeline in some variable $t$
+    to trace out a path of some sort in $RR^n$.],
+) <fig-param-timeline>
+
+
 #warning(title: [Warning: $bf(r)(t)$ can be drawn as either a dot or arrow,
   but we still use vector notation anyway in Part Delta])[
   Unfortunately, even in cases where we think of $bf(r)(t)$ as a point like $(3,5)$,

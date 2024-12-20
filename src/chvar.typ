@@ -26,8 +26,7 @@ One quick notational thing if you haven't seen this before:
   the interval $[0,5]$ and $y$ is in the closed interval $[0,3]$.],
 )
 
-
-== [TEXT] Transition maps
+== [TEXT] Transition maps <sec-chvar-transition>
 
 As it turns out $x y$-integration (or $x y z$-integration in 3D) isn't always
 going to be nice, even if you try both horizontal and vertical slicing.

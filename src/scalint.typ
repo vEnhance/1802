@@ -77,26 +77,65 @@ and the general scalar-field line integral is $int_(cal(C)) f dif s$.
 
 == [TEXT] Parametrizing surfaces
 
-The section for surface area is about the same,
-but the thing that makes this more complicated is you need to parametrize an entire _surface_.
-It was pretty easy to think about $bf(r)(t)$ as a path in $RR^n$,
-where $t$ was controlling time.
-It's more obnoxious to talk about a whole surface,
-which is why you see the notation is $bf(r)(u,v)$ --- now we need two variables,
-and thinking about it as time won't cut it anymore.
+We now move on to parametrizing surfaces.
+This will require a bit more to get used to compared to parametrizing curves,
+because now there are two variables instead of one.
 
-Maybe it's best if I give an example of a parametrization.
-#todo[we probably need way more examples of this, since this has been a bottleneck]
 
-#example(title: [Example of a parametrization: a sphere])[
+To draw a contrast, remember that back when we were parametrizing curves
+all the way back in @ch-param, you wrote the notation $bf(r)(t)$
+and usually thought of the parameter $t$ as a "time".
+So you could imagine that a curve in $RR^2$ or $RR^3$ lets you carve out a 1D curve
+$bf(r) : RR -> RR^n$ by considering a _timeline_ as the input variable.
+See @fig-param-timeline again.
+
+In contrast, for 2D surfaces in $RR^3$, we are going to need two variables $bf(r)(u,v)$.
+The time analogy breaks down, so I'm going to use a different analogy: gridlines from a map,
+like longitude and latitude.
+This is actually going to be the same analogy we used in @sec-chvar-transition,
+when we presented transition maps from change of variables.
+The only difference is that in @sec-chvar-transition,
+we used 2D paper to plot out a weird region that also lived in 2D space.
+But when parametrizing a surface, we're going to use 2D paper
+to draw a 2D surface that lives in 3D space.
+
+#todo[Put the really important surface picture in]
+
+In fact, the Earth is another good example because spherical coordinates gives you
+a parametrization that uses a rectangular sheet of paper.
+
+#example(title: [Example of a parametrization: the spherical Earth])[
   Consider the surface of the unit sphere, say $x^2 + y^2 + z^2 = 1$.
   One parametrization $bf(r)$ is given from the spherical coordinate system by
   $ bf(r) (phi, theta) = (sin phi cos theta , phi sin theta , cos phi) $
   across the range
-  $ 0 <= theta < 2 pi quad "and" quad 0 <= phi < pi. $
+  $ 0 <= phi < pi quad "and" quad 0 <= theta < 2 pi . $
   That is, as $theta$ and $phi$ vary across these ranges,
   we get every point on the sphere exactly once.
+  See @fig-scalint-lonlat.
 ]
+
+#figure(
+  [
+    #image("figures/scalint-lonlat1.svg", width: auto)
+    #image("figures/scalint-lonlat2.svg", width: auto)
+  ],
+  caption: [
+    Consider a unit sphere; then the parametrization
+    $bf(r) (phi, theta) = (sin phi cos theta , phi sin theta , cos phi)$
+    corresponds to longitude and latitude.
+    In this cartoon, one should imagine the yellow sheet of paper being a map of the Earth,
+    drawn in green.
+    The blue and red gridlines on the sheet of paper trace out
+    longitude and latitude lines on the Earth.
+    (The piece of paper is probably rotated a bit compared to what you're used to.)
+  ],
+) <fig-scalint-lonlat>
+
+#typesig[
+  To emphasize the types going on here, to parametrize a 2D surface you need to
+]
+
 
 If this feels familiar, it's because we used more or less
 the same analogy for change of variables --- cartography.
