@@ -108,8 +108,7 @@ a parametrization that uses a rectangular sheet of paper.
   Consider the surface of the unit sphere, say $x^2 + y^2 + z^2 = 1$.
   One parametrization $bf(r)$ is given from the spherical coordinate system by
   $ bf(r) (phi, theta) = (sin phi cos theta , phi sin theta , cos phi) $
-  across the range
-  $ 0 <= phi < pi quad "and" quad 0 <= theta < 2 pi . $
+  across the range $0 <= phi < pi$ and $0 <= theta < 2 pi$.
   That is, as $theta$ and $phi$ vary across these ranges,
   we get every point on the sphere exactly once.
   See @fig-scalint-lonlat.
@@ -128,7 +127,8 @@ a parametrization that uses a rectangular sheet of paper.
     drawn in green.
     The blue and red gridlines on the sheet of paper trace out
     longitude and latitude lines on the Earth.
-    (The piece of paper is probably rotated a bit compared to what you're used to.)
+    (The piece of paper is rotated to have $theta$ on the bottom and $phi$ on the left,
+    to make it look a bit more natural.)
   ],
 ) <fig-scalint-lonlat>
 

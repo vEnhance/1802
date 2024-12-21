@@ -1,4 +1,4 @@
-size(9cm);
+size(8cm);
 usepackage("amsmath");
 
 filldraw(box((0,0),(6,3)), paleyellow, black+1.2);
@@ -17,6 +17,6 @@ label("$0$", (0,0), dir(225), grey);
 label("$\pi$", (0,3), dir(180), grey);
 label("$2\pi$", (6,0), dir(-90), grey);
 
-label("$(\varphi, \theta) \in [0,\pi] \times [0,2\pi]$", (3,4));
+label("$(\varphi, \theta) \in [0,\pi] \times [0,2\pi]$", (3,3), dir(90));
 
 draw("$\mathbf{r}$", (3,-1)--(3,-4), darkblue+1.5, EndArrow(6));
