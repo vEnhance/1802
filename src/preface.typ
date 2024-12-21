@@ -45,8 +45,8 @@ But with this goal in mind, here are some parts of the design philosophy of this
 - *It writes things out and has diagrams*.
   A lot of lecture notes were meant to accompany a in-person lecture rather than replace it.
   These notes are meant to stand alone.
-  - Anything that would normally be said out loud is written as text.
-  - Anything that would normally be drawn on the blackboard is actually typeset into the book.
+  - Any sentence that would normally be said out loud is written as text.
+  - Any figure that would normally be drawn on the blackboard is actually typeset into the book.
 - *It has full solutions to its exercises*. I really believe in writing things out.
   I'd rather have a small number of exercises with properly documented solutions
   than an enormous pile of mass-produced questions with no corresponding solutions.
@@ -106,8 +106,7 @@ and calculus as taught in United States high schools is assumed.
 
     You are _not_ expected to have any idea why the heck the rule is defined this way;
     an explanation for where this rule comes from is in @matrix-mult.
-    We will explain what this rule means later.
-    So we'll assume you have memorized this strange rule, but don't know what it means.
+    So we'll assume you have seen this strange rule before, but don't know what it means.
 
   - We'll assume you know the formula for the determinant of a $2 times 2$ and $3 times 3$ matrix; that is
     $ detmat(a,b;c,d) = det mat(a,b;c,d) = a d - b c $
@@ -134,13 +133,13 @@ and calculus as taught in United States high schools is assumed.
   and also in the AP calculus courses in the United States.
 
   One note: *by $log(x)$ we mean the _natural_ log with base $e$*.#footnote[I considered
-    using the notation $ln$ to avoid confusion.
-    However, $ln$ is never used by mathematicians past introductory calculus;
+    using the notation $ln(x)$ to avoid confusion.
+    However, $ln(x)$ is never used by mathematicians past introductory calculus;
     see #url("https://math.stackexchange.com/q/293783/229197").
-    I figured I should just get you used to $log$ being base $e$ now.
+    I figured I should just get you used to $log(x)$ being base $e$ now.
     There's a real chance that if you take an 18.02 exam at MIT,
-    the professor straight-up forgets to remind the students that $log$ is base $e$,
-    because they haven't used $ln$ in a quarter century.
+    the professor straight-up forgets to remind the students that $log(x)$ is base $e$,
+    because they haven't used $ln(x)$ in a quarter century.
   ]
   We will never use a base-2 or base-10 logarithm in these notes.
 
@@ -318,16 +317,19 @@ in return for the short time limit.
   Writing this text gave me an excuse to get a chance to use ChatGPT 4o and ChatGPT o1-preview,
   to see what kind of things it did well (and what I could still do faster by hand).
 
-  - ChatGPT was really good at writing full step-by-step solutions to the routine exercises.
-    All the solutions went through at least a bit of editing from me
+  - ChatGPT was helpful at writing full step-by-step solutions to the routine exercises.
+    All the solutions went through a lot of editing from me
     (in part to make the notation consistent throughout the whole text),
-    but it was a lot faster than having to write every single solution by scratch.
+    to the point where maybe only a third of the output from each solution actually survives editing.
+    Even then, because it's faster to edit or rewrite text#footnote[Vim on top. Fight me.]
+    than write from scratch, it still saved a lot of time.
 
-    I think when humans write solutions they have a tendency to be a bit lazy
+    I think when humans write solutions they err on the size of laziness
     in skipping steps that are really routine or obvious to them, because typing is slow.
-    ChatGPT doesn't, it always writes out all the details. (Sometimes too much detail,
-    in fact, but it's always easier to trim down an overly verbose solution
-    than to flesh out one that's too terse.)
+    ChatGPT doesn't; in fact, it's actually _too_ verbose,
+    and I almost always had to trim down the solution.
+    But it much easier to trim down an overly verbose solution
+    than to flesh out one that's too terse.
 
     It's also nice to not have to worry much about arithmetic errors anymore.
     If I had written the solutions by hand,
@@ -353,7 +355,7 @@ in return for the short time limit.
 - This book was not written in LaTeX!
   It was written in the recently released version of Typst 0.12,
   which is open source at #url("https://github.com/typst/typst").
-  I used NeoVim as an editor (rather than a web app).
+  I used NeoVim as an editor, doing everything locally rather than by web app.
 
   It was really nice being able to write math without having to constantly use the
   backslash key or the curly brace, and the compiler was much faster,
