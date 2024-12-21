@@ -81,7 +81,6 @@ We now move on to parametrizing surfaces.
 This will require a bit more to get used to compared to parametrizing curves,
 because now there are two variables instead of one.
 
-
 To draw a contrast, remember that back when we were parametrizing curves
 all the way back in @ch-param, you wrote the notation $bf(r)(t)$
 and usually thought of the parameter $t$ as a "time".
@@ -96,10 +95,30 @@ This is actually going to be the same analogy we used in @sec-chvar-transition,
 when we presented transition maps from change of variables.
 The only difference is that in @sec-chvar-transition,
 we used 2D paper to plot out a weird region that also lived in 2D space.
-But when parametrizing a surface, we're going to use 2D paper
-to draw a 2D surface that lives in 3D space.
+But when parametrizing a surface, we're going to use 2D paper, represented as region $cal(R)$,
+to draw a 2D surface that lives in 3D space, which we denote by $cal(S)$.
 
-#todo[Put the really important surface picture in]
+#typesig[
+  To emphasize the types going on here, suppose $cal(S)$ is a surface in 3D space.
+  Then to parametrize a 2D surface you need to specify a 2D region $cal(R)$ in $RR^2$
+  and then write down a function $bf(r) : cal(R) -> cal(S)$
+  in two variables $bf(r)(u,v)$ for $(u,v)$ in the region $cal(R)$.
+]
+
+A cartoon of the situation is shown in @fig-scalint-mesh.
+This picture is really important to understand, so take a while to let it sink in.
+
+#figure(
+  image("figures/scalint-mesh.svg", width: auto),
+  caption: [
+    Illustration of how to think of a parametrization conceptually, using cartography.
+    Imagine a piece of paper $cal(R)$ showing the surface $cal(S)$ as it lives in space.
+    (In this cartoon, $cal(S)$ might be described as a mountain range.)
+    A pair $(u,v)$ on the paper could be thought of like longitude and latitude;
+    it should mark some point $bf(r)(u,v)$ on the surface $cal(S)$.
+    Hence we write parametrizations as $bf(r) : cal(R) -> cal(S)$.
+  ],
+) <fig-scalint-mesh>
 
 In fact, the Earth is another good example because spherical coordinates gives you
 a parametrization that uses a rectangular sheet of paper.
@@ -132,11 +151,6 @@ a parametrization that uses a rectangular sheet of paper.
   ],
 ) <fig-scalint-lonlat>
 
-#typesig[
-  To emphasize the types going on here, to parametrize a 2D surface you need to
-]
-
-
 If this feels familiar, it's because we used more or less
 the same analogy for change of variables --- cartography.
 The Earth is round, but you can still draw a rectangular world map.
@@ -147,6 +161,20 @@ in the 2D case and $bf(T) : RR^3 -> RR^3$ in the 3D case.
 But for parametrizing a surface in $RR^3$, we have $bf(r) : RR^2 -> RR^3$ instead.
 (That is, in change-of-variables we make a $n$-dimensional map of an $n$-dimensional region,
 but here we make a $2$-dimensional map of a surface living in $RR^3$.)
+
+#example(title: [Example: A hemisphere whose map is printed on circular paper])[
+  In both @fig-scalint-mesh and @fig-scalint-lonlat we used rectangular paper.
+  But we could easily use non-rectangular paper as well.
+  For example, suppose $cal(R)$ is the region $x^2+y^2 <= 1$ and we consider the surface
+  $ bf(r)(u,v) = ( x, y, sqrt(1-(x^2+y^2)) ). $
+  Then this would give us a parametrization of a _hemisphere_:
+  the part of the sphere $x^2+y^2+z^2=1$ with $z >= 0$.
+  Pictorially, this corresponds to drawing a circular map of the Northern hemisphere
+  by taking a birds-eye view from the North pole.
+]
+
+#todo[Print a northern hemisphere map]
+
 
 == [TEXT] Surface area
 
