@@ -17,6 +17,6 @@ label("$0$", (0,0), dir(225), grey);
 label("$\pi$", (0,3), dir(180), grey);
 label("$2\pi$", (6,0), dir(-90), grey);
 
-label("$(\varphi, \theta) \in [0,\pi] \times [0,2\pi]$", (10,4));
+label("$(\varphi, \theta) \in [0,\pi] \times [0,2\pi]$", (3,4));
 
-draw("$\mathbf{r}$", (10,3)--(10,-2), darkblue+1.5, EndArrow(6));
+draw("$\mathbf{r}$", (3,-1)--(3,-4), darkblue+1.5, EndArrow(6));
