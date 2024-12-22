@@ -1,7 +1,8 @@
 size(17cm);
 usepackage("amssymb");
 
-// Surface, in green
+import patterns;
+add("hatch",crosshatch(1.5pt, deepgreen));
 
 pair D = (2.4,3.5);
 pair A = (0,0);
@@ -48,7 +49,7 @@ fill(
   --shift(Xs[2])*subpath(west_border, 3, 2)
   --shift(Ys[1])*subpath(south_border, 3, 2)
   --shift(Xs[1])*subpath(west_border, 2, 3)
-  --cycle, deepgreen);
+  --cycle, pattern("hatch"));
 
 for (int i=0; i<Xs.length; ++i) { draw(shift(Xs[i])*west_border, red); }
 for (int i=0; i<Ys.length; ++i) { draw(shift(Ys[i])*south_border, blue); }

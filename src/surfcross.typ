@@ -24,11 +24,11 @@ In these notes we will pre-compute five different cross products:
 
 (As it turns out, in 18.02 it's likely these are the _only_ five situations you will see.)
 
-The table showing the results in @table-surfcross-1.
+The table showing the results is @table-surfcross-1.
 Note that for surface area, you only need the _absolute value_ of the cross product (fourth column).
 But I'm going to include the entire vector too,
 because we'll later need to reuse this table in @ch-flux
-(where one writes it as @table-surfcross-2).
+(where one reformats it as @table-surfcross-2).
 At that point, we will actually need to know the direction the vector points in too,
 not just the absolute value.
 
@@ -67,12 +67,13 @@ not just the absolute value.
   kind: table
 ) <table-surfcross-1>
 
-Something that can be really helpful right now for remembering the third column
-of @table-surfcross-1 is the following geometric idea:
+Recall the following geometric idea from the earlier @fig-scalint-mesh,
+when we described where the cross product was coming from:
 #idea[
   The vector $frac(partial bf(r), partial u) times frac(partial bf(r), partial v)$
   is normal to the tangent plane to the surface at each point.
 ]
+This can help a lot with remembering the third column of @table-surfcross-1.
 For example:
 
 - For the level surface $g(x,y,z) = c$,
@@ -83,13 +84,14 @@ For example:
 - For the sphere, the normal vector should point straight away from the center of the sphere,
   and indeed $sin(phi) dot bf(r)(phi, theta)$ is a multiple of the direction.
 
-Again, for surface area you actually only need the fourth column, but
-(1) I think the third column is actually easier to remember than the fourth column,
-and (2) by @ch-flux you will need the third column anyway.
+Again, for surface area you actually only need the fourth column. But
+- I think the third column is actually easier to remember than the fourth column,
+  because of the geometric interpretation above;
+- by @ch-flux you will need the third column anyway.
 
 The first and second rows of @table-surfcross-1 above are quite versatile,
-whereas the third and fourth rows are really for specific specialized situations.
-So in these notes I'll call these "magic" formulas because they save us so much work.
+so in these notes I'll call them "magic" formulas because they save us so much work.
+In contrast, the other rows are for more specialized situations.
 
 == [TEXT] @table-surfcross-1 row 1: For a surface of the form $z = f(x,y)$
 
@@ -180,7 +182,7 @@ $ nabla g = lr(angle.l -(partial g) / (partial z) dot (partial z) / (partial x),
 #digression(title: [Digression on the chain rule])[
   You might be spooked by the minus sign here,
   as I was, since if you just look at the fractions the expression seems wrong.
-  This is why I don't like people who try to remember the chain rule as just "cancel the fractions",
+  This is why I don't like to remember the chain rule as just "cancel the fractions",
   because in some contexts you'll get equations like this that don't seem correct.
 
   The context to remember here is that $z = z(x,y)$ is itself a function of $x$ and $y$
@@ -204,8 +206,8 @@ Because of this, we have managed to derive the following miraculous identity.
 #memo(title: [Memorize: Magic cross product formula for a level surface])[
   Let $g$ be differentiable and consider the level surface $g(x,y,z) = c$.
   Let $cal(S)$ be a part of this level surface described implicitly by some function $z=f(x,y)$,
-  and suppose also that $partial g / partial z != 0$ over $cal(R)$.
-  Then for the obvious parametrization $bf(r)(x,y) = (x,y,z)$ we have
+  and suppose also that $(partial g) / (partial z) != 0$ over $cal(R)$.
+  Then for the obvious parametrization $bf(r)(x,y) = (x,y,f(x,y))$ we have
     $ frac(partial bf(r), partial x) times frac(partial bf(r), partial y)
     = (nabla g) / (partial g slash partial z). $
 ]
@@ -219,7 +221,7 @@ Let's see it in action by redoing our example with a cone.
   The cone is the part of the level surface of $g(x,y,z) = x^2+y^2-z^2$ with $z >= 0$.
   (We know in fact $f(x,y) = sqrt(x^2+y^2)$, but we won't use this.)
   Now we can jump straight to
-  $ (nabla g) / (partial g / partial z) = lr(angle.l 2x, 2y, -2z angle.r) / (-2z)
+  $ (nabla g) / ((partial g) / (partial z)) = lr(angle.l 2x, 2y, -2z angle.r) / (-2z)
     = lr(angle.l -x/z, -y/z, 1 angle.r). $
   The magnitude of this vector is
   $ sqrt((-x/z)^2 + (-y/z)^2 + 1) = sqrt((x^2+y^2)/z^2 + 1) = sqrt(2) $
@@ -322,7 +324,8 @@ Nonetheless, in the event you need spherical coordinates, here is the result.
 We actually computed this already while working out the sphere's surface area by brute force:
 if we take the parametrization
 $ bf(r) (phi, theta) = (R sin phi cos theta , R sin phi sin theta , R cos phi) , $
-then if we repeat the brutal calculation from last section with an extra $R$ tacked on, we get
+then if we repeat the brutal calculation from @sec-recipe-surface-area-direct
+with an extra $R$ tacked on, we get
 $ frac(partial bf(r), partial phi) times frac(partial bf(r), partial theta)
   &= (R^2 sin^2 phi cos theta) ee_1  + (R^2 sin^2 phi sin theta) ee_2
   + (R^2 sin phi cos phi) ee_3. $

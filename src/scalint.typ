@@ -88,9 +88,14 @@ So you could imagine that a curve in $RR^2$ or $RR^3$ lets you carve out a 1D cu
 $bf(r) : RR -> RR^n$ by considering a _timeline_ as the input variable.
 See @fig-param-timeline again.
 
-In contrast, for 2D surfaces in $RR^3$, we are going to need two variables $bf(r)(u,v)$.
-The time analogy breaks down, so I'm going to use a different analogy: gridlines from a map,
-like longitude and latitude.
+In contrast, for 2D surfaces in $RR^3$, we are going to need two variables:
+#idea[
+  We will describe surfaces as images of some function
+  $bf(r)(u,v) : cal(R) -> RR^3$
+  where $cal(R)$ is some region in $RR^2$; see @fig-scalint-mesh.
+]
+The time analogy breaks down, so I'm going to use a different analogy:
+gridlines from a map, like longitude and latitude.
 This is actually going to be the same analogy we used in @sec-chvar-transition,
 when we presented transition maps from change of variables.
 The only difference is that in @sec-chvar-transition,
@@ -103,6 +108,13 @@ to draw a 2D surface that lives in 3D space, which we denote by $cal(S)$.
   Then to parametrize a 2D surface you need to specify a 2D region $cal(R)$ in $RR^2$
   and then write down a function $bf(r) : cal(R) -> cal(S)$
   in two variables $bf(r)(u,v)$ for $(u,v)$ in the region $cal(R)$.
+]
+
+#warning[
+  Here $cal(R)$ is a region in $RR^2$ used for the parametrization, often a rectangle.
+  It is _not_ the surface $cal(S)$ whose surface area is being calculated;
+  (and for 2D surfaces in 3D space we'll usually prefer the letter $cal(S)$
+  so that it doesn't look like a region).
 ]
 
 A cartoon of the situation is shown in @fig-scalint-mesh.
@@ -186,13 +198,6 @@ Okay, so in analogy to here are surface area and the scalar-field surface integr
   $ op("SurfArea")(cal(S)) := iint_(cal(R))
     lr(|(partial bf(r))/(partial u) times (partial bf(r))/(partial v)|) dif u dif v. $
 ]
-#warning[
-  Here $cal(R)$ is a region in $RR^2$ used for the parametrization, often a rectangle.
-  It is _not_ the surface $cal(S)$ whose surface area is being calculated;
-  (and for 2D surfaces in 3D space we'll usually prefer the letter $cal(S)$
-  so that it doesn't look like a region).
-]
-
 Yes, there's a cross product. Yes, it sucks (see @sec-cross-sucks).
 This is one case where you probably would prefer to use the shorthand
 $ dif S := lr(|(partial bf(r))/(partial u) times (partial bf(r))/(partial v)|) dif u dif v $
@@ -200,6 +205,31 @@ so that one can swallow surface area into just
 $ op("SurfArea")(cal(S)) &:= iint_(cal(S)) dif S $
 where we also cut out the region $cal(R)$ on our cartographer's map from the notation;
 instead we write $cal(S)$ directly.
+
+Where does the $lr(|(partial bf(r))/(partial u) times (partial bf(r))/(partial v)|)$ come from?
+The way to picture this is via @fig-scalint-surf-cross
+(actually analogous to the picture we drew in @sec-jacobian-picture when justifying the Jacobian).
+If you imagine our region $cal(R)$ as a piece of paper having red and blue gridlines,
+then $(partial bf(r))/(partial u)$ and $(partial bf(r))/(partial v)$
+correspond to little arrows on the surface along the gridlines on $cal(S)$.
+But way back when we introduced the cross product, it had a geometric definition that stated:
+
+- The magnitude of the cross product corresponds to the area of the little "cell"
+  on the surface in the gridlines, shaded in @fig-scalint-surf-cross.
+  So when we add all of them, we should get the surface area!
+
+- The direction of the cross product is perpendicular to both the
+  horizontal and vertical gridlines, so in fact the cross product should be thought
+  of as _normal_ to the surface.
+  Right now we don't care about this yet, but it'll matter later on in @ch-flux.
+
+#figure(
+  image("figures/scalint-surf-cross.svg", width: auto),
+  caption: [Consider surface $cal(S)$ parametrized by $bf(r) : cal(R) -> RR^3$.
+    The cross product of the two partial derivatives is drawn in green.
+    The magnitude of the cross product corresponds to the small shaded area.],
+) <fig-scalint-surf-cross>
+
 
 More generally if we have a function $f : RR^3 -> RR$ we could define the
 *scalar-field surface integral* of $f$ over $cal(S)$ as
@@ -211,6 +241,8 @@ But if we did use it, we could have an abbreviation $iint_(cal(S)) f dif S$.
 #typesig[
   The scalar-field surface integral (and hence surface area as well) outputs a scalar.
 ]
+
+== [RECIPE] Surface area (done directly) <sec-recipe-surface-area-direct>
 
 Here's surface area in recipe format.
 #recipe(title: [Recipe for surface area, manually])[
@@ -296,6 +328,7 @@ Here is a really ugly example to start, to give you some practice with spherical
   $frac(partial bf(r), partial u)$ and $frac(partial bf(r), partial v)$.
   Hence, the direction of this cross product turns out to be described by
   "normal vector to the tangent plane of the surface $cal(S)$ at $bf(r)(u,v)$".
+  That matches what we expect from @fig-scalint-surf-cross.
 
   Of course, since we took an absolute value, the direction gets discarded for surface area.
   But if you are really observant you might have noticed that computed cross product is
@@ -332,7 +365,3 @@ And here is an example that looks more like what you expect.
   That's really convenient: we got a constant! Hence
   $ op("SurfArea")("cone") = iint_(x^2+y^2 <= 1) sqrt(2) dif A = sqrt(2) op("Area")(x^2+y^2 <= 1) = #boxed[$sqrt(2) pi $]. #qedhere $
 ]
-
-== [SIDENOTE] Justification for the surface area formula
-
-#todo[to be written]
