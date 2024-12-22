@@ -52,7 +52,7 @@ Or air currents in the atmosphere. Whatever works for you!
 Anyway, for my book, we'll use the following picture:
 #idea[
   Imagine a flowing body of water (ocean, river, whirlpool, fountain, etc.) in $RR^2$ or $RR^3$.
-  Then at any point, we draw a tiny arrow $bf(F)(P)$
+  Then at any point $P$, we draw a tiny arrow $bf(F)(P)$
   indicating the direction and speed of the water at the point $P$.
   You could imagine if you put a little ball at the point $P$,
   the current would move the ball along that arrow.

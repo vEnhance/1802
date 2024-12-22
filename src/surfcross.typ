@@ -14,15 +14,15 @@ so we don't have to redo it by hand every time we need it.
 
 In these notes we will pre-compute five different cross products:
 
-- Any graph $z = f(x,y)$ (the cone we discussed is a good example)
-- Any level surface $g(x,y,z) = c$, over some $x y$-region
+- Any _graph_, i.e. a surface of the form $z = f(x,y)$ (the cone we discussed is a good example).
+- Any level surface $g(x,y,z) = c$, over some $x y$-region.
 - A flat surface in the $x y$-plane (which could also be $y z$ or $z x$ parallel).
 - The curved part of a cylinder of radius $R$ centered along the $z$-axis,
-  where the parameters are $theta$ and $z$
+  where the parameters are $theta$ and $z$.
 - The surface of a sphere of radius $R$ centered at the origin,
-  where the parameters are $phi$ and $theta$
+  where the parameters are $phi$ and $theta$.
 
-(As it turns out, in 18.02 it's likely these are the _only_ five situations you will see.)
+As it turns out, in 18.02 it's likely these are the _only_ five situations you will see.
 
 The table showing the results is @table-surfcross-1.
 Note that for surface area, you only need the _absolute value_ of the cross product (fourth column).
@@ -84,16 +84,21 @@ For example:
 - For the sphere, the normal vector should point straight away from the center of the sphere,
   and indeed $sin(phi) dot bf(r)(phi, theta)$ is a multiple of the direction.
 
-Again, for surface area you actually only need the fourth column. But
-- I think the third column is actually easier to remember than the fourth column,
+Again, to re-iterate: for surface area you actually only need the fourth column
+$lr(|frac(partial bf(r), partial u) times frac(partial bf(r), partial v)|)$, but
+
+- I think $frac(partial bf(r), partial u) times frac(partial bf(r), partial v)$
+  is actually easier to remember than
+  $lr(|frac(partial bf(r), partial u) times frac(partial bf(r), partial v)|)$,
   because of the geometric interpretation above;
-- by @ch-flux you will need the third column anyway.
+- starting from @ch-flux you will need the full data of
+  $frac(partial bf(r), partial u) times frac(partial bf(r), partial v)$ in the third column.
 
 The first and second rows of @table-surfcross-1 above are quite versatile,
 so in these notes I'll call them "magic" formulas because they save us so much work.
 In contrast, the other rows are for more specialized situations.
 
-== [TEXT] @table-surfcross-1 row 1: For a surface of the form $z = f(x,y)$
+== [TEXT] @table-surfcross-1 row 1: For a graph (surface of the form $z = f(x,y)$)
 
 So imagine your surface is given by $z = f(x,y)$ for some $f$
 over some region $cal(R)$ in the $x y$ plane (e.g. the cone had $cal(R) = {x^2+y^2<=1}$).
@@ -120,7 +125,7 @@ $ frac(partial bf(r), partial x) times frac(partial bf(r), partial y)
 
 Let's write this down now.
 
-#memo(title: [Memorize: Magic cross product formula for $z = f(x,y)$])[
+#memo(title: [Memorize: Magic cross product formula for graphs $z = f(x,y)$])[
   Consider a surface given by $z = f(x,y)$ with $f$ differentiable.
   Then for the obvious parametrization $bf(r)(x,y) = (x,y,f(x,y))$ we have
   $ frac(partial bf(r), partial x) times frac(partial bf(r), partial y)
@@ -357,7 +362,7 @@ Let's write a new recipe for surface area now that we have @table-surfcross-1.
     $(partial bf(r))/(partial u) times (partial bf(r))/(partial v)$
     for a parametrization $bf(r)$ using the following checklist.
     - If you are using $(x,y)$-coordinates to parametrize
-      (meaning $cal(S)$ is $z=f(x,y)$ or a level surface),
+      (meaning $cal(S)$ is a graph $z=f(x,y)$ or a level surface),
       use the magic formulas in rows 1 or 2 of @table-surfcross-1.
     - For a flat surface, it's easy (row 3 of @table-surfcross-1).
     - If $cal(S)$ is specifically given by cylindrical/spherical coordinates with fixed radius,

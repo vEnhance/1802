@@ -178,15 +178,37 @@ but here we make a $2$-dimensional map of a surface living in $RR^3$.)
   In both @fig-scalint-mesh and @fig-scalint-lonlat we used rectangular paper.
   But we could easily use non-rectangular paper as well.
   For example, suppose $cal(R)$ is the region $x^2+y^2 <= 1$ and we consider the surface
-  $ bf(r)(u,v) = ( x, y, sqrt(1-(x^2+y^2)) ). $
+  $ bf(r)(x,y) = ( x, y, sqrt(1-(x^2+y^2)) ). $
   Then this would give us a parametrization of a _hemisphere_:
   the part of the sphere $x^2+y^2+z^2=1$ with $z >= 0$.
   Pictorially, this corresponds to drawing a circular map of the Northern hemisphere
   by taking a birds-eye view from the North pole.
+
 ]
 
 #todo[Print a northern hemisphere map]
 
+#remark(title: [Remark: Graphs of functions are a common kind of surface])[
+  Note in the example we just did,
+  we chose the variable names $x$ and $y$ rather than $u$ and $v$
+  since they match the $x$-component and $y$-component of $bf(r)(x,y)$,
+  giving us fewer different letters to juggle.
+  And we'll do this in general: if our parametrization would _a priori_ be written as
+  $ bf(r)(u,v) = angle.l u, v, f(u,v) angle.r $
+  for $(u,v)$ in some region $cal(R)$, then we'll usually prefer to use the variable names
+  $ bf(r)(x,y) = angle.l x, y, f(x,y) angle.r $
+  instead.
+
+  This happens quite often.
+  Such surfaces are sometimes called *graphs* of the function $f$,
+  because you think of them as the portions of the plots of $z = f(x,y)$
+  for some function $f : cal(R) -> RR$.
+  We'll give two more examples in a moment.
+]
+
+#todo[plane]
+
+#todo[the entire y z plane]
 
 == [TEXT] Surface area
 
@@ -364,4 +386,15 @@ And here is an example that looks more like what you expect.
     &= sqrt((x^2) / (x^2 + y^2) + (y^2) / (x^2 + y^2) + 1) = sqrt(2). $
   That's really convenient: we got a constant! Hence
   $ op("SurfArea")("cone") = iint_(x^2+y^2 <= 1) sqrt(2) dif A = sqrt(2) op("Area")(x^2+y^2 <= 1) = #boxed[$sqrt(2) pi $]. #qedhere $
+]
+
+== [EXER] Exercises
+
+#exer[
+  Consider a surface $cal(S)$ given by the parametrization $bf(r) : RR^2 -> RR^3$ defined by
+  $ bf(r)(u,v) = angle.l u-v, u+v, u v angle.r $
+  for all $(u,v)$ in $RR^2$.
+
+  - Compute the real number $k$ for which the point $P = (1, 3, k)$ lies on $cal(S)$.
+  - Compute the tangent plane to $cal(S)$ at this point $P$.
 ]
