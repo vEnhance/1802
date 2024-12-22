@@ -162,7 +162,7 @@ is the divergence and interprets how much $bf(F)$ is moving away from the point.
 So instead of _spirals_, we draw little green _explosions_ corresponding to how fast $bf(F)$
 is moving out of each individual grey cell.
 The picture now turns into @fig-2dflux-explain, and
-$ iint_(cal(R)) nabla dot bf(F) dif A) $
+$ iint_(cal(R)) nabla dot bf(F) dif A $
 is drawn as the sum of the green explosions.
 
 Like before, everything on the inside just cancels out.
