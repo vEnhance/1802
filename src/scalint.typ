@@ -273,7 +273,7 @@ Here is a really ugly example to start, to give you some practice with spherical
 ]
 #soln[
   We will bludgeon our way through this task with sheer brute force using the formula above
-  via spherical coordinates. (We'll show a more elegant solution later.)
+  via spherical coordinates. (We'll show a more elegant solution later in @sec-surf-grad-magic.)
 
   The parametrization $bf(r)$ is given from the spherical coordinate system by
   $ bf(r) (phi, theta) = (sin phi cos theta , sin phi sin theta , cos phi) , $

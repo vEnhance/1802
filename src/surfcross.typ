@@ -149,7 +149,7 @@ Let's see how it can captures the boilerplate in the cone example.
   $ op("SurfArea")("cone") = iint_(x^2+y^2 <= 1) sqrt(2) dif A = sqrt(2) op("Area")(x^2+y^2 <= 1) = #boxed[$sqrt(2) pi $]. #qedhere $
 ]
 
-== [TEXT] @table-surfcross-1 row 2: For a level surface $g(x,y,z) = c$
+== [TEXT] @table-surfcross-1 row 2: For a level surface $g(x,y,z) = c$ <sec-surf-grad-magic>
 
 However, we can get an even better formula in a lot of cases using implicit differentiation.
 The basic idea is that we would prefer to think of the cone as $x^2+y^2-z^2 = 0$,
