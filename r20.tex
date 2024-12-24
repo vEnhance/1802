@@ -1,0 +1,53 @@
+\documentclass[addpoints, 12pt,answers]{exam}
+\usepackage{fullpage, tikz, multicol, amsmath, amssymb}
+%\usepackage{graphicx, psfrag}
+%\usepackage[frame,cmtip,arrow,matrix,line,graph,curve]{xy}
+\usepackage{graphpap, color}
+\usepackage{vmargin}
+
+
+\begin{document}
+\begin{center}
+{\bf 18.02, Fall 2024, Recitation 20}
+\end{center}
+
+\vspace{5 mm}
+
+Today we will discuss parametric surfaces, surface area, and flux.
+
+\begin{questions}
+
+\question  Consider the surface given by $F(x,y,z) = 2$, where $F(x,y,z) = xyz$.
+\begin{enumerate}
+\item[(a)] Using coordinates $u,v$, find a parametrization of the surface of the form
+  ${\bf r}(u,v) = (u, v, z(u,v))$.
+\item[(b)] Compute the tangent vectors ${\bf r}_u$ and ${\bf r}_v$.
+\item[(c)] Write down the equation of the tangent plane at the point $(2,1,1)$.
+\end{enumerate}
+
+\question  Consider the surface $S$ obtained by rotating the graph of $y = \sqrt{x}$, $0 \leq x \leq 4$,
+around the $x$-axis.
+\begin{enumerate}
+\item[(a)] Parametrize this surface using $x, \theta$, by writing ${\bf r}(x, \theta) = (x, y(x,\theta), z(x,\theta)).$.
+ Here $\theta$ will be the angle of rotation.
+
+\item[(b)] Find the cross product ${\bf r}_x \times {\bf r}_\theta$.
+
+\item[(c)] Find the surface area of $S$.
+\end{enumerate}
+
+\question
+Let $S$ be the unit disk on the $xy$-plane, oriented with ${\bf n} = {\bf k}$ at all points of $S$ (so upward).
+Let ${\bf V}(x,y,z) = \langle 1+z, 1, z^2 \rangle$.
+Without doing any integration, calculate the flux $\iint_{S} {\bf V}\cdot {\bf n}dS$.
+
+\question
+Let $S$ be a sphere of radius $2$ at center $(0,0,0)$.
+Show that the outward unit normal vector ${\bf n}$ at the point $(x,y,z) \in S$ is given
+by $\frac{1}{2} \langle x,y,z \rangle$ (e.g.\ using the description of $S$ as a level surface).
+Calculate (without doing any integration) the outward flux
+$\iint_{S} {\bf V}\cdot {\bf n}dS$
+of the vector field ${\bf V}(x,y,z) = \langle x,y,z \rangle$.
+\end{questions}
+
+\end{document}
