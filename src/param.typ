@@ -71,7 +71,7 @@ and every axis is an input variable we treat with equal respect.)
 
 Why is $bf(r) : RR -> RR^n$ so easy that Part Delta is one chapter?
 Because there's pretty much only one thing you need to ever do:
-#memo[
+#idea[
   TLDR Just always use components.
 ]
 That is, if $bf(r) : RR -> RR^3$ (say), basically 90%+ of the time what you do is write
@@ -96,11 +96,11 @@ I'll write this recipe with two variables, but it works equally well for three.
 Suppose you're given an equation $bf(r)(t) = vec(x(t), y(t))$.
 There are some things you could be asked:
 
-#recipe(title: [Recipes for parametric stuff])[
-  - To find the *velocity vector* at a time $t$, it's the derivative $ bf(r)'(t) = vec(x'(t), y'(t)). $
-  - To find the *speed* at a time $t$, it's the absolute value of the velocity:
+#recipe(title: [Recipe/definitions for parametric stuff])[
+  - The *velocity vector* at a time $t$ is defined as the derivative $ bf(r)'(t) = vec(x'(t), y'(t)). $
+  - The *speed* at a time $t$ is defined as the absolute value of the velocity:
     $ |bf(r')(t)| = sqrt(x'(t)^2 + y'(t)^2). $
-  - To find the *acceleration vector* at a time $t$, it's the second derivative
+  - The *acceleration vector* at a time $t$ is defined as the second derivative
     of each component: $ bf(r)''(t) = vec(x''(t), y''(t)). $
   For three-variable $bf(r)(t) = angle.l x(t), y(t), z(t) angle.r$, do the same thing with three components.
 ]
@@ -108,8 +108,8 @@ I don't know if there's a word for the absolute value of the acceleration vector
 (the way speed is the absolute value of the velocity vector).
 
 One more thing to mention now:
-#recipe(title: [Recipe for arc length])[
-  The *arc length* from time $t_"start"$ to $t_"stop"$ is the integral of the speed:
+#recipe(title: [Recipe/definition for arc length])[
+  The *arc length* from time $t_"start"$ to $t_"stop"$ is defined as the integral of the speed:
   $ "arc length" = integral_(t="start time")^("stop time") |bf(r)'(t)| dif t. $
 ]
 (Technically, I should use "definition" boxes rather than "recipe" boxes here,

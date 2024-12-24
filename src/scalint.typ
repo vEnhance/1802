@@ -1,6 +1,6 @@
 #import "@local/evan:1.0.0":*
 
-= Scalar-field line and surface integrals <ch-scalint>
+= Surfaces, and scalar-field integrals <ch-scalint>
 
 Think back to @fig-int-chart-triangle.
 So far we've talked about everything except the three entries
@@ -20,19 +20,11 @@ are only used for a few specific cases.
 We've actually met arc length already back in Part Delta!
 I'll restate it again here for convenience, but this is a repeat:
 
-#memo(title: [Memorize: Arc length])[
+#definition(title: [Definition: Arc length])[
   If the parametrization $bf(r)(t) : RR -> RR^n$ traces out a path in $RR^n$,
-  the *arc length* is given by
+  the *arc length* is defined as
   $ L = int_(t="start time")^("stop time") lr(|bf(r)'(t)|) dif t. $
 ]
-
-More generally,
-if the parametrization $bf(r)(t) : RR -> RR^n$ traces out a path in $RR^n$,
-and $f : RR^n -> RR$ is a function,
-then the *scalar-field line integral* of $f$ is defined by
-$ int_(t="start time")^("stop time") f(bf(r)(t)) lr(|bf(r)'(t)|) dif t. $
-However, we won't use this definition in this class,
-except for the special case $f = 1$ for arc length.
 
 #warning(title: [Warning: There are no red arrows for these integrals])[
   *We don't like these scalar-field line and surface integrals as much*;
@@ -57,23 +49,26 @@ except for the special case $f = 1$ for arc length.
   how long of a route you took.)
 ]
 
-#typesig[
-  The scalar-field line integral (and hence arc length as well) outputs a scalar.
-]
+More generally, if the parametrization $bf(r)(t) : RR -> RR^n$ traces out a path in $RR^n$,
+and $f : RR^n -> RR$ is a function,
+then the *scalar-field line integral* of $f$ is defined by
+$ int_(t="start time")^("stop time") f(bf(r)(t)) lr(|bf(r)'(t)|) dif t. $
+However, we won't use this definition in this class,
+except for the special case $f = 1$ for arc length.
 
-Note that arc length is just letting $f$ be the constant function $1$.
-We'll pretty much only use this generalization for mass/density type questions, and nowhere else.
+#typesig[
+  The surface area of a surface $cal(S)$ is a scalar
+  (and doesn't depend on how the surface is parametrized).
+  The scalar-field line integral is also a scalar.
+]
 
 As I mentioned in the shorthand table (@table-shorthand), many other sources abbreviate
 $ dif s := lr(|bf(r)'(t)|) dif t. $
 Whenever this shorthand is being used, one frequently cuts out the start and stop time too.
 The way this is done is, you let $cal(C)$ denote the curve that $bf(r)(t)$ traces out.
-Then we abbreviate
-$ int_(t="start time")^("stop time") f(bf(r)(t)) lr(|bf(r)'(t)|) dif t $
-all the way down to just
-$ int_(cal(C)) f dif s. $
-So that the arc length formula gets written as $L = int_(cal(C)) dif s$
-and the general scalar-field line integral is $int_(cal(C)) f dif s$.
+Then we can abbreviate
+$ int_(t="start time")^("stop time") f(bf(r)(t)) lr(|bf(r)'(t)|) dif t = int_(cal(C)) f dif s. $
+In particular, taking $f=1$, the arc length formula gets abridged to $L = int_(cal(C)) dif s$.
 
 == [TEXT] Parametrizing surfaces
 
@@ -106,8 +101,9 @@ to draw a 2D surface that lives in 3D space, which we denote by $cal(S)$.
 #typesig[
   To emphasize the types going on here, suppose $cal(S)$ is a surface in 3D space.
   Then to parametrize a 2D surface you need to specify a 2D region $cal(R)$ in $RR^2$
-  and then write down a function $bf(r) : cal(R) -> cal(S)$
-  in two variables $bf(r)(u,v)$ for $(u,v)$ in the region $cal(R)$.
+  and then write down a function $bf(r) : cal(R) -> RR^3$
+  in two variables $bf(r)(u,v)$ for $(u,v)$ in the region $cal(R)$
+  which covers all the points in $cal(S)$.
 ]
 
 #warning[
@@ -128,7 +124,8 @@ This picture is really important to understand, so take a while to let it sink i
     (In this cartoon, $cal(S)$ might be described as a mountain range.)
     A pair $(u,v)$ on the paper could be thought of like longitude and latitude;
     it should mark some point $bf(r)(u,v)$ on the surface $cal(S)$.
-    Hence we write parametrizations as $bf(r) : cal(R) -> cal(S)$.
+    Hence we write parametrizations as $bf(r) : cal(R) -> RR^3$
+    and identify $cal(S)$ with $bf(r)$.
   ],
 ) <fig-scalint-mesh>
 
@@ -183,13 +180,20 @@ but here we make a $2$-dimensional map of a surface living in $RR^3$.)
   the part of the sphere $x^2+y^2+z^2=1$ with $z >= 0$.
   Pictorially, this corresponds to drawing a circular map of the Northern hemisphere
   by taking a birds-eye view from the North pole.
-
+  See @fig-north-hemisphere.
 ]
 
-#todo[Print a northern hemisphere map]
+#figure(
+  image("media/north-hemisphere.svg", width: 11cm),
+  caption: [
+    The northern hemisphere of the Earth, drawn on a 2D piece of paper.
+    Image adapted from #link("https://w.wiki/CWcn")[the public domain].
+  ],
+) <fig-north-hemisphere>
+
 
 #remark(title: [Remark: Graphs of functions are a common kind of surface])[
-  Note in the example we just did,
+  Note in the example we just did in @fig-north-hemisphere,
   we chose the variable names $x$ and $y$ rather than $u$ and $v$
   since they match the $x$-component and $y$-component of $bf(r)(x,y)$,
   giving us fewer different letters to juggle.
@@ -206,15 +210,62 @@ but here we make a $2$-dimensional map of a surface living in $RR^3$.)
   We'll give two more examples in a moment.
 ]
 
-#todo[plane]
+#example(title: [Another example of a graph: the plane $x + 2 y + 3 z = 6$ with $x,y,z >= 0$])[
+  As another example, let's consider the part of the plane $x + 2 y + 3 z = 6$
+  that lies in the first octant $x,y,z >= 0$.
+  It's drawn in the right half of @fig-scalint-plane.
 
-#todo[the entire y z plane]
+  To parametrize it, we'll again use the "graph" idea again:
+  we imagine projecting our surface directly down to the $x y$-plane (where $z = 0$)
+  and then our piece of paper is whatever points are in the shadow.
+  In this case, our region $cal(R)$ is the part of the $x y$-plane
+  cut out by $x,y >= 0$ and $x + 2y <= 6$, shown in the left half of @fig-scalint-plane.
+  The equation parametrization is then given exactly by
+  $ bf(r)(x,y) = (x, y, (6-x-2y)/3). $
+  Optionally, one can draw the region $cal(R)$ into the 3D sketch too;
+  this is the shaded bottom triangle in the right half of @fig-scalint-plane.
+]
+
+#figure(
+  image("figures/scalint-plane.svg", width: auto),
+  caption: [
+    The part of the plane $x+2y+3z=6$ being parametrized by its projection to the $x y$-plane.
+    Because we're viewing the plane as a graph,
+    we opt to use the letters $bf(r)(x,y)$ rather than $bf(r)(u,v)$.
+  ],
+) <fig-scalint-plane>
+
+
+#example(title: [Example: $y z$-plane])[
+  Consider the entire $y z$ plane in $RR^3$ (that is, the points with $x = 0$).
+  Then one can parametrize it by $bf(r) : RR^2 -> RR^3$
+  (so our paper $cal(R) = RR^2$ is infinite!) defined by the equation
+  $ bf(r)(u,v) = (0,u,v). $
+  (I suppose it would've made sense to rename the variables to $bf(r)(y,z) = (0,y,z)$,
+  but it doesn't matter.)
+]
+
+#remark(title: [Remark: Parametrizations are still flexible])[
+  Like in @ch-param, the parametrization of a surface is not unique,
+  and you get flexibility in how you parametrize it.
+  For example, for the simple $y z$-plane we just did,
+  we give an example of an overly complicated parametrization.
+
+  Our piece of paper will be $cal(R) = (-pi/2, pi/2) times (-pi/2, pi/2)$
+  (that is, a square if side length $pi$)
+  and our parametrization $bf(r) : cal(R) -> RR^3$ will be defined by
+  $ bf(r)(u,v) = (0, (tan u)^3, log(e^u+5) + tan v). $
+  This is really a valid parametrization:
+  you can verify every point in the $y z$-plane appears exactly once on our map.
+  It even has a region $cal(R)$ with finite area.
+  But it's so ugly you would never want to use it.
+]
 
 == [TEXT] Surface area
 
-Okay, so in analogy to here are surface area and the scalar-field surface integral.
+Okay, so in analogy are surface area and the scalar-field surface integral.
 
-#memo(title: [Memorize: Surface area and scalar-field surface integral])[
+#definition(title: [Definition: Surface area])[
   If the parametrization $bf(r)(u,v) : cal(R) -> RR^3$ cuts out a surface $cal(S)$ in $RR^3$,
   the *surface area* is given by
   $ op("SurfArea")(cal(S)) := iint_(cal(R))
@@ -303,8 +354,8 @@ Here is a really ugly example to start, to give you some practice with spherical
   $ 0 <= theta <= 2 pi quad "and" quad 0 <= phi <= pi $
   for our region $cal(R)$.
   The partial derivatives are thus
-  $ frac(partial bf(r), partial phi) &= (cos phi cos theta , cos phi sin theta , - sin phi) \
-    frac(partial bf(r), partial theta) &= (- sin phi sin theta , sin phi cos theta , 0). $
+  $ frac(partial bf(r), partial phi) &= angle.l cos phi cos theta , cos phi sin theta , - sin phi angle.r \
+    frac(partial bf(r), partial theta) &= angle.l - sin phi sin theta , sin phi cos theta , 0 angle.r. $
   We brute force our way through the entire cross product.
   We have
   $ frac(partial bf(r), partial phi) times frac(partial bf(r), partial theta)
@@ -343,14 +394,13 @@ Here is a really ugly example to start, to give you some practice with spherical
 ]
 
 #digression(title: [Digression on the direction of the cross product])[
-  We'll mention this more later, but it's worth noting now that
+  As we said earlier when drawing @fig-scalint-surf-cross,
   in general if you parametrize a surface $cal(S)$ by $bf(r)(u,v)$,
   then $frac(partial bf(r), partial u) times frac(partial bf(r), partial v)$
   is a vector which is normal to both
   $frac(partial bf(r), partial u)$ and $frac(partial bf(r), partial v)$.
-  Hence, the direction of this cross product turns out to be described by
-  "normal vector to the tangent plane of the surface $cal(S)$ at $bf(r)(u,v)$".
-  That matches what we expect from @fig-scalint-surf-cross.
+  That is, the direction of this cross product is the
+  normal vector to the tangent plane of the surface $cal(S)$ at $bf(r)(u,v)$.
 
   Of course, since we took an absolute value, the direction gets discarded for surface area.
   But if you are really observant you might have noticed that computed cross product is
@@ -360,18 +410,22 @@ Here is a really ugly example to start, to give you some practice with spherical
   because for a sphere, $bf(r)(theta, phi)$ happens to be perpendicular to the tangent plane.
 ]
 
-And here is an example that looks more like what you expect.
+And here is an example that is a little less computationally intensive.
 #sample[
   Find the surface area of the cone defined by $z = sqrt(x^2+y^2) <= 1$.
 ]
 #soln[
   The given cone can be parametrized using Cartesian coordinates as:
-  $ bf(r) (x , y) = vec(x , y , sqrt(x^2 + y^2)) $
+  $ bf(r) (x , y) = (x , y , sqrt(x^2 + y^2)) $
   where $(x , y)$ lies within the disk $x^2 + y^2 <= 1$.
 
   Compute the partial derivatives of $bf(r)$ with respect to $x$ and $y$:
-  $ frac(partial bf(r), partial x) &= vec((partial x) / (partial x) , (partial y) / (partial x) , (partial z) / (partial x)) = vec(1 , 0 , x / sqrt(x^2 + y^2)) \
-    frac(partial bf(r), partial y) &= vec((partial x) / (partial y) , (partial y) / (partial y) , (partial z) / (partial y)) = vec(0 , 1 , y / sqrt(x^2 + y^2)). $
+  $ frac(partial bf(r), partial x)
+    &= lr(angle.l (partial x) / (partial x) , (partial y) / (partial x) , (partial z) / (partial x) angle.r)
+    = lr(angle.l 1 , 0 , x / sqrt(x^2 + y^2) angle.r) \
+    frac(partial bf(r), partial y)
+    &= lr(angle.l (partial x) / (partial y) , (partial y) / (partial y) , (partial z) / (partial y) angle.r)
+    = lr(angle.l 0 , 1 , y / sqrt(x^2 + y^2) angle.r). $
   Hence the cross product is
   $ frac(partial bf(r), partial x) times frac(partial bf(r), partial y)
     &= detmat(
@@ -380,7 +434,7 @@ And here is an example that looks more like what you expect.
       0 , 1 , y / sqrt(x^2 + y^2)) \
     &= (0 dot y / sqrt(x^2 + y^2) - 1 dot x / sqrt(x^2 + y^2)) ee_1 - (1 dot y / sqrt(x^2 + y^2) - 0 dot x / sqrt(x^2 + y^2)) ee_2 \
     &#h(6em) + (1 dot 1 - 0 dot 0) ee_3 \
-    &= vec(- x / sqrt(x^2 + y^2) , - y / sqrt(x^2 + y^2) , 1) $
+    &= lr(angle.l - x / sqrt(x^2 + y^2) , - y / sqrt(x^2 + y^2) , 1 angle.r) $
   Now, compute the magnitude of this cross product:
   $ lr(|frac(partial bf(r), partial x) times frac(partial bf(r), partial y)|) &= sqrt((- x / sqrt(x^2 + y^2))^2 + (- y / sqrt(x^2 + y^2))^2 + 1^2) \
     &= sqrt((x^2) / (x^2 + y^2) + (y^2) / (x^2 + y^2) + 1) = sqrt(2). $

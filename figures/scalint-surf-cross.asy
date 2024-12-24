@@ -1,4 +1,5 @@
 size(17cm);
+usepackage("amsmath");
 usepackage("amssymb");
 
 import patterns;
@@ -82,7 +83,7 @@ label("$\mathcal{S}$", shift(0.3,-0.3)*B, dir(0), deepgreen);
 
 pair Qc = Q+(0,3);
 draw(Q--Qc, deepgreen + 1.6, EndArrow(6), BeginMargin);
-label("$\frac{\partial \mathbf{r}}{\partial u} \times \frac{\partial \mathbf{r}}{\partial v}$", Qc, dir(90), deepgreen);
+label("$\boxed{\frac{\partial \mathbf{r}}{\partial u} \times \frac{\partial \mathbf{r}}{\partial v}}$", Qc, dir(90), deepgreen);
 
 dotfactor *= 1.5;
 dot(P, brown);

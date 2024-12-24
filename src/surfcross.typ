@@ -254,7 +254,7 @@ without having to slog through the pain of spherical coordinates.
   $ (nabla g) / (partial g slash partial z) = lr(angle.l 2x, 2y, 2z angle.r) / (2z)
     = lr(angle.l x/z, y/z, 1 angle.r). $
   This time the magnitude of the vector is
-  $ sqrt((x/z)^2 + (y/z)^2 + 1) = sqrt((x^2+y^2+z^2) / z^2) = 1/z. $
+  $ sqrt((x/z)^2 + (y/z)^2 + 1) = sqrt((x^2+y^2+z^2) / z^2) = 1/z = 1/sqrt(1-(x^2+y^2)). $
   Hence, we need to integrate
   $ op("SurfArea")("hemisphere") = iint_(x^2+y^2<=1) 1/sqrt(1-(x^2+y^2)) dif x dif y. $
   To nobody's surprise, we use polar coordinates to change this to
@@ -310,7 +310,7 @@ That's not too bad!
 We can take the absolute value of this: $ dif S = R dif theta dif z. $
 
 #tip(title: [Tip: $dif S$ for the cylinder can be remembered geometrically])[
-  The way to remember this is that "$dif S approx (dif V) / (dif r)$":
+  The way to remember this is that "$dif S dif r approx dif V$":
   if you multiply a bit of surface by a bit of the radial component,
   you get a chunk of volume of the sphere.
   And since we saw in @ch-triple that $dif V = r dif r dif theta dif z$,
@@ -344,7 +344,7 @@ Here I'm dropping the absolute value bars around $|sin phi|$ because
 our spherical coordinate convention requires $0 < phi < pi$.
 
 #tip(title: [Tip: $dif S$ for the sphere can be remembered geometrically])[
-  The way to remember this is that "$dif S approx (dif V) / (dif rho)$":
+  The way to remember this is that "$dif S dif rho approx dif V$":
   if you multiply a bit of surface by a bit of the radial component,
   you get a chunk of volume of the sphere.
   And since we saw in @ch-sph that $dif V = rho^2 sin phi dif rho dif phi dif theta$,
