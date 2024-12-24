@@ -1,6 +1,7 @@
 unitsize(0.8814cm);
 usepackage("amsmath");
 usepackage("amssymb");
+usepackage("color");
 usepackage("derivative");
 label("$\boxed{f \colon \mathbb R^1 \to \mathbb R}$", (-0.5,8), dir(180), blue);
 label("$\boxed{f \colon \mathbb R^2 \to \mathbb R}$", (-0.5,3.5), dir(180), blue);
@@ -159,7 +160,15 @@ label("$\nabla \times \mathbf{F}$ (curl)", (6,-3), dir(270), red);
 draw((9,-3)--(12.5,-3)--(12.5,-1.5), red, EndArrow);
 label("$\nabla \cdot \mathbf{F}$ (div)", (12.5,-2.25), dir(0), red);
 
+/* Stokes */
+label("$\bullet$ Any two consecutive {\color{red}red arrows} chain to zero.", (6.0,7.7), dir(0), fontsize(9pt));
+label("$\bullet$ If {\color{red}$X \longrightarrow Y$} then
+  $\int_{\operatorname{boundary}(\mathcal R)} {\color{red}X} = \int_{\mathcal R} {\color{red}Y}$.",
+  (6.0,6.9), dir(0), fontsize(9pt));
+draw((8.0,8.2)--(5.8,8.2)--(5.8,6.5)--(14.2,6.5)--(14.2,8.2)--(12,8.2));
+label("Stokes Theorem", (10, 8.25));
+
 /* Include advertisement */
-label(minipage("\centering \fbox{\copyright{} 2024 Evan Chen} \\ \texttt{https://web.evanchen.cc/}", 4cm), (12.5,7.5), grey + fontsize(9pt));
+label(minipage("\centering \fbox{\copyright{} 2025 Evan Chen} \\ \texttt{https://web.evanchen.cc/}", 4cm), (12.5,3.5), grey + fontsize(9pt));
 
 pen highlight = yellow + linewidth(8bp) + opacity(0.5);
