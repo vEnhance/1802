@@ -12,7 +12,7 @@ figures/%.svg: figures/%.asy
 
 posters: published/poster-ints.pdf published/poster-stokes.pdf
 
-published/poster-ints.pdf: figures/integrals-triangle.asy figures/stokes_base.asy
+published/poster-ints.pdf: figures/integrals-triangle.asy
 	cd figures; asy -f pdf $(notdir $<) -o ../published/poster-ints
 published/poster-stokes.pdf: figures/integrals-stokes.asy figures/stokes_base.asy
 	cd figures; asy -f pdf $(notdir $<) -o ../published/poster-stokes

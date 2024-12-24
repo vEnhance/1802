@@ -121,4 +121,4 @@ label("Triple/volume integral", t*dir(90), deepgreen);
 add(t*axis3);
 
 /* Advertisement */
-label(minipage("\centering \fbox{\copyright{} 2024 Evan Chen} \\ \texttt{https://web.evanchen.cc/}", 4cm), (12.5,7.5), grey + fontsize(9pt));
+label(minipage("\centering \fbox{\copyright{} 2025 Evan Chen} \\ \texttt{https://web.evanchen.cc/}", 4cm), (12.5,7.5), grey + fontsize(9pt));
