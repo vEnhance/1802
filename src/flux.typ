@@ -159,13 +159,14 @@ In @ch-surfcross I gave you @table-surfcross-1 which let you bypass
 the cross product step when calculating surface area, and it still works here.
 But I'm actually going to rewrite the table to connect it to the shorthand $bf(n) dif S$.
 In fact, people often split the shorthand $bf(n) dif S$ into two parts:
+$bf(n)$ is the unit vector in the _direction_ of the cross product,
+while $dif S$ represents the absolute value with $dif u dif v$ tacked on.
+In symbols, this says
 $ bf(n) := frac((partial bf(r))/(partial u) times (partial bf(r))/(partial v),
   lr(|(partial bf(r))/(partial u) times (partial bf(r))/(partial v)|))
   quad " and " quad
   dif S := lr(|(partial bf(r))/(partial u) times (partial bf(r))/(partial v)|) dif u dif v. $
-(So that $bf(n) dif S$ is indeed the full cross product, as the two absolute value things cancel.)
-That is, $bf(n)$ is the unit vector in the _direction_ of the cross product,
-while $dif S$ represents the absolute value with $dif u dif v$ tacked on.
+(So $bf(n) dif S$ is indeed the full cross product, as the two absolute value things cancel.)
 
 The reason people will separate it like this is to make the geometry a bit easier to think about.
 Remember from back in @ch-cross that a cross product has two pieces of information:

@@ -2,9 +2,9 @@
 
 = Way too many examples of work and 2D flux <ch-lineex>
 
-This entire section is *review and examples only* and *can be skipped* if you know what you're doing.
+This entire chapter is *review and examples only* and *can be skipped* if you know what you're doing.
 
-The goal of this chapter is to flesh out @tab-work-vs-flux.
+The goal of this chapter is to fully write out several examples of @tab-work-vs-flux.
 We'll show the entire table with four situations:
 
 - The conservative field $bf(F) = vec(2x+y, x+2y)$

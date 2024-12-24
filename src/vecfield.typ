@@ -284,11 +284,11 @@ there will be a case of Stokes' theorem that applies to it.
 
 #memo(title: [Memorize: Generalized Stokes' Theorem, for 18.02])[
   In @fig-int-chart-stokes, take any of the six red arrows
-  #text(rgb("ff0000"))[$X -> op("del")(X)$].
+  #text(rgb("ff0000"))[$X -> Y$].
   Let $cal(R)$ be a compact region.
   Then the integral of $X$ over the *boundary* of $cal(R)$
-  equals the integral of $op("del")(X)$ over $cal(R)$:
-  $ int_(op("boundary")(cal(R))) X = int_(cal(R)) op("del")(X). $
+  equals the integral of $Y$ over $cal(R)$:
+  $ int_(op("boundary")(cal(R))) X = int_(cal(R)) Y. $
 ]
 
 In fact let me tell you what generalized Stokes' theorem says,
@@ -331,21 +331,17 @@ in vague non-precise terms (we'll make precise later), for each of these six red
   this could be rewritten as
   $ int_(cal(C)) bf(F) dot dif bf(r)
     = iint_(cal(R)) ((partial q) / (partial x) - (partial p) / (partial y)) dif A. $
-
-  Of all the results here, I think Green's theorem is the most unnatural one.
-  (Poonen's notes cover Green's theorem last, a decision I like.)
   There's a second form of Green's theorem I'll show you when I get to it.
-  However, ironically the 3D red arrows make more sense than the 2D red arrows.
 
 / Line integral $->$ surface integral:
   Suppose now $bf(F) : RR^3 -> RR^3$ is a vector field.
   Let $bf(r)_2(u,v)$ parametrizes some two dimensional surface $cal(S)$ (like a metal sheet),
   and suppose further that the _boundary_ of this surface is parametrized by a curve $bf(r)_1(t)$
   (e.g. the edges of the sheet).
-  Then _Stokes' theorem_ (the non-generalized version) says that
-  $ int_(t="start time")^("stop time") bf(F)(bf(r)_1(t)) dot bf(r)_1'(t) dif t
+  Then the crummy version of _Stokes' theorem_ says that
+  $ int_(t="start time")^("stop time") bf(F)(bf(r)_1(t)) dot bf(r)'_1(t) dif t
     = iint_(cal(S)) (nabla times bf(F))(bf(r)_2(u,v)) dot lr(((partial bf(r)_2)/(partial u) times (partial bf(r)_2)/(partial v))) dif u dif v. $
-  The nonsense expression $nabla times bf(F)$ is called the curl, but we haven't defined this term yet.
+  The nonsense expression $nabla times bf(F)$ is called the curl, defined next chapter in @ch-gcd.
 
   The shorthand version following @table-shorthand is much easier to read,
   because the shorthand $bf(n) dif S$ stands for the entire hunk
@@ -354,7 +350,6 @@ in vague non-precise terms (we'll make precise later), for each of these six red
   Then the above equation compresses all the way down to
   $ int_(cal(C)) bf(F) dot dif bf(r)_1 = iint_(cal(S)) (nabla times bf(F)) dot bf(n) dif S. $
   so yes, that does save a lot of characters.
-
 
 / Surface integral $->$ triple/volume integral:
   Suppose now $bf(F) : RR^3 -> RR^3$ is a vector field.
@@ -366,9 +361,9 @@ in vague non-precise terms (we'll make precise later), for each of these six red
     times (partial bf(r))/(partial v))) dif u dif v
     =  iiint_(cal(T)) (nabla dot bf(F))(x,y,z) dif x dif y dif z. $
   If we adopt shorthand again, this reads just
-  $ iint_(cal(S)) bf(F) dot bf(n) dif S = iiint_(cal(T)) (nabla dot bf(F)) dif V. $
+  $ iint_(cal(S)) bf(F) dot bf(n) dif S = iiint_(cal(T)) nabla dot bf(F) dif V. $
 
-  The nonsense expression $nabla dot bf(F)$ is called the divergence, but we haven't defined this term yet.
+  The nonsense expression $nabla dot bf(F)$ is called the divergence, defined next chapter in @ch-gcd.
 
 Again, these bullets will not make sense to you yet (except the first one,
 which is the 18.01 fundamental theorem of calculus),
@@ -394,9 +389,11 @@ at a time over the rest of the semester.
 
 - In @ch-gcd, I'll tell you how to compute each of grad, curl, div.
   This chapter has no integration in it, so if you hate integration, you'll like this chapter.
+
 - I'll start talking about work in @ch-work.
   I'll define it, and then I'll show you how it ties in to the fundamental theorem of calculus
   (which are some of the cases of generalized Stokes' theorem).
+
 - Then @ch-flux will define flux.
   This will let us talk about the rest of the cases of generalized Stokes' theorem.
 
