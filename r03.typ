@@ -292,10 +292,3 @@ The only new step introduced in R03 is "to encode as matrix, glue your answers t
   ),
   kind: table
 )
-
-= TODO
-
-Note to self: write up the following things.
-
-1. Rotation matrix example (this seems to give a lot of people trouble).
-2. Analogous table with "is zero" and "is not zero" for numbers (corr to vectors above).
