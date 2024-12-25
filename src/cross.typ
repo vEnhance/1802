@@ -396,7 +396,7 @@ we've seen in applications.
   $ |bf(v) times bf(w)|^2 + (bf(v) dot bf(w))^2. $
 ]
 
-#exerstar[
+#exer[
   Suppose $bf(v)$ is a vector in $RR^3$ and $k$ is a real number such that
   $ vec(1,2,3) times bf(v) = vec(4,5,k). $
   Compute $k$.

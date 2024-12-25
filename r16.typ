@@ -47,7 +47,7 @@ The work is a scalar quantity (there is a dot product inside the integrand, so i
       Find a potential function $f$ for the vector field $bf(F)$
       and use the FTC as a shortcut.
   2. *Not yet covered in class*: If $cal(C)$ is a closed loop in $RR^2$, use Green's theorem instead.
-  3. If both of these fail, fall back the parametrization recipe.
+  3. If both of these fail, fall back to the parametrization recipe.
 ]
 
 #memo(title: [Memorize: FTC for line integrals])[

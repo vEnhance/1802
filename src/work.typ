@@ -76,6 +76,20 @@ water flow at that location. The work done by the current as the object
 follows a path $cal(C)$ depends on the alignment of the current with the
 object’s movement along that path.
 
+#figure(
+  image("figures/work-posnegzero.svg", width: auto),
+  caption: [An illustration of the sign of work for a given vector field $bf(F)$
+    which points roughly southeast.
+    In the leftmost image, the path moves directly along $bf(F)$
+    and hence the work is positive.
+    In the middle image, $bf(F)$ moves directly against $bf(F)$ instead
+    and hence the work is negative.
+    In the rightmost image, $bf(F)$ moves perpendicular to $bf(F)$
+    and the work is zero instead.
+  ],
+) <fig-work-posnegzero>
+
+
 1. _When the current aligns with the path_: If the direction of
   $bf(F)$ aligns with the direction of the trajectory at a
   point, the current contributes positively to the work along that
@@ -103,7 +117,7 @@ object’s movement along that path.
   The dot products are zero in this case: at each point $P = bf(r)(t)$,
   the vectors $bf(F)(P)$ and $bf(r)'(t)$ are perpendicular.
 
-#todo[might be nice to have a figure here]
+An illustration of all three situations is shown in @fig-work-posnegzero.
 
 == [TEXT] Visualizing line integrals via dot products
 

@@ -6,8 +6,7 @@ Things that you can help with:
 1. Find some typos! There are plenty. This book is new and still being tested.
 2. Draw some more figures. The figures are made in Asymptote, check the
    `figures/` directory.
-3. Help fill in solutions to the exercises or flesh out things marked with
-   the `#todo` tag.
+3. Help fill in solutions to the exercises or other gaps in the text.
 4. Suggest new exercises for the text, especially interesting ones.
 5. Anything else, really.
 

@@ -183,7 +183,25 @@ But the equations are the same.
   // jk we have gravity smh
 ]
 
-#todo[insert some examples]
+#sample[
+  For which real number $c$ is the vector field
+  $ bf(F) = vec(e^(cos x) + x y^5, c x^2 y^4 + log(y^2+1) )$
+  a conservative vector field?
+]
+#soln[
+  We need the number $c$ such that
+  $ (partial)/(partial x)(c x^2 y^4 + log(y^2 + 1)) &= (partial)/(partial y)(e^(cos x) + x y^5) \
+    <==> c dot 2 x y^4 &= 5 x y^4 $
+  holds for all real numbers $x$ and $y$.
+  This occurs only when $#boxed[$ c = 5/2. $]$.
+]
+
+#sample[
+  For which real numbers $a$, $b$ is the vector field
+  $ bf(F) = vec(y^2 + a x^2 z + e^x, b x y + y cos (y z),  x^3 z + z cos (y z)). $
+  a conservative vector field?
+]
+#todo[write solution]
 
 == [TEXT] Green's theorem (2D only)
 
@@ -371,7 +389,7 @@ So with this, we can present a recipe that condenses these together.
     - If so, see if Green's theorem gives you an easy shortcut:
       $ oint_(cal(C)) (p dif x + q dif y) = iint_(cal(R)) ((partial q)/(partial x) - (partial p)/(partial y)) dif A. $
   3. If both of these fail,
-    fall back the parametrization recipe described in @sec-work-manual-recipe.
+    fall back to the parametrization recipe described in @sec-work-manual-recipe.
     To repeat it here:
       1. Pick *any* parametrization $bf(r) : RR -> RR^n$ of the curve $cal(C)$,
         including specifying the start and stop times.
@@ -384,9 +402,68 @@ So with this, we can present a recipe that condenses these together.
 We'll give several more examples of this in @sec-recipe-2d-flux,
 where we contrast it to another type of line integral, the "2D flux".
 
-== [TEXT] Piecing things together
+== [TEXT] Advanced technique: sealing regions
 
-#todo[write this]
+Green's Theorem is powerful enough that it can be handy
+even if the path $cal(C)$ is not a closed loop:
+the idea is to "seal" the loop by adding some simple path,
+for which the line integral is easy to calculate.
+To show this technique, we bring back the first example from @sec-work-manual-recipe
+all the way back when we first introduced how to compute work with bare hands.
+
+#sample[
+  Compute the line integral of the vector field
+  $bf(F) (x , y) = vec(2 y , 3 x)$ along
+  the upper half of the circle $x^2 + y^2 = 1$, oriented counterclockwise.
+  See @fig-ftcgreen-ex1.
+]
+
+We already saw that we could compute this using bare-hands parametrization.
+Now we'll show how to use Green's Theorem as a shortcut
+by adding the line segment from $(-1,0)$, to $(1,0)$.
+
+#figure(
+  image("figures/ftcgreen-ex1.svg", width: auto),
+  caption: [Evaluation of $int_(cal(C)) bf(F) dot dif bf(r)$ by "sealing"
+    the region, adding in a line segment joining $(-1,0)$ to $(1,0)$.
+    The line integral across the segment is easy to compute (it equals zero,
+    since the force is perpendicular to it.)
+    Then Green's theorem applies to the sealed region $cal(R)$.],
+) <fig-ftcgreen-ex1>
+
+#soln[
+  Let $cal(C)$ denote the semicircle.
+  Because $cal(C)$ is not a closed loop, Green's Theorem does not apply directly.
+  To use it, we instead add a new line segment $cal(C)_("lid")$
+  ponting from $(-1,0)$ to $(1,0)$.
+  Then if we consider _both_ $cal(C)$ and the new lid $cal(C)_("lid")$,
+  they enclose the upper half of a disk $cal(R)$ with area $pi/2$, as shown in @fig-ftcgreen-ex1.
+  Hence Green's Theorem on the two-part boundary states that
+  $ underbrace(int_(cal(C)) (2 y dif x + 3 x dif y), "what we want")
+    + int_(cal(C)_("lid")) (2 y dif x + 3 x dif y)
+    &= iint_(cal(R)) ((partial q)/(partial x) - (partial p)/(partial y)) dif A \
+    &= iint_(cal(R)) ((partial)/(partial x)(3x) - (partial)/(partial y)(2y)) dif A \
+    &= iint_(cal(R)) (3-2) dif A = iint_(cal(R)) dif A \
+    &= op("Area")(cal(R)) = pi/2. $
+  On the other hand, I claim that
+  $ int_(cal(C)_("lid")) (2 y dif x + 3 x dif y) = 0. $
+  This is easy to compute with direct parametrization:
+  if we parametrize the lid by $bf(r)(t) = (t, 0)$ for $-1 <= t <= 1$, for example, then
+  $ int_(cal(C)_("lid")) (2 y dif x + 3 x dif y)
+    &= int_(t=-1)^1 vec(2 dot 0, 3 dot t) dot bf(r)'(t) dif t
+    = int_(t=-1)^1 vec(0, 3t) dot vec(1, 0) dif t
+    = int_(t=-1)^1 0 dif t = 0. $
+  Indeed one can even see it from @fig-ftcgreen-ex1 directly,
+  since the vector field is perpendicular to the $x$-axis
+  along the entire lid, so the total work being $0$ is not a surprise.
+  Thus, the desired line integral is
+  $ underbrace(int_(cal(C)) (2 y dif x + 3 x dif y), "what we want")
+    &= iint_(cal(R)) ((partial q)/(partial x) - (partial p)/(partial y)) dif A
+      - int_(cal(C)_("lid")) (2 y dif x + 3 x dif y) \
+    &= pi/2 - 0 = #boxed[$ pi/2 $]. #qedhere $
+]
+
+
 
 == [EXER] Exercises
 
