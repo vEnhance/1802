@@ -77,20 +77,6 @@ I'm actually going to split it into two parts.
   Let $cal(R)$ denote the disk of radius $1$ centered at $(1,0)$.
   Express the region $cal(R)$ in polar coordinates.
 ]
-#soln[
-  Initially we have $(x,y)$ such that
-  $ (x - 1)^2 + y^2 <= 1. $
-  Expanding this equation gives
-  $ x^2 - 2 x + 1 + y^2 <= 1 ==> x^2 + y^2 <= 2 x . $
-  In polar coordinates, $x = r cos theta$ and $y = r sin theta$, so we substitute to get
-  $ r^2 <= 2 r cos theta . $
-  We need $cos theta >= 0$ to be nonnegative for this to be feasible,
-  and we take $-pi/2 <= theta <= pi/2$ as a result.
-  In that case the condition ends up becoming $ 0 <= r <= 2 cos theta. $
-
-  In conclusion, the answer is $cal(R)$ in polar coordinates
-  is exactly $ #boxed[$ -pi/2 <= theta <= pi/2 " and " r <= 2 cos theta $]. #qedhere $
-]
 
 #figure(
   image("figures/polar-offset.svg", width: auto),
@@ -99,14 +85,41 @@ I'm actually going to split it into two parts.
     but it turns out to be $r <= 2 cos theta$ for $-pi/2 <= theta <= pi/2$, which is much better than expected.],
 ) <fig-polar-offset>
 
-In other words, the graph of $r = 2 cos theta$ is actually just an offset circle.
-This is a bit of a surprise to people who are seeing it for the first time, and even a bit to me now.
-But you can actually see it from the geometry too.
-See @fig-polar-offset: if one lets $O=(0,0)$, $P$ be a point on the boundary of the circle,
-and then let $A = (2,0)$, then you do in fact get a right triangle $triangle O P A$
-with $angle P = 90 degree$, $O A = 2$, and $angle A O P = theta$.
-So the geometric picture matches the calculation we just did.
 
+#soln[
+  Here are two ways to proceed.
+
+  / Geometric approach:
+    See @fig-polar-offset.
+    It's clear from the figure we want $-pi/2 <= theta <= pi/2$.
+    If one lets $O=(0,0)$, $P$ be a point on the boundary of the circle,
+    and then let $A = (2,0)$ (so segment $A O$ is a diameter of the circle).
+    Then we fact get a right triangle $triangle O P A$ with
+    $ angle P = 90 degree, quad O A = 2, quad "and" angle A O P = theta. $
+    Hence, the boundary of our offset circle is given by $r = 2 cos theta$.
+    The disk (i.e. the part inside the boundary) is then
+    $ 0 <= r <= 2 cos theta. $
+
+
+  / Algebra approach:
+    Initially we have $(x,y)$ such that
+    $ (x - 1)^2 + y^2 <= 1. $
+    Expanding this equation gives
+    $ x^2 - 2 x + 1 + y^2 <= 1 ==> x^2 + y^2 <= 2 x . $
+    In polar coordinates, $x = r cos theta$ and $y = r sin theta$, so we substitute to get
+    $ r^2 <= 2 r cos theta . $
+    We need $cos theta >= 0$ to be nonnegative for this to be feasible,
+    and we take $-pi/2 <= theta <= pi/2$ as a result.
+    In that case the condition ends up becoming $ 0 <= r <= 2 cos theta. $
+
+  In conclusion, the answer is $cal(R)$ in polar coordinates is exactly
+  $ #boxed[$ -pi/2 <= theta <= pi/2 " and " r <= 2 cos theta $]. #qedhere $
+]
+
+In other words, the graph of $r = 2 cos theta$ is actually
+just an offset circle.
+This is a bit of a surprise to people who are seeing it for the first time,
+and even a bit to me now, but the geometry argument should justify why.
 
 Okay, here's the famous exercise I promised you.
 #sample[

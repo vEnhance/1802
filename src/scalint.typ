@@ -452,3 +452,11 @@ And here is an example that is a little less computationally intensive.
   - Compute the real number $k$ for which the point $P = (1, 3, k)$ lies on $cal(S)$.
   - Compute the tangent plane to $cal(S)$ at this point $P$.
 ]
+
+#exer[
+  Let $cal(S)$ be the unit sphere of radius $1$ and $A$ a point on it.
+  Calculate the average value of the length $P A$
+  across all points $P$ on the sphere.
+  (The average is defined as the scalar-field surface integral
+  $1/(op("SurfArea")(cal(S))) iint_(cal(S)) |P A| dif S$.)
+]

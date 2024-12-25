@@ -305,14 +305,100 @@ is defined as $1/(op("Vol")(cal(T))) iiint_(cal(T)) f dif V$.
 
 == [TEXT] Famous example: offset sphere
 
-Remember the famous example in @sec-offset-circle where
-we showed that in polar coordinates, we could draw a circle passing through the origin;
+Recall the famous example in @sec-offset-circle where we showed that in polar coordinates,
+we could draw a circle passing through the origin;
 we called it an "offset circle".
 There's a 3D analog of this with an offset sphere
 where you have a sphere that's sitting on the $x y$-plane.
 It's actually pretty much exactly the same.
 
-#todo[write this]
+#sample[
+  Let $cal(T)$ denote the solid ball of radius $1$ centered at $(0,0,1)$.
+  Express the region $cal(T)$ in spherical coordinates.
+]
+
+#figure(
+  [
+    #image("figures/polar-offset.svg", width: auto)
+    #image("figures/sph-offset.svg", width: auto)
+  ],
+  caption: [
+    The sketch of $(x-1)^2 + y^2 <= 1$ from @fig-polar-offset
+    is drawn along with a 3D version:
+    the solid ball $x^2 + y^2 + (z-1)^2 <= 1$,
+    which is a unit ball centered at $(0,0,1)$
+    and lying above and tangent to the $x y$-plane at $(0,0,0)$.
+    It corresponds to $rho <= 2 cos phi$.
+  ],
+) <fig-sph-offset>
+
+
+#soln[
+  Like in @sec-offset-circle,
+  we can do either an algebra approach or a geometric one.
+
+  / Geometric approach:
+    See @fig-sph-offset.
+    All the points of the sphere lie in the half-space $z >= 0$
+    which is described as requiring $0 <= phi <= pi/2$.
+    The value of $theta$ is irrelevant by rotational symmetry,
+    and can be anything from $0$ to $2 pi$.
+    So we need to figure out who $rho$ relates to $phi$.
+
+    Let $O = (0,0,0)$ and $A = (0,0,2)$.
+    Let $P$ be a point on the surface of the sphere.
+    Like before, we have
+    $ angle P = 90 degree, quad O A = 2, quad "and" angle A O P = phi. $
+    So the surface of the sphere are those points for which $rho = 2 cos phi$.
+    And the points _inside_ the ball are $0 <= rho <= 2 cos phi$, accordingly.
+
+  / Algebraic approach:
+    The $x y z$ coordinates of the ball are
+    $ x^2 + y^2 + (z-1)^2 <= 1. $
+    Recall the spherical coordinates transformation:
+    $ x = rho sin phi cos theta \, quad y = rho sin phi sin theta \, quad z = rho cos phi . $
+    Substituting these into the sphere's equation:
+    $ (rho sin phi cos theta)^2 + (rho sin phi sin theta)^2 + (rho cos phi - 1)^2 <= 1 . $
+    Expand and simplify:
+    $ 1 &>= rho^2 sin^2 phi cos^2 theta + rho^2 sin^2 phi sin^2 theta + (rho cos phi - 1)^2 \
+      &= rho^2 sin^2 phi (cos^2 theta + sin^2 theta) + (rho cos phi - 1)^2 \
+      &= rho^2 sin^2 phi + (rho cos phi - 1)^2 \
+      &= rho^2 sin^2 phi + rho^2 cos^2 phi - 2 rho cos phi + 1 \
+      &= rho^2 (sin^2 phi + cos^2 phi) - 2 rho cos phi + 1 \
+      &= rho^2 - 2 rho cos phi + 1. $
+    Rearranging, this gives
+    $ 0 &>= rho^2 - 2 rho cos phi = rho(rho  - 2 cos phi) <= 0 \
+      <==> 0 &<= rho <= 2 cos phi. $
+    In particular this requires $cos phi >= 0$ i.e. $phi <= theta/2$.
+
+  In conclusion, the answer is $cal(R)$ in polar coordinates is exactly
+  $ #boxed[$ 0 <= theta < 2 pi " and " 0 <= phi <= pi/2 " and " rho <= 2 cos theta $]. #qedhere $
+]
+
+The analogous famous exercise in 3D:
+#sample[
+  Let $cal(T)$ denote the solid ball of radius $1$ centered at $(0,0,1)$.
+  Calculate $ iiint_(cal(T)) sqrt(x^2+y^2+z^2) dif x dif y dif z. $
+]
+#soln[
+  As before, if we try to use $x y z$ integration it's a disaster,
+  but spherical coordinates are great because
+  $ rho = sqrt(x^2 + y^2 + z^2). $
+  We just saw that $cal(T)$ is given in spherical coordinates according to
+  $0 <= phi <= pi/2$, $0 <= theta <= 2pi$, $0 <= rho <= 2 cos phi$.
+  Thus, the integral becomes:
+  $ iiint_(cal(T)) rho dif V
+    &= iiint_(cal(T)) rho^3 sin phi dif rho dif phi dif theta \
+    &= int_(theta=0)^(2 pi) int_(phi=0)^(pi / 2) int_(rho=0)^(2 cos phi)
+      rho^3 sin phi dif rho dif phi dif theta \
+    &= int_(theta=0)^(2 pi) int_(phi=0)^(pi / 2)
+      sin phi [rho^4 / 4]_(rho=0)^(2 cos phi) dif phi dif theta \
+    &= int_(theta=0)^(2 pi) int_(phi=0)^(pi / 2)
+      sin phi dot (4 cos^4 phi) dif phi dif theta \
+    &= 4 int_(theta=0)^(2 pi) [ -1/5 cos^5 phi]_(phi=0)^(pi / 2) dif theta \
+    &= 4 int_(theta=0)^(2 pi) 1/5 dif theta \
+    &= #boxed[$ (8pi) / 5 $]. #qedhere $
+]
 
 == [TEXT] Spherical coordinates for gravity
 
@@ -323,18 +409,62 @@ $
   G_3 &:= G m iiint_(cal(T)) (z delta(x,y,z))/((x^2+y^2+z^2)^(3/2)) dif x dif y dif z.
 $
 
-I promised that spherical coordinates would make things cleaner.
-Let's make good on this promise for $G_3$ and do the change of variables:
-$ (z delta(x,y,z))/((x^2+y^2+z^2)^(3/2)) dif x dif y dif z
-  &= ((rho cos phi) delta(x,y,z))/(rho^3) (rho^2 sin phi dif rho dif phi dif theta) \
-  &= delta(x,y,z) sin phi cos phi  dif rho dif phi dif theta. $
+I didn't do any examples last section because using $x y z$ coordinates
+when you have $(x^2+y^2+z^2)^(3/2)$ is just way too annoying.
+However, in spherical coordinates, the equations become much more manageable.
+For example, the one for $G_3$ reads:
+#eqn[
+  $ G_3 &= G m iiint_(cal(T)) (z delta(x,y,z))/((x^2+y^2+z^2)^(3/2)) dif x dif y dif z \
+    &= G m iiint_(cal(T)) ((rho cos phi) delta(x,y,z))/(rho^3) (rho^2 sin phi dif rho dif phi dif theta) \
+    &= G m iiint_(cal(T)) delta(x,y,z) sin phi cos phi dif rho dif phi dif theta. $
+  <eqn-sph-G3>
+]
+Let's see it in action with an offset sphere.
 
-#todo[do some applications of this]
+#sample[
+  Suppose $cal(T)$ is a metal ball of radius $1$ of constant unit density,
+  and $P$ is a point of mass $m$ on its surface.
+  Calculate the magnitude of the force of gravity exerted on the point $P$.
+]
+
+#soln[
+  We use the offset sphere again: we pick coordinates so that $P = (0,0,0)$
+  (so the origin is the point $P$, _not_ the center of $cal(T)$).
+  The center of $cal(T)$ will instead be at $(0,0,1)$.
+  Then by symmetry, we have $G_1 = G_2 = 0$, and @eqn-sph-G3 just says
+  $ G_3 = G m iiint_(cal(T)) sin phi cos phi dif rho dif phi dif theta $
+  after setting the density to $1$.
+
+  Then we can put in the bounds of integration for the offset sphere:
+  $ G_3
+    &= G m int_(theta=0)^(2 pi) int_(phi=0)^(pi / 2) int_(rho=0)^(2 cos phi)
+    sin phi cos phi dif rho dif phi dif theta \
+    &= G m int_(theta=0)^(2 pi) int_(phi=0)^(pi / 2) (2 cos phi) dot
+    sin phi cos phi dif phi dif theta \
+    &= 2 G m int_(theta=0)^(2 pi) int_(phi=0)^(pi / 2) cos^2 phi sin phi dif phi dif theta \
+    &= 2 G m int_(theta=0)^(2 pi)
+    lr([-1/3 cos^3 phi])_(phi = 0)^(pi/2) dif theta \
+    &= 2 G m int_(theta = 0)^(2 pi) 1/3 dif theta \
+    &= (4 pi G m) / 3.
+  $
+  In other words, in the coordinate system we chose, gravity is given by
+  $ bf(G) = lr(angle.l 0, 0, (4 pi G m)/3 angle.r). $
+  The magnitude is $|bf(G)| = #boxed[$ (4 pi G m) / 3 $]. $
+]
 
 == [EXER] Exercises
 
-#sample[
+#exer[
   Consider a solid ball of radius $1$ and a line $ell$ through its center.
   Across all points $P$ inside the ball,
   compute the average value of the distance from $P$ to $ell$.
+  (The average is defined as
+  $1/(op("Vol")(cal(T))) iiint_(cal(T)) d(P) dif V$,
+  where $d(P)$ is the distance from $P$ to $ell$.)
+]
+
+#exer[
+  Suppose $cal(T)$ is a solid metal hemisphere of radius $1$ of constant unit density,
+  and $P$ is a point of mass $m$ at the center of the base of the hemisphere.
+  Calculate the magnitude of the force of gravity exerted on the point $P$.
 ]

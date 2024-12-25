@@ -18,3 +18,4 @@ draw(P--A, deepgreen);
 markrightangle(O, P, A, deepgreen);
 dot("$P$", P, dir(90));
 dot("$A=(2,0)$", A, dir(45), deepgreen);
+dot("$(1,0)$", (1,0), dir(45), blue);
