@@ -41,7 +41,7 @@ In the first weeks of 18.02, you will meet real numbers, vectors, and matrices;
 these are all different types of objects, and certain operations are defined
 (aka "allowed") or undefined (aka "not allowed")
 depending on the underlying types.
-Table @operations lists some common examples with vectors you've seen from precalculus.
+Table @table-operations lists some common examples with vectors you've seen from precalculus.
 
 #figure(
   table(
@@ -54,10 +54,9 @@ Table @operations lists some common examples with vectors you've seen from preca
     vector], [Length $d$ vector], [Length $d$ vector],
     [Add/subtract], [$M pm N$], [$m times n$ matrix], [$m times n$
     matrix], [$m times n$ matrix],
-    [Multiply], [$c bf(v)$], [Scalar], [Length $d$
-    vector], [Length $d$ vector],
-    [Multiply], [$a b$], [Scalar], [Scalar], [Scalar],
-    [Multiply], [$M N$], [$m times n$ matrix], [$n times p$ matrix], [$m times p$ matrix],
+    [Multiply], [$c bf(v)$ or $c dot bf(v)$], [Scalar], [Length $d$ vector], [Length $d$ vector],
+    [Multiply], [$a b$ or $a dot b$], [Scalar], [Scalar], [Scalar],
+    [Multiply], [$M N$ or $M dot N$], [$m times n$ matrix], [$n times p$ matrix], [$m times p$ matrix],
     [Dot product], [$bf(v) dot.op bf(w)$], [Length $d$ vector], [Length $d$ vector], [Scalar],
     [Cross product], [$bf(v) times bf(w)$], [Length $3$ vector], [Length $3$ vector], [Length $3$ vector],
     [Length/mag.], [$lr(|bf(v)|)$], [Any vector], [_n/a_], [Scalar],
@@ -65,7 +64,7 @@ Table @operations lists some common examples with vectors you've seen from preca
   ),
   caption: [Common linear algebra operations. For 18.02, "scalar" and "real number" are synonyms.],
   kind: table
-) <operations>
+) <table-operations>
 
 #digression[
   A common question at this point is how you are supposed to figure out
@@ -77,8 +76,8 @@ Table @operations lists some common examples with vectors you've seen from preca
   It seems like it would make sense.
 
   The answer is that you _don't_ have to figure out — you are _told_;
-  @operations isn't something that you derive.
-  That is, @operations consists of the _definitions_ which you have been given.
+  @table-operations isn't something that you derive.
+  That is, @table-operations consists of the _definitions_ which you have been given.
 
   (Or more sarcastically, it's all just a social construct.
   Well, it's bit more nuanced than that.
@@ -117,8 +116,8 @@ but $"kg" dot "meters" dot "seconds"^(- 1)$ on the right.
 
 For example, if you are reading your work and you see something like
 #eqn[
-  $ lr(|arrow(v) times arrow(p)|) = 9 arrow(p) $
-  <wrong-type>
+  $ lr(|bf(v) times bf(p)|) = 9 bf(p) $
+  <eqn-wrong-type>
 ]
 then you can immediately tell that there’s a mistake,
 because the two sides are incompatible —
@@ -129,8 +128,19 @@ the left-hand side is a real number (scalar), but the right-hand side is a vecto
 - Throughout this book, every time you meet a new operation,
   make sure you know what types of objects it takes as input and which it takes as output.
 - Whenever you write an equation, make sure it passes a type-check.
-  You can catch a lot of errors like @wrong-type using type safety alone.
+  You can catch a lot of errors like @eqn-wrong-type using type safety alone.
 
-== [EXER] Practice with type safety
+== [EXER] Exercises
 
-#todo[have a list of equations here, and ask to identify the type errors? or similar]
+#exer[
+  Let $bf(u)$, $bf(v)$, $bf(w)$ be vectors of the same length.
+  By using @table-operations, determine whether each of the following expressions is a
+  real number, a vector, or nonsense (type-error); there should be one of each.
+
+  - $(bf(u) dot bf(v)) dot bf(w)$
+  - $bf(u) dot bf(v) + bf(w)$
+  - $bf(u) dot (bf(v) + bf(w))$
+
+  (The symbol $dot$ confusingly can refer to three different things:
+  grade-school multiplication, scalar multiplication, or the dot product.)
+]

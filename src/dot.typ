@@ -61,7 +61,7 @@ I won't dwell on this proof too much in the interest of moving these notes forwa
   Confusingly, the multiplication $dot$ is also used for normal multiplication.
   This is why you need to always look at the types of objects
   so you know which $dot$ is happening.
-  To spell this out
+  To spell this out:
 
   - If $a$ and $b$ are two numbers, $a dot b = a b$ is _grade-school multiplication_,
     e.g. $3 dot 5 = 15$.
