@@ -90,7 +90,34 @@ We have two definitions in play and we want to show they coincide, which makes n
 So in what follows, our notation $bf(u) dot bf(v)$ will always refer to the
 _algebraic_ definition; and we will _prove_ that $bf(u) dot bf(v) = |bf(u)| |bf(v)| cos theta$.
 
-#todo[write this section]
+The algebraic definition is already enough to tell us that
+#eqn[
+  $ bf(w) dot bf(w) = |bf(w)|^2 $
+  <eqn-dot-sq>
+]
+by the Pythagorean theorem: if $bf(w) = angle.l a_1, ..., a_n angle.r $
+then both sides equal $a_1^2 + ... + a_n^2$.
+
+Let $C$ denote the origin, and let $A$ and $B$ denote the endpoints of $bf(u)$ and $bf(v)$
+when we draw them as arrows emanating from the origin.
+Hence $bf(v) - bf(u)$ is a vector pointing from $A$ to $B$.
+
+#figure(
+  image("figures/appendix-dotpf-loc.svg", width: auto),
+  caption: [We use the law of cosines on triangle $A B C$ together with
+    three applications of @eqn-dot-sq to show the geometric definition of dot product.],
+) <fig-appendix-dotpf-loc>
+
+We now use @eqn-dot-sq three times as follows:
+$ A B^2 &= (bf(v) - bf(u))(bf(v) - bf(u)) \
+  &= bf(v) dot bf(v) + bf(u) dot bf(u) - 2 bf(u) dot bf(v) \
+  &= C A^2 + C B^2 - 2 bf(u) dot bf(v). $
+However, the law of cosines on triangle $A B C$ also tells us that
+$ A B^2 = C A^2 + C B^2 - 2 (C A)(C B) cos theta $
+where $theta$ is the angle between $bf(u)$ and $bf(v)$.
+Setting the two equations for $A B^2$ equal gives
+$ bf(u) dot bf(v) = (C A)(C B) cos theta. $
+As $|bf(u)| = C A$ and $|bf(v)| = C B$, the proof is complete.
 
 == Deriving the algebraic definition of dot product from the geometric one (longer but easier to come up with) <appendix-dotpf-geo>
 
@@ -118,15 +145,16 @@ As a warmup, try to show that if $bf(u) = vec(a,b)$ is any vector, then $bf(u) d
 
 === Main proof
 
-#figure(
-  image("figures/r02-dotproof.svg", width: 75%),
-  caption: [Proof that the dot product is given by the projection],
-)
-
 For concreteness, specialize to $RR^2$ and consider $bf(u) dot bf(v)$
 where $bf(u) =  vec(a,b)$ is a unit vector (i.e. $bf(u) = 1$),
 and $bf(v) = vec(x,y)$ is any vector in $RR^2$.
 Then we want to show that the projection of $bf(v)$ onto $bf(u)$ has length $x a + y b$.
+See @fig-appendix-dotpf-proj.
+
+#figure(
+  image("figures/appendix-dotpf-proj.svg", width: 75%),
+  caption: [Proof that the dot product is given by the projection],
+) <fig-appendix-dotpf-proj>
 
 The basic idea is to decompose $bf(v) = x ee_1 + y ee_2$.
 The length of projection of $bf(v)$ onto $bf(u)$
