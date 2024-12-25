@@ -376,7 +376,7 @@ Know this going in to each of the concepts to follow.
 
 #figure(
   image("media/all-stokes.png", width: 80%),
-  caption: [It's all Stokes theorem.],
+  caption: [It's all Stokes' theorem.],
 )
 
 == [TEXT] Stay determined

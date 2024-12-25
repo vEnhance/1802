@@ -166,7 +166,7 @@ label("$\bullet$ If {\color{red}$X \longrightarrow Y$} then
   $\int_{\operatorname{boundary}(\mathcal R)} {\color{red}X} = \int_{\mathcal R} {\color{red}Y}$.",
   (6.0,6.9), dir(0), fontsize(9pt));
 draw((8.0,8.2)--(5.8,8.2)--(5.8,6.5)--(14.2,6.5)--(14.2,8.2)--(12,8.2));
-label("Stokes Theorem", (10, 8.25));
+label("Stokes' Theorem", (10, 8.25));
 
 /* Include advertisement */
 label(minipage("\centering \fbox{\copyright{} 2025 Evan Chen} \\ \texttt{https://web.evanchen.cc/}", 4cm), (12.5,3.5), grey + fontsize(9pt));

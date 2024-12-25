@@ -17,7 +17,7 @@ This handout (and any other DLC's I write) are posted at
 
 = The last week of 18.02
 
-- Divergence theorem is on the final exam, but the crummy version of Stokes theorem
+- Divergence theorem is on the final exam, but the crummy version of Stokes' theorem
   (covered Friday, December 6, I think) is likely to _not_ be on the final.
   So I think we've covered all the material that will be on the exam.
 - The last lecture on Tuesday December 10 is still topic TBD, bun not proper course material.

@@ -92,7 +92,7 @@ The curl at each point is a 3D vector (i.e. the curl of a 3D vector field is its
       ((partial bf(r)_2) / (partial u) times (partial bf(r)_2) / (partial v)) dif u dif v) $
 ]
 
-Reasons to not be excited about the non-generalized Stokes theorem (hence the name "crummy"):
+Reasons to not be excited about the non-generalized Stokes' theorem (hence the name "crummy"):
 
 - Both sides require parametrization, so it's not as slick as FTC, Green, or divergence theorem,
   which were powerful because they let you skip the parametrization step.
@@ -113,6 +113,6 @@ Reasons to not be excited about the non-generalized Stokes theorem (hence the na
   $C$ is the parametrized curve $(e^(t^2 - t) - 1 , t^4 , sin (pi t))$
   with $0 lt.eq t lt.eq 1$.
 / 3.: Recall the statement of Stokes' theorem.
-  Verify the statement of Stokes theorem where $S$ is the upper hemisphere of the sphere of radius one
+  Verify the statement of Stokes' theorem where $S$ is the upper hemisphere of the sphere of radius one
   centered at the origin and $C$ is its boundary, for the vector field
   $upright(bold(F)) = angle.l x , y , z angle.r$.
