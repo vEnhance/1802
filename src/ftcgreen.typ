@@ -435,7 +435,7 @@ by adding the line segment from $(-1,0)$, to $(1,0)$.
   Let $cal(C)$ denote the semicircle.
   Because $cal(C)$ is not a closed loop, Green's Theorem does not apply directly.
   To use it, we instead add a new line segment $cal(C)_("lid")$
-  ponting from $(-1,0)$ to $(1,0)$.
+  pointing from $(-1,0)$ to $(1,0)$.
   Then if we consider _both_ $cal(C)$ and the new lid $cal(C)_("lid")$,
   they enclose the upper half of a disk $cal(R)$ with area $pi/2$, as shown in @fig-ftcgreen-ex1.
   Hence Green's Theorem on the two-part boundary states that
