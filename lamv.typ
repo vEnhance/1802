@@ -94,6 +94,8 @@ For comparison, Part Hotel corresponds to §13.6-13.9 and §17.1-§17.6 of #poon
 #pagebreak()
 #include "src/sph.typ"
 #pagebreak()
+#include "src/psurf.typ"
+#pagebreak()
 #include "src/scalint.typ"
 #pagebreak()
 #include "src/surfcross.typ"
