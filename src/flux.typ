@@ -33,7 +33,7 @@ For 18.02, the methods available to you will be
 (We'll explain what "oriented" means in the next section.)
 #typesig[
   Flux requires two inputs: an _oriented surface_ $cal(S)$
-  and a _vector field_ $bf(F)$
+  and a _vector field_ $bf(F)$.
 ]
 
 Yes, there's that hideous cross product again.
@@ -55,6 +55,12 @@ and also explain what the adjective "oriented".
 
 == [TEXT] Aquatic interpretation of flux
 
+Flip back to @fig-work-dot for a moment.
+Back when we were talking about the work integral
+$bf(F)(bf(r)(t)) dot bf(r)'(t)$,
+I told you to visualize the work as adding the dot products of the force vectors
+with tangent vectors.
+
 The interpretation here is similar to 2D flux.
 You should imagine the surface $cal(S)$ as some membrane in the water;
 then the flux measures the rate at which water moves through it.
@@ -75,17 +81,54 @@ the cross product from our parametrization could point in one of two opposite di
   which way you want the cross product of your parametrization to point.
 ]
 
+#figure(
+  image("figures/flux-cross-sign.svg", width: auto),
+  caption: [The normal vector from before, and its negation.
+    Note that when we swap $u$ and $v$,
+    the vector flips the other way to the negative.
+    Hence when parametrizing a surface, the order of $u$ and $v$ induces an orientation on the surface.
+  ],
+) <fig-flux-cross-sign>
+
 Algebraically, this corresponds to choosing the _order of $u$ and $v$_;
 as if you flip the order of the two parameters it will negate the entire cross product:
-$ ((partial bf(r))/(partial u) times (partial bf(r))/(partial v))
+$ (partial bf(r))/(partial u) times (partial bf(r))/(partial v)
   = - ((partial bf(r))/(partial v) times (partial bf(r))/(partial u)). $
 Hence the flux will get negated too.
-This sign issue is super disorienting because it wasn't present for work,
-where "start to stop" was pretty easy to think about.
+This sign issue is disorienting because it wasn't present for work,
+where "start to stop" was pretty easy to think about; we'll give more examples momentarily.
 
-#todo[this really needs a picture]
+Going back to our new flux integral, we need to visualize the dot products
+$ iint_(cal(R)) bf(F) dot ((partial bf(r))/(partial u) times (partial bf(r))/(partial v)) dif u dif v. $
+The $bf(F)$ is still the force vector,
+and as we describe earlier,
+the vector $ (partial bf(r))/(partial u) times (partial bf(r))/(partial v) $
+represents a normal vector to the surface at each point.
+We draw this in @fig-flux-in-field.
 
-I should probably give an example so this isn't so abstract.
+#figure(
+  image("figures/flux-in-field.svg", width: auto),
+  caption: [
+    Picture of a parametrized surface sitting in a vector field $bf(F)$.
+    At each point, we take the dot product
+    of the vector field $bf(F)$ at that point (drawn in black here)
+    with a normal vector on the surface given by the same cross product
+    that we considered for surface area (drawn in green here).
+    The flux can be thought of as the sum of all the dot products across the whole surface.
+  ],
+) <fig-flux-in-field>
+
+The dot product of @fig-flux-in-field should match your aquatic intuition.
+For our oriented surface, the dot product is large when the force is moving
+along the same direction as the normal vector.
+That matches our description of a water current puncturing the surface.
+On the other hand, if the force had been moving mostly parallel to the surface,
+then the dot products and hence flux are both close to zero.
+
+== [TEXT] More on orientation
+
+Here's another example of an orientation to make things less abstract.
+
 #example(title: [Example: Orienting a sphere])[
   Let's consider the sphere $x^2 + y^2 + z^2 = 1$ with $z > 0$.
   For each point $P$ on the sphere, the normal vector to the sphere at $P$
@@ -123,33 +166,18 @@ I should probably give an example so this isn't so abstract.
   so that whoever is computing the flux integral knows which way to take the cross product.
 ]
 
+In general, for surfaces where inward vs outward has an obvious meaning,
+the convention is usually "outward".
+But not all surfaces have an obvious inward vs outward
+(for example, the $x y$-plane given by $z = 0$),
+and in those cases an exam question should tell you which one to use for that question.
+
 #digression(title: [Digression: Comparison to 2D flux])[
   In 2D flux, we had a notion of "outside" vs "inside" even for curves $cal(C)$ that weren't closed,
   because we had a notion of $90 degree$ clockwise vs $90 degree$ counterclockwise.
   We don't have this in 3D space, sadly, which is why we resort to normal vectors instead.
 ]
 
-== [TEXT] Visualizing flux integrals via dot products
-
-Flip back to @fig-work-dot for a moment.
-Back when we were talking about the work integral
-$bf(F)(bf(r)(t)) dot bf(r)'(t)$,
-I told you to visualize the work as adding the dot products of the force vectors
-with tangent vectors.
-
-With our new flux integral, we need to visualize the dot products
-$ iint_(cal(R)) bf(F) dot ((partial bf(r))/(partial u) times (partial bf(r))/(partial v)) dif u dif v. $
-The $bf(F)$ is still the force vector.
-But what's the cross product supposed to be?
-Answer:
-#idea[
-  The vector $ (partial bf(r))/(partial u) times (partial bf(r))/(partial v) $
-  represents some normal vector to the surface at each point.
-]
-In other words, the tangent vectors in our work integral
-are now replaced by normal vectors to the surface.
-
-#todo[draw picture]
 
 == [TEXT] Magic formulas for the cross product (reprise)
 

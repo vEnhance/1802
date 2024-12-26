@@ -182,8 +182,8 @@ So now we prove the following.
 #memo(title: [Memorize: Curl of conservative field is zero])[
   Let $f : RR^3 -> RR$ be a function (aka scalar field),
   and let $nabla f$ be the corresponding conservative vector field.
-  Then (assuming $nabla f$ is continuously differentiable), the curl of $nabla f$ is zero,
-  i.e.
+  Then (assuming $nabla f$ is continuously differentiable),
+  the curl of $nabla f$ is $bf(0)$ at every point i.e.
   $ op("curl")(nabla f) = nabla times (nabla f) = bf(0). $
 ]
 #figure(
@@ -401,7 +401,7 @@ Instead we take the convention that
 ]
 It's still true (and indeed follows from the 3D version) that:
 #memo[
-  The curl of a conservative 2D vector field is zero.
+  The 2D scalar curl of a conservative 2D vector field is zero at every point.
 ]
 #figure(
   box(image("figures/gcd-cut-gc2.svg", width: auto), stroke: 1pt),

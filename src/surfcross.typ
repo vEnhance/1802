@@ -67,7 +67,7 @@ not just the absolute value.
   kind: table
 ) <table-surfcross-1>
 
-Recall the following geometric idea from the earlier @fig-scalint-mesh,
+Recall the following geometric idea from the earlier @fig-psurf-mesh,
 when we described where the cross product was coming from:
 #idea[
   The vector $frac(partial bf(r), partial u) times frac(partial bf(r), partial v)$

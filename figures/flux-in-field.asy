@@ -1,9 +1,10 @@
-size(12cm);
+size(13cm);
 usepackage("amsmath");
 usepackage("amssymb");
 
 import patterns;
 add("hatch",crosshatch(1.5pt, deepgreen));
+
 
 pair D = (2.4,3.5);
 pair A = (0,0);
@@ -12,6 +13,9 @@ pair C = D+B-A;
 
 pair[] Xs = { (1,0.1), (2,0), (3,-0.4), (4,-0.3), (5,0.1), (6,-0.2), (7,0.1) };
 pair[] Ys = { (1.7,2.8), (1.5,2.1), (1.1,1.4), (0.5,0.7) };
+
+pair Q = Xs[1]+Ys[2]-A;
+pair Ql = (0.86,4);
 
 guide g = A;
 for (int i=0; i<Xs.length; ++i) { g = g..Xs[i]; }
@@ -23,25 +27,25 @@ path west_border = g..A;
 
 path surf = west_border--south_border--(shift(B-A)*reverse(west_border))--(shift(D-A)*reverse(south_border))--cycle;
 
-pair Q = Xs[1]+Ys[2]-A;
-pair Ql = (0.86,4);
 
 // Shadow
 fill(surf, mediumgrey);
 fill(shift(0.3,-0.3)*surf, mediumgrey);
 
 pair Qb = Q-(0,3);
-draw(Q--Qb, darkgreen + 1.6, EndArrow(6), BeginMargin);
-label("$\boxed{
-\frac{\partial \mathbf{r}}{\partial v} \times \frac{\partial \mathbf{r}}{\partial u}
-= - \frac{\partial \mathbf{r}}{\partial u} \times \frac{\partial \mathbf{r}}{\partial v}
-}$", Qb, dir(-90), darkgreen);
 
 // Surface itself
 fill(surf, opacity(0.8)+palegreen);
 
-label("Point $\mathbf{r}(u,v)$ in $\mathcal{S}$", Ql, dir(Ql-Q), deepgreen);
-draw(Ql--Q, EndArrow(TeXHead), Margins);
+pair v = (-1.4, 2.5);
+for (int i=-2; i<6; ++i) {
+  for (int j=-2; j<2; ++j) {
+    pair T = Q + 2*(i,j);
+    draw(T--(T+v), rgb(0.6,0.6,0.9), EndArrow(TeXHead));
+  }
+}
+draw(Q--(Q+v), black+1.8, EndArrow(TeXHead, 4));
+label("$\mathbf{F}$", Q+v, dir(v), black);
 
 fill(
   shift(Ys[2])*subpath(south_border, 2, 3)
