@@ -5,7 +5,10 @@
 Some practice questions from topics through the entire course.
 Solutions are in @ch-sol-kilo.
 
-== Practice half-final (December 18, 2024)
+== Practice half-final
+
+This was a cumulative practice exam given on December 18, 2024 covering the whole course.
+It was about half the length of the final exam (which was 14 questions long).
 
 #exer[
   Give an example of a complex number $z$ whose
@@ -36,8 +39,8 @@ Solutions are in @ch-sol-kilo.
 ] <exer-mf-5>
 
 #exer[
-  Compute $ int_(x=0)^1 int_(y=x)^1 int_(z=y)^1 e^(z^3) dif z dif y dif x. $
-  (Recommended approach: change the order of integration.)
+  Use any method (recommended approach: change order of integration) to compute
+  $ int_(x=0)^1 int_(y=x)^1 int_(z=y)^1 e^(z^3) dif z dif y dif x. $
 ] <exer-mf-6>
 
 #exer[
@@ -54,14 +57,11 @@ Solutions are in @ch-sol-kilo.
   with normal vector oriented outwards (thus $cal(S)$ is the curved part of a cylinder).
   Compute the divergence of $bf(F)$.
   Then compute the flux of $bf(F)$ through $cal(S)$.
-
   (Recommended approach: add two "lids" to $cal(S)$, calculate flux through the lids by hand,
   then use the divergence theorem.)
 ] <exer-mf-8>
 
-
-
-== More practice questions
+== Miscellaneous practice questions
 
 #exerstar[
   Find all possible values of $a x + b y + c z$
@@ -106,7 +106,7 @@ Solutions are in @ch-sol-kilo.
 ]
 
 #exer[
-  Combine the previous two exercises to figure out what $int_(x=-oo)^(x+oo) e^(-x^2) dif x$ is.
+  Combine the previous two exercises to figure out what $int_(x=-oo)^(+oo) e^(-x^2) dif x$ is.
 ]
 
 #exerstar[

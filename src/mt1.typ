@@ -1,16 +1,14 @@
 #import "@local/evan:1.0.0":*
 
-= Exercises up to midterm exam 1 <ch-mt1>
+= Challenge review problems for Parts Alpha, Bravo, and Charlie <ch-mt1>
 
-This is a set of six more difficult problems that I crafted for my students
-to help them prepare for their first midterm exam
-(which covered all the linear algebra parts and complex numbers).
+This set of problems is intended to be more difficult.
 You can try them here if you want, but don't be discouraged if you find the problems tricky.
-All of these are much harder than anything that showed up on their actual midterm.
+All of these are much harder than anything that showed up on the actual midterm.
+Solutions to these six exercises are in @ch-sol-mt1.
 
 (Suggested usage: think about each for 20-30 minutes, then read the solution.
-I hope this helps you digest the material; I tried to craft problems
-that teach deep understanding and piece together multiple ideas,
+I tried to craft problems that teach deep understanding and piece together multiple ideas,
 rather than just using one or two isolated recipes.)
 
 #exer[
@@ -48,5 +46,3 @@ rather than just using one or two isolated recipes.)
   Suppose we plot these three numbers in the complex plane.
   Compute the area of the triangle they enclose.
 ] <exer-mt1p6>
-
-Solutions to these six exercise are in @ch-sol-mt1.

@@ -1,11 +1,14 @@
 #import "@local/evan:1.0.0":*
 
-= Practice midterm 2 <ch-mt2>
+= Practice midterm for Parts Delta, Echo, Foxtrot <ch-mt2>
 
-Here is a practice midterm that I wrote to help students prepare for the actual exam.
-(It was given on October 21, 2024 from 3:05pm-3:55pm.)
-Unlike @ch-mt1, these are meant to be normal-ish difficulty questions,
-not special hand-crafted challenges.
+This is a practice midterm that was given on October 21, 2024,#footnote[
+  A cute quote from an anonymous student:
+  "lowk i feel like ur so cracked every review thing u give is like 3x harder
+  than the actual thing 😭 but thank you for hosting these ur amazing".
+]
+covering topics in Parts Delta, Echo, Foxtrot.
+Solutions are in @ch-sol-mt2.
 
 #exer[
   A butterfly is fluttering in the $x y$ plane with position given by
@@ -45,5 +48,3 @@ not special hand-crafted challenges.
   Let $cal(H)$ denote the tangent plane to this surface at $O$.
   Give an example of two nonzero tangent vectors to this surface at $O$ whose span is $cal(H)$.
 ] <exer-mt2p6>
-
-Solutions are in @ch-sol-mt2.

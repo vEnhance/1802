@@ -1,9 +1,11 @@
 #import "@local/evan:1.0.0":*
 
-= Practice midterm 3 <ch-mt3>
+= Practice midterm for 2D topics in Parts Golf, Hotel, India <ch-mt3>
 
+This is a practice midterm that was given on November 13, 2024,
+covering topics in Part Golf, Hotel, and India,
+but only the 2D topics in these parts.
 Solutions are in @ch-sol-mt3.
-Note that this midterm only covers 2D topics.
 
 #exer[
   Another butterfly is fluttering in the $x y$ plane
