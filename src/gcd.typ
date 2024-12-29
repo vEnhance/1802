@@ -476,3 +476,8 @@ The aquatic interpretation is the same too, just in 2D bodies of water.
 ]
 
 == [EXER] Exercises
+
+#exer[
+  Consider the force of gravity $bf(G)$ exerted by a point mass of mass $m$ at a point $O$.
+  Show that $ nabla dot bf(G) = 0 $ at every point _except_ $O$.
+] <exer-gravity-div1>

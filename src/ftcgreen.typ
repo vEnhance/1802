@@ -402,7 +402,7 @@ So with this, we can present a recipe that condenses these together.
 We'll give several more examples of this in @sec-recipe-2d-flux,
 where we contrast it to another type of line integral, the "2D flux".
 
-== [TEXT] Advanced technique: sealing regions
+== [TEXT] Advanced technique: sealing regions <sec-green-seal-region>
 
 Green's Theorem is powerful enough that it can be handy
 even if the path $cal(C)$ is not a closed loop:

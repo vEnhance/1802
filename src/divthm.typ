@@ -65,7 +65,7 @@ i.e. it should not extend infinitely in any direction.
 
 ]
 
-And that's pretty much it!
+We can jump straight into examples now!
 
 #sample[
   Let $R > 0$ be given.
@@ -129,7 +129,7 @@ And that's pretty much it!
     = 2 iiint_(cal(T)) x dif V + 2 iiint_(cal(T)) y dif V + 2 iiint_(cal(T)) z dif V. $
   Due to the symmetry of the cube:
   $ iiint_(cal(T)) x dif V = iiint_(cal(T)) y dif V = iiint_(cal(T)) z dif V = a^3 / 2. $
-  If you can't see it symmetry, you could also just explicitly calculate
+  If you can't see it by symmetry, you could also just explicitly calculate
   $ iiint_(cal(T)) x dif V
     = (int_(x=0)^a x dif x) (int_(y=0)^a dif y) (int_(z=0)^a dif z)
     = a/2 dot a dot a = a^3/2. $
@@ -156,7 +156,7 @@ And that's pretty much it!
   Compute the flux of the vector field
   $bf(F) (x , y , z) = vec(x y , y z , z x)$ through
   the closed surface $cal(S)$ formed by the paraboloid $z = x^2 + y^2$ and its
-  circular base $z = 0$, where $x^2 + y^2 <= 1$, using the Divergence Theorem.
+  circular base $z = 0$, where $x^2 + y^2 <= 1$.
 ]
 
 #soln[
@@ -210,22 +210,84 @@ against the purple faces of the cube, so there's the flux integral we wanted.
 
 == [RECAP] All the methods for flux
 
-== [TEXT] Piecing things together
+Here's a complete recipe for flux, augmented with the two shortcuts we described.
+
+#recipe(title: [Recipe for flux, with shortcuts])[
+  Suppose we need to calculate the flux of $bf(F)$ through a surface $cal(S)$.
+
+  1. If $cal(S)$ is a closed region, use the divergence theorem to avoid parametrization:
+    $ oiint_(cal(S)) bf(F) dot bf(n) dif S =
+      = underbrace(iiint_(cal(T)) nabla dot bf(F) dif V,
+      = iiint_(cal(T)) ((partial p) / (partial x) + (partial q) / (partial y) + (partial r) / (partial z)) dif V). $
+  2. If $bf(F) dot bf(n)$ happens to equal the same constant $c$ everywhere
+    (as described in @sec-flux-to-surf),
+    then output $c$ times the surface area of $cal(S)$, i.e.
+    $ oiint_(cal(S)) bf(F) dot bf(n) dif S = c op("SurfArea")(cal(S)). $
+  3. Otherwise, fall back to the parametrization recipe described in @sec-recipe-flux-param.
+    To describe it again here briefly:
+    1. Get the cross product $(partial bf(r))/(partial u) times (partial bf(r))/(partial v)$
+      by either looking it up from @table-surfcross-2 or by computing it by hand,
+      for a parametrization $bf(r) : cal(R) -> RR^3$ of the surface $cal(S)$.
+    2. If necessary, negate the cross product to match the orientation of the surface specified in the question.
+    3. Compute the dot product $bf(F) dot ((partial bf(r))/(partial u) times (partial bf(r))/(partial v))$.
+    4. Integrate over the region $cal(R)$ using any method for double integrals.
+
+]
+
+== [TEXT] Advanced technique: sealing regions
+
+This is the 3D analog of @sec-green-seal-region:
+in some situations if you have a surface $cal(S)$ which isn't closed,
+you can seal it by adding some part to the surface.
+The picture you can have in your head is that you have a bowl or something,
+and then you add a layer of plastic wrap on the bowl.
+
+#sample[
+  Let $bf(F)$ be the vector field defined by:
+  $ bf(F) (x,y,z) = angle.l x + tan z, y + e^z, 1 angle.r. $
+  Consider the hemisphere $cal(S)$ defined by the equation:
+  $ x^2 + y^2 + z^2 = 1 quad upright("with") quad z >= 0 $
+  oriented outward.
+  Compute the flux of $bf(F)$ through $cal(S)$.
+]
+
+#figure(
+  image("figures/divthm-bowl.svg", width: auto),
+  caption: [Sealing a bowl with a lid. Like microwaving food, though the bowl is upside-down.],
+) <fig-divthm-bowl>
+
+
+#soln[
+  Our picture is that $cal(S)$ looks like an upside-down bowl.
+  So we add a lid $cal(S)_"lid"$ consisting of the disk $z = 0$ and $x^2 + y^2 <= 1$.
+  This encloses a solid region $cal(T)$, half a solid ball of radius $1$,
+  as in @fig-divthm-bowl.
+
+  The divergence of $bf(F)$ is:
+  $ nabla dot bf(F) = (partial) / (partial x)(x + tan z) + (partial) / (partial y)(y + e^z)
+    + (partial) / (partial z) (1) = 1 + 1 + 0 = 2 $
+  which is constant.
+  So the integral of the divergence over $cal(T)$ is just
+  $ iiint_(cal(T)) nabla dot bf(F) dif V = 2 dot op("Vol")(cal(T))
+    = 2 dot (1/2 dot 4/3 pi dot 1^3) = 4/3 pi. $
+
+  Meanwhile, $cal(S)_("lid")$ (which we orient downwards) is a flat surface,
+  so its flux integral is easy to calculate:
+  from @table-surfcross-2 we choose $bf(n) dif S = angle.l 0, 0, -1 angle.r$ and hence
+  $ iint_(cal(S)_("lid")) bf(F) dot bf(n) dif S
+    &= iint_(x^2+y^2 <= 1) angle.l x + tan 0, y + e^0, 1 angle.r dot angle.l 0,0, -1 angle.r dif x dif y
+    &= iint_(x^2+y^2 <= 1) (-1) dif x dif y = -pi. $
+
+  So when we apply the divergence theorem, we get that
+  $ underbrace(iint_(cal(S)) bf(F) dot bf(n) dif S, "Answer")
+    + underbrace(iint_(cal(S)_("lid")) bf(F) dot bf(n) dif S, = - pi)
+    = underbrace(iiint_(cal(T)) nabla dot bf(F) dif V, = 4 / 3 pi). $
+  Hence, we get the answer
+  $ iint_(cal(S)) bf(F) dot bf(n) dif S
+    = 4 / 3 pi - (-pi) = #boxed[$ 7 / 3 pi $]. #qedhere $
+]
 
 == [EXER] Exercises
-
-#exer[
-  Calculate the flux of the vector field
-  $bf(F) (x , y , z) = vec(x^2 y , y z^2 , e^x)$
-  through the closed surface $S$ consisting of the upper hemisphere
-  $z = sqrt(1 - x^2 - y^2)$ and the circular base $z = 0$, where
-  $x^2 + y^2 <= 1$, using the Divergence Theorem.
-] <exer-divthm-1>
-
-#exer[
-  Consider the force of gravity $bf(G)$ exerted by a point mass of mass $m$ at a point $O$.
-  Show that $ nabla dot bf(G) = 0 $ at every point _except_ $O$.
-] <exer-gravity-div1>
 
 #exer[
   Suppose $cal(S)_1$ and $cal(S)_2$ are two closed surfaces that don't intersect

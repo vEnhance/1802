@@ -267,7 +267,7 @@ So the third and fourth column are only helpful insomuch as they might make the
 formula for the cylinder and sphere easier to remember or more conceptually intuitive.
 But for practical calculation they are redundant and hence useless.
 
-== [RECIPE] Recipe for flux integrals with bare-hands parametrization
+== [RECIPE] Recipe for flux integrals with bare-hands parametrization <sec-recipe-flux-param>
 
 We go back to recipe format now.
 

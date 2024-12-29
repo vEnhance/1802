@@ -316,6 +316,6 @@ If you want to see examples of this written out, see @ch-lineex.
 There I do four examples in full, using every applicable cell of @tab-work-vs-flux.
 Since it's so long, I broke it out into a separate skippable chapter.
 
-== [TEXT] Piecing things together
-
 == [EXER] Exercises
+
+// another sealing region exercise here would be good
