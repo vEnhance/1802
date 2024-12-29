@@ -290,8 +290,17 @@ and then you add a layer of plastic wrap on the bowl.
 == [EXER] Exercises
 
 #exer[
+  Let $cal(S)$ be the part of the surface $z = e^(x^2+y^2)$ where $z <= e$,
+  with normal vector oriented downwards.
+  Let $bf(F)(x,y,z) = angle.l cos(z^2) - x, sin(z^2) - y, 2z angle.r$.
+  Compute the flux of $bf(F)$ through $cal(S)$.
+  (Recommended approach: sealing.)
+]
+
+#exer[
   Suppose $cal(S)_1$ and $cal(S)_2$ are two closed surfaces that don't intersect
   and such that $cal(S)_2$ is contained inside $cal(S)_1$.
+  Orient both surfaces outwards.
   Let $O$ be a point contained inside $cal(S)_2$.
   Consider the force of gravity $bf(G)$ exerted by a point mass of mass $m$ at $O$.
   Show that
