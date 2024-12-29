@@ -262,6 +262,14 @@ And here is an example that is a little less computationally intensive.
 ]
 
 #exer[
+  Let $-1 < a < b < 1$ be real numbers.
+  Consider the portion of the unit sphere $x^2+y^2+z^2=1$
+  that lies between the planes $z = a$ and $z = b$.
+  Show that its surface area is equal to $k dot (b-a)$ for some constant $k$,
+  and compute $k$.
+]
+
+#exer[
   Let $cal(S)$ be the unit sphere of radius $1$ and $A$ a point on it.
   Calculate the average value of the length $P A$
   across all points $P$ on the sphere.

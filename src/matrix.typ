@@ -161,10 +161,10 @@ Here's more examples.
 
 #remark(title: [Remark: This is where the rotation matrix comes from])[
   If you redo this question with $30 degree$ replaced by any angle $theta$, you get the answer
-  $ T = mat(cos(theta), cos(theta+90 degree); sin(theta), sin(theta+90 degree)). $
+  $ T = mat(cos theta, cos(theta+90 degree); sin theta, sin(theta+90 degree)). $
   So this is the matrix that corresponds to rotation.
   However, in the literature you will often see this rewritten as
-  $ T = mat(cos(theta), -sin(theta); sin(theta), cos(theta)) $
+  $ T = mat(cos theta, -sin theta; sin theta, cos theta) $
   to get rid of the $+90 degree$ offsets.
   That's fine, but I think it kind of hides where the formula for rotation matrix comes from, personally.
 ]
@@ -290,4 +290,11 @@ it's what happens if you generalize @pop3 to eight variables
 
 #exer[
   If $A$ is a $3 times 3$ matrix with determinant $2$, what values could $det(10 A)$ take?
+]
+
+#exer[
+  Let $T : RR^2 -> RR^2$ be the linear map that rotates each vector in $RR^2$
+  by $30 degree$ counterclockwise about the origin,
+  then reflects around the line $y = x$.
+  Write $T$ as a $2 times 2$ matrix.
 ]
