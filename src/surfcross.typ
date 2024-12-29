@@ -381,5 +381,13 @@ Let's write a new recipe for surface area now that we have @table-surfcross-1.
 == [EXER] Exercises
 
 #exer[
-  Find the surface area of the surface defined by $z = x^2+y^2 <= 1$.
+  Compute the surface area of the surface defined by $z = x^2+y^2 <= 1$.
 ] <exer-surface-area-paraboloid>
+
+#exer[Archimedes hat-box theorem][
+  Let $-1 < a < b < 1$ be real numbers.
+  Consider the portion of the unit sphere $x^2+y^2+z^2=1$
+  that lies between the planes $z = a$ and $z = b$.
+  Show that its surface area is equal to $k dot (b-a)$ for some constant $k$,
+  and compute $k$.
+]
