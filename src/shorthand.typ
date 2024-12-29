@@ -90,13 +90,11 @@ So here's the deal.
   The result is @table-shorthand.
   Feel free to print it and have it with you.
   Note that you haven't met most of these yet, so only the first row will make sense for now.
-- Second, I'm going to avoid the shorthand when I can --- for example,
+- Second, I'm going to avoid the shorthand when I first introduce things --- for example,
   I deliberately avoided any shorthand on @fig-int-chart-triangle
   and the later @fig-int-chart-stokes ---
-  but there are some cases where it's hard to avoid the shorthand,
-  and I might occasionally relent.
-- Third, in each place where the shorthand _could_ be used for the first time,
-  I'll mention it.
+  but later on I'll start to use it as you get more practice.
+- Third, in each place where the shorthand _could_ be used for the first time, I'll mention it.
   That is, I'll let you know every time a new row of the table is introduced.
 
 But again, I think the thing to take away is that each of these is a shorthand.
