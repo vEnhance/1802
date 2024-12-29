@@ -185,7 +185,7 @@ But the equations are the same.
 
 #sample[
   For which real number $c$ is the vector field
-  $ bf(F) = vec(e^(cos x) + x y^5, c x^2 y^4 + log(y^2+1) )$
+  $ bf(F) = vec(e^(cos x) + x y^5, c x^2 y^4 + log(y^2+1) ) $
   a conservative vector field?
 ]
 #soln[
@@ -198,10 +198,52 @@ But the equations are the same.
 
 #sample[
   For which real numbers $a$, $b$ is the vector field
-  $ bf(F) = vec(y^2 + a x^2 z + e^x, b x y + y cos (y z),  x^3 z + z cos (y z)). $
+  $ bf(F) = vec(y^2 + a x^2 z + e^x, b x y + z cos (y z),  x^3 + y cos (y z)). $
   a conservative vector field?
 ]
-#todo[write solution]
+#soln[
+  Let
+  $ p &= y^2 + a x^2 z + e^x \
+    q &= b x y + z cos (y z) \
+    r &= x^3 + y cos (y z). $
+  We need to seek $(a,b)$ such that the curl $nabla dot bf(F)$ is zero, that is
+  $ (partial r) / (partial y) - (partial q) / (partial z)
+    = (partial q) / (partial x) - (partial p) / (partial y)
+    = (partial p) / (partial z) - (partial r) / (partial x) = 0. $
+  We compute all six partial derivatives in turn.
+
+  - For the first component of the curl to be zero, we need the following to partials to be equal:
+    $ (partial r) / (partial y) &= (partial) / (partial y) (x^3 + y cos (y z)) = cos (y z) + y (- sin (y z)) z = cos (y z) - y z sin (y z) \
+      (partial q) / (partial z) &= (partial) / (partial z) (b x y + z cos (y z)) = cos (y z) + z (- sin (y z)) y = cos (y z) - y z sin (y z). $
+    But this is always true, regardless of $a$ and $b$.
+  - For the second component of the curl to be zero,
+    we need the following to partials to be equal:
+    $ (partial p) / (partial z) &= (partial) / (partial z) (y^2 + a x^2 z + e^x) = a x^2 \
+      (partial r) / (partial x) &= (partial) / (partial x) (x^3 + y cos (y z)) = 3 x^2. $
+    This occurs if and only if $a = 3$.
+  - For the third component of the curl to be zero,
+    we need the following to partials to be equal:
+    $ (partial q) / (partial x) &= (partial) / (partial x) (b x y + z cos (y z)) = b y \
+      (partial p) / (partial y) &= (partial) / (partial y) (y^2 + a x^2 z + e^x) = 2 y. $
+    This occurs if and only if $b = 2$.
+
+  Hence $#boxed[$ (a,b) = (3,2) $]$ is the only answer.
+]
+
+#digression[
+  In particular, there should be a potential function for each of the two examples above.
+
+  In the first example, it's not easy to _write down_ a potential function,
+  because $e^(cos x)$ has no easily-expressed anti-derivative.
+  (Though $log(y^2+1)$ does; it turns out to be $y(log(y^2+1)-2)+2arctan(y)$.)
+  So we are content that some potential function _does exist_
+  even if it cannot be written down using familiar functions.
+
+  On the other hand, the second example can be integrated readily enough,
+  by following the procedure in @ch-antigrad:
+  one should get $ f(x,y,z) = e^x + cos(y z) + x^3 z + x y^2 + C. $
+]
+
 
 == [TEXT] Green's theorem (2D only)
 
