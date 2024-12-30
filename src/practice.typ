@@ -82,6 +82,15 @@ It was about half the length of the final exam (which was 14 questions long).
   is tangent to $cal(S)$ at the origin.
 ]
 
+#exer[
+  Let $a$, $b$, $c$ be real numbers and
+  consider the function $ f(x,y) = a e^(x+y) + b e^(x-y). $
+  It turns out that the level curve of $f$ for the value $c$
+  is tangent to the line $y = 5x$ at the origin,
+  and also passes through the point $(log 6, log 3)$.
+  Compute $a$, $b$, and $c$.
+]
+
 #exerstar[
   Does there exist a differentiable function $f : RR^2 -> RR$
   such that _every_ point in $RR^2$ is a saddle point?

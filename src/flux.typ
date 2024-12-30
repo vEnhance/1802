@@ -413,11 +413,9 @@ Let's give one example corresponding to each row of @table-surfcross-2.
 
   Meanwhile, the force vector at each point is just
   $ bf(F)(bf(r)(y,z)) = vec(e^3, e^y, e^z). $
-
-  The force dot product of force with this is
+  The dot product is then
   $ bf(F) dot ((partial bf(r)) / (partial z) times (partial bf(r)) / (partial y))
     = vec(e^3, e^y, e^z) dot vec(-1, 0, 0) = -e^3. $
-
   Hence, the flux we seek is
   $ iint_(cal(S)) bf(F) dot bf(n) dif S
     &= iint_(y^2 + z^2 <= 25) -e^3 dif y dif z \

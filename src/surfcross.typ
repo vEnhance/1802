@@ -386,7 +386,7 @@ Let's write a new recipe for surface area now that we have @table-surfcross-1.
 
 #exer[Archimedes hat-box theorem][
   Let $-1 < a < b < 1$ be real numbers.
-  Show that the following two surfaces have the same surface are:
+  Show that the following two surfaces have the same surface area:
 
   - The portion of the unit sphere $x^2+y^2+z^2=1$ that lies between the planes $z = a$ and $z = b$.
   - The portion of the cylinder $x^2+y^2=1$ that lies between the planes $z = a$ and $z = b$.

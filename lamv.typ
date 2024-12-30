@@ -132,7 +132,7 @@ For comparison, Part Juliett corresponds to §17.7, §18, §19, §21 of #poonen.
 #pagebreak()
 
 #part[Part Lima: Solutions]
-#include "src/sol-alpha.typ"
+#include "src/sol-alfa.typ"
 #pagebreak()
 #include "src/sol-bravo.typ"
 #pagebreak()

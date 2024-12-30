@@ -1,6 +1,6 @@
 #import "@local/evan:1.0.0":*
 
-= Challenge review problems for Parts Alpha, Bravo, and Charlie <ch-mt1>
+= Challenge review problems for Parts Alfa, Bravo, and Charlie <ch-mt1>
 
 This set of problems is intended to be more difficult.
 You can try them here if you want, but don't be discouraged if you find the problems tricky.
