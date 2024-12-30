@@ -26,7 +26,7 @@ So philosophically, a $0$-dimensional integral is just a finite sum of $f$ at so
 This might seem stupid that I bring up this degenerate case,
 but it turns out later when we cover div/grad/curl the $0$-dimensional case is relevant.
 
-Here's a giant chart in @fig-int-chart-triangle.
+Here's a giant chart in @poster-triangle.
 (The chart is so big it doesn't quite fit in the page,
 but you can download a
 #link("https://web.evanchen.cc/textbooks/poster-ints.pdf")[large PDF version]).
@@ -37,7 +37,7 @@ but you can download a
     For each $0 <= d <= n <= 3$, the kind of integral is drawn and named.
     Download at #url("https://web.evanchen.cc/textbooks/poster-ints.pdf").
   ]
-) <fig-int-chart-triangle>
+) <poster-triangle>
 
 This chart has ten different kinds of integrals,
 one for each $(d,n)$ with $0 <= d <= n <= 3$.
@@ -97,11 +97,11 @@ Most of part Golf will be dedicated towards double and triple integrals instead.
 
 == [TEXT] Warning about the bottom trio <sec-warning-trio>
 
-The integrals in @fig-int-chart-triangle would be better called
+The integrals in @poster-triangle would be better called
 *scalar-field line integral* and *scalar-field surface integral* to emphasize
 that this is integration for a _scalar_ function $f : RR^2 -> RR$ or $f : RR^3 -> RR$.
 The reason you won't see this term much is the following important caveat
-*the line integral and surface integral in @fig-int-chart-triangle are used rarely*.
+*the line integral and surface integral in @poster-triangle are used rarely*.
 
 In 18.02 the only cases where we use these are:
 - Arc length (for $d=1$) and surface area (for $d=2$)
@@ -112,12 +112,12 @@ In this book, this will happen in @ch-scalint, and then
 after that the line and surface integrals will
 always be the *vector field* variant instead (in Part India and Juliett).
 If you want to flip ahead,
-take a glance at @fig-int-chart-stokes and @table-purples.
+take a glance at @poster-stokes and @table-purples.
 
 == [TEXT] Idea of how these are computed when $d = n$ and $n >= 2$
 
 So as I just said, focus for now on $d = n = 2$ or $d = n = 3$
-(the double and triple integral cells in chart @fig-int-chart-triangle).
+(the double and triple integral cells in chart @poster-triangle).
 
 The easiest cases are when the region you're integrating is a rectangle or prism.
 Despite looking scary because of the number of integral signs,
@@ -148,7 +148,7 @@ or you are trying to do a *volume integral* over the ball $x^2+y^2+z^2 <= 1$ for
 
 So to summarize
 #idea[
-  Whenever you try to compute a multivariable integral in @fig-int-chart-triangle,
+  Whenever you try to compute a multivariable integral in @poster-triangle,
   your goal is to translate it into a rectangular-looking single/double/triple integral,
   then evaluate by using your old 18.01 methods multiple times.
 ]

@@ -3,24 +3,24 @@
 = Work (aka line integrals), and how to compute them with bare hands <ch-work>
 
 This chapter defines a so-called _line integral_,
-the first of the two purple pictures in our poster @fig-int-chart-stokes.
+the first of the two purple pictures in our poster @poster-stokes.
 For now, we'll only view this cell in isolation,
 so we'll give you the definition and show you how to use it with bare-hands.
 
 However, it's worth saying now: *there will be shortcuts*
 to computing line integrals that bypass the work of parametrization.
-Those shortcuts are given by the _red arrows_ in the @fig-int-chart-stokes.
+Those shortcuts are given by the _red arrows_ in the @poster-stokes.
 In fact, the entire next chapter, @ch-ftcgreen, is dedicated to these shortcuts.
 
 == [TEXT] Work <sec-work-def>
 
-We now define the leftmost purple pictures in our poster @fig-int-chart-stokes.
+We now define the leftmost purple pictures in our poster @poster-stokes.
 When we have a vector field $bf(F) : RR^n -> RR^n$
 as a path $bf(r) : RR -> RR^n$ through it, we can define the *work* on it.
 
 #figure(
   box(image("figures/work-cut.svg", width: auto), stroke: 1pt),
-  caption: [The work integral circled from the giant poster in @fig-int-chart-stokes.],
+  caption: [The work integral circled from the giant poster in @poster-stokes.],
 )
 
 #definition(title: [Definition of work])[

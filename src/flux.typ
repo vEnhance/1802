@@ -3,11 +3,11 @@
 = Flux <ch-flux>
 
 We now discuss (3D) flux, the final type of vector field integral that we haven't seen yet.
-This is the final cell in the poster @fig-int-chart-stokes that we haven't met yet.
+This is the final cell in the poster @poster-stokes that we haven't met yet.
 
 #figure(
   box(image("figures/flux-cut.svg", width: auto), stroke: 1pt),
-  caption: [The flux integral for a surface circled in our poster @fig-int-chart-stokes.],
+  caption: [The flux integral for a surface circled in our poster @poster-stokes.],
 )
 
 This chapter will be pretty reminiscent of @ch-work.

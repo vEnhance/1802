@@ -23,7 +23,7 @@ It corresponds to a statement for the red arrow shown below.
 #figure(
   box(image("figures/work-cut-ftc.svg", width: auto), stroke: 1pt),
   caption: [The FTC for line integrals is the Stokes statement
-    for the "grad" red arrows in the poster @fig-int-chart-stokes.],
+    for the "grad" red arrows in the poster @poster-stokes.],
 ) <fig-work-ftc-red-arrow>
 
 #memo(title: [Memorize: FTC for line integrals])[
@@ -252,7 +252,7 @@ joining the 2D work integral to an area integral.
 #figure(
   box(image("figures/work-cut-greens.svg", width: auto), stroke: 1pt),
   caption: [Green's theorem is the Stokes result for the above red arrow
-    from the poster @fig-int-chart-stokes.],
+    from the poster @poster-stokes.],
 )
 
 Here is what it says.

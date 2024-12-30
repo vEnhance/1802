@@ -183,7 +183,7 @@ where one takes a line or surface integral over the entire field.
 That's when the type signatures go crazy.
 
 In order for this to be even remotely memorable,
-what I'm going to do is augment the previous @fig-int-chart-triangle
+what I'm going to do is augment the previous @poster-triangle
 with pictures corresponding to the situations in which we might integrate a vector field.
 The new chart can also be downloaded as a
 #link("https://web.evanchen.cc/textbooks/poster-stokes.pdf")[large PDF version].
@@ -191,12 +191,12 @@ The new chart can also be downloaded as a
 #figure(
   image("figures/integrals-stokes.svg", width: 100%),
   caption: [
-    Upgraded @fig-int-chart-triangle with vector fields.
+    Upgraded @poster-triangle with vector fields.
     Download at #url("https://web.evanchen.cc/textbooks/poster-stokes.pdf").
   ]
-) <fig-int-chart-stokes>
+) <poster-stokes>
 
-There are two new features of @fig-int-chart-stokes compared to the old version:
+There are two new features of @poster-stokes compared to the old version:
 the three purple pictures and the six red arrows.
 We'll define them all over the next few sections, so just a few words now.
 
@@ -236,7 +236,7 @@ This is summarized in @table-purples.
   ),
   caption: [What the various kinds of integrals are used for.
     The integrals with ❌ markers never appear in 18.02,
-    so they don't appear in the chart @fig-int-chart-stokes either.
+    so they don't appear in the chart @poster-stokes either.
     (In 18.02 it could happen that line and surface integrals are used for scalar fields
     if you need mass of a wire or metal plate, but that's quite rare I think.)],
   kind: table
@@ -246,7 +246,7 @@ This bears repeating:
 #idea[
   We'll pretty much not use the scalar field integrals besides for arc length and surface area.
   In other words, you can mostly ignore the green pictures in
-  the poster @fig-int-chart-stokes that got replaced by purple ones.
+  the poster @poster-stokes that got replaced by purple ones.
 ]
 
 === The six red arrows
@@ -278,12 +278,12 @@ However, I want tell you _in advance_ that every time we meet a red arrow,
 there will be a case of Stokes' theorem that applies to it.
 
 #memo(title: [Memorize: Two red arrows gives zero])[
-  In @fig-int-chart-stokes,
+  In @poster-stokes,
   if you follow two red arrows consecutively, you get zero.
 ]
 
 #memo(title: [Memorize: Generalized Stokes' Theorem, for 18.02])[
-  In @fig-int-chart-stokes, take any of the six red arrows
+  In @poster-stokes, take any of the six red arrows
   #text(rgb("ff0000"))[$X -> Y$].
   Let $cal(R)$ be a compact region.
   Then the integral of $X$ over the *boundary* of $cal(R)$
@@ -370,7 +370,7 @@ which is the 18.01 fundamental theorem of calculus),
 because there are several undefined terms.
 Instead, treat this as a template for all the theorem statements you are going to learn soon:
 #idea[
-  Every red arrow in the poster @fig-int-chart-stokes has an associated Stokes result.
+  Every red arrow in the poster @poster-stokes has an associated Stokes result.
 ]
 Know this going in to each of the concepts to follow.
 
@@ -382,9 +382,9 @@ Know this going in to each of the concepts to follow.
 == [TEXT] Stay determined
 
 This is probably super overwhelming right now,
-and @fig-int-chart-stokes might be frightening to look at
+and @poster-stokes might be frightening to look at
 because there's so much information in it.
-Don't worry, we'll take @fig-int-chart-stokes apart one piece
+Don't worry, we'll take @poster-stokes apart one piece
 at a time over the rest of the semester.
 
 - In @ch-gcd, I'll tell you how to compute each of grad, curl, div.
@@ -401,11 +401,11 @@ at a time over the rest of the semester.
 
 #exer[
   Take a few deep breaths, touch some grass, and have a nice drink of water, so that
-  you can look at @fig-int-chart-stokes without feeling fear.
+  you can look at @poster-stokes without feeling fear.
 ] <exer-touchgrass>
 
 #exer[
-  Print out a copy of the high-resolution version of @fig-int-chart-stokes
+  Print out a copy of the high-resolution version of @poster-stokes
   (which can be downloaded at #url("https://web.evanchen.cc/textbooks/poster-stokes.pdf"))
   and hang it in your room.
 ] <exer-poster>

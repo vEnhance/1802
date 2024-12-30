@@ -78,8 +78,8 @@ I can't imagine how annoying this is to someone learning the subject for the fir
       [$(90 degree "clockwise rotation of" bf(r)'(t)) dif t$]
   ),
   caption: [A bunch of shorthands you'll meet later.
-    Note that pretty much there is one shorthand for each kind of integral in @fig-int-chart-triangle.
-    In Part India when the upgraded poster @fig-int-chart-stokes is introduced,
+    Note that pretty much there is one shorthand for each kind of integral in @poster-triangle.
+    In Part India when the upgraded poster @poster-stokes is introduced,
     each of the new kinds of integrals (the purple pictures) also has a new shorthand.],
   kind: table
 ) <table-shorthand>
@@ -91,8 +91,8 @@ So here's the deal.
   Feel free to print it and have it with you.
   Note that you haven't met most of these yet, so only the first row will make sense for now.
 - Second, I'm going to avoid the shorthand when I first introduce things --- for example,
-  I deliberately avoided any shorthand on @fig-int-chart-triangle
-  and the later @fig-int-chart-stokes ---
+  I deliberately avoided any shorthand on @poster-triangle
+  and the later @poster-stokes ---
   but later on I'll start to use it as you get more practice.
 - Third, in each place where the shorthand _could_ be used for the first time, I'll mention it.
   That is, I'll let you know every time a new row of the table is introduced.

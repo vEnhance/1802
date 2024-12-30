@@ -22,7 +22,7 @@ Which is an even bigger profit --- no parametrization, no cross product table, e
 
 #figure(
   box(image("figures/divthm-cut.svg", width: auto), stroke: 1pt),
-  caption: [The highlighted arrow for the divergence theorem in our poster @fig-int-chart-stokes.],
+  caption: [The highlighted arrow for the divergence theorem in our poster @poster-stokes.],
 )
 
 Here's the result:

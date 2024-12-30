@@ -2,7 +2,7 @@
 
 = Scalar-field line and surface integrals <ch-scalint>
 
-Think back to @fig-int-chart-triangle.
+Think back to @poster-triangle.
 So far we've talked about everything except the three entries
 labeled "line integral" and "surface integral".
 This chapter will talk about them.

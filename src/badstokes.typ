@@ -5,7 +5,7 @@
 _This topic was excluded from the final exam for 18.02 in Fall 2024,
 so this chapter is just a brief summary for interest._
 
-All the red arrows in @fig-int-chart-stokes are special cases of
+All the red arrows in @poster-stokes are special cases of
 what _mathematicians_ refer to as generalized Stokes' theorem.
 Despite this, we confusingly call the final red arrow "Stokes' theorem" as well.
 I'll use the phrase "classical" to indicate this came first historically.
