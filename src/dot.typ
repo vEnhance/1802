@@ -272,7 +272,7 @@ is just always true.
     and the denominator is a number (it's a squared length),
     so the entire fraction is a number.
     This fraction then gets multiplied onto a vector $bf(w)$, so the output type
-    is a vector (actually a multiple of $bf(w)$.
+    is a vector (actually a multiple of $bf(w))$.
 ]
 #warning[
   It's possible to write the projection formula written in other equivalent ways, e.g.
