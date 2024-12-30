@@ -338,7 +338,7 @@ in vague non-precise terms (we'll make precise later), for each of these six red
   Let $bf(r)_2(u,v)$ parametrizes some two dimensional surface $cal(S)$ (like a metal sheet),
   and suppose further that the _boundary_ of this surface is parametrized by a curve $bf(r)_1(t)$
   (e.g. the edges of the sheet).
-  Then the crummy version of _Stokes' theorem_ says that
+  Then the classical version of _Stokes' theorem_ says that
   $ int_(t="start time")^("stop time") bf(F)(bf(r)_1(t)) dot bf(r)'_1(t) dif t
     = iint_(cal(S)) (nabla times bf(F))(bf(r)_2(u,v)) dot lr(((partial bf(r)_2)/(partial u) times (partial bf(r)_2)/(partial v))) dif u dif v. $
   The nonsense expression $nabla times bf(F)$ is called the curl, defined next chapter in @ch-gcd.

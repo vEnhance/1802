@@ -20,7 +20,6 @@ For 18.02, the methods available to you will be
   - Even here, magic formulas can save you a lot of work --- see @table-surfcross-2.
 - Shortcut: Transforming to a surface area integral (covered in @sec-flux-to-surf)
 - Shortcut: The divergence theorem, by converting to a 3D volume integral (covered in the next chapter @ch-divthm)
-- Shortcut: Crummy Stokes' theorem, if the vector field happens to be a curl (covered in @ch-badstokes)
 
 == [TEXT] The definition of flux using bare-hands parametrization
 

@@ -386,8 +386,8 @@ Let's write a new recipe for surface area now that we have @table-surfcross-1.
 
 #exer[Archimedes hat-box theorem][
   Let $-1 < a < b < 1$ be real numbers.
-  Consider the portion of the unit sphere $x^2+y^2+z^2=1$
-  that lies between the planes $z = a$ and $z = b$.
-  Show that its surface area is equal to $k dot (b-a)$ for some constant $k$,
-  and compute $k$.
+  Show that the following two surfaces have the same surface are:
+
+  - The portion of the unit sphere $x^2+y^2+z^2=1$ that lies between the planes $z = a$ and $z = b$.
+  - The portion of the cylinder $x^2+y^2=1$ that lies between the planes $z = a$ and $z = b$.
 ]

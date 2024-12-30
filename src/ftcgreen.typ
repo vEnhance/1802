@@ -514,3 +514,11 @@ by adding the line segment from $(-1,0)$, to $(1,0)$.
   $ bf(F)(x,y) = vec(sin(e^x) + cos(e^x), arctan(y)) $
   conservative?
 ]
+
+#exerstar[Shoelace formula][
+  Suppose $cal(P) = P_1 P_2 ... P_n$ is a convex $n$-gon ($n >= 3$) in $RR^2$, oriented counterclockwise.
+  Let $P_i = (x_i, y_i)$ for $i = 1, ..., n$.
+  Use Green's theorem to prove the following formula for the area of the polygon:
+  $ op("Area")(cal(P)) = sum_(i=1)^n (x_(i-1) y_i - x_i y_(i-1)). $
+  (Here $x_0 = x_n$ and $y_0 = y_n$.)
+]
