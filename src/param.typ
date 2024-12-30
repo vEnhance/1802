@@ -479,7 +479,7 @@ Let's see this.
   We can expand the terms inside the square root:
   $ (1 - cos (t))^2 + sin^2 (t) = 1 - 2 cos (t) + cos^2 (t) + sin^2 (t) . $
   Using the identity $sin^2 (t) + cos^2 (t) = 1$, this simplifies to:
-  $ 1 - 2 cos (t) + 1 = 2 - 2 cos (t)) . $
+  $ 1 - 2 cos (t) + 1 = 2 - 2 cos (t) . $
   The trick is to use the half-angle formula to convert this to
   $ 1 - cos(t) = 2sin^2(t/2) ==> sqrt(2 - 2 cos(t)) = sqrt(4sin^2(t/2)) = lr(|2 sin(t/2)|). $
   Hence, the integral now becomes:
