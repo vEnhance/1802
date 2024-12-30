@@ -87,7 +87,7 @@ For example, what's the set of vectors perpendicular to $vec(1,2,3)$?
 That's the same as requiring
 $ 0 = vec(x,y,z) dot vec(1,2,3) = x + 2 y + 3 z. $
 So the plane $x + 2 y + 3 z = 0$ passes through the origin and has
-normal vector is $vec(1,2,3)$.
+normal vector $vec(1,2,3)$.
 
 What about something like $x + 2 y + 3 z = 6$?
 Analogous to last section different ways to write it are:
