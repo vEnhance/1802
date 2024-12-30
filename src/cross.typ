@@ -126,12 +126,12 @@ and not even talk about the corresponding geometry.
   detmat(ee_1, ee_2, ee_3; 1, 2, 3; 4, 5, 6) \
   &= detmat(2, 3; 5, 6) ee_1
     - detmat(1, 3; 4, 6) ee_2 + detmat(1, 2; 4, 5) ee_3 \
-  &= -3 ee_1 + 6ee_2 - 3ee_3 = vec(-3,6,3). #qedhere $
+  &= -3 ee_1 + 6ee_2 - 3ee_3 = vec(-3,6,-3). #qedhere $
 ]
 As a sanity check for the geometry definition, you can verify that indeed
 this vector is perpendicular to both $bf(v)$ and $bf(w)$ using the dot product:
-$ vec(-3,6,3) dot vec(1,2,3) &= (-3)(1) + (6)(2) + (3)(3) = 0 \
-  vec(-3,6,3) dot vec(4,5,6) &= (-3)(4) + (6)(5) + (3)(6) = 0. $
+$ vec(-3,6,-3) dot vec(1,2,3) &= (-3)(1) + (6)(2) + (-3)(3) = 0 \
+  vec(-3,6,-3) dot vec(4,5,6) &= (-3)(4) + (6)(5) + (-3)(6) = 0. $
 
 == [SIDENOTE] Outline of derivation of the cross product formula
 
