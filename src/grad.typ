@@ -424,13 +424,6 @@ Let's summarize the last few sections.
 ]
 
 #exer[
-  Let $f(x,y,z)$ be a differentiable function, and let $g(x,y,z) = e^(f(x,y,z))$.
-  Let $P$ be any point in $RR^3$.
-  Suppose $f(P) = 2$, and $nabla f(P)$ is a unit vector.
-  Compute the magnitude of $nabla g(P)$.
-]
-
-#exer[
   Let $a$, $b$, $c$ be real numbers and
   consider the function $ f(x,y) = a e^(x+y) + b e^(x-y). $
   It turns out that the level curve of $f$ for the value $c$

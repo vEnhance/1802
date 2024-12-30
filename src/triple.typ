@@ -319,6 +319,6 @@ So we'll punt all the examples to next chapter, @ch-sph.
 #exer[
   A ball of radius $R$ is given.
   A cylindrical hole of radius $a$ (where $0 < a < R$)
-  is drilled through it to get a bead.
+  is drilled through the center of the ball to get a bead.
   Compute the volume of the bead in terms of $a$ and $R$.
 ]

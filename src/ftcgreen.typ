@@ -505,8 +505,6 @@ by adding the line segment from $(-1,0)$, to $(1,0)$.
     &= pi/2 - 0 = #boxed[$ pi/2 $]. #qedhere $
 ]
 
-
-
 == [EXER] Exercises
 
 #exer[
@@ -516,9 +514,11 @@ by adding the line segment from $(-1,0)$, to $(1,0)$.
 ]
 
 #exerstar[Shoelace formula][
-  Suppose $cal(P) = P_1 P_2 ... P_n$ is a convex $n$-gon ($n >= 3$) in $RR^2$, oriented counterclockwise.
-  Let $P_i = (x_i, y_i)$ for $i = 1, ..., n$.
-  Use Green's theorem to prove the following formula for the area of the polygon:
+  Let $n >= 3$ be an integer and
+  suppose $cal(P) = P_1 P_2 ... P_n$ is a convex $n$-gon in $RR^2$,
+  where the vertices $P_i = (x_i, y_i)$ are labeled counterclockwise.
+  Use Green's theorem to prove the following formula for the area of $cal(P)$:
   $ op("Area")(cal(P)) = sum_(i=1)^n (x_(i-1) y_i - x_i y_(i-1)). $
-  (Here $x_0 = x_n$ and $y_0 = y_n$.)
+  Here $x_0 = x_n$ and $y_0 = y_n$ by convention,
+  so the $i=1$ summand is $x_n y_1 - x_1 y_n$.
 ]
