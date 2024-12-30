@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -euxo pipefail
 
-readarray -t ANSWER_KEY_TEX < <(git ls-files 'answerkeys/r??s.tex')
-latexmk -cd "${ANSWER_KEY_TEX[@]}"
+#readarray -t ANSWER_KEY_TEX < <(git ls-files 'answerkeys/r??s.tex')
+#latexmk -cd "${ANSWER_KEY_TEX[@]}"
 
 make all
 readarray -t TARGET_FILES <targets.txt
