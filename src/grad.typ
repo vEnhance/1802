@@ -401,7 +401,8 @@ Let's summarize the last few sections.
 == [EXER] Exercises
 
 #exer[
-  Find the tangent plane to the sphere $x^2 + y^2 + z^2 = 14$ at the point $(1,2,3)$.
+  Compute the equation of the tangent plane to the sphere $x^2 + y^2 + z^2 = 14$
+  at the point $(1,2,3)$.
 ]
 
 #exer[
@@ -426,7 +427,7 @@ Let's summarize the last few sections.
   Let $f(x,y,z)$ be a differentiable function, and let $g(x,y,z) = e^(f(x,y,z))$.
   Let $P$ be any point in $RR^3$.
   Suppose $f(P) = 2$, and $nabla f(P)$ is a unit vector.
-  Find the magnitude of $nabla g(P)$.
+  Compute the magnitude of $nabla g(P)$.
 ]
 
 #exer[
@@ -435,5 +436,5 @@ Let's summarize the last few sections.
   It turns out that the level curve of $f$ for the value $c$
   is tangent to the line $y = 5x$ at the origin,
   and also passes through the point $(log 6, log 3)$.
-  Find $a$, $b$, and $c$.
+  Compute $a$, $b$, and $c$.
 ]
