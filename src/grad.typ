@@ -202,7 +202,7 @@ so I waited until after I had defined the gradient to write the recipe.
   $ underbrace(vec(12,-3), = nabla f(2,-1)) dot underbrace(vec(0.01, -0.01), =bf(v))
     = (12 dot 0.01 + (-3) dot (-0.01)) = 0.15. $
   Therefore,
-  $ f(2.01, -1.01) approx underbrace(f(2,-1), = 9) + 0.15 = 9.14. #qedhere $
+  $ f(2.01, -1.01) approx underbrace(f(2,-1), = 9) + 0.15 = #boxed[$ 9.15 $]. #qedhere $
 ]
 
 #sample[
@@ -216,10 +216,10 @@ so I waited until after I had defined the gradient to write the recipe.
   $ nabla f(0,0) = vec(e^0 sin 0, e^0 cos 0) = vec(0,1). $
   The target point $(0.04, 0.03)$ differs from the starting point $(0,0)$ by $(0.04, 0.03)$.
   So the approximate change in $f$ is given by
-  $ underbrace(vec(1,0), = nabla f(0,0)) dot underbrace(vec(0.04, 0.03), =bf(v))
-    = 0 dot 0.04 + 1 dot 0.03 = 0.04. $
+  $ underbrace(vec(0,1), = nabla f(0,0)) dot underbrace(vec(0.04, 0.03), =bf(v))
+    = 0 dot 0.04 + 1 dot 0.03 = 0.03. $
   Therefore,
-  $ f(0.04, 0.03) approx underbrace(f(0,0), =777) + 0.03 = 777.03. #qedhere $
+  $ f(0.04, 0.03) approx underbrace(f(0,0), =777) + 0.03 = #boxed[$ 777.03 $]. #qedhere $
 ]
 
 == [TEXT] Gradient descent
