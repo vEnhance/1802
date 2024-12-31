@@ -40,7 +40,7 @@ except that one should imagine the grid is superimposed onto the surface $cal(S)
 (rather than laying flat in 2D).
 The same explanation should then carry over verbatim.
 
-== [TEXT] Reasons to not be excited about classical Stokes' theorem
+== [TEXT] Reasons to not be stoked about classical Stokes' theorem
 
 Unlike the other big-name theorems we've seen (FTC, Green, and divergence theorem),
 the classical Stokes' theorem does not make for good exam questions, for a few reasons:
