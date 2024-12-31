@@ -197,14 +197,14 @@ Without "slope", you cannot notice these dependences by sight for $n >= 3$, so u
   Is $vec(13, 37)$, $vec(42, 88)$ a basis for $RR^2$?
 ]
 #soln[
-  Yes because $detmat(13, 37; 42, 88) = 13 dot 88 - 37 dot 42 != 0$.
+  Yes, because $detmat(13, 37; 42, 88) = 13 dot 88 - 37 dot 42 != 0$.
 ]
 
 #sample[
   Is $bf(v)_1 = vec(1,3,4)$, $bf(v)_2 = vec(10,1,11)$, $bf(v)_3 = vec(-9,10,1)$ a basis for $RR^3$?
 ]
 #soln[
-  No because
+  No, because
   $ detmat(1, 3, 4; 10, 1, 11; -9, 10, 1)
     &= 1 detmat(1, 11; 10, 1) - 3 detmat(10, 11; -9, 1) + 4 detmat(10, 1; -9, 10) \
     &= 1(10-11) - 3(10+99) + 4(100+9) = 0. #qedhere $
@@ -213,7 +213,7 @@ Without "slope", you cannot notice these dependences by sight for $n >= 3$, so u
   Is $vec(3,42,18)$, $vec(1,53,17)$, $vec(71,91,13)$ a basis for $RR^3$?
 ]
 #soln[
-  No because
+  Yes, because
   $ detmat(3,1,71; 42,53,91; 18,17,13) = "ugly arithmetic" = -18522 != 0. #qedhere $
 ]
 
