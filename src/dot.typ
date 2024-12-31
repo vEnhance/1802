@@ -333,6 +333,11 @@ Let's also do the example in @fig-dot-project2.
   Find the projection of $vec(123,456,789)$ in the direction of $ee_1$.
 ]
 
+#exer[
+  Let $bf(w) = vec(3,4)$.
+  Compute all unit vectors $bf(v)$ in $RR^2$ for which $bf(v) dot bf(w) = 3$.
+]
+
 #exerstar[
   Let $bf(v) = vec(8, 9, 10)$. Suppose that
   $ op("proj")_(bf(w)) (bf(v)) = vec(3,5,t) $
