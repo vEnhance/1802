@@ -72,7 +72,7 @@ I won't dwell on this proof too much in the interest of moving these notes forwa
 ]
 
 #example[
-  Let's find the dot product of $bf(v) = vec(-5, 5 sqrt(3))$
+  Let's compute the dot product of $bf(v) = vec(-5, 5 sqrt(3))$
   and $bf(w) = vec(7sqrt(3), -7)$, both ways.
 
   - The algebraic definition is easy:
@@ -105,7 +105,7 @@ I won't dwell on this proof too much in the interest of moving these notes forwa
 ]
 
 #example[
-  Let's find the dot product of $bf(v) = vec(1, 2)$ and $bf(w) = vec(-6, 3)$ both ways.
+  Let's compute the dot product of $bf(v) = vec(1, 2)$ and $bf(w) = vec(-6, 3)$ both ways.
   See @fig-dot-ex2.
 
   - The algebraic definition is easy:
@@ -135,7 +135,7 @@ so if you want to see whether two vectors are perpendicular in $RR^3$,
 you'll want to use the dot product.
 
 #sample[
-  Find the real number $t$ such that $vec(1,2,3)$ and $vec(4,5,t)$ are perpendicular.
+  Compute the real number $t$ such that $vec(1,2,3)$ and $vec(4,5,t)$ are perpendicular.
 ]
 #soln[
   We need $1 dot 4 + 2 dot 5 + 3 dot t = 0$, so $t = -14/3$.
@@ -330,7 +330,7 @@ Let's also do the example in @fig-dot-project2.
 ]
 
 #exer[
-  Find the projection of $vec(123,456,789)$ in the direction of $ee_1$.
+  Compute the projection of $vec(123,456,789)$ in the direction of $ee_1$.
 ]
 
 #exer[
@@ -342,5 +342,5 @@ Let's also do the example in @fig-dot-project2.
   Let $bf(v) = vec(8, 9, 10)$. Suppose that
   $ op("proj")_(bf(w)) (bf(v)) = vec(3,5,t) $
   for some real number $t$.
-  Compute $t$, and find all possibilities for the vector $bf(w)$.
+  Compute $t$, and compute all possibilities for the vector $bf(w)$.
 ]

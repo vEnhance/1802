@@ -130,7 +130,7 @@ This just means you have to pick the number $d$ to match:
 ]
 
 #sample[
-  Find the equation of the plane parallel to $x + 2 y + 3 z = 100$
+  Compute the equation of the plane parallel to $x + 2 y + 3 z = 100$
   which passes through the point $(1, 4, 9)$.
 ]
 #solution[
@@ -147,7 +147,7 @@ There's a classical exercise that's used to test understanding of normal vectors
 and projections, which is to find the distance from a point to a plane.
 
 #sample[
-  Find the distance from the point $(7, 8, 5)$ to the plane $x + 2 y + 3 z = 0$.
+  Compute the distance from the point $(7, 8, 5)$ to the plane $x + 2 y + 3 z = 0$.
 ]
 #soln[
   The plane $x + 2 y + 3 z = 0$ has a normal vector $bf(n)$
@@ -181,7 +181,7 @@ and projections, which is to find the distance from a point to a plane.
 Here's the same exercise with one change: we change to $x + 2 y + 3 z = 60$.
 This means we'll have to pick a point on the plane besides the origin.
 #sample[
-  Find the distance from the point $(7, 8, 9)$ to the plane $x + 2 y + 3 z = 60$.
+  Compute the distance from the point $(7, 8, 9)$ to the plane $x + 2 y + 3 z = 60$.
 ]
 #soln[
   As before, the plane $x + 2 y + 3 z = 60$ has a normal vector $bf(n)$
@@ -228,7 +228,7 @@ numbers and get a general formula, which means that doing it with specific numbe
 is sort of a fool's errand. Let's just do them all at once.
 
 #sample[
-  Find the distance from a point $(x_0 , y_0 , z_0)$ to the plane
+  Compute the distance from a point $(x_0 , y_0 , z_0)$ to the plane
   defined by the equation $ a x + b y + c z = d. $
   Give the answer in terms of $a$, $b$, $c$, $d$, $x_0$, $y_0$, $z_0$.
 ]

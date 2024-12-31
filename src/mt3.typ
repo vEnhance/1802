@@ -32,7 +32,7 @@ Solutions are in @ch-sol-mt3.
 
 #exer[
   Let $cal(C)$ denote any path from $(0,0)$ to $(pi,pi)$.
-  Find the unique function $h(x)$ for which
+  Determine the unique function $h(x)$ for which
   $bf(F)(x,y) = angle.l x y + cos(x), h(x) + cos(y) angle.r$ is conservative,
   and moreover $int_(cal(C)) bf(F) dot dif bf(r) = 0$.
 ] <exer-mt3-consv>

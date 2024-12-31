@@ -261,7 +261,7 @@ To repeat the story:
 ]
 
 #sample[
-  Find all eigenvalues and eigenvectors of $ A = mat(4, 1; 2, 3). $
+  Compute all eigenvalues and eigenvectors of $ A = mat(4, 1; 2, 3). $
 ]
 #soln[
   We follow the recipe:
@@ -292,7 +292,7 @@ To repeat the story:
 ]
 
 #sample[
-  Find the eigenvalues and eigenvectors of the matrix $ A = mat(3, 3; 4, - 1). $
+  Compute the eigenvalues and eigenvectors of the matrix $ A = mat(3, 3; 4, - 1). $
 ]
 #soln[
   We follow the recipe:
@@ -333,7 +333,7 @@ To repeat the story:
 ]
 
 #sample[
-  Find the eigenvalues and eigenvectors of the matrix
+  Compute the eigenvalues and eigenvectors of the matrix
   $ A = mat(2, 9; - 1, 8). $
 ]
 
@@ -367,7 +367,7 @@ To repeat the story:
 ]
 
 #sample[
-  Find the eigenvalues and eigenvectors of the matrix
+  Compute the eigenvalues and eigenvectors of the matrix
   $A = mat(1, 2, 0; 0, 3, 0; 0, 1, 4)$.
 ]
 
@@ -430,7 +430,7 @@ Up until now I picked examples for which the solutions turn out nicely.
 Most of the time it's not like that though.
 
 #sample[
-  Find the eigenvalues and eigenvectors of the matrix
+  Compute the eigenvalues and eigenvectors of the matrix
   $A = mat(1, 2; 4, 7)$.
 ]
 
@@ -566,7 +566,7 @@ The answer is that you just get some complex numbers instead.
 
 
 #sample[
-  Find the eigenvalues and eigenvectors of the matrix
+  Compute the eigenvalues and eigenvectors of the matrix
   $ A = mat(1 / 2, - sqrt(3) / 2; sqrt(3) / 2, 1 / 2). $
 ]
 
@@ -714,7 +714,7 @@ But I'll show you how to do it with eigenvectors.
   Compute the eigenvalues and eigenvectors of the $3 times 3$ matrix $ mat(1,2,3;2,4,6;3,6,9). $
 ]
 #exerstar[
-  Find the eigenvectors and eigenvalues of the $6 times 6$ matrix
+  Compute the eigenvectors and eigenvalues of the $6 times 6$ matrix
   $ mat(5,0,0,0,0,0; 0,-9,0,0,0,0; 0,0,5,0,0,0; 0,0,0,0,0,0; 0,0,0,0,8,1; 0,0,0,0,0,8). $
   (You can do this question without using any determinants.)
 ]

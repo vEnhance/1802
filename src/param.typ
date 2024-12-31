@@ -460,7 +460,7 @@ Let's see this.
   A wheel of radius $1$ starts centered at $(0,1)$
   and moves in the $+x$ direction with constant speed $1$.
   Let $P$ be a point on the rim of the wheel initially at $(0,0)$.
-  Find the total arc length of the trajectory of the point $P$
+  Compute the total arc length of the trajectory of the point $P$
   from time $t = 0$ to $t = 2 pi$.
 ]
 #soln[
@@ -501,7 +501,7 @@ Usually the strategy is to pick one that makes subsequent calculation easier.
 
 #sample[
   Let $cal(C)$ be the line segment starting at $(0,0,0)$ and ending at $(100, 200, 300)$.
-  Find any parametrization $bf(r)(t)$ for $cal(C)$.
+  Give any parametrization $bf(r)(t)$ for $cal(C)$.
 ]
 #soln[
   The parametrization should start at $(0,0,0)$, end at $(100, 200, 300)$
@@ -526,7 +526,7 @@ Usually the strategy is to pick one that makes subsequent calculation easier.
 
 #sample[
   Let $cal(C)$ be the line segment starting at $(7,8,9)$ and ending at $(107, 208, 309)$.
-  Find any parametrization $bf(r)(t)$ for $cal(C)$.
+  Give any parametrization $bf(r)(t)$ for $cal(C)$.
 ]
 #soln[
   For example, the parametrization should start at $(7,8,9)$, end at $(107, 208, 309)$.
@@ -564,7 +564,7 @@ Usually the strategy is to pick one that makes subsequent calculation easier.
   Let $cal(C)$ be the path traced out by following the parabola $y = x^2 / 10 + 1$
   starting from $(-2,1.4)$ and ending at $(3,1.9)$.
   (See @fig-param-parabola.)
-  Find any parametrization $bf(r)(t)$ for $cal(C)$.
+  Give any parametrization $bf(r)(t)$ for $cal(C)$.
 ]
 #figure(
   image("figures/param-parabola.svg", width: auto),
@@ -593,7 +593,7 @@ Usually the strategy is to pick one that makes subsequent calculation easier.
   Let $cal(C)$ be the $120 degree$ arc of the unit circle starting from $(0, -1)$
   and ending at $(1/2, sqrt(3)/2)$, going counterclockwise.
   (See @fig-param-arc.)
-  Find any parametrization $bf(r)(t)$ for $cal(C)$.
+  Give any parametrization $bf(r)(t)$ for $cal(C)$.
 ]
 #figure(
   image("figures/param-circle.svg", width: auto),
@@ -615,7 +615,7 @@ Usually the strategy is to pick one that makes subsequent calculation easier.
 == [EXER] Exercises
 
 #exer[
-  Find the arc length of the part of the parabola $y = x^2 - x - 12$
+  Compute the arc length of the part of the parabola $y = x^2 - x - 12$
   between $(-3,0)$ and $(4,0)$.
 ]
 
@@ -661,7 +661,7 @@ Usually the strategy is to pick one that makes subsequent calculation easier.
   The disk has an arrow painted that points directly up and rolls clockwise.
   It takes twelve hours for the smaller disk to complete a rotation so that it returns to the top.
 
-  - Find a parametric equation $bf(P)(t)$ for the point at the tip of the arrow at time $t$ in hours.
+  - Compute the parametric equation $bf(P)(t)$ for the point at the tip of the arrow at time $t$ in hours.
     Assume the clock is centered at the origin and $bf(P)(0) = (0,40)$.
   - At what point on the clock face will the disk be tangent
     when the arrow is next pointing in the upward vertical direction?

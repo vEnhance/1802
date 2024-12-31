@@ -580,13 +580,13 @@ Examples of what I mean when I say "tell by looking" for $n=2$:
   For example, if your birthday was May 17, 1994
   you would take $bf(v)_1 = vec(5, 17)$ and $bf(v)_2 = vec(19, 94)$.
 
-  - Determine the span of those two vectors in $RR^2$.
+  - Compute the span of those two vectors in $RR^2$.
   - Find a current or former K-pop idol who gets a different answer from you
     when they use their birthday.
 ] <exer-basis-birthday>
 
 #exer[
   In $RR^5$, consider the vector $bf(v) = angle.l 1,2,3,4,5 angle.r$.
-  What's the maximum number of linearly independent vectors one can find
-  which are all perpendicular to $bf(v)$?
+  Compute the maximum possible number of linearly independent vectors one can find
+  which are all perpendicular to $bf(v)$.
 ]

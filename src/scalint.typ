@@ -152,7 +152,7 @@ Here's surface area in recipe format.
 Here is a really ugly example to start, to give you some practice with spherical coordinates.
 
 #example(title: [Example: Surface area of a sphere])[
-  Find the surface area of the unit sphere $x^2+y^2+z^2=1$.
+  Compute the surface area of the unit sphere $x^2+y^2+z^2=1$.
 ]
 #soln[
   We will bludgeon our way through this task with sheer brute force using the formula above
@@ -222,7 +222,7 @@ Here is a really ugly example to start, to give you some practice with spherical
 
 And here is an example that is a little less computationally intensive.
 #sample[
-  Find the surface area of the cone defined by $z = sqrt(x^2+y^2) <= 1$.
+  Compute the surface area of the cone defined by $z = sqrt(x^2+y^2) <= 1$.
 ]
 #soln[
   The given cone can be parametrized using Cartesian coordinates as:

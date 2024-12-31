@@ -221,7 +221,7 @@ Again $x y$-coordinates are either infeasible or at least annoying.
 
 #sample[
   The unit circle centered at $(0,0)$ is divided into four quarters by the $x$ and $y$ axes.
-  Find the center of mass of the quarter-circle in the first quadrant,
+  Compute the center of mass of the quarter-circle in the first quadrant,
   assuming a uniform density distribution.
 ]
 #soln[

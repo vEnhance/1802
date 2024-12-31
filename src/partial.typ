@@ -218,7 +218,7 @@ Here are a bunch more examples that you can try to follow along:
 == [EXER] Exercises
 
 #exer[
-  Find all the partial derivatives of the following functions, defined for $x,y,z > 0$:
+  Compute all the partial derivatives of the following functions, defined for $x,y,z > 0$:
 
   - $f(x,y,z) = x / y + y / z + z / x$
   - $f(x,y,z) = sin(x y z)$

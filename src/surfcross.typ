@@ -140,7 +140,7 @@ since it's trivial to get the magnitude from it.)
 Let's see how it can captures the boilerplate in the cone example.
 
 #sample[
-  Find the surface area of the cone defined by $z = sqrt(x^2+y^2) <= 1$.
+  Compute the surface area of the cone defined by $z = sqrt(x^2+y^2) <= 1$.
 ]
 #soln[
   Letting $f(x,y) = sqrt(x^2+y^2)$, this time we skip straight to
@@ -220,7 +220,7 @@ The reason this magic identity is even better is that there is no need to differ
 or even to determine it.
 Let's see it in action by redoing our example with a cone.
 #sample[
-  Find the surface area of the cone defined by $z = sqrt(x^2+y^2) <= 1$.
+  Compute the surface area of the cone defined by $z = sqrt(x^2+y^2) <= 1$.
 ]
 #soln[
   The cone is the part of the level surface of $g(x,y,z) = x^2+y^2-z^2$ with $z >= 0$.
@@ -242,7 +242,7 @@ But the shortcuts are nice because it means you don't have to think about the cr
 Now as we promised, let's show how to find surface area for a sphere
 without having to slog through the pain of spherical coordinates.
 #sample[
-  Find the surface area of the sphere $x^2+y^2+z^2 = 1$.
+  Compute the surface area of the sphere $x^2+y^2+z^2 = 1$.
 ]
 #soln[
   We'll find the surface area for the hemisphere with $z >= 0$ and then double it.

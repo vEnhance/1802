@@ -263,7 +263,7 @@ in the second recipe, we ignore the direction.
   Consider the three points $A = (1,0,0)$, $B = (0,2,0)$, $C = (0,0,3)$.
 
   - Find a normal vector to the plane through $A$, $B$, $C$.
-  - Find the equation of the plane.
+  - Compute the equation of the plane.
   - Compute the area of triangle $A B C$.
 ]
 #soln[
@@ -380,8 +380,9 @@ we've seen in applications.
 == [EXER] Exercises
 
 #exer[
-  Find real numbers $a$ and $b$ such that
+  Suppose real numbers $a$ and $b$ satisfy
   $ vec(1, 2, 3) times vec(100, a, b) = 0. $
+  Compute $a$ and $b$.
 ]
 
 #exer[
@@ -392,7 +393,7 @@ we've seen in applications.
 
 #exer[
   Let $bf(v)$ and $bf(w)$ be unit vectors in $RR^3$.
-  Find all possible values of
+  Compute all possible values of
   $ |bf(v) times bf(w)|^2 + (bf(v) dot bf(w))^2. $
 ]
 

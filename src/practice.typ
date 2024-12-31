@@ -64,13 +64,13 @@ It was about half the length of the final exam (which was 14 questions long).
 == Miscellaneous practice questions
 
 #exerstar[
-  Find all possible values of $a x + b y + c z$
+  Determine all possible values of $a x + b y + c z$
   over real numbers $a$, $b$, $c$, $x$, $y$, $z$
   satisfying $a^2 + b^2 + c^2 = 2$ and $x^2 + y^2 + z^2 = 5$.
 ]
 
 #exer[
-  Find the unique $2 times 2$ matrix $A$ for which
+  Compute the unique $2 times 2$ matrix $A$ for which
   $vec(1,1)$ is an eigenvector with eigenvalue $3$
   and $vec(2,1)$ is an eigenvector with eigenvalue $4$.
 ]
@@ -78,7 +78,7 @@ It was about half the length of the final exam (which was 14 questions long).
 #exer[
   Let $cal(S)$ be the level surface of $f(x,y,z) = e^x + e^(2y) + e^(3z)$
   that passes through the origin.
-  Find all real numbers $t$ such that the vector $angle.l t+4, t+5, t+6 angle.r$
+  Compute all real numbers $t$ such that the vector $angle.l t+4, t+5, t+6 angle.r$
   is tangent to $cal(S)$ at the origin.
 ]
 

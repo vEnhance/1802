@@ -138,7 +138,7 @@ We can jump straight into examples now!
 ]
 
 #sample[
-  Find the flux of the vector field
+  Compute the flux of the vector field
   $bf(F) (x , y , z) = vec(y z , x z , x y)$
   through the closed surface $cal(S)$ defined by $x^4 + (y-5)^6 + z^8 = 2025$.
 ]

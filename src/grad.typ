@@ -350,7 +350,7 @@ To spell it out:
 ]
 
 #sample[
-  Find the tangent line to $x^2 + y^2 = 25$ at the point $(3, 4)$.
+  Compute the tangent line to $x^2 + y^2 = 25$ at the point $(3, 4)$.
 ]
 #soln[
   Let $f(x,y) = x^2 + y^2$, so we are looking at the level curve for $25$ of $f$.
@@ -364,7 +364,7 @@ To spell it out:
 ]
 
 #sample[
-  Find the tangent line to $y = x^2 + 5$ at the point $(3,14)$.
+  Compute the tangent line to $y = x^2 + 5$ at the point $(3,14)$.
 ]
 #soln[
   Isn't this an 18.01 question?

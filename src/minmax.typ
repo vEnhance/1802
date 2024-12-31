@@ -208,7 +208,7 @@ We'll show some examples where the algebra is really simple,
 and examples where the algebra is much more involved.
 
 #sample[
-  Find the critical points of $f(x,y,z) = x^2 + 2 y^2 + 3 z^2$.
+  Compute the critical points of $f(x,y,z) = x^2 + 2 y^2 + 3 z^2$.
 ]
 #soln[
   The gradient is
@@ -224,7 +224,7 @@ and examples where the algebra is much more involved.
 ]
 
 #sample[
-  Find the critical points of $f(x,y) = x y (6 - x - y)$.
+  Compute the critical points of $f(x,y) = x y (6 - x - y)$.
 ]
 #soln[
   This example is a lot more annoying than the previous one, despite having fewer variables,
@@ -342,7 +342,7 @@ Don't worry if you can't do these two yourself.
 The exam ones will probably tone down this algebra step a bit.
 
 #sample[
-  Find all the critical points of the function
+  Compute all the critical points of the function
   $ f(x, y, z) = x^3 + y^3 + z^3 - 3 x y z. $
 ]
 
@@ -377,7 +377,7 @@ The exam ones will probably tone down this algebra step a bit.
 ]
 
 #sample[
-  Find all the critical points of the function
+  Compute all the critical points of the function
   $ f(x, y, z) = z(x-y)(y-z) - 2 x z. $
 ]
 #soln[
@@ -517,7 +517,7 @@ it's the determinant of the matrix $mat(A, B; B, C)$.
 ]
 
 #sample[
-  Find the critical points of $f(x,y) = x y + y^2 + 2 y$
+  Compute the critical points of $f(x,y) = x y + y^2 + 2 y$
   and classify them using the second derivative test.
 ]
 #soln[
@@ -540,12 +540,12 @@ it's the determinant of the matrix $mat(A, B; B, C)$.
 == [EXER] Exercises
 
 #exer[
-  Find the critical points of $f(x,y,z) = x^3 + 2 y^3 - 3 x y$ and classify them
+  Compute the critical points of $f(x,y,z) = x^3 + 2 y^3 - 3 x y$ and classify them
   as local minimums, local maximums, or saddle points.
 ]
 
 #exer[
-  Find the critical points of $f(x,y,z) = x^2 + y^3 + z^4$ and classify them
+  Compute the critical points of $f(x,y,z) = x^2 + y^3 + z^4$ and classify them
   as local minimums, local maximums, or saddle points.
 ]
 

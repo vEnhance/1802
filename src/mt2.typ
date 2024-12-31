@@ -34,7 +34,7 @@ Solutions are in @ch-sol-mt2.
   Consider the function $f : RR^2 -> RR$ defined by
   $ f(x,y) = cos(pi x) + y^4/4 - y^3/3 - y^2. $
   - Compute all the critical points and classify them as saddle point, local minimum, or local maximum.
-  - Find the global minimums and global maximums of $f$, if they exist.
+  - Compute the global minimums and global maximums of $f$, if they exist.
 ] <exer-mt2p4>
 
 #exer[

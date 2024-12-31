@@ -305,7 +305,7 @@ Let's give one example corresponding to each row of @table-surfcross-2.
   $0 <= x <= 1$ and $0 <= y <= 1$, with the normal vector oriented upwards
   (i.e. with positive $z$-component).
   Let $bf(F)(x,y,z) = vec(1 , 1 , z)$.
-  Find the flux of $bf(F)$ through $cal(S)$.
+  Compute the flux of $bf(F)$ through $cal(S)$.
 ]
 #soln[
   Our parametrization of the surface $cal(S)$ is by definition

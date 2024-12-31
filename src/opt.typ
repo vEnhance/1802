@@ -56,7 +56,7 @@ so Step 2 and Step 3 are mostly harmless.
 Later on we'll do more examples where Step 2 and Step 3 are more intricate.
 
 #sample[
-  Find the minimum and maximum possible value, if they exist of
+  Compute the minimum and maximum possible value, if they exist of
   $ f(x,y) = x + y + 8/(x y) $
   over $x,y > 0$.
 ]
@@ -199,7 +199,7 @@ to "LM-critical point".
 ]
 
 #sample[
-  Find the minimum and maximum possible value, if they exist, of
+  Compute the minimum and maximum possible value, if they exist, of
   $ f(x,y,z) = x + y + z $
   over $x,y,z > 0$ satisfying the condition $x y z = 8$.
 ]
@@ -431,7 +431,7 @@ This is probably too lengthy of a calculation for 18.02
 because of the amount of arithmetic required; it's here just to illustrate.
 
 #sample[
-  Find the minimum and maximum possible of $x^3 + 3y^3 + 4z^3$ subject to $x^4 + y^4 + z^4 = 2$.
+  Compute the minimum and maximum possible of $x^3 + 3y^3 + 4z^3$ subject to $x^4 + y^4 + z^4 = 2$.
 ]
 
 #soln[
@@ -536,7 +536,7 @@ because the function is really easy to describe on the boundary.
 We give one such example below.
 
 #sample[
-  Find the minimum possible value of
+  Compute the minimum possible value of
   $ f(x,y) = x^2 + y^2 + x y - 6 y $
   in the first quadrant $x,y >= 0$.
 ]
@@ -599,7 +599,7 @@ Now here's a case where the boundary requires Lagrange multipliers.
 So, it's really a hard-case optimization problem _within_ an easy-case optimization problem.
 If you've seen the movie _Inception_, yes, one of those.
 #sample[
-  Find the minimum and maximum possible value, if they exist, of
+  Compute the minimum and maximum possible value, if they exist, of
   $ f(x,y,z) = x^4 + y^4 + z^4 $
   over the region $x^2 + y^2 + z^2 <= 1$.
 ]
