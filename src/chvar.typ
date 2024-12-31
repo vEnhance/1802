@@ -130,7 +130,7 @@ the 18.02 is the grown-up version where you have a transition map instead.
   The *Jacobian matrix* is the matrix
   whose rows are the gradients of each component written as row vectors;
   the *Jacobian determinant* is its determinant.
-  In these notes we denote the matrix my $J_(bf(T))$
+  In these notes we denote the matrix by $J_(bf(T))$
   (and the determinant by $det J_(bf(T))$.
 ]
 
@@ -224,7 +224,7 @@ Let's see an example of how to carry out this integration.
   We made a transition map $bf(T) : cal(R)_"new" -> cal(R)$ written as either
   $ bf(T)(u,v) &= (sqrt(v/u), sqrt(u v)) \
     bf(T)^(-1)(x,y) &= (y/x, x y). $
-  We don't like square roots, so we'll the determinant of the Jacobian matrix for $bf(T)^(-1)$, which is
+  We don't like square roots, so we'll use the determinant of the Jacobian matrix for $bf(T)^(-1)$, which is
   $ det (J_(bf(T)^(-1))) = detmat(-y/x^2, 1/x; y, x)
     = (- y / x^2) dot x - 1 / x dot y = - y / x - y / x = - (2 y) / (x) . $
   Since we used the upside-down version of the formula, we need to translate
