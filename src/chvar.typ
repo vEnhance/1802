@@ -130,7 +130,7 @@ the 18.02 is the grown-up version where you have a transition map instead.
   The *Jacobian matrix* is the matrix
   whose rows are the gradients of each component written as row vectors;
   the *Jacobian determinant* is its determinant.
-  In these notes we denote the matrix my $J_(bf(T))$
+  In these notes we denote the matrix by $J_(bf(T))$
   (and the determinant by $det J_(bf(T))$.
 ]
 
