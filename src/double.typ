@@ -430,7 +430,7 @@ not just those under a curve of the form $y = f(x)$.
 
 If you imagine your region $cal(R)$ as a blob of some substance (concrete, wood, water, etc.),
 then you could also imagine it has a _density_ at each point in the region
-(say, in grams per square meter).
+(say, in kilograms per square meter).
 In 18.02 we usually denote the density by $rho$,
 which is a function taking each point $P$ in the region $cal(R)$ and outputting its density.
 
@@ -459,8 +459,8 @@ Let's repeat this in recipe form.
   If $cal(R)$ is a region in $RR^2$,
   - Then a density function $rho : cal(R) -> RR_(>= 0)$
     should take on nonnegative values.
-    (For physicists: in SI units, you might imagine it as grams per square meter.)
-  - The mass is a nonnegative real number (grams).
+    (For physicists: in SI units, you might imagine it as kilograms per square meter.)
+  - The mass is a nonnegative real number (kilograms).
   - The center of mass is also a _point_ inside $cal(R)$. (Draw this as a dot, not an arrow.)
 ]
 
@@ -483,10 +483,10 @@ Let's repeat this in recipe form.
 ]
 
 #remark[
-  Unsurprisingly if $rho = 1$ is constant (imagine 1 gram per square meter),
+  Unsurprisingly if $rho = 1$ is constant (imagine 1 kilogram per square meter),
   then the mass of the region $cal(R)$ is just $iint_(cal(R)) dif x dif y$, i.e. the area.
   (So a region whose area is $16$ square meters and where the density is
-  1 gram per square meter in the whole substance should be $16$ grams.)
+  1 kilogram per square meter in the whole substance should be $16$ kilograms.)
 ]
 
 #sample[
