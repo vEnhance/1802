@@ -153,7 +153,7 @@ The choice that we're going to use is the following.
   #eqn[
     $
       rho &>= 0 \
-      0 &<= phi < pi \
+      0 &<= phi <= pi \
       0 &<= theta < 2 pi \
     $
     <eqn-sph-ranges>
@@ -182,13 +182,6 @@ into the formula then I should get a point that's already represented.
 This is a bit like how $(r, theta + 2 pi)_"pol" = (r, theta)_"pol"$,
 but the formula is a bit more complicated.
 So we'll illustrate two cases in full to show how to convert the illegal value into a legal one.
-
-#digression(title: [Digression: Other conventions])[
-  Remember, all of these are conventions; you should choose one and stick with it,
-  so long as it represents every point (not on the $z$-axis) exactly once.
-  For example, if you wanted to instead require $rho >= 0$,
-  $0 <= phi < 2 pi$, $0 <= theta < pi$, I think that would also work.
-]
 
 === First case: Illegal angle greater than $pi$
 

@@ -341,7 +341,7 @@ Since $|bf(r)(phi, theta)| = R$, we get
 $ dif S := lr(|frac(partial bf(r), partial phi) times frac(partial bf(r), partial theta)|) d phi d theta
   = R^2 sin phi dif phi dif theta. $
 Here I'm dropping the absolute value bars around $|sin phi|$ because
-our spherical coordinate convention requires $0 < phi < pi$.
+our spherical coordinate convention requires $0 <= phi <= pi$.
 
 #tip(title: [Tip: $dif S$ for the sphere can be remembered geometrically])[
   The way to remember this is that "$dif S dif rho approx dif V$":
