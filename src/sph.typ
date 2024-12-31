@@ -86,7 +86,7 @@ $
   ) \
   &=
   cos phi (rho^2 cos phi sin phi) (cos^2 theta + sin^2 theta)
-  + rho sin phi (sin^2 phi) (cos^2 theta + sin^2 theta) \
+  + rho^2 sin phi (sin^2 phi) (cos^2 theta + sin^2 theta) \
   &= rho^2 sin phi (cos^2 phi + sin^2 phi) \
   &= rho^2 sin phi.
 $
