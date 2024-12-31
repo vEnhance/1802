@@ -80,7 +80,7 @@ $
 Now the idea that will let us do geometry is to replace the pair of numbers
 $epsilon_x$ and $epsilon_y$ with a single "small displacement" vector
 $bf(v) = vec(epsilon_x, epsilon_y)$,
-and the pair of numbers $6$ and $6$
+and the pair of numbers $6$ and $8$
 with the vector $vec(6,8)$ instead,
 so that *the approximation part just becomes a dot product*:
 $ f(vec(3,4) + bf(v)) approx f(vec(3,4)) + vec(6,8) dot bf(v). $
