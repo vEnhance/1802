@@ -7,8 +7,8 @@ The cross product is the last major linear algebra tool we'll need to introduce
 Like the dot product, the cross product also has two definitions,
 one algebraic and one geometric.
 
-However, unlike the dot product, the cross product is really stilted and unnatural,
-and not used as much --- in fact they won't show up again to @ch-scalint.
+However, unlike the dot product, the cross product is more stilted and unnatural,
+and not used as much --- in fact it won't show up again until @ch-scalint.
 (More on that in @sec-cross-sucks.)
 I'll try to keep this chapter brief.
 
@@ -187,12 +187,13 @@ That is, consider the vector
 $ bf(n) = (angle.l x_0, y_0, z_0 angle.r) / sqrt(x_0^2 + y_0^2 + z_0^2). $
 We've just seen $bf(n)$ is perpendicular to both $bf(v)$ and $bf(w)$,
 and we've scaled $bf(n)$ so that $|bf(n)| = 1$.
+See @fig-cross-proof.
 
 #figure(
   image("figures/cross-proof.svg", width: auto),
   caption: [The additional vector $bf(n)$ introduced.
     It's a unit vector in the direction we want, and it doesn't depend on $k$.],
-)
+) <fig-cross-proof>
 
 For simplicity let's assume that $bf(n)$ points the correct way for the right-hand rule.
 (If $bf(n)$ points the other way, the calculation below will need a bunch of extra minus signs;
