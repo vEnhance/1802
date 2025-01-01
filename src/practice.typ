@@ -63,6 +63,13 @@ It was about half the length of the final exam (which was 14 questions long).
 
 == Miscellaneous practice questions
 
+#exer[
+  Let $bf(v) = vec(8, 9, 10)$. Suppose that
+  $ op("proj")_(bf(w)) (bf(v)) = vec(3,5,t) $
+  for some real number $t$.
+  Compute $t$, and compute all possibilities for the vector $bf(w)$.
+]
+
 #exerstar[
   Determine all possible values of $a x + b y + c z$
   over real numbers $a$, $b$, $c$, $x$, $y$, $z$

@@ -320,27 +320,20 @@ Let's also do the example in @fig-dot-project2.
 == [EXER] Exercises
 
 #exer[
-  In four-dimensional space $RR^4$, the vectors $vec(1,2,3,4)$
-  and $vec(5,6,7,t)$ are perpendicular. Compute $t$.
+  In four-dimensional space $RR^4$, the vectors $angle.l 1,2,3,4 angle.r$
+  and $angle.l 5,6,7,t angle.r$ are perpendicular. Compute $t$.
 ]
 
 #exer[
-  Compute the scalar component and vector projection of $bf(v) = vec(1,2,3)$
-  along the direction of $bf(w) = vec(-3000, -4000, 0)$.
+  Compute the scalar component and vector projection of $bf(v) = angle.l 1,2,3 angle.r$
+  along the direction of $bf(w) = angle.l -3000, -4000, 0 angle.r$.
 ]
 
 #exer[
-  Compute the projection of $vec(123,456,789)$ in the direction of $ee_1$.
+  Compute the projection of $angle.l 123,456,789 angle.r$ in the direction of $ee_1$.
 ]
 
 #exer[
-  Let $bf(w) = vec(3,4)$.
+  Let $bf(w) = angle.l 3,4 angle.r$.
   Compute all unit vectors $bf(v)$ in $RR^2$ for which $bf(v) dot bf(w) = 3$.
-]
-
-#exerstar[
-  Let $bf(v) = vec(8, 9, 10)$. Suppose that
-  $ op("proj")_(bf(w)) (bf(v)) = vec(3,5,t) $
-  for some real number $t$.
-  Compute $t$, and compute all possibilities for the vector $bf(w)$.
 ]
