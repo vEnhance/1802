@@ -306,3 +306,12 @@ and then you add a layer of plastic wrap on the bowl.
   Show that
   $ oiint_(cal(S)_1) bf(G) dot bf(n) dif S = oiint_(cal(S)_2) bf(G) dot bf(n) dif S. $
 ] <exer-gravity-div2>
+
+#exer[
+  Prove Green's theorem for flux by quoting the divergence theorem.
+
+  That is, suppose $bf(F) = vec(p,q)$ is a vector field in $RR^2$
+  and $cal(C)$ is a closed loop enclosing a region $cal(R)$ counterclockwise.
+  Find a way to use classical Stokes' theorem to prove
+  $ oint_(cal(C)) bf(F) dot bf(n) dif bf(s) &= iint_(cal(R)) ((dif p) / (dif x) + (dif q) / (dif y)) dif A. $
+]

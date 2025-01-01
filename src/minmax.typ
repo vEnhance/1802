@@ -540,19 +540,18 @@ it's the determinant of the matrix $mat(A, B; B, C)$.
 == [EXER] Exercises
 
 #exer[
-  Compute the critical points of $f(x,y,z) = x^3 + 2 y^3 - 3 x y$ and classify them
+  Compute the critical point(s) of $f(x,y,z) = x^3 + 2 y^3 - 3 x y$ and classify them
   as local minimums, local maximums, or saddle points.
 ]
 
 #exer[
-  Compute the critical points of $f(x,y,z) = x^2 + y^3 + z^4$ and classify them
+  Compute the critical point(s) of $f(x,y,z) = x^2 + y^3 + z^4$ and classify them
   as local minimums, local maximums, or saddle points.
 ]
 
 #exer[
-  Show that
-  $ f(x,y) = (x+y)^(100) - (x-y)^(100) $
-  has exactly one critical point, and that critical point is a saddle point.
+  Does there exist a differentiable function $f : RR^2 -> RR$
+  such that _every_ point in $RR^2$ is a saddle point?
 ]
 
 #exerstar[

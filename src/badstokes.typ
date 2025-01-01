@@ -76,11 +76,10 @@ In other words, it doesn't provide a nice shortcut like the other theorems do.
 == [EXER] Exercises
 
 #exerstar[
-  Prove that both forms of Green's theorem follow from classical Stokes' theorem.
+  Prove Green's theorem for work by quoting classical Stokes' theorem.
 
   That is, suppose $bf(F) = vec(p,q)$ is a vector field in $RR^2$
   and $cal(C)$ is a closed loop enclosing a region $cal(R)$ counterclockwise.
-  Find a way to use classical Stokes' theorem to prove both forms of Green's theorem:
-  $ oint_(cal(C)) bf(F) dot dif bf(r) &= iint_(cal(R)) ((dif q) / (dif x) - (dif p) / (dif y)) dif A \
-    oint_(cal(C)) bf(F) dot bf(n) dif s &= iint_(cal(R)) ((dif p) / (dif x) + (dif q) / (dif y)) dif A. $
+  Find a way to use classical Stokes' theorem to prove
+  $ oint_(cal(C)) bf(F) dot dif bf(r) &= iint_(cal(R)) ((dif q) / (dif x) - (dif p) / (dif y)) dif A. $
 ]

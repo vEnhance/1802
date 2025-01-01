@@ -316,9 +316,9 @@ So we'll punt all the examples to next chapter, @ch-sph.
 
 == [EXER] Exercises
 
-#exer[
-  A ball of radius $R$ is given.
-  A cylindrical hole of radius $a$ (where $0 < a < R$)
+#exer[Napkin-ring problem][
+  A wooden ball of radius $R > 1$ is given.
+  A cylindrical hole of radius $sqrt(R^2-1)$
   is drilled through the center of the ball to get a bead.
-  Compute the volume of the bead in terms of $a$ and $R$.
+  Compute the volume of the resulting bead.
 ]

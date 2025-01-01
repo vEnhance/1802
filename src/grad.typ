@@ -423,11 +423,9 @@ Let's summarize the last few sections.
   - Can you find a function $f : RR^2 -> RR^2$ such that $nabla f (x,y) = angle.l 100 y,x angle.r$?
 ]
 
-#exer[
-  Let $a$, $b$, $c$ be real numbers and
-  consider the function $ f(x,y) = a e^(x+y) + b e^(x-y). $
+#exerstar[
+  Let $a$, $b$, $c$ be real numbers and let $ f(x,y) = a e^(x+y) + b e^(x-y). $
   It turns out that the level curve of $f$ for the value $c$
-  is tangent to the line $y = 5x$ at the origin,
-  and also passes through the point $(log 6, log 3)$.
-  Compute $a$, $b$, and $c$.
-]
+  is tangent to the line $y = 5x$ at the origin.
+  Find a real number $k > 0$ such that this level curve must also pass through $(0, k)$.
+] <exer-grad-abc>

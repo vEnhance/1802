@@ -83,17 +83,16 @@ It was about half the length of the final exam (which was 14 questions long).
 ]
 
 #exer[
-  Let $a$, $b$, $c$ be real numbers and
-  consider the function $ f(x,y) = a e^(x+y) + b e^(x-y). $
-  It turns out that the level curve of $f$ for the value $c$
-  is tangent to the line $y = 5x$ at the origin,
-  and also passes through the point $(log 6, log 3)$.
-  Compute $a$, $b$, and $c$.
+  Let $f(x,y,z)$ be a differentiable function, and let $g(x,y,z) = e^(f(x,y,z))$.
+  Let $P$ be any point in $RR^3$.
+  Suppose $f(P) = 2$, and $nabla f(P)$ is a unit vector.
+  Compute the magnitude of $nabla g(P)$.
 ]
 
-#exerstar[
-  Does there exist a differentiable function $f : RR^2 -> RR$
-  such that _every_ point in $RR^2$ is a saddle point?
+#exer[
+  Show that
+  $ f(x,y) = (x+y)^(100) - (x-y)^(100) $
+  has exactly one critical point, and that critical point is a saddle point.
 ]
 
 #exer[
