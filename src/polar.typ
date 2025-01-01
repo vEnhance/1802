@@ -198,7 +198,7 @@ with some different artificial function involving $x^2+y^2$ in some other way:
   The region is the same, the only change is what to do with the thing inside:
   $ 1 / (x^2 + y^2 + 17) = 1 / (r^2 + 17). $
   So, the overall integral becomes
-  $ int_(theta=0)^pi int_(r=0)^3 int_(r=0)^3 1/(r^2+17) dot underbrace(r dif r dif theta, = dif x dif y). $
+  $ int_(theta=0)^pi int_(r=0)^3 1/(r^2+17) dot underbrace(r dif r dif theta, = dif x dif y). $
   Now, we evaluate the inner integral:
   $ int_(r = 0)^3 (r) / (r^2 + 17) dif r . $
   To integrate this, use the substitution $u = r^2 + 17$, so

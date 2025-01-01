@@ -118,7 +118,7 @@ I think everyone will know what you mean.)
 We will avoid referring to the direction of the zero-vector $bf(0)$, which doesn't make sense.
 (If you try to apply the formula here, you get division by $0$,
 since $bf(0)$ is the only vector with length $0$.)
-If you need it, The convention is that it has _every_ direction.
+If you need it, the convention is that it has _every_ direction.
 
 #typesig[
   If $bf(v)$ is a nonzero vector of length $n$,
