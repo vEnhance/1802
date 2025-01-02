@@ -1,4 +1,5 @@
 welcome-slides/welcome-slides.pdf
+tsafe-1802/tsafe-1802.pdf
 r02.pdf
 r03.pdf
 r04.pdf
@@ -49,4 +50,3 @@ bonus1.pdf
 mockmt2.pdf
 mockmt3.pdf
 mockfin.pdf
-tsafe-1802/tsafe-1802.pdf
