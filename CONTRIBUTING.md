@@ -17,3 +17,17 @@ so you don't have to download anything.
 If you want to make more involved changes,
 you probably want to `git clone` a local copy of the repository.
 See [README.md](README.md) for some instructions on installation.
+
+If you make a pull request, please follow
+[Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
+in the title of the pull request.
+See [conv-commit.yml](.github/workflows/conv-commit.yml)
+for the GitHub action that enforces this.
+For most of you, this means that the PR title should say either
+
+- `fix: [short description here]` (if you are fixing an issue)
+- `feat: [short description here]` (if you are introducing a new feature)
+
+depending on whether you are fixing an issue or doing something new,
+respectively. Some other custom types are supported too,
+see [Evan's dotfiles for a list](https://github.com/vEnhance/dotfiles/blob/main/commit-types.md).
