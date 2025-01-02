@@ -83,6 +83,13 @@ It was about half the length of the final exam (which was 14 questions long).
 ]
 
 #exer[
+  Let $A = mat(4,3;4,8)$.
+  - Compute the eigenvalues and eigenvectors for $A$.
+  - Compute the eigenvalues and eigenvectors for $A^2$.
+  - Compute the eigenvalues and eigenvectors for $A^(100)$.
+]
+
+#exer[
   Let $cal(S)$ be the level surface of $f(x,y,z) = e^x + e^(2y) + e^(3z)$
   that passes through the origin.
   Compute all real numbers $t$ such that the vector $angle.l t+4, t+5, t+6 angle.r$

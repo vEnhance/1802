@@ -56,7 +56,7 @@ But with this goal in mind, here are some parts of the design philosophy of this
 
 - *It tries to explain where formulas come from*.
   For example, these notes spell out how matrix multiplication corresponds
-  to function composition (in @matrix-mult), something that isn't clearly stated in many places.
+  to function composition (in @sec-matrix-mult), something that isn't clearly stated in many places.
   I believe that seeing this context makes it easier to internalize the material.
 - *It marks more complicated explanations as "not for exam"*.
   I hope the digressions are interesting to you (or I wouldn't have written them).
@@ -105,7 +105,7 @@ and calculus as taught in United States high schools is assumed.
     see section 1-2 of #url("https://math.mit.edu/~poonen/notes02.pdf").
 
     You are _not_ expected to have any idea why the heck the rule is defined this way;
-    an explanation for where this rule comes from is in @matrix-mult.
+    an explanation for where this rule comes from is in @sec-matrix-mult.
     So we'll assume you have seen this strange rule before, but don't know what it means.
 
   - We'll assume you know the formula for the determinant of a $2 times 2$ and $3 times 3$ matrix; that is

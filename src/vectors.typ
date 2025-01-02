@@ -264,6 +264,10 @@ But the sign carries a bit more information.
 ] <exer-vectors-dir>
 
 #exer[
+  If $A$ is a $3 times 3$ matrix with determinant $2$, what values could $det(10 A)$ take?
+] <exer-vectors-scaledet>
+
+#exer[
   Compute the real number $a$ for which the points $(0,0,0)$,
   $(1,0,1)$, $(0,1,2)$ and $(1,2,a)$ all lie on one plane.
 ] <exer-vectors-coplanar>

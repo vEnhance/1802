@@ -589,4 +589,4 @@ Examples of what I mean when I say "tell by looking" for $n=2$:
   In $RR^5$, consider the vector $bf(v) = angle.l 1,2,3,4,5 angle.r$.
   Compute the maximum possible number of linearly independent vectors one can find
   which are all perpendicular to $bf(v)$.
-]
+] <exer-basis-perpbasis>

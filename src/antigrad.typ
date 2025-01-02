@@ -74,7 +74,7 @@ Let's do a two-variable example first.
   Integrate $(partial f) / (partial x)$ and $(partial f) / (partial y)$ with respect to $x$ and $y$:
   $ f (x , y) & = int (partial f) / (partial x) dif x = int cos y dif x  = x^2/2 + x cos y + C_1 (y). \
     f (x , y) & = int (partial f) / (partial y) dif y = int - x sin y dif y  = x cos y + C_2(x). $
-  Putting these together to get the final expression for $f (x , y)$ as:
+  Stitching these together to get the final expression for $f (x , y)$ as:
   $ f (x , y) = #boxed($ x^2/2 + x cos y + C $) $
   for any constant $C$.
 ]
@@ -93,11 +93,11 @@ Let's do a two-variable example first.
   Integrate $(partial f) / (partial x)$ and $(partial f) / (partial y)$ with respect to $x$ and $y$:
   $ f (x , y) & = int (partial f) / (partial x) dif x = int (3 x^2 + 4 x y + y^2) dif x  = x^3 + 2 x^2 y + x y^2 + C_1(y) \
     f (x , y) & = int (partial f) / (partial y) dif y = int (2 x^2 + 2 x y - 3 y^2) dif y = 2 x^2 + x y^2 - y^3 + C_2(x). $
-  Putting this together gives
+  Stitching this together gives
   $ f (x , y) = #boxed($ x^3 + 2 x^2 y + x y^2 - y^3 + C $). #qedhere $
 ]
 
-Here's a three-variable version. It's admittedly a slog.
+Here's a three-variable version.
 #sample[
   We are given the gradient of a function $f(x,y,z)$:
   $ nabla f(x,y,z) = vec(y^2-sin(x), 2 x y + 4 y z, e^z+2y^2). $

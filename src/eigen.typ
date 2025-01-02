@@ -690,38 +690,33 @@ But I'll show you how to do it with eigenvectors.
 == [EXER] Exercises
 
 #exer[
-  Compute the eigenvalues and eigenvectors for $mat(1,1;1,1)$ and $mat(5,1;2,4)$.
-]
-#exer[
-  Compute the eigenvalues and eigenvectors for $mat(9,0;0,9)$.
-]
-#exer[
-  Compute the eigenvalues and eigenvectors for $mat(6,1;0,6)$.
-]
-#exer[
-  Give an example of a $2 times 2$ matrix with four nonzero entries
-  whose eigenvalues are $5$ and $7$.
-  Then find the corresponding eigenvectors.
-]
-#exer[
-  Let $A = mat(4,3;4,8)$.
-  - Compute the eigenvalues and eigenvectors for $A$.
-  - Compute the eigenvalues and eigenvectors for $A^2$.
-  - Compute the eigenvalues and eigenvectors for $A^(100)$.
-]
+  Compute the eigenvalues and eigenvectors for the following matrices:
+  $ A = mat(1,1;1,1), quad B = mat(5,1;2,4), quad C = mat(9,0;0,9), quad D = mat(6,1;0,6). $
+] <exer-eigen-warmup>
 
 #exer[
-  Compute the eigenvalues and eigenvectors of the $3 times 3$ matrix $ mat(1,2,3;2,4,6;3,6,9). $
-]
+  Give an example of a $2 times 2$ matrix $T$ with four nonzero entries
+  whose eigenvalues are $5$ and $7$.
+  Then compute the corresponding eigenvectors.
+] <exer-eigen-example>
+
+/*
+i think this is too annoying and not that instructive
+#exer[
+  Compute the eigenvalues and eigenvectors
+  of the $3 times 3$ matrix $ mat(1,2,3;2,4,6;3,6,9). $
+] <exer-eigen-3x3>
+*/
+
 #exerstar[
   Compute the eigenvectors and eigenvalues of the $6 times 6$ matrix
-  $ mat(5,0,0,0,0,0; 0,-9,0,0,0,0; 0,0,5,0,0,0; 0,0,0,0,0,0; 0,0,0,0,8,1; 0,0,0,0,0,8). $
+  $ mat(5,0,0,0,0,0; 0,-9,0,0,0,0; 0,0,5,0,0,0; 0,0,0,0,0,0; 0,0,0,0,8,0; 0,0,0,0,1,8). $
   (You can do this question without using any determinants.)
-]
+] <exer-eigen-6x6>
 
 #exerstar[
-  Show that
+  Using the procedure described in @sec-matrix-power, show that
   $ mat(4,3;6,7)^(20) = mat(33333333333333333334, 33333333333333333333;
     66666666666666666666, 66666666666666666667). $
   (Each number on the right-hand side is $20$ digits.)
-]
+] <exer-eigen-power>

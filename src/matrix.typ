@@ -187,7 +187,7 @@ Another example is the identity function:
   (compared to the "well try multiplying by it" you learned in high school).
 ]
 
-== [SIDENOTE] Matrix multiplication <matrix-mult>
+== [SIDENOTE] Matrix multiplication <sec-matrix-mult>
 
 In the prerequisites, I said that you were supposed to know the rule for
 multiplying matrices, so you should already know for example that
@@ -289,12 +289,8 @@ it's what happens if you generalize @pop3 to eight variables
 == [EXER] Exercises
 
 #exer[
-  If $A$ is a $3 times 3$ matrix with determinant $2$, what values could $det(10 A)$ take?
-]
-
-#exer[
   Let $T : RR^2 -> RR^2$ be the linear map that rotates each vector in $RR^2$
   by $30 degree$ counterclockwise about the origin,
   then reflects around the line $y = x$.
   Write $T$ as a $2 times 2$ matrix.
-]
+] <exer-matrix-rotrefl>

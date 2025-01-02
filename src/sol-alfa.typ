@@ -25,15 +25,39 @@ The point of this example is to emphasize that you can scale
 out weird positive constants like $0.0001 pi$;
 the vector $ bf(w) = vec(-8, -9, -12) $
 points in the same direction.
-So it's enough to find the unit vector in the direction of $ bf(w) $ which is
+So it's enough to find the unit vector in the direction of $bf(w)$ which is
 $ 1/(|bf(w)|) bf(w)
-  &= 1/sqrt((-8)^2 + (-9)^2 + (-12)^2) vec(-8, -9, -12) \
-  &= 1/sqrt(64+81+144) vec(-8, -9, -12) \
-  &= 1/sqrt(289) vec(-8, -9, -12) \
-  &= 1/17 vec(-8, -9, -12) \
-  &= #boxed[$ vec(-8 slash 17, -9 slash 17, -12 slash 17) $]. $
-(Note that $angle.l 8/17, 9/17, 12/17 angle.r$ is not a correct answer:
-that vector points in the opposite direction.)
+  &= 1/sqrt((-8)^2 + (-9)^2 + (-12)^2) vec(-8, -9, -12)
+  = 1/sqrt(64+81+144) vec(-8, -9, -12)
+  = 1/sqrt(289) vec(-8, -9, -12) \
+  &= 1/17 vec(-8, -9, -12) = #boxed[$ vec(-8 slash 17, -9 slash 17, -12 slash 17) $]. $
+(Note that $angle.l 8 slash 17, 9 slash 17, 12 slash 17 angle.r$
+is not a correct answer: that vector points in the opposite direction.)
+
+== Solution to @exer-vectors-scaledet
+
+We're given a $3 times 3$ matrix $A$ with $det A = 2$
+and want to compute $det(10 A)$.
+I claim the answer is
+$ det(10A) = 10^3 dot det A = #boxed[$ 2000 $]. $
+Here are two ways to see this:
+
+- To see it geometrically, consider the parallelepiped
+  formed by the column vectors of $A$.
+  If we scale each of its side lengths by $10$,
+  then the volume should increase by a factor of $10^3 = 1000$.
+- To see it algebraically, in the formula for the determinant
+  the point is that every term scales up by a factor of $10$,
+  and the products are three at a time.
+
+  This might be easier to see from an example, so let's take
+  $ A = mat(3,5,0;5,9,0;0,0,1) $
+  as an example of a matrix with determinant $2$:
+  $ det(A) = 3 dot 9 dot 1 - 5 dot 5 dot 1 = 2. $
+  Then
+  $ 10A = mat(30,50,0;50,90,0;0,0,10) $
+  so
+  $ det(A) = 30 dot 90 dot 10 - 50 dot 50 dot 10 = 2000. $
 
 == Solution to @exer-vectors-coplanar
 
