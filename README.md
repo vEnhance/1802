@@ -35,4 +35,5 @@ These are [Asymptote figures](https://web.evanchen.cc/asyguide.html).
 
 ### Compiling
 
-Run `make all`.
+Run `make all` for most targets.
+LaTeX should be compiled separately using e.g. `latexmk`.
