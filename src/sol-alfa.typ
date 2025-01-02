@@ -241,3 +241,53 @@ $#boxed[$ d = 35 $]$ or $#boxed[$ d = 119 $]$.
     = |pm 42 - 77| $
   and this gives the same answers.
 ]
+
+== Solution to @exer-cross-100ab
+
+We need to find $a$ and $b$ from
+$ vec(1, 2, 3) times vec(100, a, b) = 0. $
+Two nonzero vectors have cross product $0$
+if and only if they're multiples of each other.
+Hence we get $#boxed[$ a= 200 $]$ and $#boxed[$ b = 300 $]$.
+
+== Solution to @exer-cross-scale
+
+We are given $bf(v) times bf(w) = vec(1,2,3)$ and seek $5bf(w) times 4bf(v)$.
+Using properties of the cross product:
+$ 5bf(w) times 4bf(v)
+  = 20 (bf(w) times bf(v))
+  = -20 (bf(v) times bf(w))
+  = -20 vec(1,2,3) = #boxed[$ vec(-20, -40, -60) $]. $
+The fact that $5bf(w) times 4bf(v) = 20 (bf(w) times bf(v))$
+follows either directly from the geometric definition
+(the parallelogram has $20$ times the area)
+or from looking at the algebraic definition
+(where the $4$ and $5$ factor out).
+Whereas the fact that $bf(w) times bf(v) = -bf(v) times bf(w)$
+also follows directly from the right-hand rule.
+
+== Solution to @exer-cross-pythag
+
+We have unit vectors $bf(v)$ and $bf(w)$ and are asked to calculate
+$ |bf(v) times bf(w)|^2 + (bf(v) dot bf(w))^2. $
+
+Let $theta$ be the angle between the vectors.
+Then the geometric definitions of the cross and dot products gives
+$ |bf(v) times bf(w)| &= |bf(v)| |bf(w)| lr(|sin theta|)
+  = 1 dot 1 dot lr(|sin theta|) = lr(|sin theta|) \
+  bf(v) dot bf(w) &= |bf(v)| |bf(w)| cos theta
+  = 1 dot 1 dot cos theta = cos theta. $
+Hence the answer is
+$ lr(|sin theta|)^2 + (cos theta)^2 = #boxed[$ 1 $] $
+by the Pythagorean theorem: there is only one possible value.
+
+== Solution to @exer-cross-perp
+
+We need to find $k$ such that
+$ vec(1,2,3) times bf(v) = vec(4,5,k). $
+The point is that $vec(1,2,3)$ and $vec(4,5,k)$ are supposed to be
+perpendicular; the vector $bf(v)$ is otherwise completely irrelevant.
+For them to be perpendicular we need
+$ 0 &= vec(1,2,3) dot vec(4,5,k) \
+  &= 1 dot 4 + 2 dot 5 + 3k = 3k + 14 $
+so $#boxed[$ k = -14 slash 3 $]$.

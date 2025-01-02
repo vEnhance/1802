@@ -384,22 +384,22 @@ we've seen in applications.
   Suppose real numbers $a$ and $b$ satisfy
   $ vec(1, 2, 3) times vec(100, a, b) = 0. $
   Compute $a$ and $b$.
-]
+] <exer-cross-100ab>
 
 #exer[
   Let $bf(v)$ and $bf(w)$ be vectors in $RR^3$
   for which $bf(v) times bf(w) = vec(1,2,3)$.
   Compute $5bf(w) times 4bf(v)$.
-]
+] <exer-cross-scale>
 
 #exer[
   Let $bf(v)$ and $bf(w)$ be unit vectors in $RR^3$.
   Compute all possible values of
   $ |bf(v) times bf(w)|^2 + (bf(v) dot bf(w))^2. $
-]
+] <exer-cross-pythag>
 
 #exer[
   Suppose $bf(v)$ is a vector in $RR^3$ and $k$ is a real number such that
   $ vec(1,2,3) times bf(v) = vec(4,5,k). $
   Compute $k$.
-]
+] <exer-cross-perp>
