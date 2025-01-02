@@ -1,4 +1,4 @@
-name: "PR title: conventional commits"
+name: "Conventional commits"
 
 on:
   pull_request_target:

@@ -1,4 +1,4 @@
-name: Napkin CI
+name: Spellcheck
 
 on:
   push:
