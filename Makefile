@@ -1,6 +1,6 @@
 ASY_INPUTS := $(wildcard figures/*.asy)
 SVG_OUTPUTS := $(ASY_INPUTS:.asy=.svg)
-TYP_INPUTS := $(wildcard *.typ)
+TYP_INPUTS := $(wildcard recitations/*.typ extras/*.typ *.typ)
 PDF_OUTPUTS := $(TYP_INPUTS:.typ=.pdf)
 
 all: $(SVG_OUTPUTS) $(PDF_OUTPUTS) posters
