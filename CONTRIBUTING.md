@@ -18,6 +18,8 @@ If you want to make more involved changes,
 you probably want to `git clone` a local copy of the repository.
 See [README.md](README.md) for some instructions on installation.
 
+## Conventional commits for pull requests
+
 If you make a pull request, please follow
 [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
 in the title of the pull request.
