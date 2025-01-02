@@ -16,7 +16,7 @@ see the [18.02 recitation page on evanchen.cc](https://web.evanchen.cc/1802.html
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) if you'd like to help out.
+See [CONTRIBUTING.md](CONTRIBUTING.md) if you'd like to help out
 
 ## Compiling
 
