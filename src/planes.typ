@@ -281,9 +281,9 @@ If you just want to memorize the final result, here it is:
   $x + 2 y + 3 z = 4$ and $5 x + 6 y + k z = 7$, respectively,
   for some real number $k$.
   Given this information, compute $k$.
-]
+] <exer-planes-cube>
 
 #exer[
   The distance from a certain point $P$ to the plane $3x+4y+12z=-1$ is $42$.
   What are the possible distances from $P$ to the plane $3x+4y+12z=1000$?
-]
+] <exer-planes-sandwich>

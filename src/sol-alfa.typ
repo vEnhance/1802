@@ -18,6 +18,9 @@
 
 == Solution to @exer-vectors-dir
 
+We are asked to compute the unit vector along the direction of the vector
+$angle.l -0.0008 pi, -0.0009 pi, -0.0012 pi angle.r$.
+
 The point of this example is to emphasize that you can scale
 out weird positive constants like $0.0001 pi$;
 the vector $ bf(w) = vec(-8, -9, -12) $
@@ -168,3 +171,73 @@ Hence either $y = 0$ or $y = 24/25$.
 In conclusion the answer is
 $ #boxed[$ angle.l 1,0 angle.r " and " lr(angle.l -7/25, 24/25 angle.r) $]. $
 See @fig-sol-alfa-dot-reverse for a picture of the two answers.
+
+== Solution to @exer-planes-cube
+
+We are given that a cube in $RR^3$
+has two of its faces lying on the planes
+$ x + 2 y + 3 z &= 4 \
+  5 x + 6 y + k z &= 7 $
+and we need to find $k$.
+
+The main observation is this:
+#idea[
+  The faces of the cube have orthogonal normal vectors.
+]
+And the normal vectors to the two planes are:
+$ bf(n)_1 = angle.l 1 , 2 , 3 angle.r
+  bf(n)_2 = angle.l 5 , 6 , k angle.r. $
+For the planes to be perpendicular, their normal vectors must satisfy:
+$ 0 &= bf(n)_1 dot bf(n)_2 \
+  &= (1) (5) + (2) (6) + (3) (k) = 5 + 12 + 3 k = 17 + 3 k. $
+Solving for $k$ gives $#boxed[$ k = -17/3 $]$.
+
+== Solution to @exer-planes-sandwich
+
+We are given two parallel planes in $RR^3$:
+$ "Plane" Pi_1 : quad 3 x + 4 y + 12 z &= - 1 \
+  "Plane" Pi_2 : quad 3 x + 4 y + 12 z &= 1000 $
+and a point $P$ such that the distance from $P$ to $Pi_1$ is $42$.
+We need to compute the possible distances $d$ from $P$ to the plane $Pi_2$.
+See @fig-sol-alfa-plane-sandwich.
+The idea is that the planes are parallel, so there really should just
+be two possible answers.
+
+#figure(
+  image("figures/sol-alfa-plane-sandwich.svg", width: auto),
+  caption: [A cartoon showing the planes $Pi_1$ and $Pi_2$
+    and couple possible locations for the point $P$.],
+) <fig-sol-alfa-plane-sandwich>
+
+To do the algebra, first observe that (parallel) planes $Pi_1$ and $Pi_2$
+have the same normal vector:
+$ bf(n) = angle.l 3 , 4 , 12 angle.r $
+which has $|bf(n)| = sqrt(3^2+4^2+12^2) = 13$.
+
+Now to compute the distance between $Pi_1$ and $Pi_2$,
+we consider an arbitrary point $(x_0, y_0, z_0)$ on $Pi_2$
+(meaning $3x_0 + 4y_0 + 12z_0 = 1000$)
+and find the distance from it to $Pi_1$.
+According to the recipe in @sec-distance-plane, it equals
+$ "distance from" (x_0, y_0, z_0) "to" Pi_1
+  &= (|3x_0 + 4y_0 + 12z_0 + 1|) / (|bf(n)|) \
+  &= (|1000 + 1|) / 13 = 77. $
+Hence the answers are $d = 77 pm 42$, that is
+$#boxed[$ d = 35 $]$ or $#boxed[$ d = 119 $]$.
+
+#remark[
+  If you don't have the idea of looking at the distance
+  between $Pi_1$ and $Pi_2$, you can still solve the problem
+  by applying the recipe in @sec-distance-plane directly to $P$.
+  Indeed, suppose $P = (x_1, y_1, z_1)$.
+  Then
+  $ 42 = op("dist")(P, Pi_1) &= (|3x_1 + 4y_1 + 12z_1 + 1|) / (|bf(n)|) \
+    d = op("dist")(P, Pi_2) &= (|3x_1 + 4y_1 + 12z_1 - 1000|) / (|bf(n)|) $
+  The first equation tells us that
+  $ 3x_1 + 4y_1 + 12z_1 = pm 42 dot 13 - 1. $
+  The second equation tells us that
+  $ d = (|(pm 42 dot 13 - 1) - 1000|) / 13
+    = (|pm 42 dot 13 - 1001|) / 13
+    = |pm 42 - 77| $
+  and this gives the same answers.
+]

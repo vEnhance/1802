@@ -71,5 +71,6 @@ typst_text = typst_text.replace(r"⟩", "angle.r")
 typst_text = typst_text.replace(r" ln (", "r log (")
 typst_text = typst_text.replace(r" thin ", " ")
 typst_text = typst_text.replace(r"\,", ",")
+typst_text = typst_text.replace(r"bb(R)", "RR")
 
 print(typst_text)
