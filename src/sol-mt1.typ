@@ -1,6 +1,6 @@
 #import "@local/evan:1.0.0":*
 
-= Solutions to the challenge problems from midterm 1 <ch-sol-mt1>
+= Solutions to the challenge problems from @ch-mt1 <ch-sol-mt1>
 
 The problem statements are given in @ch-mt1.
 
@@ -10,9 +10,9 @@ The problem statements are given in @ch-mt1.
 
 === First approach using vector projection
 
-In recitation R02 you had to calculate the distance from a vector to a plane.
+Previously you had to calculate the distance from a vector to a plane.
 This problem only requires one step on top of that:
-you need to then translate by the normal vector.
+you need to then translate by that multiple of the normal vector.
 See the cartoon below, where $bf(a)$ denotes the answer.
 
 #figure(

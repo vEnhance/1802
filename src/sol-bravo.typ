@@ -155,12 +155,14 @@ and the multiples of $bf(w)$ (for $lambda = 7$).
 == Solution to @exer-eigen-6x6
 
 Let $ M = mat(5,0,0,0,0,0; 0,-9,0,0,0,0; 0,0,5,0,0,0; 0,0,0,0,0,0; 0,0,0,0,8,0; 0,0,0,0,1,8). $
+We need to calculate eigenvalues and eigenvectors for $M$.
+
 The basic idea is that we can basically work with bare hands,
-not even resorting to the determinants we saw before.
+not needing to resort to the determinants we saw before.
 Specifically, suppose we have a proposed
 nonzero eigenvector $bf(v) = angle.l x_1, x_2, x_3, x_4, x_5, x_6 angle.r$,
 with eigenvalue $lambda$.
-Then we are looking for
+Then we are hoping for
 $ M bf(v) = vec(5x_1, -9x_2, 5x_3, 0, 8x_5, x_5 + 8x_6) =
   vec(lambda x_1, lambda x_2, lambda x_3, lambda x_4, lambda x_5, lambda x_6) = lambda bf(v). $
 Setting each component equal, we get six equations that say the following, in order:

@@ -19,7 +19,7 @@
 == Solution to @exer-vectors-dir
 
 We are asked to compute the unit vector along the direction of the vector
-$angle.l -0.0008 pi, -0.0009 pi, -0.0012 pi angle.r$.
+$ angle.l -0.0008 pi, -0.0009 pi, -0.0012 pi angle.r. $
 
 The point of this example is to emphasize that you can scale
 out weird positive constants like $0.0001 pi$;
@@ -161,34 +161,30 @@ we need $cos theta = 3/5$,
 and so there should be two vectors that work.
 See @fig-sol-alfa-dot-reverse for a picture.)
 
-#figure(
-  image("figures/sol-alfa-dot-reverse.svg", width: auto),
-  caption: [The two answers to @exer-dot-reverse],
-) <fig-sol-alfa-dot-reverse>
-
 Translating the givens algebraically,
 we have the following system of equations:
 $ bf(v) dot bf(w) = 3 &==> 3 x + 4 y = 3 \
   |bf(v)| = 1 &== > x^2 + y^2 = 1 $
 
-From the dot product condition, solve for $x$:
-$ 3 x + 4 y = 3 ==> x = (3 - 4 y) / (3) $
+#figure(
+  image("figures/sol-alfa-dot-reverse.svg", width: auto),
+  caption: [The two answers to @exer-dot-reverse,
+    which are two unit vectors spaced at an equal angle away from $angle.l 3,4 angle.r$.
+  ],
+) <fig-sol-alfa-dot-reverse>
 
-Substitute $x = (3 - 4 y) / (3)$ into $x^2 + y^2 = 1$:
+From the dot product condition, solve for $x$:
+$ 3 x + 4 y = 3 ==> x = (3 - 4 y) / (3). $
+
+Substitute $x = (3 - 4 y) / (3)$ into $x^2 + y^2 = 1$ and solve:
 $ ((3 - 4 y) / (3))^2 + y^2 &= 1 \
-  (3 - 4 y)^2 / 9 + y^2 &= 1 \
-  (9 - 24 y + 16 y^2) / (9) + y^2 &= 1 \
-  (9 - 24 y + 16 y^2 + 9 y^2) / (9) &= 1 \
-  (25 y^2 - 24 y + 9) / (9) &= 1 \
-  25 y^2 - 24 y &= 0 \
-  y (25 y - 24) &= 0. $
+  <==> (25 y^2 - 24 y + 9) / (9) &= 1 \
+  <==> y (25 y - 24) &= 0. $
 Hence either $y = 0$ or $y = 24/25$.
 
 - If $y = 0$ we get $x = frac(3 - 4 (0), 3) = 1$.
   Thus, the first unit vector is: $bf(v)_1 = angle.l 1 , 0 angle.r$.
-- If $y = 24 / 25$ we get
-  $ x = frac(3 - 4 (24 / 25), 3) = (3 - 96 / 25) / (3)
-  = (75 / 25 - 96 / 25) / (3) = (- 21) / (25) dot 1 / 3 = - 7 / 25. $
+- If $y = 24 / 25$ we get $x = frac(3 - 4 (24 / 25), 3) = - 7 / 25$.
   Thus, the second unit vector is:
   $bf(v)_2 = angle.l -7 / 25 , 24 / 25 angle.r$.
 
@@ -218,21 +214,21 @@ Solving for $k$ gives $#boxed[$ k = -17/3 $]$.
 
 == Solution to @exer-planes-sandwich
 
-We are given two parallel planes in $RR^3$:
-$ "Plane" Pi_1 : quad 3 x + 4 y + 12 z &= - 1 \
-  "Plane" Pi_2 : quad 3 x + 4 y + 12 z &= 1000 $
-and a point $P$ such that the distance from $P$ to $Pi_1$ is $42$.
-We need to compute the possible distances $d$ from $P$ to the plane $Pi_2$.
-See @fig-sol-alfa-plane-sandwich.
-The idea is that the planes are parallel, so there really should just
-be two possible answers.
-
 #figure(
   image("figures/sol-alfa-plane-sandwich.svg", width: auto),
   caption: [A cartoon showing the planes $Pi_1$ and $Pi_2$
     and couple possible locations for the point $P$.],
 ) <fig-sol-alfa-plane-sandwich>
 
+We are given two parallel planes in $RR^3$:
+$ "Plane" Pi_1 : quad 3 x + 4 y + 12 z &= - 1 \
+  "Plane" Pi_2 : quad 3 x + 4 y + 12 z &= 1000 $
+and a point $P$ such that the distance from $P$ to $Pi_1$ is $42$.
+We need to compute the possible distances $d$ from $P$ to the plane $Pi_2$.
+See @fig-sol-alfa-plane-sandwich.
+
+The idea is that the planes are parallel, so there really should just
+be two possible answers.
 To do the algebra, first observe that (parallel) planes $Pi_1$ and $Pi_2$
 have the same normal vector:
 $ bf(n) = angle.l 3 , 4 , 12 angle.r $
