@@ -442,7 +442,7 @@ a "random" linear system of $n$ equations and $n$ variables "usually" has only o
 For example, in high school algebra, you probably were asked to solve systems of equations like
 $ x_1 + 2 x_2 = 14 \
   3 x_1 + 4 x_2 = 38. $
-you can do this using whatever method you're used to;
+You can do this using whatever method you're used to;
 you should find $(x_1,x_2) = (10, 2)$ as the only solution.
 And you can probably already tell that $14$ and $38$ could have been any numbers,
 and you'd still always get exactly one solution.
