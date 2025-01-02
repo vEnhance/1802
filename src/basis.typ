@@ -430,7 +430,7 @@ you can think of the 2D bullet as what's left over if you rule out 0D, 1D, 3D.)
   if you get three vectors in $RR^3$ and want to know if they are linearly independent or not,
   you should always take the determinant:
   $ detmat(3,1,71; 42,53,91; 18,17,13) = "ugly arithmetic" = -18522 != 0. $
-  So the three vectors are a basis and the span is all of $RR^3$
+  So the three vectors are a basis and the span is all of $RR^3$.
 ]
 
 == [TEXT] Systems of equations
@@ -442,10 +442,10 @@ a "random" linear system of $n$ equations and $n$ variables "usually" has only o
 For example, in high school algebra, you probably were asked to solve systems of equations like
 $ x_1 + 2 x_2 = 14 \
   3 x_1 + 4 x_2 = 38. $
-you can do this using whatever method you're used to;
+You can do this using whatever method you're used to;
 you should find $(x_1,x_2) = (10, 2)$ as the only solution.
 And you can probably already tell that $14$ and $38$ could have been any numbers,
-and you'd still always get exactly solution.
+and you'd still always get exactly one solution.
 
 Why is this relevant to the stuff about basis?
 Well, the point is you can view the variables above as coefficients in a linear combination
