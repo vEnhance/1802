@@ -133,14 +133,18 @@ the left-hand side is a real number (scalar), but the right-hand side is a vecto
 == [EXER] Exercises
 
 #exer[
-  Let $bf(u)$, $bf(v)$, $bf(w)$ be vectors of the same length.
-  By using @table-operations, determine whether each of the following expressions is a
+  Let $bf(u)$, $bf(v)$, $bf(w)$ be vectors in $RR^3$.
+  By using @table-operations (or skimming @sec-dot briefly),
+  determine whether each of the following expressions is a
   real number, a vector, or nonsense (type-error); there should be one of each.
 
   - $(bf(u) dot bf(v)) dot bf(w)$
-  - $bf(u) dot bf(v) + bf(w)$
+  - $bf(u) dot bf(v) + bf(w)$ (here order of operations is $dot$ before $+$)
   - $bf(u) dot (bf(v) + bf(w))$
 
   (The symbol $dot$ confusingly can refer to three different things:
   grade-school multiplication, scalar multiplication, or the dot product.)
-]
+] <exer-tsafe>
+
+(The answer to this exercise is written in @ch-sol-alfa,
+and in general Part Lima contains solutions to all the exercises.)

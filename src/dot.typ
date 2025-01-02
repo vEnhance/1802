@@ -1,6 +1,6 @@
 #import "@local/evan:1.0.0":*
 
-= The dot product
+= The dot product <ch-dot>
 
 The dot product is the first surprising result you'll see in this class,
 because it has _two_ definitions that look nothing alike,
@@ -15,7 +15,7 @@ This is the bar a concept has to pass for us to study it in this class:
 in order for us to deem a concept worthy of our attention in 18.02,
 it must have both an interpretation with algebra and an interpretation in geometry.
 
-== [TEXT] Two different definitions of the dot product
+== [TEXT] Two different definitions of the dot product <sec-dot>
 
 I promised you two definitions right? So here they are.
 
@@ -58,7 +58,8 @@ I won't dwell on this proof too much in the interest of moving these notes forwa
 ]
 
 #warning(title: [Warning: There are a lot of dots, aren't there?])[
-  Confusingly, the multiplication $dot$ is also used for normal multiplication.
+  Confusingly, the multiplication $dot$ is also used for normal multiplication
+  (as we saw in @exer-tsafe).
   This is why you need to always look at the types of objects
   so you know which $dot$ is happening.
   To spell this out:
@@ -138,7 +139,7 @@ you'll want to use the dot product.
   Compute the real number $t$ such that $vec(1,2,3)$ and $vec(4,5,t)$ are perpendicular.
 ]
 #soln[
-  We need $1 dot 4 + 2 dot 5 + 3 dot t = 0$, so $t = -14/3$.
+  We need $1 dot 4 + 2 dot 5 + 3 dot t = 0$, so $#boxed[$ t = -14/3 $]$.
 ]
 
 #example(title: [Example: $bf(v) dot bf(v) = |bf(v)|^2$])[
@@ -169,11 +170,6 @@ Imagine projecting the vector $bf(v)$ onto the line through $bf(w)$,
 to get the purple vector shown in @fig-dot-project1.
 This purple vector is typically written $op("proj")_(bf(w))(bf(v))$.
 
-#figure(
-  image("figures/dot-proj1.svg", width: auto),
-  caption: [The projection of $bf(v) = vec(2,3)$ along $bf(w) = vec(4,1)$.],
-) <fig-dot-project1>
-
 #typesig[
   The vector projection $op("proj")_(bf(w))(bf(v))$
   is a vector that points in either the same or opposite direction as $bf(w)$.
@@ -184,6 +180,12 @@ Let's do an example to see how the dot product lets us compute this.
   Suppose $bf(v) = vec(2,3)$ and $bf(w) = vec(4,1)$, as in @fig-dot-project1.
   How can we find the purple vector $op("proj")_(bf(w))(bf(v))$?
 ]
+
+#figure(
+  image("figures/dot-proj1.svg", width: auto),
+  caption: [The projection of $bf(v) = vec(2,3)$ along $bf(w) = vec(4,1)$.],
+) <fig-dot-project1>
+
 
 #soln[
   First, let's figure out the _length_ of the purple vector.
@@ -212,7 +214,7 @@ Let's do an example to see how the dot product lets us compute this.
   instead of $vec(2,3)$, the answer would be the same.
 ]
 
-== [RECIPE] Projection
+== [RECIPE] Projection <sec-recipe-proj>
 
 This procedure last section works in general for any vectors, in any number of dimensions.
 The only catch is that we have to pay a bit of attention to $theta < 90 degree$
@@ -322,18 +324,15 @@ Let's also do the example in @fig-dot-project2.
 #exer[
   In four-dimensional space $RR^4$, the vectors $angle.l 1,2,3,4 angle.r$
   and $angle.l 5,6,7,t angle.r$ are perpendicular. Compute $t$.
-]
+] <exer-dot-perp4d>
 
 #exer[
-  Compute the scalar component and vector projection of $bf(v) = angle.l 1,2,3 angle.r$
-  along the direction of $bf(w) = angle.l -3000, -4000, 0 angle.r$.
-]
-
-#exer[
-  Compute the projection of $angle.l 123,456,789 angle.r$ in the direction of $ee_1$.
-]
+  - Compute the vector projection of $angle.l 123,456,789 angle.r$ in the direction of $ee_1$.
+  - Compute the scalar component and vector projection of $bf(v) = angle.l 1,2,3 angle.r$
+    along the direction of $bf(w) = angle.l -3000, -4000, 0 angle.r$.
+] <exer-dot-proj>
 
 #exer[
   Let $bf(w) = angle.l 3,4 angle.r$.
   Compute all unit vectors $bf(v)$ in $RR^2$ for which $bf(v) dot bf(w) = 3$.
-]
+] <exer-dot-reverse>

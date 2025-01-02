@@ -261,9 +261,9 @@ But the sign carries a bit more information.
 #exer[
   Compute the unit vector along the direction of the vector
   $ vec(-0.0008 pi, -0.0009 pi, -0.0012 pi). $
-]
+] <exer-vectors-dir>
 
 #exer[
   Compute the real number $a$ for which the points $(0,0,0)$,
   $(1,0,1)$, $(0,1,2)$ and $(1,2,a)$ all lie on one plane.
-]
+] <exer-vectors-coplanar>
