@@ -159,14 +159,7 @@ $bf(w) = angle.l 1,0 angle.r $ obviously works --- but we'll pretend we didn't n
 Translating the givens algebraically,
 we have the following system of equations:
 $ bf(v) dot bf(w) = 3 &==> 3 x + 4 y = 3 \
-  |bf(v)| = 1 &== > x^2 + y^2 = 1 $
-
-#figure(
-  image("figures/sol-alfa-dot-reverse.svg", width: auto),
-  caption: [The two answers to @exer-dot-reverse,
-    which are two unit vectors spaced at an equal angle away from $angle.l 3,4 angle.r$.
-  ],
-) <fig-sol-alfa-dot-reverse>
+  |bf(v)| = 1 &==> x^2 + y^2 = 1 $
 
 From the dot product condition, solve for $x$:
 $ 3 x + 4 y = 3 ==> x = (3 - 4 y) / (3). $
@@ -186,6 +179,13 @@ Hence either $y = 0$ or $y = 24/25$.
 In conclusion the answer is
 $ #boxed[$ angle.l 1,0 angle.r " and " lr(angle.l -7/25, 24/25 angle.r) $]. $
 See @fig-sol-alfa-dot-reverse for a picture of the two answers.
+
+#figure(
+  image("figures/sol-alfa-dot-reverse.svg", width: auto),
+  caption: [The two answers to @exer-dot-reverse,
+    which are two unit vectors spaced at an equal angle away from $angle.l 3,4 angle.r$.
+  ],
+) <fig-sol-alfa-dot-reverse>
 
 == Solution to @exer-planes-cube
 
@@ -300,6 +300,5 @@ by the Pythagorean theorem: there is only one possible value.
 The point is that $vec(1,2,3)$ and $vec(4,5,k)$ are supposed to be
 perpendicular; the vector $bf(v)$ is otherwise completely irrelevant.
 For them to be perpendicular we need
-$ 0 &= vec(1,2,3) dot vec(4,5,k) \
-  &= 1 dot 4 + 2 dot 5 + 3k = 3k + 14 $
-so $#boxed[$ k = -14 slash 3 $]$.
+$ 0 &= vec(1,2,3) dot vec(4,5,k) = 1 dot 4 + 2 dot 5 + 3k = 3k + 14
+==> #boxed[$ k = -14 / 3 $]$.

@@ -214,18 +214,18 @@ As we showed in @sec-matrix-power,
 this means we should be able to recover $M^(20)$ on the basis vectors too.
 
 To get the first column of $M^(20)$, we write
-$ M^(20) (ee_1) &= M^(20) (2/3 vec(1,-1) + 1/3 vec(1, 2)) \
-  &= 2/3 M^(20) vec(1,-1) + 1/3 M^(20) vec(1,2) \
-  &= vec((2 + 10^(20)) slash 3, (-2 + 2 dot 10^(20)) slash 3) \
-  &= vec(100000000000000000002 slash 3, 199999999999999999998 slash 3) \
-  &= vec(33333333333333333334, 66666666666666666666) $
+$ M^(20) (ee_1) &= M^(20) (2/3 vec(1,-1) + 1/3 vec(1, 2))
+  = 2/3 M^(20) vec(1,-1) + 1/3 M^(20) vec(1,2)
+  = vec((2 + 10^(20)) slash 3, (-2 + 2 dot 10^(20)) slash 3) \
+  &= vec(100000000000000000002 slash 3, 199999999999999999998 slash 3)
+  = vec(33333333333333333334, 66666666666666666666) $
 as needed for the first column.
 
 To get the second column of $M^(20)$, we write
-$ M^(20) (ee_2) &= M^(20) (1/3 vec(1,2) - 1/3 vec(1,-1)) \
-  &= 1/3 M^(20) vec(1,2) - 1/3 M^(20) vec(1,-1) \
-  &= vec((10^(20) - 1) slash 3, (2 dot 10^(20) + 1) slash 3) \
-  &= vec(99999999999999999999 slash 3, 200000000000000000001 slash 3) \
-  &= vec(33333333333333333333, 66666666666666666667) $
+$ M^(20) (ee_2) &= M^(20) (1/3 vec(1,2) - 1/3 vec(1,-1))
+  = 1/3 M^(20) vec(1,2) - 1/3 M^(20) vec(1,-1)
+  = vec((10^(20) - 1) slash 3, (2 dot 10^(20) + 1) slash 3) \
+  &= vec(99999999999999999999 slash 3, 200000000000000000001 slash 3)
+  = vec(33333333333333333333, 66666666666666666667) $
 as needed for the second column.
 This completes the solution.
