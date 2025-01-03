@@ -5,7 +5,7 @@
 This is a practice midterm that was given on November 13, 2024,
 covering topics in Part Golf, Hotel, and India,
 but only the 2D topics in these parts.
-Solutions are in @ch-sol-mt3.
+Solutions are in @ch-sol-india.
 
 #exer[
   Another butterfly is fluttering in the $x y$ plane
