@@ -2,9 +2,34 @@
 
 = Solutions to Part Delta
 
-== Solution to @exer-teacup
+== Solution to @exer-param-parabola (parabola arc length)
 
-#recall-thm(<exer-teacup>)
+#recall-thm(<exer-param-parabola>)
+
+We take the parametrization
+$ bf(r)(t) = (t, t^2-t-12) quad -3 <= t <= 4. $
+The derivative is
+$ bf(r)'(t) = angle.l 1, 2t-1 angle.r quad -3 <= t <= 4. $
+Hence, the arc length in the problem is given by
+$ L = int_(t=-3)^4 sqrt(1 + (2t-1)^2) dif t. $
+
+To use the hint in the exercise,
+we perform the $u$-substitution
+$ u = 2t-1 = 2 (t - 1 / 2) ==> dif u = 2 dif t ==> dif t = (d u) / (2). $
+When $t=-3$ we get $u=-7$ and when $t=4$ we get $u=7$.
+Thus we get
+$ L = 1/2 int_(u=-7)^7 sqrt(u^2+1) dif u. $
+Now using the hint we get that
+$ L &= 1/4 [u sqrt(u^2+1) + log(u + sqrt(u^2+1))]_(u=-7)^7 \
+  &=  1/4 (14 sqrt(50) + log(7 + sqrt(50)) - log(-7 + sqrt(50)))) \
+  &= 35/2 sqrt(2) + 1/4 log((7 + 5 sqrt(2)) / (-7 + 5 sqrt(2))) \
+  &= 35/2 sqrt(2) + 1/4 log((7 + 5 sqrt(2))^2 / ((7 + 5 sqrt(2))(-7 + 5 sqrt(2)))) \
+  &= 35/2 sqrt(2) + 1/4 log((7 + 5 sqrt(2))^2) \
+  &= #boxed[$ 35/2 sqrt(2) + 1/2 log(7 + 5 sqrt(2)) $]. $
+
+== Solution to @exer-param-teacup (teacups)
+
+#recall-thm(<exer-param-teacup>)
 
 We will first parametrize the motion of the toddler and then compute the
 distance traveled after one full revolution of the ride.
@@ -43,11 +68,15 @@ distance traveled after one full revolution of the ride.
 
 The velocity vector $bf(T)' (t)$ is the derivative of the
 position vector $bf(T) (t)$ with respect to time:
-$ bf(T)' (t) = vec(- R omega_(upright("ride")) sin (omega_(upright("ride")) t) - r omega_(upright("cup")) sin (omega_(upright("cup")) t) , - R omega_(upright("ride")) cos (omega_(upright("ride")) t) + r omega_(upright("cup")) cos (omega_(upright("cup")) t)) . $
+$ #boxed[$ bf(T)' (t) =
+  vec(- R omega_(upright("ride")) sin (omega_(upright("ride")) t)
+  - r omega_(upright("cup")) sin (omega_(upright("cup")) t),
+  - R omega_(upright("ride")) cos (omega_(upright("ride")) t)
+  + r omega_(upright("cup")) cos (omega_(upright("cup")) t)) $] . $
 
-== Solution to @exer-helicopter
+== Solution to @exer-param-helicopter (helicopter)
 
-#recall-thm(<exer-helicopter>)
+#recall-thm(<exer-param-helicopter>)
 
 Let's first parametrize $bf(P)(t)$:
 1. Since the helicopter is moving upward with constant speed $v = 5$, the
@@ -65,9 +94,7 @@ Let's first parametrize $bf(P)(t)$:
 3. The total position of the point $P$ as a function of time is the
   combination of the upward motion in the $z$-direction and the rotational
   motion in the $x y$-plane. Thus, the position of $P$ is:
-  $ bf(P) (t) = vec(2 cos (pi / 3 t) , - 2 sin (pi / 3 t) , 5 t) . $
-  This gives the full parametrization of the motion of the point $P$ on
-  the tip of the blade as a function of time.
+  $ #boxed[$ bf(P) (t) = vec(2 cos (pi / 3 t) , - 2 sin (pi / 3 t) , 5 t) $]. $
 
 As for the distance, we first compute the velocity vector by differentiating:
 $ bf(P)' (t) &= (d) / (dif t) vec(2 cos (pi / 3 t) , - 2 sin (pi / 3 t) , 5 t)
@@ -81,10 +108,16 @@ $ lr(|bf(P)' (t)|) &= sqrt(((2 pi) / (3))^2 + 5^2) = sqrt((4 pi^2) / (9) + 25) \
 which is a constant!
 Hence the total distance traveled is simply
 $ upright("Distance") = int_0^(18) sqrt(4 pi^2 + 225) / 3 dif t
-  = 18 dot sqrt(4 pi^2 + 225) / 3  = 6 sqrt(4 pi^2 + 225). $
+  = 18 dot sqrt(4 pi^2 + 225) / 3  = #boxed[$ 6 sqrt(4 pi^2 + 225) $]. $
 
-== Solution to @exer-clockblock
+== Solution to @exer-param-clockblock (clock)
 
-#recall-thm(<exer-clockblock>)
+#recall-thm(<exer-param-clockblock>)
 
-To be written. Answer to part (b) is 4 o'clock.
+The answer is $#boxed[4 o'clock]$!
+In other words, the red circle makes _three_ complete revolutions
+around the blue circle when it goes all the way around.
+
+This is a variation on what's called the _coin rotation paradox_
+(see #link("https://w.wiki/CBUS")[Wikipedia]) where $R = 20$ and $r = 10$.
+See the description there for details and an animation.

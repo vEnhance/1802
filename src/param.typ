@@ -617,7 +617,10 @@ Usually the strategy is to pick one that makes subsequent calculation easier.
 #exer[
   Compute the arc length of the part of the parabola $y = x^2 - x - 12$
   between $(-3,0)$ and $(4,0)$.
-]
+
+  You will probably need the following antiderivative fact not commonly seen in 18.01:
+  $ int sqrt(u^2+1) dif u = u/2 sqrt(u^2+1) + log(u + sqrt(u^2+1))/2 + C. $
+] <exer-param-parabola>
 
 #exer[
   At an amusement park, a teacup ride consists of teacups
@@ -634,7 +637,7 @@ Usually the strategy is to pick one that makes subsequent calculation easier.
     teacup relative to its center.
 
   Compute the _velocity_ vector of the toddler at time $t$.
-] <exer-teacup>
+] <exer-param-teacup>
 
 #figure(
   image("media/teacups.jpg", width: 60%),
@@ -653,21 +656,17 @@ Usually the strategy is to pick one that makes subsequent calculation easier.
     assuming the helicopter starts at height $z = 0$
     and the blade points along the positive $x$-axis at $t = 0$.
   - Calculate the distance traveled by $P$ from time $t = 0$ to time $t = 18$.
-] <exer-helicopter>
-
-#exerstar[AMC 10A 2015][
-  In @fig-clockblock, there's a circular clock with radius 20 cm
-  and a circular disk of radius 10 cm externally tangent at the 12 o'clock position.
-  The disk has an arrow painted that points directly up and rolls clockwise.
-  It takes twelve hours for the smaller disk to complete a rotation so that it returns to the top.
-
-  - Compute the parametric equation $bf(P)(t)$ for the point at the tip of the arrow at time $t$ in hours.
-    Assume the clock is centered at the origin and $bf(P)(0) = (0,40)$.
-  - At what point on the clock face will the disk be tangent
-    when the arrow is next pointing in the upward vertical direction?
-] <exer-clockblock>
+] <exer-param-helicopter>
 
 #figure(
   image("figures/param-clockblock.svg", width: auto),
   caption: [The clock problem from the AMC 10A in 2015.],
 ) <fig-clockblock>
+
+#exerstar[#link("https://aops.com/community/p3734621")[AMC 10A 2015]][
+  In @fig-clockblock, there's a circular clock with radius 20 cm
+  and a circular disk of radius 10 cm externally tangent at the 12 o'clock position.
+  The disk has an arrow painted that points directly up and rolls clockwise.
+  At what point on the clock face will the disk be tangent when the arrow
+  is next pointing in the upward vertical direction?
+] <exer-param-clockblock>
