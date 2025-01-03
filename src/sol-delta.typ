@@ -4,15 +4,10 @@
 
 == Solution to @exer-teacup
 
-We are tasked with parametrizing the motion of a toddler sitting in a
-teacup on an amusement park ride. The teacup ride rotates clockwise
-around a fixed center, while each individual teacup rotates
-counterclockwise. We also want to compute the distance traveled by the
-toddler after one full revolution of the teacup ride.
+#recall-thm(<exer-teacup>)
 
 We will first parametrize the motion of the toddler and then compute the
 distance traveled after one full revolution of the ride.
-
 
 1. The teacup center rotates clockwise with angular velocity
   $omega_(upright("ride"))$ in a circular path of radius $R$ around a
@@ -52,6 +47,8 @@ $ bf(T)' (t) = vec(- R omega_(upright("ride")) sin (omega_(upright("ride")) t) -
 
 == Solution to @exer-helicopter
 
+#recall-thm(<exer-helicopter>)
+
 Let's first parametrize $bf(P)(t)$:
 1. Since the helicopter is moving upward with constant speed $v = 5$, the
   height of the helicopter at time $t$ is given by:
@@ -87,5 +84,7 @@ $ upright("Distance") = int_0^(18) sqrt(4 pi^2 + 225) / 3 dif t
   = 18 dot sqrt(4 pi^2 + 225) / 3  = 6 sqrt(4 pi^2 + 225). $
 
 == Solution to @exer-clockblock
+
+#recall-thm(<exer-clockblock>)
 
 To be written. Answer to part (b) is 4 o'clock.
