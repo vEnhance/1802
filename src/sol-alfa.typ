@@ -301,4 +301,4 @@ The point is that $vec(1,2,3)$ and $vec(4,5,k)$ are supposed to be
 perpendicular; the vector $bf(v)$ is otherwise completely irrelevant.
 For them to be perpendicular we need
 $ 0 &= vec(1,2,3) dot vec(4,5,k) = 1 dot 4 + 2 dot 5 + 3k = 3k + 14
-==> #boxed[$ k = -14 / 3 $]$.
+  ==> #boxed[$ k = -14 / 3 $] $.
