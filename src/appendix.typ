@@ -84,7 +84,9 @@ will essentially be the beginning of the second stage.
 
 = Proofs of the dot product property
 
-== Deriving the geometric definition of dot product from the algebraic one (short but comes out of nowhere) <appendix-dotpf-alg>
+== Deriving the geometric definition of dot product from the algebraic one  <appendix-dotpf-alg>
+
+This proof is short, but harder to come up with.
 
 We have two definitions in play and we want to show they coincide, which makes notation awkward.
 So in what follows, our notation $bf(u) dot bf(v)$ will always refer to the
@@ -119,7 +121,7 @@ Setting the two equations for $A B^2$ equal gives
 $ bf(u) dot bf(v) = (C A)(C B) cos theta. $
 As $|bf(u)| = C A$ and $|bf(v)| = C B$, the proof is complete.
 
-== Deriving the algebraic definition of dot product from the geometric one (longer but easier to come up with) <appendix-dotpf-geo>
+== Deriving the algebraic definition of dot product from the geometric one <appendix-dotpf-geo>
 
 The proof in @appendix-dotpf-alg might seem magical.
 Indeed, it's so short because it's cheating in some way:
@@ -138,12 +140,12 @@ We will assume that $|bf(u)| = 1$ (i.e. $bf(u)$ is a unit vector)
 so that $bf(u) dot bf(v)$ is the length of the projection of $bf(v)$ onto $bf(u)$.
 This is OK to assume because in the general case one just scales everything by $|bf(u)|$.
 
-=== Easy special case
+#h3[Easy special case]
 
 As a warmup, try to show that if $bf(u) = vec(a,b)$ is any vector, then $bf(u) dot ee_1 = a$.
 (This is easy. The projection of $bf(u)$ onto $ee_1$ is literally $a$.)
 
-=== Main proof
+#h3[Main proof]
 
 For concreteness, specialize to $RR^2$ and consider $bf(u) dot bf(v)$
 where $bf(u) =  vec(a,b)$ is a unit vector (i.e. $bf(u) = 1$),
