@@ -4,11 +4,10 @@
 
 == Solution to @exer-matrix-rotrefl
 
-The transformation $T : RR^2 -> RR^2$ was defined
-by $30 degree$ counterclockwise about the origin,
-then reflection around the line $y = x$.
-We calculate its values on the basis vectors $ee_1 = angle.l 1,0 angle.r$
-and $ee_2 = angle.l 0,1 angle.r$.
+#recall-thm(<exer-matrix-rotrefl>)
+
+We calculate the outputs of $T$ on the basis vectors
+$ee_1 = angle.l 1,0 angle.r$ and $ee_2 = angle.l 0,1 angle.r$.
 
 For $ee_1$, we first end up with
 $ ee_1 = lr(angle.l 1,0 angle.r) -->
@@ -34,10 +33,9 @@ applying two transformations is the same as multiplying their corresponding matr
 
 == Solution to @exer-basis-birthday
 
-You were asked to compute the span of
-$ bf(v)_1 = vec(M_1 M_2, D_1 D_2) " and " bf(v)_2 = vec(Y_1 Y_2, Y_3 Y_4) $
-with your birthday as the digits above.
-Neither vector is zero,
+#recall-thm(<exer-basis-birthday>)
+
+Neither $bf(v)_1$ nor $bf(v)_2$ is zero,
 and for almost everyone the two vectors won't be a multiple of each other.
 So for most people the answer is that the span is $#boxed[all of $RR^2$]$.
 
@@ -59,13 +57,15 @@ There are roughly two strategies you can adopt:
 
 == Solution to @exer-basis-perpbasis
 
-We need to compute the maximum possible number of linearly independent vectors
-one can find perpendicular to $bf(v) = angle.l 1,2,3,4,5 angle.r$.
+#recall-thm(<exer-basis-perpbasis>)
+
 These vectors all need to lie in a hyperplane perpendicular to $bf(v)$,
 which is a $#boxed[$ 4 $]$-dimensional space.
 (The entries of the vector $bf(v)$ are irrelevant besides $bf(v)$ not being the zero vector.)
 
 == Solution to @exer-eigen-warmup
+
+#recall-thm(<exer-eigen-warmup>)
 
 This is done just by following the recipe.
 Here are the answers.
@@ -131,9 +131,9 @@ Here are the answers.
 
 == Solution to @exer-eigen-example
 
-We need find any $2 times 2$ matrix $T$ with four nonzero entries
-whose eigenvalues are $5$ and $7$.
-To do this, we arbitrarily pick two vectors with nonzero entries to be the eigenvectors, say:
+#recall-thm(<exer-eigen-example>)
+
+We arbitrarily pick two vectors with nonzero entries to be the eigenvectors, say:
 $ bf(v) = vec(1,1) \
   bf(w) = vec(1,-1). $
 Then we seek a matrix $T$ such that
@@ -154,8 +154,7 @@ and the multiples of $bf(w)$ (for $lambda = 7$).
 
 == Solution to @exer-eigen-6x6
 
-Let $ M = mat(5,0,0,0,0,0; 0,-9,0,0,0,0; 0,0,5,0,0,0; 0,0,0,0,0,0; 0,0,0,0,8,0; 0,0,0,0,1,8). $
-We need to calculate eigenvalues and eigenvectors for $M$.
+#recall-thm(<exer-eigen-6x6>)
 
 The basic idea is that we can basically work with bare hands,
 not needing to resort to the determinants we saw before.
@@ -189,8 +188,8 @@ And we can read off the corresponding eigenvectors from the above six numbered i
 
 == Solution to @exer-eigen-power
 
-We are asked to compute $M^(20)$ where
-$ M = mat(4,3;6,7). $
+#recall-thm(<exer-eigen-power>)
+
 We'll follow the idea in @sec-matrix-power:
 find a basis of eigenvectors of $M$ and use that to compute powers of $M$.
 

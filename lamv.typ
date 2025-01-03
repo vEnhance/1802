@@ -138,8 +138,6 @@ For comparison, Part Juliett corresponds to §17.7, §18, §19, §21 of #poonen.
 #pagebreak()
 #include "src/sol-charlie.typ"
 #pagebreak()
-#include "src/sol-mt1.typ"
-#pagebreak()
 #include "src/sol-delta.typ"
 #pagebreak()
 #include "src/sol-echo.typ"

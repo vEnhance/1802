@@ -5,7 +5,7 @@
 This set of problems is intended to be more difficult.
 You can try them here if you want, but don't be discouraged if you find the problems tricky.
 All of these are much harder than anything that showed up on the actual midterm.
-Solutions to these six exercises are in @ch-sol-mt1.
+Solutions to these six exercises are in @ch-sol-charlie.
 
 (Suggested usage: think about each for 20-30 minutes, then read the solution.
 I tried to craft problems that teach deep understanding and piece together multiple ideas,

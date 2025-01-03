@@ -1,6 +1,6 @@
 #import "@local/evan:1.0.0":*
 
-= Complex numbers
+= Complex numbers <ch-complex>
 
 == [TEXT] It's a miracle that multiplication in $CC$ has geometric meaning
 
@@ -412,6 +412,6 @@ So to summarize, @tab-complex tells you rules of thumb for complex numbers.
 == [EXER] Exercises
 
 #exerstar[
-  Without a calculator, find integers $a$ and $b$ such that
+  Without a calculator, give an example of an ordered pair $(a,b)$ of integers satisfying
   $ a^2 + b^2 = 101 dot 401 dot 901. $
-]
+] <exer-complex-101-401-901>

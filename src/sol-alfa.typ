@@ -4,6 +4,8 @@
 
 == Solution to @exer-tsafe
 
+#recall-thm(<exer-tsafe>)
+
 - The expression $(bf(u) dot bf(v)) dot bf(w)$ is a *vector*, since
   $ bf(u) dot bf(v) & = "scalar"\
   "scalar" dot bf(w) & = "vector" $
@@ -18,8 +20,7 @@
 
 == Solution to @exer-vectors-dir
 
-We are asked to compute the unit vector along the direction of the vector
-$ angle.l -0.0008 pi, -0.0009 pi, -0.0012 pi angle.r. $
+#recall-thm(<exer-vectors-dir>)
 
 The point of this example is to emphasize that you can scale
 out weird positive constants like $0.0001 pi$;
@@ -36,8 +37,8 @@ is not a correct answer: that vector points in the opposite direction.)
 
 == Solution to @exer-vectors-scaledet
 
-We're given a $3 times 3$ matrix $A$ with $det A = 2$
-and want to compute $det(10 A)$.
+#recall-thm(<exer-vectors-scaledet>)
+
 I claim the answer is
 $ det(10A) = 10^3 dot det A = #boxed[$ 2000 $]. $
 Here are two ways to see this:
@@ -61,13 +62,10 @@ Here are two ways to see this:
 
 == Solution to @exer-vectors-coplanar
 
-We are given four points in $RR^3$, which we name:
-$ P_1 &= (0,0,0) \
-  P_2 &= (1,0,1) \
-  P_3 &= (0,1,2) \
-  P_4 &= (1,2,a). $
-We need to determine the value of $a$ such that all four points
-lie on the same plane.
+#recall-thm(<exer-vectors-coplanar>)
+
+Call the points $P_1 = (0,0,0)$, $P_2 = (1,0,1)$, $P_3 = (0,1,2$, $P_4 = (1,2,a)$.
+
 There are several approaches to this (including ones that use later material);
 the one using the material in this chapter is the following:
 
@@ -99,12 +97,16 @@ Hence $det M = 0 <==> #boxed[$ a = 5 $]$.
 
 == Solution to @exer-dot-perp4d
 
+#recall-thm(<exer-dot-perp4d>)
+
 We need the dot product to be zero:
 $ 0 &= angle.l 1,2,3,4 angle.r dot angle.l 5,6,7,t angle.r \
   &= 1 dot 5 + 2 dot 6 + 3 dot 7 + 4 dot t \
   &= 38 + 4t ==> #boxed[$ t = -19/2 $]. $
 
 == Solution to @exer-dot-proj
+
+#recall-thm(<exer-dot-proj>)
 
 The first part asks to
 compute the vector projection of $angle.l 123,456,789 angle.r$
@@ -115,11 +117,9 @@ but if you draw a picture the point is you're just projecting
 the vector $angle.l 123, 456, 789 angle.r$ to the $x$-axis,
 which gives you its $x$-component.
 
-For the second part, e are given the vectors:
+For the second part, let
 $ bf(v) &= vec(1 , 2 , 3) \
-  bf(w) &= vec(- 3000, - 4000, 0) $
-and we need to compute the scalar component of $bf(v)$ along $bf(w)$ and
-the vector projection of $bf(v)$ along $bf(w)$.
+  bf(w) &= vec(- 3000, - 4000, 0). $
 
 Note that the factor of $-1000$ in $bf(w)$ doesn't matter,
 since scaling $bf(w)$ doesn't matter.
@@ -147,19 +147,14 @@ $ op("proj")_(bf(w))(bf(v))
 
 == Solution to @exer-dot-reverse
 
-We are given the vector: $ bf(w) = angle.l 3 , 4 angle.r. $
-We need to find all unit vectors
-$bf(v) = angle.l x , y angle.r$ in $bb(R)^2$ such that $bf(v) dot bf(w) = 3$.
+#recall-thm(<exer-dot-reverse>)
 
-(You might already guess one of the solutions ---
-$bf(w) = angle.l 1,0 angle.r $ obviously works ---
-but we'll pretend we didn't notice that.)
-
-(Geometrically, we expect there to be two solutions:
-if $theta$ is the angle between the two vectors,
-we need $cos theta = 3/5$,
+Geometrically, we expect there to be two solutions:
+if $theta$ is the angle between the two vectors, we need $cos theta = 3/5$,
 and so there should be two vectors that work.
-See @fig-sol-alfa-dot-reverse for a picture.)
+See @fig-sol-alfa-dot-reverse for a picture.
+(You might already guess one of the solutions ---
+$bf(w) = angle.l 1,0 angle.r $ obviously works --- but we'll pretend we didn't notice that.)
 
 Translating the givens algebraically,
 we have the following system of equations:
@@ -194,11 +189,7 @@ See @fig-sol-alfa-dot-reverse for a picture of the two answers.
 
 == Solution to @exer-planes-cube
 
-We are given that a cube in $RR^3$
-has two of its faces lying on the planes
-$ x + 2 y + 3 z &= 4 \
-  5 x + 6 y + k z &= 7 $
-and we need to find $k$.
+#recall-thm(<exer-planes-cube>)
 
 The main observation is this:
 #idea[
@@ -214,18 +205,19 @@ Solving for $k$ gives $#boxed[$ k = -17/3 $]$.
 
 == Solution to @exer-planes-sandwich
 
+#recall-thm(<exer-planes-sandwich>)
+
 #figure(
   image("figures/sol-alfa-plane-sandwich.svg", width: auto),
   caption: [A cartoon showing the planes $Pi_1$ and $Pi_2$
     and couple possible locations for the point $P$.],
 ) <fig-sol-alfa-plane-sandwich>
 
-We are given two parallel planes in $RR^3$:
+Denote the planes
 $ "Plane" Pi_1 : quad 3 x + 4 y + 12 z &= - 1 \
-  "Plane" Pi_2 : quad 3 x + 4 y + 12 z &= 1000 $
-and a point $P$ such that the distance from $P$ to $Pi_1$ is $42$.
-We need to compute the possible distances $d$ from $P$ to the plane $Pi_2$.
+  "Plane" Pi_2 : quad 3 x + 4 y + 12 z &= 1000. $
 See @fig-sol-alfa-plane-sandwich.
+Let $d$ be the desired distance.
 
 The idea is that the planes are parallel, so there really should just
 be two possible answers.
@@ -264,15 +256,16 @@ $#boxed[$ d = 35 $]$ or $#boxed[$ d = 119 $]$.
 
 == Solution to @exer-cross-100ab
 
-We need to find $a$ and $b$ from
-$ vec(1, 2, 3) times vec(100, a, b) = 0. $
+#recall-thm(<exer-cross-100ab>)
+
 Two nonzero vectors have cross product $0$
 if and only if they're multiples of each other.
 Hence we get $#boxed[$ a= 200 $]$ and $#boxed[$ b = 300 $]$.
 
 == Solution to @exer-cross-scale
 
-We are given $bf(v) times bf(w) = vec(1,2,3)$ and seek $5bf(w) times 4bf(v)$.
+#recall-thm(<exer-cross-scale>)
+
 Using properties of the cross product:
 $ 5bf(w) times 4bf(v)
   = 20 (bf(w) times bf(v))
@@ -288,8 +281,7 @@ also follows directly from the right-hand rule.
 
 == Solution to @exer-cross-pythag
 
-We have unit vectors $bf(v)$ and $bf(w)$ and are asked to calculate
-$ |bf(v) times bf(w)|^2 + (bf(v) dot bf(w))^2. $
+#recall-thm(<exer-cross-pythag>)
 
 Let $theta$ be the angle between the vectors.
 Then the geometric definitions of the cross and dot products gives
@@ -303,8 +295,8 @@ by the Pythagorean theorem: there is only one possible value.
 
 == Solution to @exer-cross-perp
 
-We need to find $k$ such that
-$ vec(1,2,3) times bf(v) = vec(4,5,k). $
+#recall-thm(<exer-cross-perp>)
+
 The point is that $vec(1,2,3)$ and $vec(4,5,k)$ are supposed to be
 perpendicular; the vector $bf(v)$ is otherwise completely irrelevant.
 For them to be perpendicular we need
