@@ -27,7 +27,7 @@ $ z_2 = 10 (- sqrt(3) / 2 - i 1 / 2) = #boxed[$ - 5sqrt(3) - 5 i $] $
 
 == Solution to @exer-mf-2
 
-=== Solution with bare-hands
+#h3[Solution with bare-hands]
 
 Given that $2$ is an eigenvalue of $M$,
 we should have $det (M - 2 I) = 0$.
@@ -47,7 +47,7 @@ $ M vec(x,y) = 5vec(x,y) ==>
   cases((1-5)x + y = 0, -4+(6-5)y=0) ==> y=4x. $
 So an eigenvector for $5$ is $#boxed[$ vec(1,4) $]$ (or any nonzero multiple of it).
 
-=== Solution using trace and determinant shortcut
+#h3[Solution using trace and determinant shortcut]
 
 Let $lambda_2$ be the other eigenvalue.
 If you happen to remember that the trace is the sum of the eigenvalues
@@ -100,7 +100,7 @@ $ nabla f = angle.l -sin(x), cos(y) angle.r. $
 So a critical point occurs at any point for which $sin(x) = cos(y) = 0$.
 (These are the points where $cos(x) = pm 1$ and $sin(y) = pm 1$.)
 
-=== Saddle point
+#h3[Saddle point]
 
 To identify a saddle point, we compute the double derivatives:
 $ f_(x x) &= -cos(x) \
@@ -129,7 +129,7 @@ the level curves are a mesh of lines running through the plane at diagonals.
 ) <fig-practice-level-saddle>
 
 
-=== Local maximum
+#h3[Local maximum]
 
 An example of a local maximum would be $#boxed[$ 0, pi/2 $]$,
 at which $f(0, pi/2) = cos 0 + sin (pi/2) = 2$.
