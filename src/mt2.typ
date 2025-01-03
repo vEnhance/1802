@@ -8,7 +8,7 @@ This is a practice midterm that was given on October 21, 2024,#footnote[
   than the actual thing 😭 but thank you for hosting these ur amazing".
 ]
 covering topics in Parts Delta, Echo, Foxtrot.
-Solutions are in @ch-sol-mt2.
+Solutions are in @ch-sol-foxtrot.
 
 #exer[
   A butterfly is fluttering in the $x y$ plane with position given by

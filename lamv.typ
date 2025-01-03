@@ -144,8 +144,6 @@ For comparison, Part Juliett corresponds to §17.7, §18, §19, §21 of #poonen.
 #pagebreak()
 #include "src/sol-foxtrot.typ"
 #pagebreak()
-#include "src/sol-mt2.typ"
-#pagebreak()
 #include "src/sol-golf.typ"
 #pagebreak()
 #include "src/sol-hotel.typ"
