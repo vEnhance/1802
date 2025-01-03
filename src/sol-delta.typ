@@ -115,9 +115,9 @@ $ upright("Distance") = int_0^(18) sqrt(4 pi^2 + 225) / 3 dif t
 #recall-thm(<exer-param-clockblock>)
 
 The answer is $#boxed[4 o'clock]$!
-In other words, the red circle makes _three_ complete revolutions
-around the blue circle when it goes all the way around.
+In other words, the red disk makes _three_ complete revolutions
+around the blue block when it goes all the way around, not just two.
 
-This is a variation on what's called the _coin rotation paradox_
-(see #link("https://w.wiki/CBUS")[Wikipedia]) where $R = 20$ and $r = 10$.
-See the description there for details and an animation.
+This is a variation on what's called the *coin rotation paradox*
+(see #link("https://w.wiki/CBUS")[Wikipedia]), where $R = 20$ and $r = 10$.
+See the description there for details and an animation (when $R = r$ and $R = 3r$).
