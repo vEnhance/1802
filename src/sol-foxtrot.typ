@@ -356,7 +356,7 @@ this approach is not going to fly.
 Let $f(x,y,z) = x+2y+2z$.
 Let $cal(R)$ denote the region $x^2 + y^2 + z^2 <= 100$ (a ball of radius $10$)
 and let $cal(S)$ denote the boundary $x^2 + y^2 + z^2 = 100$ (a sphere of radius $10$).
-We follow the steps we described in the recipe in LAMV.
+We follow the steps we described in the recipe in @sec-recipe-opt-easy and @sec-recipe-lm.
 
 0. $cal(R)$ is three-dimensional and has no limit cases but a two-dimensional boundary $cal(S)$.
   (Because of the condition $x^2 + y^2 + z^2 <= 100$ and all the squares being nonnegative,

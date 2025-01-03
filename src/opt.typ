@@ -163,7 +163,7 @@ Now that we have this, we can describe the recipe for the "hard" case.
 The only change is to replace the old critical point definition (where $nabla f (P) = 0$)
 with the LM-critical point definition.
 
-== [RECIPE] Lagrange multipliers
+== [RECIPE] Lagrange multipliers <sec-recipe-lm>
 
 #recipe(title: [Recipe for Lagrange multipliers])[
   Suppose you want to find the optimal values of $f : RR^n -> RR$ over a region $cal(R)$,
