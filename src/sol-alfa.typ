@@ -2,7 +2,7 @@
 
 = Solutions to Part Alfa <ch-sol-alfa>
 
-== Solution to @exer-tsafe
+== Solution to @exer-tsafe (type safety)
 
 #recall-thm(<exer-tsafe>)
 
@@ -18,7 +18,7 @@
   $ bf(v) + bf(w) & = "vector"\
   bf(u) dot "vector" & = "scalar" $
 
-== Solution to @exer-vectors-dir
+== Solution to @exer-vectors-dir (direction)
 
 #recall-thm(<exer-vectors-dir>)
 
@@ -35,7 +35,7 @@ $ 1/(|bf(w)|) bf(w)
 (Note that $angle.l 8 slash 17, 9 slash 17, 12 slash 17 angle.r$
 is not a correct answer: that vector points in the opposite direction.)
 
-== Solution to @exer-vectors-scaledet
+== Solution to @exer-vectors-scaledet ($det(10A)$)
 
 #recall-thm(<exer-vectors-scaledet>)
 
@@ -60,7 +60,7 @@ Here are two ways to see this:
   so
   $ det(A) = 30 dot 90 dot 10 - 50 dot 50 dot 10 = 2000. $
 
-== Solution to @exer-vectors-coplanar
+== Solution to @exer-vectors-coplanar (coplanar)
 
 #recall-thm(<exer-vectors-coplanar>)
 
@@ -95,7 +95,7 @@ Substituting back:
 $ det M = 1 dot (a - 4) - 0 dot (- 2) + 1 dot (- 1) = a - 4 - 1 = a - 5. $
 Hence $det M = 0 <==> #boxed[$ a = 5 $]$.
 
-== Solution to @exer-dot-perp4d
+== Solution to @exer-dot-perp4d (4d vectors)
 
 #recall-thm(<exer-dot-perp4d>)
 
@@ -104,7 +104,7 @@ $ 0 &= angle.l 1,2,3,4 angle.r dot angle.l 5,6,7,t angle.r \
   &= 1 dot 5 + 2 dot 6 + 3 dot 7 + 4 dot t \
   &= 38 + 4t ==> #boxed[$ t = -19/2 $]. $
 
-== Solution to @exer-dot-proj
+== Solution to @exer-dot-proj (projection)
 
 #recall-thm(<exer-dot-proj>)
 
@@ -145,7 +145,7 @@ $ op("proj")_(bf(w))(bf(v))
   &= -11/5 dot vec(-3 slash 5, -4 slash 5, 0) \
   &= #boxed[$ vec(33 slash 25, 44 slash 25, 0) $]. $
 
-== Solution to @exer-dot-reverse
+== Solution to @exer-dot-reverse (dot product $3$)
 
 #recall-thm(<exer-dot-reverse>)
 
@@ -187,7 +187,7 @@ See @fig-sol-alfa-dot-reverse for a picture of the two answers.
   ],
 ) <fig-sol-alfa-dot-reverse>
 
-== Solution to @exer-planes-cube
+== Solution to @exer-planes-cube (faces of a cube)
 
 #recall-thm(<exer-planes-cube>)
 
@@ -203,7 +203,7 @@ $ 0 &= bf(n)_1 dot bf(n)_2 \
   &= (1) (5) + (2) (6) + (3) (k) = 5 + 12 + 3 k = 17 + 3 k. $
 Solving for $k$ gives $#boxed[$ k = -17/3 $]$.
 
-== Solution to @exer-planes-sandwich
+== Solution to @exer-planes-sandwich (distance to two planes)
 
 #recall-thm(<exer-planes-sandwich>)
 
@@ -254,7 +254,7 @@ $#boxed[$ d = 35 $]$ or $#boxed[$ d = 119 $]$.
   and this gives the same answers.
 ]
 
-== Solution to @exer-cross-100ab
+== Solution to @exer-cross-100ab (cross product $0$)
 
 #recall-thm(<exer-cross-100ab>)
 
@@ -262,7 +262,7 @@ Two nonzero vectors have cross product $0$
 if and only if they're multiples of each other.
 Hence we get $#boxed[$ a= 200 $]$ and $#boxed[$ b = 300 $]$.
 
-== Solution to @exer-cross-scale
+== Solution to @exer-cross-scale ($5 bf(w) times 4 bf(v)$)
 
 #recall-thm(<exer-cross-scale>)
 
@@ -279,7 +279,7 @@ or from looking at the algebraic definition
 Whereas the fact that $bf(w) times bf(v) = -bf(v) times bf(w)$
 also follows directly from the right-hand rule.
 
-== Solution to @exer-cross-pythag
+== Solution to @exer-cross-pythag ($|bf(v) times bf(w)|^2 + (bf(v) dot bf(w))^2$)
 
 #recall-thm(<exer-cross-pythag>)
 
@@ -293,7 +293,7 @@ Hence the answer is
 $ lr(|sin theta|)^2 + (cos theta)^2 = #boxed[$ 1 $] $
 by the Pythagorean theorem: there is only one possible value.
 
-== Solution to @exer-cross-perp
+== Solution to @exer-cross-perp (solving for $k$)
 
 #recall-thm(<exer-cross-perp>)
 

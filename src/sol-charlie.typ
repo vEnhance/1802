@@ -2,7 +2,7 @@
 
 = Solutions to Part Charlie <ch-sol-charlie>
 
-== Solution to @exer-complex-101-401-901
+== Solution to @exer-complex-101-401-901 ($101 dot 401 dot 901$)
 
 #recall-thm(<exer-complex-101-401-901>)
 
@@ -10,7 +10,7 @@ The idea is to consider the complex number
 $ (10+i)(20+i)(30+i) = (199 + 30i)(30+i) = 5940 + 1099 i. $
 Hence one possible choice is $ #boxed[$ (a,b) = (5940, 1099). $] $
 
-== Solution to @exer-mt1p1
+== Solution to @exer-mt1p1 (projection onto plane)
 
 #recall-thm(<exer-mt1p1>)
 
@@ -57,7 +57,7 @@ $ (4-t) + (5-t) + 2(6-2t) = 0 ==> 21 - 6t = 0 ==> t = 7/2. $
 Hence the answer
 $ bf(a) = vec(4-7/2, 5-7/2, 6-2(7/2)) = vec(1/2, 3/2, -1). $
 
-== Solution to @exer-mt1p2
+== Solution to @exer-mt1p2 (geometric interpretation)
 
 #recall-thm(<exer-mt1p2>)
 
@@ -100,7 +100,7 @@ See the following picture from #url("https://en.wikipedia.org/wiki/Triple_produc
   caption: [Triple product image taken from Wikipedia.],
 )
 
-== Solution to @exer-mt1p3
+== Solution to @exer-mt1p3 (determinant of projection)
 
 #recall-thm(<exer-mt1p3>)
 
@@ -153,7 +153,7 @@ which has determinant $0$.
   no matter which plane $cal(P)$ is picked.
 ]
 
-== Solution to @exer-mt1p4
+== Solution to @exer-mt1p4 (perpendicular unit vectors)
 
 #recall-thm(<exer-mt1p4>)
 
@@ -175,7 +175,7 @@ the area of the parallelogram formed by $bf(a)$ and $bf(v)$, which is $3$
 (because this parallelogram has base $|bf(a)|=1$ and height $|bf(v) dot bf(b)|=3$).
 Similarly, $bf(b) times bf(v)$ has magnitude $2$.
 
-== Solution to @exer-mt1p5
+== Solution to @exer-mt1p5 (trace of matrix)
 
 #recall-thm(<exer-mt1p5>)
 
@@ -249,7 +249,7 @@ If we wrote $M$ as a matrix _in this new basis_ $angle.l bf(b)_1, bf(b)_2 angle.
 $ M = mat(0,1;1,0) $
 which has trace $0+0=0$.
 
-== Solution to @exer-mt1p6
+== Solution to @exer-mt1p6 (complex triangle)
 
 #recall-thm(<exer-mt1p6>)
 

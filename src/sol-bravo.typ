@@ -2,7 +2,7 @@
 
 = Solutions to Part Bravo
 
-== Solution to @exer-matrix-rotrefl
+== Solution to @exer-matrix-rotrefl (rotate and reflect)
 
 #recall-thm(<exer-matrix-rotrefl>)
 
@@ -31,7 +31,7 @@ would work out to the same thing.
 This is just an affirmation that @sec-matrix-mult holds true:
 applying two transformations is the same as multiplying their corresponding matrices.
 
-== Solution to @exer-basis-birthday
+== Solution to @exer-basis-birthday (birthday)
 
 #recall-thm(<exer-basis-birthday>)
 
@@ -55,7 +55,7 @@ There are roughly two strategies you can adopt:
   As an example, Machida Riku from KJRGL was born on October 2, 2004:
   $ bf(v)_1 = vec(10,02) " and " bf(v)_2 = vec(20,04). $
 
-== Solution to @exer-basis-perpbasis
+== Solution to @exer-basis-perpbasis (maximum perpendicular vectors)
 
 #recall-thm(<exer-basis-perpbasis>)
 
@@ -63,7 +63,7 @@ These vectors all need to lie in a hyperplane perpendicular to $bf(v)$,
 which is a $#boxed[$ 4 $]$-dimensional space.
 (The entries of the vector $bf(v)$ are irrelevant besides $bf(v)$ not being the zero vector.)
 
-== Solution to @exer-eigen-warmup
+== Solution to @exer-eigen-warmup (four 2-by-2 matrices)
 
 #recall-thm(<exer-eigen-warmup>)
 
@@ -129,7 +129,7 @@ Here are the answers.
   Therefore, the eigenvectors are all non-zero vectors of the form:
   $ bf(v) = vec(x, 0). $
 
-== Solution to @exer-eigen-example
+== Solution to @exer-eigen-example (eigenvectors 5 and 7)
 
 #recall-thm(<exer-eigen-example>)
 
@@ -152,7 +152,7 @@ And we already know the eigenvectors by construction:
 they are the multiples of $bf(v)$ (for $lambda = 5$)
 and the multiples of $bf(w)$ (for $lambda = 7$).
 
-== Solution to @exer-eigen-6x6
+== Solution to @exer-eigen-6x6 (6-by-6 matrix eigenvectors)
 
 #recall-thm(<exer-eigen-6x6>)
 
@@ -186,7 +186,7 @@ And we can read off the corresponding eigenvectors from the above six numbered i
 - For $lambda = 8$, the eigenvectors are $angle.l 0, 0, 0, 0, 0, x_6 angle.r$ for any choice of $x_6$.
   (The last equation above, when $lambda = 8$, implies $x_5 = 0$.)
 
-== Solution to @exer-eigen-power
+== Solution to @exer-eigen-power (computing $M^(20)$)
 
 #recall-thm(<exer-eigen-power>)
 

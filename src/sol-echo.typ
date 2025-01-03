@@ -2,7 +2,7 @@
 
 = Solutions to Part Echo
 
-== Solution to @exer-grad-abc
+== Solution to @exer-grad-abc (level curve through $(0,d)$)
 
 The gradient of $f$ is given by
 $ nabla f = vec( a e^(x + y) + b e^(x - y),  a e^(x + y) - b e^(x - y) ). $
