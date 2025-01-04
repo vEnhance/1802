@@ -34,10 +34,10 @@ However, on the actual 18.02 exam, you will find that most of the functions
 you are taking curl's or divergence's of are rather artificial functions.
 So your aquatic intuition is more or less useless for actually doing calculation.
 
-It's kind of how like, you were told in 18.01 that derivatives measured rate of change.
+It's kind of like how, you were told in 18.01 that derivatives measured rate of change.
 But then on the calculus final exam you were asked things like
 "differentiate $f(x) = sin(e^x)^2$".
-Probably it wasn't much help to know that $f'(x)$ was the rate of change of $f$,
+It probably wasn't much help to know that $f'(x)$ was the rate of change of $f$,
 because the function $f$ is completely artificial and would never appear in real life.
 The question was really testing whether you can apply a recipe
 with the chain rule to get $f'(x) = 2e^x sin(e^x) cos(e^x)$.
@@ -147,7 +147,7 @@ Here’s how you can imagine curl:
 
 3. #strong[If the wheel spins];, this indicates that there is local
   rotational motion in the water.
-  The curl at the point is a 3D vector, so there are two pieces of information:A
+  The curl at the point is a 3D vector, so there are two pieces of information:
 
   - The #strong[direction] in which the
     wheel spins corresponds as follows to the direction of the curl.
@@ -411,7 +411,7 @@ It's still true (and indeed follows from the 3D version) that:
 Let's see an example of that.
 #sample[
   Compute the 2D scalar curl of
-  $ bf(F) (x , y) = vec(3 x^2 + 4 x y + y^2 , 2 x^2 + 2 x y - 3 y^2) $
+  $ bf(F) (x , y) = vec(3 x^2 + 4 x y + y^2 , 2 x^2 + 2 x y - 3 y^2). $
 ]
 Secretly, we happen to know the right-hand side
 is the gradient of the function $f(x,y) = x^3 + 2x^2 y+x y^2-y^3$,
@@ -447,7 +447,7 @@ The aquatic interpretation is the same too, just in 2D bodies of water.
 
 #sample[
   Compute the divergence of
-  $ bf(F) (x , y) = vec(x cos y , med e^x + sin y) $
+  $ bf(F) (x , y) = vec(x cos y , med e^x + sin y). $
 ]
 #soln[
   In two dimensions, the divergence is given by
@@ -463,7 +463,7 @@ The aquatic interpretation is the same too, just in 2D bodies of water.
 
 #sample[
   Compute the divergence of
-  $ bf(F) (x , y) = vec(3 x^2 + 4 x y + y^2 , 2 x^2 + 2 x y - 3 y^2) $
+  $ bf(F) (x , y) = vec(3 x^2 + 4 x y + y^2 , 2 x^2 + 2 x y - 3 y^2). $
 ]
 #soln[
   Given $p(x,y) = 3 x^2 + 4 x y + y^2$:
