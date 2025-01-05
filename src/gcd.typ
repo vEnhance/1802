@@ -447,7 +447,7 @@ The aquatic interpretation is the same too, just in 2D bodies of water.
 
 #sample[
   Compute the divergence of
-  $ bf(F) (x , y) = vec(x cos y , med e^x + sin y). $
+  $ bf(F) (x , y) = vec(x cos y , e^x + sin y). $
 ]
 #soln[
   In two dimensions, the divergence is given by
