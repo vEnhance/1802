@@ -17,7 +17,7 @@ I'll try to keep this chapter brief.
 This definition is terrible, so bear with me.
 
 #definition[
-  Suppose $bf(v) = vec(a_1, a_2, a_3)$ and $bf(w) = vec(b_1, b_2, b_3)$ are two vectors in $RR^n$.
+  Suppose $bf(v) = vec(a_1, a_2, a_3)$ and $bf(w) = vec(b_1, b_2, b_3)$ are two vectors in $RR^3$.
 
   The _algebraic definition_ of the cross product is:
   #eqn[
@@ -31,12 +31,13 @@ This definition is terrible, so bear with me.
 
   The _geometric definition_ of the cross product is based on
   specifying both the direction and magnitude.
-  - The *magnitude* of $bf(v) times bf(w)$ is equal to the area of the parallelepiped
+  - The *magnitude* of $bf(v) times bf(w)$ is equal to the area of the parallelogram
     formed by $bf(v)$ and $bf(w)$.
     In trigonometry turns, if $theta$ is the included angle,
     this equals $|bf(v)| |bf(w)| sin theta$.
   - The *direction* is given by requiring $bf(v) times bf(w)$ to be perpendicular
-    to _both_ $bf(v)$ and $bf(w)$, and also satisfying the *right-hand rule*.
+    to _both_ $bf(v)$ and $bf(w)$, and also satisfying the *right-hand rule*
+    (we'll say more about it in a moment).
 ]
 
 The geometric definition is illustrated in @fig-cross-def below.
@@ -61,7 +62,7 @@ We do this in the next section as an optional sidenote.
   The hack with the right-hand rule is necessary
   because if I tell you only the length of a vector in $RR^3$
   and that it is normal to two other vectors in $RR^3$,
-  there are actually two vectors.
+  there are actually two vectors that work.
   (For example, there are two vectors of length $5$ perpendicular to $ee_1$ and $ee_2$:
   namely $pm 5 ee_3$.)
 
@@ -110,8 +111,8 @@ In practice, I think almost everyone uses the following mnemonic for it.
   Note the minus sign.
   (The right hand rule means that you can't swap your index and middle finger.)
 
-  Also, note that $bf(v) times bf(v) = 0$
-  (or indeed $bf(v) times bf(w) = 0$ whenever $bf(v)$ and $bf(w)$ are parallel).
+  Also, note that $bf(v) times bf(v) = bf(0)$
+  (or indeed $bf(v) times bf(w) = bf(0)$ whenever $bf(v)$ and $bf(w)$ are parallel).
 ]
 
 I really want to get this section over with so I'll just give you one example with numbers
@@ -371,7 +372,7 @@ we've seen in applications.
     align: left,
     table.header([Vector], [Direction], [Magnitude]),
     [Normal vector $bf(n)$ to plane], [Perpendicular to plane], [_Irrelevant!_],
-    [$op("proj")_(bf(w))(bf(v))$], [Same as $bf(w)$], [Scalar projection],
+    [$op("proj")_(bf(w))(bf(v))$], [Same as $bf(w)$], [Scalar component],
     [Cross product $bf(v) times bf(w)$], [Perpendicular to both $bf(a)$ and $bf(b)$], [Area of parallelogram]
   ),
   caption: [Some commonly used kinds of vectors we've met so far.],

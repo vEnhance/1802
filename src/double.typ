@@ -54,9 +54,8 @@ It's easier to see an example before the recipe.
     $ y^2 dot 1 / 2 = y^2 / 2 . $
 
   2. Now, substitute the result of the inner integral into the outer integral:
-    $ int_(y=0)^6 y^2 / 2 dif y &= 1 / 2 int_(y=0)^6 y^2 dif y  \
-    &= 1/2 int_(y=0)^6 y^2 dif y = 1/2 [y^3 / 3]_0^6 = 1/2( 6^3 / 3 - 0^3 / 3)
-    &= #boxed[$ 36 $]. $
+    $ int_(y=0)^6 y^2 / 2 dif y &= 1 / 2 int_(y=0)^6 y^2 dif y
+      = 1/2 [y^3 / 3]_0^6 = 1/2( 6^3 / 3 - 0^3 / 3) = #boxed[$ 36 $]. $
 ]
 Easy, right?
 The general recipe is the same.

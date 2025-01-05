@@ -190,7 +190,7 @@ Let's do an example to see how the dot product lets us compute this.
 #soln[
   First, let's figure out the _length_ of the purple vector.
   For trigonometry reasons, we know the _length_ of the purple vector is
-  $ "length of purple vector" = bf(v) cos theta. $
+  $ "length of purple vector" = |bf(v)| cos theta. $
   However, we don't really want to go to the work of figuring out what $theta$ is.
 
   This is where the dot product comes in.

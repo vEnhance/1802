@@ -45,11 +45,8 @@ if $vec(1,2,3)$ is a normal vector, then so are $vec(10,20,30)$, $vec(-100, -200
 
 Before explaining why this is true in $RR^3$,
 I want to do everything in $RR^2$ first for comparison,
-where pictures are easier to draw and you have intuition from high school.
-
-If you are confused about normal vectors in the plane, it might help to first do the $RR^2$ case,
-which is easier to draw and for which you might have better intuition from eighth or ninth
-grade algebra.
+where pictures are easier to draw and you have intuition
+from eighth or ninth grade algebra.
 
 Here's a question: which vectors in $RR^2$ are perpendicular to $vec(1,2)$?
 They're the vectors lying on a line of slope $-1/2$ through the origin, namely
@@ -65,7 +62,7 @@ Okay, in that case what does the line
 $ x + 2 y = pi $
 look like? Well, it's a parallel line, the slope is still the same.
 
-Equivalently, you could also imagine it as the points $vec(x,y)$ such that
+Equivalently, you could also imagine it as the vectors $vec(x,y)$ such that
 $ vec(x,y) - vec(pi,0) " is perpendicular to " vec(1,2) $
 or do the same thing for any point on the line, like
 $ vec(x,y) - vec(0, pi slash 2) " is perpendicular to " vec(1,2) $
@@ -152,7 +149,7 @@ and projections, which is to find the distance from a point to a plane.
 #soln[
   The plane $x + 2 y + 3 z = 0$ has a normal vector $bf(n)$
   given by the coefficients of $x$, $y$, and $z$:
-  $ bf(n) = (1 , 2 , 3) . $
+  $ bf(n) = vec(1 , 2 , 3). $
 
   Now consider the vector $bf(v) = vec(7,8,5)$
   pointing from the origin (which lies on the plane) to the given point $(7,8,5)$.
@@ -216,8 +213,7 @@ This means we'll have to pick a point on the plane besides the origin.
   caption: [A 2D cartoon of the point $(7,8,9)$ sandwiched between the
     planes $x+2y+3z=0$ and $x+2y+3z=60$.
     If we choose $bf(n) = angle.l 1,2,3 angle.r$
-    then we get $+38/sqrt(14)$ and $-22/sqrt(14)$ for the
-    lengths of the projections as shown in purple.
+    then we get $+38/sqrt(14)$ and $-22/sqrt(14)$ for the scalar components as shown in purple.
   ],
 ) <fig-planes-sandwich>
 

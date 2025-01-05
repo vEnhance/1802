@@ -121,8 +121,8 @@ since $bf(0)$ is the only vector with length $0$.)
 If you need it, the convention is that it has _every_ direction.
 
 #typesig[
-  If $bf(v)$ is a nonzero vector of length $n$,
-  then the direction along $bf(v)$ is also a vector of length $n$.
+  If $bf(v)$ is a nonzero vector in $RR^n$,
+  then the direction along $bf(v)$ is a (unit) vector in $RR^n$.
 ]
 
 #example[
@@ -222,7 +222,8 @@ But the sign carries a bit more information.
 
 - In 2D, consider the angle between $bf(v)_1$ and $bf(v)_2$,
   between $0 degree$ and $180 degree$.
-  Then we consider the sign to be $+$ if the angle goes counterclockwise
+  Then we consider the sign to be $+$
+  if the angle goes counterclockwise from $bf(v)_1$ to $bf(v)_2$,
   (like the example in @fig-parallelogram), and negative otherwise.
   So in @fig-parallelogram, we would have
   $ detmat(x_1, x_2; y_1, y_2) = +"area", #h(1em)
@@ -244,7 +245,7 @@ But the sign carries a bit more information.
 
   Alternatively, I think Wikipedia and Axler#footnote[Who
     has a paper called #link("https://www.axler.net/DwD.html")[Down with Determinants!],
-    that I approve of.
+    which I approve of.
   ], among others,
   use a definition of the determinant as
   the unique multilinear alternating map on $n$-tuples of column vectors in $RR^n$
