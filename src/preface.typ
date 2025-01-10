@@ -19,8 +19,7 @@ These notes have the following lofty goal:
   ] to ask questions to a real human.
 ]
 This is ambitious, and your mileage my vary.
-Just to be clear, this text is unofficial material and there is no warranty or promise
-that this goal will be fulfilled for you.
+Just to be clear, this text is unofficial material and there is no warranty or promise.
 (Also, if you are actually an MIT student, bear in mind the content of the course
 will vary by instructor.)
 But with this goal in mind, here are some parts of the design philosophy of this book.
@@ -43,8 +42,8 @@ But with this goal in mind, here are some parts of the design philosophy of this
   ].
   We don't assume proof experience.
 - *It writes things out and has diagrams*.
-  A lot of lecture notes were meant to accompany a in-person lecture rather than replace it.
-  These notes are meant to stand alone.
+  Many lecture notes were meant to go with a in-person lecture rather than replace it.
+  These notes should stand alone.
   - Any sentence that would normally be said out loud is written as text.
   - Any figure that would normally be drawn on the blackboard is actually typeset into the book.
 - *It has full solutions to its exercises*. I really believe in writing things out.
@@ -62,7 +61,7 @@ But with this goal in mind, here are some parts of the design philosophy of this
   I hope the digressions are interesting to you (or I wouldn't have written them).
   But I want to draw a clear boundary between
   "this explanation is meant for your curiosity or to show where this formula comes from"
-  versus "this is something you should know by heart to answer exam questions".
+  compared to "this is something you should know by heart to answer exam questions".
 
   There are two kinds of ways we mark things as not for exam:
 
@@ -78,8 +77,8 @@ But with this goal in mind, here are some parts of the design philosophy of this
 
 == [TEXT] Prerequisites
 
-As far as prerequisites go, a working knowledge of pre-calculus
-and calculus as taught in United States high schools is assumed.
+As far as prerequisites go, this text assumes a working knowledge of pre-calculus
+and calculus as taught in United States high schools.
 
 - *Algebra*:
   You should be able to work with elementary algebra, so that the following statements make sense
@@ -149,13 +148,13 @@ and calculus as taught in United States high schools is assumed.
   and "multi-variable calculus" at your home institution.
 ]
 
-No proof-based background is expected.
+This book assumes no proof-based background.
 
 == [TEXT] Topics covered
 
 Here is a brief overview of what happens in these parts.
 
-/ Alfa and Bravo: This part is dedicated to *linear algebra* (vectors and matrices).
+/ Alfa and Bravo: This part covers *linear algebra* (vectors and matrices).
   This is intentional, because some working knowledge of linear algebra is important.
   In fact, if I was designing a serious course in multivariable calculus for math majors,
   it would come after an entire semester of properly-done linear algebra first.
@@ -213,12 +212,12 @@ Here's an explanation of what they mean.
 
 / TEXT: Good old prose.
   An explanation like you might hear in a lecture.
-/ RECIPE: Contains only the final recipe, as you need it on the exam.
+/ RECIPE: Has only the final recipe, as you need it on the exam.
   As I mentioned before, I don't like the idea of just memorizing recipes,
   but in theory you might still be able to pass the exams by doing only this.
 / SIDENOTE: An optional extended discussion.
   You can skip these unless you're interested in them.
-/ RECAP: A summary of what happened in this chapter.
+/ RECAP: A summary of what happened in the chapter.
 / EXER: Problems to work on.
   Starred exercises are harder than questions that will appear in the actual MIT course.
 
@@ -237,9 +236,9 @@ and I highly recommend these notes as a result.
 In fact, I will even tell you, for each part,
 what the corresponding sections of Poonen are if you decide something I write
 doesn't make sense and you want to reference the corresponding text.
-(That said, this text is meant to stand alone.)
+(That said, this text should stand alone.)
 
-There are lots of other resources on multivariable calculus out there too.
+There are many other resources on multivariable calculus out there too.
 For example,
 #link("https://ocw.mit.edu/courses/18-02-multivariable-calculus-spring-2006/pages/readings/supp_notes/")[MIT OpenCourseWare]
 has some supplementary notes and problems still used by the math department.
@@ -250,7 +249,7 @@ I think the term "treatment" for the way a course is taught is apt,
 because it reflects a reality about education:
 like medicine, there is no one treatment that works for everyone.
 In theory, there might be some people who only read this book and that's all they need.
-In practice, a lot of you would benefit from asking friends to explain things differently
+In practice, many of you would benefit from asking friends to explain things differently
 for the sections of the book that don't work from you,
 or consulting another text when things here don't suit you.
 You should not feel under any obligation to treat this book as the one true bible of 18.02.
@@ -280,7 +279,7 @@ It has to be this way because of the short time limit and the amount of material
 
 All this is to say to *not be discouraged if you find the exercises in this book harder*.
 It's by design.
-The real exam will have a lot of cookie-cutter no-thought questions
+The real exam will have many cookie-cutter no-thought questions
 in return for the short time limit.
 
 (Like most textbooks, the starred exercises are more challenging.)
@@ -291,7 +290,7 @@ in return for the short time limit.
   particularly Davesh Maulik for leading the instance of the course this year full-heartedly
   and Karol Bacik for making so much happen behind the scenes.
   Thanks also to Sefanya Hope for coordinating many other logistics,
-  and particularly for helping me book classrooms on short notice on multiple occasions.
+  and particularly for helping me book classrooms on short notice on many occasions.
 
 - Thank you to all the students in my recitation session
   (and those officially enrolled in other sessions, but who came to my session anyway!)
@@ -299,12 +298,12 @@ in return for the short time limit.
   That's some real early-morning dedication.
   There's a saying that the enthusiasm of an instructor can be contagious,
   but I definitely think the enthusiasm of students can be as well.
-  - In particular, I got a lot of words of thanks and encouragements
-    from my students this year, which I am indeed grateful for.
+  - In particular, I got many words of thanks and encouragements
+    from my students this year, which I am grateful for.
     I certainly wouldn't have had the motivation to type these notes without these kind words.
 
-- I thank Aaryan Vaishya, Alan Cheng, Alexander Wang, Calvin Wang, Rémi Geron,
-  Ritwin Narra, Rohan Garg, and Royce Yao for multiple corrections.
+- I thank Aaryan Vaishya, Alan Cheng, Alexander Wang, Calvin Wang, Nick Zhang, Rémi Geron,
+  Ritwin Narra, Rohan Garg, and Royce Yao for many corrections.
   (Your name could be here too --- find me some typos!
   If you know how to open a GitHub pull request,
   the relevant repository is #url("https://github.com/vEnhance/1802").)
@@ -319,11 +318,11 @@ in return for the short time limit.
   to see what kind of things it did well (and what I could still do faster by hand).
 
   - ChatGPT was helpful at writing full step-by-step solutions to the routine exercises.
-    All the solutions went through a lot of editing from me
+    All the solutions went through much editing from me
     (in part to make the notation consistent throughout the whole text),
     to the point where maybe only a third of the output from each solution actually survives editing.
     Even then, because it's faster to edit or rewrite text#footnote[Vim on top. Fight me.]
-    than write from scratch, it still saved a lot of time.
+    than write from scratch, it still saved time.
 
     I think when humans write solutions they err on the size of laziness
     in skipping steps that are really routine or obvious to them, because typing is slow.
@@ -349,12 +348,12 @@ in return for the short time limit.
       was built on solving many non-routine problems growing up,
       rather than mass-generated ones.]
 
-  - It's pretty good at "explain things in lots of words" in a conversational way.
+  - It's pretty good at "explain things in many words" in a conversational way.
     For example, the aquatic descriptions of what curl or divergence or work mean
     were largely generated by ChatGPT.
 
 - This book was not written in LaTeX!
-  It was written in the recently released version of Typst 0.12,
+  It's written in the recently released version of Typst 0.12,
   which is open source at #url("https://github.com/typst/typst").
   I used NeoVim as an editor, doing everything locally rather than by web app.
 
