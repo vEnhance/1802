@@ -360,13 +360,6 @@ along a different path.
 == [EXER] Exercises
 
 #exer[
-  Calculate the line integral
-  $ oint_(cal(C)) (x^2 - y) dif x + (y^2 - x) dif y $
-  where $cal(C)$ is the boundary of the region enclosed by the circle $x^2 + y^2 = 4$,
-  oriented counterclockwise.
-] <exer-work-1>
-
-#exer[
   Let $cal(C)$ be a curve in $RR^2$ from $(0,0)$ to $(2,3)$ whose arc length is $7$.
   Let $bf(F)$ be a vector field with the property that for any point $P$ on the curve,
   - $bf(F)(P)$ has magnitude $5$;

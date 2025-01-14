@@ -513,6 +513,13 @@ by adding the line segment from $(-1,0)$, to $(1,0)$.
   conservative?
 ]
 
+#exer[
+  Calculate the line integral
+  $ oint_(cal(C)) (x^2 - y) dif x + (y^2 - x) dif y $
+  where $cal(C)$ is the boundary of the region enclosed by the circle $x^2 + y^2 = 4$,
+  oriented counterclockwise.
+] <exer-work-1>
+
 #exerstar[Shoelace formula][
   Let $n >= 3$ be an integer and
   suppose $cal(P) = P_1 P_2 ... P_n$ is a convex $n$-gon in $RR^2$,
