@@ -87,7 +87,7 @@ $
 Well, that's boring. In this system of equations, the only solution is $x = y = 0$.
 
 We can try a different guess: maybe we use $1000$ instead of $100$.
-An eigenvector with eigenvalue $1000$ ought to be correspond to
+An eigenvector with eigenvalue $1000$ ought to correspond to
 $ mat(5, -2; 3, 10) vec(x, y) = 1000 vec(x, y). $
 
 If we solve the system of equations, we get
@@ -466,7 +466,7 @@ Most of the time it's not like that though.
       Therefore, the eigenvector corresponding to $lambda_1 = 4 + sqrt(17)$ is:
       $ bf(v)_1 = vec(1, frac(3 + sqrt(17), 2)) . $
 
-    - For $lambda_2 = 4 + sqrt(17)$, it's actually exactly the same with $sqrt(17)$
+    - For $lambda_2 = 4 - sqrt(17)$, it's actually exactly the same with $sqrt(17)$
       replaced by $-sqrt(17)$, so I won't repeat it.
       You get the eigenvector
       $ bf(v)_2 = vec(1, frac(3 - sqrt(17), 2)) . $
