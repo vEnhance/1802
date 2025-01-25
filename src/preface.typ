@@ -30,7 +30,7 @@ But with this goal in mind, here are some parts of the design philosophy of this
     In principle, if you have perfect memory, you could potentially get a passing score
     (but not a perfect score) on the final exam by _only_ memorizing the recipes.
 
-    I don't recommend this approach; even a vague conceptual understanding of where a recipe
+    I don't recommend this approach; even a vague conceptual understanding of a recipe
     is at minimum quite helpful for remembering said recipe.
     But it may be useful to know in principle that the recipe is all you need,
     and conversely, that you should have the recipes down by heart.
