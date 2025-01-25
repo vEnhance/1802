@@ -149,7 +149,7 @@ let us avoid all this work.
 
 In this optional section I want to convince you that @eqn-magnitudes and @eqn-miracle
 are doing a lot of magic.
-To do so I'll show you to consequences of these equations
+To do so I'll show you two consequences of these equations
 that you would not expect to be true.
 
 === Application 1: @eqn-magnitudes gives the Brahmagupta-Fibonacci identity

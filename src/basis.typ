@@ -121,7 +121,7 @@ In fact, the following theorem is true, though we won't prove it.
 
   1. There are exactly $n$ vectors.
   2. The vectors are linearly independent.
-  3. The vectors are span all of $RR^n$.
+  3. The vectors span all of $RR^n$.
 
   Moreover, if item 1 is true, the following fourth item works too:
 
@@ -270,7 +270,7 @@ We won't always be so lucky, so we have a word that means "what you can make out
     These are the only vectors you can make out of combinations of these three vectors.
   - The span of the single vector $vec(1,2)$ is also the line $y = 2x$.
     That is, in the previous example, $vec(10, 20)$ and $vec(100, 200)$ were totally useless
-  - The span of the single vector $vec(0,0)$ is the only one point: $vec(0,0)$ itself.
+  - The span of the single vector $vec(0,0)$ is only one point: $vec(0,0)$ itself.
 ]
 
 #example(title: [Examples of spans in $RR^3$])[
@@ -304,7 +304,7 @@ We won't always be so lucky, so we have a word that means "what you can make out
     (I won't explain how I got these coefficients,
     but you could probably figure out yourself if you wanted to).
 
-  - The span of the single vector $vec(0,0,0)$ is the only one point: $vec(0,0,0)$ itself.
+  - The span of the single vector $vec(0,0,0)$ is only one point: $vec(0,0,0)$ itself.
 ]
 
 What you are probably gathering from all these examples is that the span _also_

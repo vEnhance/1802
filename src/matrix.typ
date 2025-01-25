@@ -109,7 +109,7 @@ To put this into recipe form:
   Given a transformation $T : RR^n -> RR^m$, to encode it as a matrix:
 
   1. Compute $T(ee_1)$ through $T(ee_n)$ and write them as column vectors..
-  2. Glue them together to get an $n times m$ array of numbers.
+  2. Glue them together to get an $m times n$ array of numbers.
 ]
 
 Here's more examples.

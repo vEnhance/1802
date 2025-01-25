@@ -200,7 +200,7 @@ $
 Well, that's boring. In this system of equations, the only solution is $x = y = 0$.
 
 We can try a different guess: maybe we use $1000$ instead of $100$.
-An eigenvector with eigenvalue $1000$ ought to be correspond to
+An eigenvector with eigenvalue $1000$ ought to correspond to
 $ mat(5, -2; 3, 10) vec(x, y) = 1000 vec(x, y). $
 
 If we solve the system of equations, we get
