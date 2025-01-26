@@ -44,7 +44,7 @@ $ nabla f &= vec(x,y) \
   2. Integrate the given $(partial f) / (partial x)$ with respect to $x$ to get some equation of the
     form $f(x,y) = "expression"  + C_1(y)$ for some function $C_1(y)$.
   3. Integrate the given $(partial f) / (partial y)$ with respect to $y$ to get some equation of the
-    form $f(x,y) = "expression"  + C_2(y)$ for some function $C_2(x)$.
+    form $f(x,y) = "expression"  + C_2(x)$ for some function $C_2(x)$.
   4. Stitch them together and output a function $f$.
 ]
 
@@ -224,7 +224,7 @@ So let's see some examples:
     $ f_(x y) = f_(y x) = 21 x^6 y^2. $
 ]
 #example(title: [Another example showing that the order of differentiation doesn't matter])[
-  Let $f(x,y) = cos(x+y) y^3$.
+  Let $f(x,y) = cos(x+y) y^8$.
   - First, differentiate $f$ with respect to $x$:
     $ f_x = - sin (x + y) y^8
     ==>

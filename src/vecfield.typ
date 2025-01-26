@@ -165,7 +165,7 @@ and verify that the arrow starting at that point points in the way you expect.
     The vector field $bf(F)(x,y) = vec(1,1)$ is just constant.
     The vector field $bf(F)(x,y) = vec((x+y)/2,(x-y)/2)$ has some tilted arrows.
     The vector field $bf(F)(x,y) = vec(x,x)$ has all arrows at $45 degree$ angles,
-    growing in length with larger $x$.
+    growing in length with larger $|x|$.
     And the goofy $bf(F)(x,y) = vec(sin(pi/2 x), sin(pi/2 y))$
     has an oscillating behavior.
 ],

@@ -234,7 +234,7 @@ The motivating question here is:
   We'd like to take a step $0.01$ away in some direction of our choice.
   For example, we could go to $(2.99, 4)$, or $(3, 4.01)$ or $(2.992, 4.006)$,
   or any other point on the circle we've marked in the figure below.
-  (For the third point, note that $sqrt((3-2.992)^2-(4.006)^2) = 0.01$,
+  (For the third point, note that $sqrt((3-2.992)^2-(4-4.006)^2) = 0.01$,
   so that point is indeed $0.01$ away.)
 
   - Which way should we step if we want to maximize the $f$-value at the new point?
@@ -376,7 +376,7 @@ To spell it out:
   We need to pass through $(3,14)$, so we take $d = (-6) dot 3 + 14 = -4$ to get the answer
   $ #boxed[$ -6 x + y = -4 $]. $
   (Written in 18.01 form this would be $y = 6 x - 4$, which shouldn't be a surprise,
-  because we know the derivation of $x^2+5$ at $x=3$ is $6$.)
+  because we know the derivative of $x^2+5$ at $x=3$ is $6$.)
 ]
 
 == [RECAP] A recap of Part Echo on Multivariable Differentation

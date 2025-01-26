@@ -133,7 +133,7 @@ I don't think the following term is an official name, but I like it, and I'll us
   An *LM-critical point* is a point $P$ on the curve/surface $g(P) = c$ such that _either_
 
   - $nabla f(P) = lambda nabla g(P)$ for some scalar $lambda$; OR
-  - $nabla g(P) = 0$.
+  - $nabla g(P) = bf(0)$.
 ]
 
 Note that there are _two_ possible situations.
@@ -152,7 +152,7 @@ However, in practice, people end up usually breaking into cases like this.
   Define a _four-variable_ "Lagrangian function"
   $L(x,y,z,lambda) = f(x,y,z) - lambda g(x,y,z)$.
   Then an LM-critical point is a point for which either $nabla g = bf(0)$
-  or $nabla L = 0$, i.e. a normal critical point of $L$.
+  or $nabla L = bf(0)$, i.e. a normal critical point of $L$.
   It can be checked this is equivalent to the original definition,
   but I personally find this unnatural.
   However, if you like this definition, feel free to use it instead.
@@ -160,7 +160,7 @@ However, in practice, people end up usually breaking into cases like this.
 
 
 Now that we have this, we can describe the recipe for the "hard" case.
-The only change is to replace the old critical point definition (where $nabla f (P) = 0$)
+The only change is to replace the old critical point definition (where $nabla f (P) = bf(0)$)
 with the LM-critical point definition.
 
 == [RECIPE] Lagrange multipliers <sec-recipe-lm>

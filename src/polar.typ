@@ -94,7 +94,7 @@ I'm actually going to split it into two parts.
     It's clear from the figure we want $-pi/2 <= theta <= pi/2$.
     If one lets $O=(0,0)$, $P$ be a point on the boundary of the circle,
     and then let $A = (2,0)$ (so segment $A O$ is a diameter of the circle).
-    Then we fact get a right triangle $triangle O P A$ with
+    Then we in fact get a right triangle $triangle O P A$ with
     $ angle P = 90 degree, quad O A = 2, quad "and" angle A O P = theta. $
     Hence, the boundary of our offset circle is given by $r = 2 cos theta$.
     The disk (i.e. the part inside the boundary) is then
@@ -133,7 +133,7 @@ Okay, here's the famous exercise I promised you.
   $ x = r cos theta , quad y = r sin theta . $
   In these coordinates, $sqrt(x^2 + y^2) = r$, so the integrand becomes $r$.
 
-  As we just saw, the region $cal(R)$ consists of $-pi/2 <= theta <= pi/2$ and $0 <= r <= 2 cos(theta)$, so
+  As we just saw, the region $cal(R)$ consists of $-pi/2 <= theta <= pi/2$ and $0 <= r <= 2 cos theta$, so
   $ iint_(cal(R)) sqrt(x^2 + y^2) dif x dif y
     = int_(theta = - pi / 2)^(pi / 2) int_(r = 0)^(2 cos theta) r dot underbrace(r dif r dif theta, = dif x dif y)
     = int_(theta = - pi / 2)^(pi / 2) int_(r = 0)^(2 cos theta) r^2 dif r dif theta . $
@@ -327,7 +327,7 @@ The new feature is that the two red arrows now have their $x$ and $y$ coordinate
 - The first red arrow from $P$ to $(r + dif r, theta)_"pol"$ can be written with $x y$-components as
   $ bf(v)_1 := vec(cos theta dif r, sin theta dif r). $
 - The second red arrow from $P$ to $(r, theta + dif theta)_"pol"$ can be written with $x y$-components as
-  $ bf(v)_2 := vec(-r sin theta dif r, r cos theta dif r). $
+  $ bf(v)_2 := vec(-r sin theta dif theta, r cos theta dif theta). $
 
 #figure(
   image("figures/polar-dA-jacobian.svg", width: auto),

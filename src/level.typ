@@ -61,7 +61,7 @@ We give some examples.
   Let's talk through some values of $c$.
   - As an example, if $c = 0$, then some points on the level curve would be
     $(-3,9)$, $(-2,4)$, $(-1,1)$, $(0,0)$, $(1,1)$, $(2,4)$, $(3,9)$,
-    or even $(sqrt(5), 6)$ and $(sqrt(11), 12)$.
+    or even $(sqrt(5), 5)$ and $(sqrt(11), 11)$.
     You probably already recognize what's happening: $y = x^2$ happens to be an equation
     you met before in 18.01 form, so you get a parabola.
     (More generally, if you get an equation in 18.01 form where $y$ is a function of $x$,
@@ -101,8 +101,6 @@ We give some examples.
   with radius $sqrt(c)$.
   For example:
 
-  - No points work for $c < 0$.
-  - For $c = 0$, the level curve is the single point $(0,0)$.
   - For $c = 1$, the level curve is a circle with radius $1$.
   - For $c = 4$, the level curve is a circle with radius $2$.
   - For $c = 9$, the level curve is a circle with radius $3$.

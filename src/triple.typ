@@ -40,9 +40,9 @@ so one needs different letters.
   if $bf(T) : cal(T)_"new" -> cal(T)$ is a transition map of 3D regions, sending $(u,v,w)$ to $(x,y,z)$,
   then the Jacobian is
   $ J_(bf(T)) = mat(
-      (partial u) / (partial x), (partial v) / (partial x), (partial w) / (partial x);
-      (partial u) / (partial y), (partial v) / (partial y), (partial w) / (partial y);
-      (partial u) / (partial z), (partial v) / (partial z), (partial w) / (partial z);
+      (partial x) / (partial u), (partial x) / (partial v), (partial x) / (partial w);
+      (partial y) / (partial u), (partial y) / (partial v), (partial y) / (partial w);
+      (partial z) / (partial u), (partial z) / (partial v), (partial z) / (partial w);
     ). $
 - Volume is $ op("Vol")(cal(T)) := iiint_(cal(T)) dif x dif y dif z. $
   You can take this as a _definition_ of volume for this class.
@@ -257,14 +257,14 @@ Note that, as I said, we could have given this example _before_ this section.
   Gravitational force is a vector.
 ]
 
-Suppose a mass of point $m$ is located at the origin $O = (0,0,0)$,
+Suppose a point of mass $m$ is located at the origin $O = (0,0,0)$,
 In general, given a mass $m$ at a point $O$ and a point of mass $M$ at a point $P$,
 Newton's law says the gravitational force exerted by $P$ on $O$ is
 $ bf(F)_("gravity") = (G dot m dot M)
   / (|O P|^2) dot underbrace(arrow(O P) / (|O P|), "unit vector from" O "to" P) $
 where $G approx 6.67408 dot 10^(-11) dot upright("N") dot upright("m")^2 dot "kg"^(-2)$ is the gravitational constant.
 
-But in real life, we usually want our mass $M$ to be take up a whole region $cal(T)$,
+But in real life, we usually want our mass $M$ to take up a whole region $cal(T)$,
 with some density $delta$.
 (Point masses don't occur in real life unless you count black holes.)
 So let's suppose we have a solid mass occupying region $cal(T)$.

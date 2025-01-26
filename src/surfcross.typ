@@ -149,7 +149,7 @@ Let's see how it can captures the boilerplate in the cone example.
   Hence we got a shortcut to the vector $angle.l -x/(sqrt(x^2+y^2)), -y/(sqrt(x^2+y^2)), 1 angle.r$ we found before.
   We find its magnitude in the same way:
   $ sqrt(1 + ((partial f) / (partial x))^2 + ((partial f) / (partial y))^2)
-  = sqrt(1 + (x^2) / (x^2 + y^2) + (y^2) / (x^2 + y^2) + 1) = sqrt(2). $
+  = sqrt(1 + (x^2) / (x^2 + y^2) + (y^2) / (x^2 + y^2)) = sqrt(2). $
   Now
   $ op("SurfArea")("cone") = iint_(x^2+y^2 <= 1) sqrt(2) dif A = sqrt(2) op("Area")(x^2+y^2 <= 1) = #boxed[$sqrt(2) pi $]. #qedhere $
 ]
@@ -284,8 +284,8 @@ $ (partial bf(r)) / (partial x) &= angle.l 1, 0, 0 angle.r \
   (partial bf(r)) / (partial y) &= angle.l 0, 1, 0 angle.r $
 and the cross product of these is $angle.l 0,0,1 angle.r$, so there you go.
 
-Note that you might encounter flat surfaces parallel to the $x z$ or $y z$ planes instead.
-In which case you should just swap the roles of the variables.
+Note that you might encounter flat surfaces parallel to the $x z$ or $y z$ planes instead,
+in which case you should just swap the roles of the variables.
 
 == [TEXT] @table-surfcross-1 row 4: For the curved part of the cylinder in cylindrical coordinates
 
@@ -340,7 +340,7 @@ $ frac(partial bf(r), partial phi) times frac(partial bf(r), partial theta)
 Since $|bf(r)(phi, theta)| = R$, we get
 $ dif S := lr(|frac(partial bf(r), partial phi) times frac(partial bf(r), partial theta)|) d phi d theta
   = R^2 sin phi dif phi dif theta. $
-Here I'm dropping the absolute value bars around $|sin phi|$ because
+Here I'm dropping the absolute value bars around $sin phi$ because
 our spherical coordinate convention requires $0 <= phi <= pi$.
 
 #tip(title: [Tip: $dif S$ for the sphere can be remembered geometrically])[

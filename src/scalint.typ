@@ -184,10 +184,8 @@ Here is a really ugly example to start, to give you some practice with spherical
   $ lr(|frac(partial bf(r), partial phi) times frac(partial bf(r), partial theta)|)
     &= sqrt((sin^2 phi cos theta)^2 + (sin^2 phi sin theta)^2 + (sin phi cos phi)^2) \
     &= sqrt(sin^4 phi cos^2 theta + sin^4 phi sin^2 theta + sin^2 phi cos^2 phi) \
-    &= sqrt(sin^2 phi (sin^2 phi cos^2 theta + sin^2 phi sin^2 theta) + sin^2 phi cos^2 phi) \
-    &= sqrt(sin^2 phi (sin^2 phi (cos^2 theta + sin^2 theta)) + sin^2 phi cos^2 phi) \
-    &= sqrt(sin^2 phi (sin^2 phi) + sin^2 phi cos^2 phi) \
-    &= sqrt(sin^4 phi + sin^2 phi cos^2 phi) \
+    &= sqrt(sin^4 phi (cos^2 theta + sin^2 theta) + sin^2 phi cos^2 phi) \
+    &= sqrt(sin^4 phi dot 1 + sin^2 phi cos^2 phi) \
     &= sqrt(sin^2 phi (sin^2 phi + cos^2 phi)) \
     &= sqrt(sin^2 phi dot 1) = lr(|sin phi|). $
   Thank the lord it's a simple answer.
@@ -213,10 +211,10 @@ Here is a really ugly example to start, to give you some practice with spherical
   normal vector to the tangent plane of the surface $cal(S)$ at $bf(r)(u,v)$.
 
   Of course, since we took an absolute value, the direction gets discarded for surface area.
-  But if you are really observant you might have noticed that computed cross product is
+  But if you are really observant you might have noticed that the computed cross product is
   $ (sin^2 phi cos theta) ee_1  + (sin^2 phi sin theta) ee_2
     + (sin phi cos phi) ee_3 = sin phi dot bf(r)(theta, phi) $
-  which happened to be a multiple of the corresponding point on the sphere; and this is why,
+  which happens to be a multiple of the corresponding point on the sphere; and this is why,
   because for a sphere, $bf(r)(theta, phi)$ happens to be perpendicular to the tangent plane.
 ]
 

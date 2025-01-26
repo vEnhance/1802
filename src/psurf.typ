@@ -187,7 +187,7 @@ For example, for the simple $y z$-plane we just did,
 we give an example of an overly complicated parametrization.
 
 Our piece of paper will be $cal(R) = (-pi/2, pi/2) times (-pi/2, pi/2)$
-(that is, a square if side length $pi$)
+(that is, a square of side length $pi$)
 and our parametrization $bf(r) : cal(R) -> RR^3$ will be defined by
 $ bf(r)(u,v) = (0, (tan u)^3, log(e^u+5) + tan v). $
 This is really a valid parametrization:
