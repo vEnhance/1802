@@ -164,7 +164,7 @@ You might have feared that in 18.02, you might need to learn something even more
 But no, you don't!
 It's a lot like how you might have been scared of multivariate differentiation at first,
 with the symbols $nabla f$ or partial derivatives,
-until you realize that calculating partial derivatives is something
+until you realize that calculating partial derivatives is something you
 _actually already know how to do_ from 18.01.
 
 The same will be true for multivariable integrals.

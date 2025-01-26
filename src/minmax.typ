@@ -382,7 +382,7 @@ The exam ones will probably tone down this algebra step a bit.
 ]
 #soln[
   The gradient is given by
-  $ nabla f = vec(z(y - z) - 2 z, z(-2y+x-z), y(x-y) -2z(x-y) -2x). $
+  $ nabla f = vec(z(y - z) - 2 z, z(-2y+x+z), y(x-y) -2z(x-y) -2x). $
   That looks scary, but it turns out the first two equations factor.
   Cleaning things up, we get:
   $

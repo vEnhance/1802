@@ -468,7 +468,7 @@ Let's repeat this in recipe form.
   assuming a constant density $rho = 1$.
 ]
 #soln[
-  Of course, by symmetry for the first part we expect the answer should be $#boxed[$ (7,7) $]$.
+  Of course, by symmetry we expect the answer to be $#boxed[$ (7,7) $]$.
   Let's see this in full.
   The mass of $cal(R)$ is given by
   $ op("mass")(cal(R)) = iint_(cal(R)) 1 dif x dif y = int_(x=5)^9 int_(y=5)^9 1 dif y dif x

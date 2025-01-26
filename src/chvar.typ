@@ -131,7 +131,7 @@ the 18.02 is the grown-up version where you have a transition map instead.
   whose rows are the gradients of each component written as row vectors;
   the *Jacobian determinant* is its determinant.
   In these notes we denote the matrix by $J_(bf(T))$
-  (and the determinant by $det J_(bf(T))$.
+  (and the determinant by $det J_(bf(T))$).
 ]
 
 For example in a $2 times 2$ case, if the transition map $bf(T)(u,v)$
@@ -187,7 +187,7 @@ which means that if your transition map has a nicer inverse than the original,
 you might prefer to use that instead.
 
 #typesig[
-  The area scaling is always a _nonnegative_ real number.
+  The area scaling factor is always a _nonnegative_ real number.
 ]
 
 #tip[
@@ -290,7 +290,7 @@ Let's see an example of how to carry out this integration.
 #tip(title: [Tip: remembering forwards vs backwards])[
   If you have trouble remembering which way is "forwards"
   (meaning you use $|det J|$) versus which way is "backwards"
-  (meaning you use $1/(|det J|)$, it might help to
+  (meaning you use $1/(|det J|)$), it might help to
   look at @table-chvar-side-by-side to see these side by side.
   Just remember: the _polar_ one is forwards, so we get $dif x dif y = r dif r dif theta$.
 ]

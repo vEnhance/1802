@@ -59,7 +59,7 @@ Here's the definition:
   Suppose $f(x,y)$ is a two-variable function.
   Then the _partial derivative with respect to $x$_, which we denote either $f_x$
   or $(partial f) / (partial x)$,
-  is the result if we differentiate $f$ while treating $x$ as a variable $y$ as a constant.
+  is the result if we differentiate $f$ while treating $x$ as a variable and $y$ as a constant.
   The partial derivative $f_y = (partial f) / (partial y)$ is defined the same way.
 
   Similarly, if $f(x,y,z)$ is a three-variable function,
@@ -102,7 +102,7 @@ In fact you could probably just read the examples and ignore the definition abov
   $ x |-> e^(y z dot x) $
   where we pretend $y$ and $z$ are constants.
   Then the derivative is with respect to $x$ is just $y z e^(y z dot x)$
-  (just like how the derivative of $e^(3 x)$ is $3 e^x$). In other words,
+  (just like how the derivative of $e^(3 x)$ is $3 e^(3 x)$). In other words,
   $ f_x (x,y,z) = y z dot e^(x y z). $
   For analogous reasons:
   $

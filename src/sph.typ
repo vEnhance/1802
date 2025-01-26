@@ -144,7 +144,7 @@ as does any interval of length $2 pi$.
 Let's go back to spherical coordinates
 $ (rho, phi, theta)_"sph" := (rho sin phi cos theta, rho sin phi sin theta, rho cos phi). $
 We want to choose a convention for values of $(rho, phi, theta)$ such that
-(except for a few degenerate cases that we'll ignore),
+(except for a few degenerate cases that we'll ignore)
 every point has exactly one set of coordinates.
 The choice that we're going to use is the following.
 #memo(title: [Memorize: The convention for spherical coordinate values])[
@@ -269,7 +269,7 @@ and we just integrate over the entire sphere
   $ op("Vol")(cal(T)) &= iiint_(cal(T)) 1 dif V \
   &= iiint_(cal(T)) rho^2 sin phi dif rho dif phi dif theta  \
   &= int_(rho=0)^R int_(phi=0)^(pi) int_(theta=0)^(2 pi) rho^2 sin phi dif theta dif phi dif rho \
-  &= (int_(rho=0)^R rho^2 dif rho) (int_(phi=0)^(pi) sin phi dif phi) (int_(theta=0)^(2 pi) theta dif theta) \
+  &= (int_(rho=0)^R rho^2 dif rho) (int_(phi=0)^(pi) sin phi dif phi) (int_(theta=0)^(2 pi) dif theta) \
   &= R^3/3 dot 2 dot (2 pi) = #boxed[$ 4/3 pi R^3 $]. #qedhere $
 ]
 
@@ -289,7 +289,7 @@ is defined as $1/(op("Vol")(cal(T))) iiint_(cal(T)) f dif V$.
     &= iiint_(cal(T)) rho dif V \
     &= iiint_(cal(T)) rho dot (rho^2 sin phi dif rho dif phi dif theta)  \
     &= int_(rho=0)^1 int_(phi=0)^(pi) int_(theta=0)^(2 pi) rho^3 sin phi dif theta dif phi dif rho \
-    &= (int_(rho=0)^1 rho^3 dif rho) (int_(phi=0)^(pi) sin phi dif phi) (int_(theta=0)^(2 pi) theta dif theta) \
+    &= (int_(rho=0)^1 rho^3 dif rho) (int_(phi=0)^(pi) sin phi dif phi) (int_(theta=0)^(2 pi) dif theta) \
     &= 1/4 dot 2 dot (2 pi) = pi. $
   So the average value is
   $ (iiint_(cal(T)) ("distance to" (0,0,0)) dif V) / (op("Vol")(cal(T)))
@@ -336,7 +336,7 @@ It's actually pretty much exactly the same.
     which is described as requiring $0 <= phi <= pi/2$.
     The value of $theta$ is irrelevant by rotational symmetry,
     and can be anything from $0$ to $2 pi$.
-    So we need to figure out who $rho$ relates to $phi$.
+    So we need to figure out how $rho$ relates to $phi$.
 
     Let $O = (0,0,0)$ and $A = (0,0,2)$.
     Let $P$ be a point on the surface of the sphere.
@@ -360,12 +360,12 @@ It's actually pretty much exactly the same.
       &= rho^2 (sin^2 phi + cos^2 phi) - 2 rho cos phi + 1 \
       &= rho^2 - 2 rho cos phi + 1. $
     Rearranging, this gives
-    $ 0 &>= rho^2 - 2 rho cos phi = rho(rho  - 2 cos phi) <= 0 \
+    $ 0 &>= rho^2 - 2 rho cos phi = rho(rho  - 2 cos phi) \
       <==> 0 &<= rho <= 2 cos phi. $
-    In particular this requires $cos phi >= 0$ i.e. $phi <= theta/2$.
+    In particular this requires $cos phi >= 0$ i.e. $phi <= pi/2$.
 
   In conclusion, the answer is $cal(R)$ in polar coordinates is exactly
-  $ #boxed[$ 0 <= theta < 2 pi " and " 0 <= phi <= pi/2 " and " rho <= 2 cos theta $]. #qedhere $
+  $ #boxed[$ 0 <= theta < 2 pi " and " 0 <= phi <= pi/2 " and " rho <= 2 cos alpha $]. #qedhere $
 ]
 
 The analogous famous exercise in 3D:
@@ -378,7 +378,7 @@ The analogous famous exercise in 3D:
   but spherical coordinates are great because
   $ rho = sqrt(x^2 + y^2 + z^2). $
   We just saw that $cal(T)$ is given in spherical coordinates according to
-  $0 <= phi <= pi/2$, $0 <= theta <= 2pi$, $0 <= rho <= 2 cos phi$.
+  $0 <= phi <= pi/2$, $0 <= theta < 2pi$, $0 <= rho <= 2 cos phi$.
   Thus, the integral becomes:
   $ iiint_(cal(T)) rho dif V
     &= iiint_(cal(T)) rho^3 sin phi dif rho dif phi dif theta \
