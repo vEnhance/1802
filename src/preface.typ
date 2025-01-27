@@ -18,7 +18,7 @@ These notes have the following lofty goal:
     The point is that you should have at least some access to live Q/A.
   ] to ask questions to a real human.
 ]
-This is ambitious, and your mileage my vary.
+This is ambitious, and your mileage may vary.
 Just to be clear, this text is unofficial material and there is no warranty or promise.
 (Also, if you are actually an MIT student, bear in mind the content of the course
 will vary by instructor.)
