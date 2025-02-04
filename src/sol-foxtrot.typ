@@ -2,7 +2,213 @@
 
 = Solutions to Part Foxtrot <ch-sol-foxtrot>
 
-== Solution to @exer-opt-lm-sin
+== Solution to @exer-crit-2var (critical points of a 2-variable function)
+
+#recall-thm(<exer-crit-2var>)
+
+#h3[Finding the critical points]
+
+The first-order partial derivatives are:
+$ f_x = (partial f) / (partial x) = 3 x^2 - 6 y , quad f_y = (partial f) / (partial y) = 6 y^2 - 6 x . $
+
+To find the critical points, we solve the system:
+$ 3 x^2 - 6 y = 0 , quad 6 y^2 - 6 x = 0 . $
+Rewriting the equations: $ x^2 = 2 y , quad y^2 = x . $
+From $y^2 = x$, substitute into $x^2 = 2 y$:
+$ (y^2)^2 = 2 y ==> 0 = y (y^3 - 2). $
+Hence either $y = 0$ or $y = root(3, 2)$.
+These correspond to $x = 0$ and $x = root(3, 4)$.
+
+#h3[Classifying the critical points]
+
+Hence the two critical points are
+$ #boxed[$ (x,y) = (0,0) " and " (x,y) = (root(3, 4), root(3, 2)). $] $
+
+To classify them, compute the second-order derivatives.
+Then in the notation of @sec-second-deriv,
+$ A = f_(x x) = 6 x , quad C = f_(y y) = 12 y , quad B = f_(x y) = - 6 . $
+
+- At $(0 , 0)$, we have $ A C - B^2 = 72 (0) (0) - 36 = - 36 < 0 . $
+  So $#boxed[$(0,0)$ is a saddle point]$.
+
+- At $(root(3, 4) , root(3, 2))$, we have
+  $ A C - B^2 = 72 (root(3, 4)) (root(3, 2)) - 36 = 108 > 0. $
+  Since $A, C > 0$, and $A C - B^2 > 0$,
+  it follows $#boxed[$(root(3, 4) , root(3, 2))$ is a local minimum]$.
+
+== Solution to @exer-crit-3var (critical points of a 3-variable function)
+
+#recall-thm(<exer-crit-3var>)
+
+#h3[Finding the critical points]
+
+The first-order partial derivatives are:
+$ f_x = (partial f) / (partial x) = 2 x , quad f_y = (partial f) / (partial y) = 3 y^2 , quad f_z = (partial f) / (partial z) = 4 z^3 . $
+To find the critical points, we solve the system:
+$ 2 x = 0 , quad 3 y^2 = 0 , quad 4 z^3 = 0 . $
+Solving for each variable:
+$ x = 0 , quad y^2 = 0 arrow.r.double y = 0 , quad z^3 = 0 arrow.r.double z = 0 . $
+Thus, the only critical point is: $ (0 , 0 , 0) . $
+
+#h3[Classifying the critical points]
+
+Since this is a $3$-variable function,
+we cannot classify it using the second derivative test.
+However, one can tell just by looking at the function that it is neither
+a local minimum or maximum.
+One simple way to do so is to note that for any small $epsilon > 0$ we have
+
+$ f(0, epsilon, 0) &= epsilon^3 > 0 \
+  f(0, -epsilon, 0) &= -epsilon^3 < 0 $
+
+In other words, there are always points near the origin $(0,0,0)$ which are
+both larger than $f(0,0,0) = 0$ and smaller than $f(0,0,0) = 0$.
+Hence $#boxed[$(0,0,0)$ is a saddle point]$.
+
+== Solution to @exer-every-saddle (every point is a saddle point)
+
+#recall-thm(<exer-every-saddle>)
+
+No, it's not possible.
+
+We will prove that the following result:
+#thm[
+  Suppose $f : RR^2 -> RR$ is a function for which every point is a critical point.
+  Then $f$ must be the constant function.
+]
+In particular, every point of $f$ will be both a local minimum or local maximum.
+This means that $f$ has no saddle points at all.
+
+#proof[
+  Consider any two points $P_1 = (x_1, y_1)$ and $P_2 = (x_2, y_2)$.
+  We prove that $f(x_1, y_1) = f(x_2, y_2)$.
+
+  Define the function $g : [0 , 1] arrow.r RR$ along the line segment
+  from $(x_1 , y_1)$ to $(x_2 , y_2)$ by
+  $ g (t) = f (x_1 + t (x_2 - x_1) , y_1 + t (y_2 - y_1)) . $
+  This function $g$ represents $f$ restricted to the straight-line path between the two points.
+
+  Since $f$ is differentiable, $g$ is also differentiable on $(0,1)$, and the
+  derivative of $g$ can be computed using the chain rule:
+  $ g' (t) = (partial f) / (partial x) (d x) / (dif t) + (partial f) / (partial y) (d y) / (dif t) . $
+  Since $x = x_1 + t (x_2 - x_1)$ and $y = y_1 + t (y_2 - y_1)$, we have
+  $ (d x) / (dif t) = x_2 - x_1 , quad (d y) / (dif t) = y_2 - y_1 . $
+  Thus,
+  $ g' (t) = (partial f) / (partial x) (x_2 - x_1) + (partial f) / (partial y) (y_2 - y_1) . $
+  By assumption, every point is a critical point, meaning
+  $(partial f) / (partial x) = 0$ and $(partial f) / (partial y) = 0$
+  everywhere. Therefore,
+  $ g' (t) = 0 quad upright("for all ") t in (0 , 1) . $
+
+  Hence, $g$ must be a constant function.
+  So $g(0) = g(1)$ implies $f (x_1 , y_1) = f (x_2 , y_2)$ as needed.
+]
+
+== Solution to @exer-lattice-saddle (every lattice point is a saddle point)
+
+#recall-thm(<exer-lattice-saddle>)
+
+#h3[Inventing the function]
+
+The function
+$ #boxed[$ f(x,y) = cos((x-y) pi) - cos((x+y) pi) = sin(pi x) sin(pi y) $] $
+works.
+The idea is that a saddle point occurs if and only if one of these two conditions holds:
+
+- when the cosines reach their maximum value, meaning $x-y$ and $x+y$ are even integers;
+- when the cosines reach their minimum value, meaning $x-y$ and $x+y$ are odd integers.
+
+#h3[Verifying the function works]
+
+Inventing the example above (which is one of many) is the main difficulty of the exercise.
+For completeness, let's just verify that the guess above does in fact work.
+From now on, use $ f (x , y) = sin (pi x) sin (pi y) . $
+
+The first-order partial derivatives are:
+$ f_x &= (partial f) / (partial x) = pi cos (pi x) sin (pi y) , \
+  f_y &= (partial f) / (partial y) = pi sin (pi x) cos (pi y) . $
+To find critical points, we set $f_x = 0$ and $f_y = 0$:
+$ pi cos (pi x) sin (pi y) = 0 , quad pi sin (pi x) cos (pi y) = 0 . $
+Since $pi != 0$, the equations reduce to:
+$ cos (pi x) sin (pi y) = 0 , quad sin (pi x) cos (pi y) = 0 . $
+Solving these equations:
+
+- $cos (pi x) = 0$ when $x = m + 1 / 2$ for $m in bb(Z)$.
+- $sin (pi y) = 0$ when $y = n$ for $n in bb(Z)$.
+- $sin (pi x) = 0$ when $x = m$ for $m in bb(Z)$.
+- $cos (pi y) = 0$ when $y = n + 1 / 2$ for $n in bb(Z)$.
+
+A critical point must satisfy both conditions simultaneously.
+The only common solutions occur in two cases.
+
+- Each lattice point $(m , n)$, where $m , n$ are integers, is a critical point.
+- Each point $(m + 1/2, n + 1/2)$, where $m , n$ are integers, is a critical point.
+
+We classify with the second derivative test.
+Compute
+$ A &= f_(x x) = - pi^2 sin (pi x) sin (pi y) \
+  C &= f_(y y) = - pi^2 sin (pi x) sin (pi y) \
+  B &= f_(x y) = pi^2 cos (pi x) cos (pi y) . $
+
+Now we check the cases:
+
+- At any lattice point $(m , n)$, we have $A = C = 0$ and $B = pm pi^2$,
+  so $A C - B^2 = -pi^4 < 0$.
+  So every lattice point is indeed a saddle point.
+
+- At any point of the form $(m + 1/2, n + 1/2)$, we have $A = C = pm pi^2$ and $B = 0$,
+  so $A C - B^2 = pi^4 < 0$.
+  Hence there are no saddle points here.
+
+== Solution to @exer-opt-geo (geometry optimization)
+
+#recall-thm(<exer-opt-geo>)
+
+For $P = (x , y)$ we let
+$ f (x , y) = P A^2 + P B^2 + P C^2 . $
+See @fig-sol-echo-triangle.
+
+#figure(
+  image("figures/sol-echo-triangle.svg", width: auto),
+  caption: [A triangle $A B C$ and a point $P$ connected to its three vertices],
+) <fig-sol-echo-triangle>
+
+We first want to change $f$ into an expression like we're used to.
+We do this using the Pythagorean theorem as follows:
+$ P A^2 &= (x-0)^2 + (y - 12)^2 = x^2 + y^2 - 24 y + 144 , \
+  P B^2 &= (x + 5)^2 + (y-0)^2 = x^2 + 10 x + 25 + y^2 , \
+  P C^2 &= (x - 9)^2 + (y-0)^2 = x^2 - 18 x + 81 + y^2 . $
+Summing these expressions:
+$ f (x , y) &= (x^2 + y^2 - 24 y + 144) + (x^2 + 10 x + 25 + y^2) + (x^2 - 18 x + 81 + y^2) \
+  &= 3 x^2 + 3 y^2 - 8 x - 24 y + 250 . $
+
+We are optimizing $f$ over the entire space $cal(R) = RR^2$.
+Let's follow the recipe in @sec-recipe-opt-easy:
+
+0. There is no boundary, but we have limit cases if $x -> pm oo$ or $y -> pm oo$.
+1. To find the critical points, we compute the partial derivatives:
+  $ f_x = (partial f) / (partial x) = 6 x - 8 = 0 &==> x = 4 / 3 .
+    f_y = (partial f) / (partial y) = 6 y - 24 = 0 &==> y = 4 . $
+  Thus, the only critical point is: $ P = (4 / 3 , 4) . $
+2. There are no boundary points to consider.
+3. If either $x -> pm oo$ or $y -> pm oo$,
+  then the quadratic terms $3 x^2 + 3 y^2$ dominate and cause $f (x , y) -> +oo$.
+  Hence $f$ can take arbitrarily large values.
+
+Putting this together, the point $P = (4 / 3 , 4)$ is the unique point minimizing
+$P A^2 + P B^2 + P C^2$.
+
+#remark[
+  If $A B C$ is replaced by a different triangle,
+  it turns out that the best point $P$ is the _center of mass_ of the three points $A$, $B$, $C$.
+  In other words, if $A = (x_1, y_1)$, $B = (x_2, y_2)$, $C = (x_3, y_3)$
+  the answer will work out to
+  $ P = ((x_1 + x_2 + x_3)/3, (y_1 + y_2 + y_3)/3). $
+  (This point is called the _centroid_ or _gravity center_ of $A B C$
+  and is often denoted by the letter $G$.)
+]
+
+== Solution to @exer-opt-lm-sin (sine optimization)
 
 #recall-thm(<exer-opt-lm-sin>)
 
@@ -29,7 +235,7 @@
   So of all the LM-critical points, the lowest value occurs when
   $ f (pi / 6 , pi / 6) = pi / 6 + pi / 6 = pi / 3 . $
 
-2. In the limit cases if either $x -> +oo$ or $y -> +oo$ then $f -> +oo$
+2. In the limit cases if either $x -> +oo$ or $y -> +oo$ then $f -> +oo$.
 3. Suppose $x = 0$. Then $sin(y) = 1$.
   So this part of the boundary consists of the points $(0,pi)$, $(0,3pi)$, $(0,5pi)$, ....
   All of these have $x+y >= pi$, so they do worse than the point $(pi/6, pi/6)$ from before.
@@ -40,7 +246,7 @@
 In conclusion the minimum possible value occurs at
 $ f (pi / 6 , pi / 6) = pi / 3 . $
 
-== Solution to @exer-mt2p1
+== Solution to @exer-mt2p1 (butterfly)
 
 #recall-thm(<exer-mt2p1>)
 
@@ -127,7 +333,7 @@ $ int_0^pi sin (t) dif t = [- cos (t)]_0^pi = - cos (pi) + cos (0) = 1 + 1 = 2 .
 Thus, the total arc length is:
 $ L = sqrt(2) dot 2 dot 2 = 4 sqrt(2) . $
 
-== Solution to @exer-mt2p2
+== Solution to @exer-mt2p2 (tangent to level curve)
 
 #recall-thm(<exer-mt2p2>)
 
@@ -151,7 +357,7 @@ $ t = 3 dot 1 + 20 dot 2 = 43. $
 Hence the line requested is
 $ 3 x + 20 y = 43. $
 
-== Solution to @exer-mt2p3
+== Solution to @exer-mt2p3 (approximation of $f = x^(5 y)$)
 
 #recall-thm(<exer-mt2p3>)
 
@@ -174,7 +380,7 @@ expressed in terms of the gradient dot the displacement:
 $ f (1.001 , 3.001) &approx f (1 , 3) + nabla f (1 , 3) dot vec(0.001, 0.001)
   &= 1 + vec(15,0) dot vec(0.001, 0.001) = 1.015. $
 
-== Solution to @exer-mt2p4
+== Solution to @exer-mt2p4 (cosine-quartic critical points)
 
 #recall-thm(<exer-mt2p4>)
 
@@ -349,7 +555,7 @@ into a function in $x$ plus a function in $y$.
 For most functions $f(x,y)$ like $x y$ or $e^x sin(y)$,
 this approach is not going to fly.
 
-== Solution to @exer-mt2p5
+== Solution to @exer-mt2p5 (LM practice)
 
 #recall-thm(<exer-mt2p5>)
 
@@ -415,7 +621,7 @@ We follow the steps we described in the recipe in @sec-recipe-opt-easy and @sec-
   ignoring the region $cal(R)$ entirely.
 ]
 
-== Solution to @exer-mt2p6
+== Solution to @exer-mt2p6 (tangent plane)
 
 #recall-thm(<exer-mt2p6>)
 

@@ -421,8 +421,7 @@ The exam ones will probably tone down this algebra step a bit.
   $ (y^2/(y-2), y, 0) " for every " y != 2 ", plus one extra point" (3, 1, -1). #qedhere $
 ]
 
-
-== [RECIPE] The second derivative test for two-variable functions
+== [RECIPE] The second derivative test for two-variable functions <sec-second-deriv>
 
 Earlier we classified critical points by looking at nearby points.
 Technically speaking, we did not give a precise definition of "nearby", just using
@@ -466,8 +465,8 @@ I'm sorry this will seem to come out of nowhere.
 
   2. If $A C - B^2 != 0$, output the answer based on the following chart:
     - If $A C - B^2 < 0$, output "saddle point".
-    - If $A C - B^2 > 0$ and $A, C >= 0$, output "local minimum".
-    - If $A C - B^2 > 0$ and $A, C <= 0$, output "local maximum".
+    - If $A C - B^2 > 0$ and $A, C > 0$, output "local minimum".
+    - If $A C - B^2 > 0$ and $A, C < 0$, output "local maximum".
   3. If $A C - B^2 = 0$, the second derivative test is inconclusive.
     Any of the above answers are possible, including weird/rare saddle points like the monkey saddle.
     You have to use a different method instead.
@@ -489,7 +488,6 @@ it's the determinant of the matrix $mat(A, B; B, C)$.
   The second derivative test only works for $f(x,y)$.
   There is no analog for $f(x,y,z)$ in this class.
 ]
-
 
 #sample[
   Use the second derivative test to classify the critical point $(0,0)$ of
@@ -540,19 +538,19 @@ it's the determinant of the matrix $mat(A, B; B, C)$.
 == [EXER] Exercises
 
 #exer[
-  Compute the critical point(s) of $f(x,y,z) = x^3 + 2 y^3 - 3 x y$ and classify them
+  Compute the critical point(s) of $f(x,y) = x^3 + 2 y^3 - 6 x y$ and classify them
   as local minimums, local maximums, or saddle points.
-]
+] <exer-crit-2var>
 
 #exer[
   Compute the critical point(s) of $f(x,y,z) = x^2 + y^3 + z^4$ and classify them
   as local minimums, local maximums, or saddle points.
-]
+] <exer-crit-3var>
 
-#exer[
+#exerstar[
   Does there exist a differentiable function $f : RR^2 -> RR$
   such that _every_ point in $RR^2$ is a saddle point?
-]
+] <exer-every-saddle>
 
 #exerstar[
   Give an example of a differentiable function $f : RR^2 -> RR$ with the following property:
@@ -560,4 +558,4 @@ it's the determinant of the matrix $mat(A, B; B, C)$.
   is a saddle point, and there are no other saddle points.
   For example, $(2, -7)$, $(100, 100)$, and $(-42, -13)$ should be saddle points,
   but $(1/2, 0)$, $(pi, -sqrt(2))$, and $(sqrt(7), sqrt(11))$ should not be.
-]
+] <exer-lattice-saddle>
