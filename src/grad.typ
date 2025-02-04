@@ -403,7 +403,7 @@ Let's summarize the last few sections.
 #exer[
   Compute the equation of the tangent plane to the sphere $x^2 + y^2 + z^2 = 14$
   at the point $(1,2,3)$.
-]
+] <exer-sphere-123>
 
 #exer[
   The level curve of a certain differentiable function $f(x,y)$ for the value $-7$
@@ -412,16 +412,16 @@ Let's summarize the last few sections.
   - Give an example of one such function $f$.
   - What are all possible vectors that $nabla f(1.2, -1.6)$ could be?
   - Do linear approximation to estimate $f(1.208, -1.594)$ starting from the point $(1.2, -1.6)$.
-]
+] <exer-level-grad-poss>
 
 #exer[
-  For each part, either give an example of $f$ or show that none exist.
+  For each part, either give an example of $f : RR^2 -> RR$ or show that none exist.
 
-  - Can you find a function $f : RR^2 -> RR^2$ such that $nabla f (x,y) = angle.l x,y angle.r$?
-  - Can you find a function $f : RR^2 -> RR^2$ such that $nabla f (x,y) = angle.l 100 x,y angle.r$?
-  - Can you find a function $f : RR^2 -> RR^2$ such that $nabla f (x,y) = angle.l y,x angle.r$?
-  - Can you find a function $f : RR^2 -> RR^2$ such that $nabla f (x,y) = angle.l 100 y,x angle.r$?
-]
+  - Can you find a function $f : RR^2 -> RR$ such that $nabla f (x,y) = angle.l x, y angle.r$?
+  - Can you find a function $f : RR^2 -> RR$ such that $nabla f (x,y) = angle.l 100 x, y angle.r$?
+  - Can you find a function $f : RR^2 -> RR$ such that $nabla f (x,y) = angle.l y, x angle.r$?
+  - Can you find a function $f : RR^2 -> RR$ such that $nabla f (x,y) = angle.l 100 y, x angle.r$?
+] <exer-antigrad-preview>
 
 #exerstar[
   Let $a$, $b$, $c$, $d$ be nonzero real numbers and let $ f(x,y) = a e^(x+y) + b e^(x-y). $

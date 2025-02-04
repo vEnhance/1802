@@ -197,15 +197,15 @@ by plotting all the points in $RR^3$ for which $f(x,y,z) = c$.
 #exer[
   Draw 2D level curves for some values for the following functions:
 
-  - $f(x,y) = 5 x + y$
+  - $f(x,y) = 3/2 x + y$
   - $f(x,y) = x y$
   - $f(x,y) = sin(x^2 + y^2)$
   - $f(x,y) = e^(y - x^2)$
   - $f(x,y) = max(x,y)$ (i.e.~$f$ outputs the larger of its two inputs,
     so $f(3,5)=5$ and $f(2,-9)=2$, for example).
-]
+] <exer-level-curves>
 
 #exerstar[
   Give an example of a polynomial function $f(x,y)$
   for which the level curve for the value $100$ consists of exactly seven points.
-]
+] <exer-level-seven>

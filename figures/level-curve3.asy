@@ -14,11 +14,10 @@ real ymin = -4, ymax = 4;
 xaxis("$x$", xmin, xmax, Ticks(Label(fontsize(9pt)), Step=2, begin=false, end=false), Arrows);
 yaxis("$y$", ymin, ymax, Ticks(Label(fontsize(9pt)), Step=2, begin=false, end=false), Arrows);
 
-// Plot the level curves for different values of c
-draw(circle((0, 0), 0), purple, "$c = 0$");
-dot((0,0), purple);
-draw(circle((0, 0), 1), blue, "$c = 1$");
-draw(circle((0, 0), 2), green, "$c = 4$");
-draw(circle((0, 0), 3), red, "$c = 9$");
+draw(circle((0, 0), 0), grey, "$c = 0$");
+dot((0,0), grey);
+draw(circle((0, 0), 1), red, "$c = 1$");
+draw(circle((0, 0), 2), deepgreen, "$c = 4$");
+draw(circle((0, 0), 3), blue, "$c = 9$");
 
 add(legend(),(7,1), UnFill);

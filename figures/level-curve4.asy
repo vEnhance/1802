@@ -18,8 +18,8 @@ yaxis("$y$", ymin, ymax, Ticks(Label(fontsize(9pt)), Step=2, begin=false, end=fa
 // Plot the level curves for different values of c
 draw(circle((0, 0), 0), purple, "$c = 0$");
 dot((0,0), purple);
-draw((1,0)--(0,1)--(-1,0)--(0,-1)--cycle, blue, "$c = 1$");
-draw((2,0)--(0,2)--(-2,0)--(0,-2)--cycle, green, "$c = 2$");
-draw((3,0)--(0,3)--(-3,0)--(0,-3)--cycle, red, "$c = 3$");
+draw((1,0)--(0,1)--(-1,0)--(0,-1)--cycle, red, "$c = 1$");
+draw((2,0)--(0,2)--(-2,0)--(0,-2)--cycle, deepgreen, "$c = 2$");
+draw((3,0)--(0,3)--(-3,0)--(0,-3)--cycle, blue, "$c = 3$");
 
 add(legend(),(7,1), UnFill);

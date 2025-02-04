@@ -223,4 +223,4 @@ Here are a bunch more examples that you can try to follow along:
   - $f(x,y,z) = x / y + y / z + z / x$
   - $f(x,y,z) = sin(x y z)$
   - $f(x,y,z) = x^y + y^z + z^x$.
-]
+] <exer-partials>

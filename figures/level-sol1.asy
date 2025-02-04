@@ -1,17 +1,18 @@
-// Asymptote code for plotting level curves of f(x, y) = y - x^2
 import graph;
 
-size(12cm);
+size(9cm);
 
-real fa(real x) { return x**2 - 2; }
-real fb(real x) { return x**2 - 1; }
-real fc(real x) { return x**2; }
-real fd(real x) { return x**2 + 1; }
-real fe(real x) { return x**2 + 2; }
+real c = 3/2;
+
+real fa(real x) { return -c*x - 2; }
+real fb(real x) { return -c*x - 1; }
+real fc(real x) { return -c*x; }
+real fd(real x) { return -c*x + 1; }
+real fe(real x) { return -c*x + 2; }
 
 // Set up the range of the plot
 real xmin = -2, xmax = 2;
-real ymin = -3, ymax = 7;
+real ymin = -5, ymax = 5;
 
 xaxis("$x$", xmin, xmax, Ticks(Label(fontsize(8pt)), Step=1, begin=false, end=false), Arrows);
 yaxis("$y$", ymin, ymax, Ticks(Label(fontsize(8pt)), Step=1, begin=false, end=false), Arrows);
