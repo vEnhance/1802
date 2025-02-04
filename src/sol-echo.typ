@@ -11,48 +11,48 @@ In what follows, $c$ always denotes the value we're drawing the level curve.
 / For $f(x,y) = 3/2 x + y$:
   The level curves of $3/2 x + y$ will be straight lines with slope $-3/2$
   whose $y$-intercept is the point $(0,c)$.
-  See @fig-level-sol1.
+  See @fig-sol-echo-level-1.
 
 / For $f(x,y) = x y$:
   When $c != 0$, the shape of $x y = c$ is a hyperbola $y = c/x$.
   For the exceptional value $c = 0$, the shape $x y = 0$ is the union of the axes.
-  See @fig-level-sol2.
+  See @fig-sol-echo-level-2.
 
 / For $f(x,y) = sin(x^2+y^2)$:
   The level curve is only nonempty when $-1 <= c <= 1$.
   For these $c$, we obtain a bunch of concentric circles whose radii $r$ satisfy $sin sqrt(r) = c$.
   For example, when $c = 0$, we get circles of radius $0$, $sqrt(pi)$, $sqrt(2pi)$, and so on.
-  See @fig-level-sol3.
+  See @fig-sol-echo-level-3.
 
 / For $f(x,y) = e^(y-x^2)$:
   The level curve is only nonempty when $c > 0$.
   The level curve is the parabola $y = x^2 + log(c)$.
-  See @fig-level-sol4.
+  See @fig-sol-echo-level-4.
 
 / For $f(x,y) = max(x,y)$:
   The curve consists of what look like rotated L-shapes, as shown in the figure.
-  See @fig-level-sol5.
+  See @fig-sol-echo-level-5.
 
 #figure(
-  image("figures/level-sol1.svg", width: auto),
+  image("figures/sol-echo-level-1.svg", width: auto),
   caption: [Level curves of $f(x,y) = 3/2 x+y$],
-) <fig-level-sol1>
+) <fig-sol-echo-level-1>
 #figure(
-  image("figures/level-sol2.svg", width: auto),
+  image("figures/sol-echo-level-2.svg", width: auto),
   caption: [Level curves of $f(x,y) = x y$],
-) <fig-level-sol2>
+) <fig-sol-echo-level-2>
 #figure(
-  image("figures/level-sol3.svg", width: auto),
+  image("figures/sol-echo-level-3.svg", width: auto),
   caption: [Level curves of $f(x,y) = sin(x^2+y^2)$],
-) <fig-level-sol3>
+) <fig-sol-echo-level-3>
 #figure(
-  image("figures/level-sol4.svg", width: auto),
+  image("figures/sol-echo-level-4.svg", width: auto),
   caption: [Level curves of $f(x,y) = e^(y-x^2)$],
-) <fig-level-sol4>
+) <fig-sol-echo-level-4>
 #figure(
-  image("figures/level-sol5.svg", width: auto),
+  image("figures/sol-echo-level-5.svg", width: auto),
   caption: [Level curves of $f(x,y) = max(x,y)$],
-) <fig-level-sol5>
+) <fig-sol-echo-level-5>
 
 == Solution to @exer-level-seven (level curve with seven points)
 
