@@ -335,7 +335,7 @@ Here's an example where a good idea is to kill $lambda$ ASAP:
       because in this limit case
       you have two positive terms $x^2$ and $y^2$ and one negative term $x y$.
       One idea is to write
-      $ f(x,y) approx 3 x^2 / 4 + (x / 2 + y)^2 = 3 y^2 / 4 + (x + y / 2)^2 $
+      $ f(x,y) approx 3/4  x^2 + (x / 2 + y)^2 = 3/4 y^2 + (x + y / 2)^2 $
       for large $x$ and $y$.
       The first expression shows that if $x$ is big, then so is $f$;
       The first expression shows that if $y$ is big, then so is $f$.
