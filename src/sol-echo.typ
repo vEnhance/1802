@@ -192,3 +192,26 @@ $ f(0,0) &= a e^(0+0) + b e^(0-0) = a + b = a + 3/2 a = 5/2 a \
 As $a != 0$, we conclude
 $ e^d + 3/2 e^(-d) = 5/2 <==> (e^d-1)(e^d-3/2) = 0  $
 and so $#boxed[$ d = log(3/2) $]$.
+
+== Solution to @exer-antigrad-quad
+
+#recall-thm(<exer-antigrad-quad>)
+
+We are given the gradient of a function $f (x , y)$:
+$ nabla f (x , y) = vec(x^2 + a x y + 2 y^2 + y + 1 , x^2 + x + b x y + y^2 + 2) . $
+
+To compute $a$ and $b$, we compute
+$ (partial) / (partial y) (x^2 + a x y + 2 y^2 + y + 1) &= a x + 4 y + 1 \
+  (partial) / (partial x) (x^2 + x + b x y + y^2 + 2) &= 2 x + 1 + b y . $
+These need to be equal for all $(x,y)$ so we require $#boxed[$ (a,b)=(2,4) $]$.
+
+To recover $f$, we write
+$ f (x , y) = int (partial f) / (partial x) dif x
+  &= int (x^2 + 2 x y + 2 y^2 + y + 1) dif x \
+  &= x^3 / 3 + x^2 y + 2 x y^2 + x y + x + C_1(y). \
+  f (x , y) = int (partial f) / (partial y) dif y
+  &= int (x^2 + x + 4 x y + y^2 + 2) dif y \
+  &= x^2 y + x y + 2 x y^2 + y^3/3 + 2 y + C_2(x). $
+Stitching these together to get the final expression for $f (x , y)$ as:
+$ f (x , y) = #boxed($ x^3 / 3 + x^2 y + 2 x y^2 + y^3 / 3 + x y + x + 2 y + C $) $
+for any constant $C$.

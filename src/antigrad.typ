@@ -89,7 +89,6 @@ Let's do a two-variable example first.
   This means:
   $ (partial f) / (partial x) = 3 x^2 + 4 x y + y^2 quad upright("and") quad (partial f) / (partial y) = 2 x^2 + 2 x y - 3 y^2. $
 
-
   Integrate $(partial f) / (partial x)$ and $(partial f) / (partial y)$ with respect to $x$ and $y$:
   $ f (x , y) & = int (partial f) / (partial x) dif x = int (3 x^2 + 4 x y + y^2) dif x  = x^3 + 2 x^2 y + x y^2 + C_1(y) \
     f (x , y) & = int (partial f) / (partial y) dif y = int (2 x^2 + 2 x y - 3 y^2) dif y = 2 x^2 + x y^2 - y^3 + C_2(x). $
@@ -286,3 +285,10 @@ and the function $f$ will be called a *potential function* for it.
 But ignore those names for now.
 
 == [EXER] Exercises
+
+#exer[
+  Suppose $f (x , y)$ is a differentiable function and that
+  $ nabla f (x , y) = vec(x^2 + a x y + 2 y^2 + y + 1, x^2 + x + b x y + y^2 + 2) $
+  for some constants $a$ and $b$.
+  Compute the constants $a$ and $b$, and determine $f$.
+] <exer-antigrad-quad>
