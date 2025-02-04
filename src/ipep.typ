@@ -2,8 +2,7 @@
 
 = A zoomed out pep talk of Part Golf
 
-This whole chapter is a pep talk.
-We'll get to recipes and details in subsequent sections.
+This whole chapter is a pep talk. We'll get to recipes and details in later sections.
 
 == [TEXT] The big table of integrals
 
@@ -15,7 +14,7 @@ so don't let your guard down.
 Remember that:
 #idea[
   Suppose $f : RR^n -> RR$ is given, and $0 <= d <= n$.
-  The point of a $d$-dimensional integral of $f$
+  The goal of a $d$-dimensional integral of $f$
   is to add up all the values of $f$ among some $d$-dimensional object living in $RR^n$.
 ]
 
@@ -34,7 +33,7 @@ but you can download a
 #figure(
   image("figures/integrals-triangle.svg", width: 100%),
   caption: [
-    For each $0 <= d <= n <= 3$, the kind of integral is drawn and named.
+    For each $0 <= d <= n <= 3$, we draw the kind of integral and give it a name.
     Download at #url("https://web.evanchen.cc/textbooks/poster-ints.pdf").
   ]
 ) <poster-triangle>
@@ -93,7 +92,7 @@ So the bottom trio --- 2D/3D line integral and surface integral ---
 end up being special instances of the single and double integrals.
 We'll see some examples of this later;
 but it'll actually be the _last_ thing we cover in part Golf.
-Most of part Golf will be dedicated towards double and triple integrals instead.
+Most of part Golf is dedicated towards double and triple integrals instead.
 
 == [TEXT] Warning about the bottom trio <sec-warning-trio>
 
@@ -150,7 +149,7 @@ So to summarize
 #idea[
   Whenever you try to compute a multivariable integral in @poster-triangle,
   your goal is to translate it into a rectangular-looking single/double/triple integral,
-  then evaluate by using your old 18.01 methods multiple times.
+  then evaluate by using your old 18.01 methods many times.
 ]
 
 This is actually really, really good news!
@@ -162,11 +161,11 @@ that's like the spelling bee but for integrals (I'm not kidding).
 You might have feared that in 18.02, you might need to learn something even more horrifying.
 
 But no, you don't!
-It's a lot like how you might have been scared of multivariate differentiation at first,
+It's a lot like how you might be scared of multivariate differentiation at first,
 with the symbols $nabla f$ or partial derivatives,
 until you realize that calculating partial derivatives is something you
 _actually already know how to do_ from 18.01.
 
 The same will be true for multivariable integrals.
-The challenge won't actually be the anti-derivatives, which are unchanged for 18.01.
+The challenge won't actually be the anti-derivatives, which are unchanged from 18.01.
 The hard part will actually be figuring out the _limits_ of integration!
