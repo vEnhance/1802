@@ -276,6 +276,11 @@ So a couple tips specific to Lagrange Multiplier systems:
     That is, solve for $x$ in terms of $lambda$; do the same for $y$ and $z$.
     Then plug these in the original constraint equation to solve for $lambda$,
     and hence extract $(x,y,z)$.
+
+  Note the second advice bullet is the opposite of the first advice bullet!
+  Again, systems of equations can't be solved by blindly following recipes.
+  You should use whatever method you think makes sense for the given problem.
+  You don't need anyone's permission to use so-and-so approach.
 ]
 
 #warning(title: [Warning: Make sure you only divide by nonzero things!])[
@@ -289,11 +294,6 @@ So a couple tips specific to Lagrange Multiplier systems:
   (which one they forgot about varied).
   Don't let this be you! Whenever you try to cancel, check for division by zero!
 ]
-
-Note the second advice bullet is the opposite of the first advice bullet!
-Again, systems of equations can't be solved by blindly following recipes.
-You should use whatever method you think makes sense for the given problem.
-You don't need anyone's permission to use so-and-so approach.
 
 Here's an example where a good idea is to kill $lambda$ ASAP:
 
