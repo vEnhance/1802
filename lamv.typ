@@ -22,7 +22,7 @@
 #pagebreak()
 
 #part[Part Alfa: Linear Algebra of Vectors]
-For comparison, Part Alfa corresponds approximately to §1, §2, §3.9 of #poonen.
+For comparison, Part Alfa corresponds roughly to §1, §2, §3.9 of #poonen.
 #include "src/vectors.typ"
 #pagebreak()
 #include "src/dot.typ"
@@ -33,7 +33,7 @@ For comparison, Part Alfa corresponds approximately to §1, §2, §3.9 of #poone
 #pagebreak()
 
 #part[Part Bravo: Linear Algebra of Matrices]
-For comparison, Part Bravo corresponds approximately to §3, §4, §6 of #poonen.
+For comparison, Part Bravo corresponds roughly to §3, §4, §6 of #poonen.
 #include "src/matrix.typ"
 #pagebreak()
 #include "src/basis.typ"
@@ -42,19 +42,19 @@ For comparison, Part Bravo corresponds approximately to §3, §4, §6 of #poonen
 #pagebreak()
 
 #part[Part Charlie: Review of complex numbers]
-For comparison, Part Charlie corresponds approximately to §11 of #poonen.
+For comparison, Part Charlie corresponds roughly to §11 of #poonen.
 #include "src/complex.typ"
 #pagebreak()
 #include "src/mt1.typ"
 #pagebreak()
 
 #part[Part Delta: Parametric side-quest]
-For comparison, Part Delta corresponds approximately to §5 and §7 of #poonen.
+For comparison, Part Delta corresponds roughly to §5 and §7 of #poonen.
 #include "src/param.typ"
 #pagebreak()
 
 #part[Part Echo: Multivariable differentiation]
-For comparison, Part Echo corresponds approximately to §8 and §12.1-§12.3 of #poonen.
+For comparison, Part Echo corresponds roughly to §8 and §12.1-§12.3 of #poonen.
 #include "src/level.typ"
 #pagebreak()
 #include "src/partial.typ"
@@ -65,7 +65,7 @@ For comparison, Part Echo corresponds approximately to §8 and §12.1-§12.3 of 
 #pagebreak()
 
 #part[Part Foxtrot: Optimization]
-For comparison, Part Foxtrot corresponds approximately to §9 and §12.4-§12.6 of #poonen.
+For comparison, Part Foxtrot corresponds roughly to §9 and §12.4-§12.6 of #poonen.
 #include "src/minmax.typ"
 #pagebreak()
 #include "src/regions.typ"
