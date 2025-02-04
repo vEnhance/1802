@@ -2,7 +2,7 @@
 
 = Solutions to Part Echo
 
-== Solution to @exer-level-curves
+== Solution to @exer-level-curves (five level curve drawings)
 
 #recall-thm(<exer-level-curves>)
 
@@ -17,7 +17,6 @@ In what follows, $c$ always denotes the value we're drawing the level curve.
   When $c != 0$, the shape of $x y = c$ is a hyperbola $y = c/x$.
   For the exceptional value $c = 0$, the shape $x y = 0$ is the union of the axes.
   See @fig-level-sol2.
-
 
 / For $f(x,y) = sin(x^2+y^2)$:
   The level curve is only nonempty when $-1 <= c <= 1$.
@@ -55,7 +54,7 @@ In what follows, $c$ always denotes the value we're drawing the level curve.
   caption: [Level curves of $f(x,y) = max(x,y)$],
 ) <fig-level-sol5>
 
-== Solution to @exer-level-seven
+== Solution to @exer-level-seven (level curve with seven points)
 
 #recall-thm(<exer-level-seven>)
 
@@ -70,7 +69,7 @@ But that can only happen when $(x,y) = (0, k)$.
 In other words, this level curve for $100$ consists of only seven points:
 $(0,1)$, $(0,2)$, $(0,3)$, $(0,4)$, $(0,5)$, $(0,6)$, and $(0,7)$.
 
-== Solution to @exer-partials
+== Solution to @exer-partials (partial derivative practice)
 
 #recall-thm(<exer-partials>)
 
@@ -91,7 +90,7 @@ This is direct calculation and doesn't require any trick.
   For the same reason:
   $ f_y = z y^(z - 1) + (log x) x^y , quad f_z = x z^(x - 1) + (log y) y^z . $
 
-== Solution to @exer-sphere-123
+== Solution to @exer-sphere-123 (tangent to sphere)
 
 #recall-thm(<exer-sphere-123>)
 
@@ -112,9 +111,11 @@ $ c = 2 dot 1 + 4 dot 2 + 6 dot 3 = 28. $
 Hence the answer is #boxed[$ 2x + 4y + 6z = 28 $].
 Or one could write this as $x + 2y + 3z = 14$ if you don't like the unneeded factor of $2$.
 
-== Solution to @exer-level-grad-poss
+== Solution to @exer-level-grad-poss (given level curve is a circle)
 
 #recall-thm(<exer-level-grad-poss>)
+
+#h3[Examples of functions]
 
 For an example, one natural choice for $f (x , y)$ is:
 $ f (x , y) = x^2 + y^2 - 11 . $
@@ -127,6 +128,8 @@ $ f (x , y) = 100(x^2 + y^2) - 407  $
 or
 $ f (x , y) = e^(x^2 + y^2) - (e^4 + 7)  $
 and so on.
+
+#h3[Possible gradients]
 
 For the second part, let $P$ denote the point $(1.2, -1.6)$.
 Then $P$ lies on this circle.
@@ -147,12 +150,13 @@ That is, $nabla f(1.2, -1.6)$ could be#footnote[
   caption: [The gradient should be perpendicular to the tangent line (green) to the red circle at $P$.],
 ) <fig-sol-echo-circle-grad>
 
+#h3[Linear approximation]
 
 For the linear approximation step, we have
 $ f(1.208, -1.594) approx f(1.2, -1.6) + (0.08, 0.06) dot nabla f(1.2, -1.6). $
 But the vectors $(0.08, 0.06)$ and $nabla f(1.2, -1.6)$ are perpendicular.
 
-== Solution to @exer-antigrad-preview
+== Solution to @exer-antigrad-preview (preview of anti-gradients)
 
 #recall-thm(<exer-antigrad-preview>)
 
@@ -193,7 +197,7 @@ As $a != 0$, we conclude
 $ e^d + 3/2 e^(-d) = 5/2 <==> (e^d-1)(e^d-3/2) = 0  $
 and so $#boxed[$ d = log(3/2) $]$.
 
-== Solution to @exer-antigrad-quad
+== Solution to @exer-antigrad-quad (anti-gradient practice)
 
 #recall-thm(<exer-antigrad-quad>)
 
