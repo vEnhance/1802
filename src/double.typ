@@ -441,7 +441,9 @@ the weighted average of the $x$-coordinates of the points in the region,
 and is usually denoted $dash(x)$:
 $ dash(x) := x"-coord of the center of mass" = 1/(op("mass")(cal(R))) iint_(cal(R)) x dot rho(x,y) dif x dif y. $
 And the same for the others.
-Let's repeat this in recipe form.
+Let's repeat this in recipe form.#footnote[
+  It took considerable self-restraint to not title the recipe "Mass Tech".
+]
 
 #recipe(title: [Recipe for total mass and center of mass])[
   Suppose $cal(R)$ is a region and $rho$ is a density function for the region.
@@ -451,8 +453,6 @@ Let's repeat this in recipe form.
   $ (dash(x), dash(y)) := lr(( (iint_(cal(R)) x dot rho(x,y) dif x dif y) / (op("mass")(cal(R))),
     (iint_(cal(R)) y dot rho(x,y) dif x dif y) / (op("mass")(cal(R))))). $
 ]
-
-(It took considerable self-restraint to not title the recipe "Mass Tech".)
 
 #typesig[
   If $cal(R)$ is a region in $RR^2$,
