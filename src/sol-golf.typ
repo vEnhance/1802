@@ -24,7 +24,7 @@ Now substitute this result into the outer integral:
 $ int_(x = 0)^1 (x) / (1 - x^12) dot 1 / 3 (x^3 - x^15) dif x $
 Simplifying:
 
-$ 1 / 3 int_(x = 0)^1 (x) / (1 - x^12) (x^3 - x^15) dif x \
+$ 1 / 3 int_(x = 0)^1 (x) / (1 - x^12) (x^3 - x^15) dif x
   &= 1 / 3 int_(x = 0)^1 (x^4 - x^16) / (1 - x^12) dif x \
   &= 1/3 int_(x = 0)^1 x^4 dif x \
   &= 1/3 (1/5 - 0) = 1/15. $
