@@ -2,7 +2,7 @@ import geometry;
 usepackage("amsmath");
 usepackage("amssymb");
 
-size(9cm);
+size(8cm);
 
 pair O = (0,0);
 pair A = (0,2);

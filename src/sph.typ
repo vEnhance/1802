@@ -99,7 +99,7 @@ You really don't want to redo this calculation on an exam, so just remember the 
 
 == [TEXT] The bounds of $phi$
 
-Before talking about the bounds for spherical coordinates,
+Before talking about bounds for spherical coordinates,
 let me revisit polar coordinates for comparison.
 
 === The bounds for polar coordinates
@@ -146,7 +146,7 @@ $ (rho, phi, theta)_"sph" := (rho sin phi cos theta, rho sin phi sin theta, rho 
 We want to choose a convention for values of $(rho, phi, theta)$ such that
 (except for a few degenerate cases that we'll ignore)
 every point has exactly one set of coordinates.
-The choice that we're going to use is the following.
+The choice that we're going to use is:
 #memo(title: [Memorize: The convention for spherical coordinate values])[
   When we want to impose a range of values for spherical coordinates
   to avoid repeating points, we will choose the following convention:
@@ -266,8 +266,8 @@ and we just integrate over the entire sphere
 ]
 #soln[
   Placing the ball $cal(T)$ with its center at the origin:
-  $ op("Vol")(cal(T)) &= iiint_(cal(T)) 1 dif V \
-  &= iiint_(cal(T)) rho^2 sin phi dif rho dif phi dif theta  \
+  $ op("Vol")(cal(T)) &= iiint_(cal(T)) 1 dif V
+  = iiint_(cal(T)) rho^2 sin phi dif rho dif phi dif theta  \
   &= int_(rho=0)^R int_(phi=0)^(pi) int_(theta=0)^(2 pi) rho^2 sin phi dif theta dif phi dif rho \
   &= (int_(rho=0)^R rho^2 dif rho) (int_(phi=0)^(pi) sin phi dif phi) (int_(theta=0)^(2 pi) dif theta) \
   &= R^3/3 dot 2 dot (2 pi) = #boxed[$ 4/3 pi R^3 $]. #qedhere $
@@ -286,8 +286,8 @@ is defined as $1/(op("Vol")(cal(T))) iiint_(cal(T)) f dif V$.
   The only change to what we did before is that rather than integrating $1 dif V$,
   we replace $1$ with the distance:
   $ iiint_(cal(T)) ("distance to" (0,0,0)) dif V
-    &= iiint_(cal(T)) rho dif V \
-    &= iiint_(cal(T)) rho dot (rho^2 sin phi dif rho dif phi dif theta)  \
+    &= iiint_(cal(T)) rho dif V
+    = iiint_(cal(T)) rho dot (rho^2 sin phi dif rho dif phi dif theta)  \
     &= int_(rho=0)^1 int_(phi=0)^(pi) int_(theta=0)^(2 pi) rho^3 sin phi dif theta dif phi dif rho \
     &= (int_(rho=0)^1 rho^3 dif rho) (int_(phi=0)^(pi) sin phi dif phi) (int_(theta=0)^(2 pi) dif theta) \
     &= 1/4 dot 2 dot (2 pi) = pi. $
