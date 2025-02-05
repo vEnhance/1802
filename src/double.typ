@@ -655,22 +655,16 @@ Put in recipe form:
 
 #exer[
   Let $cal(R)$ be the region between the curves $y = sqrt(x)$ and $y = x^3$.
-  Compute $iint_(cal(R)) x^(100) y^(200) dif x dif y$ in both ways.
-]
+  Compute $iint_(cal(R)) x^(100) y^(200) dif x dif y$ using both horizontal and vertical slicing.
+] <exer-slicing-standard>
 
 #exer[
   Let $cal(R)$ be the region between the curves $y = sqrt(x)$ and $y = x^2$.
   Assume $cal(R)$ has constant density.
   Calculate its center of mass.
-]
+] <exer-slicing-mass>
 
 #exer[
   Evaluate the double integral:
   $ int_(y=0)^1 int_(x=y)^(root(5, y)) (x y^2) / (1-x^(12)) dif x dif y. $
 ] <exer-swapint-fifth>
-
-
-#exer[
-  Evaluate the double integral:
-  $ int_(x = 0)^(pi/4) int_(y = x)^(min(pi/4, sqrt(x))) (x sin (y)) / (y^4 - y^2) dif y dif x. $
-] <exer-swapint-min>
