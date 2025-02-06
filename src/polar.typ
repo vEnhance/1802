@@ -11,12 +11,12 @@ and area scaling factor.
 Remember from last chapter we computed
 $ J_(bf(T)) &= mat(
     partial / (partial r) (r cos theta),
-    partial / (partial r) (r sin theta);
-    partial / (partial theta) (r cos theta),
+    partial / (partial theta) (r cos theta);
+    partial / (partial r) (r sin theta),
     partial / (partial theta) (r sin theta))
-  = mat(cos theta, sin theta; -r sin theta, r cos theta). \
+  = mat(cos theta, -r sin theta; sin theta, r cos theta). \
   |det J_(bf(T))| &=
-    detmat(cos theta, sin theta; -r sin theta, r cos theta)
+    detmat(cos theta, - r sin theta; sin theta, r cos theta)
     = r cos^2 theta - (-r sin^2 theta) = r(cos^2 theta + sin^2 theta) = r. $
 You should actually just remember the final result of this calculation
 so you don't have to work it out again.
@@ -343,8 +343,8 @@ Now, if we are willing to approximate $dif A$ with the parallelogram spanned by 
 (in contrast to this cartoon where $dif theta$ has been drawn pretty big to make the picture legible) ---
 then the approximation is given by the determinant from all the way back in @sec-det-area-vol:
 $ dif A &approx
-  lr(|det mat(cos theta dif r, sin theta dif r; -r sin theta dif theta, r cos theta dif theta)|) \
-  &= lr(|det mat(cos theta, sin theta; -r sin theta, r cos theta)|) dif r dif theta $
+  lr(|det mat(cos theta dif r, -r sin theta dif theta; sin theta dif r, r cos theta dif theta)|) \
+  &= lr(|det mat(cos theta, -r sin theta; sin theta, r cos theta)|) dif r dif theta $
 and there's the Jacobian determinant we were waiting for! Ta-da.
 
 Any change of variables can be drawn with a similar cartoon to @fig-polar-jacobian

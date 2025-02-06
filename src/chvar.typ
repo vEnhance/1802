@@ -267,13 +267,13 @@ Let's see an example of how to carry out this integration.
   We calculate the Jacobian of $bf(T)$:
   $ J_(bf(T)) = mat(
       partial / (partial r) (r cos theta),
-      partial / (partial r) (r sin theta);
-      partial / (partial theta) (r cos theta),
+      partial / (partial theta) (r cos theta);
+      partial / (partial r) (r sin theta),
       partial / (partial theta) (r sin theta))
-    = mat(cos theta, sin theta; -r sin theta, r cos theta). $
+    = mat(cos theta, - r sin theta; sin theta, r cos theta). $
   The area scaling factor is then
   $ |det J_(bf(T))| =
-    detmat(cos theta, sin theta; -r sin theta, r cos theta)
+    detmat(cos theta, - r sin theta; sin theta, r cos theta)
     = r cos^2 theta - (-r sin^2 theta) = r(cos^2 theta + sin^2 theta) = r. $
   Hence, the transition map gives us the following change of variables:
   $ iint_(x^2+y^2=1) 1 dif x dif y
