@@ -413,5 +413,6 @@ Often the thing you're integrating has no $theta$ dependence at all.)
 #exer[
   Let $cal(R)$ be all the points on or inside the triangle
   with vertices $(0,0)$, $(1,2)$ and $(2,1)$.
-  Compute $iint_(cal(R)) x y dif x dif y$.
-]
+  Compute $ iint_(cal(R)) (x+y)^2/(x y) dif x dif y. $
+  (Recommended approach: use change of variables with $u = x + y$ and $v = x / y$.)
+] <exer-chvar-triangle>

@@ -118,3 +118,121 @@ $ 1 / 3 int_(x = 0)^1 (x) / (1 - x^12) (x^3 - x^15) dif x
   &= 1 / 3 int_(x = 0)^1 (x^4 - x^16) / (1 - x^12) dif x \
   &= 1/3 int_(x = 0)^1 x^4 dif x \
   &= 1/3 (1/5 - 0) = 1/15. $
+
+== Solution to @exer-chvar-triangle (integral over triangle)
+
+#recall-thm(<exer-chvar-triangle>)
+
+We use the transformation: $ u = x + y , quad v = x / y . $
+The region under $(u,v)$ coordinates can be expressed as
+$ 0 <= u <= 3, quad 1/2 <= v <= 2. $
+This is drawn in @fig-sol-golf-triangle.
+
+#figure(
+  image("figures/sol-golf-triangle.svg", width: auto),
+  caption: [The triangle with vertices $(0,0)$, $(1,2)$, and $(2,1)$,
+    with a change of variables suggested using $u = x+y$ and $v = x/y$],
+) <fig-sol-golf-triangle>
+
+This is a case where we want to use the inverse Jacobian
+$ det (J_(bf(T)^(-1))) = detmat(
+    (partial u)/(partial x), (partial u)/(partial y);
+    (partial v)/(partial x), (partial v)/(partial y)
+  ) = detmat(
+    1, 1;
+    1/y, -x/y^2
+  ) = -(x+y) / y^2. $
+So
+$ 1 / (|det (J_(bf(T)^(-1)))|) = y^2 / (x+y). $
+
+Hence, the transformed integral becomes
+$
+  int_(u=0)^3 int_(v=1/2)^2 (x+y)^2 / (x y) dot y^2 / (x+y) dif v dif u
+  &= int_(u=0)^3 int_(v=1/2)^2 y/x dot (x+y) dif v dif u \
+  &= int_(u=0)^3 int_(v=1/2)^2 1/v dot u dif v dif u \
+  &= (int_(u=0)^3 u dif u)(int_(v=1/2)^2 1/v dif v) \
+  &= [u^2/2]_(u=0)^3 dot [log v]_(v=1/2)^2 \
+  &= 9/2 dot (log 2 - log (1/2)) = #boxed[$ 9 log 2 $].
+$
+
+== Solution to @exer-polar1 (polar integral 1)
+
+#recall-thm(<exer-polar1>)
+
+The limits of integration describe the region bounded by:
+- $0 <= x <= 1$,
+- $0 <= y <= sqrt(1 - x^2)$.
+This corresponds to the quarter-circle in the first quadrant of the unit
+disk, given by $x^2 + y^2 <= 1$ with $x >= 0$.
+
+Using the polar coordinate transformations:
+$ x = r cos theta , quad y = r sin theta , quad dif x dif y = r dif r dif theta . $
+The given region corresponds to:
+- $0 <= r <= 1$,
+- $0 <= theta <= pi / 2$.
+Rewriting the integrand:
+$ x y = (r cos theta) (r sin theta) = r^2 cos theta sin theta . $
+
+Hence the integral transforms into:
+$ I &= int_(theta = 0)^(pi \/ 2) int_(r = 0)^1 r^2 cos theta sin theta dot r dif r dif theta \
+  &= (int_(r=0)^1 r^3 dif r) (int_(theta = 0)^(pi \/ 2) sin(2theta)/2 dif theta) \
+  &= [r^4/4]_(r=0)^1 [-cos(2theta)/4]_(theta=0)^(pi\/2) \
+  &= 1/4 dot 1/2 = #boxed[$ 1/8 $]. $
+
+== Solution to @exer-polar2 (polar integral 2)
+
+#recall-thm(<exer-polar2>)
+
+In @sec-offset-circle, we have already established that the given region in polar
+coordinates is described by:
+$ 0 <= r <= 2 cos theta , quad - pi / 2 <= theta <= pi / 2 . $
+Using the standard polar transformations:
+$ x = r cos theta , quad y = r sin theta , quad dif x dif y = r dif r dif theta , $
+the given integrand is just $r$.
+$ 1 / sqrt(x^2 + y^2) = 1 / sqrt(r^2) = 1 / r . $
+Thus, the integral
+becomes:
+$ I &= int_(theta = - pi \/ 2)^(pi \/ 2) int_(r = 0)^(2 cos theta) 1 / r dot r dif r dif theta \
+  &= int_(theta = - pi \/ 2)^(pi \/ 2) int_(r = 0)^(2 cos theta) dif r dif theta \
+  &= int_(theta = - pi \/ 2)^(pi \/ 2) 2 cos theta dif theta \
+  &= [2 sin theta]_(theta = - pi \/ 2)^(pi \/ 2) \
+  &= #boxed[$ 4 $]. $
+
+== Solution to @exer-polar3 (polar integral 3)
+
+#recall-thm(<exer-polar3>)
+
+This is actually a disguised version of the example in @sec-offset-circle!
+That is, the answer is also $32/9$.
+
+To repeat, in @sec-offset-circle the example can be thought of as showing
+$ I_1 = iint_((x-1)^2 + y^2 <= 1) sqrt(x^2+y^2) dif x dif y = 32/9. $
+Our goal is to argue that
+$ I_2 = iint_(x^2+y^2 <= 1) sqrt((x+3/5)^2 + (y+4/5)^2) dif x dif y = #boxed[$ 32/9 $]. $
+
+Note that:
+- The first integral $I_1$ is taken over the disk centered at $(1 , 0)$ with radius 1.
+  We call this disk $cal(R)_1$.
+- The second integral $I_2$ is taken over the unit disk centered at $(0 , 0)$.
+  We call this disk $cal(R)_2$.
+
+Observe that the disks $cal(R)_1$ and $cal(R)_2$ are congruent.
+Moreover,
+
+- The integrand in $I_1$ is $sqrt(x^2 + y^2)$.
+  This measures the distance of each point in $cal(R)_1$ from the origin $O = (0 , 0)$.
+  Note that $O$ is a point on the boundary of $cal(R)_1$.
+- The integrand in $I_2$ is $sqrt((x + 3 / 5)^2 + (y + 4 / 5)^2)$.
+  This measures the distance of each point in $cal(R)_2$ from the origin $P = (-3/5, -4/5)$.
+  Note that $P$ is a point on the boundary of $cal(R)_2$.
+
+See the illustration in @fig-sol-golf-polar.
+
+#figure(
+  image("figures/sol-golf-polar.svg", width: auto),
+  caption: [Illustration of the integrals $I_1$ and $I_2$ of
+    from @sec-offset-circle and @exer-polar3, showing they're computing the same thing.],
+) <fig-sol-golf-polar>
+
+Since both integrals effectively compute the same function over congruent regions,
+the results must be equal.

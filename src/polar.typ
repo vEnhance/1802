@@ -373,13 +373,13 @@ where the parallelogram is replaced by a parallelepiped, etc.
 #exer[
   Compute
   $ int_(x=0)^(1) int_(y=0)^(sqrt(1-x^2)) x y dif y dif x. $
-]
+] <exer-polar1>
 
 #exer[
   Compute
-  $ iint_(x^2+(y-1)^2 <= 1) 1/sqrt(x^2+y^2) dif x dif y. $
-]
+  $ iint_((x-1)^2+y^2 <= 1) 1/sqrt(x^2+y^2) dif x dif y. $
+] <exer-polar2>
 
 #exerstar[
   Compute $ iint_(x^2+y^2 <= 1) sqrt((x+3/5)^2 + (y+4/5)^2) dif x dif y. $
-]
+] <exer-polar3>
