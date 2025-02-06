@@ -63,7 +63,9 @@ The region is really similar to the one in the preceding exercise, and can be de
 $ 0 <= x^2 <= y <= sqrt(x) <= 1 $
 for the same reason, as shown in @fig-sol-golf-double-sol2.
 (It's exactly the same as the last exercise except $x^3$ was changed to $x^2$,
-so one just replaces all the $3$'s with $2$'s).
+so one just replaces all the $3$'s with $2$'s.)
+Note that the region is symmetric around the line $y = x$,
+so _a priori_ we should expect our answer to lie on $y = x$ as well.
 
 #figure(
   image("figures/sol-golf-double-sol2.svg", width: auto),
@@ -72,8 +74,8 @@ so one just replaces all the $3$'s with $2$'s).
 
 First, to compute the area of $cal(R)$, we can write
 $ op("Area")(cal(R)) = int_(x = 0)^1 int_(y=x^2)^(sqrt(x)) 1 dif y dif x
-  &= int_(x=0)^1 (sqrt(x) - x^2) dif x \
-  &= [2/3 x^(3\/2) - 1/3 x^3]_(x=0)^1 = 1/3. $
+  = int_(x=0)^1 (sqrt(x) - x^2) dif x
+  = [2/3 x^(3\/2) - 1/3 x^3]_(x=0)^1 = 1/3. $
 
 The $x$-coordinate of the center of mass is therefore given by
 $ dash(x) = 1 / (op("Area")(cal(R))) int_(cal(R)) x dif A
@@ -81,7 +83,7 @@ $ dash(x) = 1 / (op("Area")(cal(R))) int_(cal(R)) x dif A
   &= 3 int_(x = 0)^1 x (sqrt(x) - x^2) dif x \
   &= 3 [2/5 x^(5/2) - 1/4 x^4]_(x=0)^1 = 9/20. $
 
-As for the $y$-coordinate, we get instead
+As for the $y$-coordinate, we expect $dash(y) = dash(x)$ from the symmetry of the region, and indeed
 $ dash(y) = 1 / (op("Area")(cal(R))) int_(cal(R)) y dif A
   &= 1 / (1\/3) int_(x = 0)^1 int_(y=x^2)^(sqrt(x)) y dif y dif x \
   &= 3 int_(x = 0)^1 [y^2/2]_(y=x^2)^(sqrt(x)) dif x \
