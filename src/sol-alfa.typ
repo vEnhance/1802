@@ -187,6 +187,23 @@ See @fig-sol-alfa-dot-reverse for a picture of the two answers.
   ],
 ) <fig-sol-alfa-dot-reverse>
 
+== Solution to @exer-cauchy ($2$ and $5$)
+
+#recall-thm(<exer-cauchy>)
+
+Construct vectors $bf(v) = angle.l a,b,c angle.r$
+and $bf(w) = angle.l x,y,z angle.r$ in $RR^3$.
+Then the problem statement is saying that $|bf(v)| = sqrt(2)$, $|bf(w)| = sqrt(5)$,
+and asks for all possible values of $bf(v) dot bf(w)$.
+But the geometric definition of the dot product says that
+$ bf(v) dot bf(w) = |bf(v)| |bf(w)| cos theta = sqrt(10) cos theta $
+where $theta$ is the angle between $bf(v)$ and $bf(w)$.
+
+Since $theta$ could be any angle at all (as $bf(v)$ and $bf(w)$ are arbitrary $RR^3$ vectors),
+the possible values of $sqrt(10) cos theta$ will range from in the interval
+$#boxed[$ [-sqrt(10), sqrt(10)] $]$
+as $cos theta$ ranges from $-1$ to $1$.
+
 == Solution to @exer-planes-cube (faces of a cube)
 
 #recall-thm(<exer-planes-cube>)

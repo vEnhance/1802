@@ -336,3 +336,9 @@ Let's also do the example in @fig-dot-project2.
   Let $bf(w) = angle.l 3,4 angle.r$.
   Compute all unit vectors $bf(v)$ in $RR^2$ for which $bf(v) dot bf(w) = 3$.
 ] <exer-dot-reverse>
+
+#exerstar[
+  Determine all possible values of $a x + b y + c z$
+  over real numbers $a$, $b$, $c$, $x$, $y$, $z$
+  satisfying $a^2 + b^2 + c^2 = 2$ and $x^2 + y^2 + z^2 = 5$.
+] <exer-cauchy>

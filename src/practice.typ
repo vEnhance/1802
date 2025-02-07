@@ -61,19 +61,13 @@ It was about half the length of the final exam (which was 14 questions long).
   then use the divergence theorem.)
 ] <exer-mf-8>
 
-== Miscellaneous practice questions
+== Miscellaneous practice questions without solutions
 
 #exer[
   Let $bf(v) = vec(8, 9, 10)$. Suppose that
   $ op("proj")_(bf(w)) (bf(v)) = vec(3,5,t) $
   for some real number $t$.
   Compute $t$, and compute all possibilities for the vector $bf(w)$.
-]
-
-#exerstar[
-  Determine all possible values of $a x + b y + c z$
-  over real numbers $a$, $b$, $c$, $x$, $y$, $z$
-  satisfying $a^2 + b^2 + c^2 = 2$ and $x^2 + y^2 + z^2 = 5$.
 ]
 
 #exer[
@@ -116,17 +110,7 @@ It was about half the length of the final exam (which was 14 questions long).
 ]
 
 #exer[
-  Suppose the real numbers $a < b$ and $c < d$ are chosen such that
-  $int_(x=a)^b e^(-x^2) dif x = 0.3$ and $int_(y=c)^d e^(-y^2) dif x = 0.7$.
-  What are all the values that
-  $ int_(x=a)^b int_(y=c)^d e^(-x^2 - y^2) dif x dif y $
-  can take?
-]
-
-#exer[
-  Compute $ int_(x=-oo)^(+oo) int_(y=-oo)^(+oo) e^(-x^2-y^2) dif y dif x. $
-]
-
-#exer[
-  Combine the previous two exercises to figure out what $int_(x=-oo)^(+oo) e^(-x^2) dif x$ is.
+  Compute $ int_(x=-oo)^(+oo) int_(y=-oo)^(+oo) e^(-x^2-y^2) dif y dif x $
+  by changing to polar coordinates.
+  Then determine the value of $int_(x=-oo)^(+oo) e^(-x^2) dif x$.
 ]
