@@ -130,7 +130,3 @@ It was about half the length of the final exam (which was 14 questions long).
 #exer[
   Combine the previous two exercises to figure out what $int_(x=-oo)^(+oo) e^(-x^2) dif x$ is.
 ]
-
-#exerstar[
-  Prove that $ int_(x=0)^(999^5) root(3, root(5,x) + 1) $ is a rational number.
-] <exer-rat-slice>

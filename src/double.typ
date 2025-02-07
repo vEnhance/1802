@@ -668,3 +668,7 @@ Put in recipe form:
   Evaluate the double integral:
   $ int_(y=0)^1 int_(x=y)^(root(5, y)) (x y^2) / (1-x^(12)) dif x dif y. $
 ] <exer-swapint-fifth>
+
+#exerstar[
+  Prove that $ int_(x=0)^(999^5) root(3, root(5,x) + 1) $ is a rational number.
+] <exer-rat-slice>
