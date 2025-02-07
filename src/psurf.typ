@@ -179,7 +179,7 @@ but here we make a $2$-dimensional map of a surface living in $RR^3$.)
   but it doesn't matter.)
 ]
 
-== [TEXT] Parametrizations are still flexible
+== [SIDENOTE] Parametrizations are still flexible
 
 Like in @ch-param, the parametrization of a surface is not unique,
 and you get flexibility in how you parametrize it.
@@ -201,5 +201,5 @@ But it's so ugly you would never want to use it.
   Consider a surface $cal(S)$ given by the parametrization $bf(r) : RR^2 -> RR^3$ defined by
   $ bf(r)(u,v) = angle.l u-v, u+v, u v angle.r $
   for all $(u,v)$ in $RR^2$.
-  Compute the real number $k$ for which the point $P = (1, 3, k)$ lies on $cal(S)$.
-]
+  Compute the real number $k$ for which the point $P = (2, 8, k)$ lies on $cal(S)$.
+] <exer-psurf>

@@ -296,7 +296,7 @@ is defined as $1/(op("Vol")(cal(T))) iiint_(cal(T)) f dif V$.
   = (pi) / (4/3 pi) = #boxed[$ 3/4 $]. #qedhere $
 ]
 
-== [TEXT] Famous example: offset sphere
+== [TEXT] Famous example: offset sphere <sec-offset-sphere>
 
 Recall the famous example in @sec-offset-circle where we showed that in polar coordinates,
 we could draw a circle passing through the origin;
@@ -365,7 +365,7 @@ It's actually pretty much exactly the same.
     In particular this requires $cos phi >= 0$ i.e. $phi <= pi/2$.
 
   In conclusion, the answer is $cal(R)$ in polar coordinates is exactly
-  $ #boxed[$ 0 <= theta < 2 pi " and " 0 <= phi <= pi/2 " and " rho <= 2 cos alpha $]. #qedhere $
+  $ #boxed[$ 0 <= theta < 2 pi " and " 0 <= phi <= pi/2 " and " rho <= 2 cos phi $]. #qedhere $
 ]
 
 The analogous famous exercise in 3D:
@@ -393,7 +393,7 @@ The analogous famous exercise in 3D:
     &= #boxed[$ (8pi) / 5 $]. #qedhere $
 ]
 
-== [TEXT] Spherical coordinates for gravity
+== [TEXT] Spherical coordinates for gravity <sec-sph-gravity>
 
 Let's go back to the equation for gravity where the components were given by
 $
@@ -454,10 +454,10 @@ Let's see it in action with an offset sphere.
   (The average is defined as
   $1/(op("Vol")(cal(T))) iiint_(cal(T)) d(P) dif V$,
   where $d(P)$ is the distance from $P$ to $ell$.)
-]
+] <exer-sphere-line-distance>
 
 #exer[
   Suppose $cal(T)$ is a solid metal hemisphere of radius $1$ of constant unit density,
   and $P$ is a point of mass $m$ at the center of the base of the hemisphere.
   Calculate the magnitude of the force of gravity exerted on the point $P$.
-]
+] <exer-sphere-gravity>

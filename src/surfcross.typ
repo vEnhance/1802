@@ -389,5 +389,13 @@ Let's write a new recipe for surface area now that we have @table-surfcross-1.
   Consider the unit sphere $x^2 + y^2 + z^2 = 1$ and the cylinder $x^2 + y^2 = 1$.
   Show that the portions of their (lateral) surface areas
   which lie between $z=a$ and $z=b$ have equal area.
-]
-#todo[figure for this]
+  See @fig-surfcross-archimedes.
+] <exer-archimedes>
+
+#figure(
+  image("figures/surfcross-archimedes.svg", width: auto),
+  caption: [
+    Figure for @exer-archimedes.
+    Show that the two blue lateral surface areas are equal.
+  ],
+) <fig-surfcross-archimedes>

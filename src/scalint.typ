@@ -70,7 +70,7 @@ Then we can abbreviate
 $ int_(t="start time")^("stop time") f(bf(r)(t)) lr(|bf(r)'(t)|) dif t = int_(cal(C)) f dif s. $
 In particular, taking $f=1$, the arc length formula gets abridged to $L = int_(cal(C)) dif s$.
 
-== [TEXT] Surface area
+== [TEXT] Surface area <sec-surface-area-explanation>
 
 Okay, so in analogy are surface area and the scalar-field surface integral.
 We use what we learned about parametrization from @ch-psurf.
@@ -257,12 +257,14 @@ And here is an example that is a little less computationally intensive.
   $ bf(r)(u,v) = angle.l u-v, u+v, u v angle.r $
   for all $(u,v)$ in $RR^2$.
   Compute the tangent plane to $cal(S)$ at the point $(3, 7, 10)$.
-]
+] <exer-surf-tangent>
 
-#exer[
+/*
+#exerstar[
   Let $cal(S)$ be the unit sphere of radius $1$ and $A$ a point on it.
   Calculate the average value of the length $P A$
   across all points $P$ on the sphere.
   (The average is defined as the scalar-field surface integral
   $1/(op("SurfArea")(cal(S))) iint_(cal(S)) |P A| dif S$.)
-]
+] <exer-sphere-avg-distance>
+*/

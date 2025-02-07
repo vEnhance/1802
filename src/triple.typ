@@ -317,8 +317,18 @@ So we'll punt all the examples to next chapter, @ch-sph.
 == [EXER] Exercises
 
 #exer[Napkin-ring problem][
-  A wooden ball of radius $R > 1$ is given.
-  A cylindrical hole of radius $sqrt(R^2-1)$
-  is drilled through the center of the ball to get a bead.
-  Compute the volume of the resulting bead.
-]
+  Let $R > a > 0$ be given real numbers, and let $h := 2sqrt(R^2-a^2)$.
+  A cylindrical hole of radius $a$
+  is drilled through the center of a wooden ball of radius $R$ to get a bead of height $h$,
+  as shown in @fig-triple-napkin-ring.
+  Compute the volume of the resulting bead as a function of $h$.
+] <exer-napkin-ring>
+
+#figure(
+  image("figures/triple-napkin-ring.svg", width: auto),
+  caption: [The napkin-ring problem.
+    A bead is shown in blue, drilled out of a sphere of radius $R$, and with height
+    $2h = 2sqrt(R^2-a^2)$.
+    One must determine the volume of the bead in terms of $h$.
+  ],
+) <fig-triple-napkin-ring>
