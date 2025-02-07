@@ -75,11 +75,12 @@ In other words, it doesn't provide a nice shortcut like the other theorems do.
 
 == [EXER] Exercises
 
-#exerstar[
+#exer[
   Prove Green's theorem for work by quoting classical Stokes' theorem.
 
   That is, suppose $bf(F) = vec(p,q)$ is a vector field in $RR^2$
   and $cal(C)$ is a closed loop enclosing a region $cal(R)$ counterclockwise.
   Find a way to use classical Stokes' theorem to prove
-  $ oint_(cal(C)) bf(F) dot dif bf(r) &= iint_(cal(R)) ((dif q) / (dif x) - (dif p) / (dif y)) dif A. $
-]
+  $ oint_(cal(C)) bf(F) dot dif bf(r)
+    = iint_(cal(R)) ((partial q) / (partial x) - (partial p) / (partial y)) dif A. $
+] <exer-stokes-to-green>

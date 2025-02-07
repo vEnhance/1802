@@ -325,12 +325,6 @@ $ dash(x) = 1 / (op("Area")(cal(R))) iint_cal(R) x dif A , quad dash(y) = 1 / (o
   $ dash(y) = 1 / (op("Area")(cal(R))) iint_cal(R) y dif A = 9 / ((3 pi) / 2) = 6 / pi . $
 In conclusion, the center of mass is given by $ (dash(x),dash(y)) = #boxed[$ (0, 6/pi) $]. $
 
-#figure(
-  image("figures/mt3-wedge.svg", width: auto),
-  caption: [It's a one-sixth slice of a pizza or something.],
-) <fig-mt3-slice>
-
-
 #digression(title: [Digression: the long way for area])[
   If you don't want to do geometry,
   you can manually compute $op("Area")(cal(R))$ by the definition
@@ -340,6 +334,11 @@ In conclusion, the center of mass is given by $ (dash(x),dash(y)) = #boxed[$ (0,
   Then, integrate with respect to $theta$:
   $ A = int_(theta = pi / 3)^((2 pi) / (3)) 9 / 2 dif theta = 9 / 2 ((2 pi) / (3) - pi / 3) = 9 / 2 dot pi / 3 = (3 pi) / (2) . $
 ]
+
+#figure(
+  image("figures/mt3-wedge.svg", width: auto),
+  caption: [It's a one-sixth slice of a pizza or something.],
+) <fig-mt3-slice>
 
 #digression(title: [Digression: the long way for $overline(x)$])[
   For comparison, we show what happens if you didn't notice the symmetry and proceed to integrate.

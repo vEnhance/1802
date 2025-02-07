@@ -264,7 +264,7 @@ And if you ever _do_ need the third and fourth column for some other reason,
 they can be derived instantly from the fifth column anyways.
 So the third and fourth column are only helpful insomuch as they might make the
 formula for the cylinder and sphere easier to remember or more conceptually intuitive.
-But for practical calculation they are redundant and hence useless.
+But for practical calculation they are redundant.
 
 == [RECIPE] Recipe for flux integrals with bare-hands parametrization <sec-recipe-flux-param>
 
@@ -580,3 +580,11 @@ Here are two examples of this with spheres.
 Note that the answer is independent of the radius! The $17$ cancels out.
 
 == [EXER] Exercises
+
+#exer[
+  Calculate the flux of the vector field
+  $ bf(F)(x,y,z) = lr(angle.l x/3, y/4, 1/5 angle.r) $
+  across the portion of the surface defined by
+  $ x^3 + y^4 = e^z, quad 0 <= x <= 5, quad 0 <= y <= 5 $
+  where the normal vector is oriented upwards.
+] <exer-flux-xy-ez>

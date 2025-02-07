@@ -295,7 +295,7 @@ and then you add a layer of plastic wrap on the bowl.
   Let $bf(F)(x,y,z) = angle.l cos(z^2) - x, sin(z^2) - y, 2z angle.r$.
   Compute the flux of $bf(F)$ through $cal(S)$.
   (Recommended approach: sealing.)
-]
+] <exer-flux-sealing>
 
 #exer[
   Suppose $cal(S)_1$ and $cal(S)_2$ are two closed surfaces that don't intersect
@@ -307,11 +307,12 @@ and then you add a layer of plastic wrap on the bowl.
   $ oiint_(cal(S)_1) bf(G) dot bf(n) dif S = oiint_(cal(S)_2) bf(G) dot bf(n) dif S. $
 ] <exer-gravity-div2>
 
-#exer[
+#exerstar[
   Prove Green's theorem for flux by quoting the divergence theorem.
 
   That is, suppose $bf(F) = vec(p,q)$ is a vector field in $RR^2$
   and $cal(C)$ is a closed loop enclosing a region $cal(R)$ counterclockwise.
-  Find a way to use classical Stokes' theorem to prove
-  $ oint_(cal(C)) bf(F) dot bf(n) dif bf(s) &= iint_(cal(R)) ((dif p) / (dif x) + (dif q) / (dif y)) dif A. $
-]
+  Find a way to use the divergence theorem to prove
+  $ oint_(cal(C)) bf(F) dot bf(n) dif bf(s)
+    = iint_(cal(R)) ((partial p) / (partial x) + (partial q) / (partial y)) dif A. $
+] <exer-div-to-green>
