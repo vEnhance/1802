@@ -6,15 +6,11 @@ random.seed("18.02 Fall 2024")
 def classify_critical_points(a3, a2, a1, b3, b2, b1):
     # f = a3 * x**3 + a2 * x**2 + a1 * x + b3 * y**3 + b2 * y**2 + b1 * y
     # the constant term has no effect on the critical points, so we ignore it
-    assert a3 != 0
-    assert b3 != 0
+    assert a3 != 0 and b3 != 0
 
-    # fx = 3 a3 x^2  + 2 a2 x + 1
-    # fy = 3 b3 y^2  + 2 b2 y + 1
+    # fx = 3 a3 x^2  + 2 a2 x + 1; fy = 3 b3 y^2  + 2 b2 y + 1
     # If either of these have negative discriminant, rage-quit
-    if 4 * a2 * a2 - 12 * a3 * a1 < 0:
-        return (0, 0, 0)
-    if 4 * b2 * b2 - 12 * b3 * b1 < 0:
+    if 4 * a2 * a2 - 12 * a3 * a1 < 0 or 4 * b2 * b2 - 12 * b3 * b1 < 0:
         return (0, 0, 0)
 
     # Otherwise, let's get the two critical values
@@ -23,9 +19,7 @@ def classify_critical_points(a3, a2, a1, b3, b2, b1):
     y1 = (-2 * b2 + (4 * b2 * b2 - 12 * b3 * b1) ** 0.5) / (6 * b3)
     y2 = (-2 * b2 - (4 * b2 * b2 - 12 * b3 * b1) ** 0.5) / (6 * b3)
 
-    local_minima = 0
-    local_maxima = 0
-    saddle_points = 0
+    local_minima, local_maxima, saddle_points = 0, 0, 0
 
     for x0 in (x1, x2):
         for y0 in (y1, y2):

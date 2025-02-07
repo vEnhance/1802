@@ -1,6 +1,6 @@
 #import "@local/evan:1.0.0":*
 
-This entire chapter is not for exam, obviously.
+Nothing past this point is for exam, obviously.
 
 = If you are thinking of majoring in math... <appendix-math-major>
 

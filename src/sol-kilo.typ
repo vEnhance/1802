@@ -3,6 +3,8 @@
 = Solutions to Part Kilo <ch-sol-kilo>
 
 Statements of the exercises are in @ch-practice.
+Right now we only have solutions to the "mock half-final" here.
+If you want to submit a pull request for the remaining problems, you'd be welcome to.
 
 == Solution to @exer-mf-1
 
