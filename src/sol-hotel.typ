@@ -252,7 +252,7 @@ the change is that rather than integrating along the entire $x^2+y^2 <= 1$
 (which would give the surface area of the hemisphere),
 we instead integrate along the annulus
 $ 1-b^2 <= x^2 + y^2 <= 1-a^2. $
-Indeed, this is the shadow of the surface area in @exer-archimedes onto the $x y$-plane.
+Indeed, this is the shadow of the surface area in @fig-surfcross-archimedes onto the $x y$-plane.
 (Indeed, the bottom disk has radius $sqrt(1-a^2)$ and the top disk has radius $sqrt(1-b^2)$.)
 
 Getting back to integration, the surface area we seek for the sphere is thus

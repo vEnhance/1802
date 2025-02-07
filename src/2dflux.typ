@@ -5,9 +5,8 @@
 == [TEXT] Definition of 2D flux
 
 I will grudgingly define 2D flux first, since I just went over Green's theorem.
-I say "grudgingly" because 2D flux is an awkward hacked special case of 3D flux,
-forced to work in two dimensions.
-But okay, gotta follow the script.
+I say "grudgingly" because 2D flux is really a special case of 3D flux,
+but to keep things simple we've still been working in two dimensions.
 
 The idea of flux is that you have some closed curve $cal(C)$ in $RR^2$.
 When we had a work integral, we went along the curve $cal(C)$ and added together the
@@ -248,7 +247,7 @@ For each example, we actually show how to do it "manually"
   If we were to do the line integral manually,
   we would have to parametrize all four sides.
   This would be straightforward, but it's annoying, so we'll just jump straight
-  to Green the shortcut with Green's theorem.
+  the shortcut with Green's theorem.
 
   The divergence is
   $ nabla dot bf(F) := (partial p)/(partial x) + (partial q)/(partial y)
@@ -266,8 +265,9 @@ For each example, we actually show how to do it "manually"
 ]
 
 #soln[
-  We don't really want to parametrize the ellipse,
-  although it could be done with $bf(r) = (a cos t, b sin t)$ for $0 <= t <= 2pi$.
+  We don't really want to parametrize the ellipse#footnote[Although
+    it could be done with $bf(r) = (a cos t, b sin t)$ for $0 <= t <= 2pi$.
+    So it's not _that_ bad.]
   Again, we jump straight to Green's theorem, with
   $
     nabla dot bf(F)
@@ -318,4 +318,10 @@ Since it's so long, I broke it out into a separate skippable chapter.
 
 == [EXER] Exercises
 
-// another sealing region exercise here would be good
+#exer[
+  Triangle $A B C$ has vertices $A = (-5,0)$, $B = (9,0)$, and $C$ on the positive $y$-axis.
+  The flux of the vector field
+  $ bf(F) (x , y) = vec(x + 7y^2, x^2 + 7y) $
+  across the perimeter of $A B C$, oriented counterclockwise, is $672$.
+  Compute the perimeter of $A B C$.
+] <exer-flux-triangle>

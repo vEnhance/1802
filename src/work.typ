@@ -366,4 +366,4 @@ along a different path.
   - $bf(F)(P)$ makes a $45 degree$ angle with the tangent vector to $cal(C)$ at $P$
     (the tangent vector points along the direction of $cal(C)$).
   Compute $int_(cal(C)) bf(F) dot dif bf(r)$.
-]
+] <exer-work-given-angle>

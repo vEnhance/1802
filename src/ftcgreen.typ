@@ -509,9 +509,9 @@ by adding the line segment from $(-1,0)$, to $(1,0)$.
 
 #exer[
   Is the vector field
-  $ bf(F)(x,y) = vec(sin(e^x) + cos(e^x), arctan(y)) $
+  $ bf(F)(x,y) = vec(sin(e^x), arctan(y^pi+pi^y)) $
   conservative?
-]
+] <exer-consv>
 
 #exer[
   Calculate the line integral
@@ -525,7 +525,7 @@ by adding the line segment from $(-1,0)$, to $(1,0)$.
   suppose $cal(P) = P_1 P_2 ... P_n$ is a convex $n$-gon in $RR^2$,
   where the vertices $P_i = (x_i, y_i)$ are labeled counterclockwise.
   Use Green's theorem to prove the following formula for the area of $cal(P)$:
-  $ op("Area")(cal(P)) = sum_(i=1)^n (x_(i-1) y_i - x_i y_(i-1)). $
+  $ op("Area")(cal(P)) = 1/2 sum_(i=0)^(n-1) (x_i y_(i+1) - x_(i+1) y_i). $
   Here $x_0 = x_n$ and $y_0 = y_n$ by convention,
-  so the $i=1$ summand is $x_n y_1 - x_1 y_n$.
-]
+  so the $i=0$ summand is $x_n y_1 - x_1 y_n$.
+] <exer-shoelace>
