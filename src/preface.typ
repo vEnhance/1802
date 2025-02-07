@@ -50,9 +50,6 @@ But with this goal in mind, here are some parts of the design philosophy of this
   I'd rather have a small number of exercises with properly documented solutions
   than an enormous pile of mass-produced questions with no corresponding solutions.
 
-  #todo[Okay this is not true yet lol I'm working on it. There will be solutions one day.
-  Especially since ChatGPT can do all the exercises anyway kappa.]
-
 - *It tries to explain where formulas come from*.
   For example, these notes spell out how matrix multiplication corresponds
   to function composition (in @sec-matrix-mult), something that isn't clearly stated in many places.
@@ -88,8 +85,14 @@ and calculus as taught in United States high schools.
     5 x - 2 y = 8,
     3 x + 10 y = 16
   ) ==> (x,y) = (2,1). $
+
 - *Trigonometry*: You should be know how $sin$ and $cos$ work, in both degrees and radians.
   So you should know $sin(30 degree) = 1/2$, and $cos((7 pi) / 6) = -sqrt(3) / 2$.
+
+  You should know a few trig identities; the most important is the double angle formula
+  $ sin(2theta) &= 2 sin theta cos theta \
+    cos(2theta) &= cos^2 theta - sin^2 theta = 2 cos^2 theta - 1 = 1 - 2 sin^2 theta. $
+
 - *Precalculus*: You should know some common formulas covered in precalculus for vectors and matrices:
   - You should be able to add and scale vectors, like
     $ vec(1,7) + 10 vec(3,5) = vec(1,7) + vec(30,50) = vec(31,57). $
