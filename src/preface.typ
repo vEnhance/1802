@@ -46,7 +46,8 @@ But with this goal in mind, here are some parts of the design philosophy of this
   These notes should stand alone.
   - Any sentence that would normally be said out loud is written as text.
   - Any figure that would normally be drawn on the blackboard is actually typeset into the book.
-- *It has full solutions to its exercises*. I really believe in writing things out.
+- *It has full solutions to most of its exercises*.
+  I really believe in writing things out.
   I'd rather have a small number of exercises with properly documented solutions
   than an enormous pile of mass-produced questions with no corresponding solutions.
 
