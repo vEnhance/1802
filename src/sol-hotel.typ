@@ -267,7 +267,7 @@ For the inner integral, use the $u$-substitution $u=1-r^2 ==> (dif u) / (dif r) 
 $ int_(r=sqrt(1-b^2))^(sqrt(1-a^2)) r/(sqrt(1-r^2)) dif r
   = int_(u=b^2)^(a^2) -1/2 u^(-1/2) dif u
   = int_(u=a^2)^(b^2) 1/2 u^(-1/2) dif u
-  = [u^(1/2)]_(u=(a^2))^(b^2) = b-a. $
+  = [u^(1/2)]_(u=a^2)^(b^2) = b-a. $
 Thus we get
 $ S = 2 pi (b - a) $
 as we needed.
