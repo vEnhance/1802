@@ -216,7 +216,7 @@ Here's a complete recipe for flux, augmented with the two shortcuts we described
   Suppose we need to calculate the flux of $bf(F)$ through a surface $cal(S)$.
 
   1. If $cal(S)$ is a closed region, use the divergence theorem to avoid parametrization:
-    $ oiint_(cal(S)) bf(F) dot bf(n) dif S =
+    $ oiint_(cal(S)) bf(F) dot bf(n) dif S
       = underbrace(iiint_(cal(T)) nabla dot bf(F) dif V,
       = iiint_(cal(T)) ((partial p) / (partial x) + (partial q) / (partial y) + (partial r) / (partial z)) dif V). $
   2. If $bf(F) dot bf(n)$ happens to equal the same constant $c$ everywhere
