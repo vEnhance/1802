@@ -16,9 +16,6 @@ Here's a picture of moonlight sailing after having to grade the third midterm.
   caption: [Moonlight sailing after the third midterm.],
 )
 
-If you'd like some more ideas for things to do, follow me on Instagram at
-#link("https://www.instagram.com/evanchen.cc/")[\@evanchen.cc].
-
 == Solution to @exer-poster (print a poster)
 
 #recall-thm(<exer-poster>)
