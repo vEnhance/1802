@@ -359,6 +359,13 @@ along a different path.
 
 == [EXER] Exercises
 
+#exer[Suggested by Ting-Wei Chao][
+  Let $cal(C)$ be the oriented closed curve formed by the arc of the parabola $y = x^2-1$
+  running from $(-1, 0)$ to $(1, 0)$, followed by a line segment from $(1, 0)$ back to $(-1, 0)$.
+  Let $ bf(F)(x,y) = vec(x^2(y+1), (y+1)^2). $
+  Compute $int_(cal(C)) bf(F) dot dif bf(r)$ using direct parametrization.
+] <exer-parabola-1>
+
 #exer[
   Let $cal(C)$ be a curve in $RR^2$ from $(0,0)$ to $(2,3)$ whose arc length is $7$.
   Let $bf(F)$ be a vector field with the property that for any point $P$ on the curve,

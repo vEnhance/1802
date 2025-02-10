@@ -296,6 +296,9 @@ in return for the short time limit.
   Thanks also to Sefanya Hope for coordinating many other logistics,
   and particularly for helping me book classrooms on short notice on many occasions.
 
+  I also thank Ting-Wei Chao for his permission to use @exer-lm-abs,
+  @exer-parabola-1, @exer-parabola-2, @exer-parabola-3 from his recitation section.
+
 - Thank you to all the students in my recitation session
   (and those officially enrolled in other sessions, but who came to my session anyway!)
   who regularly attended my class every Monday and Wednesday at 9am.

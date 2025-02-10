@@ -58,6 +58,45 @@ $ nabla dot bf(G) &=
   &= 0 $
 as claimed.
 
+== Solution to @exer-parabola-1 (parabola arc v1)
+
+#recall-thm(<exer-parabola-1>)
+
+We split $cal(C)$ into two parts $cal(C)_1$ and $cal(C)_2$ corresponding to the
+parabola and the segment, respectively.
+These are colored red and blue in @fig-sol-india-parabola-nofill, respectively.
+
+#figure(
+  image("figures/sol-india-parabola-nofill.svg", width: auto),
+  caption: [The curve $cal(C)$ (and the enclosed region).],
+) <fig-sol-india-parabola-nofill>
+
+For $cal(C)_1$, we choose the parametrization
+$ bf(r)(t) = (t, t^2-1) $ for $-1 <= t <= 1$, so
+$ bf(F)(bf(r)(t)) = bf(F)(t, t^2-1) = vec(t^4, t^4)
+  quad
+  bf(r)'(t) = vec(1, 2t). $
+Then we get
+$ int_(cal(C)_1) bf(F) dot dif bf(r)
+  &= int_(t=-1)^1 vec(t^4, t^4) dot vec(1, 2t) dif t \
+  &= int_(t = - 1)^1 (t^4 + t^4 dot 2 t) dif t \
+  &= [t^5/5 + 1/3 t^6]_(t=-1)^1 = 2 / 5 . $
+
+Next, we parameterize $cal(C)_2$ by $(1 - t , 0)$ for $0 <= t <= 2$.
+Then
+$ bf(F)(bf(r)(t)) = bf(F)(1-t,0) = vec((1-t)^2, 1)
+  quad
+  bf(r)'(t) = vec(-1, 0). $
+Then
+$ int_(cal(C)_2) bf(F) dot dif bf(r)
+  &= int_(t=-1)^1 vec((1-t)^2, 1) dot vec(-1, 0) dif t \
+  &= int_(t=0)^2 - (1 - t)^2 dif t \
+  &= - 2 / 3 . $
+Putting this all together we get
+$ int_(cal(C)) bf(F) dot dif bf(r)
+  = int_(cal(C)_1) bf(F) dot dif bf(r) + int_(cal(C)_2) bf(F) dot dif bf(r)
+  = 2 / 5 - 2 / 3 = #boxed[$ -4/15 $]. $
+
 == Solution to @exer-work-given-angle (work from $45 degree$ angle)
 
 #recall-thm(<exer-work-given-angle>)
@@ -88,15 +127,39 @@ In general, the point of this exercise is that every vector field of the form
 $bf(F)(x,y) = angle.l "stuff only involving" x, "stuff only involving" y angle.r$
 is always conservative, because the relevant partial derivatives are both $0$.
 
-== Solution to @exer-work-1 (work exercise)
+== Solution to @exer-work-boring (work exercise)
 
-#recall-thm(<exer-work-1>)
+#recall-thm(<exer-work-boring>)
 
 The vector field is conservative, because
 $ partial / (partial y) (x^2 - y) = -1 = partial / (partial x) (y^2 - x). $
 So the answer is $0$.
 (If you didn't notice this at first and tried to use Green's theorem,
 you should notice at the moment where the curl turns out to $0$.)
+
+== Solution to @exer-parabola-2 (parabola arc v2)
+
+#recall-thm(<exer-parabola-2>)
+
+Let $P = x^2 (y + 1)$ and $Q = (y + 1)^2$.
+Thus $ (partial Q) / (partial x) - (partial P) / (partial y) = 0 - x^2 = -x^2. $
+
+Let $cal(R)$ be the region between $y = x^2-1$ and $y=0$, enclosed by $cal(C)$.
+Then $cal(R)$ can be described by the inequalities
+$ -1 <= x <= 1 \ x^2-1 <= y <= 0. $
+See @fig-sol-india-parabola-fill.
+
+#figure(
+  image("figures/sol-india-parabola-fill.svg", width: auto),
+  caption: [The curve $cal(C)$ encloses a region $cal(R)$.],
+) <fig-sol-india-parabola-fill>
+
+Hence from Green's theorem, we have
+$ int_(cal(C)) bf(F) dot dif bf(r)
+  &= iint_(cal(R)) ((partial Q) / (partial x) - (partial P) / (partial y)) dif A \
+  &= int_(x=- 1)^1 int_(y=x^2 - 1)^0 (- x^2) dif y dif x \
+  &= int_(x=- 1)^1 x^2 (x^2 - 1) dif x \
+  &= [x^5/5 - x^3/3]_(x=-1)^1  = 2 / 5 - 2 / 3 = #boxed[$ -4/15 $]. $
 
 == Solution to @exer-shoelace (the shoelace formula)
 
@@ -146,6 +209,77 @@ $ sum_(i = 0)^(n-1) int_("From" P_i "to" P_(i + 1)) x dif y
   &= sum_(i = 0)^(n-1) ((x_i y_(i+1) - x_(i+1) y_i)/2  + (x_(i+1) y_(i+1) - x_i y_i) / 2) \
   &= sum_(i = 0)^(n-1) ((x_i y_(i+1) - x_(i+1) y_i)/2) $
 and the proof is complete.
+
+== Solution to @exer-parabola-3 (parabola arc v3)
+
+#recall-thm(<exer-parabola-3>)
+
+We can pretty much copy @exer-parabola-1 and @exer-parabola-2,
+and just make slight modifications to get the 2D flux instead of the work.
+See the following figure,
+which is just a copy of @fig-sol-india-parabola-nofill and @fig-sol-india-parabola-fill.
+
+#figure(
+  stack(
+    dir: ltr,
+    spacing: 2mm,
+    [#image("figures/sol-india-parabola-nofill.svg", width: auto)],
+    [#image("figures/sol-india-parabola-fill.svg", width: auto)]
+  ),
+  caption: [The parabola arc again.],
+) <fig-sol-india-parabola-both>
+
+#h3[Using direct parametrization]
+Again we split $cal(C)$ into two parts $cal(C)_1$ and $cal(C)_2$ corresponding to the
+parabola and the segment, respectively.
+
+For $cal(C)_1$, we choose the parametrization
+$ bf(r)(t) = (t, t^2-1) $ for $-1 <= t <= 1$.
+As we saw in @exer-parabola-1, we have
+$ bf(r)(t) = (t, t^2-1) $ for $-1 <= t <= 1$, so
+$ bf(F)(bf(r)(t)) = bf(F)(t, t^2-1) = vec(t^4, t^4)
+  quad
+  bf(r)'(t) = vec(1, 2t). $
+So rotating $bf(F)$ as in @sec-recipe-2d-flux, we have
+$ int_(cal(C)_1) bf(F) dot bf(n) dif s
+  &= int_(t=-1)^1 vec(-t^4, t^4) dot vec(1, 2t) dif t \
+  &= int_(t = - 1)^1 (-t^4 + t^4 dot 2 t) dif t \
+  &= [-t^5/5 + 1/3 t^6]_(t=-1)^1 = -2 / 5 . $
+
+Next, we parameterize $cal(C)_2$ by $(1 - t , 0)$ for $0 <= t <= 2$.
+Again, repeating from @exer-parabola-1, we have
+$ bf(F)(bf(r)(t)) = bf(F)(1-t,0) = vec((1-t)^2, 1)
+  quad
+  bf(r)'(t) = vec(-1, 0). $
+Rotating $bf(F)$ as in @sec-recipe-2d-flux, we have
+$ int_(cal(C)_2) bf(F) dot bf(n) dif s
+  &= int_(t=-1)^1 vec(-1, (1-t)^2) dot vec(-1, 0) dif t \
+  &= int_(t=0)^2 1 dif t \
+  &= 2. $
+
+Putting this all together we get
+$ int_(cal(C)) bf(F) dot bf(n) dif s
+  = int_(cal(C)_1) bf(F) dot bf(n) dif s + int_(cal(C)_2) bf(F) dot bf(n) dif s
+  = -2/5 + 2 = #boxed[$ 8/5 $]. $
+
+#h3[Using Green's Theorem]
+This is similar to @exer-parabola-2,
+and the only change we make is the integrand.
+Letting $P = x^2 (y + 1)$ and $Q = (y + 1)^2$, we consider
+$ (partial P) / (partial x) + (partial Q) / (partial y) = 2 x (y + 1 ) + 2 (y + 1)
+  = 2(x+1)(y+1). $
+
+Again let $cal(R)$ be the region between $y = x^2-1$ and $y=0$, enclosed by $cal(C)$.
+The region $cal(R)$ hasn't changed and is given by
+$ -1 <= x <= 1 \ x^2-1 <= y <= 0. $
+Hence from Green's theorem, we have
+$ int_(cal(C)) bf(F) dot bf(n) dif s
+  &= iint_(cal(R)) ((partial Q) / (partial x) - (partial P) / (partial y)) dif A \
+  &= int_(x=- 1)^1 int_(y=x^2 - 1)^0 2(x+1)(y+1) dif y dif x \
+  &= int_(x=- 1)^1 (x+1) int_(y=x^2 - 1)^0 2(y+1) dif y dif x \
+  &= int_(x=- 1)^1 (x+1) (1-x^4) dif x \
+  &= int_(x=- 1)^1 (-x^5-x^4+x+1) dif x \
+  &= [-x^6/6 - x^5/5 + x^2 + x]_(x=-1)^1 = #boxed[$ 8/5 $]. $
 
 == Solution to @exer-flux-triangle (flux across a triangle)
 

@@ -831,3 +831,8 @@ okay i've decided this exercises is way too annoying
   subject to $x,y,z >= 0$ and $x^3 + (x+y)^3 + (x+z)^3 = 1$.
 ] <exer-opt-lm-hell>
 */
+
+#exer[Suggested by Ting-Wei Chao][
+  Compute the global minimum of the function
+  $ f(x,y)=|x^2+y^2-25|-3x-4y. $
+] <exer-lm-abs>

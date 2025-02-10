@@ -318,10 +318,19 @@ Since it's so long, I broke it out into a separate skippable chapter.
 
 == [EXER] Exercises
 
+#exer[Suggested by Ting-Wei Chao][
+  As in @exer-parabola-1 and @exer-parabola-2,
+  let $cal(C)$ be the oriented closed curve formed by the arc of the parabola $y = x^2-1$
+  running from $(-1, 0)$ to $(1, 0)$, followed by a line segment from $(1, 0)$ back to $(-1, 0)$.
+  Again let $ bf(F)(x,y) = vec(x^2(y+1), (y+1)^2). $
+  Compute $int_(cal(C)) bf(F) dot bf(n) dif s$ using direct parametrization
+  and by using Green's Theorem for flux.
+] <exer-parabola-3>
+
 #exer[
   Triangle $A B C$ has vertices $A = (-5,0)$, $B = (9,0)$, and $C$ on the positive $y$-axis.
   The flux of the vector field
   $ bf(F) (x , y) = vec(x + 7y^2, x^2 + 7y) $
   across the perimeter of $A B C$, oriented counterclockwise, is $672$.
-  Compute the perimeter of $A B C$.
+  Compute the length of the perimeter of $A B C$.
 ] <exer-flux-triangle>

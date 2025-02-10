@@ -518,7 +518,15 @@ by adding the line segment from $(-1,0)$, to $(1,0)$.
   $ oint_(cal(C)) (x^2 - y) dif x + (y^2 - x) dif y $
   where $cal(C)$ is the boundary of the region enclosed by the circle $x^2 + y^2 = 4$,
   oriented counterclockwise.
-] <exer-work-1>
+] <exer-work-boring>
+
+#exer[Suggested by Ting-Wei Chao][
+  As in @exer-parabola-1,
+  let $cal(C)$ be the oriented closed curve formed by the arc of the parabola $y = x^2-1$
+  running from $(-1, 0)$ to $(1, 0)$, followed by a line segment from $(1, 0)$ back to $(-1, 0)$.
+  Again let $ bf(F)(x,y) = vec(x^2(y+1), (y+1)^2). $
+  Compute $int_(cal(C)) bf(F) dot dif bf(r)$ this time using Green's Theorem.
+] <exer-parabola-2>
 
 #exerstar[Shoelace formula][
   Let $n >= 3$ be an integer and

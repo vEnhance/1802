@@ -246,6 +246,83 @@ $P A^2 + P B^2 + P C^2$.
 In conclusion the minimum possible value occurs at
 $ f (pi / 6 , pi / 6) = pi / 3 . $
 
+== Solution to @exer-lm-abs (optimization with absolute value)
+
+#recall-thm(<exer-lm-abs>)
+
+This problem shows a case where $nabla f$ does not exist at certain points:
+the derivative of $lr(|x|)$ only exists when $x != 0$.
+
+To avoid this issue, we split into cases based on the sign of the term inside the absolute value.
+We will split#footnote[
+  If you wanted to, you could split the cases a bit differently.
+  For example, you could do $x^2 + y^2 <= 25$ and $x^2 + y^2 > 25$ so the cases don't overlap.
+  Or you could split into three cases with $x^2 + y^2 < 25$, $x^2 + y^2 = 25$, $x^2 + y^2 > 25$.
+  However, I think doing it with $x^2 + y^2 <= 25$ and $x^2 + y^2 >= 25$ is cleanest,
+  so you do not need to consider limit cases when $x^2+y^2$ approaches $25$.
+  The boundary $x^2 + y^2 = 25$ is shared, so you only need to do it once.
+] into two cases $x^2 + y^2 <= 25$ and $x^2 + y^2 >= 25$.
+In each case we execute the procedure.
+
+#h3[Case where $x^2 + y^2 <= 25$]
+We follow @sec-recipe-opt-easy.
+
+0. The region $x^2 + y^2 <= 25$ is a two-dimensional region with no limit cases
+  but whose boundary is $x^2 + y^2 = 25$.
+1. We seek all points with $nabla f = bf(0)$.
+  In the region $x^2 + y^2 <= 25$, we have
+  $ f (x , y) = 25 - x^2 - y^2 - 3 x - 4 y . $
+  Solving $nabla f = bf(0)$ gives
+  $ (partial f)/(partial x) &= - 2 x - 3 = 0 , \
+    (partial f)/(partial y) &= - 2 y - 4 = 0 . $
+  Therefore, it gives the critical point $(x,y) = (- 3 / 2 , - 2)$.
+  This point is indeed in the region $x^2 + y^2 < 25$,
+  so this is a critical point.
+2. We apply Lagrange multipliers (@sec-recipe-lm) on the boundary $x^2 + y^2 = 25$.
+  Let $g(x,y) = x^2 + y^2$.
+  0. This is a one-dimensional region with no boundary and no limit cases.
+  1. We search for all LM-critical points.
+    First note that $nabla g$ is never zero on this boundary.
+    The system of equations is
+    $ - 3 &= lambda dot 2 x , \
+    - 4 &= lambda dot 2 y \
+    x^2 + y^2 &= 25 . $
+    It's clear that $lambda$, $x$, $y$ must be nonzero.
+    Hence, the first two equations together imply $x / y = 3 / 4$.
+    Hence, we get two critical points $(3,4)$ and $(-3,-4)$ in this case.
+  2. There are no boundary points to consider.
+  3. There are no limit points to consider.
+3. There are no limit cases.
+
+#h3[Case where $x^2 + y^2 >= 25$]
+We follow @sec-recipe-opt-easy again.
+
+0. The region $x^2 + y^2 >= 25$ is a two-dimensional region with limit cases
+  when $x -> pm oo$ and $y -> pm oo$ but whose boundary is $x^2 + y^2 = 25$.
+1. In the region $x^2 + y^2 >= 25$, we have
+  $ f (x , y) = x^2 + y^2 - 25 - 3 x - 4 y . $
+  Solving $nabla f = bf(0)$ gives
+  $ (partial f)/(partial x) &= 2 x - 3 = 0 , \
+    (partial f)/(partial y) &= 2 y - 4 = 0 . $
+  This gives the point $(3/2, 2)$,
+  but this point doesn't lie inside $x^2 + y^2 >= 25$,
+  so we don't need to consider it.
+2. We need to apply Lagrange multipliers (@sec-recipe-lm) on the boundary $x^2 + y^2 = 25$.
+  However, we did this already in the earlier case where $x^2 + y^2 <= 25$.
+  So we can just repeat the same calculation verbatim here.
+3. When $|x| -> +oo$ or $|y| -> +oo$, the square terms dominate and $f -> +oo$.
+  Hence we get that $f$ is bounded above.
+
+#h3[Putting things together]
+
+We are searching for the global minimum of $f$.
+Aggregating the critical points, we check
+$ f (3 / 2 , 2) &= 25 / 4 , \
+  f (3 , 4) &= - 25 , \
+  f (- 3 , - 4) = 25 . $
+Therefore, the global minimum is $#boxed[$ f(3,4) = -25 $]$.
+
+
 == Solution to @exer-mt2p1 (butterfly)
 
 #recall-thm(<exer-mt2p1>)
