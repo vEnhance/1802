@@ -328,7 +328,7 @@ So we'll punt all the examples to next chapter, @ch-sph.
   image("figures/triple-napkin-ring.svg", width: auto),
   caption: [The napkin-ring problem.
     A bead is shown in blue, drilled out of a sphere of radius $R$, and with height
-    $2h = 2sqrt(R^2-a^2)$.
+    $h = 2sqrt(R^2-a^2)$.
     One must determine the volume of the bead in terms of $h$.
   ],
 ) <fig-triple-napkin-ring>
