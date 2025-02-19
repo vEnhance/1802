@@ -641,7 +641,8 @@ Usually the strategy is to pick one that makes subsequent calculation easier.
 
 #figure(
   image("media/teacups.jpg", width: 60%),
-  caption: [You know, one of these teacup ride things.],
+  caption: [You know, one of these teacup ride things.
+  Image from #link("https://dreamlandamusements.com/carnival-ride-rentals/tea-cups/")[Dreamland Amusements].],
 ) <fig-teacups>
 
 #exer[
