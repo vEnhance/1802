@@ -6,7 +6,7 @@ Statements of the exercises are in @ch-practice.
 Right now we only have solutions to the "mock half-final" here.
 If you want to submit a pull request for the remaining problems, you'd be welcome to.
 
-== Solution to @exer-mf-1
+== Solution to @exer-mf-1 (cube roots)
 
 We'll just find all the answers to $z^3 = -1000 i$
 as in @sec-recipe-complex-nth-root and then identify the relevant one.
@@ -27,7 +27,7 @@ Only $z_2$ works; in rectangular form it is
 $ z_2 = 10 (- sqrt(3) / 2 - i 1 / 2) = #boxed[$ - 5sqrt(3) - 5 i $] $
 (and this is the only possible example).
 
-== Solution to @exer-mf-2
+== Solution to @exer-mf-2 (one of two eigenvalues)
 
 #h3[Solution with bare-hands]
 
@@ -61,7 +61,7 @@ $ lambda_2 + 2 = op("Trace") M &= 1 + 6 \
 The first equation implies $lambda_2 = 5$; then the second implies $a = -4$.
 The eigenvector is then recovered in the same way as the first solution.
 
-== Solution to @exer-mf-3
+== Solution to @exer-mf-3 (plane)
 
 We start by determining the equation of the plane through
 $P_1 = (b,0,0)$, $P_2 = (0,b,0)$ and $P_3 = (0,0,b)$.
@@ -94,7 +94,7 @@ $ (bf(v) dot bf(n)) / (|bf(n)|)
 like before, although as I've described before,
 we're really just repeating the proof of the point-to-plane formula.
 
-== Solution to @exer-mf-4
+== Solution to @exer-mf-4 (level curves through critical points)
 
 Let $f(x,y) = cos(x) + sin(y)$.
 The gradient is given by
@@ -147,7 +147,7 @@ as shown in @fig-practice-level-max.
 ) <fig-practice-level-max>
 
 
-== Solution to @exer-mf-5
+== Solution to @exer-mf-5 (optimization)
 
 Let $f(x,y) = x^2 + 2y^2 + 4x$.
 Let $cal(R)$ denote the region $x^2 + y^2 <= 9$,
@@ -194,7 +194,7 @@ We carry out our optimization recipe from @ch-opt.
 Of the five points we've checked, $#boxed[$ f(-2,0) = -4 $]$
 and $#boxed[$ f(2, pm sqrt(5)) = 22 $]$ give the optimal values.
 
-== Solution to @exer-mf-6
+== Solution to @exer-mf-6 (triple integral)
 
 The region being integrated over can be succinctly described as
 $ cal(R) = { 0 <= x <= y <= z <= 1 }. $
@@ -207,7 +207,7 @@ $ int_(x=0)^1 int_(y=x)^1 int_(z=y)^1 e^(z^3) dif z dif y dif x
   &= 1/6 int_(z=0)^1 e^(z^3) 3z^2 dif y dif z \
   &= 1/6 [e^(z^3)]_(z=0)^1 = #boxed[$ (e-1)/6 $]. $
 
-== Solution to @exer-mf-7
+== Solution to @exer-mf-7 (curl)
 
 The curl of $bf(F)$ can be computed as
 $ nabla times bf(F)
@@ -230,7 +230,7 @@ it's easy to see that $max f = 8$ (for example $f(pi/2, pi/2, 0) = 8$)
 while $min f = -8$ (for example $f(-pi/2, -pi/2, 0) = -8$).
 Hence the largest possible value of the line integral is $8 - (-8) = #boxed[$ 16 $]$.
 
-== Solution to @exer-mf-8
+== Solution to @exer-mf-8 (flux)
 
 The divergence is
 $nabla dot bf(F) =
