@@ -554,7 +554,7 @@ using the word "determinant" in place of "basis".
 
     - When $n = 2$, you can usually tell by looking whether the two equations are redundant or not.
       Output "infinitely many solutions" if the two equations are multiples of each other;
-      output "zero solutions" if the two equations are multiples of each other.
+      output "zero solutions" if the two equations contradict each other.
 
     - Otherwise, for $n >= 3$, if you can't guess a solution,
       you should eliminate variables one by one.
