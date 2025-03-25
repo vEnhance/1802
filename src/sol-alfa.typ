@@ -64,7 +64,7 @@ Here are two ways to see this:
 
 #recall-thm(<exer-vectors-coplanar>)
 
-Call the points $P_1 = (0,0,0)$, $P_2 = (1,0,1)$, $P_3 = (0,1,2$, $P_4 = (1,2,a)$.
+Call the points $P_1 = (0,0,0)$, $P_2 = (1,0,1)$, $P_3 = (0,1,2)$, $P_4 = (1,2,a)$.
 
 There are several approaches to this (including ones that use later material);
 the one using the material in this chapter is the following:
