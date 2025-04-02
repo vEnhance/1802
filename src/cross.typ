@@ -383,7 +383,7 @@ we've seen in applications.
 
 #exer[
   Suppose real numbers $a$ and $b$ satisfy
-  $ vec(1, 2, 3) times vec(100, a, b) = 0. $
+  $ vec(1, 2, 3) times vec(100, a, b) = bf(0). $
   Compute $a$ and $b$.
 ] <exer-cross-100ab>
 
