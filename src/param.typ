@@ -402,8 +402,8 @@ Okay, here are some examples.
     - On the other hand, after time $t$ the length of the tire track should also be
       $ L_("tire track") = omega t dot r. $
       (It might be more natural for some of you if I write this as
-      $((omega t) / (2 pi)) dot (2 pi r)$ instead.
-      Because $(omega t) / (2 pi)$ is the number of full rotations made;
+      $((omega t) / (2 pi)) dot (2 pi r)$ instead,
+      because $(omega t) / (2 pi)$ is the number of full rotations made,
       while $2 pi r$ is the total circumference of the wheel.)
       This is drawn in dark blue in @fig-param-tire-track-cycloid.
 

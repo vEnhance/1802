@@ -23,7 +23,7 @@ $CC$ is just an elaborate $RR^2$ cosplay*.
   kind: table
 )
 
-At the start of the course, I warned you about type safety
+At the start of the course, I warned you about type safety, and
 I repeatedly stressed you that you *cannot multiply two vectors in $RR^n$ to get another vector*.
 (You had a "dot product", but it spits out a number.
 Honestly, you shouldn't think of dot product as a "product"; the name sucks.)

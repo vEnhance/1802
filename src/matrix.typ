@@ -11,7 +11,7 @@ why matrix multiplication is defined in this way you learned.
 This chapter will be presented a bit differently than you'll see in many other places;
 I talk about linear transformations first,
 and then talk about matrices as an encoding of linear transformations.
-I feel quite strongly this way is better, but if you are in an actual course,
+I feel quite strongly that this way is better, but if you are in an actual course,
 their presentation is likely to be different (and worse).
 
 == [TEXT] Linear transformation <sec-lintransf-def>
