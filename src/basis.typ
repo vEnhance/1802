@@ -130,7 +130,7 @@ In fact, the following theorem is true, though we won't prove it.
 
 We can't prove this result in this class,
 but you might have the instinct that 1-3 should all be true for a basis.
-The determinant might be more surprising, so here's an explanation why
+The determinant might be more surprising, so here's an explanation why.
 
 #digression(title: [Digression on why determinant does the right thing])[
   Let $n = 3$ and consider three vectors $bf(u)$, $bf(v)$, $bf(w)$ in $RR^3$.
@@ -554,7 +554,7 @@ using the word "determinant" in place of "basis".
 
     - When $n = 2$, you can usually tell by looking whether the two equations are redundant or not.
       Output "infinitely many solutions" if the two equations are multiples of each other;
-      output "zero solutions" if the two equations are multiples of each other.
+      output "zero solutions" if the two equations contradict each other.
 
     - Otherwise, for $n >= 3$, if you can't guess a solution,
       you should eliminate variables one by one.

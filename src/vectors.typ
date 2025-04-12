@@ -162,7 +162,7 @@ than just using the slope of the blue ray.
 
 - The notion of direction can tell the difference between $vec(3,-4)$, which goes southeast,
   and $vec(-3,4)$, which goes northwest.
-  Slope cannot; it would assign both of these "slope $-4/3$.
+  Slope cannot; it would assign both of these "slope $-4/3$".
 - The due-north and due-south directions $vec(0,1)$ and $vec(0,-1)$ would have
   undefined slope due to division-by-zero,
   so you always have to worry about this extra edge case.

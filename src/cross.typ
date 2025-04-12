@@ -54,8 +54,8 @@ If you solve the system of equations, you wind up with @eqn-cross-raw-alg as the
 We do this in the next section as an optional sidenote.
 
 #typesig[
-  The cross product *only* accepts two vectors *both of length $3$*.
-  And it outputs a single *vector of length $3$*.
+  The cross product *only* accepts two vectors *both in $RR^3$*.
+  And it outputs a single *vector in $RR^3$*.
 ]
 
 #remark(title: [Remark: The right-hand rule])[
@@ -383,7 +383,7 @@ we've seen in applications.
 
 #exer[
   Suppose real numbers $a$ and $b$ satisfy
-  $ vec(1, 2, 3) times vec(100, a, b) = 0. $
+  $ vec(1, 2, 3) times vec(100, a, b) = bf(0). $
   Compute $a$ and $b$.
 ] <exer-cross-100ab>
 

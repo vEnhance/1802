@@ -183,7 +183,7 @@ This means we'll have to pick a point on the plane besides the origin.
 #soln[
   As before, the plane $x + 2 y + 3 z = 60$ has a normal vector $bf(n)$
   given by the coefficients of $x$, $y$, and $z$:
-  $ bf(n) = (1 , 2 , 3) . $
+  $ bf(n) = angle.l 1 , 2 , 3 angle.r . $
 
   Now we can't use the origin $(0,0,0)$ this time,
   but we can pick any other point on the plane; we'll chose $(0,0,20)$.
@@ -191,7 +191,7 @@ This means we'll have to pick a point on the plane besides the origin.
   they all give the same answer.)
 
   The vector $bf(v)$ from $(0 , 0 , 20)$ to $(7 , 8 , 5)$ is:
-  $ bf(v) = (7 - 0 , thin 8 - 0 , thin 5 - 20) = (7 , thin 8 , thin - 15) . $
+  $ bf(v) = angle.l 7 - 0 , thin 8 - 0 , thin 5 - 20 angle.r = angle.l 7 , thin 8 , thin - 15 angle.r . $
 
   Now we can just repeat the steps from before, where
   $ bf(v) dot bf(n) &= (7) (1) + (8) (2) + (- 15) (3) = - 22 \
@@ -231,7 +231,7 @@ is sort of a fool's errand. Let's just do them all at once.
 #soln[
   The normal vector $bf(n)$ to the plane is given by the
   coefficients of $x$, $y$, and $z$ in the plane equation:
-  $ bf(n) = (a , b , c) . $
+  $ bf(n) = angle.l a , b , c angle.r . $
 
   Now we select any base point $(x_1 , y_1 , z_1)$ that lies on the plane $cal(P)$.
   We'll do the case $c != 0$ and use
@@ -241,7 +241,8 @@ is sort of a fool's errand. Let's just do them all at once.
   it just makes the calculation a bit easier to think about in what follows.)
 
   The vector $bf(v)$ from $(x_1 , y_1 , z_1)$ to $(x_0 , y_0 , z_0)$ is:
-  $ bf(v) = (x_0 - x_1 , y_0 - y_1 , z_0 - z_1) = (x_0 , y_0 , z_0 - d / c) . $
+  $ bf(v) = angle.l x_0 - x_1 , y_0 - y_1 , z_0 - z_1 angle.r
+    = angle.l x_0 , y_0 , z_0 - d / c angle.r . $
 
   Now, the scalar component of $bf(v)$ along $bf(n)$ is given by
   $ op("comp")_(bf(n)) bf(v) = frac(bf(v) dot bf(n), |bf(n)|) . $

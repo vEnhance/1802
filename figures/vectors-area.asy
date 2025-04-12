@@ -2,7 +2,7 @@ size(12cm);
 pair v = (4,1);
 pair w = (2,3);
 pair origin = (0,0);
-dot("$0$", origin, dir(225));
+dot("$\mathbf{0}$", origin, dir(225));
 dot("$\mathbf{v}_1 = \langle x_1, y_1 \rangle$", v, dir(-45), red);
 dot("$\mathbf{v}_2 = \langle x_2, y_2 \rangle$", w, dir(135), red);
 dot("$\mathbf{v}_1 + \mathbf{v}_2 = \langle x_1 + x_2, y_1 + y_2 \rangle$", v+w, dir(90));

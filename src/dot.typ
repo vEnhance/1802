@@ -236,7 +236,7 @@ and $theta > 90 degree$:
 
 #definition(title: [Definition of scalar component])[
   The *scalar component* of $bf(v)$ in the direction of $bf(w)$ is the number defined by
-  $  op("comp")_(bf(w))(bf(v)) := |v| cos theta = (bf(v) dot bf(w)) / (|bf(w)|). $
+  $  op("comp")_(bf(w))(bf(v)) := |bf(v)| cos theta = (bf(v) dot bf(w)) / (|bf(w)|). $
 ]
 This is the analog of purple length from before,
 but now we allow it to be positive, negative, or zero according to $theta < 90 degree$,
