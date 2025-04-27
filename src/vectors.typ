@@ -84,7 +84,7 @@ Some vectors in $RR^3$ are special enough to get their own shorthand.
 
 Remember that a vector always has
 
-- both a *magnitude*, which is how long the arrow is in the picture
+- both a *magnitude*, which is how long the arrow is in the picture, and
 - a *direction*, which refers to which way the arrow points.
 
 In other words, the geometric picture of a vector always carries two pieces of information.
