@@ -128,13 +128,13 @@ We can jump straight into examples now!
   $ iiint_(cal(T)) (2 x + 2 y + 2 z) dif V
     = 2 iiint_(cal(T)) x dif V + 2 iiint_(cal(T)) y dif V + 2 iiint_(cal(T)) z dif V. $
   Due to the symmetry of the cube:
-  $ iiint_(cal(T)) x dif V = iiint_(cal(T)) y dif V = iiint_(cal(T)) z dif V = a^3 / 2. $
+  $ iiint_(cal(T)) x dif V = iiint_(cal(T)) y dif V = iiint_(cal(T)) z dif V = a/2 dot op("Vol")(cal(T)) = a^4 / 2. $
   If you can't see it by symmetry, you could also just explicitly calculate
   $ iiint_(cal(T)) x dif V
     = (int_(x=0)^a x dif x) (int_(y=0)^a dif y) (int_(z=0)^a dif z)
-    = a/2 dot a dot a = a^3/2. $
+    = a^2/2 dot a dot a = a^4/2. $
   In any case, we get an answer of
-  $ 2 dot a^3/2 + 2 dot a^3/2 + 2 dot a^3 /2 = #boxed[$ 3a^3 $] #qedhere. $
+  $ 2 dot a^4/2 + 2 dot a^4/2 + 2 dot a^4 /2 = #boxed[$ 3a^4 $] #qedhere. $
 ]
 
 #sample[

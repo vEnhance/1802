@@ -309,7 +309,7 @@ in return for the short time limit.
     from my students this year, which I am grateful for.
     I certainly wouldn't have had the motivation to type these notes without these kind words.
 
-- I thank Aaryan Vaishya, Alan Cheng, Alexander Wang, Calvin Wang, John Zhou,
+- I thank Aaryan Vaishya, Alan Cheng, Alexander Wang, Calvin Wang, Emma Jakubicka, John Zhou,
   Nick Zhang, Rémi Geron, Ritwin Narra, Rohan Garg, and Royce Yao for many corrections.
   (Your name could be here too --- find me some typos!
   If you know how to open a GitHub pull request,
