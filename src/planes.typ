@@ -178,7 +178,7 @@ and projections, which is to find the distance from a point to a plane.
 Here's the same exercise with one change: we change to $x + 2 y + 3 z = 60$.
 This means we'll have to pick a point on the plane besides the origin.
 #sample[
-  Compute the distance from the point $(7, 8, 9)$ to the plane $x + 2 y + 3 z = 60$.
+  Compute the distance from the point $(7, 8, 5)$ to the plane $x + 2 y + 3 z = 60$.
 ]
 #soln[
   As before, the plane $x + 2 y + 3 z = 60$ has a normal vector $bf(n)$
@@ -202,7 +202,7 @@ This means we'll have to pick a point on the plane besides the origin.
 ]
 #remark[
   It's fine that you get a negative number for the scalar component.
-  This corresponds to the fact that the point $(7,8,9)$ is sandwiched
+  This corresponds to the fact that the point $(7,8,5)$ is sandwiched
   between the two planes $x+2y+3z=0$ and $x+2y+3z=60$.
   Depending on which way you choose to point $bf(n)$,
   one of the components will be positive and the other negative.
@@ -210,18 +210,16 @@ This means we'll have to pick a point on the plane besides the origin.
 ]
 #figure(
   image("figures/planes-sandwich.svg", width: auto),
-  caption: [A 2D cartoon of the point $(7,8,9)$ sandwiched between the
+  caption: [A 2D cartoon of the point $(7,8,5)$ sandwiched between the
     planes $x+2y+3z=0$ and $x+2y+3z=60$.
     If we choose $bf(n) = angle.l 1,2,3 angle.r$
     then we get $+38/sqrt(14)$ and $-22/sqrt(14)$ for the scalar components as shown in purple.
   ],
 ) <fig-planes-sandwich>
 
-
-
 The thing about this exercise is that you can just do it with symbols instead of
 numbers and get a general formula, which means that doing it with specific numbers
-is sort of a fool's errand. Let's just do them all at once.
+over and over is sort of a fool's errand. Let's just do them all at once.
 
 #sample[
   Compute the distance from a point $(x_0 , y_0 , z_0)$ to the plane

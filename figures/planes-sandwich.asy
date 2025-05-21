@@ -17,7 +17,7 @@ dot((8,12), deepgreen);
 draw((0,0)--(8,12), deepgreen, EndArrow, Margins);
 label("$x+2y+3z=0$", (H,0), dir(0), blue);
 label("$x+2y+3z=60$", (H,20), dir(0), blue);
-label("$(7,8,9)$", (8,12), dir(0), deepgreen);
+label("$(7,8,5)$", (8,12), dir(0), deepgreen);
 
 draw((0,0)--(0,3), red, EndArrow);
 draw((0,20)--(0,23), red, EndArrow);
