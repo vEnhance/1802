@@ -96,7 +96,7 @@ mathematical object or operation (e.g. partial derivative),
 *the first thing you should do is ask what types are at play*.
 This helps give you a sanity check on your understanding of the new concept.
 
-We'll use boxes like this throughout the box to do this:
+We'll use boxes like this throughout the textbook to do this:
 #typesig[
   This is an example of a type signature box.
   When we want to make comments about the types of new objects,
