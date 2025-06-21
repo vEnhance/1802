@@ -33,7 +33,7 @@ This definition is terrible, so bear with me.
   specifying both the direction and magnitude.
   - The *magnitude* of $bf(v) times bf(w)$ is equal to the area of the parallelogram
     formed by $bf(v)$ and $bf(w)$.
-    In trigonometry turns, if $theta$ is the included angle,
+    In trigonometry terms, if $theta$ is the included angle,
     this equals $|bf(v)| |bf(w)| sin theta$.
   - The *direction* is given by requiring $bf(v) times bf(w)$ to be perpendicular
     to _both_ $bf(v)$ and $bf(w)$, and also satisfying the *right-hand rule*
