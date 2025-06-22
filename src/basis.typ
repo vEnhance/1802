@@ -221,7 +221,7 @@ Without "slope", you cannot notice these dependences by sight for $n >= 3$, so u
   The above sample was generated randomly when I gave this lecture at MIT.
   The way I presented this was I went up to the board and wrote:
 
-  _"Is $vec(?,?,?)$, $vec(?,?,?)$, $vec(?,?,?)$ a basis for $RR^3$? Answer: no."_
+  _"Is $vec(?,?,?)$, $vec(?,?,?)$, $vec(?,?,?)$ a basis for $RR^3$? Answer: yes."_
 
   Then I asked my students to make up nine numbers to fill in the question marks.
   Of course, they picked big numbers,
@@ -456,7 +456,7 @@ That means our observations can be rephrased in terms of our linear algebra lang
   $vec(1,3)$ and $vec(2,4)$ are a basis of $RR^2$,
   so any vector like $vec(14, 38)$ can be made in exactly one way.
 ]
-In other words, as long as the column vectors made bx_2 the left-hand side on a basis,
+In other words, as long as the column vectors made from the coefficients on the left-hand side of the system of equations form a basis,
 there's always in fact one solution.
 
 So what goes wrong when it's _not_ a basis?
@@ -469,7 +469,7 @@ Let's bring back the example we had in @eqn-big-coeff.
   $
   This equation obviously has at least one solution: $x_1 = x_2 = x_3 = 0$.
   We saw that $vec(1,3,4)$, $vec(10,1,11)$, $vec(-9, 10, 1)$ is not a basis of $RR^3$,
-  and what that translates is to saying there are other solutions too:
+  and what that translates to is saying there are other solutions too:
   reading off @eqn-big-coeff, note that $x_1 = 109k$, $x_2 = -37k$, $x_3 = -29k$
   is a solution for any $k$.
 
