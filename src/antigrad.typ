@@ -197,7 +197,7 @@ The idea is that for functions (for which the partial derivatives are continuous
 the _partial derivatives_ commute.
 What that means, if say $f(x,y)$ is a two-variable function, the following is true:
 #memo(title: [Memorize: partial derivatives commute])[
-  If $f_x$ and $f_y$ are both continuous then
+  If $f_x$ and $f_y$ are both continuously differentiable then
   $ f_(x y) = f_(y x). $
 ]
 If you like $partial$ notation better, this could also be written as
