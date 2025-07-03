@@ -216,7 +216,7 @@ But when $z in CC$, what does $a^z$ mean? There's no good way to do this.
 
 You likely don't find an answer until 18.112, but I'll tell you now.
 In 18.100 you will also prove that the Taylor series
-$ e^x = sum_(k >= 0) r^k / k! $
+$ e^x = sum_(k >= 0) x^k / k! $
 is correct, where $e := sum_(k >= 0) 1/k!$ is Euler's constant.
 
 So then when you start 18.112, we will flip the definition on its head:
