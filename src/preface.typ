@@ -309,8 +309,20 @@ in return for the short time limit.
     from my students this year, which I am grateful for.
     I certainly wouldn't have had the motivation to type these notes without these kind words.
 
-- I thank Aaryan Vaishya, Alan Cheng, Alexander Wang, Calvin Wang, Emma Jakubicka, John Zhou,
-  Nick Zhang, Rémi Geron, Ritwin Narra, Rohan Garg, and Royce Yao for many corrections.
+- I thank
+  Aaryan Vaishya,
+  Alan Cheng,
+  Alexander Wang,
+  Calvin Wang,
+  Emma Jakubicka,
+  John Zhou,
+  Nick Zhang,
+  Rémi Geron,
+  Ritwin Narra,
+  Rohan Garg,
+  Royce Yao, and
+  Ryan Pang
+  for many corrections.
   (Your name could be here too --- find me some typos!
   If you know how to open a GitHub pull request,
   the relevant repository is #url("https://github.com/vEnhance/1802").)
