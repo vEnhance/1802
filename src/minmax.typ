@@ -128,7 +128,7 @@ $f(x) = x^3$ has a critical inflection point at the origin, for example.)
 
 In 18.02 this is no longer true.
 If we picked a random function of a similar form
-$ f(x) = square x^3 + square x^2 + square x + square y^3 + square y^2 + square y + square $
+$ f(x,y) = square x^3 + square x^2 + square x + square y^3 + square y^2 + square y + square $
 where we fill each square with a number from $-1000000$ to $1000000$
 then you'll suddenly see saddle points everywhere.
 For example, when I ran this simulation $10000$ times,

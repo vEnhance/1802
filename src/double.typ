@@ -670,5 +670,5 @@ Put in recipe form:
 ] <exer-swapint-fifth>
 
 #exerstar[
-  Prove that $ int_(x=0)^(999^5) root(3, root(5,x) + 1) $ is a rational number.
+  Prove that $ int_(x=0)^(999^5) root(3, root(5,x) + 1) dif x $ is a rational number.
 ] <exer-rat-slice>

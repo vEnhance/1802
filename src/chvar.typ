@@ -192,13 +192,13 @@ you might prefer to use that instead.
 
 #tip[
   You might find it easier to remember both formulas if you write
-  $ dif u dif v = |det J_(bf(T))| dif x dif y $
+  $ dif u dif v = |det J_(bf(T)^(-1))| dif x dif y $
   so it looks more like $dif u = (partial u) / (partial x) dif x$ from 18.01.
   (Indeed the 18.01 formula is the special case of a $1 times 1$ matrix!)
 ]
 
 #digression(title: [Digression on what $dif u dif v$ means])[
-  For 18.02, the equation $dif u dif v = |det J_(bf(T))| dif x dif y$
+  For 18.02, the equation $dif u dif v = |det J_(bf(T)^(-1))| dif x dif y$
   is more of a mnemonic right now than an actual equation;
   that's because in 18.02 we don't give a definition of what $dif x$ or $dif y$ mean.
   It can be made into a precise statement using something called a _differential form_.
