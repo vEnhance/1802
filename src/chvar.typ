@@ -214,7 +214,7 @@ In 18.02, the derivative from 18.01 is replaced by the enormous Jacobian determi
 Let's see an example of how to carry out this integration.
 
 #sample[
-  Compute the area of the region $cal(R)$ bounded by the curves
+  Compute the area of the region $cal(R)$ in the first quadrant bounded by the curves
   $ x y = 16/9, #h(1em) x y = 16/25, #h(1em) x = 4 y, #h(1em) y = 4 x. $
 ]
 #soln[
