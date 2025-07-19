@@ -18,8 +18,8 @@ There is no integration in this chapter, and so it's actually pretty straightfor
     [Gradient], [$nabla f$], [Scalar field], [Vector], [Measure of distance from top of waterfall], [Waterfall current pointing to lower elevation],
     [Curl], [$nabla times f$], [3D vec.~field], [3D vector], [Whirlpool current], [Arrow aligned with rotation axis, magnitude is rotation speed],
     [Divergence], [$nabla dot f$], [3D vec.~field], [Scalar], [Water flow], [Pump/drain speed],
-    [2D curl], [$(partial g) / (partial y) - (partial f) / (partial x)$ \ where \ $bf(F) = (f,g)$], [2D vec.~field], [Scalar], [Whirlpool current], [Angular velocity],
-    [2D div], [$nabla dot f$], [2D vec.~field], [Scalar], [Water flow], [Pump/drain speed],
+    [2D curl], [$(partial g) / (partial x) - (partial f) / (partial y)$ \ where \ $bf(F) = (f,g)$], [2D vec.~field], [Scalar], [Whirlpool current], [Angular velocity],
+    [2D div], [$nabla dot bf(F)$], [2D vec.~field], [Scalar], [Water flow], [Pump/drain speed],
   ),
   caption: [The red arrows, plus an extra 2D div that's a modified version of 2D curl.],
   kind: table
@@ -53,6 +53,7 @@ Many have tried and many have failed.
 If you want to see the grown-ups discuss this,
 see #url("https://mathoverflow.net/q/21881/70654"),
 where the top comment is "My advice: at this level, stick _strictly_ to the textbook".
+(It's a little patronizing, I know.)
 
 == [TEXT] Gradient
 

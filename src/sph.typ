@@ -12,7 +12,7 @@ This chapter defines them and shows how to use them.
   $
     rho &:= "distance to" (0,0,0) &quad& "(spelled rho, pronounced like row)" \
     phi &:= "angle down" z" axis" &quad& "(spelled phi, pronounced like fee)" \
-    theta &:= "same as in polar coordinates" quad&& "(spelled theta, prounced like thay-tah)"
+    theta &:= "same as in polar coordinates" quad&& "(spelled theta, pronounced like thay-tah)"
   $
   and we write them in that order.
   However, depending on your book:

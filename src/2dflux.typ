@@ -293,7 +293,7 @@ This comparison is shown in the table below.
     columns: 3,
     align: left,
     table.header([Method],
-      [Work $int_(cal(C)) bf(F) dot bf(r)$\ (see @sec-recipe-work)],
+      [Work $int_(cal(C)) bf(F) dot dif bf(r)$\ (see @sec-recipe-work)],
       [2D Flux $int_(cal(C)) bf(F) dot bf(n) dif s$ \ (see @sec-recipe-2d-flux)]),
     table.hline(),
     [$bf(F)$ is conservative \ $==>$ FTC],

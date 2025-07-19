@@ -550,7 +550,7 @@ Here are two examples of this with spheres.
   Let $cal(S)$ denote the sphere $x^2+y^2+z^2=17^2=289$ of radius $17$.
   Let $bf(F) = vec(x,y,z)$.
   Compute the flux $ iint_(cal(S)) bf(F) dot bf(n) dif S. $
-  (Orient $bf(S)$ outwards.)
+  (Orient $cal(S)$ outwards.)
 ]
 #soln[
   The normal vector $bf(n)$ at any point $(x,y,z)$ on the surface of the sphere
@@ -566,7 +566,7 @@ Here are two examples of this with spheres.
   Let $cal(S)$ denote the sphere $x^2+y^2+z^2=17^2=289$ of radius $17$.
   Let $bf(G)$ be the force of gravity exerted by a point mass $m$ at the origin.
   Compute the flux $ iint_(cal(S)) bf(G) dot bf(n) dif S. $
-  (Orient $bf(S)$ outwards.)
+  (Orient $cal(S)$ outwards.)
 ]
 #soln[
   This is just like the previous example except that the gravity

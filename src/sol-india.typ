@@ -294,7 +294,7 @@ The vector field is:
 $ bf(F) (x , y) = (P , Q) = (x + 7 y^2 , x^2 + 7 y) . $
 Let $cal(C)$ be the boundary of that triangle.
 Green's theorem gives
-$ 672 = oint_(cal(C)) bf(F) dot bf(n) dif s = iint_(cal(R)) ((partial Q) / (partial x) - (partial P) / (partial y)) dif A . $
+$ 672 = oint_(cal(C)) bf(F) dot bf(n) dif s = iint_(cal(R)) ((partial P) / (partial x) + (partial Q) / (partial y)) dif A . $
 Computing partial derivatives:
 $ (partial P) / (partial x) &= (partial) / (partial x) (x + 7 y^2) = 1 , \
   (partial Q) / (partial y) &= (partial) / (partial y) (x^2 + 7 y) = 7 . $

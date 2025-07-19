@@ -165,7 +165,7 @@ as before.
 
 The classical Stokes' theorem now states that for a surface $cal(S)$ with boundary $cal(C)$,
 $ oint_(cal(C)) bf(F)^(*) dot dif bf(r) = iint_(cal(S)) nabla times bf(F)^(*) dot bf(n) dif S . $
-The left-hand side is the same as $oint_(cal(C)) bf(F) dot bf(r)$ in 2D:
+The left-hand side is the same as $oint_(cal(C)) bf(F) dot dif bf(r)$ in 2D:
 the work doesn't change if we add an extra dimension.
 So we just evaluate the curl on the right-hand side:
 $ nabla times bf(F)^(*) = detmat(bf(e)_1, bf(e)_2, bf(e)_3;
