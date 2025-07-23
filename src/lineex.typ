@@ -211,7 +211,7 @@ We need to compute
 $ int_(t=0)^(2pi) vec(cos(t)^2+3sin(t), 5sin(t)) dot vec(-sin(t), cos(t)) dif t. $
 
 Expanding the dot product gives
-$ int_(t=0)^(2 pi) (-cos^2 t sin t - 3 pi sin^2 t + 5 pi sin t cos t) dif t . $
+$ int_(t=0)^(2 pi) (-cos^2 t sin t - 3 sin^2 t + 5 sin t cos t) dif t . $
 Compute each integral separately:
 1. $int_(t=0)^(2 pi) cos^2 t sin t dif t$:
   Let $u = cos t$, then $dif u = - sin t dif t$.
