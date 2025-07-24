@@ -314,6 +314,7 @@ in return for the short time limit.
   Alan Cheng,
   Alexander Wang,
   Calvin Wang,
+  Daniel Kim,
   Emma Jakubicka,
   John Zhou,
   Nick Zhang,
