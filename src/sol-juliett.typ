@@ -23,7 +23,7 @@ so we take this as our $bf(n) dif S$.
 Hence, the flux of $bf(F)$ through $S$ is given by
 $ iint_(cal(S)) bf(F) dot bf(n) dif S
   &= int_(x=0)^5 int_(y=0)^5 vec( x/3, y/4, 1/5 ) dot vec( - 3x^2 e^(-z), - 4y^3 e^(-z), 1 ) dif y dif x  \
-  &= int_(x=0)^5 int_(y=0)^5 ((x^3 + y^4) / e^z + 1/5)  dif y dif x \
+  &= int_(x=0)^5 int_(y=0)^5 ((-x^3 - y^4) / e^z + 1/5)  dif y dif x \
   &= int_(x=0)^5 int_(y=0)^5 ((-e^z) / e^z + 1/5) dif y dif x \
   &= int_(x=0)^5 int_(y=0)^5 -4/5 dif y dif x \
   &= 25 dot -4/5 = #boxed[$ -20 $]. $
