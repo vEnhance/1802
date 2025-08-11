@@ -69,7 +69,7 @@ a parametrization that uses a rectangular sheet of paper.
 #example(title: [Example of a parametrization: the spherical Earth])[
   Consider the surface of the unit sphere, say $x^2 + y^2 + z^2 = 1$.
   One parametrization $bf(r)$ is given from the spherical coordinate system by
-  $ bf(r) (phi, theta) = (sin phi cos theta , phi sin theta , cos phi) $
+  $ bf(r) (phi, theta) = (sin phi cos theta , sin phi sin theta , cos phi) $
   across the range $0 <= phi <= pi$ and $0 <= theta < 2 pi$.
   That is, as $theta$ and $phi$ vary across these ranges,
   we get every point on the sphere exactly once.
