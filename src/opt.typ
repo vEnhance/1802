@@ -691,7 +691,7 @@ If you've seen the movie _Inception_, yes, one of those.
   - $f(pm 1,0,0) = f(0,pm 1,0) = f(0,0, pm 1) = 1$ are the global maximums. #qedhere
 ]
 
-== [SIDENOTE] A little common sense can you save you a lot of work
+== [SIDENOTE] A little common sense can save you a lot of work
 
 If you step back and think a bit before you try to dive into calculus,
 you might find that having a bit of "common sense" might save you a lot of work.

@@ -379,7 +379,7 @@ To spell it out:
   because we know the derivative of $x^2+5$ at $x=3$ is $6$.)
 ]
 
-== [RECAP] A recap of Part Echo on Multivariable Differentation
+== [RECAP] A recap of Part Echo on Multivariable Differentiation
 
 Let's summarize the last few sections.
 

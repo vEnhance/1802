@@ -110,7 +110,7 @@ Let's put these examples into aquatic terms.
   caption: [A whirlpool. Round and round we go. Not a conservative vector field.],
 )
 
-== [TEXT] How to draw a vector fields
+== [TEXT] How to draw a vector field
 
 If you're actually given a formula for $bf(F)(x,y)$,
 you can sketch the corresponding vector field by the following procedure.
