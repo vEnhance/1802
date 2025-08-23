@@ -240,7 +240,7 @@ over and over is sort of a fool's errand. Let's just do them all at once.
 
   The vector $bf(v)$ from $(x_1 , y_1 , z_1)$ to $(x_0 , y_0 , z_0)$ is:
   $ bf(v) = angle.l x_0 - x_1 , y_0 - y_1 , z_0 - z_1 angle.r
-    = angle.l x_0 , y_0 , z_0 - d / c angle.r . $
+    = lr(angle.l x_0 , y_0 , z_0 - d / c angle.r) . $
 
   Now, the scalar component of $bf(v)$ along $bf(n)$ is given by
   $ op("comp")_(bf(n)) bf(v) = frac(bf(v) dot bf(n), |bf(n)|) . $
