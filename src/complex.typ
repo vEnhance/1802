@@ -160,7 +160,7 @@ you might not _believe_ me the magnitudes multiply.
 Because let's say $z_1 = a + b i$ and $z_2 = c + d i$.
 Then
 $ z_1 z_2 = (a + b i)(c + d i) = (a c - b d) + (a d + b c) i $
-doesn't look anything right.
+doesn't look related.
 If @eqn-magnitudes is really true, it's promising that
 $ sqrt(a^2+b^2) dot sqrt(c^2+d^2) = sqrt((a c - b d)^2 + (a d + b c)^2). $
 In other words, the equation
