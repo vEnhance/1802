@@ -272,7 +272,7 @@ $ z^5 = 243 i$.
 This section shows you how.
 
 In this whole section, you always prefer to work in polar form.
-So if you get input in rectangular form, you should first convert to rectangular form.
+So if you get input in rectangular form, you should first convert to polar form.
 Conversely, if the answer is asked for in rectangular form,
 you should work with polar form anyway,
 and only convert to rectangular output at the end.
