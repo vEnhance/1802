@@ -274,7 +274,7 @@ can be disproportionately difficult in the number of variables.
   _and_ can be solved by hand in a nice way,
   _but_ for which finding that nice way is extremely challenging.
 
-  One example of such a system of equations is
+  One example of such a system of equations is to solve over $RR$ the system
   $
   x^3 &= 3 x - 12 y + 50 \
   y^3 &= 12 y + 3 z - 2 \
