@@ -545,6 +545,7 @@ Usually the strategy is to pick one that makes subsequent calculation easier.
 #sample[
   Let $cal(C)$ denote the arc of the parabola $y = x^2$ starting from $(-1,1)$
   and moving right to $(1,1)$.
+  Give any parametrization $bf(r)(t)$ for $cal(C)$.
 ]
 #soln[
   Just to make things concrete, examples of points we expect to pass through in our path are
