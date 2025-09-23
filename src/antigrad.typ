@@ -224,13 +224,13 @@ So let's see some examples:
 ]
 #example(title: [Another example showing that the order of differentiation doesn't matter])[
   Let $f(x,y) = cos(x+y) y^8$.
-  - First, differentiate $f$ with respect to $x$:
+  - Differentiate $f$ with respect to $x$ then to $y$:
     $ f_x = - sin (x + y) y^8
     ==>
       (partial) / (partial y) f_x & = (partial) / (partial y) (- sin (x + y) y^8)\
       & = - cos (x + y) y^8 - 8 y^7 sin (x + y) $
   - Do it the other order:
-    First, differentiate $f$ with respect to $y$:
+    Differentiate $f$ with respect to $y$ then to $x$:
     $ f_y = (- sin (x + y) y^8 + 8 y^7 cos (x + y))
       ==> (partial) / (partial x) f_y &= (partial) / (partial x) (- sin (x + y) y^8 + 8 y^7 cos (x + y))\
        & = - cos (x + y) y^8 - 8 y^7 sin (x + y) $
