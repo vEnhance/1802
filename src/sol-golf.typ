@@ -160,8 +160,9 @@ This is a easily seen to be a rational number.
 
 #digression[
   It is possible to evaluate the integral using 18.01 methods
-  by making the $u$-substitution $u = sqrt(sqrt(x)+1)$, but this is extremely tedious.
+  by making the $u$-substitution $u = x^(1/5)+1$, but this is fairly tedious.
 ]
+
 == Solution to @exer-chvar-triangle (integral over triangle)
 
 #recall-thm(<exer-chvar-triangle>)
