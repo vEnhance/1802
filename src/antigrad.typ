@@ -39,7 +39,7 @@ $ nabla f &= vec(x,y) \
 
 == [TEXT] Antiderivative method, if you're promised there is one <sec-antideriv>
 
-#recipe(title: [How to find an anti-gradient with two variables])[
+#recipe(title: [Recipe: How to find an anti-gradient with two variables])[
   1. Let $f$ denote the gradient function.
   2. Integrate the given $(partial f) / (partial x)$ with respect to $x$ to get some equation of the
     form $f(x,y) = "expression"  + C_1(y)$ for some function $C_1(y)$.
@@ -50,7 +50,7 @@ $ nabla f &= vec(x,y) \
 
 With three variables, it's similar, but more work.
 
-#recipe(title: [How to find an anti-gradient with three variables])[
+#recipe(title: [Recipe: How to find an anti-gradient with three variables])[
   1. Let $f$ denote the gradient function.
   2. Integrate the given $(partial f) / (partial x)$ with respect to $x$ to get some equation of the
     form $f(x,y,z) = "expression"  + C_1(y,z)$ for some function $C_1(y,z)$.
