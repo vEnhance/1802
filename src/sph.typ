@@ -223,7 +223,7 @@ Here are two ways to verify @eqn-sph-phi-too-big is true.
   it has changed to the angle $pi - phi$ instead.
   This picture gives a geometric way of seeing why @eqn-sph-phi-too-big is true.
 
-=== Second case: Illegal angle less than zero
+=== Second case: Illegal chevron.less than zero
 
 This time, I assert the following equation instead:
 #eqn[
@@ -441,7 +441,7 @@ Let's see it in action with an offset sphere.
     &= (4 pi G m) / 3.
   $
   In other words, in the coordinate system we chose, gravity is given by
-  $ bf(G) = lr(angle.l 0, 0, (4 pi G m)/3 angle.r). $
+  $ bf(G) = lr(chevron.l 0, 0, (4 pi G m)/3 chevron.r). $
   The magnitude is $|bf(G)| = #boxed[$ (4 pi G m) / 3 $]. $
 ]
 

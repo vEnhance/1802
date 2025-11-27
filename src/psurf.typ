@@ -132,9 +132,9 @@ but here we make a $2$-dimensional map of a surface living in $RR^3$.)
   since they match the $x$-component and $y$-component of $bf(r)(x,y)$,
   giving us fewer different letters to juggle.
   And we'll do this in general: if our parametrization would _a priori_ be written as
-  $ bf(r)(u,v) = angle.l u, v, f(u,v) angle.r $
+  $ bf(r)(u,v) = chevron.l u, v, f(u,v) chevron.r $
   for $(u,v)$ in some region $cal(R)$, then we'll usually prefer to use the variable names
-  $ bf(r)(x,y) = angle.l x, y, f(x,y) angle.r $
+  $ bf(r)(x,y) = chevron.l x, y, f(x,y) chevron.r $
   instead.
 
   This happens quite often.
@@ -199,7 +199,7 @@ But it's so ugly you would never want to use it.
 
 #exer[
   Consider a surface $cal(S)$ given by the parametrization $bf(r) : RR^2 -> RR^3$ defined by
-  $ bf(r)(u,v) = angle.l u-v, u+v, u v angle.r $
+  $ bf(r)(u,v) = chevron.l u-v, u+v, u v chevron.r $
   for all $(u,v)$ in $RR^2$.
   Compute the real number $k$ for which the point $P = (2, 8, k)$ lies on $cal(S)$.
 ] <exer-psurf>

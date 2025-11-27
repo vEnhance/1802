@@ -99,11 +99,11 @@ flux of a vector field $upright(bold(V))$ through a closed surface $S$.
 
 / 2.: Use the divergence theorem to calculate the outward flux in the following examples:
 
-  - $upright(bold(V)) = angle.l 2 x^3 + y^3 , y^3 + z^3 , 3 y^2 z angle.r$; $S$ is the
+  - $upright(bold(V)) = chevron.l 2 x^3 + y^3 , y^3 + z^3 , 3 y^2 z chevron.r$; $S$ is the
     surface of the solid bounded by $z = 1 - x^2 - y^2$ and the
     $x y$-plane.
 
-  - $upright(bold(V)) = angle.l log (1 + e^y) , log (1 + e^z) , log (1 + e^x) angle.r$;
+  - $upright(bold(V)) = chevron.l log (1 + e^y) , log (1 + e^z) , log (1 + e^x) chevron.r$;
     $S$ is the surface of the cube with vertices
     $(plus.minus 1 , plus.minus 1 , plus.minus 1)$.
 

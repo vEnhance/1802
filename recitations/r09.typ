@@ -32,7 +32,7 @@ In high school algebra, you drew 2D graphs of one-variable functions like $y = 2
 So it might have seemed a bit weird to you that in R01/R02, our planes were usually written
 like $2 x + 5 y + 3 z = 7$ rather than, say, $z = (7 - 2 x - 5 y) / 3$.
 But this form turned out to be better, because it let us easily access the normal vector
-(which here is $angle.l 2, 5, 3 angle.r$).
+(which here is $chevron.l 2, 5, 3 chevron.r$).
 
 We'll keep up this trend often with multivariate functions; prefer constant RHS's.
 That is, suppose we want to draw a _two_ variable function like $f(x,y) = x^2 + 3 y$.
@@ -66,8 +66,8 @@ Here's how.
 - In 18.01, if you know $f(5)$ and $f'(5)$, then $f(5.01) approx f(5) + f'(5) dot 0.01$,
   because we think of $f'(5)$ as a slope ("rise/run") and $0.01$ as the run.
 - In 18.02, if you know $f(5,8)$ and $nabla f(5,8)$, then the analogy goes
-  $ f(5.01, 7.996) approx f(5,8) + nabla f(5,8) dot angle.l 0.01, -0.004 angle.r. $
-  Yes, the dot is a dot product; both $nabla f(5,8)$ and $angle.l 0.01, -0.004 angle.r$
+  $ f(5.01, 7.996) approx f(5,8) + nabla f(5,8) dot chevron.l 0.01, -0.004 chevron.r. $
+  Yes, the dot is a dot product; both $nabla f(5,8)$ and $chevron.l 0.01, -0.004 chevron.r$
   have type "vector in $RR^2$".
   This will take a lot of time to get used to, but everything afterwards depends on it,
   so do whatever you can to get this into your instincts.
@@ -114,9 +114,9 @@ but if it does, I'll talk more about it.)
   speed of the ball when it hits the ground?
 
 / 2: Suppose a particle moves along trajectory
-  $upright(bold(r)) (t) = angle.l t^2 , t^3 angle.r$ where $0 lt.eq t lt.eq 2$.
+  $upright(bold(r)) (t) = chevron.l t^2 , t^3 chevron.r$ where $0 lt.eq t lt.eq 2$.
   Calculate the total distance travelled by the particle. Do the same for
-  the trajectory $upright(bold(r)) (t) = angle.l 2 cos (3 t) , 2 sin (3 t) angle.r$,
+  the trajectory $upright(bold(r)) (t) = chevron.l 2 cos (3 t) , 2 sin (3 t) chevron.r$,
   $0 lt.eq t lt.eq 2 pi$. In the second case, compare this with the length
   of the curve on the $x y$-plane.
 

@@ -89,12 +89,12 @@ $ abs(1+2+3-11) / (sqrt(1^2+1^2+1^2)) = #boxed[$ 5/sqrt(3) $]. $
 
 If you didn't remember this formula, you should instead
 compute the length of the projection of the vector
-$bf(v) = (1,2,3) - (2,3,6) = angle.l -1,-1,-3 angle.r$
+$bf(v) = (1,2,3) - (2,3,6) = chevron.l -1,-1,-3 chevron.r$
 (you can replace $(2,3,6)$ with any other point on the plane,
-like $(0,0,11)$ or similar) along the direction of $bf(n) = angle.l 1,1,1 angle.r$.
+like $(0,0,11)$ or similar) along the direction of $bf(n) = chevron.l 1,1,1 chevron.r$.
 Doing this by hand gives
 $ (bf(v) dot bf(n)) / (|bf(n)|)
-  = (angle.l -1,-1,-3 angle.r dot angle.l 1,1,1 angle.r) / sqrt(3)
+  = (chevron.l -1,-1,-3 chevron.r dot chevron.l 1,1,1 chevron.r) / sqrt(3)
   = -5 / sqrt(3) $
 like before, although as I've described before,
 we're really just repeating the proof of the point-to-plane formula.
@@ -105,7 +105,7 @@ we're really just repeating the proof of the point-to-plane formula.
 
 Let $f(x,y) = cos(x) + sin(y)$.
 The gradient is given by
-$ nabla f = angle.l -sin(x), cos(y) angle.r. $
+$ nabla f = chevron.l -sin(x), cos(y) chevron.r. $
 So a critical point occurs at any point for which $sin(x) = cos(y) = 0$.
 (These are the points where $cos(x) = pm 1$ and $sin(y) = pm 1$.)
 
@@ -274,15 +274,15 @@ $ iiint_(cal(T)) nabla dot bf(F) dif V
 (the volume of a cylinder with height $2$ and base of area $100pi$).
 
 For the top lid, we recall that for a flat surface parallel to the $x y$-plane,
-we have $bf(n) dif S = pm angle.l 0,0,1 angle.r dif x dif y$.
+we have $bf(n) dif S = pm chevron.l 0,0,1 chevron.r dif x dif y$.
 For the top lid, we thus have
 $ iint_(cal(S)_("top")) bf(F) dot bf(n) dif S
-  &= iint_(cal(S)_("top")) angle.l x+e^y+729, e^x+y+729, 9 angle.r dot angle.l 0,0,1 angle.r dif x dif y \
+  &= iint_(cal(S)_("top")) chevron.l x+e^y+729, e^x+y+729, 9 chevron.r dot chevron.l 0,0,1 chevron.r dif x dif y \
   &= iint_(cal(S)_("top")) 9 dif x dif y \
   &= 9 op("Area")(cal(S)_("top")) = 900 pi. $
 For the bottom lid, we instead have
 $ iint_(cal(S)_("bottom")) bf(F) dot bf(n) dif S
-  &= iint_(cal(S)_("bottom")) angle.l x+e^y+343, e^x+y+343, 7 angle.r dot angle.l 0,0,-1 angle.r dif x dif y \
+  &= iint_(cal(S)_("bottom")) chevron.l x+e^y+343, e^x+y+343, 7 chevron.r dot chevron.l 0,0,-1 chevron.r dif x dif y \
   &= iint_(cal(S)_("bottom")) (-7) dif x dif y \
   &= - 7 op("Area")(cal(S)_("bottom")) = - 700 pi. $
 Hence, the quantities in the divergence theorem become

@@ -26,7 +26,7 @@ This handout (and any other DLC's I write) are posted at
 This is the final red arrow in the poster #url("https://web.evanchen.cc/textbooks/poster-stokes.pdf").
 
 #definition(title: [Definition of curl])[
-  Suppose $bf(F)(x,y,z) = angle.l p,q,r angle.r$
+  Suppose $bf(F)(x,y,z) = chevron.l p,q,r chevron.r$
   is a 3D vector field.
   Then the *curl* of $bf(F)$ is the vector field defined by
   $ op("curl") bf(F) := nabla times bf(F)
@@ -48,7 +48,7 @@ The curl at each point is a 3D vector (i.e. the curl of a 3D vector field is its
   so it absolutely does not make sense.)
   This is why $nabla times bf(F)$ is the notation chosen;
   you could almost imagine
-  $nabla = lr(angle.l (partial)/(partial x), (partial)/(partial y), (partial)/(partial z) angle.r)$
+  $nabla = lr(chevron.l (partial)/(partial x), (partial)/(partial y), (partial)/(partial z) chevron.r)$
   in which case the determinant above is the old mnemonic for the cross product.
 ]
 
@@ -102,7 +102,7 @@ Reasons to not be excited about the non-generalized Stokes' theorem (hence the n
 
 = Recitation questions from official course
 
-/ 1.: Find the curl of the vector field $angle.l x^2 y \, y z \, x y z^2 angle.r$.
+/ 1.: Find the curl of the vector field $chevron.l x^2 y \, y z \, x y z^2 chevron.r$.
 / 2.: For what values of $a$ and $b$ is the vector field
   $upright(bold(F)) = y z^2 upright(bold(i)) + (x z^2 + a y z) upright(bold(j)) + (b x y z + y^2) upright(bold(k))$
   a conservative field?
@@ -115,4 +115,4 @@ Reasons to not be excited about the non-generalized Stokes' theorem (hence the n
 / 3.: Recall the statement of Stokes' theorem.
   Verify the statement of Stokes' theorem where $S$ is the upper hemisphere of the sphere of radius one
   centered at the origin and $C$ is its boundary, for the vector field
-  $upright(bold(F)) = angle.l x , y , z angle.r$.
+  $upright(bold(F)) = chevron.l x , y , z chevron.r$.

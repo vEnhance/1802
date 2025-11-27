@@ -97,7 +97,7 @@ The algebraic definition is already enough to tell us that
   $ bf(w) dot bf(w) = |bf(w)|^2 $
   <eqn-dot-sq>
 ]
-by the Pythagorean theorem: if $bf(w) = angle.l a_1, ..., a_n angle.r $
+by the Pythagorean theorem: if $bf(w) = chevron.l a_1, ..., a_n chevron.r $
 then both sides equal $a_1^2 + ... + a_n^2$.
 
 Let $C$ denote the origin, and let $A$ and $B$ denote the endpoints of $bf(u)$ and $bf(v)$

@@ -16,7 +16,7 @@ like $f(x,y) = x^2+y^2$ in a different way#footnote[
   So it might have seemed a bit weird to you that we wrote
   planes instead like $2 x + 5 y + 3 z = 7$ rather than, say, $z = (7 - 2 x - 5 y) / 3$.
   But this form turned out to be better, because it let us easily access the normal vector
-  (which here is $angle.l 2, 5, 3 angle.r$).
+  (which here is $chevron.l 2, 5, 3 chevron.r$).
   The analogy carries over here.
 ], using what's known as a _level curve_.
 

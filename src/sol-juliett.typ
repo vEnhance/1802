@@ -6,16 +6,16 @@
 
 #recall-thm(<exer-flux-xy-ez>)
 
-We parametrize the surface by $bf(r)(x,y) = angle.l x, y, log(x^3+y^4) angle.r$.
+We parametrize the surface by $bf(r)(x,y) = chevron.l x, y, log(x^3+y^4) chevron.r$.
 Rather than deal with log, we use the second row of @table-surfcross-2
 and define the function $ g (x , y , z) = x^3 + y^4 - e^z . $
 The surface is given implicitly by $g (x , y , z) = 0$, so we compute its gradient:
-$ nabla g = lr(angle.l (partial g) / (partial x) , (partial g) / (partial y) , (partial g) / (partial z) angle.r)
+$ nabla g = lr(chevron.l (partial g) / (partial x) , (partial g) / (partial y) , (partial g) / (partial z) chevron.r)
   = (3 x^2 , 4 y^3 , - e^z) . $
 Hence,
 $ (partial bf(r)) / (partial x) times (partial bf(r)) / (partial y)
   = (nabla g) / ((partial g) / (partial z))
-  = (angle.l 3x^2, 4y^3, -e^z angle.r)/(-e^z)
+  = (chevron.l 3x^2, 4y^3, -e^z chevron.r)/(-e^z)
   = vec( - 3x^2 e^(-z), - 4y^3 e^(-z), 1 ). $
 This normal vector is oriented upwards because its $z$-component is positive,
 so we take this as our $bf(n) dif S$.
@@ -47,8 +47,8 @@ $ iint_(cal(S)) bf(F) dot dif bf(S) + iint_(cal(S)_"lid") bf(F) dot dif bf(S) =
   iiint_(cal(T)) nabla dot bf(F) dif V = 0. $
 Thus, we compute the flux through the disk and use it to determine the flux through $cal(S)$.
 
-We can take $bf(n) dif S = angle.l 0,0,1 angle.r$ for the flat surface $cal(S)_"lid"$, so
-$ iint_(cal(S)_"lid") bf(F) dot dif bf(S) = iint_(cal(S)_"lid") bf(F) dot angle.l 0 , 0 , 1 angle.r dif A
+We can take $bf(n) dif S = chevron.l 0,0,1 chevron.r$ for the flat surface $cal(S)_"lid"$, so
+$ iint_(cal(S)_"lid") bf(F) dot dif bf(S) = iint_(cal(S)_"lid") bf(F) dot chevron.l 0 , 0 , 1 chevron.r dif A
   &= iint_(cal(S)_"lid") 2z dif A \
   &= iint_(x^2+y^2 <= 1) 2e dif A \
   &= 2e op("Area")(x^2+y^2 <= 1) = 2 e pi. $
@@ -114,7 +114,7 @@ We orient all three away from $cal(T)$.
 ) <fig-sol-india-div-to-green>
 
 Next, we define a new three-dimensional vector field based on our 2D field $bf(F)$:
-$ bf(F)^(*) = angle.l p , q , 0 angle.r. $
+$ bf(F)^(*) = chevron.l p , q , 0 chevron.r. $
 The divergence of $bf(F)^(*)$ is:
 $ nabla dot bf(F)^(*) = (partial p) / (partial x) + (partial q) / (partial y) . $
 Applying the divergence theorem to $cal(T)$, we obtain:
@@ -130,9 +130,9 @@ $ iiint_(cal(T)) nabla dot bf(F)^(*) dif V
 
 Now let's look at the three parts of the boundary of $cal(T)$:
 
-- On the top face at $z = 1$, the outward normal is $bf(n) = angle.l 0 , 0 , 1 angle.r$,
-  and since $bf(F)^(*) = angle.l p , q , 0 angle.r$, we have:
-  $ bf(F)^(*) dot angle.l 0,0,1 angle.r = 0 . $
+- On the top face at $z = 1$, the outward normal is $bf(n) = chevron.l 0 , 0 , 1 chevron.r$,
+  and since $bf(F)^(*) = chevron.l p , q , 0 chevron.r$, we have:
+  $ bf(F)^(*) dot chevron.l 0,0,1 chevron.r = 0 . $
   Thus, there is no contribution from the top face.
 - Similarly the bottom face $z = 0$ gives no contribution.
 - The vertical sidewalls project exactly onto $cal(C)$, the boundary of $cal(R)$.
@@ -160,7 +160,7 @@ Specifically, we'll just take a single copy of $cal(C)$ on the plane $z = 0$.
 That's all --- it's completely flat.
 Then we take our surface $cal(S)$ to be just the flat $cal(R)$, again, still contained in $z = 0$.
 And we take the force field to be
-$ bf(F)^(*) = angle.l p , q , 0 angle.r  $
+$ bf(F)^(*) = chevron.l p , q , 0 chevron.r  $
 as before.
 
 The classical Stokes' theorem now states that for a surface $cal(S)$ with boundary $cal(C)$,
@@ -173,7 +173,7 @@ $ nabla times bf(F)^(*) = detmat(bf(e)_1, bf(e)_2, bf(e)_3;
   p, q, 0)
   = vec(0 , 0 , (partial q) / (partial x) - (partial p) / (partial y)) . $
 As the surface $cal(S)$ lies in the plane $z = 0$, so the unit normal to
-$cal(S)$ is $bf(n) = angle.l 0 , 0 , 1 angle.r$.
+$cal(S)$ is $bf(n) = chevron.l 0 , 0 , 1 chevron.r$.
 So, the dot product is
 $ (nabla times bf(F)^(*)) dot bf(n)
   = vec(0 , 0 , (partial q) / (partial x) - (partial p) / (partial y)) dot vec(0,0,1)

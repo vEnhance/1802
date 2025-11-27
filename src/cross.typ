@@ -185,7 +185,7 @@ But here's a clever trick to get around it.
 The trick to get the area is to consider the parallelepiped formed by three vectors:
 the two given vectors $bf(v)$ and $bf(w)$ and the _unit_ vector in the direction of $bf(v) times bf(w)$.
 That is, consider the vector
-$ bf(n) = (angle.l x_0, y_0, z_0 angle.r) / sqrt(x_0^2 + y_0^2 + z_0^2). $
+$ bf(n) = (chevron.l x_0, y_0, z_0 chevron.r) / sqrt(x_0^2 + y_0^2 + z_0^2). $
 We've just seen $bf(n)$ is perpendicular to both $bf(v)$ and $bf(w)$,
 and we've scaled $bf(n)$ so that $|bf(n)| = 1$.
 See @fig-cross-proof.

@@ -42,7 +42,7 @@ not just the absolute value.
     ),
     [$z = f(x,y)$],
       [$(x,y)$],
-      [$ lr(angle.l - (partial f) / (partial x), - (partial f) / (partial y), 1 angle.r) $],
+      [$ lr(chevron.l - (partial f) / (partial x), - (partial f) / (partial y), 1 chevron.r) $],
       [$sqrt(1 + ((partial f) / (partial x))^2 + ((partial f) / (partial y))^2) dif x dif y$],
     [Level surface $g(x,y,z) = c$ \ over an $x y$-region ],
       [$(x,y)$],
@@ -50,11 +50,11 @@ not just the absolute value.
       [$ (|nabla g|) / (|partial g slash partial z|) dif x dif y $],
     [Flat surface $z=c$],
       [$(x,y)$],
-      [$ lr(angle.l 0, 0, 1 angle.r) $],
+      [$ lr(chevron.l 0, 0, 1 chevron.r) $],
       [$dif x dif y$],
     [Cylindrical coords with fixed $R$ \ $bf(r)(theta, z) = (R cos theta, R sin theta, z)$],
       [$(theta, z)$],
-      [$ angle.l R cos theta, R sin theta, 0 angle.r $],
+      [$ chevron.l R cos theta, R sin theta, 0 chevron.r $],
       [$R dif theta dif z$],
     [Spherical coords with fixed $R$ \
       $bf(r)(phi, theta) = (R sin phi cos theta, \ quad R sin phi sin theta, R cos phi)$],
@@ -80,7 +80,7 @@ For example:
   you should remember from @ch-grad that $nabla g$ is normal to the tangent plane
   of the level surface, hence the cross product is a multiple of $nabla g$ as needed.
 - The normal vector to (the curved part of) a cylinder points straight away from the $z$-axis
-  away from the origin, which $angle.l R cos theta, R sin theta, 0 angle.r$ indeed does.
+  away from the origin, which $chevron.l R cos theta, R sin theta, 0 chevron.r$ indeed does.
 - For the sphere, the normal vector should point straight away from the center of the sphere,
   and indeed $sin(phi) dot bf(r)(phi, theta)$ is a multiple of the direction.
 
@@ -129,7 +129,7 @@ Let's write this down now.
   Consider a surface given by $z = f(x,y)$ with $f$ differentiable.
   Then for the obvious parametrization $bf(r)(x,y) = (x,y,f(x,y))$ we have
   $ frac(partial bf(r), partial x) times frac(partial bf(r), partial y)
-  = lr(angle.l - (partial f) / (partial x), - (partial f) / (partial y), 1 angle.r). $
+  = lr(chevron.l - (partial f) / (partial x), - (partial f) / (partial y), 1 chevron.r). $
 ]
 
 In particular, the surface area becomes
@@ -146,7 +146,7 @@ Let's see how it can captures the boilerplate in the cone example.
   Letting $f(x,y) = sqrt(x^2+y^2)$, this time we skip straight to
   $ (partial f) / (partial x) &= x/(sqrt(x^2+y^2)) \
     (partial f) / (partial y) &= y/(sqrt(x^2+y^2)). $
-  Hence we got a shortcut to the vector $angle.l -x/(sqrt(x^2+y^2)), -y/(sqrt(x^2+y^2)), 1 angle.r$ we found before.
+  Hence we got a shortcut to the vector $chevron.l -x/(sqrt(x^2+y^2)), -y/(sqrt(x^2+y^2)), 1 chevron.r$ we found before.
   We find its magnitude in the same way:
   $ sqrt(1 + ((partial f) / (partial x))^2 + ((partial f) / (partial y))^2)
   = sqrt(1 + (x^2) / (x^2 + y^2) + (y^2) / (x^2 + y^2)) = sqrt(2). $
@@ -170,7 +170,7 @@ but we'd like to not have to solve for $z$ in such a brute way.
 
 The trick is to consider the gradient of $g$ and use the chain rule.
 You might remember that
-$ nabla g = lr(angle.l (partial g) / (partial x), (partial g) / (partial y), (partial g) / (partial z) angle.r) $
+$ nabla g = lr(chevron.l (partial g) / (partial x), (partial g) / (partial y), (partial g) / (partial z) chevron.r) $
 is pretty easy to calculate, usually.
 However, if we take the partial derivative of
 $ g(x,y,z) = c $
@@ -180,9 +180,9 @@ $ 0 = (partial g) / (partial x) + (partial g) / (partial z) dot (partial z) / (p
 Similarly
 $(partial g) / (partial y) = - (partial g) / (partial z) dot (partial z) / (partial y)$.
 Hence
-$ nabla g = lr(angle.l -(partial g) / (partial z) dot (partial z) / (partial x),
-  -(partial g) / (partial z) dot (partial z) / (partial y), (partial g) / (partial z)  angle.r)
-  = (partial g) / (partial z) dot lr(angle.l -(partial z) / (partial x), -(partial z) / (partial y), 1 angle.r). $
+$ nabla g = lr(chevron.l -(partial g) / (partial z) dot (partial z) / (partial x),
+  -(partial g) / (partial z) dot (partial z) / (partial y), (partial g) / (partial z)  chevron.r)
+  = (partial g) / (partial z) dot lr(chevron.l -(partial z) / (partial x), -(partial z) / (partial y), 1 chevron.r). $
 
 #digression(title: [Digression on the chain rule])[
   You might be spooked by the minus sign here,
@@ -226,8 +226,8 @@ Let's see it in action by redoing our example with a cone.
   The cone is the part of the level surface of $g(x,y,z) = x^2+y^2-z^2$ with $z >= 0$.
   (We know in fact $f(x,y) = sqrt(x^2+y^2)$, but we won't use this.)
   Now we can jump straight to
-  $ (nabla g) / ((partial g) / (partial z)) = lr(angle.l 2x, 2y, -2z angle.r) / (-2z)
-    = lr(angle.l -x/z, -y/z, 1 angle.r). $
+  $ (nabla g) / ((partial g) / (partial z)) = lr(chevron.l 2x, 2y, -2z chevron.r) / (-2z)
+    = lr(chevron.l -x/z, -y/z, 1 chevron.r). $
   The magnitude of this vector is
   $ sqrt((-x/z)^2 + (-y/z)^2 + 1) = sqrt((x^2+y^2)/z^2 + 1) = sqrt(2) $
   so we get
@@ -251,8 +251,8 @@ without having to slog through the pain of spherical coordinates.
   $ g(x,y,z) = x^2+y^2+z^2 $
   and considering the hemisphere as the chunk of the level surface with $z >= 0$ and $x^2+y^2 <= 1$.
   In that case,
-  $ (nabla g) / (partial g slash partial z) = lr(angle.l 2x, 2y, 2z angle.r) / (2z)
-    = lr(angle.l x/z, y/z, 1 angle.r). $
+  $ (nabla g) / (partial g slash partial z) = lr(chevron.l 2x, 2y, 2z chevron.r) / (2z)
+    = lr(chevron.l x/z, y/z, 1 chevron.r). $
   This time the magnitude of the vector is
   $ sqrt((x/z)^2 + (y/z)^2 + 1) = sqrt((x^2+y^2+z^2) / z^2) = 1/z = 1/sqrt(1-(x^2+y^2)). $
   Hence, we need to integrate
@@ -275,14 +275,14 @@ without having to slog through the pain of spherical coordinates.
 == [TEXT] @table-surfcross-1 row 3: For a flat surface
 
 This is the really easy special case of $z = f(x,y)$ when $f(x,y) = c$ is constant.
-Your parametrization is just $ bf(r)(x,y) = angle.l x,y,c angle.r. $
+Your parametrization is just $ bf(r)(x,y) = chevron.l x,y,c chevron.r. $
 
 I hesitated to include this row because it's so easy and is a special case of the first row,
 but it's common enough I decided I might as well toss it in.
 However, you should have no problem deriving this yourself even in your sleep; it's literally
-$ (partial bf(r)) / (partial x) &= angle.l 1, 0, 0 angle.r \
-  (partial bf(r)) / (partial y) &= angle.l 0, 1, 0 angle.r $
-and the cross product of these is $angle.l 0,0,1 angle.r$, so there you go.
+$ (partial bf(r)) / (partial x) &= chevron.l 1, 0, 0 chevron.r \
+  (partial bf(r)) / (partial y) &= chevron.l 0, 1, 0 chevron.r $
+and the cross product of these is $chevron.l 0,0,1 chevron.r$, so there you go.
 
 Note that you might encounter flat surfaces parallel to the $x z$ or $y z$ planes instead,
 in which case you should just swap the roles of the variables.
@@ -295,8 +295,8 @@ because most pairs $(x,y)$ do not get used at all.
 Thus, we'll instead use cylindrical coordinates as
 $ bf(r)(theta, z) = (R cos theta, R sin theta, z). $
 Compute the partial derivatives:
-$ frac(partial bf(r), partial theta) &= angle.l - R sin theta, R cos theta, 0 angle.r \
-  frac(partial bf(r), partial z) &= angle.l 0,0,1 angle.r. $
+$ frac(partial bf(r), partial theta) &= chevron.l - R sin theta, R cos theta, 0 chevron.r \
+  frac(partial bf(r), partial z) &= chevron.l 0,0,1 chevron.r. $
 The cross product is pretty easy to evaluate in this case:
 $ frac(partial bf(r), partial theta) times frac(partial bf(r), partial z)
   &= detmat(
@@ -305,7 +305,7 @@ $ frac(partial bf(r), partial theta) times frac(partial bf(r), partial z)
     0, 0, 1
   ) \
   &= R cos theta ee_1 + R sin theta ee_2 \
-  &= angle.l R cos theta, R sin theta, 0 angle.r. $
+  &= chevron.l R cos theta, R sin theta, 0 chevron.r. $
 That's not too bad!
 We can take the absolute value of this: $ dif S = R dif theta dif z. $
 

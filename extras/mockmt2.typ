@@ -33,8 +33,8 @@
 = 18.02 Mock Midterm 2 Questions
 
 / Question 1.: A butterfly is fluttering in the $x y$ plane with position given by
-  $bf(r)(t) = angle.l cos(t), cos(t) angle.r$, starting from
-  time $t = 0$ at $bf(r)(0) = angle.l 1,1 angle.r$.
+  $bf(r)(t) = chevron.l cos(t), cos(t) chevron.r$, starting from
+  time $t = 0$ at $bf(r)(0) = chevron.l 1,1 chevron.r$.
   - Compute the speed of the butterfly at $t = pi/3$.
   - Compute the arc length of the butterfly's trajectory from $t = 0$ to $t = 2 pi$.
   - Sketch the butterfly's trajectory from $t = 0$ to $t = 2pi$ in the $x y$ plane.

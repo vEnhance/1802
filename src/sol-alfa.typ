@@ -32,7 +32,7 @@ $ 1/(|bf(w)|) bf(w)
   = 1/sqrt(64+81+144) vec(-8, -9, -12)
   = 1/sqrt(289) vec(-8, -9, -12) \
   &= 1/17 vec(-8, -9, -12) = #boxed[$ vec(-8 slash 17, -9 slash 17, -12 slash 17) $]. $
-(Note that $angle.l 8 slash 17, 9 slash 17, 12 slash 17 angle.r$
+(Note that $chevron.l 8 slash 17, 9 slash 17, 12 slash 17 chevron.r$
 is not a correct answer: that vector points in the opposite direction.)
 
 == Solution to @exer-vectors-scaledet ($det(10A)$)
@@ -100,7 +100,7 @@ Hence $det M = 0 <==> #boxed[$ a = 5 $]$.
 #recall-thm(<exer-dot-perp4d>)
 
 We need the dot product to be zero:
-$ 0 &= angle.l 1,2,3,4 angle.r dot angle.l 5,6,7,t angle.r \
+$ 0 &= chevron.l 1,2,3,4 chevron.r dot chevron.l 5,6,7,t chevron.r \
   &= 1 dot 5 + 2 dot 6 + 3 dot 7 + 4 dot t \
   &= 38 + 4t ==> #boxed[$ t = -19/2 $]. $
 
@@ -109,12 +109,12 @@ $ 0 &= angle.l 1,2,3,4 angle.r dot angle.l 5,6,7,t angle.r \
 #recall-thm(<exer-dot-proj>)
 
 The first part asks to
-compute the vector projection of $angle.l 123,456,789 angle.r$
+compute the vector projection of $chevron.l 123,456,789 chevron.r$
 in the direction of $ee_1$.
-The answer is just $ #boxed[$ angle.l 123,0,0 angle.r  $]. $
+The answer is just $ #boxed[$ chevron.l 123,0,0 chevron.r  $]. $
 You could get this using the recipe if you wanted,
 but if you draw a picture the point is you're just projecting
-the vector $angle.l 123, 456, 789 angle.r$ to the $x$-axis,
+the vector $chevron.l 123, 456, 789 chevron.r$ to the $x$-axis,
 which gives you its $x$-component.
 
 For the second part, let
@@ -125,7 +125,7 @@ Note that the factor of $-1000$ in $bf(w)$ doesn't matter,
 since scaling $bf(w)$ doesn't matter.
 We'll keep the $-1000$ around just for illustration reasons,
 but in practice an experienced student would just use
-$bf(w) = angle.l 3, 4, 0 angle.r$ instead.
+$bf(w) = chevron.l 3, 4, 0 chevron.r$ instead.
 
 We just follow the recipe in @sec-recipe-proj directly.
 We first compute the dot product:
@@ -154,7 +154,7 @@ if $theta$ is the angle between the two vectors, we need $cos theta = 3/5$,
 and so there should be two vectors that work.
 See @fig-sol-alfa-dot-reverse for a picture.
 (You might already guess one of the solutions ---
-$bf(w) = angle.l 1,0 angle.r $ obviously works --- but we'll pretend we didn't notice that.)
+$bf(w) = chevron.l 1,0 chevron.r $ obviously works --- but we'll pretend we didn't notice that.)
 
 Translating the givens algebraically,
 we have the following system of equations:
@@ -171,19 +171,19 @@ $ ((3 - 4 y) / (3))^2 + y^2 &= 1 \
 Hence either $y = 0$ or $y = 24/25$.
 
 - If $y = 0$ we get $x = frac(3 - 4 (0), 3) = 1$.
-  Thus, the first unit vector is: $bf(v)_1 = angle.l 1 , 0 angle.r$.
+  Thus, the first unit vector is: $bf(v)_1 = chevron.l 1 , 0 chevron.r$.
 - If $y = 24 / 25$ we get $x = frac(3 - 4 (24 / 25), 3) = - 7 / 25$.
   Thus, the second unit vector is:
-  $bf(v)_2 = angle.l -7 / 25 , 24 / 25 angle.r$.
+  $bf(v)_2 = chevron.l -7 / 25 , 24 / 25 chevron.r$.
 
 In conclusion the answer is
-$ #boxed[$ angle.l 1,0 angle.r " and " lr(angle.l -7/25, 24/25 angle.r) $]. $
+$ #boxed[$ chevron.l 1,0 chevron.r " and " lr(chevron.l -7/25, 24/25 chevron.r) $]. $
 See @fig-sol-alfa-dot-reverse for a picture of the two answers.
 
 #figure(
   image("figures/sol-alfa-dot-reverse.svg", width: auto),
   caption: [The two answers to @exer-dot-reverse,
-    which are two unit vectors spaced at an equal angle away from $angle.l 3,4 angle.r$.
+    which are two unit vectors spaced at an equal angle away from $chevron.l 3,4 chevron.r$.
   ],
 ) <fig-sol-alfa-dot-reverse>
 
@@ -191,8 +191,8 @@ See @fig-sol-alfa-dot-reverse for a picture of the two answers.
 
 #recall-thm(<exer-cauchy>)
 
-Construct vectors $bf(v) = angle.l a,b,c angle.r$
-and $bf(w) = angle.l x,y,z angle.r$ in $RR^3$.
+Construct vectors $bf(v) = chevron.l a,b,c chevron.r$
+and $bf(w) = chevron.l x,y,z chevron.r$ in $RR^3$.
 Then the problem statement is saying that $|bf(v)| = sqrt(2)$, $|bf(w)| = sqrt(5)$,
 and asks for all possible values of $bf(v) dot bf(w)$.
 But the geometric definition of the dot product says that
@@ -213,8 +213,8 @@ The main observation is this:
   The faces of the cube have orthogonal normal vectors.
 ]
 And the normal vectors to the two planes are:
-$ bf(n)_1 = angle.l 1 , 2 , 3 angle.r
-  bf(n)_2 = angle.l 5 , 6 , k angle.r. $
+$ bf(n)_1 = chevron.l 1 , 2 , 3 chevron.r
+  bf(n)_2 = chevron.l 5 , 6 , k chevron.r. $
 For the planes to be perpendicular, their normal vectors must satisfy:
 $ 0 &= bf(n)_1 dot bf(n)_2 \
   &= (1) (5) + (2) (6) + (3) (k) = 5 + 12 + 3 k = 17 + 3 k. $
@@ -240,7 +240,7 @@ The idea is that the planes are parallel, so there really should just
 be two possible answers.
 To do the algebra, first observe that (parallel) planes $Pi_1$ and $Pi_2$
 have the same normal vector:
-$ bf(n) = angle.l 3 , 4 , 12 angle.r $
+$ bf(n) = chevron.l 3 , 4 , 12 chevron.r $
 which has $|bf(n)| = sqrt(3^2+4^2+12^2) = 13$.
 
 Now to compute the distance between $Pi_1$ and $Pi_2$,

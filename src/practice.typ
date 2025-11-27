@@ -45,14 +45,14 @@ It was about half the length of the final exam (which was 14 questions long).
 
 #exer[
   Compute the real number $c$ for which
-  $ bf(F)(x,y,z) = angle.l 7 cos(x), thin cos(y) cos(2z), thin c sin(y) sin(2z) angle.r $
+  $ bf(F)(x,y,z) = chevron.l 7 cos(x), thin cos(y) cos(2z), thin c sin(y) sin(2z) chevron.r $
   is conservative.
   For that $c$, compute the maximum possible value of a line integral
   $int_(cal(C)) bf(F) dot dif bf(r)$ across all possible choices of some curve $cal(C)$ in $RR^3$.
 ] <exer-mf-7>
 
 #exer[
-  Let $ bf(F)(x,y,z) = angle.l x + e^y + z^3, thin e^x + y + z^3, thin z angle.r. $
+  Let $ bf(F)(x,y,z) = chevron.l x + e^y + z^3, thin e^x + y + z^3, thin z chevron.r. $
   Let $cal(S)$ be the surface defined by $x^2+y^2=100$ and $7 <= z <= 9$,
   with normal vector oriented outwards (thus $cal(S)$ is the curved part of a cylinder).
   Compute the divergence of $bf(F)$.
@@ -86,7 +86,7 @@ It was about half the length of the final exam (which was 14 questions long).
 #exer[
   Let $cal(S)$ be the level surface of $f(x,y,z) = e^x + e^(2y) + e^(3z)$
   that passes through the origin.
-  Compute all real numbers $t$ such that the vector $angle.l t+4, t+5, t+6 angle.r$
+  Compute all real numbers $t$ such that the vector $chevron.l t+4, t+5, t+6 chevron.r$
   is tangent to $cal(S)$ at the origin.
 ]
 

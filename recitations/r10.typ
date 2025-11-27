@@ -101,7 +101,7 @@ Feel free to add the arrow yourself if it helps you, though.
 
     + What is the directional derivative $D_(upright(bold(u))) f (1 , 2)$
       where $upright(bold(u))$ is the direction given by the unit vector
-      $angle.l 1 \/ sqrt(5) , - 2 \/ sqrt(5) angle.r$?
+      $chevron.l 1 \/ sqrt(5) , - 2 \/ sqrt(5) chevron.r$?
 
 / 2: Estimate the value of $log (0.49^2 + 0.76)$ by calculating the linear
   approximation of the function $log (x^2 + y)$ near the point

@@ -9,14 +9,14 @@ Solutions are in @ch-sol-india.
 
 #exer[
   Another butterfly is fluttering in the $x y$ plane
-  with position $bf(r)(t) = angle.l sin(t), sin(t) angle.r$.
+  with position $bf(r)(t) = chevron.l sin(t), sin(t) chevron.r$.
   Let $cal(C)$ denote its trajectory between $0 <= t <= 2pi$.
   Compute $int_(cal(C)) (x dif x)$ and $int_(cal(C)) (y dif x)$.
 ] <exer-mt3-butterfly>
 
 #exer[
   Let $cal(C)$ denote the unit circle $x^2+y^2=1$ oriented counterclockwise,
-  and consider the vector field $bf(F)(x,y) = angle.l x+2y, 4x+8y angle.r$.
+  and consider the vector field $bf(F)(x,y) = chevron.l x+2y, 4x+8y chevron.r$.
   Compute $int_(cal(C)) bf(F) dot dif bf(r)$ and $int_(cal(C)) bf(F) dot bf(n) dif s$.
 ] <exer-mt3-green>
 
@@ -33,7 +33,7 @@ Solutions are in @ch-sol-india.
 #exer[
   Let $cal(C)$ denote any path from $(0,0)$ to $(pi,pi)$.
   Determine the unique function $h(x)$ for which
-  $bf(F)(x,y) = angle.l x y + cos(x), h(x) + cos(y) angle.r$ is conservative,
+  $bf(F)(x,y) = chevron.l x y + cos(x), h(x) + cos(y) chevron.r$ is conservative,
   and moreover $int_(cal(C)) bf(F) dot dif bf(r) = 0$.
 ] <exer-mt3-consv>
 

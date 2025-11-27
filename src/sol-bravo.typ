@@ -7,18 +7,18 @@
 #recall-thm(<exer-matrix-rotrefl>)
 
 We calculate the outputs of $T$ on the basis vectors
-$ee_1 = angle.l 1,0 angle.r$ and $ee_2 = angle.l 0,1 angle.r$.
+$ee_1 = chevron.l 1,0 chevron.r$ and $ee_2 = chevron.l 0,1 chevron.r$.
 
 For $ee_1$, we first end up with
-$ ee_1 = lr(angle.l 1,0 angle.r) -->
-  lr(angle.l cos 30 degree, sin 30 degree angle.r) = lr(angle.l sqrt(3)/2, 1/2 angle.r)
-  --> lr(angle.l 1/2, sqrt(3)/2 angle.r) = T(ee_1) $
+$ ee_1 = lr(chevron.l 1,0 chevron.r) -->
+  lr(chevron.l cos 30 degree, sin 30 degree chevron.r) = lr(chevron.l sqrt(3)/2, 1/2 chevron.r)
+  --> lr(chevron.l 1/2, sqrt(3)/2 chevron.r) = T(ee_1) $
 (with the first arrow being the rotation and the second arrow being reflection).
 
 For $ee_2$, we end up with
-$ ee_2 = lr(angle.l 0,1 angle.r) -->
-  lr(angle.l cos 120 degree, sin 120 degree angle.r) = lr(angle.l -1/2, sqrt(3)/2 angle.r)
-  --> lr(angle.l sqrt(3)/2, -1/2 angle.r) = T(ee_2). $
+$ ee_2 = lr(chevron.l 0,1 chevron.r) -->
+  lr(chevron.l cos 120 degree, sin 120 degree chevron.r) = lr(chevron.l -1/2, sqrt(3)/2 chevron.r)
+  --> lr(chevron.l sqrt(3)/2, -1/2 chevron.r) = T(ee_2). $
 
 Hence, the answer is
 $ T = #boxed[$ mat(1 slash 2, sqrt(3) slash 2; sqrt(3) slash 2, -1 slash 2) $]. $
@@ -159,7 +159,7 @@ and the multiples of $bf(w)$ (for $lambda = 7$).
 The basic idea is that we can basically work with bare hands,
 not needing to resort to the determinants we saw before.
 Specifically, suppose we have a proposed
-nonzero eigenvector $bf(v) = angle.l x_1, x_2, x_3, x_4, x_5, x_6 angle.r$,
+nonzero eigenvector $bf(v) = chevron.l x_1, x_2, x_3, x_4, x_5, x_6 chevron.r$,
 with eigenvalue $lambda$.
 Then we are hoping for
 $ M bf(v) = vec(5x_1, -9x_2, 5x_3, 0, 8x_5, x_5 + 8x_6) =
@@ -180,10 +180,10 @@ Since at least one of $x_i$ should be nonzero
 it follows $ #boxed[$ lambda = -9, 0, 5, 8 $] $ are the eigenvalues possible.
 And we can read off the corresponding eigenvectors from the above six numbered items:
 
-- For $lambda = -9$, the eigenvectors are $angle.l 0, x_2, 0, 0, 0, 0 angle.r$ for any choice of $x_2$.
-- For $lambda = 0$, the eigenvectors are $angle.l 0, 0, 0, x_4, 0, 0 angle.r$ for any choice of $x_4$.
-- For $lambda = 5$, the eigenvectors are $angle.l x_1, 0, x_3, 0, 0, 0 angle.r$ for any choice of $x_1$ and $x_3$.
-- For $lambda = 8$, the eigenvectors are $angle.l 0, 0, 0, 0, 0, x_6 angle.r$ for any choice of $x_6$.
+- For $lambda = -9$, the eigenvectors are $chevron.l 0, x_2, 0, 0, 0, 0 chevron.r$ for any choice of $x_2$.
+- For $lambda = 0$, the eigenvectors are $chevron.l 0, 0, 0, x_4, 0, 0 chevron.r$ for any choice of $x_4$.
+- For $lambda = 5$, the eigenvectors are $chevron.l x_1, 0, x_3, 0, 0, 0 chevron.r$ for any choice of $x_1$ and $x_3$.
+- For $lambda = 8$, the eigenvectors are $chevron.l 0, 0, 0, 0, 0, x_6 chevron.r$ for any choice of $x_6$.
   (The last equation above, when $lambda = 8$, implies $x_5 = 0$.)
 
 == Solution to @exer-eigen-power (computing $M^(20)$)

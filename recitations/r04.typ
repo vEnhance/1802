@@ -132,7 +132,7 @@ Today will discuss matrices and linear transformations.#footnote[
 / 3.: How many solutions do the following systems of equations have?
 / 3a.: $x + 2 y = 0 ; 2 x + 4 y = 0 .$
 / 3b.: $mat(3, - 1, 0; 1, 2, - 3; - 4, 0, 1) vec(x, y, z) = vec(1, 2, - 1)$
-/ 4.: Do the vectors $angle.l 1 , 0 , - 1 angle.r , angle.l 2 , 0 , 0 angle.r , angle.l 0 , 1 , 1 angle.r$ form a basis?
+/ 4.: Do the vectors $chevron.l 1 , 0 , - 1 chevron.r , chevron.l 2 , 0 , 0 chevron.r , chevron.l 0 , 1 , 1 chevron.r$ form a basis?
 
 = Post-recitation notes
 

@@ -333,7 +333,7 @@ We start actually by sketching the trajectory first (even though this was the la
 since that will make it easier to see what's going on in future parts.
 See @fig-mt2-butterfly.
 The trajectory described by
-$bf(r) (t) = angle.l cos (t) , cos (t) angle.r$ traces out a
+$bf(r) (t) = chevron.l cos (t) , cos (t) chevron.r$ traces out a
 straight line in the $x y$-plane because both the $x$- and
 $y$-coordinates are equal for all $t$. Specifically, the butterfly’s
 motion follows the line $y = x$, with $t in [0 , 2 pi]$ producing
@@ -357,7 +357,7 @@ The speed of the butterfly is given by the magnitude of its velocity vector,
 which is the derivative of $bf(r) (t)$ with respect to time $t$.
 
 First, compute the velocity $bf(r)'(t)$:
-$ bf(r)' (t) = (d) / (dif t) angle.l cos (t) , cos (t) angle.r = angle.l - sin (t) , - sin (t) angle.r . $
+$ bf(r)' (t) = (d) / (dif t) chevron.l cos (t) , cos (t) chevron.r = chevron.l - sin (t) , - sin (t) chevron.r . $
 (This has direction along the line $y=x$, which is what we expect.)
 
 The speed at any time $t$ is the magnitude of the velocity vector:

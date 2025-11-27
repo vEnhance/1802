@@ -182,8 +182,8 @@ Thursday/Friday lectures are _really_ nontrivial.
 
 == Problem 1
 
-Consider the vectors $upright(bold(a)) = angle.l 2 , 3 , 6 angle.r$ and
-$upright(bold(b)) = angle.l 1 , 2 , 2 angle.r$.
+Consider the vectors $upright(bold(a)) = chevron.l 2 , 3 , 6 chevron.r$ and
+$upright(bold(b)) = chevron.l 1 , 2 , 2 chevron.r$.
 
 - What is the scalar component of $upright(bold(a))$ in the direction of
   $upright(bold(b))$?
@@ -194,13 +194,13 @@ $upright(bold(b)) = angle.l 1 , 2 , 2 angle.r$.
 == Problem 2 (from Poonen notes 3.7-3.10): Introduction to planes
 
 - What does the set of vectors perpendicular to
-  $angle.l 1 , 2 , 3 angle.r$ look like?
+  $chevron.l 1 , 2 , 3 chevron.r$ look like?
 
 - What is the equation of the plane with normal vector
-  $angle.l 1 , 2 , 3 angle.r$ passing through the point $P$ with
+  $chevron.l 1 , 2 , 3 chevron.r$ passing through the point $P$ with
   coordinates $(4 , 5 , 6)$?
 
-- Are the vector $angle.l - 5 , 1 , 1 angle.r$ and the plane
+- Are the vector $chevron.l - 5 , 1 , 1 chevron.r$ and the plane
   $x + 2 y + 3 z = 6$ parallel? Perpendicular? Both? Neither?
 
 - What is the distance from the point $Q$ with coordinates $(2 , 3 , 5)$

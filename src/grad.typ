@@ -73,8 +73,8 @@ Way back in @example-circle-3-4 (on #pageref(<example-circle-3-4>)),
 we computed $f_x (P) = 2 dot 3 = 6$ and $f_y (P) = 2 dot 4 = 8$
 and used it to get the approximation
 $
-  f(P + angle.l epsilon_x, epsilon_y angle.r)
-  &= f(angle.l 3,4 angle.r + angle.l epsilon_x, epsilon_y angle.r) \
+  f(P + chevron.l epsilon_x, epsilon_y chevron.r)
+  &= f(chevron.l 3,4 chevron.r + chevron.l epsilon_x, epsilon_y chevron.r) \
   &= (3 + epsilon_x)^2 + (4 + epsilon_y)^2 approx 25 + 6 epsilon_x + 8 epsilon_y. $
 
 Now the idea that will let us do geometry is to replace the pair of numbers
@@ -417,10 +417,10 @@ Let's summarize the last few sections.
 #exer[
   For each part, either give an example of $f : RR^2 -> RR$ or show that none exist.
 
-  - Can you find a function $f : RR^2 -> RR$ such that $nabla f (x,y) = angle.l x, y angle.r$?
-  - Can you find a function $f : RR^2 -> RR$ such that $nabla f (x,y) = angle.l 100 x, y angle.r$?
-  - Can you find a function $f : RR^2 -> RR$ such that $nabla f (x,y) = angle.l y, x angle.r$?
-  - Can you find a function $f : RR^2 -> RR$ such that $nabla f (x,y) = angle.l 100 y, x angle.r$?
+  - Can you find a function $f : RR^2 -> RR$ such that $nabla f (x,y) = chevron.l x, y chevron.r$?
+  - Can you find a function $f : RR^2 -> RR$ such that $nabla f (x,y) = chevron.l 100 x, y chevron.r$?
+  - Can you find a function $f : RR^2 -> RR$ such that $nabla f (x,y) = chevron.l y, x chevron.r$?
+  - Can you find a function $f : RR^2 -> RR$ such that $nabla f (x,y) = chevron.l 100 y, x chevron.r$?
 ] <exer-antigrad-preview>
 
 #exerstar[

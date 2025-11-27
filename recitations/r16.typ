@@ -81,7 +81,7 @@ I'm just gonna spoil the answers to all three of Maulik's questions from his not
 
 = Recitation questions from official course
 
-/ 1a: Sketch the vector field $angle.l x , - y angle.r$ on the $x y$-plane. On the same
+/ 1a: Sketch the vector field $chevron.l x , - y chevron.r$ on the $x y$-plane. On the same
   picture, draw the oriented path $C$ from $(- 1 , 0)$ to $(0 , - 1)$
   given by the unit circle in the quadrant $x <= 0 , y <= 0$.
 
@@ -91,7 +91,7 @@ I'm just gonna spoil the answers to all three of Maulik's questions from his not
 / 1c: Using a parametrization of $C$, calculate the line integral
   $int_C x dif x - y dif y$ exactly.
 
-/ 1d: Find a function $f (x , y)$ whose gradient is $angle.l x , - y angle.r$, and use
+/ 1d: Find a function $f (x , y)$ whose gradient is $chevron.l x , - y chevron.r$, and use
   the fundamental theorem of calculus to calculate
   $int_C x dif x - y dif y$ in another way.
 

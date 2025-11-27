@@ -244,7 +244,7 @@ and then you add a layer of plastic wrap on the bowl.
 
 #sample[
   Let $bf(F)$ be the vector field defined by:
-  $ bf(F) (x,y,z) = angle.l x + tan z, y + e^z, 1 angle.r. $
+  $ bf(F) (x,y,z) = chevron.l x + tan z, y + e^z, 1 chevron.r. $
   Consider the hemisphere $cal(S)$ defined by the equation:
   $ x^2 + y^2 + z^2 = 1 quad upright("with") quad z >= 0 $
   oriented outward.
@@ -273,9 +273,9 @@ and then you add a layer of plastic wrap on the bowl.
 
   Meanwhile, $cal(S)_("lid")$ (which we orient downwards) is a flat surface,
   so its flux integral is easy to calculate:
-  from @table-surfcross-2 we choose $bf(n) dif S = angle.l 0, 0, -1 angle.r$ and hence
+  from @table-surfcross-2 we choose $bf(n) dif S = chevron.l 0, 0, -1 chevron.r$ and hence
   $ iint_(cal(S)_("lid")) bf(F) dot bf(n) dif S
-    &= iint_(x^2+y^2 <= 1) angle.l x + tan 0, y + e^0, 1 angle.r dot angle.l 0,0, -1 angle.r dif x dif y
+    &= iint_(x^2+y^2 <= 1) chevron.l x + tan 0, y + e^0, 1 chevron.r dot chevron.l 0,0, -1 chevron.r dif x dif y
     &= iint_(x^2+y^2 <= 1) (-1) dif x dif y = -pi. $
 
   So when we apply the divergence theorem, we get that
@@ -292,7 +292,7 @@ and then you add a layer of plastic wrap on the bowl.
 #exer[
   Let $cal(S)$ be the part of the surface $z = e^(x^2+y^2)$ where $z <= e$,
   with normal vector oriented downwards.
-  Let $bf(F)(x,y,z) = angle.l cos(z^2) - x, sin(z^2) - y, 2z angle.r$.
+  Let $bf(F)(x,y,z) = chevron.l cos(z^2) - x, sin(z^2) - y, 2z chevron.r$.
   Compute the flux of $bf(F)$ through $cal(S)$.
   (Recommended approach: sealing.)
 ] <exer-flux-sealing>

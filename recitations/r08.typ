@@ -34,7 +34,7 @@ Because there's pretty much only one thing you need to ever do:
   *TLDR Just always use components.*
 ]
 That is, if $F : RR -> RR^3$ (say), basically 90%+ of the time what you do is write
-$ F(t) = angle.l f_1(t), f_2(t), f_3(t) angle.r
+$ F(t) = chevron.l f_1(t), f_2(t), f_3(t) chevron.r
   = f_1(t) bf(e)_1 + f_2(t) bf(e)_2 + f_3(t) bf(e)_3 $
 and then just do single-variable calculus or calculations on each $f_i$.
 Need to differentiate $F$? Differentiate each component.
@@ -51,7 +51,7 @@ some curve that has two different things influencing it.
 The cycloid you saw in class was one hard-ish example of this.
 The curve looked scary.
 But you just ignore the shape, and just think about the equation
-$ bf(r)(t) = angle.l t v , a angle.r + angle.l a cos theta(t), a sin theta(t) angle.r. $
+$ bf(r)(t) = chevron.l t v , a chevron.r + chevron.l a cos theta(t), a sin theta(t) chevron.r. $
 Working out the angle is a bit annoying;
 but the point is no calculus or theory is involved, just work out the geometry.
 Then when you want the velocity, just differentiate $bf(r)(t)$, and so on.

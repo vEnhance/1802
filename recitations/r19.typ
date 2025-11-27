@@ -63,9 +63,9 @@ with some density $delta$.
 So let's suppose we have a solid mass occupying region $cal(R)$.
 In that case, each individual point $P=(x,y,z)$ in $cal(R)$ can be thought of as contributing
 $ (G m dot (delta(x,y,z) dif V))/(x^2+y^2+z^2) dot
-  underbrace((angle.l x,y,z angle.r) / (sqrt(x^2+y^2+z^2)), "unit vector from" O "to" P). $
+  underbrace((chevron.l x,y,z chevron.r) / (sqrt(x^2+y^2+z^2)), "unit vector from" O "to" P). $
 Integrating over all of $cal(R)$ gives
-a gravitational vector $bf(G) = angle.l G_1, G_2, G_3 angle.r$ defined by
+a gravitational vector $bf(G) = chevron.l G_1, G_2, G_3 chevron.r$ defined by
 $
   G_1 &:= G m iiint_(cal(R)) (x delta(x,y,z))/((x^2+y^2+z^2)^(3/2)) dif x dif y dif z \
   G_2 &:= G m iiint_(cal(R)) (y delta(x,y,z))/((x^2+y^2+z^2)^(3/2)) dif x dif y dif z \

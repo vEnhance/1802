@@ -39,7 +39,7 @@ We'll also use different notation for actual elements:
 
 #typesig[
 - A vector will either be written in column format like $vec(1,2,3)$,
-  or with angle brackets as $angle.l 1,2,3 angle.r$ if the column format is too tall to fit.
+  or with angle brackets as $chevron.l 1,2,3 chevron.r$ if the column format is too tall to fit.
 - But a point will always be written with parentheses like $(1,2,3)$.
 ]
 
@@ -71,7 +71,7 @@ Some vectors in $RR^3$ are special enough to get their own shorthand.
   - If three dimensions:
     $ bf(v) = vec(x,y,z) ==> |bf(v)| := sqrt(x^2+y^2+z^2). $
 
-  In $n$ dimensions, if $bf(v) = angle.l a_1, ..., a_n angle.r$,
+  In $n$ dimensions, if $bf(v) = chevron.l a_1, ..., a_n chevron.r$,
   the length is $|bf(v)| := sqrt(a_1^2 + ... + a_n^2)$.
 ]
 

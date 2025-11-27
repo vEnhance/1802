@@ -62,10 +62,10 @@ both the third and fourth column and multiply them together.
     [$z = f(x,y)$],
       [$(x,y)$],
       [$frac(
-        lr(angle.l - (partial f) / (partial x), - (partial f) / (partial y), 1 angle.r),
+        lr(chevron.l - (partial f) / (partial x), - (partial f) / (partial y), 1 chevron.r),
         sqrt(1 + ((partial f) / (partial x))^2 + ((partial f) / (partial y))^2))$],
       [$sqrt(1 + ((partial f) / (partial x))^2 + ((partial f) / (partial y))^2) \ dif x dif y$],
-      [$lr(angle.l - (partial f) / (partial x), - (partial f) / (partial y), 1 angle.r) \ dif x dif y$],
+      [$lr(chevron.l - (partial f) / (partial x), - (partial f) / (partial y), 1 chevron.r) \ dif x dif y$],
     [$g(x,y,z) = c$],
       [$(x,y)$],
       [$ (nabla g) / (|nabla g|) $],
@@ -73,9 +73,9 @@ both the third and fourth column and multiply them together.
       [$ (nabla g) / (partial g slash partial z) dif x dif y $],
     [Cylindrical coords with fixed $R$],
       [$(theta, z)$],
-      [$angle.l cos theta, sin theta, 0 angle.r$],
+      [$chevron.l cos theta, sin theta, 0 chevron.r$],
       [$R dif theta dif z$],
-      [$angle.l R cos theta, R sin theta, 0 angle.r \ dif theta dif z$],
+      [$chevron.l R cos theta, R sin theta, 0 chevron.r \ dif theta dif z$],
     [Spherical coords with fixed $R$],
       [$(phi, theta)$],
       [$1/R dot bf(r)(phi, theta)$\ (if $0 <= phi <= pi$)],
@@ -113,9 +113,9 @@ of $upright(bold(n)) dif S$ before applying to the example at hand.
 
 / 1.: Let $S$ be the portion of the cone $z = sqrt(x^2 + y^2)$ lying in the
   region $1 lt.eq z lt.eq 2$. Compute the upward flux of
-  $upright(bold(V)) = angle.l x , y , 2 z angle.r$ through $S$.
+  $upright(bold(V)) = chevron.l x , y , 2 z chevron.r$ through $S$.
 
-/ 2.: Find the flux of $upright(bold(V)) = angle.l z , x , y angle.r$ outward through the
+/ 2.: Find the flux of $upright(bold(V)) = chevron.l z , x , y chevron.r$ outward through the
   portion of the cylinder $x^2 + y^2 = 100$ in the first octant and below
   the plane $z = h .$
 

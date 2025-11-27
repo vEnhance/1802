@@ -9,7 +9,7 @@
 We take the parametrization
 $ bf(r)(t) = (t, t^2-t-12) quad -3 <= t <= 4. $
 The derivative is
-$ bf(r)'(t) = angle.l 1, 2t-1 angle.r quad -3 <= t <= 4. $
+$ bf(r)'(t) = chevron.l 1, 2t-1 chevron.r quad -3 <= t <= 4. $
 Hence, the arc length in the problem is given by
 $ L = int_(t=-3)^4 sqrt(1 + (2t-1)^2) dif t. $
 

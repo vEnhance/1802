@@ -99,9 +99,9 @@ To find the equation of the tangent plane at the point $(1 , 2 , 3)$,
 we first compute the gradient of the function
 $ F (x , y , z) = x^2 + y^2 + z^2 - 14 . $
 The gradient is:
-$ nabla F = angle.l 2 x , 2 y , 2 z angle.r . $
+$ nabla F = chevron.l 2 x , 2 y , 2 z chevron.r . $
 Evaluating at $(1 , 2 , 3)$:
-$ nabla F (1 , 2 , 3) = angle.l 2, 4, 6 angle.r. $
+$ nabla F (1 , 2 , 3) = chevron.l 2, 4, 6 chevron.r. $
 Hence the tangent plane should be given by
 $ 2 x + 4 y + 6 z = c $
 for some number $c$.

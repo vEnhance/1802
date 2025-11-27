@@ -32,13 +32,13 @@ Here's a picture of a leftover poster taped up in my room.
 #recall-thm(<exer-gravity-div1>)
 
 Recall that the gravity vector field is given by
-$ bf(G) = lr(angle.l
+$ bf(G) = lr(chevron.l
   (-G m x)/((x^2+y^2+z^2)^(3/2)),
   (-G m y)/((x^2+y^2+z^2)^(3/2)),
   (-G m z)/((x^2+y^2+z^2)^(3/2))
-  angle.r) $
+  chevron.r) $
 For brevity, we let $rho = sqrt(x^2+y^2+z^2)$,
-$ bf(G) = lr(angle.l (-G m x)/(rho^3), (-G m y)/(rho^3), (-G m z)/(rho^3) angle.r). $
+$ bf(G) = lr(chevron.l (-G m x)/(rho^3), (-G m y)/(rho^3), (-G m z)/(rho^3) chevron.r). $
 Ignoring the constant factor $G m$, we start by
 calculating the derivative of the first component with respect to $x$, that is:
 $ (partial)/(partial x) x / rho^3. $
@@ -124,7 +124,7 @@ Yes, because
 $ (partial)/(partial y) sin(e^x) &= 0 \
   (partial)/(partial x) arctan(y^pi+pi^y) &= 0. $
 In general, the point of this exercise is that every vector field of the form
-$bf(F)(x,y) = angle.l "stuff only involving" x, "stuff only involving" y angle.r$
+$bf(F)(x,y) = chevron.l "stuff only involving" x, "stuff only involving" y chevron.r$
 is always conservative, because the relevant partial derivatives are both $0$.
 
 == Solution to @exer-work-boring (work exercise)
@@ -184,10 +184,10 @@ $ oint_(cal(C)) x dif y = sum_(i = 0)^(n-1) int_("From" P_i "to" P_(i + 1)) x di
 
 Let's parametrize the segment joining $(x_i, y_i)$ to $(x_(i+1), y_(i+1))$
 by just the constant speed parametrization taking unit time:
-$ bf(r)(t) = angle.l
+$ bf(r)(t) = chevron.l
   (1 - t) x_i + t x_(i + 1),
   (1 - t) y_i + t y_(i + 1)
-  angle.r quad 0 <= t <= 1. $
+  chevron.r quad 0 <= t <= 1. $
 Thus,
 $ bf(F)(bf(r))(t) &= vec(0, (1 - t) x_i + t x_(i + 1)) \
   bf(r)'(t) &= vec( x_(i+1) - x_i, y_(i+1) - y_i ) $
@@ -349,7 +349,7 @@ You could compute the potential function $f(x,y) = x^2/2+C$ if you want, but it'
 In the second part, $bf(F) = vec(y,0)$ is not conservative.
 Let's say you didn't come up with the idea in the slick solution.
 Then you could still compute the integral manually by taking
-$ bf(r)'(t) = angle.l cos(t), cos(t) angle.r $
+$ bf(r)'(t) = chevron.l cos(t), cos(t) chevron.r $
 so the line integral is given by
 $ int_(t=0)^(2pi) bf(F)(sin(t), sin(t)) dot bf(r)'(t) dif t
   = int_(t=0)^(2pi) sin(t) cos(t) dif t. $
@@ -365,7 +365,7 @@ This integral is $0$; here are many ways to evaluate it.
   $ int_(t=0)^(2pi) sin(t) cos(t) dif t = int_(t=0)^(2pi) sin(2t)/2 dif t = [-cos(2t)/4]_(t=0)^(2pi) = 0. $
 5. If you are allergic to trig functions, a fifth approach is to remember that
   line integrals don't depend on the exact parametrization.
-  So rather than using $bf(r)(t) = angle.l sin(t), sin(t) angle.r$,
+  So rather than using $bf(r)(t) = chevron.l sin(t), sin(t) chevron.r$,
   you could imagine cutting the butterfly's motion into three constant-velocity trajectories:
   - $bf(r)_1(t) = (t,t)$ for $0 <= t <= 1$
   - $bf(r)_2(t) = (1-t,1-t)$ for $0 <= t <= 2$
@@ -427,7 +427,7 @@ Hence the answers are $ k = #boxed[$ pm sqrt(3) / 2 " or " pm sqrt(5) / 2 $]. $
 First, we sketch the region.
 The condition $x^2 + y^2 <= 9$ represents a circle of radius $3$ centered at the origin.
 The inequality $y >= 0$ and $y >= sqrt(3) lr(|x|)$
-cuts out a wedge covering the top half of the circle within the angle range
+cuts out a wedge covering the top half of the circle within the chevron.range
 $pi / 3 <= theta <= (2 pi) / (3)$ in polar coordinates.
 See @fig-mt3-slice.
 

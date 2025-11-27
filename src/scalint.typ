@@ -164,8 +164,8 @@ Here is a really ugly example to start, to give you some practice with spherical
   $ 0 <= theta <= 2 pi quad "and" quad 0 <= phi <= pi $
   for our region $cal(R)$.
   The partial derivatives are thus
-  $ frac(partial bf(r), partial phi) &= angle.l cos phi cos theta , cos phi sin theta , - sin phi angle.r \
-    frac(partial bf(r), partial theta) &= angle.l - sin phi sin theta , sin phi cos theta , 0 angle.r. $
+  $ frac(partial bf(r), partial phi) &= chevron.l cos phi cos theta , cos phi sin theta , - sin phi chevron.r \
+    frac(partial bf(r), partial theta) &= chevron.l - sin phi sin theta , sin phi cos theta , 0 chevron.r. $
   We brute force our way through the entire cross product.
   We have
   $ frac(partial bf(r), partial phi) times frac(partial bf(r), partial theta)
@@ -229,11 +229,11 @@ And here is an example that is a little less computationally intensive.
 
   Compute the partial derivatives of $bf(r)$ with respect to $x$ and $y$:
   $ frac(partial bf(r), partial x)
-    &= lr(angle.l (partial x) / (partial x) , (partial y) / (partial x) , (partial z) / (partial x) angle.r)
-    = lr(angle.l 1 , 0 , x / sqrt(x^2 + y^2) angle.r) \
+    &= lr(chevron.l (partial x) / (partial x) , (partial y) / (partial x) , (partial z) / (partial x) chevron.r)
+    = lr(chevron.l 1 , 0 , x / sqrt(x^2 + y^2) chevron.r) \
     frac(partial bf(r), partial y)
-    &= lr(angle.l (partial x) / (partial y) , (partial y) / (partial y) , (partial z) / (partial y) angle.r)
-    = lr(angle.l 0 , 1 , y / sqrt(x^2 + y^2) angle.r). $
+    &= lr(chevron.l (partial x) / (partial y) , (partial y) / (partial y) , (partial z) / (partial y) chevron.r)
+    = lr(chevron.l 0 , 1 , y / sqrt(x^2 + y^2) chevron.r). $
   Hence the cross product is
   $ frac(partial bf(r), partial x) times frac(partial bf(r), partial y)
     &= detmat(
@@ -242,7 +242,7 @@ And here is an example that is a little less computationally intensive.
       0 , 1 , y / sqrt(x^2 + y^2)) \
     &= (0 dot y / sqrt(x^2 + y^2) - 1 dot x / sqrt(x^2 + y^2)) ee_1 - (1 dot y / sqrt(x^2 + y^2) - 0 dot x / sqrt(x^2 + y^2)) ee_2 \
     &#h(6em) + (1 dot 1 - 0 dot 0) ee_3 \
-    &= lr(angle.l - x / sqrt(x^2 + y^2) , - y / sqrt(x^2 + y^2) , 1 angle.r) $
+    &= lr(chevron.l - x / sqrt(x^2 + y^2) , - y / sqrt(x^2 + y^2) , 1 chevron.r) $
   Now, compute the magnitude of this cross product:
   $ lr(|frac(partial bf(r), partial x) times frac(partial bf(r), partial y)|) &= sqrt((- x / sqrt(x^2 + y^2))^2 + (- y / sqrt(x^2 + y^2))^2 + 1^2) \
     &= sqrt((x^2) / (x^2 + y^2) + (y^2) / (x^2 + y^2) + 1) = sqrt(2). $
@@ -254,7 +254,7 @@ And here is an example that is a little less computationally intensive.
 
 #exer[
   Consider a surface $cal(S)$ given by the parametrization $bf(r) : RR^2 -> RR^3$ defined by
-  $ bf(r)(u,v) = angle.l u-v, u+v, u v angle.r $
+  $ bf(r)(u,v) = chevron.l u-v, u+v, u v chevron.r $
   for all $(u,v)$ in $RR^2$.
   Compute the tangent plane to $cal(S)$ at the point $(3, 7, 10)$.
 ] <exer-surf-tangent>

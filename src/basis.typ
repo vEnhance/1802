@@ -311,7 +311,7 @@ What you are probably gathering from all these examples is that the span _also_
 has a concept of dimension: for example in $RR^3$,
 we saw an example of
 
-- a 0-dimensional span, just the single point $angle.l 0,0,0 angle.r$.
+- a 0-dimensional span, just the single point $chevron.l 0,0,0 chevron.r$.
 - a 1-dimensional span, the line consisting of multiples of $vec(1,2,3)$
 - a 2-dimensional span, the plane $x + y = z$.
 - a 3-dimensional span if you have a full basis.
@@ -586,7 +586,7 @@ Examples of what I mean when I say "tell by looking" for $n=2$:
 ] <exer-basis-birthday>
 
 #exer[
-  In $RR^5$, consider the vector $bf(v) = angle.l 1,2,3,4,5 angle.r$.
+  In $RR^5$, consider the vector $bf(v) = chevron.l 1,2,3,4,5 chevron.r$.
   Compute the maximum possible number of linearly independent vectors one can find
   which are all perpendicular to $bf(v)$.
 ] <exer-basis-perpbasis>
