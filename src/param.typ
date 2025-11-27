@@ -592,7 +592,7 @@ Usually the strategy is to pick one that makes subsequent calculation easier.
 
 #sample[
   Let $cal(C)$ be the $120 degree$ arc of the unit circle starting from $(0, -1)$
-  and ending at $(1/2, sqrt(3)/2)$, going counterclockwise.
+  and ending at $(sqrt(3)/2, 1/2)$, going counterclockwise.
   (See @fig-param-arc.)
   Give any parametrization $bf(r)(t)$ for $cal(C)$.
 ]
