@@ -608,7 +608,7 @@ Usually the strategy is to pick one that makes subsequent calculation easier.
   - $bf(r)(t) = (cos t, sin t)$ for $3/2 pi <= t <= 13/6 pi$,
     if you insist on using nonnegative $t$.
   - $bf(r)(t) = (cos(t + 3/2 pi), sin (t + 3/2 pi))$ for $0 <= t <= 2/3 pi$.
-  - $bf(r)(t) = (sqrt(1-t^2), t)$ for $-1 <= t<= sqrt(3)/2$ (not recommended).
+  - $bf(r)(t) = (sqrt(1-t^2), t)$ for $-1 <= t<= 1/2$ (not recommended).
 
   Again, I recommend the simplest (first) one.
 ]
