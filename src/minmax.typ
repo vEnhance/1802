@@ -253,7 +253,7 @@ and examples where the algebra is much more involved.
         align: left + horizon,
         stroke: 0.5pt,
         [], [Top eqn.~gives $y=0$], [Top eqn.~gives $2x+y=6$],
-        [Bottom eqn.~gives $x=0$], [$cases(y=0, x=0) ==> (x,y) = (0,0)$], [$cases(2x+y=6 \ x=0) ==> (x,y) = (0,6)$],
+        [Bottom eqn.~gives $x=0$], [$cases(y=0, x=0) ==> (x,y) = (0,0)$], [$cases(2x+y=6, x=0) ==> (x,y) = (0,6)$],
         [Bottom eqn.~gives $x+2y=6$], [$cases(y=0, x+2y=6) ==> (x,y)=(6,0)$], [$cases(2x+y=6, x+2y=6) ==> (x,y) = (2,2)$]
       ),
     ]
