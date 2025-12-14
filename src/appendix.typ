@@ -80,6 +80,15 @@ These notes are still in the first stage.
 The introduction-to-proofs class at your school
 will essentially be the beginning of the second stage.
 
+I also really like the following picture from
+#link("https://mathwithbaddrawings.com/2015/12/16/good-mathematician-vs-great-mathematician/")[Math with Bad Drawings]:
+
+#figure(
+  image("media/int-rigor.webp", width: 90%),
+  caption: [From
+    #url("https://mathwithbaddrawings.com/2015/12/16/good-mathematician-vs-great-mathematician/").],
+) <fig-intuitive-rigor>
+
 #pagebreak()
 
 = Proofs of the dot product property
