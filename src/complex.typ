@@ -415,3 +415,8 @@ So to summarize, @tab-complex tells you rules of thumb for complex numbers.
   Without a calculator, give an example of an ordered pair $(a,b)$ of integers satisfying
   $ a^2 + b^2 = 101 dot 401 dot 901. $
 ] <exer-complex-101-401-901>
+
+#exer[
+  Calculate
+  $ arctan 1/1 + arctan 1/2 + arctan 1/3. $
+] <exer-arctan-123>

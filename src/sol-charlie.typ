@@ -10,16 +10,27 @@ The idea is to consider the complex number
 $ (10+i)(20+i)(30+i) = (199 + 30i)(30+i) = 5940 + 1099 i. $
 Hence one possible choice is $ #boxed[$ (a,b) = (5940, 1099). $] $
 
+== Solution to @exer-arctan-123 ($arctan 1/1 +arctan 1/2 +arctan 1/3$)
+
+#recall-thm(<exer-arctan-123>)
+
+The answer is $pi / 2 = 90 degree$.
+The point is that each of the arctangents is an acute angle in $(0, 90 degree)$,
+and the sum of the angles will match the argument of the complex number
+$ z = (1+i)(2+i)(3+i). $
+That is, the complex arguments of $1+i$, $2+i$, $3+i$
+are $arctan 1/1$, $arctan 1/2$, and $arctan 1/3$ respectively,
+and the argument $z$ will hence be the sum of those three acute angles.
+
+However, we can can compute $z$ by direct multiplication:
+$ z = (1+i)(2+i)(3+i) = (1+3i)(3+i) = 10i. $
+Because this number is pure imaginary its argument is $90 degree$ as needed.
+
 == Solution to @exer-mt1p1 (projection onto plane)
 
 #recall-thm(<exer-mt1p1>)
 
 *Answer*: $vec(1/2, 3/2, -1)$.
-
-#figure(
-  image("figures/bonus1p1.svg", width: 70%),
-  caption: [Projection onto a plane.],
-) <fig-bonus1p1>
 
 #h3[First approach using vector projection]
 
@@ -36,6 +47,11 @@ $ (op("comp")_(bf(n)) (bf(v))) (bf(n))/(|bf(n)|)
   = vec(7/2,7/2,7). $
 Then the desired projection is
 $ bf(v) - op("proj")_(bf(n)) (bf(v)) = vec(1/2, 3/2, -1). $
+
+#figure(
+  image("figures/bonus1p1.svg", width: 70%),
+  caption: [Projection onto a plane.],
+) <fig-bonus1p1>
 
 #h3[Second approach using normal vectors only (no projection stuff)]
 
@@ -255,11 +271,6 @@ which has trace $0+0=0$.
 
 *Answer*: $(3 sqrt(3))/4 root(3, 61)$.
 
-#figure(
-  image("figures/bonus1p6.svg", width: 60%),
-  caption: [Three solutions to $z^3 = 5+6i$],
-) <fig-bonus1p6>
-
 We start by converting the complex number $5 + 6 i$ into polar form.
 The modulus $r$ of $5 + 6 i$ is:
 $ r = lr(|5 + 6 i|) = sqrt(5^2 + 6^2) = sqrt(25 + 36) = sqrt(61). $
@@ -276,6 +287,11 @@ This looks like an equilateral triangle centered around the origin,
 where each spoke coming from the origin has magnitude $s$, where
 $ s = root(6, 61). $
 See @fig-bonus1p6.
+
+#figure(
+  image("figures/bonus1p6.svg", width: 60%),
+  caption: [Three solutions to $z^3 = 5+6i$],
+) <fig-bonus1p6>
 
 If we cut up the equilateral triangle by the three arrows above,
 we get three small isosceles triangles with a $120 degree$ angle at the apex.
