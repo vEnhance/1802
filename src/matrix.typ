@@ -220,8 +220,8 @@ Now, what do you think happens if you compute
 $ mat(1,2;3,4) vec(50,70) $
 as you were taught in high school?
 Surprise: you get
-$ mat(1,2;3,4) vec(50,70) = vec(1 dot 50 + 2 dot 70, 3 dot 50 + 4 dot 70) = vec(190, 340)$
-which is not just the same answer, but also the same intermediate calculations.
+$ mat(1,2;3,4) vec(50,70) = vec(1 dot 50 + 2 dot 70, 3 dot 50 + 4 dot 70) = vec(190, 430). $
+This is not just the same answer, it uses the same intermediate calculations.
 In other words,
 #idea[
   If one multiplies a matrix $M$ by a column vector $bf(v)$,
@@ -235,13 +235,13 @@ So let's play the same game with a pair of functions $S$ and $T$,
 and think about their composition $S compose T$.
 Imagine we got asked the following question:
 
-#ques[
+#sample[
   Let $T : RR^2 -> RR^2$ be a linear transform such that
   $ T( vec(1,0) ) = vec(1, 3) " and " T( vec(0,1) ) = vec(2, 4). $
   Then let $S : RR^2 -> RR^2$ be the linear transform such that
   $ S( vec(1,0) ) = vec(5, 7) " and " S( vec(0,1) ) = vec(6, 8). $
   Evaluate $S(T(vec(1, 0)))$ and $S(T(vec(0, 1)))$.
-] <pop3>
+]
 #soln[
   $
   S(T(vec(1, 0))) = S(vec(1, 3)) = 1 vec(5,7) + 3 vec(6, 8) = vec(23, 31) \
@@ -250,7 +250,7 @@ Imagine we got asked the following question:
 ]
 
 Now, $S compose T$ is _itself_ a function, so it makes sense to encode $S compose T$ as a matrix
-too, using the answer to @pop3:
+too, using the answer to the previous sample question:
 $
   S(T(vec(1, 0))) = vec(23, 31) " and "
   S(T(vec(0, 1))) = vec(34, 46)
@@ -274,7 +274,7 @@ This shows why the 18.700/18.701 definitions are better than the 18.02 ones.
 In 18.02, the recipe for matrix multiplication is a _definition_:
 "here is this contrived rule about taking products of columns and rows, trust me bro".
 But in 18.700/18.701, the matrix multiplication recipe is a _theorem_;
-it's what happens if you generalize @pop3 to eight variables
+it's what happens if you generalize the sample question to eight variables
 (or $n^2+n^2 = 2n^2$ variables for $n times n$ matrices).
 
 #digression[
