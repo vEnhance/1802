@@ -322,8 +322,9 @@ in return for the short time limit.
   Ritwin Narra,
   Rohan Garg,
   Romano Emmanuelle,
-  Royce Yao, and
-  Ryan Pang
+  Royce Yao
+  Ryan Pang, and
+  Siddhanta Mishra
   for many corrections.
   (Your name could be here too --- find me some typos!
   If you know how to open a GitHub pull request,
