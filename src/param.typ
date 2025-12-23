@@ -468,7 +468,7 @@ Let's see this.
   $ bf(P) (t) = vec(v t - r sin (v / r t) , r - r cos (v / r t)) $
   for a cycloid.
   For $v = 1$ and $r = 1$ this is
-  $ bf(P) (t) = vec(t - sin (t) , r - r cos (t)). $
+  $ bf(P) (t) = vec(t - sin (t) , 1 - 1 cos (t)). $
   We differentiate to get the velocity vector
   $ bf(P)' (t) = vec(1 - cos (t) , sin (t)). $
   Ergo, the arc length is given by the formula
