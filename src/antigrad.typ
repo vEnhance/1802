@@ -72,7 +72,7 @@ Let's do a two-variable example first.
   $ (partial f) / (partial x) = x + cos y quad upright("and") quad (partial f) / (partial y) = - x sin y. $
 
   Integrate $(partial f) / (partial x)$ and $(partial f) / (partial y)$ with respect to $x$ and $y$:
-  $ f (x , y) & = int (partial f) / (partial x) dif x = int cos y dif x  = x^2/2 + x cos y + C_1 (y). \
+  $ f (x , y) & = int (partial f) / (partial x) dif x = int x + cos y dif x  = x^2/2 + x cos y + C_1 (y). \
     f (x , y) & = int (partial f) / (partial y) dif y = int - x sin y dif y  = x cos y + C_2(x). $
   Stitching these together to get the final expression for $f (x , y)$ as:
   $ f (x , y) = #boxed($ x^2/2 + x cos y + C $) $
