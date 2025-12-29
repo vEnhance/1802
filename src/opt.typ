@@ -208,7 +208,7 @@ to "LM-critical point".
 
   0. The region $cal(R)$ is two-dimensional, consisting of strict inequalities
     $x, y, z > 0$ and the condition $g(x,y,z) = x y z = 8$.
-    So there is no boundary, but there are limit cases if any variables approaches $0$ or $+oo$.
+    So there is no boundary, but there are limit cases if any variables approaches $0^+$ or $+oo$.
   1. To find the LM-critical points, we need to compute both $nabla f$ and $nabla g$.
     We do so:
     $ nabla f (x,y,z) &= vec(1,1,1) \ nabla g &= (y z, z x, x y). $
@@ -236,7 +236,7 @@ to "LM-critical point".
   3. The region $cal(R)$ has limit cases when any of the variables $x,y,z$
     either approach $0$ or $+oo$.
     However, remember that $x y z = 8$.
-    So if any variable approaches $0$, some other variable must become large.
+    So if any variable approaches $0^+$, some other variable must become large.
     Consequently, in every limit case, we find that $f -> +oo$.
 
   Collating all these results:
