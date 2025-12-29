@@ -66,7 +66,7 @@ Later on we'll do more examples where Step 2 and Step 3 are more intricate.
   so we're in the easy case and the recipe applies here.
   We check all the points in turn:
 
-  0. $cal(R)$ has no boundary and limit cases when any variable approaches $0^+$ or $+oo$.
+  0. $cal(R)$ has no boundary and limit cases when any variable approaches $0$ or $+oo$.
   1. To find the critical points, calculate the gradient
     $ nabla f (x,y) = vec(1 - 8 / (x^2 y), 1 - 8 / (x y^2)) $
     and then set it equal to $vec(0,0)$.
