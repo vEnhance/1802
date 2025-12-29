@@ -157,7 +157,7 @@ Now we check the cases:
   So every lattice point is indeed a saddle point.
 
 - At any point of the form $(m + 1/2, n + 1/2)$, we have $A = C = pm pi^2$ and $B = 0$,
-  so $A C - B^2 = pi^4 < 0$.
+  so $A C - B^2 = pi^4 > 0$.
   Hence there are no saddle points here.
 
 == Solution to @exer-opt-geo (geometry optimization)
