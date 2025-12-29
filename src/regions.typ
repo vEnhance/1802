@@ -92,7 +92,7 @@ The three that you should care about for this class are the following:
 ]
 
 - The *boundary* is usually the points you get when you choose any one of the $<=$ and $>=$
-  constraints and turn it into and $=$ constraint.
+  constraints and turn it into an $=$ constraint.
   For example, the boundary of the region cut out by $-1 <= x <= 1$ and $-1 <= y <= 1$
   (which is a square of side length $2$)
   are the four sides of the square, where either $x = pm 1$ or $y = pm 1$.
