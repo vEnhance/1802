@@ -313,17 +313,19 @@ in return for the short time limit.
   Aaryan Vaishya,
   Alan Cheng,
   Alexander Wang,
+  Ashwin Shekhar,
   Calvin Wang,
   Daniel Kim,
   Emma Jakubicka,
   John Zhou,
   Leo Xu,
+  Max Li,
   Nick Zhang,
   Rémi Geron,
   Ritwin Narra,
   Rohan Garg,
   Romano Emmanuelle,
-  Royce Yao
+  Royce Yao,
   Ryan Pang, and
   Siddhanta Mishra
   for many corrections.
