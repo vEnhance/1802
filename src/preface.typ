@@ -326,7 +326,8 @@ in return for the short time limit.
   Rohan Garg,
   Romano Emmanuelle,
   Royce Yao,
-  Ryan Pang, and
+  Ryan Pang,
+  Shivsai Sharda, and
   Siddhanta Mishra
   for many corrections.
   (Your name could be here too --- find me some typos!
