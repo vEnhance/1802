@@ -536,8 +536,8 @@ using the word "determinant" in place of "basis".
 #recipe(title: [Recipe for computing the number of solutions to a system of equations])[
   Suppose you are asked to find the number of solutions to a square system
   $
-    a_11 x_1 + a_12 x_2 + ... + a_1n x_n &= b_1 \
-    a_21 x_1 + a_22 x_2 + ... + a_2n x_n &= b_2 \
+    a_11 x_1 + a_12 x_2 + ... + a_(1n) x_n &= b_1 \
+    a_21 x_1 + a_22 x_2 + ... + a_(2n) x_n &= b_2 \
     &dots.v \
     a_(n 1) x_1 + a_(n 2) x_2 + ... + a_(n n) x_n &= b_n.
   $

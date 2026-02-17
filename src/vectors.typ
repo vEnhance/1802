@@ -230,7 +230,7 @@ But the sign carries a bit more information.
     detmat(x_2, x_1; y_2, y_1) = -"area". $
 
 - In 3D, the convention follows the right-hand rule:
-  suppose vectors $bf(v)_1$, $bf(v)_2$, $bf(v)_3$ are given it that order.
+  suppose vectors $bf(v)_1$, $bf(v)_2$, $bf(v)_3$ are given in that order.
   Curl the fingers of your right hand from $bf(v)_1$ to $bf(v)_2$;
   then the signed volume is positive if your thumb points in the direction of $bf(v)_3$
   (as in @fig-parallelepiped, for example) and negative otherwise.
