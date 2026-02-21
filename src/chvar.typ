@@ -97,7 +97,7 @@ and then worry about the integration later.
 The key idea is that we need to rig our transition function such that
 $ u = y / x, #h(2em) v = x y $
 so that our two inequalities we saw earlier are just
-$  1/4 <= v <= 4, #h(2em)  16/25 <= v <= 16/9. $
+$  1/4 <= u <= 4, #h(2em)  16/25 <= v <= 16/9. $
 This lets us make a portrayal of the yellow region as a sheet of paper.
 See @fig-chvar-trans, which is really important to us!
 
