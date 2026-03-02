@@ -80,7 +80,7 @@ $ vec(x,y) - vec(pi,0) " is perpendicular to " (1,2) $
 or do the same thing for any point on the line, like
 $ vec(x,y) - vec(0, pi slash 2) " is perpendicular to " (1,2) $
 or even
-$ vec(x,y) - vec(0.218 pi, 0.564 pi) " is perpendicular to " (1,2) $
+$ vec(x,y) - vec(0.218 pi, 0.391 pi) " is perpendicular to " (1,2) $
 But that's silly. Most of the time you don't care about base points.
 All you care if you want the line have the specific slope $-1/2$,
 and for that the LHS just needs to be $x + 2y$ (or even $100 x + 200 y$).
