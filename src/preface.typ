@@ -328,8 +328,9 @@ in return for the short time limit.
   Romano Emmanuelle,
   Royce Yao,
   Ryan Pang,
-  Shivsai Sharda, and
-  Siddhanta Mishra
+  Shivsai Sharda,
+  Siddhanta Mishra, and
+  WeAreTitan
   for many corrections.
   (Your name could be here too --- find me some typos!
   If you know how to open a GitHub pull request,
