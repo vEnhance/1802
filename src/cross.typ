@@ -359,9 +359,9 @@ A brief summary of the last few chapters.
 
 - Both are used in the theory of planes:
   - We use the dot product to show that the normal vector
-    to the plane $a x + b y + c z = d$ was the vector $vec(a,b,c)$.
+    to the plane $a x + b y + c z = d$ is the vector $vec(a,b,c)$.
   - We use the projection from the dot product to find the distance from a point to a plane.
-  - Given three points on a plane, the cross product let us find the normal vector.
+  - Given three points on a plane, the cross product lets us find the normal vector.
 
 See also @table-vector-objects, which summarizes some of the vectors
 we've seen in applications.
