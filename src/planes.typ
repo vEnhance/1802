@@ -130,7 +130,7 @@ This just means you have to pick the number $d$ to match:
   Compute the equation of the plane parallel to $x + 2 y + 3 z = 100$
   which passes through the point $(1, 4, 9)$.
 ]
-#solution[
+#soln[
   Planes are parallel when they have normal vectors in the same direction,
   so we use the normal vector $vec(1,2,3)$ for both.
   Hence the answer should take the form $ x + 2 y + 3 z = d $ for some $d$.
