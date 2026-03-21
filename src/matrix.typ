@@ -29,10 +29,10 @@ I wouldn't worry too much about the axioms until later; for now, read the exampl
 #example(title: [Examples of linear transformations])[
   The following are all linear transformations from $RR^2$ to $RR^2$:
 
-  - The constant function where $T(bf(v)) = bf(0)$ for every vector $v$
+  - The constant function where $T(bf(v)) = bf(0)$ for every vector $bf(v)$.
   - Projection onto the $x$-axis: $T(vec(x,y)) = vec(x,0)$.
-  - Rotation by an angle
-  - Reflection across a line
+  - Rotation by an angle.
+  - Reflection across a line.
   - Projection onto the line $y = x$.
   - Multiplication by any $2 times 2$ matrix, e.g. the formula
     $ T(vec(x,y)) = vec(x+2y,3x+4y) $
