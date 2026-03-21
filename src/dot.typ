@@ -176,10 +176,12 @@ This purple vector is typically written $op("proj")_(bf(w))(bf(v))$.
 ]
 
 Let's do an example to see how the dot product lets us compute this.
-#example[
+#sample[
   Suppose $bf(v) = vec(2,3)$ and $bf(w) = vec(4,1)$, as in @fig-dot-project1.
-  How can we find the purple vector $op("proj")_(bf(w))(bf(v))$?
+  Find the vector $op("proj")_(bf(w))(bf(v))$.
 ]
+
+See the purple vector in @fig-dot-project1.
 
 #figure(
   image("figures/dot-proj1.svg", width: auto),
