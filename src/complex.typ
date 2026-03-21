@@ -5,7 +5,7 @@
 == [TEXT] It's a miracle that multiplication in $CC$ has geometric meaning
 
 Let $CC$ denote the set of complex numbers (just as $RR$ denotes the real numbers).
-It's important that realize that, *until we add in complex multiplication,
+It's important to realize that, *until we add in complex multiplication,
 $CC$ is just an elaborate $RR^2$ cosplay*.
 
 #figure(
@@ -294,7 +294,7 @@ $ z^5 = 243 i $ to start.
 Again, first we want to convert everything to polar coordinates:
 $ z^5 = 243 i = 243 (cos 90 degree + i sin 90 degree). $
 At this point, we know that if $|z^5| = 243$, then $|z| = 3$;
-all the answers should have absolute $3$.
+all the answers should have an absolute value of $3$.
 So the idea is to find the angles.
 Here are the five answers:
 
