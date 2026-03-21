@@ -330,7 +330,7 @@ in return for the short time limit.
   Ryan Pang,
   Shivsai Sharda,
   Siddhanta Mishra, and
-  WeAreTitan
+  Teruma Kawakubo
   for many corrections.
   (Your name could be here too --- find me some typos!
   If you know how to open a GitHub pull request,
