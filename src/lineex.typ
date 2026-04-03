@@ -112,7 +112,7 @@ since $int_(t=0)^(2 pi) sin 2 t$ is an integral over two full periods of the sin
 We use the same vector field, but this time we parametrize our line segment
 $ bf(r)(t) = vec(1+2t, 4+5t) quad 0 <= t <= 1 $
 so
-$ bf(r)'(t) = vec(2,5) quad 0 <= t <= 2pi. $
+$ bf(r)'(t) = vec(2,5) quad 0 <= t <= 1. $
 
 This time, our table looks like this:
 
