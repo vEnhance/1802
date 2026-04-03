@@ -286,7 +286,7 @@ Here in both cases we have to bite the bullet --- none of our shortcuts apply.
 As before we use the parametrization
 $ bf(r)(t) = vec(1+2t, 4+5t) quad 0 <= t <= 1 $
 with
-$ bf(r)'(t) = vec(2,5) quad 0 <= t <= 2pi. $
+$ bf(r)'(t) = vec(2,5) quad 0 <= t <= 1. $
 
 #figure(
   table(
