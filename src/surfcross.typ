@@ -137,7 +137,7 @@ $ op("SurfArea")(cal(S)) = iint_(cal(R)) sqrt(1 + ((partial f) / (partial x))^2 
 You'll find this formula written in a lot of other textbooks and it's worth knowing
 (I would say you should memorize the full magic cross product formula,
 since it's trivial to get the magnitude from it.)
-Let's see how it can captures the boilerplate in the cone example.
+Let's see how it can capture the boilerplate in the cone example.
 
 #sample[
   Compute the surface area of the cone defined by $z = sqrt(x^2+y^2) <= 1$.
