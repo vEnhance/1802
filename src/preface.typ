@@ -312,6 +312,7 @@ in return for the short time limit.
 - I thank
   Aaryan Vaishya,
   Alan Cheng,
+  Aleksij Tasikj,
   Alexander Wang,
   Ashwin Shekhar,
   Calvin Wang,
