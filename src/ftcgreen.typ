@@ -206,7 +206,7 @@ But the equations are the same.
   $ p &= y^2 + a x^2 z + e^x \
     q &= b x y + z cos (y z) \
     r &= x^3 + y cos (y z). $
-  We need to seek $(a,b)$ such that the curl $nabla dot bf(F)$ is zero, that is
+  We need to seek $(a,b)$ such that the curl $nabla times bf(F)$ is zero, that is
   $ (partial r) / (partial y) - (partial q) / (partial z)
     = (partial q) / (partial x) - (partial p) / (partial y)
     = (partial p) / (partial z) - (partial r) / (partial x) = 0. $
