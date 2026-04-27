@@ -423,7 +423,7 @@ Okay, here are some examples.
     The rotation of the wheel is clockwise (imagine actually rolling the wheel).
     Therefore, the position of the point on the rim relative to the center of the wheel
     at time $t$ can be parametrized as:
-    $ bf(R) (t) = vec(r cos(3 pi / 4 - omega t), r sin(3 pi / 4 - omega t))
+    $ bf(R) (t) = vec(r cos(3 pi / 2 - omega t), r sin(3 pi / 2 - omega t))
       = vec(-r sin (v / r t) , -r cos (v / r t)) . $
     This describes the circular motion of the point on the rim around the
     center of the wheel with radius $r$ and angular velocity $v / r$.
