@@ -316,7 +316,7 @@ in return for the short time limit.
   Alexander Wang,
   Ashwin Shekhar,
   Calvin Wang,
-  Catherine Xu, 
+  Catherine Xu,
   Daniel Kim,
   Emma Jakubicka,
   Joey Liu,
