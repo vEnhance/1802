@@ -317,7 +317,7 @@ We follow @sec-recipe-opt-easy again.
 
 We are searching for the global minimum of $f$.
 Aggregating the critical points, we check
-$ f (3 / 2 , 2) &= 25 / 4 , \
+$ f (- 3 / 2 , - 2) &= 125 / 4 , \
   f (3 , 4) &= - 25 , \
   f (- 3 , - 4) = 25 . $
 Therefore, the global minimum is $#boxed[$ f(3,4) = -25 $]$.
