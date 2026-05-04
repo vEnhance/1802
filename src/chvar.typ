@@ -366,7 +366,7 @@ that is, the part inside splits cleanly as the product of stuff involving $u$
 and stuff involving $v$.
 In that case, if you imagine actually doing the integration,
 you'll find that this actually just equals
-$ (int_(u="number")^("number") f(u) v dif u)
+$ (int_(u="number")^("number") f(u) dif u)
   ( int_(v="number")^("number") g(v) dif v). $
 
 For example, consider the following easy question and solution.
