@@ -223,7 +223,7 @@ Here are two ways to verify @eqn-sph-phi-too-big is true.
   it has changed to the angle $pi - phi$ instead.
   This picture gives a geometric way of seeing why @eqn-sph-phi-too-big is true.
 
-=== Second case: Illegal chevron.less than zero
+=== Second case: Illegal chevron.l than zero
 
 This time, I assert the following equation instead:
 #eqn[
