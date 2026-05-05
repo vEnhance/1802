@@ -85,7 +85,7 @@ Yes, there's a cross product. Yes, it sucks (see @sec-cross-sucks).
 This is one case where you probably would prefer to use the shorthand
 $ dif S := lr(|(partial bf(r))/(partial u) times (partial bf(r))/(partial v)|) dif u dif v $
 so that one can swallow surface area into just
-$ op("SurfArea")(cal(S)) &:= iint_(cal(S)) dif S $
+$ op("SurfArea")(cal(S)) &:= iint_(cal(R)) dif S $
 where we also cut out the region $cal(R)$ on our cartographer's map from the notation;
 instead we write $cal(S)$ directly.
 
