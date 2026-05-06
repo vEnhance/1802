@@ -234,7 +234,7 @@ $ 2 pi (b-a). $
 So the main part of the problem is to show that the blue part of the sphere
 in @fig-surfcross-archimedes has the same surface area.
 
-It's sufficeint to solve the problem in the case $0 <= a <= b <= 1$.
+It's sufficient to solve the problem in the case $0 <= a <= b <= 1$.
 (If $a$ and $b$ are both negative, then you can do a reflection argument.
 And if $a < 0 < b$, then one should split the surface area at the equator of the sphere
 (along $z = 0$) into two parts; then add them together.)
