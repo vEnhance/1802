@@ -135,7 +135,7 @@ Of course, we do this knowing that the two answers better be equal (to $-2$).
   have found a potential function $f$,
   we can forget about parametrizing $cal(C)$ and just write directly
   $ int_(cal(C)) 5 dif x = f(42, 1337) - f(1, 100) = 5 dot 42 - 5 dot 1 = 5(42-1)
-    = #boxed[$ 204 $]. #qedhere $
+    = #boxed[$ 205 $]. #qedhere $
 ]
 
 #remark[
