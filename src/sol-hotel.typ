@@ -239,7 +239,21 @@ It's sufficient to solve the problem in the case $0 <= a <= b <= 1$.
 And if $a < 0 < b$, then one should split the surface area at the equator of the sphere
 (along $z = 0$) into two parts; then add them together.)
 
-We'll adopt the calculation in @sec-surf-grad-magic for our purposes.
+We use spherical coordinates for this calculation
+(thanks to Catherine Xu for pointing this approach out).
+With $R = 1$,
+our region is $phi in [cos^(-1)(b), cos^(-1)(a)]$ and $theta in [0,2pi]$.
+Then
+$ op("SurfArea")(cal(S))
+  &= int_(theta = 0)^(2 pi) int_(phi = cos^(-1)(b))^(cos^(-1)(a)) dif S \
+  &= int_(theta = 0)^(2 pi) int_(phi = cos^(-1)(b))^(cos^(-1)(a)) sin phi dif phi dif theta \
+  &= 2 pi dot [-cos(phi)]_(phi = cos^(-1)(b))^(cos^(-1)(a)) \
+  &= 2 pi dot (b-a). $
+
+#h3[Another longer approach without spherical coordinates]
+
+If you hate spherical coordinates,
+you can also adopt the calculation in @sec-surf-grad-magic.
 In that section, we were able to calculate the surface of the unit hemisphere
 by viewing the sphere as the level surface of $g(x,y,z) = x^2+y^2+z^2 = 1$,
 and using the formula
@@ -268,6 +282,4 @@ $ int_(r=sqrt(1-b^2))^(sqrt(1-a^2)) r/(sqrt(1-r^2)) dif r
   = int_(u=b^2)^(a^2) -1/2 u^(-1/2) dif u
   = int_(u=a^2)^(b^2) 1/2 u^(-1/2) dif u
   = [u^(1/2)]_(u=a^2)^(b^2) = b-a. $
-Thus we get
-$ S = 2 pi (b - a) $
-as we needed.
+Thus we also get $  S = 2 pi (b - a) $ as we needed.
