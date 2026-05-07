@@ -227,6 +227,8 @@ Hence the answer $ #boxed[$ frac(5 sqrt(5) - 1, 6) pi $]. $
 
 == Solution to @exer-archimedes (Archimedes hat-box theorem)
 
+#recall-thm(<exer-archimedes>)
+
 The area of the cylinder part is straightforward and does not need calculus:
 it's a cylinder whose base has circumference $2 pi$
 and which has height $b - a$, so the surface area is
