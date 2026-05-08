@@ -155,6 +155,7 @@ That is, $nabla f(1.2, -1.6)$ could be#footnote[
 For the linear approximation step, we have
 $ f(1.208, -1.594) approx f(1.2, -1.6) + (0.08, 0.06) dot nabla f(1.2, -1.6). $
 But the vectors $(0.08, 0.06)$ and $nabla f(1.2, -1.6)$ are perpendicular.
+So the dot product vanishes, and the answer is $f(1.2, -1.6) = #boxed[-7]$.
 
 == Solution to @exer-antigrad-preview (preview of anti-gradients)
 
