@@ -126,7 +126,7 @@ If you need it, the convention is that it has _every_ direction.
 ]
 
 #example[
-  Let's first do examples in $RR^2$ so we can drawn some pictures.
+  Let's first do examples in $RR^2$ so we can draw some pictures.
 
   - The direction along the vectors $vec(1,0)$, $vec(5,0)$ or $vec(1337,0)$
     are all $vec(1,0)$, thought of as _due east_.
@@ -214,7 +214,7 @@ with three vectors in $RR^3$; see @fig-parallelepiped.
   caption: [Three vectors in $RR^3$ making a parallelepiped.],
 ) <fig-parallelepiped>
 
-You might noticed that the word "signed" has slipped in before "area" and "volume".
+You might have noticed that the word "signed" has slipped in before "area" and "volume".
 What does that mean?
 Well, if you only care about the area of the volume itself,
 it doesn't matter for you; you should just take the absolute value of the determinant.
