@@ -108,7 +108,7 @@ for some number $c$.
 In order for this to pass through $(1,2,3)$, we take
 $ c = 2 dot 1 + 4 dot 2 + 6 dot 3 = 28. $
 
-Hence the answer is #boxed[$ 2x + 4y + 6z = 28 $].
+Hence the answer is $ #boxed[$2x + 4y + 6z = 28$]. $
 Or one could write this as $x + 2y + 3z = 14$ if you don't like the unneeded factor of $2$.
 
 == Solution to @exer-level-grad-poss (given level curve is a circle)
