@@ -368,7 +368,7 @@ To spell it out:
 ]
 #soln[
   Isn't this an 18.01 question?
-  Yes, but the level curves work fine here to.
+  Yes, but the level curves work fine here too.
   We think of this parabola as the level curve of $f(x,y) = y - x^2$ for the value $5$.
   The gradient is then
   $ nabla f = vec(-2x, 1) ==> nabla f(3,14) = (-6, 1). $
