@@ -514,13 +514,13 @@ the unit vector in the direction of $((partial r)/(partial u) times (partial r)/
 Let's compare the flux and surface area in both longhand and shorthand.
 
 - In longhand, we have
-  $ op("SurfArea")(cal(S)) &= iint_(cal(R)) lr(|(partial r)/(partial u) times (partial r)/(partial v)|) dif u dif v \
-    "Flux" &= iint_(cal(R)) bf(F) dot ((partial r)/(partial u) times (partial r)/(partial v)) dif u dif v
-    = iint_(cal(R)) (bf(F) dot bf(n)) lr(|(partial r)/(partial u) times (partial r)/(partial v)|)  dif u dif v. $
+  $ op("SurfArea")(cal(S)) &= iint_(cal(R)) lr(|(partial bf(r))/(partial u) times (partial bf(r))/(partial v)|) dif u dif v \
+    "Flux" &= iint_(cal(R)) bf(F) dot ((partial bf(r))/(partial u) times (partial bf(r))/(partial v)) dif u dif v
+    = iint_(cal(R)) (bf(F) dot bf(n)) lr(|(partial bf(r))/(partial u) times (partial bf(r))/(partial v)|)  dif u dif v. $
   (Keep type safety in mind here: the absolute value is a number,
   and the $dot$ is dot product of vectors in $RR^3$.)
   What we've done for the flux is decompose the cross product
-  $((partial r)/(partial u) times (partial r)/(partial v))$ into $bf(n)$ times its magnitude,
+  $((partial bf(r))/(partial u) times (partial bf(r))/(partial v))$ into $bf(n)$ times its magnitude,
   which we can do (in general, _any_ vector $bf(w)$ equals $|bf(w)|$ multiplied by its direction unit vector).
   In this way you can make flux look a little more like surface area.
 - In shorthand, it's even more obvious:
@@ -531,8 +531,8 @@ However, this resemblance is mostly useless, _except_ in one really particular c
 the case where it happens $bf(F) dot bf(n)$ is always equal to the same constant $c$
 for every point on the surface.
 If you are that lucky, then the resemblance can actually be put to use:
-$ "Flux" = iint_(cal(R)) c dot lr(|(partial r)/(partial u) times (partial r)/(partial v)|) dif u dif v
-  = c iint_(cal(R)) lr(|(partial r)/(partial u) times (partial r)/(partial v)|) dif u dif v
+$ "Flux" = iint_(cal(R)) c dot lr(|(partial bf(r))/(partial u) times (partial bf(r))/(partial v)|) dif u dif v
+  = c iint_(cal(R)) lr(|(partial bf(r))/(partial u) times (partial bf(r))/(partial v)|) dif u dif v
   = c dot op("SurfArea")(cal(S)). $
 Then if you know the surface are of $cal(S)$, you don't have to do _any_ integration.
 You just multiply the surface area by $c$.
