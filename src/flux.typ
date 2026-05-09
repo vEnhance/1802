@@ -354,7 +354,7 @@ Let's give one example corresponding to each row of @table-surfcross-2.
 
 #soln[
   Our parametrization of $cal(S)$ is going to be
-  $ bf(r)(x,y) = chevron.l x^2, y^2, sqrt(25-(x^2+y^2)) chevron.r $
+  $ bf(r)(x,y) = chevron.l x, y, sqrt(25-(x^2+y^2)) chevron.r $
   across $x^2 + y^2 <= 25$.
   If we wanted to use the first row of the table @table-surfcross-2,
   we would use $f(x,y) = sqrt(25 - (x^2+y^2))$.
