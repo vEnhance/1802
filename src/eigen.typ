@@ -401,11 +401,11 @@ To repeat the story:
       $ A - 3 I = mat(- 2, 2, 0; 0, 0, 0; 0, 1, 1) . $
       We now solve the system:
       $ mat(- 2, 2, 0; 0, 0, 0; 0, 1, 1) vec(x, y, z) = vec(0, 0, 0) . $
-      In other words, $-2x+2z = 0$, $0=0$ and $y+z=0$.
+      In other words, $-2x+2y = 0$, $0=0$ and $y+z=0$.
       From the third row, we have $y = - z$. From the first row, we get
-      $- 2 x + 2 z = 0$, so $x = z$. Thus, the eigenvector
+      $- 2 x + 2 y = 0$, so $x = y$. Thus, the eigenvector
       corresponding to $lambda = 3$ is:
-      $ vec(1, - 1, 1) $
+      $ vec(1, 1, - 1) $
       and its multiples.
 
     - For $lambda = 4$:
