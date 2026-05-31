@@ -338,7 +338,7 @@ by _reducing_ to the area of a circle, as follows.
   The Jacobian of this matrix is easy to calculate:
   $ J_(bf(T)) = mat(
     partial/(partial u) (a u), partial/(partial v) (a u);
-    partial/(partial u) (b u), partial/(partial v) (b u))
+    partial/(partial u) (b v), partial/(partial v) (b v))
     = mat(a, 0; 0, b) $
   which has determinant $a b$.
 
