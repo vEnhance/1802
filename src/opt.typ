@@ -537,7 +537,7 @@ We give one such example below.
 
 #sample[
   Compute the minimum possible value of
-  $ f(x,y) = x^2 + y^2 + x y - 6 y $
+  $ f(x,y) = 2 x^2 + y^2 + x y - 6 y $
   in the first quadrant $x,y >= 0$.
 ]
 #soln[
