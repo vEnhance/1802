@@ -174,9 +174,9 @@ since I want to have done a few concrete examples before drawing the right pictu
   Suppose you need to integrate $iint_(cal(R)) f(x,y) dif x dif y$
   and you have a transition map $bf(T)(u,v) : cal(R)_"new" -> cal(R)$.
   Then the transition map lets you change the integral as follows:
-  $ iint_(cal(R)) f(x,y) dif x dif y = iint_(cal(R)_"new") f(u,v) lr(|det J_(bf(T))|) dif u dif v $
+  $ iint_(cal(R)) f(x,y) dif x dif y = iint_(cal(R)_"new") f(x,y) lr(|det J_(bf(T))|) dif u dif v $
   Alternatively, if it's easier to compute $J_(bf(T)^(-1))$, the following formula also works:
-  $ iint_(cal(R)) f(x,y) dif x dif y = iint_(cal(R)_"new") f(u,v) / (lr(|det J_(bf(T)^(-1))|)) dif u dif v $
+  $ iint_(cal(R)) f(x,y) dif x dif y = iint_(cal(R)_"new") f(x,y) / (lr(|det J_(bf(T)^(-1))|)) dif u dif v $
   However, in the latter case your Jacobian determinant will have $x$ and $y$
   in it that you need to translate back into $u$ and $v$.
 ]
