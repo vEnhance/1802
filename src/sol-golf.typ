@@ -148,7 +148,7 @@ This is the dark blue region (top half of figure) and it has area
 $ int_(y=1)^2 int_(x = (y^3-1)^5)^N 1 dif x dif y = int_(y=1)^N (N - (y^3-1)^5) dif y. $
 The total area is thus
 $ N + int_(y=1)^(10) (N - (y^3-1)^5) dif y
-  = N + N(N-1) - int_(y=1)^(10) (y^3-1)^5 dif y. $
+  = N + 9N - int_(y=1)^(10) (y^3-1)^5 dif y. $
 This is a easily seen to be a rational number.
 #remark[
   Using a calculator, one could explicitly compute
