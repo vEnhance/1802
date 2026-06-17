@@ -68,7 +68,7 @@ Some vectors in $RR^3$ are special enough to get their own shorthand.
 
   - In two dimensions:
     $ bf(v) = vec(x,y) ==> |bf(v)| := sqrt(x^2+y^2). $
-  - If three dimensions:
+  - In three dimensions:
     $ bf(v) = vec(x,y,z) ==> |bf(v)| := sqrt(x^2+y^2+z^2). $
 
   In $n$ dimensions, if $bf(v) = chevron.l a_1, ..., a_n chevron.r$,
@@ -181,7 +181,8 @@ than just using the slope of the blue ray.
 
 If $bf(v)_1 = vec(x_1, y_1)$ and $bf(v)_2 = vec(x_2, y_2)$ are vectors,
 drawn as arrows with a common starting point,
-then their sum $bf(v)_1 + bf(v)_2$ makes a parallelogram in the plane with $bf(0)$
+then $bf(v)_1$, $bf(v)_2$, and their sum $bf(v)_1 + bf(v)_2$
+make a parallelogram in the plane together with $bf(0)$,
 as shown in @fig-parallelogram.
 
 #figure(

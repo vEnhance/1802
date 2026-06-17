@@ -175,7 +175,7 @@ $ x_0 := a_2 b_3 - a_3 b_2 \
 so $x = k x_0$, $y = k y_0$, $z = k z_0$, and we need to solve for $k$.
 
 We have one more condition to use, which is that we want the magnitude
-$sqrt(x^2+y^2+z^2)$ to be equal to to the area $A$ of the parallelogram spanned by $bf(v)$ and $bf(w)$,
+$sqrt(x^2+y^2+z^2)$ to be equal to the area $A$ of the parallelogram spanned by $bf(v)$ and $bf(w)$,
 and also point in the way specified by the right-hand rule.
 How can we encode that in an equation?
 At face value, none of the weapons in our toolkit so far let you access the area of a parallelogram in 3D space.
@@ -373,7 +373,7 @@ we've seen in applications.
     table.header([Vector], [Direction], [Magnitude]),
     [Normal vector $bf(n)$ to plane], [Perpendicular to plane], [_Irrelevant!_],
     [$op("proj")_(bf(w))(bf(v))$], [Same as $bf(w)$], [Scalar component],
-    [Cross product $bf(v) times bf(w)$], [Perpendicular to both $bf(a)$ and $bf(b)$], [Area of parallelogram]
+    [Cross product $bf(v) times bf(w)$], [Perpendicular to both $bf(v)$ and $bf(w)$], [Area of parallelogram]
   ),
   caption: [Some commonly used kinds of vectors we've met so far.],
   kind: table
