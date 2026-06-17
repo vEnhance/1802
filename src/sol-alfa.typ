@@ -140,7 +140,7 @@ $ op("comp")_(bf(w))(bf(v)) = frac(bf(v) dot bf(w), |bf(w)|)
 The vector projection of $bf(v)$ along $bf(w)$ is
 given by:
 $ op("proj")_(bf(w))(bf(v))
-  &= frac(bf(v) dot bf(w), |bf(w)|) (bf(w) / (|bf(w)|))
+  &= frac(bf(v) dot bf(w), |bf(w)|) (bf(w) / (|bf(w)|)) \
   &= -11/5 dot vec(-3000, -4000, 0) / 5000 \
   &= -11/5 dot vec(-3 slash 5, -4 slash 5, 0) \
   &= #boxed[$ vec(33 slash 25, 44 slash 25, 0) $]. $
@@ -154,7 +154,7 @@ if $theta$ is the angle between the two vectors, we need $cos theta = 3/5$,
 and so there should be two vectors that work.
 See @fig-sol-alfa-dot-reverse for a picture.
 (You might already guess one of the solutions ---
-$bf(w) = chevron.l 1,0 chevron.r $ obviously works --- but we'll pretend we didn't notice that.)
+$bf(v) = chevron.l 1,0 chevron.r $ obviously works --- but we'll pretend we didn't notice that.)
 
 Translating the givens algebraically,
 we have the following system of equations:
@@ -200,7 +200,7 @@ $ bf(v) dot bf(w) = |bf(v)| |bf(w)| cos theta = sqrt(10) cos theta $
 where $theta$ is the angle between $bf(v)$ and $bf(w)$.
 
 Since $theta$ could be any angle at all (as $bf(v)$ and $bf(w)$ are arbitrary $RR^3$ vectors),
-the possible values of $sqrt(10) cos theta$ will range from in the interval
+the possible values of $sqrt(10) cos theta$ will range over the interval
 $#boxed[$ [-sqrt(10), sqrt(10)] $]$
 as $cos theta$ ranges from $-1$ to $1$.
 
@@ -213,7 +213,7 @@ The main observation is this:
   The faces of the cube have orthogonal normal vectors.
 ]
 And the normal vectors to the two planes are:
-$ bf(n)_1 = chevron.l 1 , 2 , 3 chevron.r
+$ bf(n)_1 = chevron.l 1 , 2 , 3 chevron.r \
   bf(n)_2 = chevron.l 5 , 6 , k chevron.r. $
 For the planes to be perpendicular, their normal vectors must satisfy:
 $ 0 &= bf(n)_1 dot bf(n)_2 \
@@ -227,7 +227,7 @@ Solving for $k$ gives $#boxed[$ k = -17/3 $]$.
 #figure(
   image("figures/sol-alfa-plane-sandwich.svg", width: auto),
   caption: [A cartoon showing the planes $Pi_1$ and $Pi_2$
-    and couple possible locations for the point $P$.],
+    and a couple of possible locations for the point $P$.],
 ) <fig-sol-alfa-plane-sandwich>
 
 Denote the planes
@@ -301,7 +301,7 @@ also follows directly from the right-hand rule.
 #recall-thm(<exer-cross-pythag>)
 
 Let $theta$ be the angle between the vectors.
-Then the geometric definitions of the cross and dot products gives
+Then the geometric definitions of the cross and dot products give
 $ |bf(v) times bf(w)| &= |bf(v)| |bf(w)| lr(|sin theta|)
   = 1 dot 1 dot lr(|sin theta|) = lr(|sin theta|) \
   bf(v) dot bf(w) &= |bf(v)| |bf(w)| cos theta
