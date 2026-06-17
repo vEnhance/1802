@@ -188,7 +188,7 @@ Without "slope", you cannot notice these dependences by sight for $n >= 3$, so u
   Is $vec(1, 2)$, $vec(100, 200)$ a basis for $RR^2$?
 ]
 #soln[
-  No because $detmat(1, 2; 100, 200) = 0$.
+  No because $detmat(1, 100; 2, 200) = 0$.
   In this case you can also see directly that $100 vec(1, 2) = vec(100, 200)$,
   so the vectors are not linearly independent.
 ]
@@ -197,7 +197,7 @@ Without "slope", you cannot notice these dependences by sight for $n >= 3$, so u
   Is $vec(13, 37)$, $vec(42, 88)$ a basis for $RR^2$?
 ]
 #soln[
-  Yes, because $detmat(13, 37; 42, 88) = 13 dot 88 - 37 dot 42 != 0$.
+  Yes, because $detmat(13, 42; 37, 88) = 13 dot 88 - 42 dot 37 != 0$.
 ]
 
 #sample[
@@ -205,9 +205,9 @@ Without "slope", you cannot notice these dependences by sight for $n >= 3$, so u
 ]
 #soln[
   No, because
-  $ detmat(1, 3, 4; 10, 1, 11; -9, 10, 1)
-    &= 1 detmat(1, 11; 10, 1) - 3 detmat(10, 11; -9, 1) + 4 detmat(10, 1; -9, 10) \
-    &= 1(10-11) - 3(10+99) + 4(100+9) = 0. #qedhere $
+  $ detmat(1, 10, -9; 3, 1, 10; 4, 11, 1)
+    &= 1 detmat(1, 10; 11, 1) - 10 detmat(3, 10; 4, 1) + (-9) detmat(3, 1; 4, 11) \
+    &= 1(1-110) - 10(3-40) + (-9)(33-4) = 0. #qedhere $
 ]
 #sample[
   Is $vec(3,42,18)$, $vec(1,53,17)$, $vec(71,91,13)$ a basis for $RR^3$?
