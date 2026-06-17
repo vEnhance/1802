@@ -8,7 +8,7 @@ one algebraic and one geometric.
 Because of that, we'll be able to get a ton of mileage out of it.
 
 This will be a general theme across the course:
-almost every new concept we define will have some sort "algebraic" side
+almost every new concept we define will have some sort of "algebraic" side
 (like the coordinates for vector addition)
 and some "geometric" side (the parallelogram in @fig-parallelogram).
 This is the bar a concept has to pass for us to study it in this class:

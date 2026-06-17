@@ -28,7 +28,7 @@ is perpendicular to that plane.
 )
 
 (Note that it doesn't matter which point $P$ you pick.
-You could equally well even ignore $P$ together, imagine drawing $bf(v)$ as an arrow
+You could equally well even ignore $P$ altogether, imagine drawing $bf(v)$ as an arrow
 starting from some random point not necessarily on the plane --- like the origin ---
 and requiring that $bf(v)$ punctures the plane at a right angle.)
 
