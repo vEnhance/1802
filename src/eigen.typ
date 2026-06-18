@@ -547,7 +547,7 @@ And it indeed fits the third equation too.
 == [SIDENOTE] Complex eigenvalues
 
 Even in the $2 times 2$ case, you'll find a lot of matrices $M$ with real coefficients
-that don't have eigenvectors.
+have no eigenvectors.
 Here's one example.
 
 Let $ M = mat(cos(60 degree), -sin(60 degree); sin(60 degree), cos(60 degree))
