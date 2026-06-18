@@ -13,7 +13,7 @@ For $ee_1$, we first end up with
 $ ee_1 = lr(chevron.l 1,0 chevron.r) -->
   lr(chevron.l cos 30 degree, sin 30 degree chevron.r) = lr(chevron.l sqrt(3)/2, 1/2 chevron.r)
   --> lr(chevron.l 1/2, sqrt(3)/2 chevron.r) = T(ee_1) $
-(with the first arrow being the rotation and the second arrow being reflection).
+(with the first arrow being the rotation and the second arrow being the reflection).
 
 For $ee_2$, we end up with
 $ ee_2 = lr(chevron.l 0,1 chevron.r) -->
@@ -25,9 +25,9 @@ $ T = #boxed[$ mat(1 slash 2, sqrt(3) slash 2; sqrt(3) slash 2, -1 slash 2) $]. 
 
 Alternatively, one could obtain the same answer
 by multiplying the matrices corresponding to counterclockwise rotation
-and reflection around $y = x$, that is
-$ T = mat(0,1;1,0) mat(cos 30 degree, cos 120 degree; sin 30 degree, sin 120 degree) $
-would work out to the same thing.
+and reflection around $y = x$; that is,
+$ T = mat(0,1;1,0) mat(cos 30 degree, cos 120 degree; sin 30 degree, sin 120 degree), $
+which works out to the same thing.
 This is just an affirmation that @sec-matrix-mult holds true:
 applying two transformations is the same as multiplying their corresponding matrices.
 
@@ -46,12 +46,13 @@ There are roughly two strategies you can adopt:
 
 - For idols born before 2000, the only year that's viable is 1995
   (because $19$ is a prime greater than $12$, the last two digits need to be a multiple of $19$).
-  The two days that work here are January 5 and February 10.
+  The days that work here are January 5, February 10, March 15,
+  April 20, May 25, and June 30.
   As an example, Jo Sangho from former boy group Snuper was born on February 10, 1995:
   $ bf(v)_1 = vec(02,10) " and " bf(v)_2 = vec(19,95). $
 
 - For idols born after 2000, good years to try would be 2004 or 2005.
-  (The year 2004 has May 1 and October 2; the year 2005 has April 1, October 2, December 3.)
+  (The year 2004 has May 1 and October 2; the year 2005 has April 1, August 2, December 3.)
   As an example, Machida Riku from KJRGL was born on October 2, 2004:
   $ bf(v)_1 = vec(10,02) " and " bf(v)_2 = vec(20,04). $
 
@@ -72,7 +73,7 @@ Here are the answers.
 
 / Matrix $A = mat(1, 1; 1, 1)$:
   To find the eigenvalues $lambda$, we solve the characteristic equation:
-  $ det (A - lambda I) = 0 $ Where $I$ is the identity matrix.
+  $ det (A - lambda I) = 0, $ where $I$ is the identity matrix.
 
   $ A - lambda I &= mat(1 - lambda, 1; 1, 1 - lambda) \
     det (A - lambda I) &= (1 - lambda)^2 - (1) (1) = lambda^2 - 2 lambda  = lambda(lambda-2). $
@@ -89,7 +90,7 @@ Here are the answers.
   - *For $lambda_2 = 2$*:
     $ (A - 2 I) bf(v) &= mat(- 1, 1; 1, - 1) vec(x, y) = vec(- x + y, x - y) = bf(0) \
       - x + y &= 0 ==> y = x $
-    Thus, the eigenvector corresponding to $lambda_2 = 2$
+    Thus, the eigenvectors corresponding to $lambda_2 = 2$
     are all the multiples of $ bf(v)_2 = vec(1, 1). $
 
 / Matrix $B = mat(5, 1; 2, 4)$:
@@ -124,7 +125,7 @@ Here are the answers.
   $ lambda = 6. $
 
   To find the eigenvector, solve
-  $ (D - 6 I) bf(v) = mat(0, 1; 0, 0) vec(x, y) = vec(y, 0) = bf(0) $ $ y = 0 $
+  $ (D - 6 I) bf(v) = mat(0, 1; 0, 0) vec(x, y) = vec(y, 0) = bf(0) ==> y = 0. $
   Thus, the eigenvectors satisfy $y = 0$.
   Therefore, the eigenvectors are all non-zero vectors of the form:
   $ bf(v) = vec(x, 0). $
@@ -173,7 +174,7 @@ Setting each component equal, we get six equations that say the following, in or
 5. Either $x_5 = 0$ or $lambda = 8$.
 6. We have $(lambda - 8) x_6 = x_5$.
   In particular, if $x_6 != 0$ then either $lambda = 8$ or $x_5 != 0$,
-  but the previous item tells $x_5 != 0$ forces $lambda = 8$ anyway.
+  but the previous item tells us that $x_5 != 0$ forces $lambda = 8$ anyway.
 
 Since at least one of $x_i$ should be nonzero
 (since we always ignore $bf(v) = bf(0)$),
@@ -194,7 +195,7 @@ We'll follow the idea in @sec-matrix-power:
 find a basis of eigenvectors of $M$ and use that to compute powers of $M$.
 
 As usual, to find the eigenvalues for $M$ we work with
-$ 0 = det M = detmat(4-lambda, 3; 6, 7-lambda)
+$ 0 = det (M - lambda I) = detmat(4-lambda, 3; 6, 7-lambda)
   = (4-lambda)(7-lambda)-18 = lambda^2 - 11 lambda + 10 = (lambda-1)(lambda-10) $
 so the eigenvalues are $lambda_1 = 1$ and $lambda_2 = 10$.
 Let's find the corresponding eigenvectors again.
