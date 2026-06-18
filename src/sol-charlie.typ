@@ -22,7 +22,7 @@ That is, the complex arguments of $1+i$, $2+i$, $3+i$
 are $arctan 1/1$, $arctan 1/2$, and $arctan 1/3$ respectively,
 and the argument $z$ will hence be the sum of those three acute angles.
 
-However, we can can compute $z$ by direct multiplication:
+However, we can compute $z$ by direct multiplication:
 $ z = (1+i)(2+i)(3+i) = (1+3i)(3+i) = 10i. $
 Because this number is pure imaginary its argument is $90 degree$ as needed.
 
@@ -81,19 +81,19 @@ $ bf(a) = vec(4-7/2, 5-7/2, 6-2(7/2)) = vec(1/2, 3/2, -1). $
 $ 1/6 |arrow(D A) dot (arrow(D B) times arrow(D C))|. $
 equals the volume of the tetrahedron $A B C D$.
 
-In general, the volume of the tetrahedron is $1/6$ the area of the
+In general, the volume of the tetrahedron is $1/6$ the volume of the
 parallelepiped formed by $arrow(D A)$, $arrow(D B)$, $arrow(D C)$.
-Se we will prove that
+So we will prove that
 $ |arrow(D A) dot (arrow(D B) times arrow(D C))| $
 gives the volume of that parallelepiped.
 Here are two approaches for proving it.
 
 #h3[First approach using coordinates]
 
-Let $D = (0,0,0)$, $A = (x_A, y_A, b_A)$, $B = (x_B, y_B, z_B)$, $C = (x_C, y_C, z_C)$.
+Let $D = (0,0,0)$, $A = (x_A, y_A, z_A)$, $B = (x_B, y_B, z_B)$, $C = (x_C, y_C, z_C)$.
 Then expanding the cross product gives
 
-$ (x_A ee_1 + y_A ee_2 + z_A bf(e_3)) dot
+$ (x_A ee_1 + y_A ee_2 + z_A ee_3) dot
   detmat(ee_1, ee_2, ee_3; x_B, y_B, z_B; x_C, y_C, z_C). $
 
 If you think about what evaluating the determinant using the formula
@@ -153,7 +153,7 @@ We know that
 $
   M(bf(b)_1) &= bf(b)_1 \
   M(bf(b)_2) &= bf(b)_2 \
-  M(bf(n)_2) &= bf(0).
+  M(bf(n)) &= bf(0).
 $
 
 If we wrote $M$ as a matrix _in this new basis_ $chevron.l bf(b)_1, bf(b)_2, bf(n) chevron.r$
@@ -165,7 +165,7 @@ which has determinant $0$.
 #remark[
   In fact, if you also know that the trace doesn't change
   when you rewrite $M$ in a different basis,
-  this approach shows the trace $M$ is always exactly $1+1+0 = 2$ as well,
+  this approach shows the trace of $M$ is always exactly $1+1+0 = 2$ as well,
   no matter which plane $cal(P)$ is picked.
 ]
 
