@@ -24,7 +24,7 @@ $CC$ is just an elaborate $RR^2$ cosplay*.
 )
 
 At the start of the course, I warned you about type safety, and
-I repeatedly stressed you that you *cannot multiply two vectors in $RR^n$ to get another vector*.
+I repeatedly stressed to you that you *cannot multiply two vectors in $RR^n$ to get another vector*.
 (You had a "dot product", but it spits out a number.
 Honestly, you shouldn't think of dot product as a "product"; the name sucks.)
 
@@ -95,7 +95,7 @@ Here's a simple example.
     &= 100 + 240 i + 105 i + 252 i^2 \
     &= 100 + 345 i + 252 (- 1) quad ("since " i^2 = - 1) \
     &= 100 + 345 i - 252 = (100 - 252) + 345 i = - 152 + 345 i. $
-  The above theorem is promising that if we had used polar form,
+  The above theorem is promising that if we use polar form,
   the _angles_ will add and the _magnitudes_ will multiply.
   Let's verify this holds up.
 
@@ -156,7 +156,7 @@ that you would not expect to be true.
 
 Let's start with _magnitudes_.
 If you don't trust your teacher (a good instinct to have sometimes 😉)
-you might not _believe_ me the magnitudes multiply.
+you might not _believe_ me that the magnitudes multiply.
 Because let's say $z_1 = a + b i$ and $z_2 = c + d i$.
 Then
 $ z_1 z_2 = (a + b i)(c + d i) = (a c - b d) + (a d + b c) i $
