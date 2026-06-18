@@ -6,7 +6,7 @@ The goal of this chapter is to tell you how to take a linear transformation
 and encode it as a matrix.
 In other words, there is only one recipe covered.
 However, one upshot of this presentation is that I'll finally be able to explain
-why matrix multiplication is defined in this way you learned.
+why matrix multiplication is defined in the way you learned.
 
 This chapter will be presented a bit differently than you'll see in many other places;
 I talk about linear transformations first,
@@ -108,7 +108,7 @@ To put this into recipe form:
 #recipe(title: [Recipe for encoding a transformation])[
   Given a transformation $T : RR^n -> RR^m$, to encode it as a matrix:
 
-  1. Compute $T(ee_1)$ through $T(ee_n)$ and write them as column vectors..
+  1. Compute $T(ee_1)$ through $T(ee_n)$ and write them as column vectors.
   2. Glue them together to get an $m times n$ array of numbers.
 ]
 
@@ -201,7 +201,7 @@ We will see two results:
   corresponds to evaluation $T(bf(v))$.
 - Multiplication of the matrices for $S$ and $T$
   gives the matrix for the composed function $S compose T$.#footnote[
-  The $compose$ symbol means the function where you apply $T$ first then $S$ first.
+  The $compose$ symbol means the function where you apply $T$ first then $S$.
   So for example, if $f(x) = x^2$ and $g(x) = x+5$, then
   $(f compose g)(x) = f(g(x)) = (x+5)^2$.
   We mostly use that circle symbol if we want to refer to $f compose g$ itself without the $x$,

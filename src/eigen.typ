@@ -394,7 +394,7 @@ To repeat the story:
       the third row, we have $z = 0$.
       There are no constraints on $x$ at all.
       Thus, the eigenvector corresponding to $lambda = 1$ is $ vec(1, 0, 0) $
-      and all its multiples, i.e. those vectors for which the second and third component are zero.
+      and all its multiples, i.e. those vectors for which the second and third components are zero.
 
     - For $lambda = 3$:
       We solve $(A - 3 I) bf(v) = 0$. First, compute $A - 3 I$:
@@ -422,7 +422,7 @@ To repeat the story:
   In conclusion, the eigenvalues of the matrix $A = mat(1, 2, 0; 0, 3, 0; 0, 1, 4)$
   are $lambda_1 = 1$, $lambda_2 = 3$, and $lambda_3 = 4$;
   the corresponding eigenvectors are:
-  $ bf(v)_1 = vec(1, 0, 0) , quad bf(v)_2 = vec(1, - 1, 1), quad bf(v)_3 = vec(0, 0, 1) $
+  $ bf(v)_1 = vec(1, 0, 0) , quad bf(v)_2 = vec(1, 1, - 1), quad bf(v)_3 = vec(0, 0, 1) $
   and their multiples.
 ]
 
@@ -547,7 +547,7 @@ And it indeed fits the third equation too.
 == [SIDENOTE] Complex eigenvalues
 
 Even in the $2 times 2$ case, you'll find a lot of matrices $M$ with real coefficients
-don't have eigenvectors.
+have no eigenvectors.
 Here's one example.
 
 Let $ M = mat(cos(60 degree), -sin(60 degree); sin(60 degree), cos(60 degree))
@@ -677,7 +677,7 @@ But I'll show you how to do it with eigenvectors.
   $ M^(100) vec(1,1) = 3^(100) vec(1,1). $
   So now we know the outputs of $M^(100)$ at two linearly independent vectors.
   It would be sufficient, then, to use this information to
-  extract $M^(100) (ee_1)$ and $M^100 (ee_2)$.
+  extract $M^(100) (ee_1)$ and $M^(100) (ee_2)$.
   We can now rewrite this as
   $
     M^(100) vec(1,0) = vec(2^(100), 0); #h(2em)

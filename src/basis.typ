@@ -27,7 +27,7 @@ $ vec(13, 37) = 24 vec(3, 4) - 0.59 vec(100, 100)
   ==> T( vec(13,37) ) = 24 vec(pi, 9) - 0.59 vec(0, 12) = vec(24 pi, 208.92). $
 
 So this shows you something interesting:
-actually, $vec(1,0)$ and $vec(0,1)$ is only special insomuch as it makes arithmetic easy.
+actually, $vec(1,0)$ and $vec(0,1)$ are only special insomuch as they make arithmetic easy.
 But if you know the outputs of
 $T( vec(3,4) )$ and $T( vec(100, 100) )$, you can _still_ find all the outputs of $T$ you want.
 So really $vec(1,0)$ and $vec(0,1)$ aren't _that_ special.
@@ -75,7 +75,7 @@ Q3 has all the "good" properties above, and each of Q4, Q5, Q6 are missing somet
 
 #example[
   - In Q3, $vec(3,4)$ and $vec(100, 100)$ are a basis of $RR^2$.
-    Hence, the question Q3 makes a well-formed question.
+    Hence, Q3 is a well-formed question.
 
   - In Q4, the vector $vec(3,4)$ by itself is not spanning
     (though it is linearly independent).
@@ -87,14 +87,14 @@ Q3 has all the "good" properties above, and each of Q4, Q5, Q6 are missing somet
     $ vec(3,4) + vec(100, 100) = vec(103,104) $
     between them.
 
-  - In Q6, the two vectors $vec(3,4)$ and $vec(300, 400)$ is missing _both_ good properties.
+  - In Q6, the two vectors $vec(3,4)$ and $vec(300, 400)$ are missing _both_ good properties.
     The two vectors give redundant information; because $vec(300, 400) = 100 vec(3, 4)$,
     there is a dependence between the vectors.
     And the two vectors are not spanning: you can't make $vec(13,37)$
     out of $vec(3,4)$ and $vec(300, 400)$.
 ]
 
-So that's what the example showing what the definition is trying to communicate.
+So that's the example showing what the definition is trying to communicate.
 
 You might have a sense already that there's no way to write a "good" question like Q3
 for $RR^2$ that uses any number of vectors other than two, and you'd be right.
@@ -269,7 +269,7 @@ We won't always be so lucky, so we have a word that means "what you can make out
     is the line $y = 2x$.
     These are the only vectors you can make out of combinations of these three vectors.
   - The span of the single vector $vec(1,2)$ is also the line $y = 2x$.
-    That is, in the previous example, $vec(10, 20)$ and $vec(100, 200)$ were totally useless
+    That is, in the previous example, $vec(10, 20)$ and $vec(100, 200)$ were totally useless.
   - The span of the single vector $vec(0,0)$ is only one point: $vec(0,0)$ itself.
 ]
 
@@ -300,7 +300,7 @@ We won't always be so lucky, so we have a word that means "what you can make out
     in fact just using the first two vectors is enough.
     For example, if I picked a random point on the plane like $vec(1337, 2025, 3362)$
     then it turns out the relevant combination is
-    $ vec(1337, 2025, 3362) = 19113/29 vec(1,3,4) + 1386/29 vec(10, 1, 11) $
+    $ vec(1337, 2025, 3362) = 18913/29 vec(1,3,4) + 1986/29 vec(10, 1, 11) $
     (I won't explain how I got these coefficients,
     but you could probably figure out yourself if you wanted to).
 
@@ -358,7 +358,7 @@ From the examples above, you should be able to extrapolate the recipe.
 ]
 
 #recipe(title: [Recipe for describing the span of vectors in $RR^3$])[
-  - *0D case:* Are all the vectors the zero vector $vec(0,0,0)$? If so the span is just a single *point*.
+  - *0D case*: Are all the vectors the zero vector $vec(0,0,0)$? If so the span is just a single *point*.
   - *1D case*: Are all the vectors pointing the same direction (i.e. multiples of each other)?
     If so, and there is at least one nonzero vector,
     the span is a *line* through the origin in the common direction of the vectors.
@@ -409,7 +409,7 @@ you can think of the 2D bullet as what's left over if you rule out 0D, 1D, 3D.)
   Just for comparison, if you had used the second and third vector instead, you'd get
   $ vec(1,3,4) times vec(-9,10,1)
     = detmat(ee_1, ee_2, ee_3; 1, 3, 4; -9, 10, 1)
-    = 37 ee_1 + 37 ee_2 - 37 ee_3 $
+    = - 37 ee_1 - 37 ee_2 + 37 ee_3 $
   while the second and third vectors would give
   $ vec(10, 1, 11) times vec(-9,10,1)
     = detmat(ee_1, ee_2, ee_3; 10, 1, 11; -9, 10, 1)
