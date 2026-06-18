@@ -338,7 +338,7 @@ Here's an example where a good idea is to kill $lambda$ ASAP:
       $ f(x,y) approx 3/4  x^2 + (x / 2 + y)^2 = 3/4 y^2 + (x + y / 2)^2 $
       for large $x$ and $y$.
       The first expression shows that if $x$ is big, then so is $f$;
-      The first expression shows that if $y$ is big, then so is $f$.
+      the second expression shows that if $y$ is big, then so is $f$.
     ]
 
   In conclusion, the global minimum is $f(1/3, 4/3) = 11/3$.
@@ -354,7 +354,7 @@ And here's an example where we kill every variable _except_ $lambda$:
 #soln[
   We want to minimize the function
   $f (x , y , z) = x^2 + y^2 + z^2 + y - z$ subject to the constraint
-  $  (x , y , z) = x + 2 y + 3 z = 4$.
+  $ g (x , y , z) = x + 2 y + 3 z = 4$.
 
   0. The $g = 4$ region is a plane with no boundary but
     limit cases if any variable becomes $pm oo$.
@@ -505,9 +505,9 @@ because of the amount of arithmetic required; it's here just to illustrate.
     Since $169 = 13^2$ is a square, this could be written more simply as
     $ x = pm 1 / sqrt(13) , quad y = pm 3 / sqrt(13) , quad z = pm 4 / sqrt(13) . $
   / Case 8 where $x = 0$, $y = 0$, $z = 0$:
-    This doesn't yield a valid solution because it doesn't like on the constraint $x^4+y^4+z^4=2$.
+    This doesn't yield a valid solution because it doesn't lie on the constraint $x^4+y^4+z^4=2$.
 
-  Hence there are a whopping total of $26$ LM-critical points.
+  Hence there are a whopping total of $14$ LM-critical points.
   They are:
   - $x = 0$, $y = 0$, $z = pm root(4, 2)$,
   - $x = 0$, $y = pm root(4, 2)$, $z = 0$,
@@ -520,7 +520,7 @@ because of the amount of arithmetic required; it's here just to illustrate.
   When searching for the maximum, we should always take $+$ for $pm$ to maximize $f(x,y,z)$;
   similarly, the minimum uses only $-$ for $pm$.
   Note also that plugging in all $-$'s is the negative of plugging in all $+$'s.
-  So this reduces us from $26$ cases to just $7$.
+  So this reduces us from $14$ cases to just $7$.
   If we actually try all seven, we find that the last one is the optimal one;
   that is, the maximum and minimums are
   $ f(1/sqrt(13), 3/sqrt(13), 4/sqrt(13)) &= 2sqrt(13) \

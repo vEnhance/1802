@@ -26,8 +26,8 @@ a random function $f(x) = -1/5 x^6 - 2/7 x^5 + 2/3 x^4 + x^3$.
 From left to right in @fig-1801-critical-points, there are four critical points:
 
 - A local maximum (that isn't a global maximum), drawn in blue.
-- A local minimum (that isn't a global minimum), draw in green.
-- An critical inflection point --- neither a local minimum _nor_ a local maximum. Drawn in orange.
+- A local minimum (that isn't a global minimum), drawn in green.
+- A critical inflection point --- neither a local minimum _nor_ a local maximum. Drawn in orange.
 - A global maximum, drawn in purple.
 
 Note there's no global minimum at all, since the function $f$ goes to $-oo$ in both directions
@@ -307,8 +307,8 @@ The bad news is that it's tricky. You really have to think.
     For example, if you see $x y - x = 0$, write it as $x (y-1) = 0$,
     then either $x=0$ or $y=1$.
 
-  - If you are taking square roots of both sides,
-    That is, if $a^2 = b^2$, you conclude $a = pm b$, not $a = b$.
+  - If you are taking square roots of both sides:
+    that is, if $a^2 = b^2$, you conclude $a = pm b$, not $a = b$.
 
   - Be careful in making sure you don't miss cases if you start getting OR statements.
     In the last example, there were $2^2 = 4$ cases.
@@ -410,7 +410,7 @@ The exam ones will probably tone down this algebra step a bit.
     $ y &= z + 2 \ x &= 2 y - z. $
     Our strategy now is to write everything in terms of $z$.
     The first equation tells us $y = z+2$, so the second equation says
-    $ x = 2(z+2) + z = z + 4. $
+    $ x = 2(z+2) - z = z + 4. $
     We have one more equation, so we make the two substitutions everywhere and expand:
     $ 0 &= (z+2)((z+4)-(z+2)) -2((z+4)-(z+2))z -2(z+4) \
       &= 2(z+2) - 4z - 2(z+4) = -4z - 4 \
