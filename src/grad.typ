@@ -148,7 +148,7 @@ then I'll explain why the gradient is the normal vector we need to complete our 
   nabla f_3 (x,y) = vec(2 x, 2 y), &#h(2em)
   nabla f_4 (x,y,z) = vec(1,1,1), \
   nabla f_5 (x,y,z) = vec(y+z, x+z, x+y), &#h(2em)
-  nabla f_6 (x,y) = vec(y x^(y-1), log(y) dot x^y). #qedhere
+  nabla f_6 (x,y) = vec(y x^(y-1), log(x) dot x^y). #qedhere
   $
   (Remember $log$ is the natural log, not base $10$.)
 ]
@@ -234,7 +234,7 @@ The motivating question here is:
   We'd like to take a step $0.01$ away in some direction of our choice.
   For example, we could go to $(2.99, 4)$, or $(3, 4.01)$ or $(2.992, 4.006)$,
   or any other point on the circle we've marked in the figure below.
-  (For the third point, note that $sqrt((3-2.992)^2-(4-4.006)^2) = 0.01$,
+  (For the third point, note that $sqrt((3-2.992)^2+(4-4.006)^2) = 0.01$,
   so that point is indeed $0.01$ away.)
 
   - Which way should we step if we want to maximize the $f$-value at the new point?

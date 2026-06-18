@@ -91,7 +91,7 @@ Let's do a two-variable example first.
 
   Integrate $(partial f) / (partial x)$ and $(partial f) / (partial y)$ with respect to $x$ and $y$:
   $ f (x , y) & = int (partial f) / (partial x) dif x = int (3 x^2 + 4 x y + y^2) dif x  = x^3 + 2 x^2 y + x y^2 + C_1(y) \
-    f (x , y) & = int (partial f) / (partial y) dif y = int (2 x^2 + 2 x y - 3 y^2) dif y = 2 x^2 + x y^2 - y^3 + C_2(x). $
+    f (x , y) & = int (partial f) / (partial y) dif y = int (2 x^2 + 2 x y - 3 y^2) dif y = 2 x^2 y + x y^2 - y^3 + C_2(x). $
   Stitching this together gives
   $ f (x , y) = #boxed($ x^3 + 2 x^2 y + x y^2 - y^3 + C $). #qedhere $
 ]
@@ -217,7 +217,7 @@ So let's see some examples:
     $f_x = 7 x^6 y^3 ==>
       (partial / (partial y)) f_x = 21 x^6 y^2$.
   - Do it the other order:
-    $f_y = 3 x^6 y^2 ==>
+    $f_y = 3 x^7 y^2 ==>
       (partial / (partial x)) f_y = 21 x^6 y^2$.
   - Either way we get the same result
     $ f_(x y) = f_(y x) = 21 x^6 y^2. $
