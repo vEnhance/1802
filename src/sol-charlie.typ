@@ -248,7 +248,7 @@ So $bf(b)_1 pm bf(b)_2$ are eigenvectors with eigenvalues $pm 1$.
 Since $M$ is a $2 times 2$ matrix there are at most two eigenvalues: we found them all!
 
 The trace of $M$ is the sum of the eigenvalues.
-This gives the trace $1 + (-1) = 0$.
+Call in the answer $1 + (-1) = 0$.
 
 #h3[Fourth approach: Change coordinates]
 
