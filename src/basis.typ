@@ -94,7 +94,7 @@ Q3 has all the "good" properties above, and each of Q4, Q5, Q6 are missing somet
     out of $vec(3,4)$ and $vec(300, 400)$.
 ]
 
-So that's what the example is showing: what the definition is trying to communicate.
+So that's the example showing what the definition is trying to communicate.
 
 You might have a sense already that there's no way to write a "good" question like Q3
 for $RR^2$ that uses any number of vectors other than two, and you'd be right.
