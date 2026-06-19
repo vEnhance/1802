@@ -257,7 +257,7 @@ Note that, as I said, we could have given this example _before_ this section.
   Gravitational force is a vector.
 ]
 
-Suppose a point of mass $m$ is located at the origin $O = (0,0,0)$,
+Suppose a point of mass $m$ is located at the origin $O = (0,0,0)$.
 In general, given a mass $m$ at a point $O$ and a point of mass $M$ at a point $P$,
 Newton's law says the gravitational force exerted by $P$ on $O$ is
 $ bf(F)_("gravity") = (G dot m dot M)

@@ -242,8 +242,8 @@ This is actually a bit easier to see than the last case.
 / Algebraic proof (easier):
   We need to verify that the $x$, $y$, $z$ coordinates on both sides are the same:
   $
-    rho sin(-phi) cos theta &= rho sin phi cos (theta pm phi) \
-    rho sin(-phi) sin theta &= rho sin phi sin (theta pm phi) \
+    rho sin(-phi) cos theta &= rho sin phi cos (theta pm pi) \
+    rho sin(-phi) sin theta &= rho sin phi sin (theta pm pi) \
     rho cos (-phi) &= rho cos phi.
   $
   But $sin(-phi) = -sin(phi)$, $cos(theta pm pi) = -cos theta$,
@@ -342,7 +342,7 @@ It's actually pretty much exactly the same.
     Let $P$ be a point on the surface of the sphere.
     Like before, we have
     $ angle P = 90 degree, quad O A = 2, quad "and" angle A O P = phi. $
-    So the surface of the sphere are those points for which $rho = 2 cos phi$.
+    So the surface of the sphere is those points for which $rho = 2 cos phi$.
     And the points _inside_ the ball are $0 <= rho <= 2 cos phi$, accordingly.
 
   / Algebraic approach:
@@ -364,7 +364,7 @@ It's actually pretty much exactly the same.
       <==> 0 &<= rho <= 2 cos phi. $
     In particular this requires $cos phi >= 0$ i.e. $phi <= pi/2$.
 
-  In conclusion, the answer is $cal(R)$ in polar coordinates is exactly
+  In conclusion, the answer is that $cal(T)$ in spherical coordinates is exactly
   $ #boxed[$ 0 <= theta < 2 pi " and " 0 <= phi <= pi/2 " and " rho <= 2 cos phi $]. #qedhere $
 ]
 

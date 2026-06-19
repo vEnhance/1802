@@ -110,7 +110,7 @@ The parametrization we expect to use is
 $ bf(r)(x,y) = vec(x, y, f(x,y)). $
 The partial derivatives are
 $ frac(partial bf(r), partial x)
-  &= vec((partial x) / (partial x) , (partial z) / (partial x) , (partial z) / (partial x))
+  &= vec((partial x) / (partial x) , (partial y) / (partial x) , (partial z) / (partial x))
   = vec(1 , 0 , (partial z) / (partial x) ) \
   frac(partial bf(r), partial y)
   &= vec((partial x) / (partial y) , (partial y) / (partial y) , (partial z) / (partial y))

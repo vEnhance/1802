@@ -83,7 +83,7 @@ a parametrization that uses a rectangular sheet of paper.
   ],
   caption: [
     Consider a unit sphere; then the parametrization
-    $bf(r) (phi, theta) = (sin phi cos theta , phi sin theta , cos phi)$
+    $bf(r) (phi, theta) = (sin phi cos theta , sin phi sin theta , cos phi)$
     corresponds to longitude and latitude.
     In this cartoon, one should imagine the yellow sheet of paper being a map of the Earth,
     drawn in green.
