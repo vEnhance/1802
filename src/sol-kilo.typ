@@ -23,7 +23,7 @@ $ z_1 &= 10 (cos 90 degree + i sin 90 degree) \
   z_3 &= 10 (cos 330 degree + i sin 330 degree). $
 
 Of these three answers, we want the one
-whose real and imaginary part are both negative.
+whose real and imaginary parts are both negative.
 Only $z_2$ works; in rectangular form it is
 $ z_2 = 10 (- sqrt(3) / 2 - i 1 / 2) = #boxed[$ - 5sqrt(3) - 5 i $] $
 (and this is the only possible example).
@@ -49,7 +49,7 @@ the other one is $#boxed[$ lambda = 5 $]$.
 
 To get the eigenvector, write $vec(x,y)$ so that we need
 $ M vec(x,y) = 5vec(x,y) ==>
-  cases((1-5)x + y = 0, -4+(6-5)y=0) ==> y=4x. $
+  cases((1-5)x + y = 0, -4x+(6-5)y=0) ==> y=4x. $
 So an eigenvector for $5$ is $#boxed[$ vec(1,4) $]$ (or any nonzero multiple of it).
 
 #h3[Solution using trace and determinant shortcut]
@@ -83,7 +83,7 @@ $ x + y + z = b. $
 In order for this to also pass through $(2,3,6)$,
 we need $b = 2 + 3 + 6 = #boxed[$ 11 $]$.
 
-It remains to calculate the distance from $(0,0,0)$ to the plane $x+y+z=11$.
+It remains to calculate the distance from $(1,2,3)$ to the plane $x+y+z=11$.
 If you use the point-to-plane formula (@sec-distance-plane) for this, you get
 $ abs(1+2+3-11) / (sqrt(1^2+1^2+1^2)) = #boxed[$ 5/sqrt(3) $]. $
 
@@ -214,8 +214,8 @@ $ int_(x=0)^1 int_(y=x)^1 int_(z=y)^1 e^(z^3) dif z dif y dif x
   &= int_(z=0)^1 int_(y=0)^z int_(x=0)^y e^(z^3) dif x dif y dif z \
   &= int_(z=0)^1 e^(z^3) int_(y=0)^z int_(x=0)^y 1 dif x dif y dif z \
   &= int_(z=0)^1 e^(z^3) int_(y=0)^z y dif y dif z \
-  &= int_(z=0)^1 e^(z^3) z^2/2 dif y dif z \
-  &= 1/6 int_(z=0)^1 e^(z^3) 3z^2 dif y dif z \
+  &= int_(z=0)^1 e^(z^3) z^2/2 dif z \
+  &= 1/6 int_(z=0)^1 e^(z^3) 3z^2 dif z \
   &= 1/6 [e^(z^3)]_(z=0)^1 = #boxed[$ (e-1)/6 $]. $
 
 == Solution to @exer-mf-7 (curl)
@@ -257,8 +257,8 @@ Given $cal(S)$, we add two lids, $cal(S)_"top"$ and $cal(S)_"bottom"$.
 The top lid is the flat surface given by $z = 9$ and $x^2+y^2 <= 100$,
 with normal vector oriented upwards.
 The bottom lid is the flat surface given by $z = 7$ and $x^2+y^2 <= 100$,
-with normal vector oriented outwards.
-Finally, let $cal(T)$ denote the cylinder $1 <= z <= 2$ and $x^2 + y^2 <= 100$,
+with normal vector oriented downwards.
+Finally, let $cal(T)$ denote the cylinder $7 <= z <= 9$ and $x^2 + y^2 <= 100$,
 which is enclosed by $cal(S)$, $cal(S)_"top"$, $cal(S)_"bottom"$.
 Then the divergence theorem states that
 $ iiint_(cal(T)) nabla dot bf(F) dif V
