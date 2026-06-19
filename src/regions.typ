@@ -69,7 +69,7 @@ We provide several examples.
   In $RR^2$, some one-dimensional regions:
   - The unit circle $x^2 + y^2 = 1$, which is a circle of radius $1$, not filled.
   - Both $x^2+y^2=1$ and $x,y > 0$, a quarter-arc, not including $(1,0)$ and $(0,1)$.
-  - Both $x^2+y^2=1$ and $x,y >= 0$, a quarter-arc, including $(1,0)$ and $(0,1$).
+  - Both $x^2+y^2=1$ and $x,y >= 0$, a quarter-arc, including $(1,0)$ and $(0,1)$.
   - The equation $x + y = 1$ is a line.
   - Both $x + y = 1$ and $x,y > 0$: a line segment not containing the endpoints $(1,0)$ and $(0,1)$.
   - Both $x + y = 1$ and $x,y >= 0$: a line segment containing the endpoints $(1,0)$ and $(0,1)$.
@@ -95,7 +95,7 @@ The three that you should care about for this class are the following:
   constraints and turn it into an $=$ constraint.
   For example, the boundary of the region cut out by $-1 <= x <= 1$ and $-1 <= y <= 1$
   (which is a square of side length $2$)
-  are the four sides of the square, where either $x = pm 1$ or $y = pm 1$.
+  is the four sides of the square, where either $x = pm 1$ or $y = pm 1$.
 
 - The *limit cases* come in two forms:
   - If any of the variables can go to $pm oo$, all those cases are usually limit cases.
@@ -216,7 +216,7 @@ See @table-1d-regions, @table-2d-regions, @table-3d-regions.
     [$x^2 + y^2 + z^2 < 1$], [3D], [No boundary], [$x^2 + y^2 + z^2 -> 1^-$],
     [$x^2 + y^2 + z^2 <= 1$], [3D], [$x^2 + y^2 + z^2 = 1$], [No limit cases],
     [$x^2 + y^2 + z^2 = 1$], [2D], [No boundary], [No limit cases],
-    [$x^2 + y^2 + z^2 = 1 \ x,y,z > 0$], [2D], [No boundary], [$(1,0)$ and $(0,1)$],
+    [$x^2 + y^2 + z^2 = 1 \ x,y,z > 0$], [2D], [No boundary], [$x -> 0^+$ or $y -> 0^+$ or $z -> 0^+$],
     [$x^2 + y^2 + z^2 = 1 \ x,y,z >= 0$], [2D], [Three quarter-circle arcs#footnote[
       To be explicit, the first quarter circle is $x^2+y^2=1$, $x,y >=0$ and $z = 0$.
       The other two quarter-circle arcs are similar.
