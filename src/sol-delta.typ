@@ -21,7 +21,7 @@ Thus we get
 $ L = 1/2 int_(u=-7)^7 sqrt(u^2+1) dif u. $
 Now using the hint we get that
 $ L &= 1/4 [u sqrt(u^2+1) + log(u + sqrt(u^2+1))]_(u=-7)^7 \
-  &=  1/4 (14 sqrt(50) + log(7 + sqrt(50)) - log(-7 + sqrt(50)))) \
+  &= 1/4 (14 sqrt(50) + log(7 + sqrt(50)) - log(-7 + sqrt(50))) \
   &= 35/2 sqrt(2) + 1/4 log((7 + 5 sqrt(2)) / (-7 + 5 sqrt(2))) \
   &= 35/2 sqrt(2) + 1/4 log((7 + 5 sqrt(2))^2 / ((7 + 5 sqrt(2))(-7 + 5 sqrt(2)))) \
   &= 35/2 sqrt(2) + 1/4 log((7 + 5 sqrt(2))^2) \
@@ -31,8 +31,8 @@ $ L &= 1/4 [u sqrt(u^2+1) + log(u + sqrt(u^2+1))]_(u=-7)^7 \
 
 #recall-thm(<exer-param-teacup>)
 
-We will first parametrize the motion of the toddler and then compute the
-distance traveled after one full revolution of the ride.
+We will first parametrize the motion of the toddler and then differentiate
+to find the velocity vector.
 
 1. The teacup center rotates clockwise with angular velocity
   $omega_(upright("ride"))$ in a circular path of radius $R$ around a
