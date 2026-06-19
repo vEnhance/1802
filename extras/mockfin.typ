@@ -33,7 +33,7 @@
 
 / 1.:
   Give an example of a complex number $z$ whose
-  real and imaginary part are both negative such that $z^3 = - 1000 i$.
+  real and imaginary parts are both negative such that $z^3 = - 1000 i$.
   Write your answer in rectangular form.
 
 / 2.:
