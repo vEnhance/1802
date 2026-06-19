@@ -6,7 +6,7 @@
 
 #recall-thm(<exer-level-curves>)
 
-In what follows, $c$ always denotes the value we're drawing the level curve.
+In what follows, $c$ always denotes the value we're drawing the level curve for.
 
 / For $f(x,y) = 3/2 x + y$:
   The level curves of $3/2 x + y$ will be straight lines with slope $-3/2$
@@ -20,7 +20,7 @@ In what follows, $c$ always denotes the value we're drawing the level curve.
 
 / For $f(x,y) = sin(x^2+y^2)$:
   The level curve is only nonempty when $-1 <= c <= 1$.
-  For these $c$, we obtain a bunch of concentric circles whose radii $r$ satisfy $sin sqrt(r) = c$.
+  For these $c$, we obtain a bunch of concentric circles whose radii $r$ satisfy $sin(r^2) = c$.
   For example, when $c = 0$, we get circles of radius $0$, $sqrt(pi)$, $sqrt(2pi)$, and so on.
   See @fig-sol-echo-level-3.
 
@@ -62,7 +62,7 @@ This is quite tricky. The following function should work:
 
 $ f(x,y) &= 100 + (x^2 + (y-1)^2)(x^2 + (y-2)^2) ... (x^2 + (y-7)^2). $
 
-Then $f = 100$ if only if the product of the seven quadratics we gave was zero,
+Then $f = 100$ if and only if the product of the seven quadratics we gave was zero,
 i.e. we have $x^2 + (y-k)^2 = 0$ for some $k = 1, ..., 7$.
 But that can only happen when $(x,y) = (0, k)$.
 
@@ -134,7 +134,7 @@ and so on.
 For the second part, let $P$ denote the point $(1.2, -1.6)$.
 Then $P$ lies on this circle.
 However, from high school geometry (no calculus involved),
-the tangent to the circle at $P$ is the line $3(x-1.2) + 4(y-1.6) = 0$.
+the tangent to the circle at $P$ is the line $3(x-1.2) - 4(y+1.6) = 0$.
 (See @fig-sol-echo-circle-grad.)
 The gradient needs to be some perpendicular to this line,
 so it must be some vector in the direction of $(1.2, -1.6)$.
@@ -153,8 +153,8 @@ That is, $nabla f(1.2, -1.6)$ could be#footnote[
 #h3[Linear approximation]
 
 For the linear approximation step, we have
-$ f(1.208, -1.594) approx f(1.2, -1.6) + (0.08, 0.06) dot nabla f(1.2, -1.6). $
-But the vectors $(0.08, 0.06)$ and $nabla f(1.2, -1.6)$ are perpendicular.
+$ f(1.208, -1.594) approx f(1.2, -1.6) + (0.008, 0.006) dot nabla f(1.2, -1.6). $
+But the vectors $(0.008, 0.006)$ and $nabla f(1.2, -1.6)$ are perpendicular.
 So the dot product vanishes, and the answer is $f(1.2, -1.6) = #boxed[-7]$.
 
 == Solution to @exer-antigrad-preview (preview of anti-gradients)
