@@ -62,7 +62,7 @@ Here's a rundown of the things in the chart.
   You also have a function $f : RR^n -> RR$.
   The line integral lets you add up the values of $f$ along the trajectory.
 
-  This is just turns out to be a _single_ 18.01 integral.
+  This just turns out to be a _single_ 18.01 integral.
   Usually your path is parametrized by a single variable $t$.
   So even though the expression inside the integral
   $ int_(t_0)^(t_1) f(bf(r(t))) |bf(r)'(t)| dif t $
@@ -86,7 +86,7 @@ Here's a rundown of the things in the chart.
 
   But like the line integral, after you work out the parametrization stuff,
   the surface integral will transform into a $2$-variable area integral.
-  In other words *surface integrals translate directly into area integral*.
+  In other words *surface integrals translate directly into area integrals*.
 
 So the bottom trio --- 2D/3D line integral and surface integral ---
 end up being special instances of the single and double integrals.

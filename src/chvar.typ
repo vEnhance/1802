@@ -151,7 +151,7 @@ $ J_(bf(T)) = mat(
   $ partial / (partial u) sqrt(u v) &= 1/2 u^(-1/2) v^(1/2) \
     partial / (partial v) sqrt(u v) &= 1/2 u^(1/2) v^(-1/2). $
   So the Jacobian matrix for $bf(T)$ is
-  $ J_(bf(T)) = mat(1/2 u^(-3/2) v^(1/2), 1/2 u^(-1/2) v^(-1/2);
+  $ J_(bf(T)) = mat(-1/2 u^(-3/2) v^(1/2), 1/2 u^(-1/2) v^(-1/2);
      1/2 u^(-1/2) v^(1/2), 1/2 u^(1/2) v^(-1/2)). $
 ]
 #example[
@@ -303,7 +303,7 @@ Let's see an example of how to carry out this integration.
       [$ x = r cos theta \ y = r sin theta $],
       [$ u = y slash x \ v = x y $],
     [Example Jacobian matrix],
-      [$ mat(cos theta, sin theta; - r sin theta, r cos theta) $],
+      [$ mat(cos theta, -r sin theta; sin theta, r cos theta) $],
       [$ mat(-y slash x^2, 1 slash x; y, x) $],
     [Example Jacobian determinant],
       [$ r $],
@@ -394,7 +394,7 @@ It's a tiny optimization, but it's worth pointing out.
   Look for the common pattern
   $ int_(u="number")^("number") int_(v="number")^("number")
     f(u) g(v) dif v dif u
-    = (int_(u="number")^("number") f(u) v dif u)
+    = (int_(u="number")^("number") f(u) dif u)
       ( int_(v="number")^("number") g(v) dif v). $
 ]
 Remember, this doesn't work if either the integrand doesn't factor,
