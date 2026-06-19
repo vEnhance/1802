@@ -227,8 +227,8 @@ For each example, we actually show how to do it "manually"
     So the dot product inside the integrand is
     $ (bf(F) "rotated" 90 degree "counterclockwise") dot bf(r)'(t)
       &= vec(-q, p) dot bf(r)'(t) \
-      &= vec(cos(t)^2, sin(t)^2) dot vec(-sin(t), cos(t)) \
-      &= cos^2 t dot cos t - sin^2 t dot (- sin t) = cos^3 t + sin^3 t. $
+      &= vec(-sin(t)^2, cos(t)^2) dot vec(-sin(t), cos(t)) \
+      &= sin^2 t dot sin t + cos^2 t dot cos t = sin^3 t + cos^3 t = cos^3 t + sin^3 t. $
     Hence
     $ "Flux" = int_(t = 0)^(t = 2 pi) (cos^3 t + sin^3 t) dif t . $
     It's possible to observe from here again that the integral is symmetric;

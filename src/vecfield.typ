@@ -76,7 +76,7 @@ Let's put these examples into aquatic terms.
   If you do this, you can define a "downstream function" $f : RR^3 -> RR$ as follows:
   for every point $P$ in the river, $f(P)$ measures how far downstream you are.
   For example, if the river had a head, maybe we could assign $f$ the value zero there,
-  and then $f$ would increase as you get farther from the bank,
+  and then $f$ would increase as you get farther from the head,
   reaching the largest value at the mouth.
   (For mountainous rivers, $f$ might instead be thought of as decreasing in elevation.)
 
@@ -94,7 +94,7 @@ Let's put these examples into aquatic terms.
 
 #example(title: [Example of a non-conservative vector field: a whirlpool])[
   Now imagine instead you have a whirlpool.
-  If you throw a ball in it, it goes in circles around vertex of the whirlpool.
+  If you throw a ball in it, it goes in circles around the vortex of the whirlpool.
   This doesn't look anything like the river!
   If you have a river, you never expect a ball to come back to the same point after a while,
   because it's trying to go downstream.
@@ -257,7 +257,7 @@ a way to take one type of function and use it to build another function.
 
 For example, the gradient $nabla$ is the one we've discussed:
 if you start with a scalar-valued function $f : RR^n -> RR$,
-the gradient creates into a vector field $nabla f : RR^n -> RR^n$.
+the gradient creates a vector field $nabla f : RR^n -> RR^n$.
 (The $(dif f) / (dif x)$ in the $f : RR^1 -> RR$ case is also just the gradient,
 though a bit more degenerate.)
 
@@ -273,8 +273,8 @@ All the red arrows have two important properties I will tell you _right now_.
 Because I haven't talked much about any of the red arrows yet,
 *you won't be able to understand what this means yet*.
 That's okay.
-We'll go over what this means for each individual red arrow means when we get to it.
-However, I want tell you _in advance_ that every time we meet a red arrow,
+We'll go over what this means for each individual red arrow when we get to it.
+However, I want to tell you _in advance_ that every time we meet a red arrow,
 there will be a case of Stokes' theorem that applies to it.
 
 #memo(title: [Memorize: Two red arrows gives zero])[
