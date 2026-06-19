@@ -71,12 +71,12 @@ Hence $#boxed[$(0,0,0)$ is a saddle point]$.
 
 No, it's not possible.
 
-We will prove that the following result:
+We will prove the following result:
 #thm[
   Suppose $f : RR^2 -> RR$ is a function for which every point is a critical point.
   Then $f$ must be the constant function.
 ]
-In particular, every point of $f$ will be both a local minimum or local maximum.
+In particular, every point of $f$ will be both a local minimum and a local maximum.
 This means that $f$ has no saddle points at all.
 
 #proof[
@@ -111,7 +111,7 @@ This means that $f$ has no saddle points at all.
 #h3[Inventing the function]
 
 The function
-$ #boxed[$ f(x,y) = cos((x-y) pi) - cos((x+y) pi) = sin(pi x) sin(pi y) $] $
+$ #boxed[$ f(x,y) = (cos((x-y) pi) - cos((x+y) pi)) / 2 = sin(pi x) sin(pi y) $] $
 works.
 The idea is that a saddle point occurs if and only if one of these two conditions holds:
 
@@ -237,11 +237,11 @@ $P A^2 + P B^2 + P C^2$.
 
 2. In the limit cases if either $x -> +oo$ or $y -> +oo$ then $f -> +oo$.
 3. Suppose $x = 0$. Then $sin(y) = 1$.
-  So this part of the boundary consists of the points $(0,pi)$, $(0,3pi)$, $(0,5pi)$, ....
-  All of these have $x+y >= pi$, so they do worse than the point $(pi/6, pi/6)$ from before.
+  So this part of the boundary consists of the points $(0,pi/2)$, $(0,5pi/2)$, $(0,9pi/2)$, ....
+  All of these have $x+y >= pi/2$, so they do worse than the point $(pi/6, pi/6)$ from before.
 
-  Similarly, if $y=0$, we get boundary points $(pi,0)$, $(3pi,0)$, $(5pi,0)$, ....
-  Again all of these have $x+y >= pi$, so they do worse than the point $(pi/6, pi/6)$ from before.
+  Similarly, if $y=0$, we get boundary points $(pi/2,0)$, $(5pi/2,0)$, $(9pi/2,0)$, ....
+  Again all of these have $x+y >= pi/2$, so they do worse than the point $(pi/6, pi/6)$ from before.
 
 In conclusion the minimum possible value occurs at
 $ f (pi / 6 , pi / 6) = pi / 3 . $
@@ -499,7 +499,7 @@ $ A = f_(x x) (x , y) &= (partial^2 f) / (partial x^2) = - pi^2 cos (pi x) , \
   B = f_(x y) (x , y) &= (partial^2 f) / (partial x partial y) = 0, \
   C = f_(y y) (x , y) &= (partial^2 f) / (partial y^2) = 3 y^2 - 2 y - 2. $
 
-- We have $A = -pi^2$ if $x$ is odd and $A = pi^2$ if $x$ is even.
+- We have $A = -pi^2$ if $x$ is even and $A = pi^2$ if $x$ is odd.
 - We always have $B = 0$.
 - We have
   $ C = cases(
@@ -674,7 +674,7 @@ We follow the steps we described in the recipe in @sec-recipe-opt-easy and @sec-
     <==> lambda^2 = 9 / 400 \
     <==> lambda = pm 3 / 20 . $
     Putting these two values of $lambda$ in gives
-    $ (x,y,z) = (10/l, 20/3, 20/3) " and " (x,y,z) = (-10/3, -20/3, -20/3)$
+    $ (x,y,z) = (10/3, 20/3, 20/3) " and " (x,y,z) = (-10/3, -20/3, -20/3)$
     These are the two LM-critical points.
     Evaluating this gives
     $ f (10 / 3 , 20 / 3 , 20 / 3) = 10 / 3 + 2 dot 20 / 3 + 2 dot 20 / 3 &= 30 \
@@ -709,7 +709,7 @@ $ nabla f (0,0,0) = vec(-2, 3, -4). $
 The tangent plane $cal(H)$ consists of those vectors which are normal to $vec(-2, 3, -4)$.
 This plane is two-dimensional.
 So, to find two vectors spanning $cal(H)$,
-according to the "buy two get one free" result from
+according to the "buy two get one free" result from @sec-detect-basis,
 we just need to give any two linearly independent (i.e. not multiples of each other) vectors
 which are both perpendicular to $vec(-2, 3, -4)$.
 

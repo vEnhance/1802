@@ -107,7 +107,7 @@ More examples of correct hunches that we'll explain momentarily:
 - Also, if you have exactly $n$ vectors in $RR^n$, and they're linearly independent, then they're a basis.
 - Also, if you have exactly $n$ vectors in $RR^n$, and they're spanning, then they're a basis.
 
-== [RECIPE] How to detect a basis
+== [RECIPE] How to detect a basis <sec-detect-basis>
 
 This begs the question: does there exist a way to easily tell whether some vectors are a basis?
 For $RR^2$, you can probably tell by looking.
