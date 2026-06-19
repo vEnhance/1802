@@ -2,7 +2,7 @@
 
 = Practice questions <ch-practice>
 
-Some practice questions from topics through the entire course.
+Some practice questions from topics throughout the entire course.
 Solutions are in @ch-sol-kilo.
 
 == Practice half-final
@@ -12,7 +12,7 @@ It was about half the length of the final exam (which was 14 questions long).
 
 #exer[
   Give an example of a complex number $z$ whose
-  real and imaginary part are both negative such that $z^3 = - 1000 i$.
+  real and imaginary parts are both negative such that $z^3 = - 1000 i$.
   Write your answer in rectangular form.
 ] <exer-mf-1>
 
