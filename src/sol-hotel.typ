@@ -10,7 +10,7 @@ This is a famous exercise with its own page on Wikipedia at #url("https://w.wiki
 We give one solution using spherical coordinates below,
 but this is far from the only possible solution.
 
-Using cylindrical coordinates the equation of the sphere is: $ x^2 + y^2 + z^2 = R^2 . $
+Using cylindrical coordinates the equation of the sphere is: $ r^2 + z^2 = R^2 . $
 Since the hole is along the $z$-axis with radius $a$,
 we impose $ a <= r <= R $
 that is, the bead consists of those points whose distance from the $z$-axis is at least $a$.
@@ -68,7 +68,7 @@ $ sin^2 phi &= (1 - cos(2 phi))/2 \
   ==> int sin^2 phi dif phi &= phi / 2 - sin(2 phi) / 4. $
 Hence,
 $ iiint_(cal(T)) d(P) dif V
-  &= int_(theta=0)^(2 pi) dif theta int_(phi=0)^pi sin^2 phi dif phi int_(r=0)^1 r^3 dif r
+  &= int_(theta=0)^(2 pi) dif theta int_(phi=0)^pi sin^2 phi dif phi int_(r=0)^1 r^3 dif r \
   &= (2 pi) dot (pi / 2) dot (1/4) \
   &= pi^2 / 4. $
 So the final answer is
@@ -84,7 +84,7 @@ We orient the hemisphere so it rests on the $x y$-plane with the point $P$ at $(
 Then this is basically the same as the example in @sec-sph-gravity,
 except the bounds of integration change.
 
-To be precise, we have $G_1 = G_2 = 0$, and @eqn-sph-G3 and again
+To be precise, we have $G_1 = G_2 = 0$, and @eqn-sph-G3 just says
 $ G_3 = G m iiint_(cal(T)) sin phi cos phi dif rho dif phi dif theta $
 after setting the density to $1$.
 The only change is the bounds of integration: for the hemisphere we should have
@@ -205,7 +205,7 @@ Hence, the cross product is given by
 $frac(partial bf(r), partial x) times frac(partial bf(r), partial y)$:
 $ frac(partial bf(r), partial x) times frac(partial bf(r), partial y)
   &= (0 dot 2 y - 1 dot 2 x) ee_1 - (1 dot 2 y - 0 dot 2 x) ee_2 + (1 dot 1 - 0 dot 0) ee_3 \
-  &= vec(-2x, 2y, 1). $
+  &= vec(-2x, -2y, 1). $
 Hence the magnitude of this cross product is:
 $ lr(|frac(partial bf(r), partial x) times frac(partial bf(r), partial y)|) = sqrt((- 2 x)^2 + (- 2 y)^2 + (1)^2) = sqrt(4 x^2 + 4 y^2 + 1). $
 
