@@ -171,7 +171,7 @@ Here's an example of what that could look like.
   we're practically forced to use polar coordinates.
   Indeed, the right way to think of the region we're integrating over is that it consists of
   $ 0 <= y <= 3 " and " x^2 + y^2 <= 9 $
-  which is just the upper half a circle of radius $3$.
+  which is just the upper half of a circle of radius $3$.
   So using polar coordinates is just obviously the right thing to do,
   because the limits of integration are amazing:
   - The region is defined by $0 <= r <= 3$ and $0 <= theta <= pi$.

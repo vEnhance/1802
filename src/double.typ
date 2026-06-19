@@ -6,7 +6,7 @@ One common theme from 18.02 that you might have noticed in part Foxtrot is that,
 unlike in 18.01 where you were hyper-focused on the function $f$ you were optimizing,
 in 18.02 the _region_ you're working with deserves a lot of attention.
 This will be true for the material in this chapter too ---
-you ought to paying most attention to the region
+you ought to pay most attention to the region
 before you even look at the function $f$ that's being integrated.
 
 == [RECIPE] Integrating over rectangles
@@ -82,7 +82,7 @@ Here's another example.
     $x$ out of the integral: $ x int_(y=0)^1 cos (x y) dif y . $
 
     Now, we compute $int_(y=0)^1 cos (x y) dif y$.
-    $ int_(y=0)^1 cos (x y) dif u = [1/x sin (x y)]_0^1 = sin(x) / x. $
+    $ int_(y=0)^1 cos (x y) dif y = [1/x sin (x y)]_0^1 = sin(x) / x. $
 
     Thus, the result of the inner integral is:
     $ x dot sin(x) / x = sin (x) . $
@@ -584,21 +584,21 @@ Put in recipe form:
   and the region can be rewritten to
   $ cal(R) = cases(0 <= y <= 1, 0 <= x <= 2 y). $
   Turning this _back_ into a double integral gives
-  $ int_(y=0)^1 int_(x=0)^(2y) e^(y^2) dif y dif x. $
+  $ int_(y=0)^1 int_(x=0)^(2y) e^(y^2) dif x dif y. $
 
   The inner integral is with respect to $x$,
   but the integrand $e^(y^2)$ is independent of $x$.
   Therefore, the inner integral becomes:
   $ int_(x = 0)^(2 y) e^(y^2) dif x = 2 y dot e^(y^2) . $
   Thus, it remains to calculate
-  $ int_(y=0)^1 (2 y dot e^(y^2)) dif y dif x. $
+  $ int_(y=0)^1 (2 y dot e^(y^2)) dif y. $
 
   And now things are different: $2 y dot e^(y^2)$ _does_ have a valid anti-derivative.
   If you use the 18.01 method or even just are good at guessing,
   you can find the indefinite 18.01 integral
   $ int 2 y e^(y^2) dif y = e^(y^2) + C. $
   So the final answer to the problem is
-  $ int_(y=0)^1 2y e^(y^2) dif y dif x = lr([e^(y^2)])_(y=0)^(y=1) = #boxed[$ e-1 $]. #qedhere $
+  $ int_(y=0)^1 2y e^(y^2) dif y = lr([e^(y^2)])_(y=0)^(y=1) = #boxed[$ e-1 $]. #qedhere $
 ]
 
 #sample[
