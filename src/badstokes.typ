@@ -23,7 +23,7 @@ Here's the statement of the result:
 
 #memo(title: [Classical Stokes' theorem])[
   Let $cal(C)$ be a closed loop in $RR^3$ parametrized by $bf(r)_1(t)$.
-  Suppose $cal(S)$ is the boundary of an oriented surface $cal(S)$ parametrized by $bf(r)_2(u,v)$.
+  Suppose $cal(C)$ is the boundary of an oriented surface $cal(S)$ parametrized by $bf(r)_2(u,v)$.
   Assume the orientation of $cal(C)$ and $cal(S)$ are compatible.
   Then
   $ underbrace(oint_(cal(C)) bf(F) dot dif bf(r)_1, = int_(t="start")^("stop") bf(F) dot bf(r)'_1(t) dif t)
