@@ -134,7 +134,7 @@ We can jump straight into examples now!
     = (int_(x=0)^a x dif x) (int_(y=0)^a dif y) (int_(z=0)^a dif z)
     = a^2/2 dot a dot a = a^4/2. $
   In any case, we get an answer of
-  $ 2 dot a^4/2 + 2 dot a^4/2 + 2 dot a^4 /2 = #boxed[$ 3a^4 $] #qedhere. $
+  $ 2 dot a^4/2 + 2 dot a^4/2 + 2 dot a^4 /2 = #boxed[$ 3a^4 $]. #qedhere $
 ]
 
 #sample[
@@ -275,7 +275,7 @@ and then you add a layer of plastic wrap on the bowl.
   so its flux integral is easy to calculate:
   from @table-surfcross-2 we choose $bf(n) dif S = chevron.l 0, 0, -1 chevron.r$ and hence
   $ iint_(cal(S)_("lid")) bf(F) dot bf(n) dif S
-    &= iint_(x^2+y^2 <= 1) chevron.l x + tan 0, y + e^0, 1 chevron.r dot chevron.l 0,0, -1 chevron.r dif x dif y
+    &= iint_(x^2+y^2 <= 1) chevron.l x + tan 0, y + e^0, 1 chevron.r dot chevron.l 0,0, -1 chevron.r dif x dif y \
     &= iint_(x^2+y^2 <= 1) (-1) dif x dif y = -pi. $
 
   So when we apply the divergence theorem, we get that

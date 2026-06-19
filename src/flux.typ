@@ -50,7 +50,7 @@ $lr(chevron.l - (partial f) / (partial x), - (partial f) / (partial y), 1 chevro
 is less messy than $sqrt(1 + ((partial f) / (partial x))^2 + ((partial f) / (partial y))^2)$.
 
 We'll do example calculations in a moment, but let me first talk about how to think about this,
-and also explain what the adjective "oriented".
+and also explain what the adjective "oriented" means.
 
 == [TEXT] Aquatic interpretation of flux
 
@@ -131,14 +131,14 @@ Here's another example of an orientation to make things less abstract.
 #example(title: [Example: Orienting a sphere])[
   Let's consider the sphere $x^2 + y^2 + z^2 = 1$ with $z > 0$.
   For each point $P$ on the sphere, the normal vector to the sphere at $P$
-  either points straight towards the center of from $P$, or away from the center of $P$.
+  either points straight towards the center, or away from the center.
 
   What does this correspond to algebraically?
   We consider two possible ways to parametrize the sphere that differ only in the order.
 
   - Let's imagine we used a spherical parametrization of the hemisphere as
     $ bf(r)(phi, theta) = (sin phi cos theta, sin phi sin theta, cos phi) $
-    where $0 <= phi <= pi$ and $0 <= theta <= 2 pi$.
+    where $0 <= phi <= pi/2$ and $0 <= theta <= 2 pi$.
     If we grinded out the cross product, you would find that
     (see @ch-surfcross to see this written out)
     $ (partial bf(r)) / (partial phi) times (partial bf(r)) / (partial theta)
@@ -151,7 +151,7 @@ Here's another example of an orientation to make things less abstract.
   - But what if we had flipped the order of $phi$ and $theta$?
     That is, suppose we used
     $ bf(r)(theta, phi) = (sin phi cos theta, sin phi sin theta, cos phi) $
-    where $0 <= theta <= 2 pi$  and $0 <= phi <= pi$ instead.
+    where $0 <= theta <= 2 pi$  and $0 <= phi <= pi/2$ instead.
     Then the cross product will get negated:
     $ (partial bf(r)) / (partial theta) times (partial bf(r)) / (partial phi)
       = -sin phi dot (sin phi cos theta, sin phi sin theta, cos phi)
@@ -325,7 +325,7 @@ Let's give one example corresponding to each row of @table-surfcross-2.
   instead.
   The question wanted the normal vector to be oriented upwards, and since $1$ is positive,
   the original we had is okay; we use
-  $ bf(n) dif S = vec(3 x^2, 3 y^2, -1) = vec(- 3 x^2 , - 3 y^2, 1) dif x dif y. $
+  $ bf(n) dif S = vec(- 3 x^2 , - 3 y^2, 1) dif x dif y. $
 
   Now, the vector field is given at each point $(x,y)$ by
   $ bf(F)(bf(r)(x,y)) = vec(1 , 1 , x^3 + y^3). $
@@ -460,7 +460,7 @@ Let's give one example corresponding to each row of @table-surfcross-2.
   by using $cos^2 theta = (1 + cos(2 theta)) / 2$ and $sin^2 theta = (1 - cos(2 theta)) / 2$.
   Hence,
   $ 490 int_(theta=0)^(2 pi) (3 cos^2 theta + 5 sin^2 theta) dif theta
-    = 490 dot (3 pi + 8 pi) = #boxed[$ 3920 pi $]. #qedhere $
+    = 490 dot (3 pi + 5 pi) = #boxed[$ 3920 pi $]. #qedhere $
 ]
 
 For the final example, we actually use the same hemisphere again,
@@ -493,10 +493,10 @@ but this time we use spherical coordinates, so you can compare the methods.
       &= -1250 (sin^3 phi cos phi sin theta cos theta). $
   In other words, we have
   $ iint_(cal(S)) bf(F) dot bf(n) dif S
-    &= -1250 int_(theta=0)^(2 pi) int_(phi=0)^(pi / 2) sin^3 phi cos theta sin theta dif phi dif theta \
+    &= -1250 int_(theta=0)^(2 pi) int_(phi=0)^(pi / 2) sin^3 phi cos phi sin theta cos theta dif phi dif theta \
     &= -1250
       (int_(theta=0)^(2 pi) sin theta cos theta dif theta)
-      (int_(phi=0)^(pi/2) sin^3 phi cos phi dif phi.) $
+      (int_(phi=0)^(pi/2) sin^3 phi cos phi dif phi). $
   The latter integral is super annoying to evaluate,
   but the former integral is zero because $sin theta cos theta = 1/2 sin(2theta)$,
   so we don't have to worry about the $dif phi$ integral at all; we just get $#boxed[$ 0 $]$
@@ -573,9 +573,9 @@ Here are two examples of this with spheres.
   $bf(G)$ exerted has magnitude $(G m) / 17^2$ and points in the _opposite_ direction as $bf(n)$.
   That is, $ bf(G) dot bf(n) = (-((G m) / (17^2)) bf(n)) dot (bf(n)) = -(G m) / 289. $
   Consequently,
-  $ iint_(cal(S)) bf(F) dot bf(n) dif S = -(G m) / 289 dot op("SurfArea")(cal(S))
+  $ iint_(cal(S)) bf(G) dot bf(n) dif S = -(G m) / 289 dot op("SurfArea")(cal(S))
     = (-G m)/(17^2) dot (4 dot 17^2 pi) = #boxed[$ -4 pi G m $]. $
-  (In general, we know a sphere of radius $R$ has surface area $R^2 pi$.)
+  (In general, we know a sphere of radius $R$ has surface area $4 R^2 pi$.)
 ]
 Note that the answer is independent of the radius! The $17$ cancels out.
 
