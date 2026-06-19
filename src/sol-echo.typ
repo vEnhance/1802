@@ -143,7 +143,7 @@ That is, $nabla f(1.2, -1.6)$ could be#footnote[
   but for 18.02 I won't dwell on that.
   Anyone who knows what I'm talking about should be able to fill in this step for me :P
 ]
-*any vector in the same direction as $(3,-4)$*.
+*any multiple of $(3,-4)$*.
 
 #figure(
   image("figures/sol-echo-circle-grad.svg", width: auto),
