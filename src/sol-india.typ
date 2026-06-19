@@ -49,10 +49,10 @@ Since $rho^3 = (x^2 + y^2 + z^2)^(3 \/ 2)$, the chain rule gives
 $ (partial) / (partial x) (rho^3) = 3 / 2 (x^2 + y^2 + z^2)^(1 \/ 2) dot 2 x = 3 x rho. $
 Hence, the quotient rule gives
 $ (partial) / (partial x) x/rho^3
-  = (rho^3 dot 1 - x dot 3 x rho) / (r^6) = (rho^2 - 3x^2) / rho^5. $
+  = (rho^3 dot 1 - x dot 3 x rho) / (rho^6) = (rho^2 - 3x^2) / rho^5. $
 Now the divergence is given by
 $ nabla dot bf(G) &=
-  -G m ((partial) / (partial x) x/rho^3 + (partial) / (partial x) y/rho^3 + (partial) / (partial x) z/rho^3) \
+  -G m ((partial) / (partial x) x/rho^3 + (partial) / (partial y) y/rho^3 + (partial) / (partial z) z/rho^3) \
   &= -G m ((rho^2 - 3x^2) / rho^5 + (rho^2 - 3y^2) / rho^5 + (rho^2 - 3z^2) / rho^5) \
   &= -G m (3rho^2 - 3(x^2+y^2+z^2)) / rho^5 \
   &= 0 $
@@ -89,7 +89,7 @@ $ bf(F)(bf(r)(t)) = bf(F)(1-t,0) = vec((1-t)^2, 1)
   bf(r)'(t) = vec(-1, 0). $
 Then
 $ int_(cal(C)_2) bf(F) dot dif bf(r)
-  &= int_(t=-1)^1 vec((1-t)^2, 1) dot vec(-1, 0) dif t \
+  &= int_(t=0)^2 vec((1-t)^2, 1) dot vec(-1, 0) dif t \
   &= int_(t=0)^2 - (1 - t)^2 dif t \
   &= - 2 / 3 . $
 Putting this all together we get
@@ -253,7 +253,7 @@ $ bf(F)(bf(r)(t)) = bf(F)(1-t,0) = vec((1-t)^2, 1)
   bf(r)'(t) = vec(-1, 0). $
 Rotating $bf(F)$ as in @sec-recipe-2d-flux, we have
 $ int_(cal(C)_2) bf(F) dot bf(n) dif s
-  &= int_(t=-1)^1 vec(-1, (1-t)^2) dot vec(-1, 0) dif t \
+  &= int_(t=0)^2 vec(-1, (1-t)^2) dot vec(-1, 0) dif t \
   &= int_(t=0)^2 1 dif t \
   &= 2. $
 
@@ -274,12 +274,12 @@ The region $cal(R)$ hasn't changed and is given by
 $ -1 <= x <= 1 \ x^2-1 <= y <= 0. $
 Hence from Green's theorem, we have
 $ int_(cal(C)) bf(F) dot bf(n) dif s
-  &= iint_(cal(R)) ((partial Q) / (partial x) - (partial P) / (partial y)) dif A \
+  &= iint_(cal(R)) ((partial P) / (partial x) + (partial Q) / (partial y)) dif A \
   &= int_(x=- 1)^1 int_(y=x^2 - 1)^0 2(x+1)(y+1) dif y dif x \
   &= int_(x=- 1)^1 (x+1) int_(y=x^2 - 1)^0 2(y+1) dif y dif x \
   &= int_(x=- 1)^1 (x+1) (1-x^4) dif x \
   &= int_(x=- 1)^1 (-x^5-x^4+x+1) dif x \
-  &= [-x^6/6 - x^5/5 + x^2 + x]_(x=-1)^1 = #boxed[$ 8/5 $]. $
+  &= [-x^6/6 - x^5/5 + x^2/2 + x]_(x=-1)^1 = #boxed[$ 8/5 $]. $
 
 == Solution to @exer-flux-triangle (flux across a triangle)
 
@@ -528,7 +528,7 @@ $ op("Area")(cal(R))
   = int_(y=0)^1 ((e-1)^2 - (e^y-1)^2) dif y \
   &= e^2-2e - int_(y=0)^1 (e^(2y) - 2e^y) dif y
   = e^2-2e - lr([e^(2y)/2 - 2e^y])_(y=0)^1 \
-  &= e^2-2e - (e^2/2 - 2e) - (1/2-2) = #boxed[$ (e^2-3)/2 $]. $
+  &= e^2-2e - (e^2/2 - 2e) + (1/2-2) = #boxed[$ (e^2-3)/2 $]. $
 
 #remark[
   It is also possible to calculate an antiderivative of $log(sqrt(x)+1)$ directly
