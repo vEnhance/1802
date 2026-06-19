@@ -258,7 +258,7 @@ Let's show some examples of how to calculate this in practice.
     Differentiate $bf(r) (t)$ with respect to $t$:
     $ bf(r)' (t) = vec(- 2 , 0) . $
     Meanwhile, the parameterization into the vector field is:
-    $ bf(F) (bf(r) (t)) = bf(F) (0, 1 - 2t) = vec(0, 3 - 6t). $
+    $ bf(F) (bf(r) (t)) = bf(F) (1 - 2t, 0) = vec(0, 3 - 6t). $
     The dot product is identically equal to zero:
     $ vec(-2, 0) dot vec(0, 3-6t) = 0. $
     So the line integral is $#boxed[$0$]$ as well. #qedhere
@@ -272,7 +272,7 @@ for which work integrals are path-independent.
 
 == [TEXT] Even more shorthand: $p dif x + q dif y$
 
-Then notation $int_(cal(C)) bf(F) dot dif bf(r)$ can _still_ be contracted further:
+The notation $int_(cal(C)) bf(F) dot dif bf(r)$ can _still_ be contracted further:
 there is another shorthand that hides both $bf(F)$ and $bf(r)$ altogether.
 Here it is:
 

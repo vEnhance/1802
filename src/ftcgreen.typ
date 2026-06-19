@@ -102,10 +102,10 @@ Of course, we do this knowing that the two answers better be equal (to $-2$).
     &= (2 cos t + 1) (- sin t) + (3 sin t) (cos t) \
     &= - 2 cos t sin t - sin t + 3 sin t cos t = cos t sin t - sin t $
 
-  Integrate with respect to $t$ from $0$ to $pi/2$:
+  Integrate with respect to $t$ from $0$ to $pi$:
   $ int_(t=0)^(pi) (cos t sin t - sin t) dif t
     = int_(t=0)^(pi) (sin(2t)/2 - sin t) dif t
-    = lr([-cos(2t) - cos(t)])_(t=0)^pi = -2. $
+    = lr([-cos(2t)/4 + cos(t)])_(t=0)^pi = -2. $
 
 - Work on the brown line segment,
   parametrized again as $bf(r) (t) = (1 -  2 t, 0)$, where $t in [0, 1]$,
@@ -142,7 +142,7 @@ Of course, we do this knowing that the two answers better be equal (to $-2$).
   In general, the vector field encoded by $c dif x$ for any constant $c$ is conservative
   with potential function $f(x,y) = c x$.
   Hence, $int_(cal(C)) c dif x = c int_(cal(C)) dif x$
-  will always just equal to $c$ times the total change in $x$.
+  will always just equal $c$ times the total change in $x$.
 ]
 
 == [TEXT] Okay, but how do you tell whether $bf(F)$ is conservative?
