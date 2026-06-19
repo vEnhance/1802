@@ -11,7 +11,7 @@ We wish to compute the integral
 $ I = iint_(cal(R)) x^(100) y^(200) dif x dif y . $
 
 To determine the limits of integration,
-we find the intersection points by solving $sqrt(x) = x^3$
+we find the intersection points by solving $sqrt(x) = x^3$.
 Squaring both sides gives $x = x^6 ==> x(x^5-1) = 0$, so $x=0$ or $x=1$.
 That is, the intersection points are $(0,0)$ and $(1,1)$.
 A sketch of the region is shown in @fig-sol-golf-double-sol1.
@@ -52,7 +52,7 @@ $ int_(y = x^3)^(sqrt(x)) y^200 dif y = [y^201 / 201]_(y = x^3)^(y = sqrt(x))
   = x^(201\/2) / 201 - x^603 / 201 . $
 Now, integrating over $x$:
 $ I &= int_(x = 0)^1 x^100 (x^(201\/2) / 201 - x^603 / 201) dif x \
-  &= 1/201 (int_(x=0)^1 x^(401\2) dif x - int_(x=0)^1 x^(703) dif x) \
+  &= 1/201 (int_(x=0)^1 x^(401\/2) dif x - int_(x=0)^1 x^(703) dif x) \
   &= 1/201 (2/403 - 1/704) = #boxed[$ 5 / 283712 $]. $
 
 == Solution to @exer-slicing-mass (center of mass of a region)
@@ -134,7 +134,7 @@ we are going to use horizontal slicing for the region under the curve shown in t
 
 #figure(
   image("figures/practice-undergraph.svg", width: auto),
-  caption: [The region $0 <= y <= root(5, root(3,x) + 1)$ for $0 <= x <= N$. Not at all to scale.],
+  caption: [The region $0 <= y <= root(3, root(5,x) + 1)$ for $0 <= x <= N$. Not at all to scale.],
 )
 
 Let's first convert the region into inequality format: we have $0 <= x <= N$, $y >= 0$ and
@@ -145,11 +145,11 @@ which goes from $0 <= x <= N$ to $0 <= y <= 1$, and has area $N$.
 Then from $1 <= y <= 10$ the bounds on $x$ are instead given by
 $ (y^3-1)^5 <= x <= N. $
 This is the dark blue region (top half of figure) and it has area
-$ int_(y=1)^2 int_(x = (y^3-1)^5)^N 1 dif x dif y = int_(y=1)^N (N - (y^3-1)^5) dif y. $
+$ int_(y=1)^(10) int_(x = (y^3-1)^5)^N 1 dif x dif y = int_(y=1)^(10) (N - (y^3-1)^5) dif y. $
 The total area is thus
 $ N + int_(y=1)^(10) (N - (y^3-1)^5) dif y
   = N + 9N - int_(y=1)^(10) (y^3-1)^5 dif y. $
-This is a easily seen to be a rational number.
+This is easily seen to be a rational number.
 #remark[
   Using a calculator, one could explicitly compute
   $ int_(y=1)^(10) (y^3-1)^5 dif y
@@ -207,7 +207,7 @@ The limits of integration describe the region bounded by:
 - $0 <= x <= 1$,
 - $0 <= y <= sqrt(1 - x^2)$.
 This corresponds to the quarter-circle in the first quadrant of the unit
-disk, given by $x^2 + y^2 <= 1$ with $x >= 0$.
+disk, given by $x^2 + y^2 <= 1$ with $x >= 0$ and $y >= 0$.
 
 Using the polar coordinate transformations:
 $ x = r cos theta , quad y = r sin theta , quad dif x dif y = r dif r dif theta . $
@@ -274,7 +274,7 @@ See the illustration in @fig-sol-golf-polar.
 
 #figure(
   image("figures/sol-golf-polar.svg", width: auto),
-  caption: [Illustration of the integrals $I_1$ and $I_2$ of
+  caption: [Illustration of the integrals $I_1$ and $I_2$
     from @sec-offset-circle and @exer-polar3, showing they're computing the same thing.],
 ) <fig-sol-golf-polar>
 
