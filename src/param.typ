@@ -575,7 +575,7 @@ Usually the strategy is to pick one that makes subsequent calculation easier.
 
 #soln[
   Examples of points passed through in this trajectory are:
-  $ (-3,1.9) --> (-2,1.4) --> (-1, 1.1) --> (0,1) --> (1,1.1) --> (2,1.4) --> (3,1.9). $
+  $ (-2,1.4) --> (-1, 1.1) --> (0,1) --> (1,1.1) --> (2,1.4) --> (3,1.9). $
   In situations like this where the one coordinate just moves from one end to the other
   along the path, one common strategy is to just use that coordinate as $t$
   and then figure out the other coordinates from there.
@@ -598,7 +598,7 @@ Usually the strategy is to pick one that makes subsequent calculation easier.
 ]
 #figure(
   image("figures/param-circle.svg", width: auto),
-  caption: [An $120 degree$ arc of the unit circle parametrized by
+  caption: [A $120 degree$ arc of the unit circle parametrized by
     $bf(r)(t) = (cos t, sin t)$ for $-pi/2 <= t <= pi/6$.],
 ) <fig-param-arc>
 
@@ -651,7 +651,7 @@ Usually the strategy is to pick one that makes subsequent calculation easier.
   while its rotor blades
   are spinning with _clockwise_ angular velocity $pi /3$
   and radius $2$ in the horizontal plane.
-  Let $P$ be a point on the tip of the blade, initially at $(r,0,0)$.
+  Let $P$ be a point on the tip of the blade, initially at $(2,0,0)$.
 
   - Parametrize the motion of a point on the tip of
     one of the blades as a function of time,
