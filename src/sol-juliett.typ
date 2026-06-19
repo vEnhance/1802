@@ -39,7 +39,7 @@ $ nabla dot bf(F) = (partial) / (partial x) (cos (z^2) - x)
 We seal the region $cal(S)$ by adding $cal(S)_"lid"$,
 the surface of points with $z = e$ and $x^2+y^2 <= 1$.
 This encloses a closed volume $cal(T)$.
-We orient the normal vector pointing upward (away from $cal(T)$).
+We orient $cal(S)_"lid"$'s normal vector pointing upward (away from $cal(T)$).
 Note $cal(S)$ also has normal vector pointing away from $cal(T)$.
 
 The divergence theorem on $cal(S)$ and $cal(S)_"lid"$, enclosing $cal(T)$, now gives
@@ -68,8 +68,8 @@ We consider the solid volume $cal(T)$ contained between $cal(S)_1$ and $cal(S)_2
 Since $cal(S)_2$ has normal vector oriented toward $cal(T)$
 while $cal(S)_1$ has normal vector oriented away from $cal(T)$,
 the divergence theorem says that
-$ iint_(cal(S)_2) bf(G) dot bf(n) dif S
-  - iint_(cal(S)_1) bf(G) dot bf(n) dif S
+$ iint_(cal(S)_1) bf(G) dot bf(n) dif S
+  - iint_(cal(S)_2) bf(G) dot bf(n) dif S
   = iiint_(cal(T)) nabla dot bf(G) dif V. $
 
 #figure(
