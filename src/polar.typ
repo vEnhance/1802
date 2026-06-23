@@ -299,7 +299,7 @@ then the first red arrow still always has length $dif r$,
 but the second red arrow really has length $r dif theta$ --- it's close to $dif theta$
 arc of a circle of radius $r$.
 You can see this in @fig-polar-dA-dr-r-dtheta for two points $P_1 = (r_1, theta_1)_"pol"$,
-and $P_2 = (r_2, theta_2_"pol")$.
+and $P_2 = (r_2, theta_2)_"pol"$.
 The point $P_1$ is close to the origin, so both red arrows are small.
 But the point $P_2$ farther has a longer red arrow,
 because the small change $dif theta$ is magnified by the radius of the circle.
