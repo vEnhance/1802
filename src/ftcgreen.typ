@@ -193,7 +193,7 @@ But the equations are the same.
   $ (partial)/(partial x)(c x^2 y^4 + log(y^2 + 1)) &= (partial)/(partial y)(e^(cos x) + x y^5) \
     <==> c dot 2 x y^4 &= 5 x y^4 $
   holds for all real numbers $x$ and $y$.
-  This occurs only when $#boxed[$ c = 5/2. $]$.
+  This occurs only when $#boxed[$ c = 5/2 $]$.
 ]
 
 #sample[
