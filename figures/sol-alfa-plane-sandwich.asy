@@ -9,7 +9,7 @@ real k = 5;
 transform t = shift(k*n);
 draw(t*(A--B), blue+1, Arrows);
 label(B, "Plane $\Pi_1$: $3x+4y+12z=-1$", 7*dir(180), blue);
-label(t*A, "Plane $\Pi_2$: $3x+4y+12z=1001$", 7*dir(0), blue);
+label(t*A, "Plane $\Pi_2$: $3x+4y+12z=1000$", 7*dir(0), blue);
 
 pair C = 0.7*B+0.3*A;
 draw("$77$", C--t*C, deepgreen, Arrows(TeXHead), Margins);

@@ -322,6 +322,7 @@ in return for the short time limit.
   Frederick Song,
   Joey Liu,
   John Zhou,
+  Kabir Goyal,
   Leo Xu,
   Max Li,
   Nick Zhang,
