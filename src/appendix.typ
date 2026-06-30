@@ -300,7 +300,7 @@ To spell it out:
 ] <def18112trig>
 
 If you do this, then @def18112 implies the following identities are kosher:
-#prop[
+#propn[
   Under @def18112trig, we have the identities
   $ cos(z) &:= (e^(i z) + e^(-i z)) / 2 \
     sin(z) &:= (e^(i z) - e^(-i z)) / (2i). $
