@@ -55,7 +55,7 @@ Suppose a point of mass $m$ is located at the origin $O = (0,0,0)$,
 In general, given a mass $m$ at a point $O$ and a point of mass $M$ at a point $P$,
 Newton's law says the gravitational force exerted by $P$ on $O$ is
 $ bf(F)_("gravity") = (G m M) / (|O P|^2) dot underbrace(arrow(O P) / (|O P|), "unit vector from" O "to" P) $
-where $G approx 6.67408 dot 10^(-11) dot upright("N") dot upright("m")^2 dot "kg"^(-2)$ is the gravitational constant.
+where $G approx 6.67430 dot 10^(-11) dot upright("N") dot upright("m")^2 dot "kg"^(-2)$ is the gravitational constant.
 
 But in real life, we usually want our mass $M$ to take up a whole region $cal(R)$,
 with some density $delta$.
