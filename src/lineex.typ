@@ -187,7 +187,7 @@ You can also do parametrization, which is disgusting, but it works.
     [$bf(F)$ is conservative \ $==>$ FTC],
       [_Cannot use here_], [_Not applicable_],
     [$cal(C)$ is a closed loop \ $==>$ Green],
-      [$iint_(cal(R)) underbrace(0-3, "2D scalar curl") dif A = 0$],
+      [$iint_(cal(R)) underbrace(0-3, "2D scalar curl") dif A = -3pi$],
       [Output $iint_(cal(R)) underbrace(2x+5, "Div" = nabla dot bf(F)) dif A = 5pi$],
     [Bare-hands definition \ Use parametrization],
       [$int_(t=0)^(2pi) vec(cos(t)^2+3sin(t), 5sin(t)) dot vec(-sin(t), cos(t)) dif t$],
