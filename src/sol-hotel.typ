@@ -7,7 +7,7 @@
 #recall-thm(<exer-napkin-ring>)
 
 This is a famous exercise with its own page on Wikipedia at #url("https://w.wiki/CarU").
-We give one solution using spherical coordinates below,
+We give one solution using cylindrical coordinates below,
 but this is far from the only possible solution.
 
 Using cylindrical coordinates the equation of the sphere is: $ r^2 + z^2 = R^2 . $

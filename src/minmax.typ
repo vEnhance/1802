@@ -298,7 +298,7 @@ The bad news is that it's tricky. You really have to think.
   - Possible strategy in some situations: try to isolate one variable in terms of others.
     For example, if you see $x^2 + x + 2 y = 7$,
     one strategy is to rewrite it as $y = 1/2 (7 - (x^2 + x))$
-    and then use that substitution to kill all the $x$'s for your system.
+    and then use that substitution to kill all the $y$'s for your system.
     This reduces the number of variables by $1$, at the cost of some work.
 
   - If there's symmetry in the system of equations, see if you can exploit it to save work.
