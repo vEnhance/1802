@@ -106,7 +106,7 @@ To motivate it, let's consider a particular example in @fig-lm.
 Here $n = 2$, and
 
 - $f(x,y) = x^2 + y^2$, and
-- $g(x,y) = c$ is the red level curve shown in the picture below;
+- $g(x,y) = c$ is the blue level curve shown in the picture below;
 - $cal(R)$ is just the level curve $g(x,y) = c$ (no further $<$ or $<=$ constraints).
 
 Trying to optimize $f$ subject to $g(x,y) = c$ in this picture is the same as
