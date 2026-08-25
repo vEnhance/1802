@@ -2,7 +2,7 @@
 #let poonen = link("https://math.mit.edu/~poonen/notes02.pdf")[Poonen's notes]
 #let epigraph(quote_src, quote_text) = {
   set text(size: 10pt)
-  pad(left: 25%)[
+  pad(left: 35%)[
     #emph(quote_text)
     #line(length: 100%)
     #align(right)[--- #quote_src]
@@ -75,6 +75,12 @@ For comparison, Part Charlie corresponds roughly to §11 of #poonen.
 #pagebreak()
 
 #part[Part Delta: Parametric side-quest]
+#epigraph[#link("https://www.ams.org/notices/201005/rtx100500608p.pdf")[What is mathematics for?], Underwood Dudley][
+  However, when I am before a bar of judgment, heavenly or otherwise, and asked to
+  justify my life, I will draw myself up proudly and say,
+  "I was one of the stewards of mathematics, and it came to no harm in my care".
+  I will not say, "I helped people get jobs".
+]
 For comparison, Part Delta corresponds roughly to §5 and §7 of #poonen.
 #include "src/param.typ"
 #pagebreak()
