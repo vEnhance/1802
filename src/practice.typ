@@ -2,13 +2,11 @@
 
 = Practice questions <ch-practice>
 
-Some practice questions from topics throughout the entire course.
-Solutions are in @ch-sol-kilo.
-
 == Practice half-final
 
 This was a cumulative practice exam given on December 18, 2024 covering the whole course.
 It was about half the length of the final exam (which was 14 questions long).
+Solutions are in @ch-sol-kilo.
 
 #exer[
   Give an example of a complex number $z$ whose
@@ -17,8 +15,7 @@ It was about half the length of the final exam (which was 14 questions long).
 ] <exer-mf-1>
 
 #exer[
-  Compute the unique real number $a$ for which the matrix
-  $M = mat(1,1;a,6)$ has an eigenvalue of $2$.
+  Compute the unique real number $a$ for which $M = mat(1,1;a,6)$ has an eigenvalue of $2$.
   For this value of $a$, compute the other eigenvalue of $M$,
   and a (nonzero) eigenvector for that eigenvalue.
 ] <exer-mf-2>
@@ -35,7 +32,7 @@ It was about half the length of the final exam (which was 14 questions long).
 ] <exer-mf-4>
 
 #exer[
-  Compute the maximum and minimum value of $x^2+2y^2+4x$ over the region $x^2+y^2 <= 9$.
+  Compute the maximum and minimum value of $x^2+2y^2+4x$ over $x^2+y^2 <= 9$.
 ] <exer-mf-5>
 
 #exer[
@@ -60,8 +57,6 @@ It was about half the length of the final exam (which was 14 questions long).
   (Recommended approach: add two "lids" to $cal(S)$, calculate flux through the lids by hand,
   then use the divergence theorem.)
 ] <exer-mf-8>
-
-#pagebreak()
 
 == Miscellaneous practice questions without solutions
 
