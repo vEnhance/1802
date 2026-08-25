@@ -47,14 +47,12 @@ Some vectors in $RR^3$ are special enough to get their own shorthand.
 (The notation "$:=$" means "is defined as".)
 #definition[
   When working in $RR^2$, we define
-  $ ee_1 := vec(1,0), #h(1em) ee_2 := vec(0,1) $
-  and $ bf(0) := vec(0,0). $
+  $ ee_1 := vec(1,0), #h(1em) ee_2 := vec(0,1), #h(2em) "as well as" #h(2em) bf(0) := vec(0,0). $
 ]
 #definition[
   When working in $RR^3$, we define
-  $ ee_1 := vec(1,0,0), #h(1em) ee_2 := vec(0,1,0), #h(1em) ee_3 := vec(0,0,1). $
-  We also let $ bf(0) := vec(0,0,0). $
-
+  $ ee_1 := vec(1,0,0), #h(1em) ee_2 := vec(0,1,0), #h(1em) ee_3 := vec(0,0,1),
+    #h(2em) "as well as" #h(2em) bf(0) := vec(0,0,0). $
   In other places, you'll sometimes see $bf(i)$, $bf(j)$, $bf(k)$ instead,
   but this book will always use $ee_i$.
 ]
