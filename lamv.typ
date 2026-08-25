@@ -1,5 +1,11 @@
 #import "@local/evan:1.0.0":*
 #let poonen = link("https://math.mit.edu/~poonen/notes02.pdf")[Poonen's notes]
+#let epigraph(quote_src, quote_text) = pad(left: 35%)[
+  #emph(quote_text) \
+  #line(length: 100%)
+  #align(right)[--- #quote_src]
+]
+
 #show: evan.with(
   title: [Linear Algebra and Multivariable Calculus],
   subtitle: [Notes from MIT's 18.02 course in fall 2024],
