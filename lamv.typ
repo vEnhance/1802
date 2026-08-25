@@ -147,6 +147,10 @@ For comparison, Part Juliett corresponds to §17.7, §18, §19, §21 of #poonen.
 #pagebreak()
 
 #part[Part Lima: Solutions]
+#epigraph[Lester Gardner][
+  The beaver is noted for his engineering, mechanical skills, and industry.
+  His habits are nocturnal. He does his best work in the dark.
+]
 #include "src/sol-alfa.typ"
 #pagebreak()
 #include "src/sol-bravo.typ"
