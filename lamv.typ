@@ -31,7 +31,7 @@
 #pagebreak()
 
 #part[Part Alfa: Linear Algebra of Vectors]
-#epigraph[David Foster Wallace, _Infinite Jest_][
+#epigraph[_Infinite Jest_, David Foster Wallace][
   It's a very American illness,
   the idea of giving yourself away entirely to the idea
   of working in order to achieve some sort of brass ring
@@ -143,7 +143,7 @@ For comparison, Part Juliett corresponds to §17.7, §18, §19, §21 of #poonen.
 #pagebreak()
 
 #part[Part Kilo: Practice questions]
-#epigraph[MIT hacker code of ethics][
+#epigraph[#link("https://mitadmissions.org/discover/life-culture/hacks-tomfoolery-pranks/")[MIT hacker code of ethics]][
   Brute force is the last resort of the incompetent.
 ]
 #include "src/practice.typ"
