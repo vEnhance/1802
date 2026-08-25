@@ -28,6 +28,12 @@
 #pagebreak()
 
 #part[Part Alfa: Linear Algebra of Vectors]
+#epigraph[David Foster Wallace, _Infinite Jest_][
+  It's a very American illness,
+  the idea of giving yourself away entirely to the idea
+  of working in order to achieve some sort of brass ring
+  that usually involves people feeling some way about you.
+]
 For comparison, Part Alfa corresponds roughly to §1, §2, §3.9 of #poonen.
 #include "src/vectors.typ"
 #pagebreak()
