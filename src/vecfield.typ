@@ -87,9 +87,10 @@ Let's put these examples into aquatic terms.
 ]
 
 #figure(
-  image("media/waterfall.jpg", width: 50%),
+  image("media/waterfall.png", width: 50%),
   caption: [A river flowing from the base of a waterfall.
-    Black arrows point along the direction of the gradient.],
+    Red arrows point along the direction of the gradient.
+    (Drawn in ProCreate.)],
 )
 
 #example(title: [Example of a non-conservative vector field: a whirlpool])[
@@ -106,8 +107,10 @@ Let's put these examples into aquatic terms.
 ]
 
 #figure(
-  image("media/whirlpool.jpg", width: 50%),
-  caption: [A whirlpool. Round and round we go. Not a conservative vector field.],
+  image("media/whirlpool.png", width: 50%),
+  caption: [A whirlpool.
+    Round and round we go. Not a conservative vector field.
+    (Drawn in ProCreate.)],
 )
 
 == [TEXT] How to draw a vector field
