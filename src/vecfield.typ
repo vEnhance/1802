@@ -139,7 +139,7 @@ The classic easy-to-draw example is $bf(F) = vec(x,y)$,
 in which for every point $P$, one just points straight away from the origin.
 See @fig-vecfield-id for that.
 For the record, in this figure (and the other figures in this section),
-the length of all the little arrows is scaled exactly 30% compared to the true length.
+the lengths of all the little arrows are scaled exactly 30% compared to the true lengths.
 
 #figure(
   image("figures/vecfield-ex.svg", width: auto),
