@@ -145,6 +145,10 @@ Here's more examples.
   Let $T : RR^2 -> RR^2$ be counterclockwise rotation around the origin by $30 degree$.
   Write $T$ as a $2 times 2$ matrix.
 ]
+#figure(
+  image("figures/matrix-rot.svg", width: auto),
+  caption: [Rotation by $30$ degrees.],
+) <fig-rotate-30>
 #soln[
   See @fig-rotate-30.
   By looking at the unit circle, we see that
@@ -154,10 +158,6 @@ Here's more examples.
   Glue these together and output $T$ as the matrix
   $ T = mat(sqrt(3)/2, -1/2; 1/2, sqrt(3)/2). #qedhere $
 ]
-#figure(
-  image("figures/matrix-rot.svg", width: auto),
-  caption: [Rotation by $30$ degrees.],
-) <fig-rotate-30>
 
 #remark(title: [Remark: This is where the rotation matrix comes from])[
   If you redo this question with $30 degree$ replaced by any angle $theta$, you get the answer
