@@ -65,6 +65,9 @@ For comparison, Part Bravo corresponds roughly to §3, §4, §6 of #poonen.
 #pagebreak()
 
 #part[Part Charlie: Review of complex numbers]
+#epigraph[#link("https://w.wiki/Tpof")[Stephen's Sausage Roll]][
+  Learned people cast great shadows.
+]
 For comparison, Part Charlie corresponds roughly to §11 of #poonen.
 #include "src/complex.typ"
 #pagebreak()
