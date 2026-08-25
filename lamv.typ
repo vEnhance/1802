@@ -140,6 +140,9 @@ For comparison, Part Juliett corresponds to §17.7, §18, §19, §21 of #poonen.
 #pagebreak()
 
 #part[Part Kilo: Practice questions]
+#epigraph[MIT hacker code of ethics][
+  Brute force is the last resort of the incompetent.
+]
 #include "src/practice.typ"
 #pagebreak()
 
