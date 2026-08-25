@@ -48,6 +48,14 @@ For comparison, Part Alfa corresponds roughly to §1, §2, §3.9 of #poonen.
 #pagebreak()
 
 #part[Part Bravo: Linear Algebra of Matrices]
+#epigraph[Lydia's opening line in
+  #link("https://anserena.com/other/writing/")[_Holding on to Her Words_], by Serena An][
+  Translation is a bridge. It can bridge two languages, time periods, cultures.
+  The pages of a book and your mind.  Even the space between two people.
+  Translation involves reflecting on yourself and your relationships with others.
+  That’s at the heart of why I study Chinese literature.
+  But it took me many years to realize that.
+]
 For comparison, Part Bravo corresponds roughly to §3, §4, §6 of #poonen.
 #include "src/matrix.typ"
 #pagebreak()
