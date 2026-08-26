@@ -97,6 +97,9 @@ For comparison, Part Echo corresponds roughly to §8 and §12.1-§12.3 of #poone
 #pagebreak()
 
 #part[Part Foxtrot: Optimization]
+#epigraph[Queen in #link("https://w.wiki/6WCE")[Delta Rune], Toby Fox][
+  Teens Are Merely Big Children #text(size:7pt)[And Adults Are Even Bigger Children]
+]
 For comparison, Part Foxtrot corresponds roughly to §9 and §12.4-§12.6 of #poonen.
 #include "src/minmax.typ"
 #pagebreak()
