@@ -116,7 +116,7 @@ For comparison, Part Foxtrot corresponds roughly to §9 and §12.4-§12.6 of #po
 
 #part[Part Golf: 2D integrals of scalar functions]
 #epigraph(attribution: [Calvin in _Calvin and Hobbes_ (May 3, 1989)])[
-  Mom says Hobbes wouldn't have stolen because he's not valuable. \
+  Mom says Hobbes wouldn't have been stolen because he's not valuable. \
   ... (sniff) well, *I* think he's valuable.
 ]
 For comparison, Part Golf corresponds to §13.1-§13.5 of #poonen.
