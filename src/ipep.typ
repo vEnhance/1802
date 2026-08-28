@@ -11,6 +11,14 @@ If you've been following my advice to pay attention to type safety so far, it'll
 I'll freely admit that I (Evan) often make type-errors in this part of 18.02 as well,
 so don't let your guard down.
 
+#figure(
+  image("figures/integrals-triangle.svg", width: 100%),
+  caption: [
+    For each $0 <= d <= n <= 3$, we draw the kind of integral and give it a name.
+    Download at #url("https://web.evanchen.cc/textbooks/poster-ints.pdf").
+  ]
+) <poster-triangle>
+
 Remember that:
 #idea[
   Suppose $f : RR^n -> RR$ is given, and $0 <= d <= n$.
@@ -25,19 +33,10 @@ So philosophically, a $0$-dimensional integral is just a finite sum of $f$ at so
 This might seem stupid that I bring up this degenerate case,
 but it turns out later when we cover div/grad/curl the $0$-dimensional case is relevant.
 
-Here's a giant chart in @poster-triangle.
+We give a giant chart in @poster-triangle.
 (The chart is so big it doesn't quite fit in the page,
 but you can download a
 #link("https://web.evanchen.cc/textbooks/poster-ints.pdf")[large PDF version]).
-
-#figure(
-  image("figures/integrals-triangle.svg", width: 100%),
-  caption: [
-    For each $0 <= d <= n <= 3$, we draw the kind of integral and give it a name.
-    Download at #url("https://web.evanchen.cc/textbooks/poster-ints.pdf").
-  ]
-) <poster-triangle>
-
 This chart has ten different kinds of integrals,
 one for each $(d,n)$ with $0 <= d <= n <= 3$.
 Here's a rundown of the things in the chart.

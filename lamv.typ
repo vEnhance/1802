@@ -31,7 +31,7 @@
 #pagebreak()
 
 #part[Part Alfa: Linear Algebra of Vectors]
-#epigraph[_Infinite Jest_, David Foster Wallace][
+#epigraph[_Infinite Jest_, by David Foster Wallace][
   It's a very American illness,
   the idea of giving yourself away entirely to the idea
   of working in order to achieve some sort of brass ring
@@ -75,17 +75,21 @@ For comparison, Part Charlie corresponds roughly to §11 of #poonen.
 #pagebreak()
 
 #part[Part Delta: Parametric side-quest]
-#epigraph[#link("https://www.ams.org/notices/201005/rtx100500608p.pdf")[What is mathematics for?], Underwood Dudley][
-  However, when I am before a bar of judgment, heavenly or otherwise, and asked to
-  justify my life, I will draw myself up proudly and say,
-  "I was one of the stewards of mathematics, and it came to no harm in my care".
-  I will not say, "I helped people get jobs".
+#epigraph[Koro-sensei in _Assassination Classroom_][
+  Broadly speaking, there are two reasons a person feels the desire to teach something:
+  Either he wants to pass on his successes or he wants to pass on his failures.
 ]
 For comparison, Part Delta corresponds roughly to §5 and §7 of #poonen.
 #include "src/param.typ"
 #pagebreak()
 
 #part[Part Echo: Multivariable differentiation]
+#epigraph[#link("https://www.ams.org/notices/201005/rtx100500608p.pdf")[What is mathematics for?], Underwood Dudley][
+  However, when I am before a bar of judgment, heavenly or otherwise,
+  and asked to justify my life, I will draw myself up proudly and say,
+  "I was one of the stewards of mathematics, and it came to no harm in my care".
+  I will not say, "I helped people get jobs".
+]
 For comparison, Part Echo corresponds roughly to §8 and §12.1-§12.3 of #poonen.
 #include "src/level.typ"
 #pagebreak()
@@ -97,7 +101,7 @@ For comparison, Part Echo corresponds roughly to §8 and §12.1-§12.3 of #poone
 #pagebreak()
 
 #part[Part Foxtrot: Optimization]
-#epigraph[Queen in #link("https://w.wiki/6WCE")[Delta Rune], Toby Fox][
+#epigraph[Queen in #link("https://w.wiki/6WCE")[Delta Rune], by Toby Fox][
   Teens Are Merely Big Children #text(size:7pt)[And Adults Are Even Bigger Children]
 ]
 For comparison, Part Foxtrot corresponds roughly to §9 and §12.4-§12.6 of #poonen.
@@ -111,6 +115,10 @@ For comparison, Part Foxtrot corresponds roughly to §9 and §12.4-§12.6 of #po
 #pagebreak()
 
 #part[Part Golf: 2D integrals of scalar functions]
+#epigraph[Calvin in _Calvin and Hobbes_ (May 3, 1989)][
+  Mom says Hobbes wouldn't have stolen because he's not valuable. \
+  ... (sniff) well, *I* think he's valuable.
+]
 For comparison, Part Golf corresponds to §13.1-§13.5 of #poonen.
 #include "src/ipep.typ"
 #pagebreak()
@@ -124,6 +132,15 @@ For comparison, Part Golf corresponds to §13.1-§13.5 of #poonen.
 #pagebreak()
 
 #part[Part Hotel: 3D integrals of scalar functions]
+#epigraph[Author notes for
+  #link("https://puzzles.mit.edu/2023/puzzlefactory.place/puzzles/5d-barred-diagramless-with-multiverse-time-travel")[5D Barred Diagramless with Multiverse Time Travel],
+  by Alex Irpan][
+  At some points, I was not convinced this puzzle should even exist,
+  but editors and testsolvers encouraged me to finish it, saying it was
+  "exactly the bullshit I expect to see in Mystery Hunt".
+  (The lucky postprodder for the puzzle would also like to voice his support.)
+  Hope you had fun! Really, it could have been much worse.
+]
 For comparison, Part Hotel corresponds to §13.6-13.9 and §17.1-§17.6 of #poonen.
 #include "src/triple.typ"
 #pagebreak()
@@ -137,6 +154,12 @@ For comparison, Part Hotel corresponds to §13.6-13.9 and §17.1-§17.6 of #poon
 #pagebreak()
 
 #part[Part India: Line integrals of vector fields over a curve]
+#epigraph[EWD 1036, Edsger W. Dijkstra (1988)][
+  My point today is that, if we wish to count lines of code,
+  we should not regard them as "lines produced" but as "lines spent":
+  the current conventional wisdom is so foolish as to book
+  that count on the wrong side of the ledger.
+]
 For comparison, Part India corresponds to §14, §15, §20, §21 of #poonen.
 #include "src/vecfield.typ"
 #pagebreak()
@@ -154,6 +177,10 @@ For comparison, Part India corresponds to §14, §15, §20, §21 of #poonen.
 #pagebreak()
 
 #part[Part Juliett: Flux integrals of vector fields over a surface]
+#epigraph[Monokuma in _Danganropa_][
+  Every human has regrets, has things they'd like to go back and change.
+  But I don't! 'Cause I'm a bear!
+]
 For comparison, Part Juliett corresponds to §17.7, §18, §19, §21 of #poonen.
 #include "src/flux.typ"
 #pagebreak()
@@ -163,16 +190,16 @@ For comparison, Part Juliett corresponds to §17.7, §18, §19, §21 of #poonen.
 #pagebreak()
 
 #part[Part Kilo: Practice questions]
-#epigraph[#link("https://mitadmissions.org/discover/life-culture/hacks-tomfoolery-pranks/")[MIT hacker code of ethics]][
-  Brute force is the last resort of the incompetent.
+#epigraph[Lester Gardner][
+  The beaver is noted for his engineering, mechanical skills, and industry.
+  His habits are nocturnal. He does his best work in the dark.
 ]
 #include "src/practice.typ"
 #pagebreak()
 
 #part[Part Lima: Solutions]
-#epigraph[Lester Gardner][
-  The beaver is noted for his engineering, mechanical skills, and industry.
-  His habits are nocturnal. He does his best work in the dark.
+#epigraph[#link("https://mitadmissions.org/discover/life-culture/hacks-tomfoolery-pranks/")[MIT hacker code of ethics]][
+  Brute force is the last resort of the incompetent.
 ]
 #include "src/sol-alfa.typ"
 #pagebreak()
@@ -198,4 +225,10 @@ For comparison, Part Juliett corresponds to §17.7, §18, §19, §21 of #poonen.
 #pagebreak()
 
 #part[Part Mike: Appendix]
+#epigraph[][
+  You all have a little bit of "I want to save the world" in you,
+  that's why you're here, in college.
+  I want you to know that it's okay if you only save one person,
+  and it's okay if that person is you.
+]
 #include "src/appendix.typ"

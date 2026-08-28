@@ -54,8 +54,8 @@ Solutions are in @ch-sol-kilo.
   with normal vector oriented outwards (thus $cal(S)$ is the curved part of a cylinder).
   Compute the divergence of $bf(F)$.
   Then compute the flux of $bf(F)$ through $cal(S)$.
-  (Recommended approach: add two "lids" to $cal(S)$, calculate flux through the lids by hand,
-  then use the divergence theorem.)
+  (Recommended approach: add two "lids" to $cal(S)$
+  and use the divergence theorem.)
 ] <exer-mf-8>
 
 == Miscellaneous practice questions without solutions

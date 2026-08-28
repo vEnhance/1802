@@ -75,10 +75,6 @@ in addition to the actual points,
 we need to specify an _orientation_.
 To be more precise, at every point $P$ of the surface $cal(S)$,
 the cross product from our parametrization could point in one of two opposite directions.
-#definition(title: [Definition of orienting a surface])[
-  To _orient_ the surface $cal(S)$ is to specify, at each point,
-  which way you want the cross product of your parametrization to point.
-]
 
 #figure(
   image("figures/flux-cross-sign.svg", width: auto),
@@ -88,6 +84,11 @@ the cross product from our parametrization could point in one of two opposite di
     Hence when parametrizing a surface, the order of $u$ and $v$ induces an orientation on the surface.
   ],
 ) <fig-flux-cross-sign>
+
+#definition(title: [Definition of orienting a surface])[
+  To _orient_ the surface $cal(S)$ is to specify, at each point,
+  which way you want the cross product of your parametrization to point.
+]
 
 Algebraically, this corresponds to choosing the _order of $u$ and $v$_;
 as if you flip the order of the two parameters it will negate the entire cross product:

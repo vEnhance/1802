@@ -140,10 +140,10 @@ $ op("comp")_(bf(w))(bf(v)) = frac(bf(v) dot bf(w), |bf(w)|)
 The vector projection of $bf(v)$ along $bf(w)$ is
 given by:
 $ op("proj")_(bf(w))(bf(v))
-  &= frac(bf(v) dot bf(w), |bf(w)|) (bf(w) / (|bf(w)|)) \
-  &= -11/5 dot vec(-3000, -4000, 0) / 5000 \
-  &= -11/5 dot vec(-3 slash 5, -4 slash 5, 0) \
-  &= #boxed[$ vec(33 slash 25, 44 slash 25, 0) $]. $
+  = frac(bf(v) dot bf(w), |bf(w)|) (bf(w) / (|bf(w)|))
+  = -11/5 dot vec(-3000, -4000, 0) / 5000
+  = -11/5 dot vec(-3 slash 5, -4 slash 5, 0)
+  = #boxed[$ vec(33 slash 25, 44 slash 25, 0) $]. $
 
 == Solution to @exer-dot-reverse (dot product $3$)
 
@@ -155,6 +155,13 @@ and so there should be two vectors that work.
 See @fig-sol-alfa-dot-reverse for a picture.
 (You might already guess one of the solutions ---
 $bf(v) = chevron.l 1,0 chevron.r $ obviously works --- but we'll pretend we didn't notice that.)
+
+#figure(
+  image("figures/sol-alfa-dot-reverse.svg", width: auto),
+  caption: [The two answers to @exer-dot-reverse,
+    which are two unit vectors spaced at an equal angle away from $chevron.l 3,4 chevron.r$.
+  ],
+) <fig-sol-alfa-dot-reverse>
 
 Translating the givens algebraically,
 we have the following system of equations:
@@ -179,13 +186,6 @@ Hence either $y = 0$ or $y = 24/25$.
 In conclusion the answer is
 $ #boxed[$ chevron.l 1,0 chevron.r " and " lr(chevron.l -7/25, 24/25 chevron.r) $]. $
 See @fig-sol-alfa-dot-reverse for a picture of the two answers.
-
-#figure(
-  image("figures/sol-alfa-dot-reverse.svg", width: auto),
-  caption: [The two answers to @exer-dot-reverse,
-    which are two unit vectors spaced at an equal angle away from $chevron.l 3,4 chevron.r$.
-  ],
-) <fig-sol-alfa-dot-reverse>
 
 == Solution to @exer-cauchy ($2$ and $5$)
 
