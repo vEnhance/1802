@@ -7,7 +7,7 @@
   date: [11 September 2024],
 )
 
-#quote(attribution: [Monokuma in _Danganropa_])[
+#quote(attribution: [Monokuma in _Danganronpa_])[
   Every human has regrets, has things they'd like to go back and change.
   But I don't! 'Cause I'm a bear!
 ]

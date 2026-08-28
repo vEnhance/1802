@@ -65,7 +65,7 @@ For comparison, Part Bravo corresponds roughly to §3, §4, §6 of #poonen.
 #pagebreak()
 
 #part[Part Charlie: Review of complex numbers]
-#epigraph(attribution: link("https://w.wiki/Tpof")[Stephen's Sausage Roll])[
+#epigraph(attribution: [#link("https://w.wiki/Tpof")[_Stephen's Sausage Roll_]])[
   Learned people cast great shadows.
 ]
 For comparison, Part Charlie corresponds roughly to §11 of #poonen.
@@ -84,7 +84,7 @@ For comparison, Part Delta corresponds roughly to §5 and §7 of #poonen.
 #pagebreak()
 
 #part[Part Echo: Multivariable differentiation]
-#epigraph(attribution: [#link("https://www.ams.org/notices/201005/rtx100500608p.pdf")[What is mathematics for?], Underwood Dudley])[
+#epigraph(attribution: [#link("https://www.ams.org/notices/201005/rtx100500608p.pdf")[What is mathematics for?], by Underwood Dudley])[
   However, when I am before a bar of judgment, heavenly or otherwise,
   and asked to justify my life, I will draw myself up proudly and say,
   "I was one of the stewards of mathematics, and it came to no harm in my care".
@@ -101,7 +101,7 @@ For comparison, Part Echo corresponds roughly to §8 and §12.1-§12.3 of #poone
 #pagebreak()
 
 #part[Part Foxtrot: Optimization]
-#epigraph(attribution: [Queen in #link("https://w.wiki/6WCE")[Delta Rune], by Toby Fox])[
+#epigraph(attribution: [Queen in #link("https://w.wiki/6WCE")[_Deltarune_], by Toby Fox])[
   Teens Are Merely Big Children #text(size:7pt)[And Adults Are Even Bigger Children]
 ]
 For comparison, Part Foxtrot corresponds roughly to §9 and §12.4-§12.6 of #poonen.
@@ -154,7 +154,7 @@ For comparison, Part Hotel corresponds to §13.6-13.9 and §17.1-§17.6 of #poon
 #pagebreak()
 
 #part[Part India: Line integrals of vector fields over a curve]
-#epigraph(attribution: [EWD 1036, Edsger W. Dijkstra (1988)])[
+#epigraph(attribution: [EWD 1036, by Edsger W. Dijkstra (1988)])[
   My point today is that, if we wish to count lines of code,
   we should not regard them as "lines produced" but as "lines spent":
   the current conventional wisdom is so foolish as to book
@@ -177,7 +177,7 @@ For comparison, Part India corresponds to §14, §15, §20, §21 of #poonen.
 #pagebreak()
 
 #part[Part Juliett: Flux integrals of vector fields over a surface]
-#epigraph(attribution: [Monokuma in _Danganropa_])[
+#epigraph(attribution: [Monokuma in _Danganronpa_])[
   Every human has regrets, has things they'd like to go back and change.
   But I don't! 'Cause I'm a bear!
 ]
@@ -198,7 +198,7 @@ For comparison, Part Juliett corresponds to §17.7, §18, §19, §21 of #poonen.
 #pagebreak()
 
 #part[Part Lima: Solutions]
-#epigraph(attribution: link("https://mitadmissions.org/discover/life-culture/hacks-tomfoolery-pranks/")[MIT hacker code of ethics])[
+#epigraph(attribution: [#link("https://mitadmissions.org/discover/life-culture/hacks-tomfoolery-pranks/")[MIT hacker code of ethics]])[
   Brute force is the last resort of the incompetent.
 ]
 #include "src/sol-alfa.typ"
