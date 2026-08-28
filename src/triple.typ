@@ -82,19 +82,16 @@ so one needs different letters.
       2sqrt(1-x^2)
       int_(y=-sqrt(1-x^2))^(sqrt(1-x^2)) 1 dif y dif x \
     &= int_(x=-1)^1
-      2sqrt(1-x^2) dot 2sqrt(1-x^2) dif x \
-    &= int_(x=-1)^1 4(1-x^2) dif x \
+      2sqrt(1-x^2) dot 2sqrt(1-x^2) dif x
+    = int_(x=-1)^1 4(1-x^2) dif x \
     &= 4[x - x^3 / 3]_(x=-1)^1 = 4[(1 - 1 / 3) - (-1 + 1/3)] = #boxed[$ 16 /3 $]. #qedhere $
 ]
 #digression(title: [Digression on picture])[
   If you draw a picture of the region,
   you get the intersection of these two cylinders
   which forms something apparently called a _Steinmetz solid_.
-  (I say "apparently" because ChatGPT told me this name;
-  I didn't know this had a name before either.)
 
-  Surprisingly, you actually _don't_ want to use polar (or cylindrical) coordinates
-  on this example.
+  Surprisingly, you actually _don't_ want to use polar (or cylindrical) coordinates on this example.
   If you try to do so, I think you'll actually get stuck.
   Straight $x y z$-integration turns out to work because of the
   unexpectedly convenient fact that you get two square roots that miraculously cancel.
@@ -167,13 +164,12 @@ If you were able to do the earlier example with
 $z = 3(x^2+y^2)$ and $z = 72-5(x^2+y^2)$ by yourself without reading the solution,
 then you can safely skip this entire section!
 
-The transition map $ (r, theta, z) |-> (x, y, z)$ is given by
+The transition map $(r, theta, z) |-> (x, y, z)$, illustrated in @fig-triple-cylinder, is given by
 $
   x &= r cos theta \
   y &= r sin theta \
   z &= z.
 $
-This is illustrated in @fig-triple-cylinder.
 #figure(
   image("figures/triple-cylinder.svg", width: auto),
   caption: [Picture of cylindrical coordinates.

@@ -185,9 +185,9 @@ We can jump straight into examples now!
   Obviously $int_(theta=0)^(2pi) dif theta = 2pi$.
   The double integral can be evaluated as
   $ int_(r=0)^1 r int_(z=0)^(r^2) z dif z dif r
-    &= int_(r=0)^1 r dot [z^2/2]_(z=0)^(r^2) dif r \
-    &= int_(r=0)^1 r^5/2 dif r \
-    &= [r^6/12]_(r=0)^1 = 1/12. $
+    = int_(r=0)^1 r dot [z^2/2]_(z=0)^(r^2) dif r
+    = int_(r=0)^1 r^5/2 dif r
+    = [r^6/12]_(r=0)^1 = 1/12. $
   Hence the final answer is
   $  1/12 dot 2 pi = #boxed[$ pi / 6 $]. #qedhere $
 ]
