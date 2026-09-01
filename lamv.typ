@@ -190,9 +190,8 @@ For comparison, Part Juliett corresponds to §17.7, §18, §19, §21 of #poonen.
 #pagebreak()
 
 #part[Part Kilo: Practice questions]
-#epigraph(attribution: [Lester Gardner])[
-  The beaver is noted for his engineering, mechanical skills, and industry.
-  His habits are nocturnal. He does his best work in the dark.
+#epigraph(attribution: [#link("https://cinnamew.itch.io/porcelain-heart")[Porcelain Heart]])[
+  Don't be silly, dear. Curses aren't real.
 ]
 #include "src/practice.typ"
 #pagebreak()
