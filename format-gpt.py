@@ -9,8 +9,8 @@ re_upright_bold = re.compile(r"upright\(bold\(([a-zA-Z]+)\)\)")
 re_differential = re.compile(r"([ \$])d ")
 re_frac = re.compile(r"frac\(([^()]+), ([^()]+)\)")
 re_heading = re.compile(r"\#heading\(level: ([0-9]+), numbering: none\)\[([^\]]+)\]")
-re_hyperlink = re.compile(r"^<[^>]+>$", flags=re.M)
-re_upright_op = re.compile(r'upright\("([a-zA-Z]+)"\) \(', flags=re.M)
+re_hyperlink = re.compile(r"^<[^>]+>$", flags=re.MULTILINE)
+re_upright_op = re.compile(r'upright\("([a-zA-Z]+)"\) \(', flags=re.MULTILINE)
 
 latex_input_lines = "".join(pyperclip.paste()).splitlines()
 latex_text = ""
