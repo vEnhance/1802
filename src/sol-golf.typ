@@ -8,7 +8,7 @@
 
 Let $cal(R)$ be the region bounded by the curves $y = sqrt(x)$ and $y = x^3$.
 We wish to compute the integral
-$ I = iint_(cal(R)) x^(100) y^(200) dif x dif y . $
+$ I = integral.double_(cal(R)) x^(100) y^(200) dif x dif y . $
 
 To determine the limits of integration,
 we find the intersection points by solving $sqrt(x) = x^3$.
@@ -30,13 +30,13 @@ The values of $y$ go from $0$ to $1$.
 For each fixed $y$, the values of $x$ range from
 $ y^2 <= x <= y^(1\/3) $
 so the integral is:
-$ I = int_(y = 0)^1 int_(x = y^2)^(y^(1 \/ 3)) x^(100) y^(200) dif x dif y . $
+$ I = integral_(y = 0)^1 integral_(x = y^2)^(y^(1 \/ 3)) x^(100) y^(200) dif x dif y . $
 Evaluating the inner integral:
-$ int_(x = y^2)^(y^(1 \/ 3)) x^100 dif x = [x^101 / 101]_(x = y^2)^(y^(1\/3))
+$ integral_(x = y^2)^(y^(1 \/ 3)) x^100 dif x = [x^101 / 101]_(x = y^2)^(y^(1\/3))
   = y^(101 \/ 3) / 101 - y^202 / 101 . $
 Now, integrating over $y$:
-$ I &= int_(y = 0)^1 (y^(101 \/ 3) / 101 - y^202 / 101) y^200 dif y \
-    &= 1 / 101 (int_(y=0)^1 y^(701\/3) dif y - int_(y=0)^1 y^(402) dif y) \
+$ I &= integral_(y = 0)^1 (y^(101 \/ 3) / 101 - y^202 / 101) y^200 dif y \
+    &= 1 / 101 (integral_(y=0)^1 y^(701\/3) dif y - integral_(y=0)^1 y^(402) dif y) \
     &= 1 / 101 (3/704 - 1/403) = #boxed[$ 5 / 283712 $]. $
 
 #h3[Integrating with $y$ inside and $x$ outside]
@@ -45,14 +45,14 @@ The values of $x$ go from $0$ to $1$.
 For a fixed $x$, the values of $y$ range from
 $ x^3 <= y <= x^(1\/2) $
 so the integral is
-$ I = int_(x = 0)^1 int_(y = x^3)^(x^(1 \/ 2)) x^(100) y^(200) dif y dif x . $
+$ I = integral_(x = 0)^1 integral_(y = x^3)^(x^(1 \/ 2)) x^(100) y^(200) dif y dif x . $
 
 Evaluating the inner integral:
-$ int_(y = x^3)^(sqrt(x)) y^200 dif y = [y^201 / 201]_(y = x^3)^(y = sqrt(x))
+$ integral_(y = x^3)^(sqrt(x)) y^200 dif y = [y^201 / 201]_(y = x^3)^(y = sqrt(x))
   = x^(201\/2) / 201 - x^603 / 201 . $
 Now, integrating over $x$:
-$ I &= int_(x = 0)^1 x^100 (x^(201\/2) / 201 - x^603 / 201) dif x \
-  &= 1/201 (int_(x=0)^1 x^(401\/2) dif x - int_(x=0)^1 x^(703) dif x) \
+$ I &= integral_(x = 0)^1 x^100 (x^(201\/2) / 201 - x^603 / 201) dif x \
+  &= 1/201 (integral_(x=0)^1 x^(401\/2) dif x - integral_(x=0)^1 x^(703) dif x) \
   &= 1/201 (2/403 - 1/704) = #boxed[$ 5 / 283712 $]. $
 
 == Solution to @exer-slicing-mass (center of mass of a region)
@@ -73,21 +73,21 @@ so _a priori_ we should expect our answer to lie on $y = x$ as well.
 ) <fig-sol-golf-double-sol2>
 
 First, to compute the area of $cal(R)$, we can write
-$ op("Area")(cal(R)) = int_(x = 0)^1 int_(y=x^2)^(sqrt(x)) 1 dif y dif x
-  = int_(x=0)^1 (sqrt(x) - x^2) dif x
+$ op("Area")(cal(R)) = integral_(x = 0)^1 integral_(y=x^2)^(sqrt(x)) 1 dif y dif x
+  = integral_(x=0)^1 (sqrt(x) - x^2) dif x
   = [2/3 x^(3\/2) - 1/3 x^3]_(x=0)^1 = 1/3. $
 
 The $x$-coordinate of the center of mass is therefore given by
-$ dash(x) = 1 / (op("Area")(cal(R))) int_(cal(R)) x dif A
-  &= 1 / (1\/3) int_(x = 0)^1 int_(y=x^2)^(sqrt(x)) x dif y dif x \
-  &= 3 int_(x = 0)^1 x (sqrt(x) - x^2) dif x \
+$ dash(x) = 1 / (op("Area")(cal(R))) integral_(cal(R)) x dif A
+  &= 1 / (1\/3) integral_(x = 0)^1 integral_(y=x^2)^(sqrt(x)) x dif y dif x \
+  &= 3 integral_(x = 0)^1 x (sqrt(x) - x^2) dif x \
   &= 3 [2/5 x^(5/2) - 1/4 x^4]_(x=0)^1 = 9/20. $
 
 As for the $y$-coordinate, we expect $dash(y) = dash(x)$ from the symmetry of the region, and indeed
-$ dash(y) = 1 / (op("Area")(cal(R))) int_(cal(R)) y dif A
-  &= 1 / (1\/3) int_(x = 0)^1 int_(y=x^2)^(sqrt(x)) y dif y dif x \
-  &= 3 int_(x = 0)^1 [y^2/2]_(y=x^2)^(sqrt(x)) dif x \
-  &= 3/2 int_(x = 0)^1 (x-x^4) dif x \
+$ dash(y) = 1 / (op("Area")(cal(R))) integral_(cal(R)) y dif A
+  &= 1 / (1\/3) integral_(x = 0)^1 integral_(y=x^2)^(sqrt(x)) y dif y dif x \
+  &= 3 integral_(x = 0)^1 [y^2/2]_(y=x^2)^(sqrt(x)) dif x \
+  &= 3/2 integral_(x = 0)^1 (x-x^4) dif x \
   &= 3/2 [1/2 x^(2) - 1/5 x^5]_(x=0)^1 = 9/20. $
 
 Thus, the center of mass of the region is: $ #boxed[$ (9/20, 9/20) $]. $
@@ -105,20 +105,20 @@ But in fact $ 0 <= x^5 <= y <= x <= 1 $
 so we can compress this to just:
 $ cal(R) = cases(0 <= x <= 1, x^5 <= y <= x). $
 Thus, the new limits of integration become:
-$ int_(x = 0)^1 int_(y = x^5)^x (x y^2) / (1 - x^12) dif y dif x $
+$ integral_(x = 0)^1 integral_(y = x^5)^x (x y^2) / (1 - x^12) dif y dif x $
 
 We now compute the inner integral with respect to $y$:
-$ int_(y = x^5)^x y^2 dif y = [y^3 / 3]_(y = x^5)^(y = x) $
+$ integral_(y = x^5)^x y^2 dif y = [y^3 / 3]_(y = x^5)^(y = x) $
 Substituting the limits of integration:
 $ 1 / 3 (x^3 - (x^5)^3) = 1 / 3 (x^3 - x^15) $
 
 Now substitute this result into the outer integral:
-$ int_(x = 0)^1 (x) / (1 - x^12) dot 1 / 3 (x^3 - x^15) dif x $
+$ integral_(x = 0)^1 (x) / (1 - x^12) dot 1 / 3 (x^3 - x^15) dif x $
 Simplifying:
 
-$ 1 / 3 int_(x = 0)^1 (x) / (1 - x^12) (x^3 - x^15) dif x
-  &= 1 / 3 int_(x = 0)^1 (x^4 - x^16) / (1 - x^12) dif x \
-  &= 1/3 int_(x = 0)^1 x^4 dif x \
+$ 1 / 3 integral_(x = 0)^1 (x) / (1 - x^12) (x^3 - x^15) dif x
+  &= 1 / 3 integral_(x = 0)^1 (x^4 - x^16) / (1 - x^12) dif x \
+  &= 1/3 integral_(x = 0)^1 x^4 dif x \
   &= 1/3 (1/5 - 0) = 1/15. $
 
 == Solution to @exer-rat-slice (rational integral)
@@ -145,15 +145,15 @@ which goes from $0 <= x <= N$ to $0 <= y <= 1$, and has area $N$.
 Then from $1 <= y <= 10$ the bounds on $x$ are instead given by
 $ (y^3-1)^5 <= x <= N. $
 This is the dark blue region (top half of figure) and it has area
-$ int_(y=1)^(10) int_(x = (y^3-1)^5)^N 1 dif x dif y = int_(y=1)^(10) (N - (y^3-1)^5) dif y. $
+$ integral_(y=1)^(10) integral_(x = (y^3-1)^5)^N 1 dif x dif y = integral_(y=1)^(10) (N - (y^3-1)^5) dif y. $
 The total area is thus
-$ N + int_(y=1)^(10) (N - (y^3-1)^5) dif y
-  = N + 9N - int_(y=1)^(10) (y^3-1)^5 dif y. $
+$ N + integral_(y=1)^(10) (N - (y^3-1)^5) dif y
+  = N + 9N - integral_(y=1)^(10) (y^3-1)^5 dif y. $
 This is easily seen to be a rational number.
 #remark[
   Using a calculator, one could explicitly compute
-  $ int_(y=1)^(10) (y^3-1)^5 dif y
-  = int_(y=1)^(10) (y^(15) - 5y^(12) + 10y^9 - 10y^6 + 5y^3 - 1) dif y
+  $ integral_(y=1)^(10) (y^3-1)^5 dif y
+  = integral_(y=1)^(10) (y^(15) - 5y^(12) + 10y^9 - 10y^6 + 5y^3 - 1) dif y
   = 904414539218186169/1456 $
   if one is so inclined.
 ]
@@ -191,10 +191,10 @@ $ 1 / (|det (J_(bf(T)^(-1)))|) = y^2 / (x+y). $
 
 Hence, the transformed integral becomes
 $
-  int_(u=0)^3 int_(v=1/2)^2 (x+y)^2 / (x y) dot y^2 / (x+y) dif v dif u
-  &= int_(u=0)^3 int_(v=1/2)^2 y/x dot (x+y) dif v dif u \
-  &= int_(u=0)^3 int_(v=1/2)^2 1/v dot u dif v dif u \
-  &= (int_(u=0)^3 u dif u)(int_(v=1/2)^2 1/v dif v) \
+  integral_(u=0)^3 integral_(v=1/2)^2 (x+y)^2 / (x y) dot y^2 / (x+y) dif v dif u
+  &= integral_(u=0)^3 integral_(v=1/2)^2 y/x dot (x+y) dif v dif u \
+  &= integral_(u=0)^3 integral_(v=1/2)^2 1/v dot u dif v dif u \
+  &= (integral_(u=0)^3 u dif u)(integral_(v=1/2)^2 1/v dif v) \
   &= [u^2/2]_(u=0)^3 dot [log v]_(v=1/2)^2 \
   &= 9/2 dot (log 2 - log (1/2)) = #boxed[$ 9 log 2 $].
 $
@@ -218,8 +218,8 @@ Rewriting the integrand:
 $ x y = (r cos theta) (r sin theta) = r^2 cos theta sin theta . $
 
 Hence the integral transforms into:
-$ I &= int_(theta = 0)^(pi \/ 2) int_(r = 0)^1 r^2 cos theta sin theta dot r dif r dif theta \
-  &= (int_(r=0)^1 r^3 dif r) (int_(theta = 0)^(pi \/ 2) sin(2theta)/2 dif theta) \
+$ I &= integral_(theta = 0)^(pi \/ 2) integral_(r = 0)^1 r^2 cos theta sin theta dot r dif r dif theta \
+  &= (integral_(r=0)^1 r^3 dif r) (integral_(theta = 0)^(pi \/ 2) sin(2theta)/2 dif theta) \
   &= [r^4/4]_(r=0)^1 [-cos(2theta)/4]_(theta=0)^(pi\/2) \
   &= 1/4 dot 1/2 = #boxed[$ 1/8 $]. $
 
@@ -236,9 +236,9 @@ the given integrand is just $r$.
 $ 1 / sqrt(x^2 + y^2) = 1 / sqrt(r^2) = 1 / r . $
 Thus, the integral
 becomes:
-$ I &= int_(theta = - pi \/ 2)^(pi \/ 2) int_(r = 0)^(2 cos theta) 1 / r dot r dif r dif theta \
-  &= int_(theta = - pi \/ 2)^(pi \/ 2) int_(r = 0)^(2 cos theta) dif r dif theta \
-  &= int_(theta = - pi \/ 2)^(pi \/ 2) 2 cos theta dif theta \
+$ I &= integral_(theta = - pi \/ 2)^(pi \/ 2) integral_(r = 0)^(2 cos theta) 1 / r dot r dif r dif theta \
+  &= integral_(theta = - pi \/ 2)^(pi \/ 2) integral_(r = 0)^(2 cos theta) dif r dif theta \
+  &= integral_(theta = - pi \/ 2)^(pi \/ 2) 2 cos theta dif theta \
   &= [2 sin theta]_(theta = - pi \/ 2)^(pi \/ 2) \
   &= #boxed[$ 4 $]. $
 
@@ -250,9 +250,9 @@ This is actually a disguised version of the example in @sec-offset-circle!
 That is, the answer is also $32/9$.
 
 To repeat, in @sec-offset-circle the example can be thought of as showing
-$ I_1 = iint_((x-1)^2 + y^2 <= 1) sqrt(x^2+y^2) dif x dif y = 32/9. $
+$ I_1 = integral.double_((x-1)^2 + y^2 <= 1) sqrt(x^2+y^2) dif x dif y = 32/9. $
 Our goal is to argue that
-$ I_2 = iint_(x^2+y^2 <= 1) sqrt((x+3/5)^2 + (y+4/5)^2) dif x dif y = #boxed[$ 32/9 $]. $
+$ I_2 = integral.double_(x^2+y^2 <= 1) sqrt((x+3/5)^2 + (y+4/5)^2) dif x dif y = #boxed[$ 32/9 $]. $
 
 Note that:
 - The first integral $I_1$ is taken over the disk centered at $(1 , 0)$ with radius 1.

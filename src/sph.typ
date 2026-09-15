@@ -266,10 +266,10 @@ and we just integrate over the entire sphere
 ]
 #soln[
   Placing the ball $cal(T)$ with its center at the origin:
-  $ op("Vol")(cal(T)) &= iiint_(cal(T)) 1 dif V
-  = iiint_(cal(T)) rho^2 sin phi dif rho dif phi dif theta  \
-  &= int_(rho=0)^R int_(phi=0)^(pi) int_(theta=0)^(2 pi) rho^2 sin phi dif theta dif phi dif rho \
-  &= (int_(rho=0)^R rho^2 dif rho) (int_(phi=0)^(pi) sin phi dif phi) (int_(theta=0)^(2 pi) dif theta) \
+  $ op("Vol")(cal(T)) &= integral.triple_(cal(T)) 1 dif V
+  = integral.triple_(cal(T)) rho^2 sin phi dif rho dif phi dif theta  \
+  &= integral_(rho=0)^R integral_(phi=0)^(pi) integral_(theta=0)^(2 pi) rho^2 sin phi dif theta dif phi dif rho \
+  &= (integral_(rho=0)^R rho^2 dif rho) (integral_(phi=0)^(pi) sin phi dif phi) (integral_(theta=0)^(2 pi) dif theta) \
   &= R^3/3 dot 2 dot (2 pi) = #boxed[$ 4/3 pi R^3 $]. #qedhere $
 ]
 
@@ -279,20 +279,20 @@ and we just integrate over the entire sphere
   compute the average value of the distance from $P$ to the center.
 ]
 Here, the "average" value of a function $f$ over a solid region $cal(T)$
-is defined as $1/(op("Vol")(cal(T))) iiint_(cal(T)) f dif V$.
+is defined as $1/(op("Vol")(cal(T))) integral.triple_(cal(T)) f dif V$.
 
 #soln[
   The sphere has volume $4/3 pi$ as we just saw.
   The only change to what we did before is that rather than integrating $1 dif V$,
   we replace $1$ with the distance:
-  $ iiint_(cal(T)) ("distance to" (0,0,0)) dif V
-    &= iiint_(cal(T)) rho dif V
-    = iiint_(cal(T)) rho dot (rho^2 sin phi dif rho dif phi dif theta)  \
-    &= int_(rho=0)^1 int_(phi=0)^(pi) int_(theta=0)^(2 pi) rho^3 sin phi dif theta dif phi dif rho \
-    &= (int_(rho=0)^1 rho^3 dif rho) (int_(phi=0)^(pi) sin phi dif phi) (int_(theta=0)^(2 pi) dif theta) \
+  $ integral.triple_(cal(T)) ("distance to" (0,0,0)) dif V
+    &= integral.triple_(cal(T)) rho dif V
+    = integral.triple_(cal(T)) rho dot (rho^2 sin phi dif rho dif phi dif theta)  \
+    &= integral_(rho=0)^1 integral_(phi=0)^(pi) integral_(theta=0)^(2 pi) rho^3 sin phi dif theta dif phi dif rho \
+    &= (integral_(rho=0)^1 rho^3 dif rho) (integral_(phi=0)^(pi) sin phi dif phi) (integral_(theta=0)^(2 pi) dif theta) \
     &= 1/4 dot 2 dot (2 pi) = pi. $
   So the average value is
-  $ (iiint_(cal(T)) ("distance to" (0,0,0)) dif V) / (op("Vol")(cal(T)))
+  $ (integral.triple_(cal(T)) ("distance to" (0,0,0)) dif V) / (op("Vol")(cal(T)))
   = (pi) / (4/3 pi) = #boxed[$ 3/4 $]. #qedhere $
 ]
 
@@ -371,7 +371,7 @@ It's actually pretty much exactly the same.
 The analogous famous exercise in 3D:
 #sample[
   Let $cal(T)$ denote the solid ball of radius $1$ centered at $(0,0,1)$.
-  Calculate $ iiint_(cal(T)) sqrt(x^2+y^2+z^2) dif x dif y dif z. $
+  Calculate $ integral.triple_(cal(T)) sqrt(x^2+y^2+z^2) dif x dif y dif z. $
 ]
 #soln[
   As before, if we try to use $x y z$ integration it's a disaster,
@@ -380,16 +380,16 @@ The analogous famous exercise in 3D:
   We just saw that $cal(T)$ is given in spherical coordinates according to
   $0 <= phi <= pi/2$, $0 <= theta < 2pi$, $0 <= rho <= 2 cos phi$.
   Thus, the integral becomes:
-  $ iiint_(cal(T)) rho dif V
-    &= iiint_(cal(T)) rho^3 sin phi dif rho dif phi dif theta \
-    &= int_(theta=0)^(2 pi) int_(phi=0)^(pi / 2) int_(rho=0)^(2 cos phi)
+  $ integral.triple_(cal(T)) rho dif V
+    &= integral.triple_(cal(T)) rho^3 sin phi dif rho dif phi dif theta \
+    &= integral_(theta=0)^(2 pi) integral_(phi=0)^(pi / 2) integral_(rho=0)^(2 cos phi)
       rho^3 sin phi dif rho dif phi dif theta \
-    &= int_(theta=0)^(2 pi) int_(phi=0)^(pi / 2)
+    &= integral_(theta=0)^(2 pi) integral_(phi=0)^(pi / 2)
       sin phi [rho^4 / 4]_(rho=0)^(2 cos phi) dif phi dif theta \
-    &= int_(theta=0)^(2 pi) int_(phi=0)^(pi / 2)
+    &= integral_(theta=0)^(2 pi) integral_(phi=0)^(pi / 2)
       sin phi dot (4 cos^4 phi) dif phi dif theta \
-    &= 4 int_(theta=0)^(2 pi) [ -1/5 cos^5 phi]_(phi=0)^(pi / 2) dif theta \
-    &= 4 int_(theta=0)^(2 pi) 1/5 dif theta \
+    &= 4 integral_(theta=0)^(2 pi) [ -1/5 cos^5 phi]_(phi=0)^(pi / 2) dif theta \
+    &= 4 integral_(theta=0)^(2 pi) 1/5 dif theta \
     &= #boxed[$ (8pi) / 5 $]. #qedhere $
 ]
 
@@ -397,9 +397,9 @@ The analogous famous exercise in 3D:
 
 Let's go back to the equation for gravity where the components were given by
 $
-  G_1 &:= G m iiint_(cal(T)) (x delta(x,y,z))/((x^2+y^2+z^2)^(3/2)) dif x dif y dif z \
-  G_2 &:= G m iiint_(cal(T)) (y delta(x,y,z))/((x^2+y^2+z^2)^(3/2)) dif x dif y dif z \
-  G_3 &:= G m iiint_(cal(T)) (z delta(x,y,z))/((x^2+y^2+z^2)^(3/2)) dif x dif y dif z.
+  G_1 &:= G m integral.triple_(cal(T)) (x delta(x,y,z))/((x^2+y^2+z^2)^(3/2)) dif x dif y dif z \
+  G_2 &:= G m integral.triple_(cal(T)) (y delta(x,y,z))/((x^2+y^2+z^2)^(3/2)) dif x dif y dif z \
+  G_3 &:= G m integral.triple_(cal(T)) (z delta(x,y,z))/((x^2+y^2+z^2)^(3/2)) dif x dif y dif z.
 $
 
 I didn't do any examples last section because using $x y z$ coordinates
@@ -407,9 +407,9 @@ when you have $(x^2+y^2+z^2)^(3/2)$ is just way too annoying.
 However, in spherical coordinates, the equations become much more manageable.
 For example, the one for $G_3$ reads:
 #eqn[
-  $ G_3 &= G m iiint_(cal(T)) (z delta(x,y,z))/((x^2+y^2+z^2)^(3/2)) dif x dif y dif z \
-    &= G m iiint_(cal(T)) ((rho cos phi) delta(x,y,z))/(rho^3) (rho^2 sin phi dif rho dif phi dif theta) \
-    &= G m iiint_(cal(T)) delta(x,y,z) sin phi cos phi dif rho dif phi dif theta. $
+  $ G_3 &= G m integral.triple_(cal(T)) (z delta(x,y,z))/((x^2+y^2+z^2)^(3/2)) dif x dif y dif z \
+    &= G m integral.triple_(cal(T)) ((rho cos phi) delta(x,y,z))/(rho^3) (rho^2 sin phi dif rho dif phi dif theta) \
+    &= G m integral.triple_(cal(T)) delta(x,y,z) sin phi cos phi dif rho dif phi dif theta. $
   <eqn-sph-G3>
 ]
 Let's see it in action with an offset sphere.
@@ -425,19 +425,19 @@ Let's see it in action with an offset sphere.
   (so the origin is the point $P$, _not_ the center of $cal(T)$).
   The center of $cal(T)$ will instead be at $(0,0,1)$.
   Then by symmetry, we have $G_1 = G_2 = 0$, and @eqn-sph-G3 just says
-  $ G_3 = G m iiint_(cal(T)) sin phi cos phi dif rho dif phi dif theta $
+  $ G_3 = G m integral.triple_(cal(T)) sin phi cos phi dif rho dif phi dif theta $
   after setting the density to $1$.
 
   Then we can put in the bounds of integration for the offset sphere:
   $ G_3
-    &= G m int_(theta=0)^(2 pi) int_(phi=0)^(pi / 2) int_(rho=0)^(2 cos phi)
+    &= G m integral_(theta=0)^(2 pi) integral_(phi=0)^(pi / 2) integral_(rho=0)^(2 cos phi)
     sin phi cos phi dif rho dif phi dif theta \
-    &= G m int_(theta=0)^(2 pi) int_(phi=0)^(pi / 2) (2 cos phi) dot
+    &= G m integral_(theta=0)^(2 pi) integral_(phi=0)^(pi / 2) (2 cos phi) dot
     sin phi cos phi dif phi dif theta \
-    &= 2 G m int_(theta=0)^(2 pi) int_(phi=0)^(pi / 2) cos^2 phi sin phi dif phi dif theta \
-    &= 2 G m int_(theta=0)^(2 pi)
+    &= 2 G m integral_(theta=0)^(2 pi) integral_(phi=0)^(pi / 2) cos^2 phi sin phi dif phi dif theta \
+    &= 2 G m integral_(theta=0)^(2 pi)
     lr([-1/3 cos^3 phi])_(phi = 0)^(pi/2) dif theta \
-    &= 2 G m int_(theta = 0)^(2 pi) 1/3 dif theta \
+    &= 2 G m integral_(theta = 0)^(2 pi) 1/3 dif theta \
     &= (4 pi G m) / 3.
   $
   In other words, in the coordinate system we chose, gravity is given by
@@ -452,7 +452,7 @@ Let's see it in action with an offset sphere.
   Across all points $P$ inside the ball,
   compute the average value of the distance from $P$ to $ell$.
   (The average is defined as
-  $1/(op("Vol")(cal(T))) iiint_(cal(T)) d(P) dif V$,
+  $1/(op("Vol")(cal(T))) integral.triple_(cal(T)) d(P) dif V$,
   where $d(P)$ is the distance from $P$ to $ell$.)
 ] <exer-sphere-line-distance>
 

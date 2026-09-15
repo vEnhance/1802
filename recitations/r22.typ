@@ -32,9 +32,9 @@ This handout (and any other DLC's I write) are posted at
 Remember back when we had Green's theorem,
 we could transform 2D scalar flux (which was a _line integral_)
 into an area integral:
-$ underbrace(oint_(cal(C)) (bf(F) dot bf(n) dif s), = oint_(cal(C)) (-q dif x + p dif y))
-  = underbrace(iint_(cal(R)) nabla dot bf(F) dif A,
-    = iint_(cal(R)) ((partial p) / (partial x) + (partial q) / (partial y)) dif A). $
+$ underbrace(integral.cont_(cal(C)) (bf(F) dot bf(n) dif s), = integral.cont_(cal(C)) (-q dif x + p dif y))
+  = underbrace(integral.double_(cal(R)) nabla dot bf(F) dif A,
+    = integral.double_(cal(R)) ((partial p) / (partial x) + (partial q) / (partial y)) dif A). $
 This was nice because parametrization was annoying and straight-up area integrals are simpler.
 In general, if you still have the poster, the green pictures are easier to deal with.
 
@@ -45,20 +45,20 @@ that has been haunting you for the last couple weeks)
 into a volume integral.
 Which is an even bigger profit --- no parametrization, no cross product table, etc.
 
-(I've snuck in a new symbol $oiint_(cal(S))$, but the extra circle is analogous to before:
+(I've snuck in a new symbol $integral.surf_(cal(S))$, but the extra circle is analogous to before:
 it's an optional reminder you can put in order to remind someone the surface is _closed_.
-Just like how $oint_(cal(C))$ was a reminder that $cal(C)$ was a closed loop.
+Just like how $integral.cont_(cal(C))$ was a reminder that $cal(C)$ was a closed loop.
 Also, note there's a fine-print requirement that $cal(T)$ should be compact,
 i.e. it should not extend infinitely in any direction.)
 
 #memo(title: [Memorize: Divergence theorem])[
   Suppose a closed surface $cal(S)$ encloses a solid $cal(T)$.
   Then
-  $ underbrace(oiint_(cal(S)) bf(F) dot bf(n) dif S,
-    = iint_(cal(R)) bf(F)(bf(r)(u,v)) dot
+  $ underbrace(integral.surf_(cal(S)) bf(F) dot bf(n) dif S,
+    = integral.double_(cal(R)) bf(F)(bf(r)(u,v)) dot
     ((partial bf(r))/(partial u) times (partial bf(r))/(partial v)) dif u dif v)
-    = underbrace(iiint_(cal(T)) nabla dot bf(F) dif V,
-    = iiint_(cal(T)) ((partial p) / (partial x) + (partial q) / (partial y) + (partial r) / (partial z)) dif V). $
+    = underbrace(integral.triple_(cal(T)) nabla dot bf(F) dif V,
+    = integral.triple_(cal(T)) ((partial p) / (partial x) + (partial q) / (partial y) + (partial r) / (partial z)) dif V). $
 ]
 
 #remark(title: [Remark: "Closed surface" = "holds water"])[

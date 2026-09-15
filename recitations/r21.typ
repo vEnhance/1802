@@ -21,12 +21,12 @@ This handout (and any other DLC's I write) are posted at
 #definition(title: [Definition of flux])[
   Let $bf(r)(u,v) : cal(R) -> RR^3$ parametrize a surface $cal(S)$ in $RR^3$.
   The flux of a vector field $bf(F) : RR^3 -> RR^3$ through $cal(S)$ is defined by
-  $ iint_(cal(R)) bf(F)(bf(r)(u,v)) dot
+  $ integral.double_(cal(R)) bf(F)(bf(r)(u,v)) dot
     ((partial bf(r))/(partial u) times (partial bf(r))/(partial v)) dif u dif v. $
 ]
 
 We abbreviate $bf(n) dif S := ((partial bf(r))/(partial u) times (partial bf(r))/(partial v)) dif u dif v$,
-so the flux integral becomes just $iint_(cal(S)) bf(F) dot bf(n) dif S$.
+so the flux integral becomes just $integral.double_(cal(S)) bf(F) dot bf(n) dif S$.
 In fact, people often split the shorthand $bf(n) dif S$ into two parts:
 $ bf(n) := frac((partial bf(r))/(partial u) times (partial bf(r))/(partial v),
   lr(|(partial bf(r))/(partial u) times (partial bf(r))/(partial v)|))

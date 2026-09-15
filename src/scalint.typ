@@ -23,7 +23,7 @@ I'll restate it again here for convenience, but this is a repeat:
 #definition(title: [Definition: Arc length])[
   If the parametrization $bf(r)(t) : RR -> RR^n$ traces out a path in $RR^n$,
   the *arc length* is defined as
-  $ L = int_(t="start time")^("stop time") lr(|bf(r)'(t)|) dif t. $
+  $ L = integral_(t="start time")^("stop time") lr(|bf(r)'(t)|) dif t. $
 ]
 
 #warning(title: [Warning: There are no red arrows for these integrals])[
@@ -34,11 +34,11 @@ I'll restate it again here for convenience, but this is a repeat:
 
   In particular: *you don't get Fundamental Theorem of Calculus for arc length*.
   To make that warning explicit, note two common "wrong guesses":
-  $ int_(t=a)^(b) lr(|bf(r)'(t)|) dif t &!= |bf(r)(b)| - |bf(r)(a)| \
-    int_(t=a)^(b) lr(|bf(r)'(t)|) dif t &!= |bf(r)(b) - bf(r)(a)|. $
+  $ integral_(t=a)^(b) lr(|bf(r)'(t)|) dif t &!= |bf(r)(b)| - |bf(r)(a)| \
+    integral_(t=a)^(b) lr(|bf(r)'(t)|) dif t &!= |bf(r)(b) - bf(r)(a)|. $
   This is a tempting mistake to make and I've seen it happen;
   you might hope the fundamental theorem of calculus
-  works somehow for $|bf(r)'(t)|$ in analogy to how $int_(x=a)^b f'(x) dif x = f(b) - f(a)$
+  works somehow for $|bf(r)'(t)|$ in analogy to how $integral_(x=a)^b f'(x) dif x = f(b) - f(a)$
   for differentiable functions $f : RR -> RR$.
   But that's simply not the case.
   There's just no analog of FTC for arc length.
@@ -52,7 +52,7 @@ I'll restate it again here for convenience, but this is a repeat:
 More generally, if the parametrization $bf(r)(t) : RR -> RR^n$ traces out a path in $RR^n$,
 and $f : RR^n -> RR$ is a function,
 then the *scalar-field line integral* of $f$ is defined by
-$ int_(t="start time")^("stop time") f(bf(r)(t)) lr(|bf(r)'(t)|) dif t. $
+$ integral_(t="start time")^("stop time") f(bf(r)(t)) lr(|bf(r)'(t)|) dif t. $
 However, we won't use this definition in this class,
 except for the special case $f = 1$ for arc length.
 
@@ -67,8 +67,8 @@ $ dif s := lr(|bf(r)'(t)|) dif t. $
 Whenever this shorthand is being used, one frequently cuts out the start and stop time too.
 The way this is done is, you let $cal(C)$ denote the curve that $bf(r)(t)$ traces out.
 Then we can abbreviate
-$ int_(t="start time")^("stop time") f(bf(r)(t)) lr(|bf(r)'(t)|) dif t = int_(cal(C)) f dif s. $
-In particular, taking $f=1$, the arc length formula gets abridged to $L = int_(cal(C)) dif s$.
+$ integral_(t="start time")^("stop time") f(bf(r)(t)) lr(|bf(r)'(t)|) dif t = integral_(cal(C)) f dif s. $
+In particular, taking $f=1$, the arc length formula gets abridged to $L = integral_(cal(C)) dif s$.
 
 == [TEXT] Surface area <sec-surface-area-explanation>
 
@@ -78,14 +78,14 @@ We use what we learned about parametrization from @ch-psurf.
 #definition(title: [Definition: Surface area])[
   If the parametrization $bf(r)(u,v) : cal(R) -> RR^3$ cuts out a surface $cal(S)$ in $RR^3$,
   the *surface area* is given by
-  $ op("SurfArea")(cal(S)) := iint_(cal(R))
+  $ op("SurfArea")(cal(S)) := integral.double_(cal(R))
     lr(|(partial bf(r))/(partial u) times (partial bf(r))/(partial v)|) dif u dif v. $
 ]
 Yes, there's a cross product. Yes, it sucks (see @sec-cross-sucks).
 This is one case where you probably would prefer to use the shorthand
 $ dif S := lr(|(partial bf(r))/(partial u) times (partial bf(r))/(partial v)|) dif u dif v $
 so that one can swallow surface area into just
-$ op("SurfArea")(cal(S)) &:= iint_(cal(S)) dif S $
+$ op("SurfArea")(cal(S)) &:= integral.double_(cal(S)) dif S $
 where we also cut out the region $cal(R)$ on our cartographer's map from the notation;
 instead we write $cal(S)$ directly.
 
@@ -116,10 +116,10 @@ But way back when we introduced the cross product, it had a geometric definition
 
 More generally if we have a function $f : RR^3 -> RR$ we could define the
 *scalar-field surface integral* of $f$ over $cal(S)$ as
-$iint_(cal(R)) f(bf(r)(u,v)) lr(|(partial bf(r))/(partial u) times (partial bf(r))/(partial v)|) dif u dif v$;
+$integral.double_(cal(R)) f(bf(r)(u,v)) lr(|(partial bf(r))/(partial u) times (partial bf(r))/(partial v)|) dif u dif v$;
 however this definition will not be used in this class
 except for the special case $f = 1$ for surface area.
-But if we did use it, we could have an abbreviation $iint_(cal(S)) f dif S$.
+But if we did use it, we could have an abbreviation $integral.double_(cal(S)) f dif S$.
 
 #typesig[
   The scalar-field surface integral (and hence surface area as well) outputs a scalar.
@@ -191,12 +191,12 @@ Here is a really ugly example to start, to give you some practice with spherical
   Thank the lord it's a simple answer.
   Great, now we can calculate the surface area of the sphere:
   $ op("SurfArea")("sphere")
-    &= int_(theta=0)^(2 pi) int_(phi=0)^pi
+    &= integral_(theta=0)^(2 pi) integral_(phi=0)^pi
       lr(|frac(partial bf(r), partial theta) times frac(partial bf(r), partial phi)|)
       dif phi dif theta \
-    &= int_(theta=0)^(2 pi) int_(phi=0)^pi |sin phi| dif phi dif theta \
-    &= (int_(phi=0)^(pi) |sin phi| dif phi) (int_(theta=0)^(2pi) dif theta) \
-    &= (int_(phi=0)^(pi) sin phi dif phi) (int_(theta=0)^(2pi) dif theta) \
+    &= integral_(theta=0)^(2 pi) integral_(phi=0)^pi |sin phi| dif phi dif theta \
+    &= (integral_(phi=0)^(pi) |sin phi| dif phi) (integral_(theta=0)^(2pi) dif theta) \
+    &= (integral_(phi=0)^(pi) sin phi dif phi) (integral_(theta=0)^(2pi) dif theta) \
     &= [-cos phi]_(phi=0)^(pi) dot 2 pi \
     &= #boxed[$ 4 pi $]. #qedhere $
 ]
@@ -247,7 +247,7 @@ And here is an example that is a little less computationally intensive.
   $ lr(|frac(partial bf(r), partial x) times frac(partial bf(r), partial y)|) &= sqrt((- x / sqrt(x^2 + y^2))^2 + (- y / sqrt(x^2 + y^2))^2 + 1^2) \
     &= sqrt((x^2) / (x^2 + y^2) + (y^2) / (x^2 + y^2) + 1) = sqrt(2). $
   That's really convenient: we got a constant! Hence
-  $ op("SurfArea")("cone") = iint_(x^2+y^2 <= 1) sqrt(2) dif A = sqrt(2) op("Area")(x^2+y^2 <= 1) = #boxed[$sqrt(2) pi $]. #qedhere $
+  $ op("SurfArea")("cone") = integral.double_(x^2+y^2 <= 1) sqrt(2) dif A = sqrt(2) op("Area")(x^2+y^2 <= 1) = #boxed[$sqrt(2) pi $]. #qedhere $
 ]
 
 == [EXER] Exercises
@@ -265,6 +265,6 @@ And here is an example that is a little less computationally intensive.
   Calculate the average value of the length $P A$
   across all points $P$ on the sphere.
   (The average is defined as the scalar-field surface integral
-  $1/(op("SurfArea")(cal(S))) iint_(cal(S)) |P A| dif S$.)
+  $1/(op("SurfArea")(cal(S))) integral.double_(cal(S)) |P A| dif S$.)
 ] <exer-sphere-avg-distance>
 */

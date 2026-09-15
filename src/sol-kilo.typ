@@ -210,12 +210,12 @@ and $#boxed[$ f(2, pm sqrt(5)) = 22 $]$ give the optimal values.
 The region being integrated over can be succinctly described as
 $ cal(R) = { 0 <= x <= y <= z <= 1 }. $
 Swap the order of integration so that $z$ is outermost:
-$ int_(x=0)^1 int_(y=x)^1 int_(z=y)^1 e^(z^3) dif z dif y dif x
-  &= int_(z=0)^1 int_(y=0)^z int_(x=0)^y e^(z^3) dif x dif y dif z \
-  &= int_(z=0)^1 e^(z^3) int_(y=0)^z int_(x=0)^y 1 dif x dif y dif z \
-  &= int_(z=0)^1 e^(z^3) int_(y=0)^z y dif y dif z \
-  &= int_(z=0)^1 e^(z^3) z^2/2 dif z \
-  &= 1/6 int_(z=0)^1 e^(z^3) 3z^2 dif z \
+$ integral_(x=0)^1 integral_(y=x)^1 integral_(z=y)^1 e^(z^3) dif z dif y dif x
+  &= integral_(z=0)^1 integral_(y=0)^z integral_(x=0)^y e^(z^3) dif x dif y dif z \
+  &= integral_(z=0)^1 e^(z^3) integral_(y=0)^z integral_(x=0)^y 1 dif x dif y dif z \
+  &= integral_(z=0)^1 e^(z^3) integral_(y=0)^z y dif y dif z \
+  &= integral_(z=0)^1 e^(z^3) z^2/2 dif z \
+  &= 1/6 integral_(z=0)^1 e^(z^3) 3z^2 dif z \
   &= 1/6 [e^(z^3)]_(z=0)^1 = #boxed[$ (e-1)/6 $]. $
 
 == Solution to @exer-mf-7 (curl)
@@ -237,7 +237,7 @@ $ (partial f) / (partial x) &= 7 cos(x) ==> f = 7 sin(x) + C_1(y,z) \
 Hence, the potential function can be extracted:
 $ f(x,y,z) = 7 sin(x) + sin(y) cos(2z). $
 For a curve $cal(C)$ starting at $P$ and ending at $Q$, we have
-$ int_(cal(C)) f dot dif bf(r) = f(Q) - f(P). $
+$ integral_(cal(C)) f dot dif bf(r) = f(Q) - f(P). $
 However, since both the trig functions $sin$ and $cos$ take values in $[-1,1]$,
 it's easy to see that $max f = 8$ (for example $f(pi/2, pi/2, 0) = 8$)
 while $min f = -8$ (for example $f(-pi/2, -pi/2, 0) = -8$).
@@ -261,30 +261,30 @@ with normal vector oriented downwards.
 Finally, let $cal(T)$ denote the cylinder $7 <= z <= 9$ and $x^2 + y^2 <= 100$,
 which is enclosed by $cal(S)$, $cal(S)_"top"$, $cal(S)_"bottom"$.
 Then the divergence theorem states that
-$ iiint_(cal(T)) nabla dot bf(F) dif V
-  = iint_(cal(S)_("top")) bf(F) dot bf(n) dif S
-  + iint_(cal(S)_("bottom")) bf(F) dot bf(n) dif S
-  + iint_(cal(S)) bf(F) dot bf(n) dif S. $
+$ integral.triple_(cal(T)) nabla dot bf(F) dif V
+  = integral.double_(cal(S)_("top")) bf(F) dot bf(n) dif S
+  + integral.double_(cal(S)_("bottom")) bf(F) dot bf(n) dif S
+  + integral.double_(cal(S)) bf(F) dot bf(n) dif S. $
 The fourth quantity is the flux we want,
 so our strategy is to calculate the first three quantities.
 
 The divergence is straightforward because its constant:
-$ iiint_(cal(T)) nabla dot bf(F) dif V
-  = iiint_(cal(T)) 3 dif V = 3 op("Vol")(cal(T)) = 3 dot 100pi dot 2 = 600 pi $
+$ integral.triple_(cal(T)) nabla dot bf(F) dif V
+  = integral.triple_(cal(T)) 3 dif V = 3 op("Vol")(cal(T)) = 3 dot 100pi dot 2 = 600 pi $
 (the volume of a cylinder with height $2$ and base of area $100pi$).
 
 For the top lid, we recall that for a flat surface parallel to the $x y$-plane,
 we have $bf(n) dif S = pm chevron.l 0,0,1 chevron.r dif x dif y$.
 For the top lid, we thus have
-$ iint_(cal(S)_("top")) bf(F) dot bf(n) dif S
-  &= iint_(cal(S)_("top")) chevron.l x+e^y+729, e^x+y+729, 9 chevron.r dot chevron.l 0,0,1 chevron.r dif x dif y \
-  &= iint_(cal(S)_("top")) 9 dif x dif y \
+$ integral.double_(cal(S)_("top")) bf(F) dot bf(n) dif S
+  &= integral.double_(cal(S)_("top")) chevron.l x+e^y+729, e^x+y+729, 9 chevron.r dot chevron.l 0,0,1 chevron.r dif x dif y \
+  &= integral.double_(cal(S)_("top")) 9 dif x dif y \
   &= 9 op("Area")(cal(S)_("top")) = 900 pi. $
 For the bottom lid, we instead have
-$ iint_(cal(S)_("bottom")) bf(F) dot bf(n) dif S
-  &= iint_(cal(S)_("bottom")) chevron.l x+e^y+343, e^x+y+343, 7 chevron.r dot chevron.l 0,0,-1 chevron.r dif x dif y \
-  &= iint_(cal(S)_("bottom")) (-7) dif x dif y \
+$ integral.double_(cal(S)_("bottom")) bf(F) dot bf(n) dif S
+  &= integral.double_(cal(S)_("bottom")) chevron.l x+e^y+343, e^x+y+343, 7 chevron.r dot chevron.l 0,0,-1 chevron.r dif x dif y \
+  &= integral.double_(cal(S)_("bottom")) (-7) dif x dif y \
   &= - 7 op("Area")(cal(S)_("bottom")) = - 700 pi. $
 Hence, the quantities in the divergence theorem become
-$ 600pi = 900pi - 700pi + iint_(cal(S)) bf(F) dot bf(n) dif S $
-so $iint_(cal(S)) bf(F) dot bf(n) dif S = #boxed[$ 400 pi $]$.
+$ 600pi = 900pi - 700pi + integral.double_(cal(S)) bf(F) dot bf(n) dif S $
+so $integral.double_(cal(S)) bf(F) dot bf(n) dif S = #boxed[$ 400 pi $]$.

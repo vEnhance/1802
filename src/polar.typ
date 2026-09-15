@@ -61,8 +61,8 @@ The upshot is that in practice:
 For example, if you want to find the area of the unit disk,
 you know in polar coordinates the unit disk is $0 <= r <= 1$ and $0 <= theta <= 2pi$,
 so you can just directly think via the integral
-$ int_(r=0)^1 int_(theta=0)^(2 pi) r dif theta dif r $
-and not even bother writing the $x y$-version $iint_(x^2+y^2<=1) dif x dif y$.
+$ integral_(r=0)^1 integral_(theta=0)^(2 pi) r dif theta dif r $
+and not even bother writing the $x y$-version $integral.double_(x^2+y^2<=1) dif x dif y$.
 Compared to back in @sec-chvar-polar, it's the same thing;
 it's just a shift in mindset where you go from
 "take an $x y$-picture and translate into polar coordinates"
@@ -124,7 +124,7 @@ and even a bit to me now, but the geometry argument should justify why.
 Okay, here's the famous exercise I promised you.
 #sample[
   Let $cal(R)$ denote the disk of radius $1$ centered at $(1,0)$.
-  Calculate $iint_(cal(R)) sqrt(x^2+y^2) dif x dif y$.
+  Calculate $integral.double_(cal(R)) sqrt(x^2+y^2) dif x dif y$.
 ]
 #soln[
   If you try to use $x y$ integration, it's a disaster.
@@ -134,25 +134,25 @@ Okay, here's the famous exercise I promised you.
   In these coordinates, $sqrt(x^2 + y^2) = r$, so the integrand becomes $r$.
 
   As we just saw, the region $cal(R)$ consists of $-pi/2 <= theta <= pi/2$ and $0 <= r <= 2 cos theta$, so
-  $ iint_(cal(R)) sqrt(x^2 + y^2) dif x dif y
-    = int_(theta = - pi / 2)^(pi / 2) int_(r = 0)^(2 cos theta) r dot underbrace(r dif r dif theta, = dif x dif y)
-    = int_(theta = - pi / 2)^(pi / 2) int_(r = 0)^(2 cos theta) r^2 dif r dif theta . $
+  $ integral.double_(cal(R)) sqrt(x^2 + y^2) dif x dif y
+    = integral_(theta = - pi / 2)^(pi / 2) integral_(r = 0)^(2 cos theta) r dot underbrace(r dif r dif theta, = dif x dif y)
+    = integral_(theta = - pi / 2)^(pi / 2) integral_(r = 0)^(2 cos theta) r^2 dif r dif theta . $
 
   First, integrate with respect to $r$:
-  $ int_(r = 0)^(2 cos theta) r^2 dif r = [r^3 / 3]_(r = 0)^(2 cos theta) = (2 cos theta)^3 / 3
+  $ integral_(r = 0)^(2 cos theta) r^2 dif r = [r^3 / 3]_(r = 0)^(2 cos theta) = (2 cos theta)^3 / 3
     = (8 cos^3 theta) / (3) . $
   Now, substitute this result into the outer integral:
-  $ int_(theta = - pi / 2)^(pi / 2) (8 cos^3 theta) / (3) dif theta = 8 / 3 int_(theta = - pi / 2)^(pi / 2) cos^3 theta dif theta . $
+  $ integral_(theta = - pi / 2)^(pi / 2) (8 cos^3 theta) / (3) dif theta = 8 / 3 integral_(theta = - pi / 2)^(pi / 2) cos^3 theta dif theta . $
 
-  To evaluate $int_(theta = - pi/2)^(pi / 2) cos^3 theta dif theta$,
+  To evaluate $integral_(theta = - pi/2)^(pi / 2) cos^3 theta dif theta$,
   we need to find an antiderivative of $cos^3 theta$.
   That will require a bit of trigonometry acrobatics: the idea is to use
   $ cos^3 theta = cos theta (1 - sin^2 theta). $
   Then, set $u = sin theta$, so $dif u = cos theta dif theta$:
-  $ int_(theta = -pi/2)^(pi / 2) cos^3 theta dif theta = int_(u=-1)^1 (1 - u^2) dif u = [u - u^3 / 3]_(-1)^1 = (1-1/3) - (-1+1/3) = 4/3. $
+  $ integral_(theta = -pi/2)^(pi / 2) cos^3 theta dif theta = integral_(u=-1)^1 (1 - u^2) dif u = [u - u^3 / 3]_(-1)^1 = (1-1/3) - (-1+1/3) = 4/3. $
 
   Substitute this result back into the integral:
-  $ 8 / 3 int_(theta = -pi/2)^(pi / 2) cos^3 theta dif theta = 8 / 3 dot 4 / 3 = #boxed[$ 32/9 $]. #qedhere $
+  $ 8 / 3 integral_(theta = -pi/2)^(pi / 2) cos^3 theta dif theta = 8 / 3 dot 4 / 3 = #boxed[$ 32/9 $]. #qedhere $
 ]
 
 == [TEXT] Example: ugly square roots or $x^2+y^2$ everywhere
@@ -164,7 +164,7 @@ Here's an example of what that could look like.
 
 #sample[
   Compute the double integral
-  $ int_(y=0)^3 int_(x=-sqrt(9-y^2))^(x=sqrt(9-y^2)) (x^2+y^2)^(5/2) dif x dif y. $
+  $ integral_(y=0)^3 integral_(x=-sqrt(9-y^2))^(x=sqrt(9-y^2)) (x^2+y^2)^(5/2) dif x dif y. $
 ]
 #soln[
   Because of the presence of $sqrt(9-y^2)$ and the $(x^2+y^2)^(5/2)$,
@@ -178,39 +178,39 @@ Here's an example of what that could look like.
   - The integrand $x^2 + y^2 = r^2$, so $(x^2 + y^2)^(5 \/ 2) = r^5$.
 
   Thus, the integral in polar coordinates becomes:
-  $ int_(theta = 0)^pi int_(r = 0)^3 r^5 dot underbrace(r dif r dif theta, = dif x dif y)
-    = int_(theta = 0)^pi int_(r = 0)^3 r^6 dif r dif theta . $
+  $ integral_(theta = 0)^pi integral_(r = 0)^3 r^5 dot underbrace(r dif r dif theta, = dif x dif y)
+    = integral_(theta = 0)^pi integral_(r = 0)^3 r^6 dif r dif theta . $
 
   Now, integrate with respect to $r$:
-  $ int_(r = 0)^3 r^6 dif r = [r^7 / 7]_(r = 0)^3 = 3^7 / 7 = 2187 / 7 . $
+  $ integral_(r = 0)^3 r^6 dif r = [r^7 / 7]_(r = 0)^3 = 3^7 / 7 = 2187 / 7 . $
 
   Now, integrate with respect to $theta$:
-  $ int_(theta = 0)^pi 2187 / 7 dif theta = 2187 / 7 dot pi = (2187 pi) / (7) . #qedhere $
+  $ integral_(theta = 0)^pi 2187 / 7 dif theta = 2187 / 7 dot pi = (2187 pi) / (7) . #qedhere $
 ]
 
 You could easily imagine doing something similar
 with some different artificial function involving $x^2+y^2$ in some other way:
 #sample[
   Compute the double integral
-  $ int_(y=0)^3 int_(x=-sqrt(9-y^2))^(x=sqrt(9-y^2)) 1/(x^2+y^2+17) dif x dif y. $
+  $ integral_(y=0)^3 integral_(x=-sqrt(9-y^2))^(x=sqrt(9-y^2)) 1/(x^2+y^2+17) dif x dif y. $
 ]
 #soln[
   The region is the same, the only change is what to do with the thing inside:
   $ 1 / (x^2 + y^2 + 17) = 1 / (r^2 + 17). $
   So, the overall integral becomes
-  $ int_(theta=0)^pi int_(r=0)^3 1/(r^2+17) dot underbrace(r dif r dif theta, = dif x dif y). $
+  $ integral_(theta=0)^pi integral_(r=0)^3 1/(r^2+17) dot underbrace(r dif r dif theta, = dif x dif y). $
   Now, we evaluate the inner integral:
-  $ int_(r = 0)^3 (r) / (r^2 + 17) dif r . $
+  $ integral_(r = 0)^3 (r) / (r^2 + 17) dif r . $
   To integrate this, use the substitution $u = r^2 + 17$, so
   $dif u = 2 r dif r$ or $(d u) / (2) = r dif r$.
   When $r = 0$, $u = 17$; when $r = 3$, $u = 26$.
   The integral becomes:
-  $ int_(r = 0)^3 (r) / (r^2 + 17) dif r = int_(u = 17)^26 1 / u dot (d u) / (2) = 1 / 2 int_(u = 17)^26 1 / u dif u . $
+  $ integral_(r = 0)^3 (r) / (r^2 + 17) dif r = integral_(u = 17)^26 1 / u dot (d u) / (2) = 1 / 2 integral_(u = 17)^26 1 / u dif u . $
   Integrating with respect to $u$:
-  $ 1 / 2 int_(u = 17)^26 1 / u dif u = 1 / 2 [log u]_(u=17)^26 = 1 / 2 (log 26 - log 17) = 1 / 2 log 26 / 17 . $
+  $ 1 / 2 integral_(u = 17)^26 1 / u dif u = 1 / 2 [log u]_(u=17)^26 = 1 / 2 (log 26 - log 17) = 1 / 2 log 26 / 17 . $
 
   Now, integrate with respect to $theta$:
-  $ int_(theta = 0)^pi 1 / 2 log 26 / 17 dif theta = #boxed[$ pi / 2 log 26 / 17 $]. #qedhere $
+  $ integral_(theta = 0)^pi 1 / 2 log 26 / 17 dif theta = #boxed[$ pi / 2 log 26 / 17 $]. #qedhere $
 ]
 
 == [TEXT] Example: region described in circular terms
@@ -238,32 +238,32 @@ Again $x y$-coordinates are either infeasible or at least annoying.
   In polar coordinates, the coordinates $x$ and $y$ are given by:
   $ x = r cos theta , quad y = r sin theta . $ The center of mass
   coordinates $(dash(x) , dash(y))$ are given by
-  $ dash(x) = 1 / (op("Area")(cal(R))) iint_cal(R) x dif x dif y ,
-    quad dash(y) = 1 / (op("Area")(cal(R))) iint_cal(R) y dif x dif y . $
+  $ dash(x) = 1 / (op("Area")(cal(R))) integral.double_cal(R) x dif x dif y ,
+    quad dash(y) = 1 / (op("Area")(cal(R))) integral.double_cal(R) y dif x dif y . $
 
   Since $dif x dif y = r dif r dif theta$, we can express
-  $iint_cal(R) x dif x dif y$ and $iint_cal(R) y dif x dif y$ as follows:
+  $integral.double_cal(R) x dif x dif y$ and $integral.double_cal(R) y dif x dif y$ as follows:
 
   For $dash(x)$, we have:
-  $ iint_cal(R) x dif x dif y = int_(theta = 0)^(pi / 2) int_(r = 0)^1 r cos theta dot r dif r dif theta = int_(theta = 0)^(pi / 2) cos theta int_(r = 0)^1 r^2 dif r dif theta . $
+  $ integral.double_cal(R) x dif x dif y = integral_(theta = 0)^(pi / 2) integral_(r = 0)^1 r cos theta dot r dif r dif theta = integral_(theta = 0)^(pi / 2) cos theta integral_(r = 0)^1 r^2 dif r dif theta . $
 
   First, integrate with respect to $r$:
-  $ int_(r = 0)^1 r^2 dif r = [r^3 / 3]_(r = 0)^1 = 1 / 3 . $
+  $ integral_(r = 0)^1 r^2 dif r = [r^3 / 3]_(r = 0)^1 = 1 / 3 . $
 
   Thus,
-  $ iint_cal(R) x dif x dif y = int_(theta = 0)^(pi / 2) cos theta dot 1 / 3 dif theta = 1 / 3 int_(theta = 0)^(pi / 2) cos theta dif theta . $
+  $ integral.double_cal(R) x dif x dif y = integral_(theta = 0)^(pi / 2) cos theta dot 1 / 3 dif theta = 1 / 3 integral_(theta = 0)^(pi / 2) cos theta dif theta . $
 
   Now, integrate with respect to $theta$:
-  $ int_(theta = 0)^(pi / 2) cos theta dif theta = [sin theta]_(theta=0)^(pi / 2) = sin(pi/2) - sin(0) = 1 . $
+  $ integral_(theta = 0)^(pi / 2) cos theta dif theta = [sin theta]_(theta=0)^(pi / 2) = sin(pi/2) - sin(0) = 1 . $
 
-  So, $ iint_cal(R) x dif x dif y = 1 / 3 . $
+  So, $ integral.double_cal(R) x dif x dif y = 1 / 3 . $
 
   Therefore,
-  $ dash(x) = 1 / (op("Area")(cal(R))) iint_cal(R) x dif x dif y = 1 / (pi / 4) dot 1 / 3 = (4) / (3 pi) . $
+  $ dash(x) = 1 / (op("Area")(cal(R))) integral.double_cal(R) x dif x dif y = 1 / (pi / 4) dot 1 / 3 = (4) / (3 pi) . $
 
   By symmetry, the calculation for $dash(y)$ will be identical, since the
   quarter-circle region is symmetric about the line $y = x$:
-  $ dash(y) = 1 / (op("Area")(cal(R))) iint_cal(R) y dif x dif y = (4) / (3 pi) . $
+  $ dash(y) = 1 / (op("Area")(cal(R))) integral.double_cal(R) y dif x dif y = (4) / (3 pi) . $
   Hence, the final answer is
   $ (dash(x) , dash(y)) = #boxed[$ ((4) / (3 pi) , (4) / (3 pi)) $]. #qedhere $
 ]
@@ -372,14 +372,14 @@ where the parallelogram is replaced by a parallelepiped, etc.
 
 #exer[
   Compute
-  $ int_(x=0)^(1) int_(y=0)^(sqrt(1-x^2)) x y dif y dif x. $
+  $ integral_(x=0)^(1) integral_(y=0)^(sqrt(1-x^2)) x y dif y dif x. $
 ] <exer-polar1>
 
 #exer[
   Compute
-  $ iint_((x-1)^2+y^2 <= 1) 1/sqrt(x^2+y^2) dif x dif y. $
+  $ integral.double_((x-1)^2+y^2 <= 1) 1/sqrt(x^2+y^2) dif x dif y. $
 ] <exer-polar2>
 
 #exerstar[
-  Compute $ iint_(x^2+y^2 <= 1) sqrt((x+3/5)^2 + (y+4/5)^2) dif x dif y. $
+  Compute $ integral.double_(x^2+y^2 <= 1) sqrt((x+3/5)^2 + (y+4/5)^2) dif x dif y. $
 ] <exer-polar3>

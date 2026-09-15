@@ -472,7 +472,7 @@ Let's see this.
   We differentiate to get the velocity vector
   $ bf(P)' (t) = vec(1 - cos (t) , sin (t)). $
   Ergo, the arc length is given by the formula
-  $ L = int_0^(2pi) sqrt((1-cos(t))^2 + sin(t)^2) dif t. $
+  $ L = integral_0^(2pi) sqrt((1-cos(t))^2 + sin(t)^2) dif t. $
 
   This is now an 18.01 integral question.
   In this particular case, the square root can be simplified using trig calculation.
@@ -483,11 +483,11 @@ Let's see this.
   The trick is to use the half-angle formula to convert this to
   $ 1 - cos(t) = 2sin^2(t/2) ==> sqrt(2 - 2 cos(t)) = sqrt(4sin^2(t/2)) = lr(|2 sin(t/2)|). $
   Hence, the integral now becomes:
-  $ L = int_0^(2 pi) sqrt(2 (1 - cos (t))) dif t
-    = int_0^(2 pi) lr(|2 sin(t/2)|) dif t. $
+  $ L = integral_0^(2 pi) sqrt(2 (1 - cos (t))) dif t
+    = integral_0^(2 pi) lr(|2 sin(t/2)|) dif t. $
   Over the interval $0 <= t <= 2 pi$ we always have $sin(t/2) >= 0$,
   so we drop the absolute value:
-  $ L = int_0^(2 pi) 2 sin(t/2) dif t = lr([-4cos(t/2)])_0^(2pi)
+  $ L = integral_0^(2 pi) 2 sin(t/2) dif t = lr([-4cos(t/2)])_0^(2pi)
     = -4cos(pi) + 4cos(0) = 8. #qedhere $
 ]
 
@@ -620,7 +620,7 @@ Usually the strategy is to pick one that makes subsequent calculation easier.
   between $(-3,0)$ and $(4,0)$.
 
   You will probably need the following antiderivative fact not commonly seen in 18.01:
-  $ int sqrt(u^2+1) dif u = u/2 sqrt(u^2+1) + log(u + sqrt(u^2+1))/2 + C. $
+  $ integral sqrt(u^2+1) dif u = u/2 sqrt(u^2+1) + log(u + sqrt(u^2+1))/2 + C. $
 ] <exer-param-parabola>
 
 #exer[

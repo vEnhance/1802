@@ -40,12 +40,12 @@
   Another butterfly is fluttering in the $x y$ plane
   with position $bf(r)(t) = chevron.l sin(t), sin(t) chevron.r$.
   Let $cal(C)$ denote its trajectory between $0 <= t <= 2pi$.
-  Compute $int_(cal(C)) (x dif x)$ and $int_(cal(C)) (y dif x)$.
+  Compute $integral_(cal(C)) (x dif x)$ and $integral_(cal(C)) (y dif x)$.
 
 / 2.:
   Let $cal(C)$ denote the unit circle $x^2+y^2=1$ oriented counterclockwise,
   and consider the vector field $bf(F)(x,y) = chevron.l x+2y, 4x+8y chevron.r$.
-  Compute $int_(cal(C)) bf(F) dot dif bf(r)$ and $int_(cal(C)) bf(F) dot bf(n) dif s$.
+  Compute $integral_(cal(C)) bf(F) dot dif bf(r)$ and $integral_(cal(C)) bf(F) dot bf(n) dif s$.
 
 / 3.:
   Compute all real numbers $k$ for which the region
@@ -59,12 +59,12 @@
   Let $cal(C)$ denote any path from $(0,0)$ to $(pi,pi)$.
   Find the unique function $h(x)$ for which the vector field
   $bf(F)(x,y) = chevron.l x y + cos(x), h(x) + cos(y) chevron.r$ is conservative,
-  and moreover $int_(cal(C)) bf(F) dot dif bf(r) = 0$.
+  and moreover $integral_(cal(C)) bf(F) dot dif bf(r) = 0$.
 
 / 6.: Assume $log$ is base $e approx 2.718$. Use any method you want#footnote[
     Recommended approach: view the integral as the area under a curve,
     then switch from vertical to horizontal slicing.]
-  to compute $ int_(x=0)^((e-1)^2) log(sqrt(x)+1) dif x. $
+  to compute $ integral_(x=0)^((e-1)^2) log(sqrt(x)+1) dif x. $
 
 
 Solutions are posted in Section 45 of #url("https://web.evanchen.cc/textbooks/lamv.pdf").

@@ -11,14 +11,14 @@ $ bf(r)(t) = (t, t^2-t-12) quad -3 <= t <= 4. $
 The derivative is
 $ bf(r)'(t) = chevron.l 1, 2t-1 chevron.r quad -3 <= t <= 4. $
 Hence, the arc length in the problem is given by
-$ L = int_(t=-3)^4 sqrt(1 + (2t-1)^2) dif t. $
+$ L = integral_(t=-3)^4 sqrt(1 + (2t-1)^2) dif t. $
 
 To use the hint in the exercise,
 we perform the $u$-substitution
 $ u = 2t-1 = 2 (t - 1 / 2) ==> dif u = 2 dif t ==> dif t = (d u) / (2). $
 When $t=-3$ we get $u=-7$ and when $t=4$ we get $u=7$.
 Thus we get
-$ L = 1/2 int_(u=-7)^7 sqrt(u^2+1) dif u. $
+$ L = 1/2 integral_(u=-7)^7 sqrt(u^2+1) dif u. $
 Now using the hint we get that
 $ L &= 1/4 [u sqrt(u^2+1) + log(u + sqrt(u^2+1))]_(u=-7)^7 \
   &= 1/4 (14 sqrt(50) + log(7 + sqrt(50)) - log(-7 + sqrt(50))) \
@@ -107,7 +107,7 @@ $ lr(|bf(P)' (t)|) &= sqrt(((2 pi) / (3))^2 + 5^2) = sqrt((4 pi^2) / (9) + 25) \
   &= sqrt((4 pi^2) / (9) + 225 / 9) = sqrt((4 pi^2 + 225) / (9)) = sqrt(4 pi^2 + 225) / 3 $
 which is a constant!
 Hence the total distance traveled is simply
-$ upright("Distance") = int_0^(18) sqrt(4 pi^2 + 225) / 3 dif t
+$ upright("Distance") = integral_0^(18) sqrt(4 pi^2 + 225) / 3 dif t
   = 18 dot sqrt(4 pi^2 + 225) / 3  = #boxed[$ 6 sqrt(4 pi^2 + 225) $]. $
 
 == Solution to @exer-param-clockblock (clock)

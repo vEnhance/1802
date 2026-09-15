@@ -39,7 +39,7 @@ if you haven't already.
     - The surface flux is likely to be one of the cases from table of cross products
       I computed for you: a graph $z = f(x,y)$, a cylinder, a sphere, or a flat plane.
   - However, crummy Stokes' theorem
-    $oint_(cal(C)) bf(F) dif bf(r) = iint_(cal(S)) op("curl") bf(F) dot bf(n) dif S$
+    $integral.cont_(cal(C)) bf(F) dif bf(r) = integral.double_(cal(S)) op("curl") bf(F) dot bf(n) dif S$
     is *excluded* from the final.
 
 - By this point, my *LAMV book should be essentially feature-complete*.

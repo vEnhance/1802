@@ -133,7 +133,7 @@ Let's write this down now.
 ]
 
 In particular, the surface area becomes
-$ op("SurfArea")(cal(S)) = iint_(cal(R)) sqrt(1 + ((partial f) / (partial x))^2 + ((partial f) / (partial y))^2) dif x dif y. $
+$ op("SurfArea")(cal(S)) = integral.double_(cal(R)) sqrt(1 + ((partial f) / (partial x))^2 + ((partial f) / (partial y))^2) dif x dif y. $
 You'll find this formula written in a lot of other textbooks and it's worth knowing
 (I would say you should memorize the full magic cross product formula,
 since it's trivial to get the magnitude from it.)
@@ -151,7 +151,7 @@ Let's see how it can capture the boilerplate in the cone example.
   $ sqrt(1 + ((partial f) / (partial x))^2 + ((partial f) / (partial y))^2)
   = sqrt(1 + (x^2) / (x^2 + y^2) + (y^2) / (x^2 + y^2)) = sqrt(2). $
   Now
-  $ op("SurfArea")("cone") = iint_(x^2+y^2 <= 1) sqrt(2) dif A = sqrt(2) op("Area")(x^2+y^2 <= 1) = #boxed[$sqrt(2) pi $]. #qedhere $
+  $ op("SurfArea")("cone") = integral.double_(x^2+y^2 <= 1) sqrt(2) dif A = sqrt(2) op("Area")(x^2+y^2 <= 1) = #boxed[$sqrt(2) pi $]. #qedhere $
 ]
 
 == [TEXT] @table-surfcross-1 row 2: For a level surface $g(x,y,z) = c$ <sec-surf-grad-magic>
@@ -231,7 +231,7 @@ Let's see it in action by redoing our example with a cone.
   The magnitude of this vector is
   $ sqrt((-x/z)^2 + (-y/z)^2 + 1) = sqrt((x^2+y^2)/z^2 + 1) = sqrt(2) $
   so we get
-  $ op("SurfArea")("cone") = iint_(x^2+y^2 <= 1) sqrt(2) dif A
+  $ op("SurfArea")("cone") = integral.double_(x^2+y^2 <= 1) sqrt(2) dif A
     = sqrt(2) op("Area")({x^2+y^2 <= 1}) = #boxed[$sqrt(2) pi $]. #qedhere $
 ]
 If you compare this carefully with $z = sqrt(x^2+y^2)$,
@@ -256,16 +256,16 @@ without having to slog through the pain of spherical coordinates.
   This time the magnitude of the vector is
   $ sqrt((x/z)^2 + (y/z)^2 + 1) = sqrt((x^2+y^2+z^2) / z^2) = 1/z = 1/sqrt(1-(x^2+y^2)). $
   Hence, we need to integrate
-  $ op("SurfArea")("hemisphere") = iint_(x^2+y^2<=1) 1/sqrt(1-(x^2+y^2)) dif x dif y. $
+  $ op("SurfArea")("hemisphere") = integral.double_(x^2+y^2<=1) 1/sqrt(1-(x^2+y^2)) dif x dif y. $
   To nobody's surprise, we use polar coordinates to change this to
   $ op("SurfArea")("hemisphere")
-    &= int_(theta=0)^(2pi) int_(r=0)^1 1/(sqrt(1-r^2)) (r dif r dif theta) \
-    &= (int_(theta=0)^(2pi) dif theta) (int_(r=0)^1 r/(sqrt(1-r^2)) dif r). $
+    &= integral_(theta=0)^(2pi) integral_(r=0)^1 1/(sqrt(1-r^2)) (r dif r dif theta) \
+    &= (integral_(theta=0)^(2pi) dif theta) (integral_(r=0)^1 r/(sqrt(1-r^2)) dif r). $
   The left integral is $2pi$.
   For the inner integral, use the $u$-substitution $u=1-r^2 ==> (dif u) / (dif r) = -2r$ to get
-  $ int_(r=0)^1 r/(sqrt(1-r^2)) dif r
-    = int_(u=1)^0 -1/2 u^(-1/2) dif u
-    = int_(u=0)^1 1/2 u^(-1/2) dif u
+  $ integral_(r=0)^1 r/(sqrt(1-r^2)) dif r
+    = integral_(u=1)^0 -1/2 u^(-1/2) dif u
+    = integral_(u=0)^1 1/2 u^(-1/2) dif u
     = [u^(1/2)]_(u=0)^1 = 1. $
   Hence
   $ op("SurfArea")("hemisphere") = 2 pi dot 1 = 2 pi $

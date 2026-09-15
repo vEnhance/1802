@@ -171,12 +171,12 @@ We'll postpone giving a justification for this theorem until @sec-jacobian-pictu
 since I want to have done a few concrete examples before drawing the right picture.
 
 #memo(title: [Memorize: Change of variables])[
-  Suppose you need to integrate $iint_(cal(R)) f(x,y) dif x dif y$
+  Suppose you need to integrate $integral.double_(cal(R)) f(x,y) dif x dif y$
   and you have a transition map $bf(T)(u,v) : cal(R)_"new" -> cal(R)$.
   Then the transition map lets you change the integral as follows:
-  $ iint_(cal(R)) f(x,y) dif x dif y = iint_(cal(R)_"new") f(x,y) lr(|det J_(bf(T))|) dif u dif v $
+  $ integral.double_(cal(R)) f(x,y) dif x dif y = integral.double_(cal(R)_"new") f(x,y) lr(|det J_(bf(T))|) dif u dif v $
   Alternatively, if it's easier to compute $J_(bf(T)^(-1))$, the following formula also works:
-  $ iint_(cal(R)) f(x,y) dif x dif y = iint_(cal(R)_"new") f(x,y) / (lr(|det J_(bf(T)^(-1))|)) dif u dif v $
+  $ integral.double_(cal(R)) f(x,y) dif x dif y = integral.double_(cal(R)_"new") f(x,y) / (lr(|det J_(bf(T)^(-1))|)) dif u dif v $
   However, in the latter case your Jacobian determinant will have $x$ and $y$
   in it that you need to translate back into $u$ and $v$.
 ]
@@ -233,10 +233,10 @@ Let's see an example of how to carry out this integration.
   $ det (J_(bf(T)^(-1))) = - 2 u. $
   $
     op("Area")(cal(R))
-    &= int_(u = 1 / 4)^4 int_(v = 16 / 25)^(16 / 9) 1/lr(|det (J_(bf(T)^(-1)))|) dif v dif u \
-    &= int_(u = 1 / 4)^4 int_(v = 16 / 25)^(16 / 9) 1/(2u) dif v dif u \
-    &= int_(u = 1 / 4)^4 1/(2u) dot (16/9-16/25) dif u \
-    &= 128/225 int_(u = 1 / 4)^4 1/(u) dif u \
+    &= integral_(u = 1 / 4)^4 integral_(v = 16 / 25)^(16 / 9) 1/lr(|det (J_(bf(T)^(-1)))|) dif v dif u \
+    &= integral_(u = 1 / 4)^4 integral_(v = 16 / 25)^(16 / 9) 1/(2u) dif v dif u \
+    &= integral_(u = 1 / 4)^4 1/(2u) dot (16/9-16/25) dif u \
+    &= 128/225 integral_(u = 1 / 4)^4 1/(u) dif u \
     &= 128/225 (log 4 - log (1/4)) = #boxed[$ (512 log 2) / 225 $]. #qedhere
   $
 ]
@@ -276,13 +276,13 @@ Let's see an example of how to carry out this integration.
     detmat(cos theta, - r sin theta; sin theta, r cos theta)
     = r cos^2 theta - (-r sin^2 theta) = r(cos^2 theta + sin^2 theta) = r. $
   Hence, the transition map gives us the following change of variables:
-  $ iint_(x^2+y^2=1) 1 dif x dif y
-    = int_(r=0)^1 int_(theta=0)^(2 pi) r dif theta dif r. $
+  $ integral.double_(x^2+y^2=1) 1 dif x dif y
+    = integral_(r=0)^1 integral_(theta=0)^(2 pi) r dif theta dif r. $
   This is easy to integrate:
   $
-    int_(r=0)^1 ( int_(theta=0)^(2 pi) r dif theta) dif r
-    &= int_(r=0)^1 ( 2 pi r ) dif r \
-    &= 2 pi int_(r=0)^1 ( r ) dif r \
+    integral_(r=0)^1 ( integral_(theta=0)^(2 pi) r dif theta) dif r
+    &= integral_(r=0)^1 ( 2 pi r ) dif r \
+    &= 2 pi integral_(r=0)^1 ( r ) dif r \
     &= 2 pi [r^2/2]_(r=0)^(r=1) = #boxed[$ pi $]. #qedhere
   $
 ]
@@ -346,9 +346,9 @@ by _reducing_ to the area of a circle, as follows.
   $ bf(T) : {u^2 + v^2 <= 1} -> cal(R) = {x^2/a^2 + y^2/b^2 <= 1}. $
 
   Hence, via change of variables the area of $cal(R)$ is related by
-  $ op("Area")(cal(R)) &= iint_(cal(R)) 1 dif x dif y \
-    &= iint_(u^2+v^2 <= 1) det J_(bf(T)) dif u dif v \
-    &= a b  iint_(u^2+v^2 <= 1) dif u dif v. \
+  $ op("Area")(cal(R)) &= integral.double_(cal(R)) 1 dif x dif y \
+    &= integral.double_(u^2+v^2 <= 1) det J_(bf(T)) dif u dif v \
+    &= a b  integral.double_(u^2+v^2 <= 1) dif u dif v. \
     &= a b  op("Area")({u^2+v^2<=1}) = a b pi. #qedhere $
 ]
 
@@ -360,50 +360,50 @@ That determinant factors out, and we get the result above.
 == [SIDENOTE] Tip: Factoring integrals over rectangles
 
 Especially with polar coordinates, you will often find you get an integral of the shape
-$ int_(u="number")^("number") int_(v="number")^("number")
+$ integral_(u="number")^("number") integral_(v="number")^("number")
   f(u) g(v) dif v dif u $
 that is, the part inside splits cleanly as the product of stuff involving $u$
 and stuff involving $v$.
 In that case, if you imagine actually doing the integration,
 you'll find that this actually just equals
-$ (int_(u="number")^("number") f(u) dif u)
-  ( int_(v="number")^("number") g(v) dif v). $
+$ (integral_(u="number")^("number") f(u) dif u)
+  ( integral_(v="number")^("number") g(v) dif v). $
 
 For example, consider the following easy question and solution.
 #sample[
-  Evaluate $ int_(x=0)^1 int_(y=0)^pi e^x sin(y) dif y dif x. $
+  Evaluate $ integral_(x=0)^1 integral_(y=0)^pi e^x sin(y) dif y dif x. $
 ]
 #soln[
   The integral can be written as:
-  $ int_(x = 0)^1 e^x (int_(y = 0)^pi sin (y) dif y) dif x . $
+  $ integral_(x = 0)^1 e^x (integral_(y = 0)^pi sin (y) dif y) dif x . $
   The inner integral is
-  $ int_(y = 0)^pi sin (y) dif y = [- cos (y)]_(y = 0)^pi = (- cos (pi)) - (- cos (0)) = (- (- 1)) - (- 1) = 1 + 1 = 2 . $
+  $ integral_(y = 0)^pi sin (y) dif y = [- cos (y)]_(y = 0)^pi = (- cos (pi)) - (- cos (0)) = (- (- 1)) - (- 1) = 1 + 1 = 2 . $
   Substitute the result back into the integral:
-  $ int_(x = 0)^1 e^x dot 2 dif x = 2 int_(x = 0)^1 e^x dif x
+  $ integral_(x = 0)^1 e^x dot 2 dif x = 2 integral_(x = 0)^1 e^x dif x
     = 2 [e^x]_(x = 0)^1 = 2(e^1 - e^0) = #boxed[$ 2e-2 $]. #qedhere $
 ]
 If you pay attention to the solution above,
-you'll notice that in fact $int_(y=0)^pi sin(y) dif y = 2$ is just a number,
+you'll notice that in fact $integral_(y=0)^pi sin(y) dif y = 2$ is just a number,
 and it gets pulled out of the integral right away.
 So in effect, we actually have
-$ int_(x=0)^1 int_(y=0)^pi e^x sin(y) dif y dif x
-  = (int_(x=0)^1 e^x dif x) (int_(y=0)^pi sin(y) dif y). $
+$ integral_(x=0)^1 integral_(y=0)^pi e^x sin(y) dif y dif x
+  = (integral_(x=0)^1 e^x dif x) (integral_(y=0)^pi sin(y) dif y). $
 This is a bit of a convenience feature that might save a bit of headspace.
 It's a tiny optimization, but it's worth pointing out.
 #tip[
   Look for the common pattern
-  $ int_(u="number")^("number") int_(v="number")^("number")
+  $ integral_(u="number")^("number") integral_(v="number")^("number")
     f(u) g(v) dif v dif u
-    = (int_(u="number")^("number") f(u) dif u)
-      ( int_(v="number")^("number") g(v) dif v). $
+    = (integral_(u="number")^("number") f(u) dif u)
+      ( integral_(v="number")^("number") g(v) dif v). $
 ]
 Remember, this doesn't work if either the integrand doesn't factor,
 or the limits of integration aren't just numbers
 (i.e. the limit of $v$ depends on $u$).
 
 As another example of a use case, in the polar integration we just did, we have
-$ int_(r=0)^1 int_(theta=0)^(2 pi) r dif theta dif r
-  = (int_(r=0)^1 r dif r)(int_(theta=0)^(2 pi) dif theta)
+$ integral_(r=0)^1 integral_(theta=0)^(2 pi) r dif theta dif r
+  = (integral_(r=0)^1 r dif r)(integral_(theta=0)^(2 pi) dif theta)
   = [r^2/2]_(r=0)^(r=1) dot (2 pi) = pi. $
 (Polar coordinates, covered next chapter, have this particular pattern a lot.
 Often the thing you're integrating has no $theta$ dependence at all.)
@@ -413,6 +413,6 @@ Often the thing you're integrating has no $theta$ dependence at all.)
 #exer[
   Let $cal(R)$ be all the points on or inside the triangle
   with vertices $(0,0)$, $(1,2)$ and $(2,1)$.
-  Compute $ iint_(cal(R)) (x+y)^2/(x y) dif x dif y. $
+  Compute $ integral.double_(cal(R)) (x+y)^2/(x y) dif x dif y. $
   (Recommended approach: use change of variables with $u = x + y$ and $v = x / y$.)
 ] <exer-chvar-triangle>

@@ -26,7 +26,7 @@ For 18.02, the methods available to you will be
 #definition(title: [Definition of flux])[
   Let $bf(r)(u,v) : cal(R) -> RR^3$ parametrize an oriented surface $cal(S)$ in $RR^3$.
   The flux of a vector field $bf(F) : RR^3 -> RR^3$ through $cal(S)$ is defined by
-  $ iint_(cal(R)) bf(F)(bf(r)(u,v)) dot
+  $ integral.double_(cal(R)) bf(F)(bf(r)(u,v)) dot
     ((partial bf(r))/(partial u) times (partial bf(r))/(partial v)) dif u dif v. $
 ]
 (We'll explain what "oriented" means in the next section.)
@@ -37,7 +37,7 @@ For 18.02, the methods available to you will be
 
 Yes, there's that hideous cross product again.
 Naturally, people have shorthand to make this easier to swallow: this time either
-$ iint_(cal(S)) bf(F) dot dif bf(S) = iint_(cal(S)) bf(F) dot bf(n) dif S $
+$ integral.double_(cal(S)) bf(F) dot dif bf(S) = integral.double_(cal(S)) bf(F) dot bf(n) dif S $
 is used to sweep everything under the carpet.
 That is, $dif bf(S)$ and $bf(n) dif S$ are both shorthands for the longer
 $(partial bf(r))/(partial u) times (partial bf(r))/(partial v) dif u dif v$.
@@ -99,7 +99,7 @@ This sign issue is disorienting because it wasn't present for work,
 where "start to stop" was pretty easy to think about; we'll give more examples momentarily.
 
 Going back to our new flux integral, we need to visualize the dot products
-$ iint_(cal(R)) bf(F) dot ((partial bf(r))/(partial u) times (partial bf(r))/(partial v)) dif u dif v. $
+$ integral.double_(cal(R)) bf(F) dot ((partial bf(r))/(partial u) times (partial bf(r))/(partial v)) dif u dif v. $
 The $bf(F)$ is still the force vector,
 and as we describe earlier,
 the vector $ (partial bf(r))/(partial u) times (partial bf(r))/(partial v) $
@@ -335,13 +335,13 @@ Let's give one example corresponding to each row of @table-surfcross-2.
     &= (1) (- 3 x^2) + (1) (- 3 y^2) + (x^3 + y^3) (1) \
     &= - 3 x^2 - 3 y^2 + x^3 + y^3. $
   Hence the flux requested is given by
-  $ iint_(cal(S)) bf(F) dot bf(n) dif S
-    = int_(x=0)^1 int_(y=0)^1 (- 3 x^2 - 3 y^2 + x^3 + y^3) dif y dif x $
+  $ integral.double_(cal(S)) bf(F) dot bf(n) dif S
+    = integral_(x=0)^1 integral_(y=0)^1 (- 3 x^2 - 3 y^2 + x^3 + y^3) dif y dif x $
   which is straightforward to evaluate:
-  $ iint_(cal(S)) bf(F) dot bf(n) dif S
-    &= int_(x=0)^1 int_(y=0)^1 (x^3 - 3 x^2 + y^3 - 3 y^2) dif y dif x \
-    &= int_(x=0)^1 (int_(y=0)^1 (x^3 - 3 x^2) dif x) dif y + int_(y=0)^1 (int_(x=0)^1 (y^3 - 3 y^2) dif y) dif x \
-    &= int_(x=0)^1 (x^3 - 3 x^2 dif x) + int_(y=0)^1 (y^3 - 3 y^2 dif y) \
+  $ integral.double_(cal(S)) bf(F) dot bf(n) dif S
+    &= integral_(x=0)^1 integral_(y=0)^1 (x^3 - 3 x^2 + y^3 - 3 y^2) dif y dif x \
+    &= integral_(x=0)^1 (integral_(y=0)^1 (x^3 - 3 x^2) dif x) dif y + integral_(y=0)^1 (integral_(x=0)^1 (y^3 - 3 y^2) dif y) dif x \
+    &= integral_(x=0)^1 (x^3 - 3 x^2 dif x) + integral_(y=0)^1 (y^3 - 3 y^2 dif y) \
     &= [x^4 / 4 - x^3]_(x=0)^1 + [y^4 / 4 - y^3]_(y=0)^1 \
     &= - 3/4 - 3/4 = #boxed[$ -3/2 $]. #qedhere $
 ]
@@ -383,12 +383,12 @@ Let's give one example corresponding to each row of @table-surfcross-2.
   $ bf(F) dot ((partial bf(r)) / (partial y) times (partial bf(r)) / (partial x)) =
     y z dot (-x/z) + x z dot (-y/z) + 0 dot (-1) = - 2 x y. $
   Hence the flux we seek is
-  $ iint_(cal(S)) bf(F) dot bf(n) dif S = iint_(x^2+y^2 <= 25) - 2 x y dif x dif y. $
+  $ integral.double_(cal(S)) bf(F) dot bf(n) dif S = integral.double_(x^2+y^2 <= 25) - 2 x y dif x dif y. $
 
   But notice that the integrand $- 2 x y$ is an odd function in both $x$ and $y$.
   Since the region $x^2+y^2 <= 25$ is symmetric with respect to both axes,
   we don't even have to bother changing to polar coordinates;
-  we can just deduce directly that $ iint_(x^2+y^2 <= 25) - 2 x y dif x dif y = #boxed[$ 0 $]. #qedhere $
+  we can just deduce directly that $ integral.double_(x^2+y^2 <= 25) - 2 x y dif x dif y = #boxed[$ 0 $]. #qedhere $
 ]
 
 #sample[
@@ -418,8 +418,8 @@ Let's give one example corresponding to each row of @table-surfcross-2.
   $ bf(F) dot ((partial bf(r)) / (partial z) times (partial bf(r)) / (partial y))
     = vec(e^3, e^y, e^z) dot vec(-1, 0, 0) = -e^3. $
   Hence, the flux we seek is
-  $ iint_(cal(S)) bf(F) dot bf(n) dif S
-    &= iint_(y^2 + z^2 <= 25) -e^3 dif y dif z \
+  $ integral.double_(cal(S)) bf(F) dot bf(n) dif S
+    &= integral.double_(y^2 + z^2 <= 25) -e^3 dif y dif z \
     &= -e^3 dot op("Area")(y^2 + z^2 <= 25) = #boxed[$ -25 pi e^3 $]. #qedhere $
 ]
 
@@ -452,15 +452,15 @@ Let's give one example corresponding to each row of @table-surfcross-2.
     &= vec(7 dot 3 cos theta , 7 dot 5 sin theta , e^z) dot vec(7 cos theta , 7 sin theta , 0) \
     &= 49(3 cos^2 theta + 5 sin^2 theta). $
   Hence, the flux we seek is
-  $ iint_(cal(S)) bf(F) dot bf(n) dif S
-    &=  int_(theta=0)^(2 pi) int_(z=0)^(10) (21 cos^2 theta + 35 sin^2 theta) dot 7 dif z dif theta \
-    &= int_(theta=0)^(2 pi) 490 (3 cos^2 theta + 5 sin^2 theta) dif theta \
-    &= 490 int_(theta=0)^(2 pi) (3 cos^2 theta + 5 sin^2 theta) dif theta. $
+  $ integral.double_(cal(S)) bf(F) dot bf(n) dif S
+    &=  integral_(theta=0)^(2 pi) integral_(z=0)^(10) (21 cos^2 theta + 35 sin^2 theta) dot 7 dif z dif theta \
+    &= integral_(theta=0)^(2 pi) 490 (3 cos^2 theta + 5 sin^2 theta) dif theta \
+    &= 490 integral_(theta=0)^(2 pi) (3 cos^2 theta + 5 sin^2 theta) dif theta. $
   Recall that:
-  $ int_(theta=0)^(2 pi) cos^2 theta dif theta = int_(theta=0)^(2 pi) sin^2 theta dif theta = pi $
+  $ integral_(theta=0)^(2 pi) cos^2 theta dif theta = integral_(theta=0)^(2 pi) sin^2 theta dif theta = pi $
   by using $cos^2 theta = (1 + cos(2 theta)) / 2$ and $sin^2 theta = (1 - cos(2 theta)) / 2$.
   Hence,
-  $ 490 int_(theta=0)^(2 pi) (3 cos^2 theta + 5 sin^2 theta) dif theta
+  $ 490 integral_(theta=0)^(2 pi) (3 cos^2 theta + 5 sin^2 theta) dif theta
     = 490 dot (3 pi + 5 pi) = #boxed[$ 3920 pi $]. #qedhere $
 ]
 
@@ -493,11 +493,11 @@ but this time we use spherical coordinates, so you can compare the methods.
       &quad + (25 sin phi cos phi cos theta) dot (-5 sin phi) dot (5 sin phi sin theta) \
       &= -1250 (sin^3 phi cos phi sin theta cos theta). $
   In other words, we have
-  $ iint_(cal(S)) bf(F) dot bf(n) dif S
-    &= -1250 int_(theta=0)^(2 pi) int_(phi=0)^(pi / 2) sin^3 phi cos phi sin theta cos theta dif phi dif theta \
+  $ integral.double_(cal(S)) bf(F) dot bf(n) dif S
+    &= -1250 integral_(theta=0)^(2 pi) integral_(phi=0)^(pi / 2) sin^3 phi cos phi sin theta cos theta dif phi dif theta \
     &= -1250
-      (int_(theta=0)^(2 pi) sin theta cos theta dif theta)
-      (int_(phi=0)^(pi/2) sin^3 phi cos phi dif phi). $
+      (integral_(theta=0)^(2 pi) sin theta cos theta dif theta)
+      (integral_(phi=0)^(pi/2) sin^3 phi cos phi dif phi). $
   The latter integral is super annoying to evaluate,
   but the former integral is zero because $sin theta cos theta = 1/2 sin(2theta)$,
   so we don't have to worry about the $dif phi$ integral at all; we just get $#boxed[$ 0 $]$
@@ -515,9 +515,9 @@ the unit vector in the direction of $((partial r)/(partial u) times (partial r)/
 Let's compare the flux and surface area in both longhand and shorthand.
 
 - In longhand, we have
-  $ op("SurfArea")(cal(S)) &= iint_(cal(R)) lr(|(partial bf(r))/(partial u) times (partial bf(r))/(partial v)|) dif u dif v \
-    "Flux" &= iint_(cal(R)) bf(F) dot ((partial bf(r))/(partial u) times (partial bf(r))/(partial v)) dif u dif v
-    = iint_(cal(R)) (bf(F) dot bf(n)) lr(|(partial bf(r))/(partial u) times (partial bf(r))/(partial v)|)  dif u dif v. $
+  $ op("SurfArea")(cal(S)) &= integral.double_(cal(R)) lr(|(partial bf(r))/(partial u) times (partial bf(r))/(partial v)|) dif u dif v \
+    "Flux" &= integral.double_(cal(R)) bf(F) dot ((partial bf(r))/(partial u) times (partial bf(r))/(partial v)) dif u dif v
+    = integral.double_(cal(R)) (bf(F) dot bf(n)) lr(|(partial bf(r))/(partial u) times (partial bf(r))/(partial v)|)  dif u dif v. $
   (Keep type safety in mind here: the absolute value is a number,
   and the $dot$ is dot product of vectors in $RR^3$.)
   What we've done for the flux is decompose the cross product
@@ -525,15 +525,15 @@ Let's compare the flux and surface area in both longhand and shorthand.
   which we can do (in general, _any_ vector $bf(w)$ equals $|bf(w)|$ multiplied by its direction unit vector).
   In this way you can make flux look a little more like surface area.
 - In shorthand, it's even more obvious:
-  $ "Flux" &= iint_(cal(S)) (bf(F) dot bf(n)) dif S quad " and " quad
-    op("SurfArea")(cal(S)) &= iint_(cal(S)) dif S. $
+  $ "Flux" &= integral.double_(cal(S)) (bf(F) dot bf(n)) dif S quad " and " quad
+    op("SurfArea")(cal(S)) &= integral.double_(cal(S)) dif S. $
 
 However, this resemblance is mostly useless, _except_ in one really particular circumstance:
 the case where it happens $bf(F) dot bf(n)$ is always equal to the same constant $c$
 for every point on the surface.
 If you are that lucky, then the resemblance can actually be put to use:
-$ "Flux" = iint_(cal(R)) c dot lr(|(partial bf(r))/(partial u) times (partial bf(r))/(partial v)|) dif u dif v
-  = c iint_(cal(R)) lr(|(partial bf(r))/(partial u) times (partial bf(r))/(partial v)|) dif u dif v
+$ "Flux" = integral.double_(cal(R)) c dot lr(|(partial bf(r))/(partial u) times (partial bf(r))/(partial v)|) dif u dif v
+  = c integral.double_(cal(R)) lr(|(partial bf(r))/(partial u) times (partial bf(r))/(partial v)|) dif u dif v
   = c dot op("SurfArea")(cal(S)). $
 Then if you know the surface are of $cal(S)$, you don't have to do _any_ integration.
 You just multiply the surface area by $c$.
@@ -550,7 +550,7 @@ Here are two examples of this with spheres.
 #sample[
   Let $cal(S)$ denote the sphere $x^2+y^2+z^2=17^2=289$ of radius $17$.
   Let $bf(F) = vec(x,y,z)$.
-  Compute the flux $ iint_(cal(S)) bf(F) dot bf(n) dif S. $
+  Compute the flux $ integral.double_(cal(S)) bf(F) dot bf(n) dif S. $
   (Orient $cal(S)$ outwards.)
 ]
 #soln[
@@ -559,14 +559,14 @@ Here are two examples of this with spheres.
   Conveniently, the force vector $bf(F)$ is a vector of magnitude $17$ in the same direction!
   That is, $ bf(F) dot bf(n) = (17 bf(n)) dot (bf(n)) = 17. $
   Consequently,
-  $ iint_(cal(S)) bf(F) dot bf(n) dif S = 17 op("SurfArea")(cal(S)) = 17 dot (4 dot 289)pi = #boxed[$ 4 dot 17^3 pi $]. $
+  $ integral.double_(cal(S)) bf(F) dot bf(n) dif S = 17 op("SurfArea")(cal(S)) = 17 dot (4 dot 289)pi = #boxed[$ 4 dot 17^3 pi $]. $
   (In general, we know a sphere of radius $R$ has surface area $4 R^2 pi$.)
 ]
 
 #sample[
   Let $cal(S)$ denote the sphere $x^2+y^2+z^2=17^2=289$ of radius $17$.
   Let $bf(G)$ be the force of gravity exerted by a point mass $m$ at the origin.
-  Compute the flux $ iint_(cal(S)) bf(G) dot bf(n) dif S. $
+  Compute the flux $ integral.double_(cal(S)) bf(G) dot bf(n) dif S. $
   (Orient $cal(S)$ outwards.)
 ]
 #soln[
@@ -574,7 +574,7 @@ Here are two examples of this with spheres.
   $bf(G)$ exerted has magnitude $(G m) / 17^2$ and points in the _opposite_ direction as $bf(n)$.
   That is, $ bf(G) dot bf(n) = (-((G m) / (17^2)) bf(n)) dot (bf(n)) = -(G m) / 289. $
   Consequently,
-  $ iint_(cal(S)) bf(G) dot bf(n) dif S = -(G m) / 289 dot op("SurfArea")(cal(S))
+  $ integral.double_(cal(S)) bf(G) dot bf(n) dif S = -(G m) / 289 dot op("SurfArea")(cal(S))
     = (-G m)/(17^2) dot (4 dot 17^2 pi) = #boxed[$ -4 pi G m $]. $
   (In general, we know a sphere of radius $R$ has surface area $4 R^2 pi$.)
 ]

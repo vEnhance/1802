@@ -18,7 +18,7 @@ The goal of this chapter is to do $nabla$ backwards:
 
 I'll note right away that you still have the $+C$ from 18.01.
 To elaborate, you might remember in 18.01
-that for $int x^2 dif x = x^3/3 + C$ for any constant $C$,
+that for $integral x^2 dif x = x^3/3 + C$ for any constant $C$,
 and we usually just ignore the $+C$ because it does nothing.
 
 For 18.02 we'll do the same thing.
@@ -72,8 +72,8 @@ Let's do a two-variable example first.
   $ (partial f) / (partial x) = x + cos y quad upright("and") quad (partial f) / (partial y) = - x sin y. $
 
   Integrate $(partial f) / (partial x)$ and $(partial f) / (partial y)$ with respect to $x$ and $y$:
-  $ f (x , y) & = int (partial f) / (partial x) dif x = int x + cos y dif x  = x^2/2 + x cos y + C_1 (y). \
-    f (x , y) & = int (partial f) / (partial y) dif y = int - x sin y dif y  = x cos y + C_2(x). $
+  $ f (x , y) & = integral (partial f) / (partial x) dif x = integral x + cos y dif x  = x^2/2 + x cos y + C_1 (y). \
+    f (x , y) & = integral (partial f) / (partial y) dif y = integral - x sin y dif y  = x cos y + C_2(x). $
   Stitching these together to get the final expression for $f (x , y)$ as:
   $ f (x , y) = #boxed($ x^2/2 + x cos y + C $) $
   for any constant $C$.
@@ -90,8 +90,8 @@ Let's do a two-variable example first.
   $ (partial f) / (partial x) = 3 x^2 + 4 x y + y^2 quad upright("and") quad (partial f) / (partial y) = 2 x^2 + 2 x y - 3 y^2. $
 
   Integrate $(partial f) / (partial x)$ and $(partial f) / (partial y)$ with respect to $x$ and $y$:
-  $ f (x , y) & = int (partial f) / (partial x) dif x = int (3 x^2 + 4 x y + y^2) dif x  = x^3 + 2 x^2 y + x y^2 + C_1(y) \
-    f (x , y) & = int (partial f) / (partial y) dif y = int (2 x^2 + 2 x y - 3 y^2) dif y = 2 x^2 y + x y^2 - y^3 + C_2(x). $
+  $ f (x , y) & = integral (partial f) / (partial x) dif x = integral (3 x^2 + 4 x y + y^2) dif x  = x^3 + 2 x^2 y + x y^2 + C_1(y) \
+    f (x , y) & = integral (partial f) / (partial y) dif y = integral (2 x^2 + 2 x y - 3 y^2) dif y = 2 x^2 y + x y^2 - y^3 + C_2(x). $
   Stitching this together gives
   $ f (x , y) = #boxed($ x^3 + 2 x^2 y + x y^2 - y^3 + C $). #qedhere $
 ]
@@ -129,14 +129,14 @@ That's actually a major difference.
   Weren't there impossible integrals in 18.01?
   Well, it depends on what you mean by "impossible".
   For example, a question you won't see in 18.01 is
-  $ int cos(x^2) dif x $
+  $ integral cos(x^2) dif x $
   which can be translated to "find a function $f$ such that $f'(x) = cos(x^2)$".
   The reason you're not asked this in 18.01 is because,
   while such a function $f$ _does exist_, it can't be expressed
   in a way that makes sense to 18.01 students.
 
   But I mean, you could always cheat and write
-  $ f(t) = int_0^t cos(x^2) dif x. $
+  $ f(t) = integral_0^t cos(x^2) dif x. $
   The right-hand side really evaluates to some number for every $t$,
   e.g. if you do numerical analysis $f(1) approx 0.904524$, $f(2) approx 0.461461$, etc.
   So there really is some function $f$ whose derivative is $cos(x^2)$.
@@ -159,8 +159,8 @@ That's actually a major difference.
 #soln[
   We can imagine we follow through the same method as before.
   Integration gives
-  $ f(x,y) &= int 2 y dif x = 2 x y + C_1(y) \
-    f(x,y) &= int x dif y = x y + C_2(x). $
+  $ f(x,y) &= integral 2 y dif x = 2 x y + C_1(y) \
+    f(x,y) &= integral x dif y = x y + C_2(x). $
   For these to be equal we need $2 x y + C_1(y) = x y + C_2(x)$,
   so $x y + C_1(y) = C_2(x)$, which is impossible!
   What's going on?

@@ -26,7 +26,7 @@ as a path $bf(r) : RR -> RR^n$ through it, we can define the *work* on it.
 #definition(title: [Definition of work])[
   The *work* of $bf(F) : RR^n -> RR^n$ done on a path $bf(r) : RR -> RR^n$
   is defined as
-  $ int_(t="start time")^("stop time") bf(F)(bf(r)(t)) dot bf(r)'(t) dif t. $
+  $ integral_(t="start time")^("stop time") bf(F)(bf(r)(t)) dot bf(r)'(t) dif t. $
 ]
 #typesig[
   Keep in mind the types of the inputs; see @table-types-work.
@@ -50,12 +50,12 @@ This is commonly abbreviated with shorthand in two ways.
 - First, we mention a new row of the shorthand in @table-shorthand:
   $ dif bf(r) := bf(r)'(t) dif t. $
 - Second, often the time parametrization is suppressed from the notation
-  and we just write $int_(cal(C))$ instead, where $cal(C)$ denotes the curve that $bf(r)(t)$ traces out.
+  and we just write $integral_(cal(C))$ instead, where $cal(C)$ denotes the curve that $bf(r)(t)$ traces out.
   In this context we always consider the curve to be *directed*,
   i.e. one of the endpoints is the starting point, and the other is the ending point.
 
 That means the above work integral can be rewritten as just
-$ int_(cal(C)) bf(F) dot dif bf(r). $
+$ integral_(cal(C)) bf(F) dot dif bf(r). $
 Mercifully, the shorthand still writes a dot product in the symbols, to remind you that, yes,
 you should be evaluating a dot product when you compute this.
 I can't imagine how much confusion it would cause if the shorthand didn't have the dot product.
@@ -238,16 +238,16 @@ Let's show some examples of how to calculate this in practice.
     Differentiate $bf(r) (t)$ with respect to $t$:
     $ bf(r)' (t) = vec(- sin t , cos t) . $
     The line integral of $bf(F)$ along $cal(C)$ is given by:
-    $ int_(cal(C)) bf(F) dot dif bf(r) &= int_(t=0)^pi bf(F) (bf(r) (t)) dot bf(r)' (t) dif t \
-      &= int_(t=0)^pi vec(2 sin t , 3 cos t) dot vec(- sin t , cos t) dif t \
-      &= int_(t=0)^pi [-2 sin^2 t + 3 cos^2 t] dif t. $
+    $ integral_(cal(C)) bf(F) dot dif bf(r) &= integral_(t=0)^pi bf(F) (bf(r) (t)) dot bf(r)' (t) dif t \
+      &= integral_(t=0)^pi vec(2 sin t , 3 cos t) dot vec(- sin t , cos t) dif t \
+      &= integral_(t=0)^pi [-2 sin^2 t + 3 cos^2 t] dif t. $
     To simplify these trig expressions, we use the fact that
     $ sin^2 t = (1 - cos 2 t) / (2) , quad cos^2 t = (1 + cos 2 t) / (2) . $
     Substitute these into the integral:
-    $ int_(t=0)^pi [- 2 dot (1 - cos 2 t) / (2) + 3 dot (1 + cos 2 t) / (2)] dif t
-    &= int_(t=0)^pi [- (1 - cos 2 t) + 3 / 2 (1 + cos 2 t)] dif t \
-    &= int_(t=0)^pi [1 / 2 + 5 / 2 cos 2 t] dif t. $
-    The term $int_(t=0)^pi cos(2t) dif t$ is zero by symmetry,
+    $ integral_(t=0)^pi [- 2 dot (1 - cos 2 t) / (2) + 3 dot (1 + cos 2 t) / (2)] dif t
+    &= integral_(t=0)^pi [- (1 - cos 2 t) + 3 / 2 (1 + cos 2 t)] dif t \
+    &= integral_(t=0)^pi [1 / 2 + 5 / 2 cos 2 t] dif t. $
+    The term $integral_(t=0)^pi cos(2t) dif t$ is zero by symmetry,
     so the final integral is $#boxed[$pi slash 2$]$.
 
   - Now let's suppose $cal(C)$ is the brown line segment shown.
@@ -272,19 +272,19 @@ for which work integrals are path-independent.
 
 == [TEXT] Even more shorthand: $p dif x + q dif y$
 
-The notation $int_(cal(C)) bf(F) dot dif bf(r)$ can _still_ be contracted further:
+The notation $integral_(cal(C)) bf(F) dot dif bf(r)$ can _still_ be contracted further:
 there is another shorthand that hides both $bf(F)$ and $bf(r)$ altogether.
 Here it is:
 
 #definition(title: [Definition: More shorthand for line integrals])[
   In $RR^2$, suppose $bf(F)(x,y) = vec(p(x,y), q(x,y))$.
   Then the work integral can further be abbreviated as
-  $ int_(cal(C)) (p dif x + q dif y). $
+  $ integral_(cal(C)) (p dif x + q dif y). $
 
   Analogously, suppose we have a vector field
   $bf(F)(x,y,z) = vec(p(x,y,z), q(x,y,z), r(x,y,z))$ for $RR^3$.
   Then the work integral can further be abbreviated as
-  $ int_(cal(C)) (p dif x + q dif y + r dif z). $
+  $ integral_(cal(C)) (p dif x + q dif y + r dif z). $
 ]
 
 #remark[
@@ -293,7 +293,7 @@ Here it is:
   Then
   $vec(p,q) dot bf(r)' = vec(p,q) dot vec(x', y') = p dot x' + q dot y'
     = p dot (dif x) / (dif t) + q dot (dif y) / (dif t). $
-  Hence, if we are integrating $int_(t="start")^("stop") vec(p,q) dot bf(r)' dif t$,
+  Hence, if we are integrating $integral_(t="start")^("stop") vec(p,q) dot bf(r)' dif t$,
   we could imagine "cancelling" the $dif t$ out,
   the expression we'd get looks like $p dif x + q dif y$.
 
@@ -304,9 +304,9 @@ Here it is:
 
 If any of $p$, $q$, $r$ are zero, that term can also be omitted entirely.
 So for example, in 2D, if you see
-$ int_(cal(C)) y dif x $
+$ integral_(cal(C)) y dif x $
 you should take this shorthand to mean
-$ int_(cal(C)) y dif x := int_(cal(C)) (y dif x + 0 dif y) = int_(cal(C)) vec(y, 0) dot dif bf(r). $
+$ integral_(cal(C)) y dif x := integral_(cal(C)) (y dif x + 0 dif y) = integral_(cal(C)) vec(y, 0) dot dif bf(r). $
 
 Let's do an example to practice the weird $dif x$ and $dif y$ shorthand,
 along a different path.
@@ -314,14 +314,14 @@ along a different path.
   Let $cal(C)$ denote the arc of the parabola $y = x^2$ starting from $(-1,1)$
   and moving right to $(1,1)$.
   Compute the line integral
-  $ int_(cal(C)) y^(2 slash 3) dif x. $
+  $ integral_(cal(C)) y^(2 slash 3) dif x. $
 ]
 #soln[
   First we need to expand the shorthand with $dif x$ and $dif y$.
   Recall that $p dif x + q dif y$ is shorthand for the vector field being $vec(p,q)$.
   So where $y^(2 slash 3) dif x = y^(2 slash 3) dif x + 0 dif y$, we expand the shorthand as
-  $ int_(cal(C)) y^(2 slash 3) dif x = int_(cal(C)) vec(y^(2 slash 3), 0) dot dif bf(r)
-    = int_(t="start time")^("stop time") bf(F)(bf(r)(t)) dot bf(r)'(t) dif t $
+  $ integral_(cal(C)) y^(2 slash 3) dif x = integral_(cal(C)) vec(y^(2 slash 3), 0) dot dif bf(r)
+    = integral_(t="start time")^("stop time") bf(F)(bf(r)(t)) dot bf(r)'(t) dif t $
   where $bf(F)(x,y) := vec(y^(2 slash 3), 0)$ refers to the vector field
   encoded by the $y^(2 slash 3) dif x$ shorthand.
 
@@ -351,8 +351,8 @@ along a different path.
   $ bf(r)'(t) = vec(1, 2t). $
   So the overall line integral becomes
   $
-    int_(t=-1)^1 underbrace(vec(t^(4/3),0), = bf(F)(bf(r)(t))) dot underbrace(vec(1, 2t), =bf(r)'(t)) dif t
-    = int_(t=-1)^1 t^(4/3) dif t
+    integral_(t=-1)^1 underbrace(vec(t^(4/3),0), = bf(F)(bf(r)(t))) dot underbrace(vec(1, 2t), =bf(r)'(t)) dif t
+    = integral_(t=-1)^1 t^(4/3) dif t
     = [3/7 t^(7/3)]_(t=-1)^1 = 6/7. #qedhere
   $
 ]
@@ -363,7 +363,7 @@ along a different path.
   Let $cal(C)$ be the oriented closed curve formed by the arc of the parabola $y = x^2-1$
   running from $(-1, 0)$ to $(1, 0)$, followed by a line segment from $(1, 0)$ back to $(-1, 0)$.
   Let $ bf(F)(x,y) = vec(x^2(y+1), (y+1)^2). $
-  Compute $int_(cal(C)) bf(F) dot dif bf(r)$ using direct parametrization.
+  Compute $integral_(cal(C)) bf(F) dot dif bf(r)$ using direct parametrization.
 ] <exer-parabola-1>
 
 #exer[
@@ -372,5 +372,5 @@ along a different path.
   - $bf(F)(P)$ has magnitude $5$;
   - $bf(F)(P)$ makes a $45 degree$ angle with the tangent vector to $cal(C)$ at $P$
     (the tangent vector points along the direction of $cal(C)$).
-  Compute $int_(cal(C)) bf(F) dot dif bf(r)$.
+  Compute $integral_(cal(C)) bf(F) dot dif bf(r)$.
 ] <exer-work-given-angle>

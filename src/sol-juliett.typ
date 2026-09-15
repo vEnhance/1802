@@ -21,11 +21,11 @@ This normal vector is oriented upwards because its $z$-component is positive,
 so we take this as our $bf(n) dif S$.
 
 Hence, the flux of $bf(F)$ through $S$ is given by
-$ iint_(cal(S)) bf(F) dot bf(n) dif S
-  &= int_(x=0)^5 int_(y=0)^5 vec( x/3, y/4, 1/5 ) dot vec( - 3x^2 e^(-z), - 4y^3 e^(-z), 1 ) dif y dif x  \
-  &= int_(x=0)^5 int_(y=0)^5 ((-x^3 - y^4) / e^z + 1/5)  dif y dif x \
-  &= int_(x=0)^5 int_(y=0)^5 ((-e^z) / e^z + 1/5) dif y dif x \
-  &= int_(x=0)^5 int_(y=0)^5 -4/5 dif y dif x \
+$ integral.double_(cal(S)) bf(F) dot bf(n) dif S
+  &= integral_(x=0)^5 integral_(y=0)^5 vec( x/3, y/4, 1/5 ) dot vec( - 3x^2 e^(-z), - 4y^3 e^(-z), 1 ) dif y dif x  \
+  &= integral_(x=0)^5 integral_(y=0)^5 ((-x^3 - y^4) / e^z + 1/5)  dif y dif x \
+  &= integral_(x=0)^5 integral_(y=0)^5 ((-e^z) / e^z + 1/5) dif y dif x \
+  &= integral_(x=0)^5 integral_(y=0)^5 -4/5 dif y dif x \
   &= 25 dot -4/5 = #boxed[$ -20 $]. $
 
 == Solution to @exer-flux-sealing (sealing a surface)
@@ -43,18 +43,18 @@ We orient $cal(S)_"lid"$'s normal vector pointing upward (away from $cal(T)$).
 Note $cal(S)$ also has normal vector pointing away from $cal(T)$.
 
 The divergence theorem on $cal(S)$ and $cal(S)_"lid"$, enclosing $cal(T)$, now gives
-$ iint_(cal(S)) bf(F) dot dif bf(S) + iint_(cal(S)_"lid") bf(F) dot dif bf(S) =
-  iiint_(cal(T)) nabla dot bf(F) dif V = 0. $
+$ integral.double_(cal(S)) bf(F) dot dif bf(S) + integral.double_(cal(S)_"lid") bf(F) dot dif bf(S) =
+  integral.triple_(cal(T)) nabla dot bf(F) dif V = 0. $
 Thus, we compute the flux through the disk and use it to determine the flux through $cal(S)$.
 
 We can take $bf(n) dif S = chevron.l 0,0,1 chevron.r$ for the flat surface $cal(S)_"lid"$, so
-$ iint_(cal(S)_"lid") bf(F) dot dif bf(S) = iint_(cal(S)_"lid") bf(F) dot chevron.l 0 , 0 , 1 chevron.r dif A
-  &= iint_(cal(S)_"lid") 2z dif A \
-  &= iint_(x^2+y^2 <= 1) 2e dif A \
+$ integral.double_(cal(S)_"lid") bf(F) dot dif bf(S) = integral.double_(cal(S)_"lid") bf(F) dot chevron.l 0 , 0 , 1 chevron.r dif A
+  &= integral.double_(cal(S)_"lid") 2z dif A \
+  &= integral.double_(x^2+y^2 <= 1) 2e dif A \
   &= 2e op("Area")(x^2+y^2 <= 1) = 2 e pi. $
 Hence the answer:
-$ iint_(cal(S)) bf(F) dot dif bf(S)
-  = - iint_(cal(S)_"lid") bf(F) dot dif bf(S)
+$ integral.double_(cal(S)) bf(F) dot dif bf(S)
+  = - integral.double_(cal(S)_"lid") bf(F) dot dif bf(S)
   = #boxed[$ - 2 pi e $]. $
 
 == Solution to @exer-gravity-div2 (gravity)
@@ -68,9 +68,9 @@ We consider the solid volume $cal(T)$ contained between $cal(S)_1$ and $cal(S)_2
 Since $cal(S)_2$ has normal vector oriented toward $cal(T)$
 while $cal(S)_1$ has normal vector oriented away from $cal(T)$,
 the divergence theorem says that
-$ iint_(cal(S)_1) bf(G) dot bf(n) dif S
-  - iint_(cal(S)_2) bf(G) dot bf(n) dif S
-  = iiint_(cal(T)) nabla dot bf(G) dif V. $
+$ integral.double_(cal(S)_1) bf(G) dot bf(n) dif S
+  - integral.double_(cal(S)_2) bf(G) dot bf(n) dif S
+  = integral.triple_(cal(T)) nabla dot bf(G) dif V. $
 
 #figure(
   image("figures/sol-india-gravity.svg", width: auto),
@@ -79,7 +79,7 @@ $ iint_(cal(S)_1) bf(G) dot bf(n) dif S
 
 However, $cal(T)$ does not contain the point $O$.
 Therefore, applying @exer-gravity-div1, we have
-$ iiint_(cal(T)) nabla dot bf(G) dif V = iiint_(cal(T)) 0 dif V = 0. $
+$ integral.triple_(cal(T)) nabla dot bf(G) dif V = integral.triple_(cal(T)) 0 dif V = 0. $
 The proof is complete.
 
 == Solution to @exer-div-to-green (divergence to Green for flux)
@@ -118,15 +118,15 @@ $ bf(F)^(*) = chevron.l p , q , 0 chevron.r. $
 The divergence of $bf(F)^(*)$ is:
 $ nabla dot bf(F)^(*) = (partial p) / (partial x) + (partial q) / (partial y) . $
 Applying the divergence theorem to $cal(T)$, we obtain:
-$ iint_(cal(S)_"top") bf(F)^(*) dot bf(n) dif S
-  + iint_(cal(S)_"bottom") bf(F)^(*) dot bf(n) dif S
-  + iint_(cal(S)) bf(F)^(*) dot bf(n) dif S
-  = iiint_(cal(T)) nabla dot bf(F)^(*) dif V . $
+$ integral.double_(cal(S)_"top") bf(F)^(*) dot bf(n) dif S
+  + integral.double_(cal(S)_"bottom") bf(F)^(*) dot bf(n) dif S
+  + integral.double_(cal(S)) bf(F)^(*) dot bf(n) dif S
+  = integral.triple_(cal(T)) nabla dot bf(F)^(*) dif V . $
 
 Since $cal(T)$ has height 1, the volume integral simplifies to:
-$ iiint_(cal(T)) nabla dot bf(F)^(*) dif V
-  &= int_(z=0)^1 iint_(cal(R)) ((partial p) / (partial x) + (partial q) / (partial y)) dif A dif z \
-  &= iint_(cal(R)) ((partial p) / (partial x) + (partial q) / (partial y)) dif A. $
+$ integral.triple_(cal(T)) nabla dot bf(F)^(*) dif V
+  &= integral_(z=0)^1 integral.double_(cal(R)) ((partial p) / (partial x) + (partial q) / (partial y)) dif A dif z \
+  &= integral.double_(cal(R)) ((partial p) / (partial x) + (partial q) / (partial y)) dif A. $
 
 Now let's look at the three parts of the boundary of $cal(T)$:
 
@@ -139,12 +139,12 @@ Now let's look at the three parts of the boundary of $cal(T)$:
   The normal to these walls is $bf(n)$ in the $x y$-plane,
   so the surface element is $bf(n) dif S = bf(n) dif s dif z$.
   The flux contribution from these sidewalls is:
-  $ oint_(cal(C)) int_(z=0)^1 bf(F)^(*) dot bf(n) dif z dif s . $
+  $ integral.cont_(cal(C)) integral_(z=0)^1 bf(F)^(*) dot bf(n) dif z dif s . $
   Since $bf(F)^(*)$ does not depend on $z$, this simplifies to:
-  $ oint_(cal(C)) bf(F) dot bf(n) dif s . $
+  $ integral.cont_(cal(C)) bf(F) dot bf(n) dif s . $
 
 Putting this all together we get
-$ oint_(cal(C)) bf(F) dot bf(n) dif s = iint_(cal(R)) ((partial p) / (partial x) + (partial q) / (partial y)) dif A . $
+$ integral.cont_(cal(C)) bf(F) dot bf(n) dif s = integral.double_(cal(R)) ((partial p) / (partial x) + (partial q) / (partial y)) dif A . $
 This completes the proof of Green's theorem for flux using the divergence theorem.
 
 
@@ -164,8 +164,8 @@ $ bf(F)^(*) = chevron.l p , q , 0 chevron.r  $
 as before.
 
 The classical Stokes' theorem now states that for a surface $cal(S)$ with boundary $cal(C)$,
-$ oint_(cal(C)) bf(F)^(*) dot dif bf(r) = iint_(cal(S)) nabla times bf(F)^(*) dot bf(n) dif S . $
-The left-hand side is the same as $oint_(cal(C)) bf(F) dot dif bf(r)$ in 2D:
+$ integral.cont_(cal(C)) bf(F)^(*) dot dif bf(r) = integral.double_(cal(S)) nabla times bf(F)^(*) dot bf(n) dif S . $
+The left-hand side is the same as $integral.cont_(cal(C)) bf(F) dot dif bf(r)$ in 2D:
 the work doesn't change if we add an extra dimension.
 So we just evaluate the curl on the right-hand side:
 $ nabla times bf(F)^(*) = detmat(bf(e)_1, bf(e)_2, bf(e)_3;

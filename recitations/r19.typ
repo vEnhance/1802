@@ -41,10 +41,10 @@ Note we use $delta$ instead of $rho$ to avoid conflicting with spherical coordin
 
 Same deal: for a region $cal(R)$ the center of mass is the point $(dash(x), dash(y), dash(z))$ where
 $
-  dash(x) &:= 1/(op("mass")(cal(R))) iiint_(cal(R)) x delta(x,y,z) dif x dif y dif z \
-  dash(y) &:= 1/(op("mass")(cal(R))) iiint_(cal(R)) y delta(x,y,z) dif x dif y dif z \
-  dash(z) &:= 1/(op("mass")(cal(R))) iiint_(cal(R)) z delta(x,y,z) dif x dif y dif z \
-  op("mass")(cal(R)) &:= iiint_(cal(R)) delta(x,y,z) dif x dif y dif z.
+  dash(x) &:= 1/(op("mass")(cal(R))) integral.triple_(cal(R)) x delta(x,y,z) dif x dif y dif z \
+  dash(y) &:= 1/(op("mass")(cal(R))) integral.triple_(cal(R)) y delta(x,y,z) dif x dif y dif z \
+  dash(z) &:= 1/(op("mass")(cal(R))) integral.triple_(cal(R)) z delta(x,y,z) dif x dif y dif z \
+  op("mass")(cal(R)) &:= integral.triple_(cal(R)) delta(x,y,z) dif x dif y dif z.
 $
 
 Unsurprisingly, when $delta = 1$ is constant unit density, then mass equals volume.
@@ -67,9 +67,9 @@ $ (G m dot (delta(x,y,z) dif V))/(x^2+y^2+z^2) dot
 Integrating over all of $cal(R)$ gives
 a gravitational vector $bf(G) = chevron.l G_1, G_2, G_3 chevron.r$ defined by
 $
-  G_1 &:= G m iiint_(cal(R)) (x delta(x,y,z))/((x^2+y^2+z^2)^(3/2)) dif x dif y dif z \
-  G_2 &:= G m iiint_(cal(R)) (y delta(x,y,z))/((x^2+y^2+z^2)^(3/2)) dif x dif y dif z \
-  G_3 &:= G m iiint_(cal(R)) (z delta(x,y,z))/((x^2+y^2+z^2)^(3/2)) dif x dif y dif z.
+  G_1 &:= G m integral.triple_(cal(R)) (x delta(x,y,z))/((x^2+y^2+z^2)^(3/2)) dif x dif y dif z \
+  G_2 &:= G m integral.triple_(cal(R)) (y delta(x,y,z))/((x^2+y^2+z^2)^(3/2)) dif x dif y dif z \
+  G_3 &:= G m integral.triple_(cal(R)) (z delta(x,y,z))/((x^2+y^2+z^2)^(3/2)) dif x dif y dif z.
 $
 That is, $bf(G) = G_1 bf(e)_1 + G_2 bf(e)_2 + G_3 bf(e)_3$.
 Because the $(x^2+y^2+z^2)^(3/2)$ is so awkward to work with,

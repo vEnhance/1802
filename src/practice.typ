@@ -37,7 +37,7 @@ Solutions are in @ch-sol-kilo.
 
 #exer[
   Use any method (recommended approach: change order of integration) to compute
-  $ int_(x=0)^1 int_(y=x)^1 int_(z=y)^1 e^(z^3) dif z dif y dif x. $
+  $ integral_(x=0)^1 integral_(y=x)^1 integral_(z=y)^1 e^(z^3) dif z dif y dif x. $
 ] <exer-mf-6>
 
 #exer[
@@ -45,7 +45,7 @@ Solutions are in @ch-sol-kilo.
   $ bf(F)(x,y,z) = chevron.l 7 cos(x), thin cos(y) cos(2z), thin c sin(y) sin(2z) chevron.r $
   is conservative.
   For that $c$, compute the maximum possible value of a line integral
-  $int_(cal(C)) bf(F) dot dif bf(r)$ across all possible choices of some curve $cal(C)$ in $RR^3$.
+  $integral_(cal(C)) bf(F) dot dif bf(r)$ across all possible choices of some curve $cal(C)$ in $RR^3$.
 ] <exer-mf-7>
 
 #exer[
@@ -107,9 +107,9 @@ Solutions are in @ch-sol-kilo.
 ]
 
 #exer[
-  Compute $ int_(x=-oo)^(+oo) int_(y=-oo)^(+oo) e^(-x^2-y^2) dif y dif x $
+  Compute $ integral_(x=-oo)^(+oo) integral_(y=-oo)^(+oo) e^(-x^2-y^2) dif y dif x $
   by changing to polar coordinates.
-  Then determine the value of $int_(x=-oo)^(+oo) e^(-x^2) dif x$.
+  Then determine the value of $integral_(x=-oo)^(+oo) e^(-x^2) dif x$.
 ]
 
 #pagebreak()
@@ -136,7 +136,7 @@ and reading the solutions (even if you don't solve any of them).
   Give an example of a continuous function $f : RR^3 -> RR$
   which is not the zero function,
   such that for every sphere $S$ of radius $1$ we have
-  $ iint_S f dif S = 0. $
+  $ integral.double_S f dif S = 0. $
 ]
 
 #exerstar[Putnam 2025 B2][

@@ -291,7 +291,7 @@ there will be a case of Stokes' theorem that applies to it.
   Let $cal(R)$ be a compact region.
   Then the integral of $X$ over the *boundary* of $cal(R)$
   equals the integral of $Y$ over $cal(R)$:
-  $ int_(op("boundary")(cal(R))) X = int_(cal(R)) Y. $
+  $ integral_(op("boundary")(cal(R))) X = integral_(cal(R)) Y. $
 ]
 
 In fact let me tell you what generalized Stokes' theorem says,
@@ -302,7 +302,7 @@ in vague non-precise terms (we'll make precise later), for each of these six red
   it's the fundamental theorem of calculus.
   The region $cal(R)$ is the line segment $[a,b]$, and the boundary is the two endpoints $a$ and $b$.
   Then we have the _fundamental theorem of calculus_ from 18.01:
-  $ f(b) - f(a) = int_a^b (dif f) / (dif x) dif x. $
+  $ f(b) - f(a) = integral_a^b (dif f) / (dif x) dif x. $
 
 / Evaluation $->$ line integral ($times 2$):
   There are two such red arrows, but the statement is the same for both.
@@ -310,12 +310,12 @@ in vague non-precise terms (we'll make precise later), for each of these six red
   (say, the line segment $P Q$, or some more curvy path).
   The region $cal(R)$ is this path, and the endpoints are $P$ and $Q$:
   Then we get the _fundamental theorem of calculus for line integrals_:
-  $ f(Q) - f(P) = int_(t="start time")^("stop time") nabla f(bf(r)(t)) dot bf(r)'(t) dif t. $
+  $ f(Q) - f(P) = integral_(t="start time")^("stop time") nabla f(bf(r)(t)) dot bf(r)'(t) dif t. $
   The right-hand side is the work done by $nabla f$ on the path $bf(r)$.
 
   If you use shorthand where $cal(C)$ is the curve formed by $bf(r)$,
   this could be rewritten as
-  $ f(Q) - f(P) = int_(cal(C)) nabla f dot dif bf(r). $
+  $ f(Q) - f(P) = integral_(cal(C)) nabla f dot dif bf(r). $
 
 / Line integral $->$ double/area integral:
   Suppose now $bf(F) : RR^2 -> RR^2$ is a vector field.
@@ -324,16 +324,16 @@ in vague non-precise terms (we'll make precise later), for each of these six red
   Suppose further that the _boundary_ of $cal(R)$ is parametrized by a curve $bf(r)(t)$
   (e.g. the circumference of the disk).
   Then _Green's theorem_ says that
-  $ int_(t="start time")^("stop time") bf(F)(bf(r)(t)) dot bf(r)'(t) dif t
-    = iint_(cal(R)) ((partial q) / (partial x) - (partial p) / (partial y)) dif x dif y. $
+  $ integral_(t="start time")^("stop time") bf(F)(bf(r)(t)) dot bf(r)'(t) dif t
+    = integral.double_(cal(R)) ((partial q) / (partial x) - (partial p) / (partial y)) dif x dif y. $
   The weird expression $(partial q) / (partial x) - (partial p) / (partial y)$
   in the right-hand side is called the 2D scalar curl, but we haven't defined this term yet.
 
   If you use shorthand as in @table-shorthand, this can be simplified.
   Let $cal(C)$ be the curve formed by $bf(r)$,
   this could be rewritten as
-  $ int_(cal(C)) bf(F) dot dif bf(r)
-    = iint_(cal(R)) ((partial q) / (partial x) - (partial p) / (partial y)) dif A. $
+  $ integral_(cal(C)) bf(F) dot dif bf(r)
+    = integral.double_(cal(R)) ((partial q) / (partial x) - (partial p) / (partial y)) dif A. $
   There's a second form of Green's theorem I'll show you when I get to it.
 
 / Line integral $->$ surface integral:
@@ -342,8 +342,8 @@ in vague non-precise terms (we'll make precise later), for each of these six red
   and suppose further that the _boundary_ of this surface is parametrized by a curve $bf(r)_1(t)$
   (e.g. the edges of the sheet).
   Then the classical version of _Stokes' theorem_ says that
-  $ int_(t="start time")^("stop time") bf(F)(bf(r)_1(t)) dot bf(r)'_1(t) dif t
-    = iint_(cal(S)) (nabla times bf(F))(bf(r)_2(u,v)) dot lr(((partial bf(r)_2)/(partial u) times (partial bf(r)_2)/(partial v))) dif u dif v. $
+  $ integral_(t="start time")^("stop time") bf(F)(bf(r)_1(t)) dot bf(r)'_1(t) dif t
+    = integral.double_(cal(S)) (nabla times bf(F))(bf(r)_2(u,v)) dot lr(((partial bf(r)_2)/(partial u) times (partial bf(r)_2)/(partial v))) dif u dif v. $
   The nonsense expression $nabla times bf(F)$ is called the curl, defined next chapter in @ch-gcd.
 
   The shorthand version following @table-shorthand is much easier to read,
@@ -351,7 +351,7 @@ in vague non-precise terms (we'll make precise later), for each of these six red
   $lr(((partial bf(r)_2)/(partial u) times (partial bf(r)_2)/(partial v))) dif u dif v$.
   Suppose the curve for $bf(r)_1$ is denoted $cal(C)$.
   Then the above equation compresses all the way down to
-  $ int_(cal(C)) bf(F) dot dif bf(r)_1 = iint_(cal(S)) (nabla times bf(F)) dot bf(n) dif S. $
+  $ integral_(cal(C)) bf(F) dot dif bf(r)_1 = integral.double_(cal(S)) (nabla times bf(F)) dot bf(n) dif S. $
   so yes, that does save a lot of characters.
 
 / Surface integral $->$ triple/volume integral:
@@ -360,11 +360,11 @@ in vague non-precise terms (we'll make precise later), for each of these six red
   Suppose further the boundary of $cal(R)$ is parametrized
   by some two-dimensional surface $bf(r)(u,v)$ (e.g. metal sphere), which we call $cal(S)$.
   Then the _divergence theorem_ says that
-  $ iint_(cal(S)) bf(F)(bf(r)(u,v)) dot lr(((partial bf(r))/(partial u)
+  $ integral.double_(cal(S)) bf(F)(bf(r)(u,v)) dot lr(((partial bf(r))/(partial u)
     times (partial bf(r))/(partial v))) dif u dif v
-    =  iiint_(cal(T)) (nabla dot bf(F))(x,y,z) dif x dif y dif z. $
+    =  integral.triple_(cal(T)) (nabla dot bf(F))(x,y,z) dif x dif y dif z. $
   If we adopt shorthand again, this reads just
-  $ iint_(cal(S)) bf(F) dot bf(n) dif S = iiint_(cal(T)) nabla dot bf(F) dif V. $
+  $ integral.double_(cal(S)) bf(F) dot bf(n) dif S = integral.triple_(cal(T)) nabla dot bf(F) dif V. $
 
   The nonsense expression $nabla dot bf(F)$ is called the divergence, defined next chapter in @ch-gcd.
 

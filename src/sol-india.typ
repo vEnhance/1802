@@ -77,9 +77,9 @@ $ bf(F)(bf(r)(t)) = bf(F)(t, t^2-1) = vec(t^4, t^4)
   quad
   bf(r)'(t) = vec(1, 2t). $
 Then we get
-$ int_(cal(C)_1) bf(F) dot dif bf(r)
-  &= int_(t=-1)^1 vec(t^4, t^4) dot vec(1, 2t) dif t \
-  &= int_(t = - 1)^1 (t^4 + t^4 dot 2 t) dif t \
+$ integral_(cal(C)_1) bf(F) dot dif bf(r)
+  &= integral_(t=-1)^1 vec(t^4, t^4) dot vec(1, 2t) dif t \
+  &= integral_(t = - 1)^1 (t^4 + t^4 dot 2 t) dif t \
   &= [t^5/5 + 1/3 t^6]_(t=-1)^1 = 2 / 5 . $
 
 Next, we parameterize $cal(C)_2$ by $(1 - t , 0)$ for $0 <= t <= 2$.
@@ -88,13 +88,13 @@ $ bf(F)(bf(r)(t)) = bf(F)(1-t,0) = vec((1-t)^2, 1)
   quad
   bf(r)'(t) = vec(-1, 0). $
 Then
-$ int_(cal(C)_2) bf(F) dot dif bf(r)
-  &= int_(t=0)^2 vec((1-t)^2, 1) dot vec(-1, 0) dif t \
-  &= int_(t=0)^2 - (1 - t)^2 dif t \
+$ integral_(cal(C)_2) bf(F) dot dif bf(r)
+  &= integral_(t=0)^2 vec((1-t)^2, 1) dot vec(-1, 0) dif t \
+  &= integral_(t=0)^2 - (1 - t)^2 dif t \
   &= - 2 / 3 . $
 Putting this all together we get
-$ int_(cal(C)) bf(F) dot dif bf(r)
-  = int_(cal(C)_1) bf(F) dot dif bf(r) + int_(cal(C)_2) bf(F) dot dif bf(r)
+$ integral_(cal(C)) bf(F) dot dif bf(r)
+  = integral_(cal(C)_1) bf(F) dot dif bf(r) + integral_(cal(C)_2) bf(F) dot dif bf(r)
   = 2 / 5 - 2 / 3 = #boxed[$ -4/15 $]. $
 
 == Solution to @exer-work-given-angle (work from $45 degree$ angle)
@@ -103,17 +103,17 @@ $ int_(cal(C)) bf(F) dot dif bf(r)
 
 Take any parametrization of the curve $cal(C)$, say from $t=0$ to $1$.
 The work we seek is then
-$ int_(cal(C)) bf(F) dot dif bf(r) = int_(t=0)^(1) bf(F)(bf(r)(t)) dot bf(r)'(t) dif t. $
+$ integral_(cal(C)) bf(F) dot dif bf(r) = integral_(t=0)^(1) bf(F)(bf(r)(t)) dot bf(r)'(t) dif t. $
 The point of the problem is that
 $bf(F)(bf(r)(t))$ is supposed to have magnitude $5$
 and form a $45 degree$ angle with $bf(r)'(t)$.
 Hence, if we use the _geometric_ definition of the dot product, we get
-$ int_(cal(C)) bf(F) dot dif bf(r) &= int_(t=0)^(1) |bf(F)(bf(r)(t))| |bf(r)'(t)| cos(45 degree) dif t \
-  &= int_(t=0)^(1) 5 |bf(r)'(t)| cos(45 degree) dif t \
-  &= 5 cos(45 degree)  int_(t=0)^(1) |bf(r)'(t)| dif t. $
+$ integral_(cal(C)) bf(F) dot dif bf(r) &= integral_(t=0)^(1) |bf(F)(bf(r)(t))| |bf(r)'(t)| cos(45 degree) dif t \
+  &= integral_(t=0)^(1) 5 |bf(r)'(t)| cos(45 degree) dif t \
+  &= 5 cos(45 degree)  integral_(t=0)^(1) |bf(r)'(t)| dif t. $
 But that integral is the arc length of $cal(C)$.
 So
-$ int_(cal(C)) bf(F) dot dif bf(r)
+$ integral_(cal(C)) bf(F) dot dif bf(r)
   = 5 cos(45 degree) dot 7 = 35 cos(45 degree) = #boxed[$ (35 sqrt(2)) / 2 $]. $
 
 == Solution to @exer-consv (checking conservativeness)
@@ -155,10 +155,10 @@ See @fig-sol-india-parabola-fill.
 ) <fig-sol-india-parabola-fill>
 
 Hence from Green's theorem, we have
-$ int_(cal(C)) bf(F) dot dif bf(r)
-  &= iint_(cal(R)) ((partial Q) / (partial x) - (partial P) / (partial y)) dif A \
-  &= int_(x=- 1)^1 int_(y=x^2 - 1)^0 (- x^2) dif y dif x \
-  &= int_(x=- 1)^1 x^2 (x^2 - 1) dif x \
+$ integral_(cal(C)) bf(F) dot dif bf(r)
+  &= integral.double_(cal(R)) ((partial Q) / (partial x) - (partial P) / (partial y)) dif A \
+  &= integral_(x=- 1)^1 integral_(y=x^2 - 1)^0 (- x^2) dif y dif x \
+  &= integral_(x=- 1)^1 x^2 (x^2 - 1) dif x \
   &= [x^5/5 - x^3/3]_(x=-1)^1  = 2 / 5 - 2 / 3 = #boxed[$ -4/15 $]. $
 
 == Solution to @exer-shoelace (the shoelace formula)
@@ -166,7 +166,7 @@ $ int_(cal(C)) bf(F) dot dif bf(r)
 #recall-thm(<exer-shoelace>)
 Green's theorem states that for a simple closed curve $cal(C)$ enclosing
 a region $cal(R)$, we have
-$ iint_(cal(R)) ((partial Q) / (partial x) - (partial P) / (partial y)) dif A = oint_(cal(C)) (P dif x + Q dif y) . $
+$ integral.double_(cal(R)) ((partial Q) / (partial x) - (partial P) / (partial y)) dif A = integral.cont_(cal(C)) (P dif x + Q dif y) . $
 We take $cal(C)$ as the polygon, oriented counterclockwise,
 and $cal(R)$ as its interior.
 We will chose the vector field
@@ -175,12 +175,12 @@ so that the 2D scalar curl equals
 $ (partial Q) / (partial x) - (partial P) / (partial y)
   = (partial) / (partial x) (x) - (partial) / (partial y) (0) = 1 . $
 Thus, Green's theorem gives:
-$ op("Area")(cal(P)) = oint_(cal(C)) x dif y . $
+$ op("Area")(cal(P)) = integral.cont_(cal(C)) x dif y . $
 
 Now we evaluate the line integral "manually" across the $n$ sides of the polygon.
 As the boundary $cal(C)$ consists of the edges $P_i P_(i + 1)$,
 we sum over each edge:
-$ oint_(cal(C)) x dif y = sum_(i = 0)^(n-1) int_("From" P_i "to" P_(i + 1)) x dif y . $
+$ integral.cont_(cal(C)) x dif y = sum_(i = 0)^(n-1) integral_("From" P_i "to" P_(i + 1)) x dif y . $
 
 Let's parametrize the segment joining $(x_i, y_i)$ to $(x_(i+1), y_(i+1))$
 by just the constant speed parametrization taking unit time:
@@ -192,11 +192,11 @@ Thus,
 $ bf(F)(bf(r))(t) &= vec(0, (1 - t) x_i + t x_(i + 1)) \
   bf(r)'(t) &= vec( x_(i+1) - x_i, y_(i+1) - y_i ) $
 so we are integrating the dot product
-$ int_("From" P_i "to" P_(i + 1)) x dif y
-  &= int_(t=0)^1 vec(0, (1 - t) x_i + t x_(i + 1))
+$ integral_("From" P_i "to" P_(i + 1)) x dif y
+  &= integral_(t=0)^1 vec(0, (1 - t) x_i + t x_(i + 1))
   dot vec( x_(i+1) - x_i, y_(i+1) - y_i ) dif t \
-  &= int_(t=0)^1 ((1 - t) x_i + t x_(i + 1)) (y_(i + 1) - y_i) dif t \
-  &= (y_(i + 1) - y_i) ( x_i int_(t=0)^1 (1 - t) dif t + x_(i + 1) int_(t=0)^1 t  dif t ) \
+  &= integral_(t=0)^1 ((1 - t) x_i + t x_(i + 1)) (y_(i + 1) - y_i) dif t \
+  &= (y_(i + 1) - y_i) ( x_i integral_(t=0)^1 (1 - t) dif t + x_(i + 1) integral_(t=0)^1 t  dif t ) \
   &= (y_(i + 1) - y_i) ( x_i dot 1/2 + x_(i + 1) dot 1/2 ) \
   &= 1/2 (y_(i + 1) - y_i) (x_i + x_(i + 1)) \
   &= (x_i y_(i+1) - x_(i+1) y_i)/2  + (x_(i+1) y_(i+1) - x_i y_i) / 2. $
@@ -205,7 +205,7 @@ while the second term cancels since
 $ (x_1 y_1 - x_n y_n) / 2 + (x_2 y_2 - x_1 y_1) / 2
   + (x_3 y_3 - x_2 y_2) / 2 + ... + (x_n y_n - x_(n-1) y_(n-1)) / 2 = 0. $
 In other words,
-$ sum_(i = 0)^(n-1) int_("From" P_i "to" P_(i + 1)) x dif y
+$ sum_(i = 0)^(n-1) integral_("From" P_i "to" P_(i + 1)) x dif y
   &= sum_(i = 0)^(n-1) ((x_i y_(i+1) - x_(i+1) y_i)/2  + (x_(i+1) y_(i+1) - x_i y_i) / 2) \
   &= sum_(i = 0)^(n-1) ((x_i y_(i+1) - x_(i+1) y_i)/2) $
 and the proof is complete.
@@ -241,9 +241,9 @@ $ bf(F)(bf(r)(t)) = bf(F)(t, t^2-1) = vec(t^4, t^4)
   quad
   bf(r)'(t) = vec(1, 2t). $
 So rotating $bf(F)$ as in @sec-recipe-2d-flux, we have
-$ int_(cal(C)_1) bf(F) dot bf(n) dif s
-  &= int_(t=-1)^1 vec(-t^4, t^4) dot vec(1, 2t) dif t \
-  &= int_(t = - 1)^1 (-t^4 + t^4 dot 2 t) dif t \
+$ integral_(cal(C)_1) bf(F) dot bf(n) dif s
+  &= integral_(t=-1)^1 vec(-t^4, t^4) dot vec(1, 2t) dif t \
+  &= integral_(t = - 1)^1 (-t^4 + t^4 dot 2 t) dif t \
   &= [-t^5/5 + 1/3 t^6]_(t=-1)^1 = -2 / 5 . $
 
 Next, we parameterize $cal(C)_2$ by $(1 - t , 0)$ for $0 <= t <= 2$.
@@ -252,14 +252,14 @@ $ bf(F)(bf(r)(t)) = bf(F)(1-t,0) = vec((1-t)^2, 1)
   quad
   bf(r)'(t) = vec(-1, 0). $
 Rotating $bf(F)$ as in @sec-recipe-2d-flux, we have
-$ int_(cal(C)_2) bf(F) dot bf(n) dif s
-  &= int_(t=0)^2 vec(-1, (1-t)^2) dot vec(-1, 0) dif t \
-  &= int_(t=0)^2 1 dif t \
+$ integral_(cal(C)_2) bf(F) dot bf(n) dif s
+  &= integral_(t=0)^2 vec(-1, (1-t)^2) dot vec(-1, 0) dif t \
+  &= integral_(t=0)^2 1 dif t \
   &= 2. $
 
 Putting this all together we get
-$ int_(cal(C)) bf(F) dot bf(n) dif s
-  = int_(cal(C)_1) bf(F) dot bf(n) dif s + int_(cal(C)_2) bf(F) dot bf(n) dif s
+$ integral_(cal(C)) bf(F) dot bf(n) dif s
+  = integral_(cal(C)_1) bf(F) dot bf(n) dif s + integral_(cal(C)_2) bf(F) dot bf(n) dif s
   = -2/5 + 2 = #boxed[$ 8/5 $]. $
 
 #h3[Using Green's Theorem]
@@ -273,12 +273,12 @@ Again let $cal(R)$ be the region between $y = x^2-1$ and $y=0$, enclosed by $cal
 The region $cal(R)$ hasn't changed and is given by
 $ -1 <= x <= 1 \ x^2-1 <= y <= 0. $
 Hence from Green's theorem, we have
-$ int_(cal(C)) bf(F) dot bf(n) dif s
-  &= iint_(cal(R)) ((partial P) / (partial x) + (partial Q) / (partial y)) dif A \
-  &= int_(x=- 1)^1 int_(y=x^2 - 1)^0 2(x+1)(y+1) dif y dif x \
-  &= int_(x=- 1)^1 (x+1) int_(y=x^2 - 1)^0 2(y+1) dif y dif x \
-  &= int_(x=- 1)^1 (x+1) (1-x^4) dif x \
-  &= int_(x=- 1)^1 (-x^5-x^4+x+1) dif x \
+$ integral_(cal(C)) bf(F) dot bf(n) dif s
+  &= integral.double_(cal(R)) ((partial P) / (partial x) + (partial Q) / (partial y)) dif A \
+  &= integral_(x=- 1)^1 integral_(y=x^2 - 1)^0 2(x+1)(y+1) dif y dif x \
+  &= integral_(x=- 1)^1 (x+1) integral_(y=x^2 - 1)^0 2(y+1) dif y dif x \
+  &= integral_(x=- 1)^1 (x+1) (1-x^4) dif x \
+  &= integral_(x=- 1)^1 (-x^5-x^4+x+1) dif x \
   &= [-x^6/6 - x^5/5 + x^2/2 + x]_(x=-1)^1 = #boxed[$ 8/5 $]. $
 
 == Solution to @exer-flux-triangle (flux across a triangle)
@@ -294,14 +294,14 @@ The vector field is:
 $ bf(F) (x , y) = (P , Q) = (x + 7 y^2 , x^2 + 7 y) . $
 Let $cal(C)$ be the boundary of that triangle.
 Green's theorem gives
-$ 672 = oint_(cal(C)) bf(F) dot bf(n) dif s = iint_(cal(R)) ((partial P) / (partial x) + (partial Q) / (partial y)) dif A . $
+$ 672 = integral.cont_(cal(C)) bf(F) dot bf(n) dif s = integral.double_(cal(R)) ((partial P) / (partial x) + (partial Q) / (partial y)) dif A . $
 Computing partial derivatives:
 $ (partial P) / (partial x) &= (partial) / (partial x) (x + 7 y^2) = 1 , \
   (partial Q) / (partial y) &= (partial) / (partial y) (x^2 + 7 y) = 7 . $
 Thus, the divergence is:
 $ nabla dot bf(F) = (partial P) / (partial x) + (partial Q) / (partial y) = 1 + 7 = 8 . $
 Hence, we get
-$ 672 = iint_(cal(R)) 8 dif A = 8 op("Area")(cal(R)). $
+$ 672 = integral.double_(cal(R)) 8 dif A = 8 op("Area")(cal(R)). $
 But the area of a triangle is:
 $ op("Area")(triangle.stroked.t A B C)
   = 1 / 2 dot upright("base") dot upright("height")
@@ -351,8 +351,8 @@ Let's say you didn't come up with the idea in the slick solution.
 Then you could still compute the integral manually by taking
 $ bf(r)'(t) = chevron.l cos(t), cos(t) chevron.r $
 so the line integral is given by
-$ int_(t=0)^(2pi) bf(F)(sin(t), sin(t)) dot bf(r)'(t) dif t
-  = int_(t=0)^(2pi) sin(t) cos(t) dif t. $
+$ integral_(t=0)^(2pi) bf(F)(sin(t), sin(t)) dot bf(r)'(t) dif t
+  = integral_(t=0)^(2pi) sin(t) cos(t) dif t. $
 This integral is $0$; here are many ways to evaluate it.
 
 1. Notice this is actually the same trig integral you got if you evaluated
@@ -360,9 +360,9 @@ This integral is $0$; here are many ways to evaluate it.
 2. Notice the contribution from $t$ and $t + pi$ cancel for $0 <= t <= pi$.
 3. Another way to evaluate the integral is via the $u$-substitution $u = sin(t)$,
   where $dif u = cos(t) dif t$:
-  $ int_(t=0)^(2pi) sin(t) cos(t) dif t = int_(u=sin(0))^(u=sin(2pi)) u dif u = int_0^0 u dif u = 0. $
+  $ integral_(t=0)^(2pi) sin(t) cos(t) dif t = integral_(u=sin(0))^(u=sin(2pi)) u dif u = integral_0^0 u dif u = 0. $
 4. Another way is to use the trig substitution
-  $ int_(t=0)^(2pi) sin(t) cos(t) dif t = int_(t=0)^(2pi) sin(2t)/2 dif t = [-cos(2t)/4]_(t=0)^(2pi) = 0. $
+  $ integral_(t=0)^(2pi) sin(t) cos(t) dif t = integral_(t=0)^(2pi) sin(2t)/2 dif t = [-cos(2t)/4]_(t=0)^(2pi) = 0. $
 5. If you are allergic to trig functions, a fifth approach is to remember that
   line integrals don't depend on the exact parametrization.
   So rather than using $bf(r)(t) = chevron.l sin(t), sin(t) chevron.r$,
@@ -379,18 +379,18 @@ This integral is $0$; here are many ways to evaluate it.
 This is a cookie-cutter application of Green's theorem (both forms).
 
 For the line integral, use Green's theorem with 2D scalar curl:
-$ int_(cal(C)) bf(F) dot dif bf(r)
-  &= iint_(x^2+y^2 <= 1) (partial/(partial x)(4x+8y) - partial/(partial y)(x+2y)) dif A \
-  &= iint_(x^2+y^2 <= 1) (4-2) dif A \
-  &= 2 iint_(x^2+y^2 <= 1) dif A \
+$ integral_(cal(C)) bf(F) dot dif bf(r)
+  &= integral.double_(x^2+y^2 <= 1) (partial/(partial x)(4x+8y) - partial/(partial y)(x+2y)) dif A \
+  &= integral.double_(x^2+y^2 <= 1) (4-2) dif A \
+  &= 2 integral.double_(x^2+y^2 <= 1) dif A \
   &= #boxed[$ 2 pi $]. $
 
 For the flux, use Green's theorem with divergence:
-$ int_(cal(C)) bf(F) dot bf(n) dif s
-  &= iint_(x^2+y^2 <= 1) nabla dot bf(F) dif A \
-  &= iint_(x^2+y^2 <= 1) ( partial/(partial x)(x+2y) +  partial/(partial y)(4x+8y) ) dif A \
-  &= iint_(x^2+y^2 <= 1) (1+8) dif A \
-  &= 9 iint_(x^2+y^2 <= 1) dif A \
+$ integral_(cal(C)) bf(F) dot bf(n) dif s
+  &= integral.double_(x^2+y^2 <= 1) nabla dot bf(F) dif A \
+  &= integral.double_(x^2+y^2 <= 1) ( partial/(partial x)(x+2y) +  partial/(partial y)(4x+8y) ) dif A \
+  &= integral.double_(x^2+y^2 <= 1) (1+8) dif A \
+  &= 9 integral.double_(x^2+y^2 <= 1) dif A \
   &= #boxed[$ 9 pi $]. $
 
 == Solution to @exer-mt3-chvar (region with area $pi$)
@@ -411,9 +411,9 @@ $ J_(bf(T)^(-1)) = mat((partial u) / (partial x), (partial u) / (partial y);
 So
 $ det J_(bf(T)) = 1 / (detmat(1, k; k, 1)) = 1/(1-k^2). $
 Now, the problem condition tells us
-$ pi = iint_(cal(R)) dif x dif y
-  = iint_(u^2+v^2 <= 1/4) lr(|1/(1-k^2)|) dif u dif v
-  = lr(|1/(1-k^2)|) iint_(u^2+v^2 <= 1/4) dif u dif v
+$ pi = integral.double_(cal(R)) dif x dif y
+  = integral.double_(u^2+v^2 <= 1/4) lr(|1/(1-k^2)|) dif u dif v
+  = lr(|1/(1-k^2)|) integral.double_(u^2+v^2 <= 1/4) dif u dif v
   = lr(|1/(1-k^2)|) dot pi / 4. $
 So the equation we are trying to solve is
 $ pi = lr(|1/(1-k^2)|) dot pi / 4 <==> k^2 - 1 = pm 1/4 <==> k^2 = 3/4 " or " k^2 = 5/4. $
@@ -436,34 +436,34 @@ Switching to polar coordinates, the region in polar coordinates is bounded by:
 - $pi / 3 <= theta <= (2 pi) / (3)$ (angular bounds determined by $y = sqrt(3) x$ and $y = - sqrt(3) x$).
 
 The coordinates of the center of mass are then given by:
-$ dash(x) = 1 / (op("Area")(cal(R))) iint_cal(R) x dif A , quad dash(y) = 1 / (op("Area")(cal(R))) iint_cal(R) y dif A . $
+$ dash(x) = 1 / (op("Area")(cal(R))) integral.double_cal(R) x dif A , quad dash(y) = 1 / (op("Area")(cal(R))) integral.double_cal(R) y dif A . $
 
 - The area can computed by noticing the region is one-sixth of the area of the full circle:
   $ op("Area")(cal(R)) = 1/6 dot (3^2 dot pi) = (3 pi) / 2. $
 - We have $dash(x) = 0$ by symmetry around the $y$-axis.
 - We need to compute $dash(y)$.
   Use $y = r sin theta$:
-  $ dash(y) = iint_cal(R) y dif A = int_(theta = pi / 3)^((2 pi) / (3)) int_(r = 0)^3 r sin theta dot r dif r dif theta = int_(theta = pi / 3)^((2 pi) / (3)) sin theta int_(r = 0)^3 r^2 dif r dif theta . $
+  $ dash(y) = integral.double_cal(R) y dif A = integral_(theta = pi / 3)^((2 pi) / (3)) integral_(r = 0)^3 r sin theta dot r dif r dif theta = integral_(theta = pi / 3)^((2 pi) / (3)) sin theta integral_(r = 0)^3 r^2 dif r dif theta . $
   First, we compute
-  $ int_(r = 0)^3 r^2 dif r = [r^3 / 3]_(r = 0)^3 = 27 / 3 = 9 . $
+  $ integral_(r = 0)^3 r^2 dif r = [r^3 / 3]_(r = 0)^3 = 27 / 3 = 9 . $
   Hence
-  $dash(y) = iint_cal(R) y dif A = 9 int_(theta = pi / 3)^((2 pi) / (3)) sin theta dif theta$.
+  $dash(y) = integral.double_cal(R) y dif A = 9 integral_(theta = pi / 3)^((2 pi) / (3)) sin theta dif theta$.
   Integrate $sin theta$ with respect to $theta$:
-  $ int_(theta = pi / 3)^((2 pi) / (3)) sin theta dif theta
+  $ integral_(theta = pi / 3)^((2 pi) / (3)) sin theta dif theta
     = - [cos theta]_(theta = pi / 3)^((2 pi) / (3)) = - cos ((2 pi) / (3)) + cos (pi / 3)
     = - (- 1 / 2) + 1 / 2 = 1 . $
-  Thus, $iint_cal(R) y dif A = 9 dot 1 = 9$, and so
-  $ dash(y) = 1 / (op("Area")(cal(R))) iint_cal(R) y dif A = 9 / ((3 pi) / 2) = 6 / pi . $
+  Thus, $integral.double_cal(R) y dif A = 9 dot 1 = 9$, and so
+  $ dash(y) = 1 / (op("Area")(cal(R))) integral.double_cal(R) y dif A = 9 / ((3 pi) / 2) = 6 / pi . $
 In conclusion, the center of mass is given by $ (dash(x),dash(y)) = #boxed[$ (0, 6/pi) $]. $
 
 #digression(title: [Digression: the long way for area])[
   If you don't want to do geometry,
   you can manually compute $op("Area")(cal(R))$ by the definition
-  $op("Area")(cal(R)) = int_(theta = pi / 3)^((2 pi) / (3)) int_(r = 0)^3 r dif r dif theta$.
+  $op("Area")(cal(R)) = integral_(theta = pi / 3)^((2 pi) / (3)) integral_(r = 0)^3 r dif r dif theta$.
   First, integrate with respect to $r$:
-  $ int_(r = 0)^3 r dif r = [r^2 / 2]_(r = 0)^3 = 9 / 2 . $
+  $ integral_(r = 0)^3 r dif r = [r^2 / 2]_(r = 0)^3 = 9 / 2 . $
   Then, integrate with respect to $theta$:
-  $ A = int_(theta = pi / 3)^((2 pi) / (3)) 9 / 2 dif theta = 9 / 2 ((2 pi) / (3) - pi / 3) = 9 / 2 dot pi / 3 = (3 pi) / (2) . $
+  $ A = integral_(theta = pi / 3)^((2 pi) / (3)) 9 / 2 dif theta = 9 / 2 ((2 pi) / (3) - pi / 3) = 9 / 2 dot pi / 3 = (3 pi) / (2) . $
 ]
 
 #figure(
@@ -475,10 +475,10 @@ In conclusion, the center of mass is given by $ (dash(x),dash(y)) = #boxed[$ (0,
   For comparison, we show what happens if you didn't notice the symmetry and proceed to integrate.
   In polar coordinates, $x = r cos theta$ and $dif A = r dif r dif theta$.
   So:
-  $ iint_cal(R) x dif A = int_(r = 0)^3 int_(theta = pi / 3)^((2 pi) / (3))  r cos theta dot r dif r dif theta
-    = int_(r = 0)^3 r^2 int_(theta = pi / 3)^((2 pi) / (3)) cos theta  dif theta dif r. $
+  $ integral.double_cal(R) x dif A = integral_(r = 0)^3 integral_(theta = pi / 3)^((2 pi) / (3))  r cos theta dot r dif r dif theta
+    = integral_(r = 0)^3 r^2 integral_(theta = pi / 3)^((2 pi) / (3)) cos theta  dif theta dif r. $
   However, the inner integral is
-  $ int_(theta = pi / 3)^((2 pi) / (3)) cos theta dif theta &= [sin theta]_(theta = pi / 3)^((2 pi) / (3)) \
+  $ integral_(theta = pi / 3)^((2 pi) / (3)) cos theta dif theta &= [sin theta]_(theta = pi / 3)^((2 pi) / (3)) \
     &= sin ((2 pi) / (3)) - sin (pi / 3) = sqrt(3) / 2 - sqrt(3) / 2 = 0. $
   So the whole thing is $0$.
 ]
@@ -498,7 +498,7 @@ First, recover a potential function for $bf(F)$ in terms of $C$:
 $ f(x,y) = 1/2 x^2  y + sin(x) + sin(y) + C y + C' $
 for some constant $C'$ (which is irrelevant).
 Then use the fundamental theorem calculus for line integrals:
-$ int_(cal(C)) bf(F) dot dif bf(r) &= f(pi, pi) - f(0,0) \
+$ integral_(cal(C)) bf(F) dot dif bf(r) &= f(pi, pi) - f(0,0) \
   ==> 0 &= (pi^3/2 + C pi + C') - C' ==> C = -pi^2/2. $
 Thus we've completely recovered the function $h$:
 $ h(x) = #boxed[$ x^2/2 - pi^2/2 $]. $
@@ -524,9 +524,9 @@ Hence, we could equally well rewrite the shaded blue region $cal(R)$ as:
 $ 0 <= y <= 1 " and " x >= (e^y-1)^2. $
 Writing this as a double integral gives
 $ op("Area")(cal(R))
-  &= int_(y=0)^1 int_(x=(e^y-1)^2)^((e-1)^2) dif x dif y
-  = int_(y=0)^1 ((e-1)^2 - (e^y-1)^2) dif y \
-  &= e^2-2e - int_(y=0)^1 (e^(2y) - 2e^y) dif y
+  &= integral_(y=0)^1 integral_(x=(e^y-1)^2)^((e-1)^2) dif x dif y
+  = integral_(y=0)^1 ((e-1)^2 - (e^y-1)^2) dif y \
+  &= e^2-2e - integral_(y=0)^1 (e^(2y) - 2e^y) dif y
   = e^2-2e - lr([e^(2y)/2 - 2e^y])_(y=0)^1 \
   &= e^2-2e - (e^2/2 - 2e) + (1/2-2) = #boxed[$ (e^2-3)/2 $]. $
 

@@ -28,8 +28,8 @@ If you missed Wednesday's recitation, some advice:
 - Write regions as inequalities, e.g. if you have the region cut out by $y=x^2$ and $y=x+2$,
   I would prefer to write $y >= x^2$ (above parabola) and $y <= x+2$ (below line).
 - I suggest writing the variables into the integration signs, e.g.,
-  rather than $int_0^2 int_(y/2)^1 e^(-x^2) dif x dif y$
-  I think this is clearer as $int_(y=0)^2 int_(x=y/2)^1 e^(-x^2) dif x dif y$.
+  rather than $integral_0^2 integral_(y/2)^1 e^(-x^2) dif x dif y$
+  I think this is clearer as $integral_(y=0)^2 integral_(x=y/2)^1 e^(-x^2) dif x dif y$.
   This prevents you from having to read the $dif x dif y$ at the end backwards,
   and lets you get away with just writing $dif A$ for shorthand.
 
@@ -67,14 +67,14 @@ See LAMV §25 for more on shorthand.
 
 #recipe(title: [Recipe for total mass and center of mass])[
   Suppose $cal(R)$ is a region and $rho$ is a density function for the region.
-  The total mass is given by $op("mass")(cal(R)) = iint_(cal(R)) rho(x,y) dif x dif y. $
+  The total mass is given by $op("mass")(cal(R)) = integral.double_(cal(R)) rho(x,y) dif x dif y. $
   The center of mass is given by the point
-  $ (dash(x), dash(y)) := lr(( (iint_(cal(R)) x dot rho(x,y) dif x dif y) / (op("mass")(cal(R))),
-    (iint_(cal(R)) y dot rho(x,y) dif x dif y) / (op("mass")(cal(R))))). $
+  $ (dash(x), dash(y)) := lr(( (integral.double_(cal(R)) x dot rho(x,y) dif x dif y) / (op("mass")(cal(R))),
+    (integral.double_(cal(R)) y dot rho(x,y) dif x dif y) / (op("mass")(cal(R))))). $
 ]
 
 #recipe(title: [Recipe for swapping the order of integration])[
-  Given $int_(x=?)^? int_(y=?)^? f(x,y) dif y dif x$,
+  Given $integral_(x=?)^? integral_(y=?)^? f(x,y) dif y dif x$,
   to switch the order of integration the other way:
 
   1. Convert the limits of integration _back_ into inequality format,
@@ -87,14 +87,14 @@ that shows up a lot in problem sets / exams (e.g. in Q3/Q4 below and at least on
 
 = Recitation questions from official course
 
-/ 1.: Evaluate#footnote[Note the real course will probably say $int_0^2 int_(y \/ 2)^1 e^(- x^2) dif x dif y$ and make you read backwards.]
+/ 1.: Evaluate#footnote[Note the real course will probably say $integral_0^2 integral_(y \/ 2)^1 e^(- x^2) dif x dif y$ and make you read backwards.]
    the iterated integral
-  $int_(y=0)^2 int_(x=y \/ 2)^1 e^(- x^2) dif A$.
-/ 2.: Evaluate the integral $ iint_D (d A) / (3 + x^2 + y^2) $
+  $integral_(y=0)^2 integral_(x=y \/ 2)^1 e^(- x^2) dif A$.
+/ 2.: Evaluate the integral $ integral.double_D (d A) / (3 + x^2 + y^2) $
   where $D$ is the region such that $x >= 0$, $y >= 0$ and
   $x^2 + y^2 <= 9$.
 / 3.: A shape has a density given by $delta (x , y) = sqrt(x^2 + y^2)$. What
   is the mass of the shape defined by $x^2 + (y - 1)^2 <= 1$?
 / 4.: Evaluate the integral
-  $ iint_D frac(d A, sqrt(1 - x^2 - y^2)) $ where $D$ is the
+  $ integral.double_D frac(d A, sqrt(1 - x^2 - y^2)) $ where $D$ is the
   region such that $x >= 0$ and $x^2 + (y - 1 \/ 2)^2 <= 1 \/ 4$.

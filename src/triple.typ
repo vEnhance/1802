@@ -21,7 +21,7 @@ we'll sometimes have both a 2D region and 3D region at the same time,
 so one needs different letters.
 
 - Over a rectangular prism,
-  we still integrate $int_(x = a_1)^(b_1) int_(y = a_2)^(b_2) int_(z = a_3)^(b_3) f(x,y,z) dif z dif y dif x$
+  we still integrate $integral_(x = a_1)^(b_1) integral_(y = a_2)^(b_2) integral_(z = a_3)^(b_3) f(x,y,z) dif z dif y dif x$
   one variable at a time.
 - You can use $ dif V := dif x dif y dif z $ as a shorthand if you want;
   this is the last row of @table-shorthand.
@@ -44,15 +44,15 @@ so one needs different letters.
       (partial y) / (partial u), (partial y) / (partial v), (partial y) / (partial w);
       (partial z) / (partial u), (partial z) / (partial v), (partial z) / (partial w);
     ). $
-- Volume is $ op("Vol")(cal(T)) := iiint_(cal(T)) dif x dif y dif z. $
+- Volume is $ op("Vol")(cal(T)) := integral.triple_(cal(T)) dif x dif y dif z. $
   You can take this as a _definition_ of volume for this class.
 - If $delta : cal(T) -> RR$ is a density function for a 3D space, then
-  $ op("Mass")(cal(T)) := iiint_(cal(T)) delta(x,y,z) dif x dif y dif z $ is the total mass.
+  $ op("Mass")(cal(T)) := integral.triple_(cal(T)) delta(x,y,z) dif x dif y dif z $ is the total mass.
   The center of mass is given by three coordinates now:
   $ (
-    (iiint_(cal(T)) x dot delta(x,y,z) dif x dif y dif z) / (op("Mass")(cal(T))),
-    (iiint_(cal(T)) y dot delta(x,y,z) dif x dif y dif z) / (op("Mass")(cal(T))),
-    (iiint_(cal(T)) z dot delta(x,y,z) dif x dif y dif z) / (op("Mass")(cal(T)))
+    (integral.triple_(cal(T)) x dot delta(x,y,z) dif x dif y dif z) / (op("Mass")(cal(T))),
+    (integral.triple_(cal(T)) y dot delta(x,y,z) dif x dif y dif z) / (op("Mass")(cal(T))),
+    (integral.triple_(cal(T)) z dot delta(x,y,z) dif x dif y dif z) / (op("Mass")(cal(T)))
   ). $
   (We use $delta$ instead of $rho$ for 3D typically,
   because $rho$ gets used in spherical coordinates.)
@@ -72,18 +72,18 @@ so one needs different letters.
 
   Hence, we will write this as a triple integral
   $ op("Vol")(cal(T))
-    &= int_(x=-1)^1
-      int_(y=-sqrt(1-x^2))^(sqrt(1-x^2))
-      int_(z=-sqrt(1-x^2))^(sqrt(1-x^2)) 1 dif z dif y dif x \
-    &= int_(x=-1)^1
-      int_(y=-sqrt(1-x^2))^(sqrt(1-x^2))
+    &= integral_(x=-1)^1
+      integral_(y=-sqrt(1-x^2))^(sqrt(1-x^2))
+      integral_(z=-sqrt(1-x^2))^(sqrt(1-x^2)) 1 dif z dif y dif x \
+    &= integral_(x=-1)^1
+      integral_(y=-sqrt(1-x^2))^(sqrt(1-x^2))
       2sqrt(1-x^2) dif y dif x \
-    &= int_(x=-1)^1
+    &= integral_(x=-1)^1
       2sqrt(1-x^2)
-      int_(y=-sqrt(1-x^2))^(sqrt(1-x^2)) 1 dif y dif x \
-    &= int_(x=-1)^1
+      integral_(y=-sqrt(1-x^2))^(sqrt(1-x^2)) 1 dif y dif x \
+    &= integral_(x=-1)^1
       2sqrt(1-x^2) dot 2sqrt(1-x^2) dif x
-    = int_(x=-1)^1 4(1-x^2) dif x \
+    = integral_(x=-1)^1 4(1-x^2) dif x \
     &= 4[x - x^3 / 3]_(x=-1)^1 = 4[(1 - 1 / 3) - (-1 + 1/3)] = #boxed[$ 16 /3 $]. #qedhere $
 ]
 #digression(title: [Digression on picture])[
@@ -121,22 +121,22 @@ so one needs different letters.
   Hence, the volume can be written as
   $
     op("Vol")(cal(T))
-    = iiint_(x^2 + y^2 <= 9 \ 3(x^2+y^2) <= z <= 72-5(x^2+y^2)) dif x dif y dif z.
+    = integral.triple_(x^2 + y^2 <= 9 \ 3(x^2+y^2) <= z <= 72-5(x^2+y^2)) dif x dif y dif z.
   $
   We'll separate the integral into an integral over the circle $x^2 + y^2 <= 9$
   and then a single integral over the resulting $z$:
   $
     op("Vol")(cal(T))
-    &= iint_(x^2 + y^2 <= 9) (int_(z=3(x^2+y^2))^(72-5(x^2+y^2)) dif z) dif x dif y \
-    &= iint_(x^2 + y^2 <= 9) (72 - 8(x^2+y^2)) dif x dif y.
+    &= integral.double_(x^2 + y^2 <= 9) (integral_(z=3(x^2+y^2))^(72-5(x^2+y^2)) dif z) dif x dif y \
+    &= integral.double_(x^2 + y^2 <= 9) (72 - 8(x^2+y^2)) dif x dif y.
   $
   At _this_ point we'll use polar coordinates:
   writing $x = r cos theta$, and $y = r sin theta$ as always, we have
   $
     op("Vol")(cal(T))
-    &= iint_(x^2 + y^2 <= 9) (72 - 8(x^2+y^2)) dif x dif y \
-    &= int_(theta=0)^(2 pi) int_(r=0)^3 (72 - 8 r^2) dot (r dif r dif theta) \
-    &= (int_(theta=0)^(2 pi) 1 dif theta)(int_(r=0)^3 (72 r - 8 r^3) dif r) \
+    &= integral.double_(x^2 + y^2 <= 9) (72 - 8(x^2+y^2)) dif x dif y \
+    &= integral_(theta=0)^(2 pi) integral_(r=0)^3 (72 - 8 r^2) dot (r dif r dif theta) \
+    &= (integral_(theta=0)^(2 pi) 1 dif theta)(integral_(r=0)^3 (72 r - 8 r^3) dif r) \
     &= 2 pi dot [36r^2 - 2r^4]_(r=0)^3 = #boxed[$ 324 pi $]. #qedhere
   $
 ]
@@ -220,13 +220,13 @@ Note that, as I said, we could have given this example _before_ this section.
   $ 9(x^2+y^2) <= z^2 ==> sqrt(x^2+y^2) <= z/3. $
   In other words, we can write
   $ op("Vol")(cal(T))
-    = int_(z=0)^5 iint_(sqrt(x^2+y^2) <= z/3) 1 dif x dif y dif z. $
+    = integral_(z=0)^5 integral.double_(sqrt(x^2+y^2) <= z/3) 1 dif x dif y dif z. $
   However, of course we should just change to cylindrical coordinates right away:
   $ op("Vol")(cal(T))
-    &= int_(z=0)^5 int_(r=0)^(z/3) int_(theta=0)^(2pi) r dif theta dif r dif z \
-    &= 2 pi int_(z=0)^5 int_(r=0)^(z/3) r dif r dif z \
-    &= 2 pi int_(z=0)^5 [r^2/2]_(r=0)^(z/3) dif z \
-    &= 2 pi int_(z=0)^5 z^2/18 dif z = pi/9 int_(z=0)^5 z^2 dif z = pi/9 [z^3/3]_(z=0)^5
+    &= integral_(z=0)^5 integral_(r=0)^(z/3) integral_(theta=0)^(2pi) r dif theta dif r dif z \
+    &= 2 pi integral_(z=0)^5 integral_(r=0)^(z/3) r dif r dif z \
+    &= 2 pi integral_(z=0)^5 [r^2/2]_(r=0)^(z/3) dif z \
+    &= 2 pi integral_(z=0)^5 z^2/18 dif z = pi/9 integral_(z=0)^5 z^2 dif z = pi/9 [z^3/3]_(z=0)^5
     = #boxed[$ (125 pi) / 27 $]. $
   This gives us the volume of the cone.
   And since the density was constant, we also have
@@ -238,10 +238,10 @@ Note that, as I said, we could have given this example _before_ this section.
   $(dash(x), dash(y), dash(z))$ should lie on the $z$-axis, meaning $dash(x)=dash(y)=0$.
   Hence the only one we need to bother with is
   $ dash(z)
-    &= 1/(op("Mass")(cal(T))) int_(z=0)^5 iint_(sqrt(x^2+y^2) <= z/3) z dif x dif y dif z \
-    &= 1/(op("Mass")(cal(T))) int_(z=0)^5 int_(r=0)^(z/3) int_(theta=0)^(2pi) r z dif theta dif r dif z \
-    &= 1/(op("Mass")(cal(T))) int_(z=0)^5 z int_(r=0)^(z/3) int_(theta=0)^(2pi) r dif theta dif r dif z \
-    &= (2 pi)/(op("Mass")(cal(T))) int_(z=0)^5 z dot z^2/18 dif z quad "(repeating from earlier)" \
+    &= 1/(op("Mass")(cal(T))) integral_(z=0)^5 integral.double_(sqrt(x^2+y^2) <= z/3) z dif x dif y dif z \
+    &= 1/(op("Mass")(cal(T))) integral_(z=0)^5 integral_(r=0)^(z/3) integral_(theta=0)^(2pi) r z dif theta dif r dif z \
+    &= 1/(op("Mass")(cal(T))) integral_(z=0)^5 z integral_(r=0)^(z/3) integral_(theta=0)^(2pi) r dif theta dif r dif z \
+    &= (2 pi)/(op("Mass")(cal(T))) integral_(z=0)^5 z dot z^2/18 dif z quad "(repeating from earlier)" \
     &= (2 pi)/(op("Mass")(cal(T))) [z^4/72]_(z=0)^5
     = (5^4 dot pi / 36)/(op("Mass")(cal(T))) = (5^4 dot pi / 36)/(5^3 dot pi / 27) = 15/4. $
   Hence the center of mass is $#boxed[$ (0, 0, 15/4) $]$.
@@ -279,7 +279,7 @@ The total gravitational force is then the integral of this over the entire mass 
 
 So the total gravitational force is nominally
 #eqn[
-  $ bf(G) = int_(cal(T)) (G m dot (delta(x,y,z) dif V))/(x^2+y^2+z^2) dot (chevron.l x,y,z chevron.r) / (sqrt(x^2+y^2+z^2)). $
+  $ bf(G) = integral_(cal(T)) (G m dot (delta(x,y,z) dif V))/(x^2+y^2+z^2) dot (chevron.l x,y,z chevron.r) / (sqrt(x^2+y^2+z^2)). $
   <eqn-gravity>
 ]
 
@@ -298,9 +298,9 @@ To do this, I'll rewrite @eqn-gravity as follows:
   The gravitational vector $bf(G) = chevron.l G_1, G_2, G_3 chevron.r$
   on the origin is defined by
   $
-    G_1 &:= G m iiint_(cal(T)) (x delta(x,y,z))/((x^2+y^2+z^2)^(3/2)) dif x dif y dif z \
-    G_2 &:= G m iiint_(cal(T)) (y delta(x,y,z))/((x^2+y^2+z^2)^(3/2)) dif x dif y dif z \
-    G_3 &:= G m iiint_(cal(T)) (z delta(x,y,z))/((x^2+y^2+z^2)^(3/2)) dif x dif y dif z.
+    G_1 &:= G m integral.triple_(cal(T)) (x delta(x,y,z))/((x^2+y^2+z^2)^(3/2)) dif x dif y dif z \
+    G_2 &:= G m integral.triple_(cal(T)) (y delta(x,y,z))/((x^2+y^2+z^2)^(3/2)) dif x dif y dif z \
+    G_3 &:= G m integral.triple_(cal(T)) (z delta(x,y,z))/((x^2+y^2+z^2)^(3/2)) dif x dif y dif z.
   $
   That is, $bf(G) = G_1 ee_1 + G_2 ee_2 + G_3 ee_3$.
 ]

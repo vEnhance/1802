@@ -211,11 +211,11 @@ $ (partial) / (partial y) (x^2 + a x y + 2 y^2 + y + 1) &= a x + 4 y + 1 \
 These need to be equal for all $(x,y)$ so we require $#boxed[$ (a,b)=(2,4) $]$.
 
 To recover $f$, we write
-$ f (x , y) = int (partial f) / (partial x) dif x
-  &= int (x^2 + 2 x y + 2 y^2 + y + 1) dif x \
+$ f (x , y) = integral (partial f) / (partial x) dif x
+  &= integral (x^2 + 2 x y + 2 y^2 + y + 1) dif x \
   &= x^3 / 3 + x^2 y + 2 x y^2 + x y + x + C_1(y). \
-  f (x , y) = int (partial f) / (partial y) dif y
-  &= int (x^2 + x + 4 x y + y^2 + 2) dif y \
+  f (x , y) = integral (partial f) / (partial y) dif y
+  &= integral (x^2 + x + 4 x y + y^2 + 2) dif y \
   &= x^2 y + x y + 2 x y^2 + y^3/3 + 2 y + C_2(x). $
 Stitching these together to get the final expression for $f (x , y)$ as:
 $ f (x , y) = #boxed($ x^3 / 3 + x^2 y + 2 x y^2 + y^3 / 3 + x y + x + 2 y + C $) $

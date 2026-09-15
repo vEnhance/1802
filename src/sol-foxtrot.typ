@@ -380,11 +380,11 @@ So the total distance is $ 2sqrt(2) + 2sqrt(2) = 4sqrt(2). $
 
 Of course, one could also use the arc length formula, and we show how to do so.
 The arc length of the trajectory is given by the integral of the speed:
-$ L = int_(t="start time")^("stop time") lr(|bf(r)' (t)|) dif t . $
+$ L = integral_(t="start time")^("stop time") lr(|bf(r)' (t)|) dif t . $
 
 We just saw that $lr(|bf(r)' (t)|) = sqrt(2) lr(|sin (t)|)$.
 Therefore, the arc length from $t = 0$ to $t = 2 pi$ is:
-$ L = int_0^(2 pi) sqrt(2) lr(|sin (t)|) dif t . $
+$ L = integral_0^(2 pi) sqrt(2) lr(|sin (t)|) dif t . $
 #warning[
   Don't forget about the absolute value!
   In general, for real $X$, we have $sqrt(X^2) = |X|$.
@@ -396,17 +396,17 @@ $ L = int_0^(2 pi) sqrt(2) lr(|sin (t)|) dif t . $
 Because of the absolute value,
 we can break the integral into two parts.
 On the interval $[0 , pi]$, $sin (t) >= 0$, and on the interval $[pi , 2 pi]$, $sin (t) <= 0$, so
-$ L = sqrt(2) (int_0^(pi) sin (t) dif t + int_(pi)^(2 pi) - sin (t) dif t) . $
+$ L = sqrt(2) (integral_0^(pi) sin (t) dif t + integral_(pi)^(2 pi) - sin (t) dif t) . $
 See @fig-abs-sin for an illustration of this integral.
 
 #figure(
   image("figures/mt2-abs-sin.svg", width: auto),
-  caption: [The integral $int_0^(2pi) |sin(t)| dif t$ is two copies
-  of the first hump $int_0^(pi) sin(t) dif t$ (which doesn't have an absolute value on it).],
+  caption: [The integral $integral_0^(2pi) |sin(t)| dif t$ is two copies
+  of the first hump $integral_0^(pi) sin(t) dif t$ (which doesn't have an absolute value on it).],
 ) <fig-abs-sin>
 
 Both integrals are the same, so we compute one and multiply by 2:
-$ int_0^pi sin (t) dif t = [- cos (t)]_0^pi = - cos (pi) + cos (0) = 1 + 1 = 2 . $
+$ integral_0^pi sin (t) dif t = [- cos (t)]_0^pi = - cos (pi) + cos (0) = 1 + 1 = 2 . $
 Thus, the total arc length is:
 $ L = sqrt(2) dot 2 dot 2 = 4 sqrt(2) . $
 

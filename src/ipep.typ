@@ -64,10 +64,10 @@ Here's a rundown of the things in the chart.
   This just turns out to be a _single_ 18.01 integral.
   Usually your path is parametrized by a single variable $t$.
   So even though the expression inside the integral
-  $ int_(t_0)^(t_1) f(bf(r(t))) |bf(r)'(t)| dif t $
+  $ integral_(t_0)^(t_1) f(bf(r(t))) |bf(r)'(t)| dif t $
   inside the integral might look intimidating,
   if you are really given a concrete $f$ and $bf(r)(t)$, then what you _really_ have is
-  $ int_(t_0)^(t_1) ["expression involving only " t] dif t $
+  $ integral_(t_0)^(t_1) ["expression involving only " t] dif t $
   which is an 18.01 integral!
   And so that's something you already know how to do.
 
@@ -133,9 +133,9 @@ or you are trying to do a *volume integral* over the ball $x^2+y^2+z^2 <= 1$ for
 - Even in this case, sometimes you could still set up a double integral
   or triple integral without having to change variables.
   For example, an integral over the disk
-  $ iint_(x^2+y^2<=1) f(x,y) dif x dif y $
+  $ integral.double_(x^2+y^2<=1) f(x,y) dif x dif y $
   might actually be rewritten a double integral
-  $ int_(-1)^1 int_(-sqrt(1-y^2))^(sqrt(1-y^2)) f(x,y) dif x dif y. $
+  $ integral_(-1)^1 integral_(-sqrt(1-y^2))^(sqrt(1-y^2)) f(x,y) dif x dif y. $
   Although it looks more frightening because the limits of integration are
   expressions and not numbers, it doesn't require any new techniques.
   It really is just two 18.01 integrals, one after another.

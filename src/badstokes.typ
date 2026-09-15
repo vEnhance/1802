@@ -26,9 +26,9 @@ Here's the statement of the result:
   Suppose $cal(C)$ is the boundary of an oriented surface $cal(S)$ parametrized by $bf(r)_2(u,v)$.
   Assume the orientation of $cal(C)$ and $cal(S)$ are compatible.
   Then
-  $ underbrace(oint_(cal(C)) bf(F) dot dif bf(r)_1, = int_(t="start")^("stop") bf(F) dot bf(r)'_1(t) dif t)
-    = underbrace(iint_(cal(S)) (nabla times bf(F)) dot bf(n) dif S.,
-    = iint_(u,v) (op("curl") bf(F)) dot
+  $ underbrace(integral.cont_(cal(C)) bf(F) dot dif bf(r)_1, = integral_(t="start")^("stop") bf(F) dot bf(r)'_1(t) dif t)
+    = underbrace(integral.double_(cal(S)) (nabla times bf(F)) dot bf(n) dif S.,
+    = integral.double_(u,v) (op("curl") bf(F)) dot
       ((partial bf(r)_2) / (partial u) times (partial bf(r)_2) / (partial v)) dif u dif v) $
 ]
 
@@ -81,6 +81,6 @@ In other words, it doesn't provide a nice shortcut like the other theorems do.
   That is, suppose $bf(F) = vec(p,q)$ is a vector field in $RR^2$
   and $cal(C)$ is a closed loop enclosing a region $cal(R)$ counterclockwise.
   Find a way to use classical Stokes' theorem to prove
-  $ oint_(cal(C)) bf(F) dot dif bf(r)
-    = iint_(cal(R)) ((partial q) / (partial x) - (partial p) / (partial y)) dif A. $
+  $ integral.cont_(cal(C)) bf(F) dot dif bf(r)
+    = integral.double_(cal(R)) ((partial q) / (partial x) - (partial p) / (partial y)) dif A. $
 ] <exer-stokes-to-green>

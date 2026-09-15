@@ -35,7 +35,7 @@ Some examples were covered in class today, so here's one where we actually get s
 ]
 #soln[
   We start by integrating $(partial f) / (partial x)$ with respect to $x$ to get
-  $f(x,y) = int 2 y dif x = 2 x y + g(y)$
+  $f(x,y) = integral 2 y dif x = 2 x y + g(y)$
   to start.
   Then differentiating with respect to $y$ gives
   $(partial f) / (partial y) = partial / (partial y) (2 x y + g(y)) = 2 x + g'(y)$.
@@ -90,7 +90,7 @@ On Thursday, we'll introduce the *2D scalar curl*, the right highlighted Stokes 
 
 On Friday you'll meet *2D flux* which I hate, but it is a rotated version of the work integral:
 #definition(title: [Definition of 2D flux])[
-  $ "2D flux" := int_(t="start time")^("stop time") bf(F)(bf(r)(t)) dot
+  $ "2D flux" := integral_(t="start time")^("stop time") bf(F)(bf(r)(t)) dot
     (90 degree "clockwise rotation of" bf(r)'(t)) dif t. $
 ]
 The "$90 degree$ clockwise rotation of $bf(r)'(t)$" is so awkward
@@ -98,7 +98,7 @@ that you can bet people immediately made up a shorthand to sweep it under the ru
 I think the usual notation is
 $ bf(n) dif s := (90 degree "clockwise rotation of" bf(r)'(t)) dif t $
 so that the above thing will usually be condensed to
-$oint_(cal(C)) bf(F) dot bf(n) dif s$.
+$integral.cont_(cal(C)) bf(F) dot bf(n) dif s$.
 Because 2D flux is a rotated work integral, you'll get a Green's theorem for 2D flux too.
 Read LAMV 31.3 to see it.
 
@@ -112,5 +112,5 @@ Read LAMV 31.3 to see it.
 / 3.: Consider the vector field $bf(G) = - y/(x^2+y^2) bf(i) + x/(x^2+y^2) bf(j)$.
   Calculate the curl of $bf(G)$.
   Show that $bf(G)$ is not a gradient vector field by calculating the line integral
-    $int_(C) G · dif bf(r)$ for the closed curve $C$ given by the unit circle,
+    $integral_(C) G · dif bf(r)$ for the closed curve $C$ given by the unit circle,
     oriented counterclockwise.

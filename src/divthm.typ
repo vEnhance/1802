@@ -7,9 +7,9 @@
 Remember back when we had Green's theorem,
 we could transform 2D scalar flux (which was a _line integral_)
 into an area integral:
-$ underbrace(oint_(cal(C)) (bf(F) dot bf(n) dif s), = oint_(cal(C)) (-q dif x + p dif y))
-  = underbrace(iint_(cal(R)) nabla dot bf(F) dif A,
-    = iint_(cal(R)) ((partial p) / (partial x) + (partial q) / (partial y)) dif A). $
+$ underbrace(integral.cont_(cal(C)) (bf(F) dot bf(n) dif s), = integral.cont_(cal(C)) (-q dif x + p dif y))
+  = underbrace(integral.double_(cal(R)) nabla dot bf(F) dif A,
+    = integral.double_(cal(R)) ((partial p) / (partial x) + (partial q) / (partial y)) dif A). $
 This was nice because parametrization was annoying and straight-up area integrals are simpler.
 In general, if you still have the poster, the green pictures are easier to deal with.
 
@@ -31,17 +31,17 @@ Here's the result:
   Suppose a closed surface $cal(S)$ encloses a compact solid $cal(T)$,
   and $bf(F)$ is defined everywhere in $cal(T)$.
   Then
-  $ underbrace(oiint_(cal(S)) bf(F) dot bf(n) dif S,
-    = iint_(cal(R)) bf(F)(bf(r)(u,v)) dot
+  $ underbrace(integral.surf_(cal(S)) bf(F) dot bf(n) dif S,
+    = integral.double_(cal(R)) bf(F)(bf(r)(u,v)) dot
     ((partial bf(r))/(partial u) times (partial bf(r))/(partial v)) dif u dif v)
-    = underbrace(iiint_(cal(T)) nabla dot bf(F) dif V,
-    = iiint_(cal(T)) ((partial p) / (partial x) + (partial q) / (partial y) + (partial r) / (partial z)) dif V). $
+    = underbrace(integral.triple_(cal(T)) nabla dot bf(F) dif V,
+    = integral.triple_(cal(T)) ((partial p) / (partial x) + (partial q) / (partial y) + (partial r) / (partial z)) dif V). $
 ]
 
-I've snuck in a new symbol $oiint_(cal(S))$, but the extra circle is analogous to before.
-Just like how $oint_(cal(C))$ was a reminder that $cal(C)$ was a closed loop:
-#definition(title: [Definition of $oiint$])[
-  $oiint_(cal(S))$ means "$iint_(cal(S))$ but with an extra optional reminder that $cal(S)$ is a closed surface".
+I've snuck in a new symbol $integral.surf_(cal(S))$, but the extra circle is analogous to before.
+Just like how $integral.cont_(cal(C))$ was a reminder that $cal(C)$ was a closed loop:
+#definition(title: [Definition of $integral.surf$])[
+  $integral.surf_(cal(S))$ means "$integral.double_(cal(S))$ but with an extra optional reminder that $cal(S)$ is a closed surface".
   (The reminder is optional, i.e. you are not obligated to add it even if $cal(S)$ is closed.)
 ]
 Also, note there's a fine-print requirement that $cal(T)$ should be compact,
@@ -80,7 +80,7 @@ We can jump straight into examples now!
   The divergence is given by
   $ nabla dot bf(F) = (partial p) / (partial x) + (partial q) / (partial y) + (partial r) / (partial z) = 1 + 1 + 1 = 3 $
   Then the answer is
-  $ iiint_(cal(T)) nabla dot bf(F) dif V = iiint_(cal(T)) 3 dif V = 3 op("Vol")(cal(S)) = 3 dot 4/3 pi R^3 =
+  $ integral.triple_(cal(T)) nabla dot bf(F) dif V = integral.triple_(cal(T)) 3 dif V = 3 op("Vol")(cal(S)) = 3 dot 4/3 pi R^3 =
     #boxed[$ 4 pi R^3 $]. #qedhere $
 ]
 
@@ -101,7 +101,7 @@ We can jump straight into examples now!
   Let $cal(S)$ denote the sphere $x^2+y^2+z^2=R^2$ of radius $R$ again.
   Let $bf(G)$ be the force of gravity exerted by a point mass $m$ at the origin.
   In the last chapter we computed
-  $ iint_(cal(S)) bf(G) dot bf(n) dif S = - 4 pi G m $
+  $ integral.double_(cal(S)) bf(G) dot bf(n) dif S = - 4 pi G m $
   using the surface area trick.
 
   However, if you compute the divergence $nabla dot bf(G)$,
@@ -109,7 +109,7 @@ We can jump straight into examples now!
   where $bf(G)$ is undefined because the gravity causes division-by-zero.
   (See @exer-gravity-div1.)
   If you blindly apply the divergence theorem and don't notice the issue with the origin,
-  you would instead get the wrong answer $iiint_(cal(T)) 0 dif V = 0$,
+  you would instead get the wrong answer $integral.triple_(cal(T)) 0 dif V = 0$,
   rather than the correct answer $-4 pi G m$.
   (That said, see @exer-gravity-div2 for a safe usage.)
 ]
@@ -125,13 +125,13 @@ We can jump straight into examples now!
   The divergence is
   $ nabla dot bf(F) = (partial) / (partial x) (x^2) + (partial) / (partial y) (y^2) + (partial) / (partial z) (z^2) = 2 x + 2 y + 2 z. $
   Hence the flux turns into
-  $ iiint_(cal(T)) (2 x + 2 y + 2 z) dif V
-    = 2 iiint_(cal(T)) x dif V + 2 iiint_(cal(T)) y dif V + 2 iiint_(cal(T)) z dif V. $
+  $ integral.triple_(cal(T)) (2 x + 2 y + 2 z) dif V
+    = 2 integral.triple_(cal(T)) x dif V + 2 integral.triple_(cal(T)) y dif V + 2 integral.triple_(cal(T)) z dif V. $
   Due to the symmetry of the cube:
-  $ iiint_(cal(T)) x dif V = iiint_(cal(T)) y dif V = iiint_(cal(T)) z dif V = a/2 dot op("Vol")(cal(T)) = a^4 / 2. $
+  $ integral.triple_(cal(T)) x dif V = integral.triple_(cal(T)) y dif V = integral.triple_(cal(T)) z dif V = a/2 dot op("Vol")(cal(T)) = a^4 / 2. $
   If you can't see it by symmetry, you could also just explicitly calculate
-  $ iiint_(cal(T)) x dif V
-    = (int_(x=0)^a x dif x) (int_(y=0)^a dif y) (int_(z=0)^a dif z)
+  $ integral.triple_(cal(T)) x dif V
+    = (integral_(x=0)^a x dif x) (integral_(y=0)^a dif y) (integral_(z=0)^a dif z)
     = a^2/2 dot a dot a = a^4/2. $
   In any case, we get an answer of
   $ 2 dot a^4/2 + 2 dot a^4/2 + 2 dot a^4 /2 = #boxed[$ 3a^4 $]. #qedhere $
@@ -148,7 +148,7 @@ We can jump straight into examples now!
   $ nabla dot bf(F) = (partial) / (partial x) (y z) + (partial) / (partial y) (x z) + (partial) / (partial z) (x y)
     = 0 + 0 + 0 = 0. $
   So it doesn't even matter what the solid $cal(T)$ is; the answer is just
-  $ iiint_(cal(T)) 0 dif V = #boxed[$ 0 $]. #qedhere $
+  $ integral.triple_(cal(T)) 0 dif V = #boxed[$ 0 $]. #qedhere $
 ]
 
 
@@ -166,27 +166,27 @@ We can jump straight into examples now!
 
   The region $cal(T)$ is bounded by $z = x^2 + y^2$ and $z = 0$, within $x^2 + y^2 <= 1$.
   So the divergence theorem means we need to calculate
-  $ iint_(x^2+y^2 <= 1) int_(z=0)^(x^2+y^2) (x+y+z) dif z dif x dif y. $
+  $ integral.double_(x^2+y^2 <= 1) integral_(z=0)^(x^2+y^2) (x+y+z) dif z dif x dif y. $
   Naturally, this is best done using cylindrical coordinates.
   Writing $x = r cos theta$ and $y = r sin theta$, and remembering that
   $ dif x dif y dif z = dif V = r dif r dif theta dif z $
   then this becomes
-  $ int_(r=0)^1 int_(theta=0)^(2 pi) int_(z=0)^(r^2) r (r cos theta + r sin theta + z) dif z dif theta dif r. $
+  $ integral_(r=0)^1 integral_(theta=0)^(2 pi) integral_(z=0)^(r^2) r (r cos theta + r sin theta + z) dif z dif theta dif r. $
 
   But the integrals with $theta$ in them are going to be zero by symmetry.
   For example, the first term is
-  $ int_(r=0)^1 int_(theta=0)^(2 pi) int_(z=0)^(r^2) r^2 cos theta dif z dif r dif theta
-    = (int_(r=0)^1 int_(z=0)^(r^2) r^2 dif z dif r) underbrace((int_(theta=0)^(2 pi) cos theta dif theta), =0)
+  $ integral_(r=0)^1 integral_(theta=0)^(2 pi) integral_(z=0)^(r^2) r^2 cos theta dif z dif r dif theta
+    = (integral_(r=0)^1 integral_(z=0)^(r^2) r^2 dif z dif r) underbrace((integral_(theta=0)^(2 pi) cos theta dif theta), =0)
     = 0. $
   Similarly, the contribution of $r sin theta$ is just zero as well.
   So we are just left with
-  $ int_(r=0)^1 int_(theta=0)^(2 pi) int_(z=0)^(r^2) r z dif z dif theta dif r
-    = (int_(r=0)^1 int_(z=0)^(r^2) r z dif z dif r) (int_(theta=0)^(2pi) dif theta). $
-  Obviously $int_(theta=0)^(2pi) dif theta = 2pi$.
+  $ integral_(r=0)^1 integral_(theta=0)^(2 pi) integral_(z=0)^(r^2) r z dif z dif theta dif r
+    = (integral_(r=0)^1 integral_(z=0)^(r^2) r z dif z dif r) (integral_(theta=0)^(2pi) dif theta). $
+  Obviously $integral_(theta=0)^(2pi) dif theta = 2pi$.
   The double integral can be evaluated as
-  $ int_(r=0)^1 r int_(z=0)^(r^2) z dif z dif r
-    = int_(r=0)^1 r dot [z^2/2]_(z=0)^(r^2) dif r
-    = int_(r=0)^1 r^5/2 dif r
+  $ integral_(r=0)^1 r integral_(z=0)^(r^2) z dif z dif r
+    = integral_(r=0)^1 r dot [z^2/2]_(z=0)^(r^2) dif r
+    = integral_(r=0)^1 r^5/2 dif r
     = [r^6/12]_(r=0)^1 = 1/12. $
   Hence the final answer is
   $  1/12 dot 2 pi = #boxed[$ pi / 6 $]. #qedhere $
@@ -216,13 +216,13 @@ Here's a complete recipe for flux, augmented with the two shortcuts we described
   Suppose we need to calculate the flux of $bf(F)$ through a surface $cal(S)$.
 
   1. If $cal(S)$ is a closed region, use the divergence theorem to avoid parametrization:
-    $ oiint_(cal(S)) bf(F) dot bf(n) dif S
-      = underbrace(iiint_(cal(T)) nabla dot bf(F) dif V,
-      = iiint_(cal(T)) ((partial p) / (partial x) + (partial q) / (partial y) + (partial r) / (partial z)) dif V). $
+    $ integral.surf_(cal(S)) bf(F) dot bf(n) dif S
+      = underbrace(integral.triple_(cal(T)) nabla dot bf(F) dif V,
+      = integral.triple_(cal(T)) ((partial p) / (partial x) + (partial q) / (partial y) + (partial r) / (partial z)) dif V). $
   2. If $bf(F) dot bf(n)$ happens to equal the same constant $c$ everywhere
     (as described in @sec-flux-to-surf),
     then output $c$ times the surface area of $cal(S)$, i.e.
-    $ oiint_(cal(S)) bf(F) dot bf(n) dif S = c op("SurfArea")(cal(S)). $
+    $ integral.surf_(cal(S)) bf(F) dot bf(n) dif S = c op("SurfArea")(cal(S)). $
   3. Otherwise, fall back to the parametrization recipe described in @sec-recipe-flux-param.
     To describe it again here briefly:
     1. Get the cross product $(partial bf(r))/(partial u) times (partial bf(r))/(partial v)$
@@ -268,22 +268,22 @@ and then you add a layer of plastic wrap on the bowl.
     + (partial) / (partial z) (1) = 1 + 1 + 0 = 2 $
   which is constant.
   So the integral of the divergence over $cal(T)$ is just
-  $ iiint_(cal(T)) nabla dot bf(F) dif V = 2 dot op("Vol")(cal(T))
+  $ integral.triple_(cal(T)) nabla dot bf(F) dif V = 2 dot op("Vol")(cal(T))
     = 2 dot (1/2 dot 4/3 pi dot 1^3) = 4/3 pi. $
 
   Meanwhile, $cal(S)_("lid")$ (which we orient downwards) is a flat surface,
   so its flux integral is easy to calculate:
   from @table-surfcross-2 we choose $bf(n) dif S = chevron.l 0, 0, -1 chevron.r$ and hence
-  $ iint_(cal(S)_("lid")) bf(F) dot bf(n) dif S
-    &= iint_(x^2+y^2 <= 1) chevron.l x + tan 0, y + e^0, 1 chevron.r dot chevron.l 0,0, -1 chevron.r dif x dif y \
-    &= iint_(x^2+y^2 <= 1) (-1) dif x dif y = -pi. $
+  $ integral.double_(cal(S)_("lid")) bf(F) dot bf(n) dif S
+    &= integral.double_(x^2+y^2 <= 1) chevron.l x + tan 0, y + e^0, 1 chevron.r dot chevron.l 0,0, -1 chevron.r dif x dif y \
+    &= integral.double_(x^2+y^2 <= 1) (-1) dif x dif y = -pi. $
 
   So when we apply the divergence theorem, we get that
-  $ underbrace(iint_(cal(S)) bf(F) dot bf(n) dif S, "Answer")
-    + underbrace(iint_(cal(S)_("lid")) bf(F) dot bf(n) dif S, = - pi)
-    = underbrace(iiint_(cal(T)) nabla dot bf(F) dif V, = 4 / 3 pi). $
+  $ underbrace(integral.double_(cal(S)) bf(F) dot bf(n) dif S, "Answer")
+    + underbrace(integral.double_(cal(S)_("lid")) bf(F) dot bf(n) dif S, = - pi)
+    = underbrace(integral.triple_(cal(T)) nabla dot bf(F) dif V, = 4 / 3 pi). $
   Hence, we get the answer
-  $ iint_(cal(S)) bf(F) dot bf(n) dif S
+  $ integral.double_(cal(S)) bf(F) dot bf(n) dif S
     = 4 / 3 pi - (-pi) = #boxed[$ 7 / 3 pi $]. #qedhere $
 ]
 
@@ -304,7 +304,7 @@ and then you add a layer of plastic wrap on the bowl.
   Let $O$ be a point contained inside $cal(S)_2$.
   Consider the force of gravity $bf(G)$ exerted by a point mass of mass $m$ at $O$.
   Show that
-  $ oiint_(cal(S)_1) bf(G) dot bf(n) dif S = oiint_(cal(S)_2) bf(G) dot bf(n) dif S. $
+  $ integral.surf_(cal(S)_1) bf(G) dot bf(n) dif S = integral.surf_(cal(S)_2) bf(G) dot bf(n) dif S. $
 ] <exer-gravity-div2>
 
 #exerstar[
@@ -313,6 +313,6 @@ and then you add a layer of plastic wrap on the bowl.
   That is, suppose $bf(F) = vec(p,q)$ is a vector field in $RR^2$
   and $cal(C)$ is a closed loop enclosing a region $cal(R)$ counterclockwise.
   Find a way to use the divergence theorem to prove
-  $ oint_(cal(C)) bf(F) dot bf(n) dif bf(s)
-    = iint_(cal(R)) ((partial p) / (partial x) + (partial q) / (partial y)) dif A. $
+  $ integral.cont_(cal(C)) bf(F) dot bf(n) dif bf(s)
+    = integral.double_(cal(R)) ((partial p) / (partial x) + (partial q) / (partial y)) dif A. $
 ] <exer-div-to-green>

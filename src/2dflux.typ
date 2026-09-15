@@ -26,7 +26,7 @@ In any case, the 2D flux is then defined as follows.
 #definition(title: [Definition of 2D flux])[
   The 2D flux of a vector field $bf(F)$ through the closed path $cal(C)$
   parametrized by $bf(r)(t)$ is defined by
-  $ int_(t="start time")^("stop time") bf(F)(bf(r)(t)) dot
+  $ integral_(t="start time")^("stop time") bf(F)(bf(r)(t)) dot
     (90 degree "clockwise rotation of" bf(r)'(t)) dif t. $
 ]
 
@@ -40,7 +40,7 @@ that you can bet people immediately made up a shorthand to sweep it under the ru
 I think the usual notation is
 $ bf(n) dif s := (90 degree "clockwise rotation of" bf(r)'(t)) dif t $
 so that the above thing will usually be condensed to
-$ int_(cal(C)) bf(F) dot bf(n) dif s. $
+$ integral_(cal(C)) bf(F) dot bf(n) dif s. $
 #digression(title: [Digression on why $bf(n) dif s$ is the shorthand])[
   I think the reason this shorthand is used is:
   $bf(n)$ is supposed to be the "outward unit normal vector",
@@ -94,18 +94,18 @@ So what we've done is put the rotation thing onto the vector field instead.
 ]
 
 The upshot of this is that we can actually change the flux into a work integral:
-$ int_(cal(C)) bf(F) dot bf(n) dif s = int_(cal(C)) (bf(F) "rotated" 90 degree "counterclockwise") dot dif bf(r). $
+$ integral_(cal(C)) bf(F) dot bf(n) dif s = integral_(cal(C)) (bf(F) "rotated" 90 degree "counterclockwise") dot dif bf(r). $
 This looks a bit better but we still want to get rid of the rotation thing.
 But we can, because there is a shorthand for work that uses just $p$ and $q$.
 Specifically, since $bf(F) "rotated" 90 degree "counterclockwise" = vec(q, -p)$, we have
-$ int_(cal(C)) (bf(F) "rotated" 90 degree "counterclockwise") dot dif bf(r) = int_(cal(C)) (-q dif x + p dif y). $
+$ integral_(cal(C)) (bf(F) "rotated" 90 degree "counterclockwise") dot dif bf(r) = integral_(cal(C)) (-q dif x + p dif y). $
 In summary, we get the following more readable shorthand:
 
 #definition(title: [Better definition of 2D flux using work shorthand])[
   Let $bf(F)(x,y) = vec(p(x,y), q(x,y))$ be a 2D vector field
   and let $cal(C)$ be a path in $RR^2$.
   Then the flux of $bf(F)$ through $cal(C)$ is defined as
-  $ int_(cal(C)) (-q dif x + p dif y). $
+  $ integral_(cal(C)) (-q dif x + p dif y). $
 ]
 
 #tip[
@@ -121,19 +121,19 @@ In particular, if $cal(C)$ is a loop (and that's usually the case if we're talki
 that means we can apply Green's theorem again;
 the resulting theorem is called _Green's theorem in flux form_.
 We get that
-$ oint_(cal(C)) (-q dif x + p dif y)
-  = iint_(cal(R)) ((partial p) / (partial x) + (partial q) / (partial y)) dif A. $
+$ integral.cont_(cal(C)) (-q dif x + p dif y)
+  = integral.double_(cal(R)) ((partial p) / (partial x) + (partial q) / (partial y)) dif A. $
 The right-hand side is 2D divergence, so it could be condensed even further to
-$ iint_(cal(R)) nabla dot bf(F) dif A. $
+$ integral.double_(cal(R)) nabla dot bf(F) dif A. $
 There's like four different versions of the same expression now,
 so let me just put everything in one place for sanity's sake:
 
 #memo(title: [Memorize: Green's theorem in flux form])[
   Suppose $cal(C)$ is a closed curve oriented counterclockwise enclosing a region $cal(R)$.
   We have
-  $ underbrace(oint_(cal(C)) (-q dif x + p dif y), = oint_(cal(C)) (bf(F) dot bf(n) dif s))
-    = underbrace(iint_(cal(R)) ((partial p) / (partial x) + (partial q) / (partial y)) dif A,
-      = iint_(cal(R)) nabla dot bf(F) dif A). $
+  $ underbrace(integral.cont_(cal(C)) (-q dif x + p dif y), = integral.cont_(cal(C)) (bf(F) dot bf(n) dif s))
+    = underbrace(integral.double_(cal(R)) ((partial p) / (partial x) + (partial q) / (partial y)) dif A,
+      = integral.double_(cal(R)) nabla dot bf(F) dif A). $
 ]
 
 #warning(title: [Warning: There's no FTC for flux])[
@@ -161,7 +161,7 @@ is the divergence and interprets how much $bf(F)$ is moving away from the point.
 So instead of _spirals_, we draw little green _explosions_ corresponding to how fast $bf(F)$
 is moving out of each individual grey cell.
 The picture now turns into @fig-2dflux-explain, and
-$ iint_(cal(R)) nabla dot bf(F) dif A $
+$ integral.double_(cal(R)) nabla dot bf(F) dif A $
 is drawn as the sum of the green explosions.
 
 Like before, everything on the inside just cancels out.
@@ -179,7 +179,7 @@ And this corresponds to the 2D flux of $bf(F)$ against the purple walls, as desi
 
 #recipe(title: [Recipe for computing 2D flux])[
   1. If $cal(C)$ is a closed loop, use Green's theorem as a shortcut:
-    $ oint_(cal(C)) (-q dif x + p dif y) = iint_(cal(R)) ((partial p)/(partial x) + (partial q)/(partial y)) dif A. $
+    $ integral.cont_(cal(C)) (-q dif x + p dif y) = integral.double_(cal(R)) ((partial p)/(partial x) + (partial q)/(partial y)) dif A. $
   2. Otherwise, do the manual recipe in @sec-work-manual-recipe
     with $bf(F) = vec(p,q)$ replaced by its $90 degree$ counterclockwise rotation $vec(-q, p)$:
     1. Pick *any* parametrization $bf(r) : RR -> RR^n$ of the curve $cal(C)$,
@@ -205,13 +205,13 @@ For each example, we actually show how to do it "manually"
   For this one, we'll actually show how to do it both using Green and manually, for comparison.
   - Using Green's theorem:
     Green’s theorem for flux states:
-    $ "Flux" = iint_(cal(R)) ((partial p) / (partial x) + (partial q) / (partial y)) dif A , $
+    $ "Flux" = integral.double_(cal(R)) ((partial p) / (partial x) + (partial q) / (partial y)) dif A , $
     where $cal(R)$ is the region enclosed by $cal(C)$.
 
     The divergence is
     $ nabla dot bf(F) = (partial p)/(partial x) + (partial q)/(partial y) = (partial)/(partial x)(x^2) + (partial)/(partial y)(y^2) = 2 x + 2 y. $
     Therefore,
-    $ "Flux" = iint_(cal(R)) (2 x + 2 y) dif A . $
+    $ "Flux" = integral.double_(cal(R)) (2 x + 2 y) dif A . $
 
     Since the region $cal(R)$ is the unit circle centered at the origin, and
     the integrand $2 x + 2 y$ is an odd function over this symmetric region,
@@ -219,7 +219,7 @@ For each example, we actually show how to do it "manually"
     (Alternatively, integrate using polar coordinates.)
 
   - Use the definition
-    $ "Flux" = oint_(cal(C)) (p dif y - q dif x) $
+    $ "Flux" = integral.cont_(cal(C)) (p dif y - q dif x) $
     and parametrize the curve by using
     $ bf(r)(t) = vec(cos(t), sin(t)) quad 0 <= t <= 2pi $
     so
@@ -230,7 +230,7 @@ For each example, we actually show how to do it "manually"
       &= vec(-sin(t)^2, cos(t)^2) dot vec(-sin(t), cos(t)) \
       &= sin^2 t dot sin t + cos^2 t dot cos t = sin^3 t + cos^3 t = cos^3 t + sin^3 t. $
     Hence
-    $ "Flux" = int_(t = 0)^(t = 2 pi) (cos^3 t + sin^3 t) dif t . $
+    $ "Flux" = integral_(t = 0)^(t = 2 pi) (cos^3 t + sin^3 t) dif t . $
     It's possible to observe from here again that the integral is symmetric;
     that is, for $0 <= t <= pi$ we have $cos^3(t) + cos^3(t+pi) = 0$
     and $sin^3(t) + sin^3(t+pi) = 0$.
@@ -253,7 +253,7 @@ For each example, we actually show how to do it "manually"
   $ nabla dot bf(F) := (partial p)/(partial x) + (partial q)/(partial y)
     = (partial)/(partial x)(5x) + (partial)/(partial y)(7y) = 12. $
   So by Green's theorem,
-  $ "Flux" = iint_(cal(R)) 12 dif A = 12 op("Area")(cal(R)) = 12 dot 2^2 = #boxed[$ 48 $]$
+  $ "Flux" = integral.double_(cal(R)) 12 dif A = 12 op("Area")(cal(R)) = 12 dot 2^2 = #boxed[$ 48 $]$
   where $cal(R)$ is the region enclosed by $cal(C)$, a square of side length $2$.
 ]
 
@@ -276,7 +276,7 @@ For each example, we actually show how to do it "manually"
     = 1 + 1 = 2.
   $
   So by Green's theorem,
-  $ "Flux" = iint_(cal(R)) 2 dif A = 2 op("Area")(cal(R)). $
+  $ "Flux" = integral.double_(cal(R)) 2 dif A = 2 op("Area")(cal(R)). $
   In a previous section (@sec-ex-ellipse) we saw the area of this ellipse is was $a b pi$;
   if you didn't remember this, you would go back to the change of variables and execute it.
   In any case, this means the flux is $2 dot (a b pi) = #boxed[$ 2 a b pi $]$.
@@ -293,17 +293,17 @@ This comparison is shown in the table below.
     columns: 3,
     align: left,
     table.header([Method],
-      [Work $int_(cal(C)) bf(F) dot dif bf(r)$\ (see @sec-recipe-work)],
-      [2D Flux $int_(cal(C)) bf(F) dot bf(n) dif s$ \ (see @sec-recipe-2d-flux)]),
+      [Work $integral_(cal(C)) bf(F) dot dif bf(r)$\ (see @sec-recipe-work)],
+      [2D Flux $integral_(cal(C)) bf(F) dot bf(n) dif s$ \ (see @sec-recipe-2d-flux)]),
     table.hline(),
     [$bf(F)$ is conservative \ $==>$ FTC],
       [If $bf(F) = nabla f$, \ Output $f("stop") - f("start")$], [_Not applicable_],
     [$cal(C)$ is a closed loop \ $==>$ Green],
-      [Output $iint_(cal(R)) underbrace(((partial q)/(partial x) - (partial p)/(partial y)), "2D scalar curl") dif A$],
-      [Output $iint_(cal(R)) underbrace((partial p)/(partial x) + (partial q)/(partial y), "Div" = nabla dot bf(F)) dif A$],
+      [Output $integral.double_(cal(R)) underbrace(((partial q)/(partial x) - (partial p)/(partial y)), "2D scalar curl") dif A$],
+      [Output $integral.double_(cal(R)) underbrace((partial p)/(partial x) + (partial q)/(partial y), "Div" = nabla dot bf(F)) dif A$],
     [Bare-hands definition \ Use parametrization],
-      [Output $int (p dif x + q dif y)$ \ $= int_(cal(C)) bf(F) dot bf(r)'(t) dif t$ ],
-      [Output $int (-q dif x + p dif y)$ \ $= int_(cal(C)) (bf(F) "rot" 90 degree "ccw") dot bf(r)'(t) dif t$],
+      [Output $integral (p dif x + q dif y)$ \ $= integral_(cal(C)) bf(F) dot bf(r)'(t) dif t$ ],
+      [Output $integral (-q dif x + p dif y)$ \ $= integral_(cal(C)) (bf(F) "rot" 90 degree "ccw") dot bf(r)'(t) dif t$],
   ),
   caption: [
     Comparison of the recipe for work and flux.
@@ -323,7 +323,7 @@ Since it's so long, I broke it out into a separate skippable chapter.
   let $cal(C)$ be the oriented closed curve formed by the arc of the parabola $y = x^2-1$
   running from $(-1, 0)$ to $(1, 0)$, followed by a line segment from $(1, 0)$ back to $(-1, 0)$.
   Again let $ bf(F)(x,y) = vec(x^2(y+1), (y+1)^2). $
-  Compute $int_(cal(C)) bf(F) dot bf(n) dif s$ using direct parametrization
+  Compute $integral_(cal(C)) bf(F) dot bf(n) dif s$ using direct parametrization
   and by using Green's Theorem for flux.
 ] <exer-parabola-3>
 

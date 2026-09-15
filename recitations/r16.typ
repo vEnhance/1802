@@ -31,15 +31,15 @@ This handout (and any other DLC's I write) are posted at
 In $RR^2$, suppose $bf(F)(x,y) = vec(p(x,y), q(x,y))$.
 Let path $bf(r) : RR -> RR^n$ trace out a curve $cal(C)$.
 All of the following notations mean the same thing:
-$ int_(t="start time")^("stop time") bf(F)(bf(r)(t)) dot bf(r)'(t) dif t
-  = int_(cal(C)) bf(F) dot dif bf(r) = int_(cal(C)) (p dif x + q dif y). $
+$ integral_(t="start time")^("stop time") bf(F)(bf(r)(t)) dot bf(r)'(t) dif t
+  = integral_(cal(C)) bf(F) dot dif bf(r) = integral_(cal(C)) (p dif x + q dif y). $
 These are called the *work* of $bf(F)$ on $cal(C)$, aka the *line integral*.
 The work is a scalar quantity (there is a dot product inside the integrand, so it returns a number).
 
 = Computing line integrals in general
 
 #recipe(title: [Recipe for computing line integrals in general])[
-  Suppose we want to evaluate $ int_(cal(C)) bf(F) dot dif bf(r)$.
+  Suppose we want to evaluate $ integral_(cal(C)) bf(F) dot dif bf(r)$.
 
   1. First, check if the vector field is conservative
     by seeing if the curl is zero.
@@ -54,7 +54,7 @@ The work is a scalar quantity (there is a dot product inside the integrand, so i
   Suppose $bf(F) : RR^n -> RR^n$ is a conservative vector field,
   given by $bf(F) = nabla f$ for some potential function $f : RR^n -> RR$.
   Then for any curve $cal(C)$ from a point $P$ to a point $Q$ we have
-  $ int_(cal(C)) bf(F) dot dif bf(r) = f(Q)-f(P). $
+  $ integral_(cal(C)) bf(F) dot dif bf(r) = f(Q)-f(P). $
 ]
 
 = Massive spoilers
@@ -85,25 +85,25 @@ I'm just gonna spoil the answers to all three of Maulik's questions from his not
   picture, draw the oriented path $C$ from $(- 1 , 0)$ to $(0 , - 1)$
   given by the unit circle in the quadrant $x <= 0 , y <= 0$.
 
-/ 1b: Using the picture as a guide, is $int_C x dif x - y dif y$ positive,
+/ 1b: Using the picture as a guide, is $integral_C x dif x - y dif y$ positive,
   negative, or zero?
 
 / 1c: Using a parametrization of $C$, calculate the line integral
-  $int_C x dif x - y dif y$ exactly.
+  $integral_C x dif x - y dif y$ exactly.
 
 / 1d: Find a function $f (x , y)$ whose gradient is $chevron.l x , - y chevron.r$, and use
   the fundamental theorem of calculus to calculate
-  $int_C x dif x - y dif y$ in another way.
+  $integral_C x dif x - y dif y$ in another way.
 
-/ 2a: Calculate the line integral $int_C bf(F) dot dif bf(r)$
+/ 2a: Calculate the line integral $integral_C bf(F) dot dif bf(r)$
   where $bf(F)$ is the vector field
   $(x+y) bf(i) + x y bf(j)$ and $C$ is the broken line running
   from $(0 , 0)$ to $(2 , 2)$ to $(0 , 2)$.
 
-/ 2b: Calculate the line integral $int_C (x^2 - y) dif x + 2 x dif y$ where
+/ 2b: Calculate the line integral $integral_C (x^2 - y) dif x + 2 x dif y$ where
   $C$ is the path from $(- 1 , 0)$ to $(1 , 0)$ along the parabola
   $y = 1 - x^2$.
 
 / 3: Let $f (x , y) = sin (x) cos (y)$. Find the gradient vector field $bf(F) = nabla f(x,y)$.
-  What is the maximum possible value of $int_C bf(F) dot dif bf(r)$
+  What is the maximum possible value of $integral_C bf(F) dot dif bf(r)$
   as $C$ ranges over all possible paths in the plane?

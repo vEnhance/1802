@@ -22,18 +22,18 @@ $  - sqrt(R^2 - r^2) <= z <= sqrt(R^2 - r^2). $
 The volume element in cylindrical coordinates is:
 $ dif V = r dif r dif theta dif z . $
 Putting this all together, the volume integral is:
-$ V = int_(theta=0)^(2 pi) int_(r=a)^R int_(z=- sqrt(R^2 - r^2))^(sqrt(R^2 - r^2))
+$ V = integral_(theta=0)^(2 pi) integral_(r=a)^R integral_(z=- sqrt(R^2 - r^2))^(sqrt(R^2 - r^2))
   r dif z dif r dif theta . $
 Evaluating the inner integral gives:
-$ int_(z=- sqrt(R^2 - r^2))^(sqrt(R^2 - r^2)) dif z = 2 sqrt(R^2 - r^2) . $
+$ integral_(z=- sqrt(R^2 - r^2))^(sqrt(R^2 - r^2)) dif z = 2 sqrt(R^2 - r^2) . $
 Thus, the volume integral simplifies to:
-$ V &= int_(theta=0)^(2 pi) int_(r=a)^R 2 r sqrt(R^2 - r^2) dif r dif theta \
-  &= (int_(theta=0)^(2 pi) dif theta)(int_(r=a)^R 2 r sqrt(R^2 - r^2) dif r) \
-  &= 2 pi (int_(r=a)^R 2 r sqrt(R^2 - r^2) dif r). $
+$ V &= integral_(theta=0)^(2 pi) integral_(r=a)^R 2 r sqrt(R^2 - r^2) dif r dif theta \
+  &= (integral_(theta=0)^(2 pi) dif theta)(integral_(r=a)^R 2 r sqrt(R^2 - r^2) dif r) \
+  &= 2 pi (integral_(r=a)^R 2 r sqrt(R^2 - r^2) dif r). $
 To evaluate the integral,
 we substitute $u = R^2 - r^2$, so that $dif u = - 2 r dif r$, we rewrite:
-$ int_(r=a)^R 2 r sqrt(R^2 - r^2) dif r &= int_(u=R^2 - R^2)^(R^2 - a^2) sqrt(u) (- dif u) \
-  &= int_(u=0)^(R^2 - a^2) sqrt(u) dif u \
+$ integral_(r=a)^R 2 r sqrt(R^2 - r^2) dif r &= integral_(u=R^2 - R^2)^(R^2 - a^2) sqrt(u) (- dif u) \
+  &= integral_(u=0)^(R^2 - a^2) sqrt(u) dif u \
   &= [2/3 u^(3 \/ 2)]_(u=0)^(R^2-a^2) \
   &= 2/3 (R^2 - a^2)^(3/2). $
 Multiplying by $2 pi$, we obtain:
@@ -56,23 +56,23 @@ $ 0 <= r <= 1 , quad 0 <= theta <= 2 pi , quad 0 <= phi <= pi . $
 The total volume of the ball is:
 $ op("Vol")(cal(T)) = 4 / 3 pi (1)^3 = (4 pi) / (3) . $
 
-We now set up the integral $iiint_(cal(T)) d(P) dif V$.
+We now set up the integral $integral.triple_(cal(T)) d(P) dif V$.
 The volume element is:
 $ dif V = r^2 sin phi dif r dif phi dif theta . $
 Hence
-$ iiint_(cal(T)) d(P) dif V
-  &= iiint_(cal(T)) r sin phi dot r^2 sin phi dif r dif phi dif theta \
-  &= int_(theta=0)^(2 pi) dif theta int_(phi=0)^pi sin^2 phi dif phi int_(r=0)^1 r^3 dif r. $
+$ integral.triple_(cal(T)) d(P) dif V
+  &= integral.triple_(cal(T)) r sin phi dot r^2 sin phi dif r dif phi dif theta \
+  &= integral_(theta=0)^(2 pi) dif theta integral_(phi=0)^pi sin^2 phi dif phi integral_(r=0)^1 r^3 dif r. $
 The center integral needs the following trig identity:
 $ sin^2 phi &= (1 - cos(2 phi))/2 \
-  ==> int sin^2 phi dif phi &= phi / 2 - sin(2 phi) / 4. $
+  ==> integral sin^2 phi dif phi &= phi / 2 - sin(2 phi) / 4. $
 Hence,
-$ iiint_(cal(T)) d(P) dif V
-  &= int_(theta=0)^(2 pi) dif theta int_(phi=0)^pi sin^2 phi dif phi int_(r=0)^1 r^3 dif r \
+$ integral.triple_(cal(T)) d(P) dif V
+  &= integral_(theta=0)^(2 pi) dif theta integral_(phi=0)^pi sin^2 phi dif phi integral_(r=0)^1 r^3 dif r \
   &= (2 pi) dot (pi / 2) dot (1/4) \
   &= pi^2 / 4. $
 So the final answer is
-$ 1/(op("Vol")(cal(T))) iiint_(cal(T)) d(P) dif V
+$ 1/(op("Vol")(cal(T))) integral.triple_(cal(T)) d(P) dif V
   &= (pi^2 \/ 4) / (4 pi \/ 3) = #boxed[$ 3/16 pi $]. $
 
 == Solution to @exer-sphere-gravity (gravity on hemisphere)
@@ -85,21 +85,21 @@ Then this is basically the same as the example in @sec-sph-gravity,
 except the bounds of integration change.
 
 To be precise, we have $G_1 = G_2 = 0$, and @eqn-sph-G3 just says
-$ G_3 = G m iiint_(cal(T)) sin phi cos phi dif rho dif phi dif theta $
+$ G_3 = G m integral.triple_(cal(T)) sin phi cos phi dif rho dif phi dif theta $
 after setting the density to $1$.
 The only change is the bounds of integration: for the hemisphere we should have
 $ 0 <= rho <= 1 , quad 0 <= theta <= 2 pi , quad 0 <= phi.alt <= pi / 2 . $
 
 So, when we integrate to compute $G_3$ we have
-$ G_3 &= G m int_(theta=0)^(2 pi) int_(phi=0)^(pi / 2) int_(rho=0)^(1)
+$ G_3 &= G m integral_(theta=0)^(2 pi) integral_(phi=0)^(pi / 2) integral_(rho=0)^(1)
     sin phi cos phi dif rho dif phi dif theta \
-  &= G m (int_(theta=0)^(2 pi) dif theta)
-    (int_(phi=0)^(pi / 2) sin phi cos phi dif phi)
-    (int_(rho=0)^(1) dif rho) \
-  &= G m (2 pi) (int_(phi=0)^(pi / 2) sin phi cos phi dif phi) (1). $
+  &= G m (integral_(theta=0)^(2 pi) dif theta)
+    (integral_(phi=0)^(pi / 2) sin phi cos phi dif phi)
+    (integral_(rho=0)^(1) dif rho) \
+  &= G m (2 pi) (integral_(phi=0)^(pi / 2) sin phi cos phi dif phi) (1). $
 To evaluate the integral with $phi$, write
-$ int_(phi=0)^(pi \/ 2) sin phi cos phi dif phi
-  = 1 / 2 int_0^(pi \/ 2) sin 2 phi dif phi
+$ integral_(phi=0)^(pi \/ 2) sin phi cos phi dif phi
+  = 1 / 2 integral_0^(pi \/ 2) sin 2 phi dif phi
   = 1 / 2 [- 1 / 2 cos 2 phi]_(phi=0)^(pi \/ 2)
   = 1/2. $
 Hence,
@@ -210,19 +210,19 @@ Hence the magnitude of this cross product is:
 $ lr(|frac(partial bf(r), partial x) times frac(partial bf(r), partial y)|) = sqrt((- 2 x)^2 + (- 2 y)^2 + (1)^2) = sqrt(4 x^2 + 4 y^2 + 1). $
 
 Hence, the surface area of the surface in question is given by
-$ op("SurfArea")(cal(S)) &= iint_(x^2 + y^2 <= 1) lr(|frac(partial bf(r), partial x) times frac(partial bf(r), partial y)|) dif x dif y \
-  &= iint_(x^2 + y^2 <= 1) sqrt(4 x^2 + 4 y^2 + 1) dif x dif y $
+$ op("SurfArea")(cal(S)) &= integral.double_(x^2 + y^2 <= 1) lr(|frac(partial bf(r), partial x) times frac(partial bf(r), partial y)|) dif x dif y \
+  &= integral.double_(x^2 + y^2 <= 1) sqrt(4 x^2 + 4 y^2 + 1) dif x dif y $
 Due to the circular symmetry, it is convenient to switch to polar coordinates; we write
-$ op("SurfArea")(cal(S)) &= int_(theta=0)^(2 pi) int_(r=0)^1 sqrt(4 r^2 + 1) dot r dif r dif theta \
-  &= (int_(theta=0)^(2 pi) dif theta) (int_(r=0)^1 sqrt(4 r^2 + 1) dot r dif r). $
+$ op("SurfArea")(cal(S)) &= integral_(theta=0)^(2 pi) integral_(r=0)^1 sqrt(4 r^2 + 1) dot r dif r dif theta \
+  &= (integral_(theta=0)^(2 pi) dif theta) (integral_(r=0)^1 sqrt(4 r^2 + 1) dot r dif r). $
 The integral over $r$ can be evaluated by using $u$-substitute according to
 $ u := 4 r^2 + 1 ==> dif u = 8 r dif r ==> r dif r = (dif u) / (8) $
 so
-$ int_(r=0)^1 sqrt(4 r^2 + 1) dot r dif r &= int_(u=1)^5 (sqrt(u)/8) dif u \
-  &= 1/8 int_1^5 sqrt(u) dif u = [1 / 8 dot 2 / 3 u^(3 \/ 2)]_(u=1)^5
+$ integral_(r=0)^1 sqrt(4 r^2 + 1) dot r dif r &= integral_(u=1)^5 (sqrt(u)/8) dif u \
+  &= 1/8 integral_1^5 sqrt(u) dif u = [1 / 8 dot 2 / 3 u^(3 \/ 2)]_(u=1)^5
   = 1 / 12 (5^(3 \/ 2) - 1^(3 \/ 2)) \
   &= 1 / 12 (5 sqrt(5) - 1). $
-And of course $int_(theta=0)^(2 pi) dif theta = 2pi$.
+And of course $integral_(theta=0)^(2 pi) dif theta = 2pi$.
 Hence the answer $ #boxed[$ frac(5 sqrt(5) - 1, 6) pi $]. $
 
 == Solution to @exer-archimedes (Archimedes hat-box theorem)
@@ -247,8 +247,8 @@ With $R = 1$,
 our region is $phi in [cos^(-1)(b), cos^(-1)(a)]$ and $theta in [0,2pi]$.
 Then
 $ op("SurfArea")(cal(S))
-  &= int_(theta = 0)^(2 pi) int_(phi = cos^(-1)(b))^(cos^(-1)(a)) dif S \
-  &= int_(theta = 0)^(2 pi) int_(phi = cos^(-1)(b))^(cos^(-1)(a)) sin phi dif phi dif theta \
+  &= integral_(theta = 0)^(2 pi) integral_(phi = cos^(-1)(b))^(cos^(-1)(a)) dif S \
+  &= integral_(theta = 0)^(2 pi) integral_(phi = cos^(-1)(b))^(cos^(-1)(a)) sin phi dif phi dif theta \
   &= 2 pi dot [-cos(phi)]_(phi = cos^(-1)(b))^(cos^(-1)(a)) \
   &= 2 pi dot (b-a). $
 
@@ -262,7 +262,7 @@ and using the formula
 $ (nabla g) / (partial g slash partial z) = lr(chevron.l 2x, 2y, 2z chevron.r) / (2z)
   = lr(chevron.l x/z, y/z, 1 chevron.r). $
 to derive that
-$ op("SurfArea")("hemisphere") = iint_(x^2+y^2<=1) 1/sqrt(1-(x^2+y^2)) dif x dif y. $
+$ op("SurfArea")("hemisphere") = integral.double_(x^2+y^2<=1) 1/sqrt(1-(x^2+y^2)) dif x dif y. $
 For Archimedes hat-box theorem, the integral itself stays the same;
 the change is that rather than integrating along the entire $x^2+y^2 <= 1$
 (which would give the surface area of the hemisphere),
@@ -272,16 +272,16 @@ Indeed, this is the shadow of the surface area in @fig-surfcross-archimedes onto
 (Indeed, the bottom disk has radius $sqrt(1-a^2)$ and the top disk has radius $sqrt(1-b^2)$.)
 
 Getting back to integration, the surface area we seek for the sphere is thus
-$ S = iint_(1-b^2 <= x^2+y^2 <= 1-a^2) 1/sqrt(1-(x^2+y^2)) dif x dif y. $
+$ S = integral.double_(1-b^2 <= x^2+y^2 <= 1-a^2) 1/sqrt(1-(x^2+y^2)) dif x dif y. $
 Now we just have to redo the calculation in @sec-surface-area-explanation with only
 slight modifications.
 We use polar coordinates to change this to
-$ S &= int_(theta=0)^(2pi) int_(r=sqrt(1-b^2))^(sqrt(1-a^2)) 1/(sqrt(1-r^2)) (r dif r dif theta) \
-  &= (int_(theta=0)^(2pi) dif theta) (int_(r=sqrt(1-b^2))^(sqrt(1-a^2)) r/(sqrt(1-r^2)) dif r). $
+$ S &= integral_(theta=0)^(2pi) integral_(r=sqrt(1-b^2))^(sqrt(1-a^2)) 1/(sqrt(1-r^2)) (r dif r dif theta) \
+  &= (integral_(theta=0)^(2pi) dif theta) (integral_(r=sqrt(1-b^2))^(sqrt(1-a^2)) r/(sqrt(1-r^2)) dif r). $
 The left integral is $2pi$.
 For the inner integral, use the $u$-substitution $u=1-r^2 ==> (dif u) / (dif r) = -2r$ to get
-$ int_(r=sqrt(1-b^2))^(sqrt(1-a^2)) r/(sqrt(1-r^2)) dif r
-  = int_(u=b^2)^(a^2) -1/2 u^(-1/2) dif u
-  = int_(u=a^2)^(b^2) 1/2 u^(-1/2) dif u
+$ integral_(r=sqrt(1-b^2))^(sqrt(1-a^2)) r/(sqrt(1-r^2)) dif r
+  = integral_(u=b^2)^(a^2) -1/2 u^(-1/2) dif u
+  = integral_(u=a^2)^(b^2) 1/2 u^(-1/2) dif u
   = [u^(1/2)]_(u=a^2)^(b^2) = b-a. $
 Thus we also get $  S = 2 pi (b - a) $ as we needed.

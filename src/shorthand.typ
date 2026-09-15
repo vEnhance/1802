@@ -5,14 +5,14 @@
 == [TEXT] The shorthand $dif A := dif x dif y$ for area
 
 Up to here I've been pretty careful to always write
-$ iint_(cal(R)) f(x,y) dif x dif y$
+$ integral.double_(cal(R)) f(x,y) dif x dif y$
 to make it obvious what the integration variables are.
 
 However, some of you are probably already starting to
 get tired of writing $dif x dif y$ and $dif y dif x$.
 In particular, I advised you earlier that you should prefer to write
-$ int_(x=0)^5 int_(y=0)^(3) f(x,y) dif y dif x $
-rather than the harder-to-read $int_0^5 int_0^3 f(x,y) dif y dif x$.
+$ integral_(x=0)^5 integral_(y=0)^(3) f(x,y) dif y dif x $
+rather than the harder-to-read $integral_0^5 integral_0^3 f(x,y) dif y dif x$.
 Those of you who took my advice may not want to waste the time of remembering whether
 it's $dif y dif x$ or $dif x dif y$ at the end, since it doesn't matter for you anymore.
 For that reason, at this point I hereby bestow on you the following definition:
@@ -21,12 +21,12 @@ For that reason, at this point I hereby bestow on you the following definition:
   whichever one is appropriate for the given context.
 ]
 So now you can just write:
-$ int_(x=0)^5 int_(y=0)^(3) f(x,y) dif A. $
+$ integral_(x=0)^5 integral_(y=0)^(3) f(x,y) dif A. $
 I guess that saves two characters.
 
 #tip(title: [Tip: Variable names are often omitted too])[
   In fact, when you use shorthand, you may even leave out $x$ and $y$ from $f$ and just write
-  $ int_(x=0)^5 int_(y=0)^(3) f dif A. $
+  $ integral_(x=0)^5 integral_(y=0)^(3) f dif A. $
   So any time shorthand is being used,
   don't be surprised if the variable names are missing altogether.
 ]
@@ -41,7 +41,7 @@ If you trust yourself to not forget about the factor of $r$,
 or if you're doing a calculation for which the actual variables don't matter,
 you can also use $dif A$ here.
 For example, you might write
-$ iint_("unit disk") dif A = pi $
+$ integral.double_("unit disk") dif A = pi $
 to say the area integral of the unit disk is $pi$.
 (Pure mathematicians might appreciate how this does not commit to any choice of coordinates.)
 

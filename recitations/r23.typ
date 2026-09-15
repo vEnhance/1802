@@ -54,7 +54,7 @@ The curl at each point is a 3D vector (i.e. the curl of a 3D vector field is its
 
 = Line integrals in 3D are pretty much the same as 2D
 
-- Definition of the line integral is unchanged from 2D; it is still $int_(t="start time")^("stop time") bf(F) dot bf(r)'(t) dif t$.
+- Definition of the line integral is unchanged from 2D; it is still $integral_(t="start time")^("stop time") bf(F) dot bf(r)'(t) dif t$.
 - A vector field on all of $RR^3$ is _conservative_
   (i.e. $bf(F) = nabla f$ for some potential function $f$)
   if and only if $nabla times bf(F) = bf(0)$.
@@ -86,9 +86,9 @@ The curl at each point is a 3D vector (i.e. the curl of a 3D vector field is its
   Suppose $cal(S)$ is the boundary of an oriented surface $cal(S)$ parametrized by $bf(r)_2(u,v)$.
   Assume the orientation of $cal(C)$ and $cal(S)$ are compatible.
   Then
-  $ underbrace(oint_(cal(C)) bf(F) dot dif bf(r)_1, = int_(t="start")^("stop") bf(F) dot bf(r)'_1(t) dif t)
-    = underbrace(iint_(cal(S)) (nabla times bf(F)) dot bf(n) dif S.,
-    = iint_(u,v) (op("curl") bf(F)) dot
+  $ underbrace(integral.cont_(cal(C)) bf(F) dot dif bf(r)_1, = integral_(t="start")^("stop") bf(F) dot bf(r)'_1(t) dif t)
+    = underbrace(integral.double_(cal(S)) (nabla times bf(F)) dot bf(n) dif S.,
+    = integral.double_(u,v) (op("curl") bf(F)) dot
       ((partial bf(r)_2) / (partial u) times (partial bf(r)_2) / (partial v)) dif u dif v) $
 ]
 

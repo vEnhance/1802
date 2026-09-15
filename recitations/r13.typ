@@ -21,7 +21,7 @@ The following are just excerpts for quick reference.
 = Recipes
 
 #recipe(title: [Recipe for integrating over a rectangle])[
-  To integrate something of the form $int (int dif y) dif x$:
+  To integrate something of the form $integral (integral dif y) dif x$:
   1. Evaluate the inner integral as in 18.01, treating $x$ as constant.
   2. You should get something only depending on $x$. Integrate it as in 18.01.
 ]
@@ -64,12 +64,12 @@ Here the region would be described as $y >= x^2$ and $y-x <= 2$.
 
 / 2.: Let $R$ be the first-quadrant region bounded by the two curves
   $y = sqrt(x)$ and $y = x^3$. Compute in two different ways the double
-  integral $ iint_R x y^2 dif A . $
+  integral $ integral.double_R x y^2 dif A . $
 
 / 3.: Let $R$ be the (bounded) region between the parabola $y^2 = x$ and the
   line through $(2 , 0)$ having slope $1$. Find the points where the
   curves intersect and describe the region $R$ in terms of horizontal
   slices and vertical slices. Express the double integral
-  $ iint_R f (x , y) dif A$ as an iterated integral in both
+  $ integral.double_R f (x , y) dif A$ as an iterated integral in both
   ways, using both horizontal and vertical slicings.
   In the second case, you will have to write the integral in two pieces.
