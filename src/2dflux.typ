@@ -81,7 +81,7 @@ The idea is the following:
   $ bf(F) dot (90 degree "clockwise rotation of" bf(r)') = (90 degree "counterclockwise rotation of" bf(F)) dot bf(r)'. $
 ]
 So what we've done is put the rotation thing onto the vector field instead.
-#proof(title: [Proof of the equation])[
+#proof(supplement: [Proof of the equation])[
   To spell this out, imagine that $bf(r)'(t) = vec( r'_1(t), r'_2(t) )$,
   meaning that its $90 degree$ clockwise rotation is $vec( r'_2(t), -r'_1(t) )$.
   Then the two quantities
