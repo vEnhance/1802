@@ -92,7 +92,7 @@ We give some examples.
 ]
 
 #example(title: [Example: the level curves of $f(x,y) = x^2+y^2$])[
-  Let's draw level curves of $f(x,y) = x^2+y^2$
+  Let's draw level curves of $f(x,y) = x^2+y^2$.
   For each $c$ we want to sketch the curve
   $ x^2 + y^2 = c. $
   When $c < 0$, no points at all appear on this curve, and when $c = 0$
