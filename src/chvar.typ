@@ -39,6 +39,7 @@ As I promised you, I think it's better for your thinking if you write these as i
 #eqn[
   $ 16/25 <= x y <= 16 / 9 \
   1/4 <= y / x <= 4. $
+  <eqn-cursed-region>
 ]
 #figure(
   image("figures/chvar-region.svg", width: auto),
@@ -47,7 +48,8 @@ As I promised you, I think it's better for your thinking if you write these as i
 ) <fig-chvar-ex>
 
 This chapter introduces a technique called "change of variables" that will
-allow us to handle this annoying-looking yellow region for when we don't want to do $x y$-integration.
+allow us to handle annoying-looking regions like @eqn-cursed-region,
+where we don't want to do $x y$-integration.
 The idea is to make a new map of the yellow region with a different coordinate system.
 To do this, I need to tell you a new term:
 

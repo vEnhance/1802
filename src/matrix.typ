@@ -72,7 +72,7 @@ Here's another example.
 More generally, the second question shows that if you know
 $T( vec(1,0) )$ and $T( vec(0,1) )$
 you ought to be able to _calculate_ the output of $T$ at any other vector like $vec(50,70)$.
-To expand on this:
+We record this as @t-apply:
 #eqn[
   $ T( vec(a,b) ) = a T( vec(1,0) ) + b T( vec(0,1) ). $
   <t-apply>
