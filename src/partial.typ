@@ -10,7 +10,7 @@ Think $f(5.01) approx f(5) + f'(5) dot 0.01$.
 This slope roughly tells you, if you move a slight distance away from the input $p$,
 this is how fast you expect $f$ to change.
 To drill the point home again, in 18.01, we had
-$ f(p + epsilon) = f(p) + f'(p) dot epsilon. $
+$ f(p + epsilon) approx f(p) + f'(p) dot epsilon. $
 See figure below.
 
 #figure(
