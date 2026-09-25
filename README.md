@@ -9,14 +9,26 @@ because I was dissatisfied with the textbook provided by the actual course.
 
 The outputted textbook can be downloaded at the following link:
 
-> https://web.evanchen.cc/textbooks/lamv.pdf
+> <https://web.evanchen.cc/textbooks/lamv.pdf>
 
 For other historical pieces,
 see the [18.02 recitation page on evanchen.cc](https://web.evanchen.cc/1802.html).
 
+## License
+
+Per MIT OpenCourseWare, we use [CC BY-NC-SA 4.0](LICENSE.txt).
+
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) if you'd like to help out
+See [CONTRIBUTING.md](CONTRIBUTING.md) if you'd like to help out.
+
+## Fan translations
+
+The [CC BY-NC-SA 4.0 license](LICENSE.txt) permits
+noncommercial fan translations of the book under compatible licenses.
+So far we have:
+
+- Simplified Chinese: <https://github.com/Madin-David/lamv-zh>
 
 ## Compiling
 

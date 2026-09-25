@@ -421,3 +421,13 @@ in return for the short time limit.
 - Most of the figures in this text are manually drawn
   in #link("https://asymptote.sourceforge.io")[Asymptote].
   (I think a lot of mathematicians use TikZ, but I'm more used to Asymptote now.)
+
+== [TEXT] Fan translations
+
+The CC BY-NC-SA 4.0 license used by MIT OpenCourseWare is permissive enough to
+allow noncommercial fan translations of the book under compatible license.
+So far, I am aware of the following translation efforts:
+
+- Simplified Chinese at #url("https://github.com/Madin-David/lamv-zh")
+
+I'm grateful to the maintainers of these translations!
