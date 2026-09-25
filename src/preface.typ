@@ -394,7 +394,7 @@ in return for the short time limit.
   in my writing style (see, e.g., @fig-cross-meme), and I didn't want to relinquish that.
 
 - This book was not written in LaTeX!
-  It's written in the recently released version of Typst 0.13,
+  It's written in the recently released version of Typst 0.15,
   which is open source at #url("https://github.com/typst/typst").
   I used NeoVim as an editor, doing everything locally rather than by web app.
 

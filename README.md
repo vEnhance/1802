@@ -34,7 +34,7 @@ So far we have:
 
 ### Install Typst and packages
 
-The main text is written in [Typst 0.13](https://typst.app).
+The main text is written in [Typst 0.15](https://typst.app).
 It uses the custom package
 [evan@1.0.0](https://github.com/vEnhance/dotfiles/blob/main/typst/packages/local/evan/1.0.0),
 which you will have to download and install in a place Typst can find it like
