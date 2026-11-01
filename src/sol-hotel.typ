@@ -105,7 +105,7 @@ $ integral_(phi=0)^(pi \/ 2) sin phi cos phi dif phi
 Hence,
 $ G_3 = (G m) dot (2 pi) dot 1/2 dot 1 = G m pi. $
 In other words, in the coordinate system we chose, gravity is given by
-$ bf(G) = lr(chevron.l 0, 0, G m pi chevron.r). $
+$ bf(G) = lr(⟨ 0, 0, G m pi ⟩). $
 The magnitude is $|bf(G)| = #boxed[$ G m pi $]. $
 
 == Solution to @exer-psurf (find point on parametrized surface)
@@ -137,15 +137,15 @@ at every point of the surface.
 So, we first compute the derivatives:
 $ (partial bf(r))/(partial u)
   &= ((partial) / (partial u) (u - v) , (partial) / (partial u) (u + v) , (partial) / (partial u) (u v)) \
-  &= chevron.l 1 , 1 , v chevron.r \
+  &= ⟨ 1 , 1 , v ⟩ \
   (partial bf(r))/(partial v)
   &= ((partial) / (partial v) (u - v) , (partial) / (partial v) (u + v) , (partial) / (partial v) (u v)) \
-  &= chevron.l - 1 , 1 , u chevron.r. $
+  &= ⟨ - 1 , 1 , u ⟩. $
 At $(u,v) = (5,2)$ we get
 $ (partial bf(r))/(partial u)(5,2)
-  &= chevron.l 1 , 1 , 2 chevron.r \
+  &= ⟨ 1 , 1 , 2 ⟩ \
   (partial bf(r))/(partial v)(5,2)
-  &= chevron.l - 1 , 1 , 5 chevron.r. $
+  &= ⟨ - 1 , 1 , 5 ⟩. $
 The cross product is then given by
 $ (partial bf(r))/(partial u)(5,2)
   times (partial bf(r))/(partial v)(5,2)
@@ -154,7 +154,7 @@ $ (partial bf(r))/(partial u)(5,2)
   -1, 1, 5
   )
   &= 3 bf(e)_1 - 7 bf(e)_2 + 2 bf(e)_3. $
-Thus, the normal vector is $chevron.l 3, -7, 2 chevron.r$.
+Thus, the normal vector is $⟨ 3, -7, 2 ⟩$.
 So the equation of the tangent plane should be
 $ 3 x - 7 y + 2 z = k $
 for some number $k$.
@@ -259,8 +259,8 @@ you can also adopt the calculation in @sec-surf-grad-magic.
 In that section, we were able to calculate the surface of the unit hemisphere
 by viewing the sphere as the level surface of $g(x,y,z) = x^2+y^2+z^2 = 1$,
 and using the formula
-$ (nabla g) / (partial g slash partial z) = lr(chevron.l 2x, 2y, 2z chevron.r) / (2z)
-  = lr(chevron.l x/z, y/z, 1 chevron.r). $
+$ (nabla g) / (partial g slash partial z) = lr(⟨ 2x, 2y, 2z ⟩) / (2z)
+  = lr(⟨ x/z, y/z, 1 ⟩). $
 to derive that
 $ op("SurfArea")("hemisphere") = integral.double_(x^2+y^2<=1) 1/sqrt(1-(x^2+y^2)) dif x dif y. $
 For Archimedes hat-box theorem, the integral itself stays the same;

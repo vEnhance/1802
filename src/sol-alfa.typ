@@ -32,7 +32,7 @@ $ 1/(|bf(w)|) bf(w)
   = 1/sqrt(64+81+144) vec(-8, -9, -12)
   = 1/sqrt(289) vec(-8, -9, -12) \
   &= 1/17 vec(-8, -9, -12) = #boxed[$ vec(-8 slash 17, -9 slash 17, -12 slash 17) $]. $
-(Note that $chevron.l 8 slash 17, 9 slash 17, 12 slash 17 chevron.r$
+(Note that $⟨ 8 slash 17, 9 slash 17, 12 slash 17 ⟩$
 is not a correct answer: that vector points in the opposite direction.)
 
 == Solution to @exer-vectors-scaledet ($det(10A)$)
@@ -100,7 +100,7 @@ Hence $det M = 0 <==> #boxed[$ a = 5 $]$.
 #recall-thm(<exer-dot-perp4d>)
 
 We need the dot product to be zero:
-$ 0 &= chevron.l 1,2,3,4 chevron.r dot chevron.l 5,6,7,t chevron.r \
+$ 0 &= ⟨ 1,2,3,4 ⟩ dot ⟨ 5,6,7,t ⟩ \
   &= 1 dot 5 + 2 dot 6 + 3 dot 7 + 4 dot t \
   &= 38 + 4t ==> #boxed[$ t = -19/2 $]. $
 
@@ -109,12 +109,12 @@ $ 0 &= chevron.l 1,2,3,4 chevron.r dot chevron.l 5,6,7,t chevron.r \
 #recall-thm(<exer-dot-proj>)
 
 The first part asks to
-compute the vector projection of $chevron.l 123,456,789 chevron.r$
+compute the vector projection of $⟨ 123,456,789 ⟩$
 in the direction of $ee_1$.
-The answer is just $ #boxed[$ chevron.l 123,0,0 chevron.r  $]. $
+The answer is just $ #boxed[$ ⟨ 123,0,0 ⟩  $]. $
 You could get this using the recipe if you wanted,
 but if you draw a picture the point is you're just projecting
-the vector $chevron.l 123, 456, 789 chevron.r$ to the $x$-axis,
+the vector $⟨ 123, 456, 789 ⟩$ to the $x$-axis,
 which gives you its $x$-component.
 
 For the second part, let
@@ -125,7 +125,7 @@ Note that the factor of $-1000$ in $bf(w)$ doesn't matter,
 since scaling $bf(w)$ doesn't matter.
 We'll keep the $-1000$ around just for illustration reasons,
 but in practice an experienced student would just use
-$bf(w) = chevron.l 3, 4, 0 chevron.r$ instead.
+$bf(w) = ⟨ 3, 4, 0 ⟩$ instead.
 
 We just follow the recipe in @sec-recipe-proj directly.
 We first compute the dot product:
@@ -154,12 +154,12 @@ if $theta$ is the angle between the two vectors, we need $cos theta = 3/5$,
 and so there should be two vectors that work.
 See @fig-sol-alfa-dot-reverse for a picture.
 (You might already guess one of the solutions ---
-$bf(v) = chevron.l 1,0 chevron.r $ obviously works --- but we'll pretend we didn't notice that.)
+$bf(v) = ⟨ 1,0 ⟩ $ obviously works --- but we'll pretend we didn't notice that.)
 
 #figure(
   image("figures/sol-alfa-dot-reverse.svg", width: auto),
   caption: [The two answers to @exer-dot-reverse,
-    which are two unit vectors spaced at an equal angle away from $chevron.l 3,4 chevron.r$.
+    which are two unit vectors spaced at an equal angle away from $⟨ 3,4 ⟩$.
   ],
 ) <fig-sol-alfa-dot-reverse>
 
@@ -178,21 +178,21 @@ $ ((3 - 4 y) / (3))^2 + y^2 &= 1 \
 Hence either $y = 0$ or $y = 24/25$.
 
 - If $y = 0$ we get $x = frac(3 - 4 (0), 3) = 1$.
-  Thus, the first unit vector is: $bf(v)_1 = chevron.l 1 , 0 chevron.r$.
+  Thus, the first unit vector is: $bf(v)_1 = ⟨ 1 , 0 ⟩$.
 - If $y = 24 / 25$ we get $x = frac(3 - 4 (24 / 25), 3) = - 7 / 25$.
   Thus, the second unit vector is:
-  $bf(v)_2 = chevron.l -7 / 25 , 24 / 25 chevron.r$.
+  $bf(v)_2 = ⟨ -7 / 25 , 24 / 25 ⟩$.
 
 In conclusion the answer is
-$ #boxed[$ chevron.l 1,0 chevron.r " and " lr(chevron.l -7/25, 24/25 chevron.r) $]. $
+$ #boxed[$ ⟨ 1,0 ⟩ " and " lr(⟨ -7/25, 24/25 ⟩) $]. $
 See @fig-sol-alfa-dot-reverse for a picture of the two answers.
 
 == Solution to @exer-cauchy ($2$ and $5$)
 
 #recall-thm(<exer-cauchy>)
 
-Construct vectors $bf(v) = chevron.l a,b,c chevron.r$
-and $bf(w) = chevron.l x,y,z chevron.r$ in $RR^3$.
+Construct vectors $bf(v) = ⟨ a,b,c ⟩$
+and $bf(w) = ⟨ x,y,z ⟩$ in $RR^3$.
 Then the problem statement is saying that $|bf(v)| = sqrt(2)$, $|bf(w)| = sqrt(5)$,
 and asks for all possible values of $bf(v) dot bf(w)$.
 But the geometric definition of the dot product says that
@@ -213,8 +213,8 @@ The main observation is this:
   The faces of the cube have orthogonal normal vectors.
 ]
 And the normal vectors to the two planes are:
-$ bf(n)_1 = chevron.l 1 , 2 , 3 chevron.r \
-  bf(n)_2 = chevron.l 5 , 6 , k chevron.r. $
+$ bf(n)_1 = ⟨ 1 , 2 , 3 ⟩ \
+  bf(n)_2 = ⟨ 5 , 6 , k ⟩. $
 For the planes to be perpendicular, their normal vectors must satisfy:
 $ 0 &= bf(n)_1 dot bf(n)_2 \
   &= (1) (5) + (2) (6) + (3) (k) = 5 + 12 + 3 k = 17 + 3 k. $
@@ -240,7 +240,7 @@ The idea is that the planes are parallel, so there really should just
 be two possible answers.
 To do the algebra, first observe that (parallel) planes $Pi_1$ and $Pi_2$
 have the same normal vector:
-$ bf(n) = chevron.l 3 , 4 , 12 chevron.r $
+$ bf(n) = ⟨ 3 , 4 , 12 ⟩ $
 which has $|bf(n)| = sqrt(3^2+4^2+12^2) = 13$.
 
 Now to compute the distance between $Pi_1$ and $Pi_2$,

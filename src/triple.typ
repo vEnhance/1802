@@ -266,7 +266,7 @@ with some density $delta$.
 So let's suppose we have a solid mass occupying region $cal(T)$.
 In that case, each individual point $P=(x,y,z)$ in $cal(T)$ can be thought of a _vector_
 $ "Gravity exerted by" (x,y,z) "on" (0,0,0) = (G m dot (delta(x,y,z) dif V))/(x^2+y^2+z^2) dot
-  underbrace((chevron.l x,y,z chevron.r) / (sqrt(x^2+y^2+z^2)), "unit vector from" O "to" P). $
+  underbrace((⟨ x,y,z ⟩) / (sqrt(x^2+y^2+z^2)), "unit vector from" O "to" P). $
 The total gravitational force is then the integral of this over the entire mass $cal(T)$.
 #figure(
   image("figures/triple-gravity.svg", width: auto),
@@ -279,7 +279,7 @@ The total gravitational force is then the integral of this over the entire mass 
 
 So the total gravitational force is nominally
 #eqn[
-  $ bf(G) = integral_(cal(T)) (G m dot (delta(x,y,z) dif V))/(x^2+y^2+z^2) dot (chevron.l x,y,z chevron.r) / (sqrt(x^2+y^2+z^2)). $
+  $ bf(G) = integral_(cal(T)) (G m dot (delta(x,y,z) dif V))/(x^2+y^2+z^2) dot (⟨ x,y,z ⟩) / (sqrt(x^2+y^2+z^2)). $
   <eqn-gravity>
 ]
 
@@ -295,7 +295,7 @@ so that our integrands always have type number rather than type vector.
 To do this, I'll rewrite @eqn-gravity as follows:
 #memo(title: [Memorize: Gravitational attraction of a region on the origin])[
   Suppose $cal(T)$ is a region with density function $delta$.
-  The gravitational vector $bf(G) = chevron.l G_1, G_2, G_3 chevron.r$
+  The gravitational vector $bf(G) = ⟨ G_1, G_2, G_3 ⟩$
   on the origin is defined by
   $
     G_1 &:= G m integral.triple_(cal(T)) (x delta(x,y,z))/((x^2+y^2+z^2)^(3/2)) dif x dif y dif z \

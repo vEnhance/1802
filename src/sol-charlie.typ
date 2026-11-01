@@ -156,7 +156,7 @@ $
   M(bf(n)) &= bf(0).
 $
 
-If we wrote $M$ as a matrix _in this new basis_ $chevron.l bf(b)_1, bf(b)_2, bf(n) chevron.r$
+If we wrote $M$ as a matrix _in this new basis_ $⟨ bf(b)_1, bf(b)_2, bf(n) ⟩$
 (rather than the usual basis), we would get
 the matrix
 $ M = mat(1,0,0;0,1,0;0,0,0) $
@@ -260,7 +260,7 @@ we can change coordinates to use the $bf(b)_i$.
 In that case,
 $ M(bf(b)_1) = bf(b)_2 " and " M(bf(b)_2) = bf(b)_1. $
 
-If we wrote $M$ as a matrix _in this new basis_ $chevron.l bf(b)_1, bf(b)_2 chevron.r$
+If we wrote $M$ as a matrix _in this new basis_ $⟨ bf(b)_1, bf(b)_2 ⟩$
 (rather than the usual basis), we would get the matrix
 $ M = mat(0,1;1,0) $
 which has trace $0+0=0$.

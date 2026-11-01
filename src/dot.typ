@@ -324,18 +324,18 @@ Let's also do the example in @fig-dot-project2.
 == [EXER] Exercises
 
 #exer[
-  In four-dimensional space $RR^4$, the vectors $chevron.l 1,2,3,4 chevron.r$
-  and $chevron.l 5,6,7,t chevron.r$ are perpendicular. Compute $t$.
+  In four-dimensional space $RR^4$, the vectors $⟨ 1,2,3,4 ⟩$
+  and $⟨ 5,6,7,t ⟩$ are perpendicular. Compute $t$.
 ] <exer-dot-perp4d>
 
 #exer[
-  - Compute the vector projection of $chevron.l 123,456,789 chevron.r$ in the direction of $ee_1$.
-  - Compute the scalar component and vector projection of $bf(v) = chevron.l 1,2,3 chevron.r$
-    along the direction of $bf(w) = chevron.l -3000, -4000, 0 chevron.r$.
+  - Compute the vector projection of $⟨ 123,456,789 ⟩$ in the direction of $ee_1$.
+  - Compute the scalar component and vector projection of $bf(v) = ⟨ 1,2,3 ⟩$
+    along the direction of $bf(w) = ⟨ -3000, -4000, 0 ⟩$.
 ] <exer-dot-proj>
 
 #exer[
-  Let $bf(w) = chevron.l 3,4 chevron.r$.
+  Let $bf(w) = ⟨ 3,4 ⟩$.
   Compute all unit vectors $bf(v)$ in $RR^2$ for which $bf(v) dot bf(w) = 3$.
 ] <exer-dot-reverse>
 

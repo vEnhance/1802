@@ -12,8 +12,8 @@ Solutions are in @ch-sol-foxtrot.
 
 #exer[
   A butterfly is fluttering in the $x y$ plane with position given by
-  $bf(r)(t) = chevron.l cos(t), cos(t) chevron.r$, starting from
-  time $t = 0$ at $bf(r)(0) = chevron.l 1,1 chevron.r$.
+  $bf(r)(t) = ⟨ cos(t), cos(t) ⟩$, starting from
+  time $t = 0$ at $bf(r)(0) = ⟨ 1,1 ⟩$.
   - Compute the speed of the butterfly at $t = pi/3$.
   - Compute the arc length of the butterfly's trajectory from $t = 0$ to $t = 2 pi$.
   - Sketch the butterfly's trajectory from $t = 0$ to $t = 2pi$ in the $x y$ plane.

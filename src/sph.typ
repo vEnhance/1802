@@ -441,7 +441,7 @@ Let's see it in action with an offset sphere.
     &= (4 pi G m) / 3.
   $
   In other words, in the coordinate system we chose, gravity is given by
-  $ bf(G) = lr(chevron.l 0, 0, (4 pi G m)/3 chevron.r). $
+  $ bf(G) = lr(⟨ 0, 0, (4 pi G m)/3 ⟩). $
   The magnitude is $|bf(G)| = #boxed[$ (4 pi G m) / 3 $]. $
 ]
 

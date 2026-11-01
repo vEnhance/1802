@@ -46,7 +46,7 @@ We'll usually prefer $bf(n) dif S$ in this book.
 I promised you back in the surface area chapter (@ch-scalint) that at some point
 you'd need the whole cross product and not just its magnitude, and here we are!
 In fact, the absolute value being gone is in some sense an _improvement_: I would argue
-$lr(chevron.l - (partial f) / (partial x), - (partial f) / (partial y), 1 chevron.r)$
+$lr(⟨ - (partial f) / (partial x), - (partial f) / (partial y), 1 ⟩)$
 is less messy than $sqrt(1 + ((partial f) / (partial x))^2 + ((partial f) / (partial y))^2)$.
 
 We'll do example calculations in a moment, but let me first talk about how to think about this,
@@ -227,10 +227,10 @@ For the first and second rows, you should just remember the fifth column.
     [$z = f(x,y)$],
       [$(x,y)$],
       [$frac(
-        lr(chevron.l - (partial f) / (partial x), - (partial f) / (partial y), 1 chevron.r),
+        lr(⟨ - (partial f) / (partial x), - (partial f) / (partial y), 1 ⟩),
         sqrt(1 + ((partial f) / (partial x))^2 + ((partial f) / (partial y))^2))$],
       [$sqrt(1 + ((partial f) / (partial x))^2 + ((partial f) / (partial y))^2) \ dif x dif y$],
-      [$lr(chevron.l - (partial f) / (partial x), - (partial f) / (partial y), 1 chevron.r) \ dif x dif y$],
+      [$lr(⟨ - (partial f) / (partial x), - (partial f) / (partial y), 1 ⟩) \ dif x dif y$],
     [Level surface\ $g(x,y,z) = c$ \ over an $x y$-region ],
       [$(x,y)$],
       [$ pm (nabla g) / (|nabla g|) $],
@@ -238,14 +238,14 @@ For the first and second rows, you should just remember the fifth column.
       [$ (nabla g) / (partial g slash partial z) dif x dif y $],
     [Flat surface $z = c$],
       [$(x,y)$],
-      [$ chevron.l 0,0,1 chevron.r $],
+      [$ ⟨ 0,0,1 ⟩ $],
       [$ dif x dif y $],
-      [$ chevron.l 0,0,1 chevron.r dif x dif y $],
+      [$ ⟨ 0,0,1 ⟩ dif x dif y $],
     [Cylindrical coords with fixed $R$ \ $bf(r)(theta, z) = (R cos theta, R sin theta, z)$],
       [$(theta, z)$],
-      [$chevron.l cos theta, sin theta, 0 chevron.r$],
+      [$⟨ cos theta, sin theta, 0 ⟩$],
       [$R dif theta dif z$],
-      [$chevron.l R cos theta, R sin theta, 0 chevron.r \ dif theta dif z$],
+      [$⟨ R cos theta, R sin theta, 0 ⟩ \ dif theta dif z$],
     [Spherical coords with fixed $R$ \ $bf(r)(phi, theta) = (R sin phi cos theta, \ quad R sin phi sin theta, R cos phi)$],
       [$(phi, theta)$],
       [$1/R dot bf(r)(phi, theta)$\ (if $0 <= phi <= pi$)],
@@ -355,17 +355,17 @@ Let's give one example corresponding to each row of @table-surfcross-2.
 
 #soln[
   Our parametrization of $cal(S)$ is going to be
-  $ bf(r)(x,y) = chevron.l x, y, sqrt(25-(x^2+y^2)) chevron.r $
+  $ bf(r)(x,y) = ⟨ x, y, sqrt(25-(x^2+y^2)) ⟩ $
   across $x^2 + y^2 <= 25$.
   If we wanted to use the first row of the table @table-surfcross-2,
   we would use $f(x,y) = sqrt(25 - (x^2+y^2))$.
   However, square roots are annoying and we'll use the second row instead
   by viewing this hemisphere as a chunk of the level surface
   $ g(x,y,z) = x^2+y^2+z^2 $ for the value $25$.
-  Since $nabla g = chevron.l 2x, 2y, 2z chevron.r$ and $(partial g) / (partial z) = 2z$, our table gives
+  Since $nabla g = ⟨ 2x, 2y, 2z ⟩$ and $(partial g) / (partial z) = 2z$, our table gives
   $ (partial bf(r)) / (partial x) times (partial bf(r)) / (partial y)
     = (nabla g) / ((partial g) / (partial z))
-    = (chevron.l 2x, 2y, 2z chevron.r)/(2z)
+    = (⟨ 2x, 2y, 2z ⟩)/(2z)
     = vec( x/z, y/z, 1 ). $
   Here $z = sqrt(25-(x^2+y^2))$.
 
@@ -393,7 +393,7 @@ Let's give one example corresponding to each row of @table-surfcross-2.
 
 #sample[
   Consider the plane $x = 3$ with the normal vector oriented in the $-x$ direction,
-  and the vector field $bf(F) = chevron.l e^x, e^y, e^z chevron.r$.
+  and the vector field $bf(F) = ⟨ e^x, e^y, e^z ⟩$.
   Compute the flux of $bf(F)$ through the portion of the plane with $y^2 + z^2 <= 25$.
 ]
 
@@ -431,7 +431,7 @@ Let's give one example corresponding to each row of @table-surfcross-2.
 
 #soln[
   It's natural to parametrize this with cylindrical coordinates as
-  $ bf(r)(theta, z) = chevron.l 7 cos theta, 7 sin theta, z chevron.r $
+  $ bf(r)(theta, z) = ⟨ 7 cos theta, 7 sin theta, z ⟩ $
   for $0 <= theta <= 2pi$ and $0 <= z <= 10$.
   As this is a cylinder, we use the fourth row of @table-surfcross-2 to get
   $ (partial bf(r)) / (partial theta) times (partial bf(r)) / (partial z)
@@ -555,7 +555,7 @@ Here are two examples of this with spheres.
 ]
 #soln[
   The normal vector $bf(n)$ at any point $(x,y,z)$ on the surface of the sphere
-  is a unit vector pointing in the direction of $chevron.l x,y,z chevron.r$.
+  is a unit vector pointing in the direction of $⟨ x,y,z ⟩$.
   Conveniently, the force vector $bf(F)$ is a vector of magnitude $17$ in the same direction!
   That is, $ bf(F) dot bf(n) = (17 bf(n)) dot (bf(n)) = 17. $
   Consequently,
@@ -584,7 +584,7 @@ Note that the answer is independent of the radius! The $17$ cancels out.
 
 #exer[
   Calculate the flux of the vector field
-  $ bf(F)(x,y,z) = lr(chevron.l x/3, y/4, 1/5 chevron.r) $
+  $ bf(F)(x,y,z) = lr(⟨ x/3, y/4, 1/5 ⟩) $
   across the portion of the surface defined by
   $ x^3 + y^4 = e^z, quad 0 <= x <= 5, quad 0 <= y <= 5 $
   where the normal vector is oriented upwards.

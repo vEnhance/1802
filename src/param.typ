@@ -75,7 +75,7 @@ Because there's pretty much only one thing you need to ever do:
   TLDR Just always use components.
 ]
 That is, if $bf(r) : RR -> RR^3$ (say), basically 90%+ of the time what you do is write
-$ bf(r)(t) = chevron.l x(t), y(t), z(t) chevron.r
+$ bf(r)(t) = ⟨ x(t), y(t), z(t) ⟩
   = x(t) ee_1 + y(t) ee_2 + z(t) ee_3 $
 and then just do single-variable calculus or calculations on each $f_i$.
 
@@ -102,7 +102,7 @@ There are some things you could be asked:
     $ |bf(r')(t)| = sqrt(x'(t)^2 + y'(t)^2). $
   - The *acceleration vector* at a time $t$ is defined as the second derivative
     of each component: $ bf(r)''(t) = vec(x''(t), y''(t)). $
-  For three-variable $bf(r)(t) = chevron.l x(t), y(t), z(t) chevron.r$, do the same thing with three components.
+  For three-variable $bf(r)(t) = ⟨ x(t), y(t), z(t) ⟩$, do the same thing with three components.
 ]
 I don't know if there's a word for the absolute value of the acceleration vector
 (the way speed is the absolute value of the velocity vector).
@@ -344,7 +344,7 @@ Okay, here are some examples.
 
   2. Since the moon is orbiting the planet clockwise, the direction of its
     motion is reversed compared to the planet’s orbit. The moon starts at
-    $chevron.l 0 , - R_m chevron.r$ relative to the planet (due south)
+    $⟨ 0 , - R_m ⟩$ relative to the planet (due south)
     and moves with angular velocity $omega_m$.
 
     The position of the moon relative to the planet, moving clockwise, is
