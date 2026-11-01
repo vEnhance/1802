@@ -427,7 +427,7 @@ Hence the answers are $ k = #boxed[$ pm sqrt(3) / 2 " or " pm sqrt(5) / 2 $]. $
 First, we sketch the region.
 The condition $x^2 + y^2 <= 9$ represents a circle of radius $3$ centered at the origin.
 The inequality $y >= 0$ and $y >= sqrt(3) lr(|x|)$
-cuts out a wedge covering the top half of the circle within the chevron.range
+cuts out a wedge covering the top half of the circle within the angle range
 $pi / 3 <= theta <= (2 pi) / (3)$ in polar coordinates.
 See @fig-mt3-slice.
 
