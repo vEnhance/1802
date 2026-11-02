@@ -36,8 +36,10 @@ So far we have:
 
 The main text is written in [Typst 0.15](https://typst.app).
 It uses the custom package
-[evan@1.0.0](https://github.com/vEnhance/dotfiles/blob/main/typst/packages/local/evan/1.0.0),
-which you will have to download and install in a place Typst can find it like
+[evan@1.0.0](https://github.com/vEnhance/dotfiles/blob/main/typst/packages/local/evan/1.0.0).
+
+The command `make install-evan` will try to download this for you.
+Or you can manually place the relevant files in
 `~/.local/share/typst/packages/local/`.
 
 ### Asymptote
